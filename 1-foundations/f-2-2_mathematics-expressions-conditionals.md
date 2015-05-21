@@ -16,7 +16,7 @@ evaluating various sets of numbers.
 ###F.2.2.0 THE MATH TAB
 Most of the components that deal with mathematical operations and functions can be found under the following sub-categories of the Math tab:
 
-(Insert Image)
+![](images/f2-2/f2-2_001-the-math-tab.png)
 
 ###F.2.2.1 OPERATORS
 As was previously mentioned, Operators are a set of components that use
@@ -27,7 +27,7 @@ Most of the time, you will use the Math Operators to perform arithmetical
 actions on a set of numbers. However, these operators can also be used on
 various data types, including points and vectors.
 
-(Border Image)
+![](images/f2-2/f2-2_002-operators.png)
 
 ###F.2.2.2 CONDITIONAL OPERATORS
 Almost every programming language has a method for evaluating conditional
@@ -57,6 +57,8 @@ which of the values in the list were equal to one another. The second output
 returns a list that shows which values were not equal to one another - or a list
 that is inverted from the first output.
 
+![](images/f2-2/f2-2_003-equality.png)
+
 The Similarity component evaluates two lists of data and tests for similarity
 between two numbers. It is almost identical to the way the Equality component
 compares the two lists, with one exception: it has a percentage input that defines
@@ -64,10 +66,14 @@ the ratio of list A that list B is allowed to deviate before inequality is assum
 The Similarity component also has an output that determines the absolute value
 distance between the two input lists.
 
+![](images/f2-2/f2-2_004-similarity.png)
+
 The Larger Than component will take two lists of data and determine if the first
 item of List A is greater than the first item of List B. The two outputs allow you to
 determine if you would like to evaluate the two lists according to a greater than
 (>) or greater than and equal to (>=) condition.
+
+![](images/f2-2/f2-2_005-greater-than.png)
 
 The Smaller Than component performs the opposite action of the Larger Than
 component. The Smaller Than component determines if list A is less than list B
@@ -75,7 +81,7 @@ and returns a list of boolean values. Similarly, the two outputs let you determi
 if you would like to evaluate each list according to a less than (<) or less than and
 equal to (<=) condition.
 
-(Border Image)
+![](images/f2-2/f2-2_006-less-than.png)
 
 ###F.2.2.3 TRIGONOMETRY COMPONENTS
 We have already shown that we can use an Expression (or Evaluate) component
@@ -85,31 +91,46 @@ built in Trigonometry functions. We can use these functions to define periodic
 phenomena like sinusoidal wave forms such as ocean waves, sound waves, and
 light waves.
 
-(Insert Images)
+![](images/f2-2/f2-2_007-line-sine-helix-spiral.png)
 
 In this example, we will use Grasshopper to cunstruct various trigonometric
 curves using trigonometry function components found in the Math tab:
 
 01.Type Ctrl+N (in Grasshopper) to start a new definition
+
 02.Params/Geometry/Point – Drag and drop a point parameter onto the canvas
-(Border Image)
+
+![](images/f2-2/f2-2_008-point.png)
+
 03.Right click the Point parameter and click Set One Point – select a point in the Rhino viewport
+
 04.Vector/Vector/Unit X – Drag and drop the Unit X component to the canvas
-(Border Image)
+![](images/f2-2/f2-2_009-vector.png)
+
 05.Params/Input/Number Slider – Drag and drop the Number Slider component onto the canvas
-(Border Image)
-06.Double-click on the Number slider and set the following:
-Rounding: Integer
-Lower Limit: 10
-Upper Limit: 40
+
+![](images/f2-2/f2-2_010-slider.png)
+
+06.Double-click on the Number slider and set the following:<br>
+Rounding: Integer<br>
+Lower Limit: 10<br>
+Upper Limit: 40<br>
 Value: 20
+
 07.Transform/Array/Linear Array – Drag and drop the Linear Array component onto the canvas
+
 08.Connect the output of the Point parameter to the Geometry (G) input of the Linear Array component
+
 09.Connect the Unit Vector (V) output of the Unit X component to the Direction (D) input of the Linear Array component
-(Border Text)
+
+![](images/f2-2/f2-2_011-linear-array.png)
+
 10.Connect the Number Slider output to the Count (N) input of the Linear Array Component
+
 11.Curve/Spline/Interpolate – Drag and drop the Interpolate Curve component to the canvas
+
 (Border Image)
+
 12.Connect the Geometry (G) output of the Linear Array component to the Vertices (V) input of the Interpolate Curve component
 
 (Border Image)
@@ -117,18 +138,31 @@ Value: 20
 We have just created a line by connecting an array of points with a curve. Let’s try using some of Grasshopper’s Trigonometry components to alter this curve:
 
 13.Vector/Point/Deconstruct – Drag and drop a Deconstruct component onto the canvas
+
 (Border Image)
+
 14.Vector/Point/Construct Point - Drag and drop a Construct Point component onto the canvas
+
 15.Maths/Trig/Sine - Drag and drop a sine component onto the canvas
+
 (Border Image)
+
 16.Disconnect the wire from the Vertices (V) input of the Interpolate Curve component
+
 (Border Text)
+
 17.Connect the Geometry (G) output of the Linear Array component to the Point (P) input of the Deconstruct component
+
 18.Connect the Point X (X) output of the Deconstruct component to the X coordinate (X) input of the Construct Point Component
+
 19.Connect a second wire from the Point X (X) output of the Deconstruct Component to the Value (x) input of the Sine component
+
 20.Connect the Result (y) output of the Sine component to the Y coordinate (Y) input of the Construct Point component
+
 (Border Text)
+
 21.Connect the Point (Pt) output of the Construct Point component to the Vertices (V) input of the Interpolate component
+
 (Border Text)
 
 (Insert Image)
