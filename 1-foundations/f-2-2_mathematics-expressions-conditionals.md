@@ -18,6 +18,15 @@ Most of the components that deal with mathematical operations and functions can 
 
 ![](images/f2-2/f2-2_001-the-math-tab.png)
 
+>1. Domains are used to define a range of values (formerly known as intervals) between two numbers. The components under the Domain tab allow you to create or decompose different domain types.
+2. In mathematics, a matrix is an array of numbers organized in rows and columns. This subcategory contains a series of utility tools to construct and modify matrices.
+3. Operators are used to perform mathematical operations such as Addition, Subtraction, Multiplication, etc. Conditional operators allow you to determine whether a set of numbers are larger than, less than, or similar to another set of numbers.
+4. Polynomials are one of the most important concepts in algebra and throughout mathematics and science. You can use the components found in this subcategory to compute factorials, logarithms, or to raise a number to the nth power.
+5. The script subcategory contains single and multi-variable expressions as well as the VB.NET and C# scripting components.
+6. These components allow you to solve trigonometric functions such as Sine,Cosine, Tangent, etc.
+7. The time subcategory has a number of components which allow you to construct instances of dates and times.
+8. The utility subcategory is a ‘grab bag’ of useful components that canbe used in various mathematical equations. Check here if you’re trying find the maximum or minimum values between two lists of numbers; or average a group of numbers.
+
 ###F.2.2.1 OPERATORS
 As was previously mentioned, Operators are a set of components that use
 algebraic functions with two numeric input values, which result in one output
@@ -105,6 +114,7 @@ curves using trigonometry function components found in the Math tab:
 03.Right click the Point parameter and click Set One Point – select a point in the Rhino viewport
 
 04.Vector/Vector/Unit X – Drag and drop the Unit X component to the canvas
+
 ![](images/f2-2/f2-2_009-vector.png)
 
 05.Params/Input/Number Slider – Drag and drop the Number Slider component onto the canvas
