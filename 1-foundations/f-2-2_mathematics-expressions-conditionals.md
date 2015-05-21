@@ -1,4 +1,4 @@
-# F-2-2 Mathematics, Expressions & Conditionals
+# F.2.2 Mathematics, Expressions & Conditionals
 
 #####Attractors are points that act like virtual magnets - either attracting or repelling other objects. In Grasshopper, any geometry referenced from Rhino or created within Grasshopper can be used as an attractor. Attractors can influence any number of parameters of surrounding objects including scale, rotation, color, and position. These parameters are changed based on their relationship to the attractor geometry.
 
@@ -7,10 +7,10 @@ In mathematics, numbers are organized by sets and there are two that you are pro
 Integer Numbers: […, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, …]
 Real Numbers: [8, …, -4.8, -3.6, -2.4, -1.2, 0.0, 1.234, e, 3.0, 4.0, …, 8]
 
-While there are other types of number sets, these two interest us the most 
-because Grasshopper uses these extensively. Although there are limitations in representing these sets exactly in a digital environment, we can approximate them to a high level of precision. In addition, it should be understood that the 
-distinction between Integral types (integers) and Floating types (real numbers) corresponds to the distinction between discrete and continuous domains. In 
-this chapter, we’re going to explore different methods for working with and 
+While there are other types of number sets, these two interest us the most
+because Grasshopper uses these extensively. Although there are limitations in representing these sets exactly in a digital environment, we can approximate them to a high level of precision. In addition, it should be understood that the
+distinction between Integral types (integers) and Floating types (real numbers) corresponds to the distinction between discrete and continuous domains. In
+this chapter, we’re going to explore different methods for working with and
 evaluating various sets of numbers.
 
 ###F.2.2.0 THE MATH TAB
@@ -78,16 +78,16 @@ equal to (<=) condition.
 (Border Image)
 
 ###F.2.2.3 TRIGONOMETRY COMPONENTS
-We have already shown that we can use an Expression (or Evaluate) component 
-to evaluate conditional statements as well as compute algebraic equations. 
-However, there other ways to calculate simple expressions using a few of the 
-built in Trigonometry functions. We can use these functions to define periodic 
-phenomena like sinusoidal wave forms such as ocean waves, sound waves, and 
+We have already shown that we can use an Expression (or Evaluate) component
+to evaluate conditional statements as well as compute algebraic equations.
+However, there other ways to calculate simple expressions using a few of the
+built in Trigonometry functions. We can use these functions to define periodic
+phenomena like sinusoidal wave forms such as ocean waves, sound waves, and
 light waves.
 
 (Insert Images)
 
-In this example, we will use Grasshopper to cunstruct various trigonometric 
+In this example, we will use Grasshopper to cunstruct various trigonometric
 curves using trigonometry function components found in the Math tab:
 
 01.Type Ctrl+N (in Grasshopper) to start a new definition
@@ -119,7 +119,7 @@ We have just created a line by connecting an array of points with a curve. Let�
 13.Vector/Point/Deconstruct – Drag and drop a Deconstruct component onto the canvas
 (Border Image)
 14.Vector/Point/Construct Point - Drag and drop a Construct Point component onto the canvas
-15.Maths/Trig/Sine - Drag and drop a sine component onto the canvas 
+15.Maths/Trig/Sine - Drag and drop a sine component onto the canvas
 (Border Image)
 16.Disconnect the wire from the Vertices (V) input of the Interpolate Curve component
 (Border Text)
@@ -140,7 +140,7 @@ We have just created a line by connecting an array of points with a curve. Let�
 
 (Insert Image)
 
-25.Maths/Operators/Multiplication – Drag and drop two Multiplication components onto the canvas 
+25.Maths/Operators/Multiplication – Drag and drop two Multiplication components onto the canvas
 (Border Image)
 26.Connect wires from the Point X (X) output of the Deconstruct component to the (A) input of each Multiplication component
 27.Connect the Result (y) output of the Sine component to the (B) input of the first Multiplication component

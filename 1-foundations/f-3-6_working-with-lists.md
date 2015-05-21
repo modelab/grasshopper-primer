@@ -1,8 +1,8 @@
 # F-3-6 WORKING WITH LISTS
 
 Lets take a look at an example using the components from the previous section.
-In this example, we are creating a tile pattern by mapping geometry to a 
-rectangular grid. The pattern is created by using the List Item component to 
+In this example, we are creating a tile pattern by mapping geometry to a
+rectangular grid. The pattern is created by using the List Item component to
 retrieve the desired tile from a list of geometry.
 
 (Insert Image)
@@ -21,7 +21,7 @@ retrieve the desired tile from a list of geometry.
 09. Right-Click the first Curve Parameter and select set one Curve. Set the
 first Square that you are referencing
 10. Right-Click the second Curve Parameter and select set one Curve. Set the
-second Square that you are referencing 
+second Square that you are referencing
 (Border Text)
 11. Vector/Grid/Rectangular – Drag and drop a Rectangular Grid component
 onto the canvas.
@@ -46,7 +46,7 @@ Value: 10
 16. Connect the first Number Slider to the Size X (Sx) input of the
 Rectangular Grid component
 17. Connect the second Number Slider to the Size Y (Sy) input of the
-Rectangular Grid component 
+Rectangular Grid component
 (Border Image)
 18. Connect the third Number Slider to the Extent X (Ex) input and the Extent
 Y (Ey) input of the Rectangular Grid component

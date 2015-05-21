@@ -2,7 +2,7 @@
 
 #####Grasshopper consists of two primary types of user objects: parameters andcomponents. Parameters store data, whereas components perform actions that resultin data. The most basic way to understand Grasshopper is to remember that we willuse data to define the inputs of actions (which will result in new data that we cancontinue to use).
 
-This is a Test for git hub. 
+This is a Test for git hub.
 
 ###F.1.0.0 PARAMETERS
 Parameters store the data - numbers, colors, geometry, and more - that we send

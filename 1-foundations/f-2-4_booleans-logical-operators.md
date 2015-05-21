@@ -13,7 +13,7 @@ example, the Includes component allows you to test a numeric value to see if it 
 included in a domain.
 
 (Border Image)(Border Text)
-(Insert Image) 
+(Insert Image)
 
 ###F.2.4.1 LOGICAL OPERATORS
 Logical operators mostly work on booleans and they are indeed very logical. As
@@ -31,7 +31,7 @@ have a script which checks for the existence of a bunch of Block definitions in
 Rhino. If a block definition does not exist, we want to inform the user and abort
 the script.
 
-(Insert Image) 
+(Insert Image)
 
 And and Or take two arguments on either side. The And operator requires both
 of them to be True in order for it to evaluate to True. The Or operator is more
@@ -41,18 +41,18 @@ happens when you need a lot of them to evaluate something. Stringing them
 together quickly results in convoluted code; not to mention operator precedence
 problems.
 
-(Insert Image) 
+(Insert Image)
 
 A good way to exercise your own boolean logic is to use Venn diagrams. A Venn
 diagram is a graphical representation of boolean sets, where every region
 contains a (sub)set of values that share a common property. The most famous
 one is the three-circle diagram:
 
-(Insert Image) 
+(Insert Image)
 
 Every circular region contains all values that belong to a set; the top circle for
 example marks off set {A}. Every value inside that circle evaluates True for {A}
 and every value not in that circle evaluates False for {A}. By coloring the regions
 we can mimic boolean evaluation in programming code:
 
-(Insert Image) 
+(Insert Image)

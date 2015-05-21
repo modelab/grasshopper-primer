@@ -1,4 +1,4 @@
-# F-2-3_Domains & Color 
+# F-2-3_Domains & Color
 
 #####The color wheel is a model for organizing colors based on their hue. In Grasshopper, colors can be defined by their hue value in a range of 0.0 to 1.0. Domains are used to define a range of all possible values between a set of numbers between a lower limit(A) and an upper limit (B).
 
@@ -64,7 +64,7 @@ Divide Domain component
 Domain component
 22. Connect the Segments (S) output of the Divide Domain component to the Domain (I) input of the Deconstruct Domain component
 23. Display/Colour/Colour HSL – Drag and drop the Colour HSL component
-24. Connect the Start (S) output of the Deconstruct Domain component to the Hue (H) input of the Colour HSL components 
+24. Connect the Start (S) output of the Deconstruct Domain component to the Hue (H) input of the Colour HSL components
 (Border Image)(Border Text)
 25. Display/Preview/Custom Preview – Drag and drop the Custom Preview component
 26. Right click on the Geometry (G) input of the Custom Preview component and select Flatten

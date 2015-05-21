@@ -175,7 +175,7 @@ Stream 0 (0) input of the Weave component
 42. Connect the List (L) output of the Second Cull Pattern component to the
 Stream 0 (0) input of the Weave component
 43. Curve/Spline/Nurbs Curve – Drag and drop the Nurbs Curve component
-onto the canvas 
+onto the canvas
 (Border Image)
 44. Connect the Weave (W) output of the Weave component to the Vertices
 (V) input of the Nurbs Curve component.
@@ -370,7 +370,7 @@ Value: 3
 68. Connect the Number Slider output to the Factor (F) input of the Unit Y
 component
 69. Connect the Unit Vector (V) output of the Unit Y component to the
-Direction (D) input of the Extrude component 
+Direction (D) input of the Extrude component
 (Border Text)
 
 (Insert Image)
