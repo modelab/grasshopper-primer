@@ -1,9 +1,9 @@
 ## F.0.0 INSTALLING AND LAUNCHING GRASSHOPPER
 
-#####The Grasshopper plugin is updated frequently so be sure to update to the latest build. 
+#####The Grasshopper plugin is updated frequently so be sure to update to the latest build.
 #####Note that there is currently no version of Grasshopper for Mac.
 
-This is a test. 
+This is a test by CM
 
 ###F.0.0.0 DOWNLOADING
 To download the Grasshopper plug-in, visit the Grasshopper web site. Click on the Download tab at the top of the page, and when prompted on the next screen, enter your email address. Now, right click on the download link, and choose Save Target As from the menu. Select a location on your hard drive (note: the file cannot be loaded over a network connection, so the file must be saved locally to your computer’s hard drive) and save the executable file to that address.
@@ -27,7 +27,7 @@ To Launch Grasshopper, type Grasshopper into the Rhino Command line. When you la
 
 
 ![f0-0_floating-viewport.bmp](images/f0-0/f0-0_Floating-Viewport.png)
->1. The Grasshopper window floats on top of the Rhino viewports. 
+>1. The Grasshopper window floats on top of the Rhino viewports.
 >2. Grasshopper displays the version number at the bottom of the window.
 
 ![f0-0_split-viewport.bmp](images/f0-0/f0-0_Split-Viewport.png)
