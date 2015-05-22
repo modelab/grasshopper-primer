@@ -1,17 +1,17 @@
 ## F.0.1 THE GRASSHOPPER UI
 
-#####Grasshopper’s visual “plug-and-play” style gives designers the ability to combine creative problem solving with novel rule systems through the use of a fluid graphical interface. 
+#####Grasshopper’s visual “plug-and-play” style gives designers the ability to combine creative problem solving with novel rule systems through the use of a fluid graphical interface.
 
-Let’s start by exploring Grasshopper’s user interface UI. Grasshopper is a 
-visual programming application where you are able to create programs, called 
-definitions or documents, by dragging components onto the main editing 
-window (called the canvas). The outputs to these components are connected to 
-the inputs of subsequent components — creating a graph of information which 
+Let’s start by exploring Grasshopper’s user interface UI. Grasshopper is a
+visual programming application where you are able to create programs, called
+definitions or documents, by dragging components onto the main editing
+window (called the canvas). The outputs to these components are connected to
+the inputs of subsequent components — creating a graph of information which
 can be read from left to right. Let’s get started with the basics.
 
-Assuming you’ve already installed the Grasshopper plugin (see F.0.0), type the 
-word “Grasshopper” in the Rhino command prompt to display the Grasshopper 
-Editor. The Grasshopper interface contains a number of elements, most of which 
+Assuming you’ve already installed the Grasshopper plugin (see F.0.0), type the
+word “Grasshopper” in the Rhino command prompt to display the Grasshopper
+Editor. The Grasshopper interface contains a number of elements, most of which
 will be very familiar to Rhino users. Let’s look at a few features of the interface.
 
 ![](images/f0-1/f0-1_Open-Files.jpg)
@@ -26,16 +26,16 @@ will be very familiar to Rhino users. Let’s look at a few features of the inte
 
 
 ###F.0.1.0 THE WINDOWS TITLE BAR
-The Editor Window title bar behaves differently from most other dialogs in 
-Microsoft Windows. If the window is not minimized or maximized, double 
-clicking the title bar will collapse the dialog into a minimized bar on your 
-screen. This is a great way to switch between the plug-in and Rhino because it 
-minimizes the Editor without moving it to the bottom of the screen or behind 
-other windows. Note that if you close the Editor, the Grasshopper geometry 
-preview in the Rhino viewport will disappear, but the file won’t actually be 
-closed. The next time you run the “Grasshopper” command in the Rhino dialog 
-box, the window will come back in the same state with the same files loaded. 
-This is because once it is launched from the command prompt, your session 
+The Editor Window title bar behaves differently from most other dialogs in
+Microsoft Windows. If the window is not minimized or maximized, double
+clicking the title bar will collapse the dialog into a minimized bar on your
+screen. This is a great way to switch between the plug-in and Rhino because it
+minimizes the Editor without moving it to the bottom of the screen or behind
+other windows. Note that if you close the Editor, the Grasshopper geometry
+preview in the Rhino viewport will disappear, but the file won’t actually be
+closed. The next time you run the “Grasshopper” command in the Rhino dialog
+box, the window will come back in the same state with the same files loaded.
+This is because once it is launched from the command prompt, your session
 of Grasshopper stays active until that instance of Rhino is closed.
 
 
@@ -58,7 +58,7 @@ inadvertently closed or crashes). Finally, the Solver section lets you manage co
 and third-party plugins which can extend functionality.
 
 > *Note: Be careful when using shortcuts since they are handled by the active window which could either be Rhino, the Grasshopper canvas or any other window inside Rhino. It is quite easy to use a shortcut command, only to realize that you had the wrong active window selected and accidentally invoked the wrong command.*
- 
+
 ![](images/f0-1/f0-1_File-Preferences.jpg)
 >1. The Preferences dialog allows you to set many of Grasshopper’s application settings.
 
@@ -68,7 +68,7 @@ selecting them through this drop-down list. Accessing your open files through
 the File Browser drop-down list enables you to quickly copy and paste items
 from open definitions. Just click on the active file name in the browser control
 window and a cascading list of all open files will be displayed (along with a small
-thumbnail picture of each open definition) for easy access. You can also hit 
+thumbnail picture of each open definition) for easy access. You can also hit
 Alt+Tab to quickly switch between any open Grasshopper documents.
 
 Of course, you can go through the standard Open File dialog to load any
@@ -290,8 +290,8 @@ Grasshopper features. All of the tools are available through the menu as well,
 and you can hide the toolbar if you like. The toolbar can be re-enabled from the
 View tab on the Main Menu Bar.
 
- 
- 
+
+
 >1. **Open File:** A shortcut to open a Grasshopper File.
 2.  **Save File:** A shortcut to save the currentGrasshopper File.
 3.  **Zoom Defaults**: Default zoom settings that allow you to zoom in or out of your canvas at predefined intervals.
@@ -308,8 +308,8 @@ tool set found in Adobe Photoshop with a few added features.
 
 >1. **Preview Settings:** If a Grasshopper component generates some form of geometry, then a preview of this geometry will be visible in the viewport by default. You can disable the preview on a perobject basis by right-clicking each component and de-activating the preview feature, or globally change the preview state by using one of these three buttons.
 2. Wire-frame preview.
-3. Turn off preview. 
-4. Shaded preview (default). 
+3. Turn off preview.
+4. Shaded preview (default).
 5. **Preview Selected Objects:** With this button toggled, Grasshopper will only display geometry that is part of selected components, even if those components have a preview=off state.
 6. **Document Preview Settings:** Grasshopper has a default color scheme for selected (semi-transparent green) and unselected (semi-transparent red) geometry. It is possible to override this color scheme with the Document Preview Settings dialog.
 7. **Preview Mesh Quality:** For optimization purposes, these settings allow you to control the quality of the mesh/surface display of the geometry rendered in Rhino. Higher quality settings will cause longer calculation times, whereas lower settings will display less accurate preview geometry. It should be noted that the geometry still maintains a high-degree of resolution when baked into the Rhino document – these settings merely effect the display performance and quality.

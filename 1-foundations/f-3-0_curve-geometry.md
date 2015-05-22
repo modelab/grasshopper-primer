@@ -3,33 +3,33 @@
 #####NURBS (non-uniform rational B-splines) are mathematical representations that can accurately model any shape from a simple 2D line, circle, arc, or box to the most complex 3D free-form organic surface or solid. Because of their flexibility and accuracy, NURBS models can be used in any process from illustration and animation to manufacturing.
 
 Since curves are geometric objects, they possess a number of properties or
-characteristics which can be used to describe or analyze them. For example, 
-every curve has a starting coordinate and every curve has an ending coordinate. 
+characteristics which can be used to describe or analyze them. For example,
+every curve has a starting coordinate and every curve has an ending coordinate.
 When the distance between these two coordinates is zero, the curve is closed.
-Also, every curve has a number of control-points, if all these points are located 
-in the same plane, the curve as a whole is planar. Some properties apply to the 
-curve as a whole, while others only apply to specific points on the curve. For 
-example, planarity is a global property while tangent vectors are a local property. 
-Also, some properties only apply to some curve types. So far we’ve discussed 
-some of Grasshopper’s Primitive Curve Components such as: lines, circles, 
+Also, every curve has a number of control-points, if all these points are located
+in the same plane, the curve as a whole is planar. Some properties apply to the
+curve as a whole, while others only apply to specific points on the curve. For
+example, planarity is a global property while tangent vectors are a local property.
+Also, some properties only apply to some curve types. So far we’ve discussed
+some of Grasshopper’s Primitive Curve Components such as: lines, circles,
 ellipses, and arcs.
 
 (Insert Image)
 
 ###F.3.0.0 NURBS CURVES
-**Degree:** The degree is a positive whole number. This number is usually 1, 2, 3 or 
-5, but can be any positive whole number. The degree of the curve determines 
-the range of influence the control points have on a curve; where the higher the 
-degree, the larger the range. NURBS lines and polylines are usually degree 1, 
+**Degree:** The degree is a positive whole number. This number is usually 1, 2, 3 or
+5, but can be any positive whole number. The degree of the curve determines
+the range of influence the control points have on a curve; where the higher the
+degree, the larger the range. NURBS lines and polylines are usually degree 1,
 NURBS circles are degree 2, and most free-form curves are degree 3 or 5.
 
-**Control Points:** The control points are a list of at least degree+1 points.One of 
-the easiest ways to change the shape of a NURBS curve is to move its control 
+**Control Points:** The control points are a list of at least degree+1 points.One of
+the easiest ways to change the shape of a NURBS curve is to move its control
 points.
 
-**Weight:** Control points have an associated number called a weight . Weights are usually positive numbers. When a curve’s control points all have the same weight 
-(usually 1), the curve is called non-rational, otherwise the curve is called 
-rational. Most NURBS curves are non-rational. A few NURBS curves, such as circles 
+**Weight:** Control points have an associated number called a weight . Weights are usually positive numbers. When a curve’s control points all have the same weight
+(usually 1), the curve is called non-rational, otherwise the curve is called
+rational. Most NURBS curves are non-rational. A few NURBS curves, such as circles
 and ellipses, are always rational.
 
 **Knots:** Knots are a list of (degree+N-1) numbers, where N is the number of

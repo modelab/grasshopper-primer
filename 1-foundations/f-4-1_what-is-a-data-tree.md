@@ -2,22 +2,22 @@
 
 #####A Data Tree is a hierarchical structure for storing data in nested lists. Data trees are created when a grasshopper component is structured to take in a data set and output multiple sets of data. Grasshopper handles this new data by nesting it in the form of sub-lists. These nested sub-lists work in the same way as folder structures on your computer in that accessing indexed items require moving through paths that are informed by their generation of parent lists and their own sub-index.
 
-It’s possible to have multiple lists of data inside a single parameter. Since 
-multiple lists are available, there needs to be a way to identify each individual 
-list. A Data Tree is essentially a list of lists, or sometimes a list of lists of lists (and 
+It’s possible to have multiple lists of data inside a single parameter. Since
+multiple lists are available, there needs to be a way to identify each individual
+list. A Data Tree is essentially a list of lists, or sometimes a list of lists of lists (and
 so on).
 
 (Insert Image)
 
-In the image above, there is a single master branch (you could call this a trunk, 
-but since it’s possible to have multiple master branches, it might be a bit of a 
-misnomer) at path {0}. This path contains no data, but does have 6 sub-branches. 
-Each of these sub-branches inherit the index of the parent branch {0} and add 
-their own sub-index (0, 1, 2, 3, 4, and 5 respectively). It would be wrong to call 
-this an “index”, because that implies just a single number. It is probably better to refer to this as a “path”, since it resembles a folder-structure on the disk. At each 
-of these sub-branches, we encounter some data. Each data item is thus part of 
+In the image above, there is a single master branch (you could call this a trunk,
+but since it’s possible to have multiple master branches, it might be a bit of a
+misnomer) at path {0}. This path contains no data, but does have 6 sub-branches.
+Each of these sub-branches inherit the index of the parent branch {0} and add
+their own sub-index (0, 1, 2, 3, 4, and 5 respectively). It would be wrong to call
+this an “index”, because that implies just a single number. It is probably better to refer to this as a “path”, since it resembles a folder-structure on the disk. At each
+of these sub-branches, we encounter some data. Each data item is thus part of
 one (and only one) branch in the tree, and each item has an index that specifies
-its location within the branch. Each branch has a path that specifies its location 
+its location within the branch. Each branch has a path that specifies its location
 within the tree.
 
 The image below illustrates the difference between a list and a data tree. On the
@@ -33,7 +33,7 @@ delete every second row of points, connect alternating points, etc.
 
 ###F.4.1.0 DATA TREE VISUALIZATION
 Due to their complexity, Data Trees can be difficult to understand. Grasshopper
-has several tools to help visualize and understand the data stored in a tree. 
+has several tools to help visualize and understand the data stored in a tree.
 
 **The Param Viewer**
 The Param Viewer (Params/Util/Param Viewer) allows you to visualize data in
