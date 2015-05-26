@@ -1,10 +1,10 @@
 # F.2.2 Mathematics, Expressions & Conditionals
 
-#####Attractors are points that act like virtual magnets - either attracting or repelling other objects. In Grasshopper, any geometry referenced from Rhino or created within Grasshopper can be used as an attractor. Attractors can influence any number of parameters of surrounding objects including scale, rotation, color, and position. These parameters are changed based on their relationship to the attractor geometry.
+#####Knowing how to work with numeric information is an essential skill to master as you learn to use Grasshopper. Grasshopper contains many components to perform mathematical operations, evaluate conditions and manipulate sets of numbers.
 
 In mathematics, numbers are organized by sets and there are two that you are probably familiar with:
 
-Integer Numbers: […, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, …]
+Integer Numbers: […, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, …]<br>
 Real Numbers: [8, …, -4.8, -3.6, -2.4, -1.2, 0.0, 1.234, e, 3.0, 4.0, …, 8]
 
 While there are other types of number sets, these two interest us the most
@@ -82,7 +82,7 @@ item of List A is greater than the first item of List B. The two outputs allow y
 determine if you would like to evaluate the two lists according to a greater than
 (>) or greater than and equal to (>=) condition.
 
-![](images/f2-2/f2-2_005-greater-than.png)
+![](images/f2-2/f2-2_005-larger-than.png)
 
 The Smaller Than component performs the opposite action of the Larger Than
 component. The Smaller Than component determines if list A is less than list B
@@ -90,7 +90,7 @@ and returns a list of boolean values. Similarly, the two outputs let you determi
 if you would like to evaluate each list according to a less than (<) or less than and
 equal to (<=) condition.
 
-![](images/f2-2/f2-2_006-less-than.png)
+![](images/f2-2/f2-2_006-smaller-than.png)
 
 ###F.2.2.3 TRIGONOMETRY COMPONENTS
 We have already shown that we can use an Expression (or Evaluate) component
@@ -102,100 +102,151 @@ light waves.
 
 ![](images/f2-2/f2-2_007-line-sine-helix-spiral.png)
 
-In this example, we will use Grasshopper to cunstruct various trigonometric
+|1. Line|2. Sine Curve|3. Helix|4. Spiral|
+|----|----|----|----|
+|y(t) = 0|y(t) = sin(t)|x(t) = cos(t)|x(t) = t*cos(t)|
+|||y(t) = sin(t)|y(t) = t*cos(t)|
+|||z(t) = b(t)|||
+
+<!--
+>1. Line
+  * y(t) = 0
+2. Sine Curve
+  * y(t) = sin(t)
+3. Helix
+  * x(t) = cos)
+  * y(t) = sin(t)
+  * z(t) = b(t)
+4. Spiral
+  * x(t) = t*cos(t)
+  * y(t) = t*sin(t)
+-->
+
+In this example, we will use Grasshopper to construct various trigonometric
 curves using trigonometry function components found in the Math tab:
 
-01.Type Ctrl+N (in Grasshopper) to start a new definition
+<ol style="background-color:#EEEEEE">
+<li>Type Ctrl+N (in Grasshopper) to start a new definition</li><br>
 
-02.Params/Geometry/Point – Drag and drop a point parameter onto the canvas
+<li>Params/Geometry/Point – Drag and drop a point parameter  onto the canvas
+<br>
+<!-- ![](images/f2-2/f2-2_008-point-72dpi.png)-->
+</li><br>
 
-![](images/f2-2/f2-2_008-point.png)
+<li>Right click the Point parameter and click Set One Point – select a point in the Rhino viewport</li><br>
 
-03.Right click the Point parameter and click Set One Point – select a point in the Rhino viewport
+<li>Vector/Vector/Unit X – Drag and drop the Unit X component to the canvas
+<br>
+<!-- ![](images/f2-2/f2-2_009-vector-72dpi.png)--> </li><br>
 
-04.Vector/Vector/Unit X – Drag and drop the Unit X component to the canvas
+<li>Params/Input/Number Slider – Drag and drop the Number Slider component  onto the canvas
+<br>
+<!-- ![](images/f2-2/f2-2_010-slider-72dpi.png)-->
 
-![](images/f2-2/f2-2_009-vector.png)
+<br>
+![](images/f2-2/f2-2_008-010-point-vector-slider.png)
+</li><br>
 
-05.Params/Input/Number Slider – Drag and drop the Number Slider component onto the canvas
+<li>Double-click on the Number slider and set the following:
+  <ul><br>
+  Rounding: Integer<br>
+  Lower Limit: 10<br>
+  Upper Limit: 40<br>
+  Value: 20</ul>
+</li><br>
 
-![](images/f2-2/f2-2_010-slider.png)
+<li>Transform/Array/Linear Array – Drag and drop the Linear Array component onto the canvas
+<br>
+![](images/f2-2/f2-2_011-linear-array-72dpi.png) </li><br>
 
-06.Double-click on the Number slider and set the following:<br>
-Rounding: Integer<br>
-Lower Limit: 10<br>
-Upper Limit: 40<br>
-Value: 20
+<li>Connect the output of the Point parameter to the Geometry (G) input of the Linear Array component</li><br>
 
-07.Transform/Array/Linear Array – Drag and drop the Linear Array component onto the canvas
+<li>Connect the Unit Vector (V) output of the Unit X component to the Direction (D) input of the Linear Array component</li><br>
 
-08.Connect the output of the Point parameter to the Geometry (G) input of the Linear Array component
+<li>Connect the Number Slider output to the Count (N) input of the Linear Array Component</li><br>
 
-09.Connect the Unit Vector (V) output of the Unit X component to the Direction (D) input of the Linear Array component
+<li>Curve/Spline/Interpolate – Drag and drop the Interpolate Curve component to the canvas
+<br>
+![](images/f2-2/f2-2_012-interpolate-curve-72dpi.png)
+</li><br>
 
-![](images/f2-2/f2-2_011-linear-array.png)
+<li>Connect the Geometry (G) output of the Linear Array component to the Vertices (V) input of the Interpolate Curve component
+<br>
+<br>
+![](images/f2-2/f2-2_013-connected-to-interpolate-curve.png)</li><br>
+</ol>
 
-10.Connect the Number Slider output to the Count (N) input of the Linear Array Component
+   We have just created a line by connecting an array of points with a curve. Let’s try using some of Grasshopper’s Trigonometry components to alter this curve:
+<ol start="13" style="background-color:#EEEEEE">
+<li>Vector/Point/Deconstruct – Drag and drop a Deconstruct component onto the canvas
+<br>
+<!-- ![](images/f2-2/f2-2_014-deconstruct-point-72dpi.png) -->
+</li><br>
 
-11.Curve/Spline/Interpolate – Drag and drop the Interpolate Curve component to the canvas
+<li>Vector/Point/Construct Point - Drag and drop a Construct Point component onto the canvas<br>
+<!-- ![](images/f2-2/f2-2_015-construct-point-72dpi.png) -->
+</li><br>
 
-(Border Image)
+<li>Maths/Trig/Sine - Drag and drop a sine component onto the canvas
+<br>
+<!-- ![](images/f2-2/f2-2_016-sine-72dpi.png) -->
+<br>
+![](images/f2-2/f2-2_014-016-deconstruct-construct-sine.png)
+</li><br>
 
-12.Connect the Geometry (G) output of the Linear Array component to the Vertices (V) input of the Interpolate Curve component
+<li>Disconnect the wire from the Vertices (V) input of the Interpolate Curve component
+  <ul><br>*You can disconnect wires by holding down control and dragging, or by right-clicking the input and selecting Disconnect*</ul>
+</li><br>
 
-(Border Image)
+<li>Connect the Geometry (G) output of the Linear Array component to the Point (P) input of the Deconstruct component</li><br>
 
-We have just created a line by connecting an array of points with a curve. Let’s try using some of Grasshopper’s Trigonometry components to alter this curve:
+<li>Connect the Point X (X) output of the Deconstruct component to the X coordinate (X) input of the Construct Point Component</li><br>
 
-13.Vector/Point/Deconstruct – Drag and drop a Deconstruct component onto the canvas
+<li>Connect a second wire from the Point X (X) output of the Deconstruct Component to the Value (x) input of the Sine component</li><br>
 
-(Border Image)
+<li>Connect the Result (y) output of the Sine component to the Y coordinate (Y) input of the Construct Point component
+<ul><br>
+*We have now reconstructed our points with the same X values, modifying the Y values with a sine curve.*</ul></li><br>
 
-14.Vector/Point/Construct Point - Drag and drop a Construct Point component onto the canvas
+<li>Connect the Point (Pt) output of the Construct Point component to the Vertices (V) input of the Interpolate component
+<ul><br>*You should now see a sine wave curve along the X axis in Rhino*</ul><br>
 
-15.Maths/Trig/Sine - Drag and drop a sine component onto the canvas
+![](images/f2-2/f2-2_017-connected-with-sine.png)</li><br>
 
-(Border Image)
+<li>Maths/Trig/Cosine – Drag and drop a Cosine component to the canvas
+<br>
+![](images/f2-2/f2-2_018a-cosine-72dpi.png)</li><br>
 
-16.Disconnect the wire from the Vertices (V) input of the Interpolate Curve component
+<li>Connect a third wire from the Point X (X) output of the Deconstruct Component to the Value (x) input of the Cosine component</li><br>
 
-(Border Text)
+<li>Connect the Result (y) output of the Cosine component to the Z coordinate (Z) input of the Construct Point component
+<ul><br>*We have now created a 3D helix*</ul>
+<br>
+![](images/f2-2/f2-2_018b-connected-with-sine-and-cosine.png)</li><br>
 
-17.Connect the Geometry (G) output of the Linear Array component to the Point (P) input of the Deconstruct component
+<li>Maths/Operators/Multiplication – Drag and drop two Multiplication components onto the canvas
+<br>
+![](images/f2-2/f2-2_019-multiply-72dpi.png)
+</li><br>
 
-18.Connect the Point X (X) output of the Deconstruct component to the X coordinate (X) input of the Construct Point Component
+<li>Connect wires from the Point X (X) output of the Deconstruct component to the (A) input of each Multiplication component</li><br>
 
-19.Connect a second wire from the Point X (X) output of the Deconstruct Component to the Value (x) input of the Sine component
+<li>Connect the Result (y) output of the Sine component to the (B) input of the first Multiplication component</li><br>
 
-20.Connect the Result (y) output of the Sine component to the Y coordinate (Y) input of the Construct Point component
+<li>Connect the Result (y) output of the Cosine component to the (B) input of the second Multiplication component</li><br>
 
-(Border Text)
+<li>Disconnect the wire from the Y Coordinate (Y) input of the Construct Point component</li><br>
 
-21.Connect the Point (Pt) output of the Construct Point component to the Vertices (V) input of the Interpolate component
+<li>Connect the Result (R) output of the first Multiplication component to the X Coordinate (X) input of the Construct Point component</li><br>
 
-(Border Text)
+<li>Connect the Result (R) output of the second Multiplication component to the Z Coordinate (Z) input of the Construct Point component
+<ul><br> *You should now see a spiral curve*</ul>
+<br>
 
-(Insert Image)
-
-22.Maths/Trig/Cosine – Drag and drop a Cosine component to the canvas
-23.Connect a third wire from the Point X (X) output of the Deconstruct Component to the Value (x) input of the Cosine component
-24.Connect the Result (y) output of the Cosine component to the Z coordinate (Z) input of the Construct Point component
-(Border Text)
-
-(Insert Image)
-
-25.Maths/Operators/Multiplication – Drag and drop two Multiplication components onto the canvas
-(Border Image)
-26.Connect wires from the Point X (X) output of the Deconstruct component to the (A) input of each Multiplication component
-27.Connect the Result (y) output of the Sine component to the (B) input of the first Multiplication component
-28.Connect the Result (y) output of the Cosine component to the (B) input of the second Multiplication component
-29.Disconnect the wire from the Y Coordinate (Y) input of the Construct Point component
-(Border Image)
-30.Connect the Result (R) output of the first Multiplication component to the X Coordinate (X) input of the Construct Point component
-31.Connect the Result (R) output of the second Multiplication component to the Z Coordinate (Z) input of the Construct Point component
-(Border Text)
-
-(Insert Image)
+![](images/f2-2/f2-2_020-connected-with-spiral.png)
+<br>
+![](images/f2-2/f2-2_021-spiral.png)</li><br>
+</ol>
 
 ###F.2.2.4 EXPRESSIONS
 The Expression component (and its brother the Evaluate component) are
@@ -203,54 +254,70 @@ very flexible tools; that is to say that they can be used for a variety of diffe
 applications. We can use an Expression (or Evaluate component) to solve
 mathematical algorithms and return numeric data as the output.
 
-(Insert Image)
+![](images/f2-2/f2-2_022-expression-evaluate.png)
 
 In the following example, we will look at mathematical spirals found in nature
 and how we can use a few Functions components to create similar patterns in
 Grasshopper. We will build on our trigonometric curves definition as a starting
 point.
 
-01. Open your Trigonometric curves Grasshopper definition from the
-previous example
-02. Delete the Sine, Cosine, Multiplication, and Interpolate components
-03. Params/Input/Number Slider – Drag and drop a Number Slider onto the
+
+<!-- example using html for list formatting to allow for consistent numbering system after image breaks in the list -->
+<ol start="1" style="background-color:#EEEEEE">
+<li> Open your Trigonometric curves Grasshopper definition from the
+previous example</li><br>
+<li>Delete the Sine, Cosine, Multiplication, and Interpolate components </li><br>
+<li>Params/Input/Number Slider – Drag and drop a Number Slider onto the
+canvas</li><br>
+<li>Double-click on the Number slider and set the following:
+<ul><br>
+Rounding: Float<br>
+Lower Limit: 0.000<br>
+Upper Limit: 1.000<br>
+Value: 1.000</ul></li><br>
+<li> Connect the Number slider to the Factor (F) input of the Unit X component.
+<ul><br> *This slider allows you to adjust the distance between the points in the array.*</ul>
+</li><br>
+<li> Maths/Script/Expression – Drag two Expression components  onto the
 canvas
-04. Double-click on the Number slider and set the following:
-Rounding: Float
-Lower Limit: 0.000
-Upper Limit: 1.000
-Value: 1.000
-05. Connect the Number slider to the Factor (F) input of the Unit X
-component
-(Border Text)
-06. Maths/Script/Expression – Drag two Expression components onto the
-canvas
-(Border Image)
-07. Double-click the first Expression component to open the Expression
+<br>
+![](images/f2-2/f2-2_023-expression-72dpi.png)</li><br>
+<li> Double-click the first Expression component to open the Expression
 Editor and change the expression to:
-x*sin(x)
-08. Double-click the second Expression component to open the Expression
-Editor and change the expression to: x*cos(x)
+x\*sin(x)</li><br>
+<li> Double-click the second Expression component to open the Expression
+Editor and change the expression to: x\*cos(x)</li><br>
 
-(Insert Image)
-
-09.Connect two wires from the Point X (X) output of the Deconstruct component to the Variable x (x) input of each Expression component
-10.Connect the Result (R) output of the first Expression component to the X coordinate (X) input of the Construct Point component
-11.Connect the Result (R) output of the second Expression component to the Y coordinate (Y) input of the Construct Point component
-12. Mesh/Triangulation/Voronoi – Drag and drop the Voronoi component onto the canvas
-13.Params/Input/Number Slider – Drag and drop a Number Slider onto the canvas
-14.Double-click on the Number slider and set the following:
-Rounding: Integer
-Lower Limit: 1
-Upper Limit: 30
-Value: 30
-15.Connect the Number slider to the Radius (R) input of the Voronoi component
-16.Connect the Point (Pt) output of the Construct Point component to the Points (P) input of the Voronoi component
-
-(Insert Image)
+![](images/f2-2/f2-2_024-expression-editor.png)
+<br>
+<br>
+<li>Connect two wires from the Point X (X) output of the Deconstruct component to the Variable x (x) input of each Expression component</li><br>
+<li>Connect the Result (R) output of the first Expression component to the X coordinate (X) input of the Construct Point component</li><br>
+<li>Connect the Result (R) output of the second Expression component to the Y coordinate (Y) input of the Construct Point component
+<ul><br>*We have replaced the Trigonometry functions and multiplication operators with the expression components for a more efficient definition.*
+</ul></li><br>
+<li> Mesh/Triangulation/Voronoi – Drag and drop the Voronoi component  onto the canvas
+<br>
+![](images/f2-2/f2-2_025-voronoi-72dpi.png)</li><br>
+<li>Params/Input/Number Slider – Drag and drop a Number Slider onto the canvas</li><br>
+<li>Double-click on the Number slider and set the following:
+<ul><br>
+Rounding: Integer<br>
+Lower Limit: 1<br>
+Upper Limit: 30<br>
+Value: 30</ul></li><br>
+<li>Connect the Number slider to the Radius (R) input of the Voronoi component</li><br>
+<li>Connect the Point (Pt) output of the Construct Point component to the Points (P) input of the Voronoi component
+<br><br>
+![](images/f2-2/f2-2_026-connected-with-voronoi.png)</li>
+</ol>
 
 You can create different Voronoi patterns by manipulating the Factor, Count, and Radius sliders. Below are three examples:
 
-(Insert Image)
+>![](images/f2-2/f2-2_027-voronoi-patterns.png)
+1. Factor = 1.000, Radius = 15
+2. Factor = 0.400, Radius = 10
+3. Factor = 0.200, Radius = 7
 
-(Insert Image)
+---
+![](images/f2-2/f2-2_028-large-voronoi.png)
