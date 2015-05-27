@@ -1,4 +1,4 @@
-# 1.4.3 Data Stream Matching
+### 1.4.3. Data Stream Matching
 
 #####Data matching is a problem without a clean solution. It occurs when a component has access to differently sized inputs. Changing the data matching algorithm can lead to vastly different results.
 

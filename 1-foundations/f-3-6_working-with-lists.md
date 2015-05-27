@@ -1,4 +1,4 @@
-# 1.4.7 WORKING WITH LISTS
+### 1.4.7. WORKING WITH LISTS
 
 Lets take a look at an example using the components from the previous section. In this example, we are creating a tile pattern by mapping geometry to a rectangular grid. The pattern is created by using the List Item component to retrieve the desired tile from a list of geometry.
 

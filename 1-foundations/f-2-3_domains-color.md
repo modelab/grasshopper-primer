@@ -1,4 +1,4 @@
-# F.2.3 Domains & Color
+###1.3.4. Domains & Color
 
 #####The color wheel is a model for organizing colors based on their hue. In Grasshopper, colors can be defined by their hue value in a range of 0.0 to 1.0. Domains are used to define a range of all possible values between a set of numbers between a lower limit(A) and an upper limit (B).
 

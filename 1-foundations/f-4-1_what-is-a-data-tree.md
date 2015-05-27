@@ -1,4 +1,4 @@
-# F-4-1 What is a Data Tree?
+### 1.5.2. What is a Data Tree?
 
 #####A Data Tree is a hierarchical structure for storing data in nested lists. Data trees are created when a grasshopper component is structured to take in a data set and output multiple sets of data. Grasshopper handles this new data by nesting it in the form of sub-lists. These nested sub-lists work in the same way as folder structures on your computer in that accessing indexed items require moving through paths that are informed by their generation of parent lists and their own sub-index.
 
@@ -31,7 +31,7 @@ delete every second row of points, connect alternating points, etc.
 
 (Insert Image)
 
-###F.4.1.0 DATA TREE VISUALIZATION
+####1.5.2.1. DATA TREE VISUALIZATION
 Due to their complexity, Data Trees can be difficult to understand. Grasshopper
 has several tools to help visualize and understand the data stored in a tree.
 

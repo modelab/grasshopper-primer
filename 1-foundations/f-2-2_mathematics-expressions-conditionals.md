@@ -1,4 +1,4 @@
-# F.2.2 Mathematics, Expressions & Conditionals
+### 1.3.3. Mathematics, Expressions & Conditionals
 
 #####Knowing how to work with numeric information is an essential skill to master as you learn to use Grasshopper. Grasshopper contains many components to perform mathematical operations, evaluate conditions and manipulate sets of numbers.
 
@@ -13,7 +13,7 @@ distinction between Integral types (integers) and Floating types (real numbers) 
 this chapter, we’re going to explore different methods for working with and
 evaluating various sets of numbers.
 
-###F.2.2.0 THE MATH TAB
+####1.3.3.1. THE MATH TAB
 Most of the components that deal with mathematical operations and functions can be found under the following sub-categories of the Math tab:
 
 ![](images/f2-2/f2-2_001-the-math-tab.png)
@@ -27,7 +27,7 @@ Most of the components that deal with mathematical operations and functions can 
 7. The time subcategory has a number of components which allow you to construct instances of dates and times.
 8. The utility subcategory is a ‘grab bag’ of useful components that canbe used in various mathematical equations. Check here if you’re trying find the maximum or minimum values between two lists of numbers; or average a group of numbers.
 
-###F.2.2.1 OPERATORS
+####1.3.3.2. OPERATORS
 As was previously mentioned, Operators are a set of components that use
 algebraic functions with two numeric input values, which result in one output
 value.
@@ -38,7 +38,7 @@ various data types, including points and vectors.
 
 ![](images/f2-2/f2-2_002-operators.png)
 
-###F.2.2.2 CONDITIONAL OPERATORS
+####1.3.3.3. CONDITIONAL OPERATORS
 Almost every programming language has a method for evaluating conditional
 statements. In most cases the programmer creates a piece of code to ask a
 simple question of “what if.” What if the area of a floor outline exceeds the
@@ -92,7 +92,7 @@ equal to (<=) condition.
 
 ![](images/f2-2/f2-2_006-smaller-than.png)
 
-###F.2.2.3 TRIGONOMETRY COMPONENTS
+####1.3.3.4. TRIGONOMETRY COMPONENTS
 We have already shown that we can use an Expression (or Evaluate) component
 to evaluate conditional statements as well as compute algebraic equations.
 However, there other ways to calculate simple expressions using a few of the
@@ -107,20 +107,6 @@ light waves.
 |y(t) = 0|y(t) = sin(t)|x(t) = cos(t)|x(t) = t*cos(t)|
 |||y(t) = sin(t)|y(t) = t*cos(t)|
 |||z(t) = b(t)|||
-
-<!--
->1. Line
-  * y(t) = 0
-2. Sine Curve
-  * y(t) = sin(t)
-3. Helix
-  * x(t) = cos)
-  * y(t) = sin(t)
-  * z(t) = b(t)
-4. Spiral
-  * x(t) = t*cos(t)
-  * y(t) = t*sin(t)
--->
 
 In this example, we will use Grasshopper to construct various trigonometric
 curves using trigonometry function components found in the Math tab:
@@ -248,7 +234,7 @@ curves using trigonometry function components found in the Math tab:
 ![](images/f2-2/f2-2_021-spiral.png)</li><br>
 </ol>
 
-###F.2.2.4 EXPRESSIONS
+####1.3.3.5. EXPRESSIONS
 The Expression component (and its brother the Evaluate component) are
 very flexible tools; that is to say that they can be used for a variety of different
 applications. We can use an Expression (or Evaluate component) to solve

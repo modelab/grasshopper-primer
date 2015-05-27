@@ -1,17 +1,17 @@
-# F-4-3 Working with Data Trees
+### 1.5.3. Working with Data Trees
 
 #####Grasshopper contains tools for changing the structure of a data tree. Theese tools can help you access specific data within a tree, and change the way it is stored, ordered, and identified.
 
 Let’s look at some data tree manipulations and visualize how they affect the tree.
 
-###F.4.3.0 FLATTEN
+####1.5.3.1. FLATTEN
 Flattening removes all levels of a Data Tree, resulting in a single List. Using the
 Flatten component (Sets/Tree/Flatten) on the P output of our Divide Curve
 component, we can use the Param Viewer to visualize the new data structure.
 
 (Insert Image)
 
-###F.4.3.1 GRAFT TREE
+####1.5.3.2. GRAFT TREE
 Grafting creates a new Branch for every Data Item. If we run the data through
 the Graft Tree component (Sets/Tree/Graft Tree), each division point now has
 its own individual branch, rather than sharing a branch with the other division
@@ -19,14 +19,14 @@ points on the same curve.
 
 (Insert Image)
 
-###F.4.3.2 SIMPLIFY TREE
+####1.5.3.3. SIMPLIFY TREE
 Simplify removes overlapping Branches in a Data Tree. If we run the data
 through the Simplify Tree component (Sets/Tree/Simplify Tree), the first branch,
 containing no data, has been removed.
 
 (Insert Image)
 
-###F.4.3.3 FLIP MATRIX
+####1.5.3.4. FLIP MATRIX
 The Flip Matrix component (Sets/Tree/Flip Matrix) Swaps the “Rows” and
 “Columns” of a Data Tree with two Path Indices.
 
@@ -43,14 +43,14 @@ flattened after the component performs its action.
 
 (Insert Image)
 
-###F.4.3.4 THE PATH MAPPER
+####1.5.3.5. THE PATH MAPPER
 The Path Mapper component (Sets/Tree/Path Mapper) allows you to perform
 lexical operations on data trees. Lexical operations are logical mappings between
 data paths and indices which are defined by textual (lexical) masks and patterns.
 
 (Insert Image)
 
-###F.4.3.5 WEAVING DEFINITION
+####1.5.3.6. WEAVING DEFINITION
 In this example, we will manipulate lists and data trees to weave lists of points,
 define a pattern, and create surface geometry.
 
@@ -202,7 +202,7 @@ input of the Second Revolution component
 
 (Insert Image)
 
-###F.4.3.6 RAIL INTERSECTION DEFINITION
+####1.5.3.7. RAIL INTERSECTION DEFINITION
 In this example, we will use some of Grasshopper’s tools for manipulating data
 trees to retreive, reorganize, and interpolate the desired points contained in a
 data tree and create a lattice of intersecting fins.

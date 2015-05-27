@@ -1,4 +1,4 @@
-# F-4-0 Surface Geometry
+###1.5.1. Surface Geometry
 
 #####NURBS (non-uniform rational B-splines) are mathematical representations that can accurately model any shape from a simple 2D line, circle, arc, or box to the most complex 3D free-form organic surface or solid. Because of their flexibility and accuracy, NURBS models can be used in any process from illustration and animation to manufacturing.
 
@@ -6,7 +6,7 @@ Apart from a few primitive surface types such as spheres, cones, planes and cyli
 
 (Insert Image)
 
-###F.4.0.0 NURBS SURFACES
+####1.5.1.1. NURBS SURFACES
 NURBS surfaces are very similar to NURBS curves. The same algorithms are
 used to calculate shape, normals, tangents, curvatures and other properties, but
 there are some distinct differences. For example, curves have tangent vectors
@@ -51,7 +51,7 @@ some of the mesh settings are slightly lower in order to keep the speed of the G
 meshes, but this is to be expected and is only a result of Grasshopper’s drawing
 settings. Any baked geometry will still use the higher mesh settings.
 
-###F.4.0.1 PROJECTING SURFACES
+####1.5.1.2. PROJECTING SURFACES
 In the previous section, we explained that NURBS surfaces contain their own coordinate space desfined by u and v domains. This means that two dimensional geometry that is defined by x and y coordinates can be mapped onto the uv space of a surface. The geometry will stretch and change in response to the curvature of the surface. This is different from simply projecting 2d geometry onto a surface, where vectors are drawn from the 2d geometry in a specified direction until they intersect with the surface.
 
 (Border Text)
@@ -71,7 +71,7 @@ normal vectors at the corners of each patch to the desired height and creating
 a box defined by the end points of those vectors and the corner points of the
 patch.
 
-#F.4.0.2 MORPHING DEFINITION
+####1.5.1.3. MORPHING DEFINITION
 In this example, we will use the box morph component to populate a NURBS
 surface with a geometric component.
 
