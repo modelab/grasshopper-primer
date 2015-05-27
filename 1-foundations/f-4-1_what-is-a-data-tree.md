@@ -26,7 +26,7 @@ The Param Viewer (Params/Util/Param Viewer) allows you to visualize data in text
 
 If we connect a panel to the same output, it displays ten lists of 11 items each. You can see that each item is a point defined by three coordinates. The path is displayed at the top of each list, and corresponds to the paths listed in the Param Viewer.
 
-![IMAGE](images/1-5-2/1-5-2_004_panel_display.png)
+![IMAGE](images/1-5-2/1-5-2_004-panel-display.png)
 >1. Path
 2. List of 11 items
 
