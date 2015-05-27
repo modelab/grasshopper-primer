@@ -99,7 +99,7 @@ surface with a geometric component.
 |12.|Connect the second Number Slider to the V Count (V) input of the Divide Domain2 component||
 |13.|Transform/Morph/Surface Box – Drag the Surface Box component to the canvas|![IMAGE](images/1-5-1/1-5-1_ex_04-surface-box.png)|
 |14.|Connect the output of the Surface parameter to the Surface (S) input of the Surface Box component||
-|15.|Connect the Segements (S) output of the Divide Domain2 component to the Domain (D) input of the Surface Box component||
+|15.|Connect the Segements (S) output of the Divide Domain2 component to the Domain (D) input of the Surface Box component|||
 
 ![IMAGE](images/1-5-1/1-5-1_ex_05-definition1.png)
 

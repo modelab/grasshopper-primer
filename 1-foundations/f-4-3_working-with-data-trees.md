@@ -262,13 +262,8 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 |53.| Curve/Spline/Interpolate – Drag and drop the Interpolate component onto the canvas|![IMAGE](images/1-5-3/1-5-3_053-interpolate.png)|
 |54.| Connect the Line (L) outputs of each Line component to the Curves (C) input of the Join Curves component  <br><br>*Hold down the Shift key to connect multiple wires to a single input* ||
 |55.| Connect the Curves (C) output of the Join Curves component to the Curve (C) input of the Control Points component||
-|56.| Connect the Points (P) output of the Control Points component to the Vertices (V) input of the Interpolate component|||
-
-![IMAGE](images/1-5-3/1-5-3_054-definition6.png)
->We have now joined our lines into polylines and reconstructed them as NURBS curves by interpolating their control points. In the Rhino viewport, you might notice that the shorter curves are still straight lines. This is because you cannot make a degree three NURBS curve with fewer than four control points. Let’s manipulate the data tree to eliminate lists of control points with less than four items.
-
-||||
-|--|--|--|
+|56.| Connect the Points (P) output of the Control Points component to the Vertices (V) input of the Interpolate component||
+||![IMAGE](images/1-5-3/1-5-3_054-definition6.png)<br><blockquote>We have now joined our lines into polylines and reconstructed them as NURBS curves by interpolating their control points. In the Rhino viewport, you might notice that the shorter curves are still straight lines. This is because you cannot make a degree three NURBS curve with fewer than four control points. Let’s manipulate the data tree to eliminate lists of control points with less than four items.</blockquote>||
 |57.| Sets/Tree/Prune Tree – Drag and drop the Prune Tree component onto the canvas|![IMAGE](images/1-5-3/1-5-3_055-prune-tree.png)|
 |58.| Params/Input/Panel – Drag a Panel onto the canvas||
 |59.| Connect the Points (P) output of the Control Points component to the Tree (T) input of the Prune Tree component <br><br>*If you connect one Param Viewer to the Points (P) output of the Control Points component, and another to the Tree (T) output of the Prune Tree component, you can see that the number of branches has been reduced.*||
