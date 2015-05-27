@@ -1,5 +1,5 @@
-# F-2 Building Blocks of Algorithms
+# F.2 Building Blocks of Algorithms
 
 ####This chapter will introduce you to basic geometric and mathematical concepts and how they are implemented and manipulated in Grasshopper.
 
-(Insert Image)
+![Building Blocks of Algorithms](images/f2/f2_001.png)
