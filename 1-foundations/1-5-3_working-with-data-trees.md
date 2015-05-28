@@ -81,7 +81,7 @@ thead {display: none}
 |02.| **Curve/Primitive/Line SDL** – Drag and drop the **Line SDL** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_010-line-SDL.png)](/appendix/index.html#index)|
 |03.| **Vector/Point/Construct Point** – Drag and drop the **Construct Point** component onto the canvas|![IMAGE](images/1-5-3/1-5-3_011-construct-point.png)|
 |04.| Connect the Point (Pt) output of the **Construct Point** component to the Start (S) Input of the **Line SDL** component||
-|05.| **Vector/Vector/Unit Y** – Drag and drop the vector **Unit Y** component onto the canvas|![IMAGE](images/1-5-3/1-5-3_012-unit-y.png)<br>The factor of Unit Vector components is 1.0 by default.|
+|05.| **Vector/Vector/Unit Y** – Drag and drop the vector **Unit Y** component onto the canvas<br><blockquote>The factor of Unit Vector components is 1.0 by default.</blockquote>|![IMAGE](images/1-5-3/1-5-3_012-unit-y.png)|
 |06.| Connect the **Unit Y** component to the Direction (D) input of the **Line SDL** component|||
 
 ![IMAGE](images/1-5-3/1-5-3_013-definition1.png)
@@ -132,10 +132,10 @@ thead {display: none}
 |31.| Connect the Points (P) output of the first **Divide Curve** component to the List (L) input of the first **Cull Pattern** component||
 |32.| Connect the Points (P) output of the second **Divide Curve** component to the List (L) input of the second **Cull Pattern** component||
 |33.| **Params/Input/Panel** – Drag and drop a second **Panel** component onto the canvas||
-|34.| Double-click the second **Panel** and deselect: Multiline Data, Wrap Items, and Special Codes. Then enter the following:<ul>1<br>1<br>0<br>0</ul><br>|![IMAGE](images/1-5-3/1-5-3_024-panel.png)<br>We are using 1 and 0 in place of true and false. These are the two syntaxes that Grasshopper accepts for boolean values.|
+|34.| Double-click the second **Panel** and deselect: Multiline Data, Wrap Items, and Special Codes. Then enter the following:<ul>1<br>1<br>0<br>0</ul><br><blockquote>We are using 1 and 0 in place of true and false. These are the two syntaxes that Grasshopper accepts for boolean values.</blockquote>|![IMAGE](images/1-5-3/1-5-3_024-panel.png)|
 |35.| Connect the second **Panel** to the Pattern (P) input of the first **Cull Pattern** component||
 |36.| Connect the second **Pane**l to the Pattern (P) input of the second **ull Pattern** component||
-|37.| Right-click on the Pattern (P) input of the second **Cull Pattern** component and select Invert <br>|This will invert the **Cull Pattern**, a useful trick to keep definitions short.|
+|37.| Right-click on the Pattern (P) input of the second **Cull Pattern** component and select Invert <br><blockquote>This will invert the **Cull Pattern**, a useful trick to keep definitions short.</blockquote>||
 |38.| **Sets/List/Weave** – Drag and drop the **Weave** component onto the canvas|![IMAGE](images/1-5-3/1-5-3_025-weave.png)|
 |39.| Connect the second **Panel** to the Pattern (P) input of the **Weave** component||
 |40.| Right-click the Pattern (P) input of the **Weave** component and select reverse||
@@ -156,7 +156,7 @@ thead {display: none}
 |46.| Connect the Curve output of the **Nurbs Curve** component to the Profile Curve (P) input of both **Revolution** components.||
 |47.| Right Click on Axis (A) input of both **Revolution** components and select Graft.||
 |48.| Connect the List A (A) output of the **Dispatch** component to the Axis (A) input of the first **Revolution** component||
-|49.| Connect the List B (B) output of the **Dispatch** component to the Axis (A) input of the second **Revolution** component|Select all the components except the two Revolution components and turn the preview off - it is helpful to turn previews off as you build the definition to focus on the most recent geometry|
+|49.| Connect the List B (B) output of the **Dispatch** component to the Axis (A) input of the second **Revolution** component <br><blockquote>Select all the components except the two Revolution components and turn the preview off - it is helpful to turn previews off as you build the definition to focus on the most recent geometry</blockquote>|||
 
 ![IMAGE](images/1-5-3/1-5-3_030-definition5.png)
 
@@ -192,7 +192,7 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 |--|--|--|
 |08.| Params/Geometry/Surface – drag a surface parameter to the canvas||
 |09.| Connect the Brep (S) output of the Sweep2 component to the input of the surface parameter||
-|10.| Right-click the surface parameter and select “Reparameterize”. <br><br>*In this step, we re-mapped the u and v domains of the surface between 0 and 1. This will make future operations possible.*|![IMAGE](images/1-5-3/1-5-3_035-reparameterize.png)|
+|10.| Right-click the surface parameter and select “Reparameterize”. <br><blockquote>In this step, we re-mapped the u and v domains of the surface between 0 and 1. This will make future operations possible.</blockquote>|![IMAGE](images/1-5-3/1-5-3_035-reparameterize.png)|
 |11.| Maths/Domain/Divide Domain2 – drag and drop a Divide Domain2 component onto the canvas|![IMAGE](images/1-5-3/1-5-3_036-divide-domain2.png)|
 |12.| Params/Input/Number Slider – drag two number sliders onto the canvas||
 |13.| Double click the first slider and set the following:<ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 40<br>Value: 20</ul>||
@@ -214,7 +214,7 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 |23.| Params/Input/Graph Mapper – Drag a Graph Mapper to the canvas|![IMAGE](images/1-5-3/1-5-3_041-graph-mapper.png)|
 |24.| Sets/List/List Length – Drag a List Length component to the canvas|![IMAGE](images/1-5-3/1-5-3_042-list-length.png)|
 |25.| Sets/Tree/Merge – Drag a Merge component to the canvas |![IMAGE](images/1-5-3/1-5-3_043-merge.png)|
-|26.| Sets/List/Split List – Drag a Split List component to the canvas <br><br>*The Merge and Split components are used here so that the same Graph Mapper could be used for both the U min and U max values.*|![IMAGE](images/1-5-3/1-5-3_044-split-list.png)|
+|26.| Sets/List/Split List – Drag a Split List component to the canvas <br><blockquote>The Merge and Split components are used here so that the same Graph Mapper could be used for both the U min and U max values.</blockquote>|![IMAGE](images/1-5-3/1-5-3_044-split-list.png)|
 |27.| Connect the U min (U0) and U max (U1) outputs of the Deconstruct Domain2 component to the Data 1 (D1) and Data 2 (D2) inputs of the Merge component||
 |28.| Connect the Result (R) output of the Merge component to the input of the Graph Mapper||
 |29.| Right-click the Graph Mapper and select “Bezier” under “Graph Types”||
@@ -235,8 +235,8 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 |38.| Surface/Analysis/Deconstruct Brep – Drag the deconstruct Brep component onto the canvas|![IMAGE](images/1-5-3/1-5-3_046-deconstruct-brep.png)|
 |39.| Sets/Tree/Flip Matrix – Drag the Flip Matrix Component to the canvas|![IMAGE](images/1-5-3/1-5-3_047-flip-matrix.png)|
 |40.| Sets/Tree/Explode Tree – Drag the Explode Tree component to the canvas|![IMAGE](images/1-5-3/1-5-3_048-explode-tree.png)|
-|41.| Connect the Surface (S) output of the Isotrim component to the Brep (B) input of the Deconstruct Brep component <br><br>*The Deconstruct Brep component deconstructs a Brep into Faces, Edges, and Vertices. This is helpful if you want to operate on a specific constituent of the surface.*||
-|42.| Connect the Vertices (V) output of the Deconstruct Brep component to the Data (D) input of the Flip Matrix component <br><br>*We just changed the Data tree structure from one list of four vertices that define each surface, to four lists, each containing one vertex of each surface.*||
+|41.| Connect the Surface (S) output of the Isotrim component to the Brep (B) input of the Deconstruct Brep component <br><blockquote>The Deconstruct Brep component deconstructs a Brep into Faces, Edges, and Vertices. This is helpful if you want to operate on a specific constituent of the surface.</blockquote>||
+|42.| Connect the Vertices (V) output of the Deconstruct Brep component to the Data (D) input of the Flip Matrix component <br><blockquote>We just changed the Data tree structure from one list of four vertices that define each surface, to four lists, each containing one vertex of each surface.</blockquote>||
 |43.| Connect the Data (D) output of the Flip Matrix component to the Data (D) input of the Explode Tree component||
 |44.| Right-click the Explode Tree component and select “Match Outputs”||
 |45.| Right-click the Data (D) input of the Explode Tree component and select simplify|||
@@ -260,13 +260,18 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 |51.| Curve/Until/Join Curves – Drag and drop the Join Curves component to the canvas|![IMAGE](images/1-5-3/1-5-3_051-join-curves.png)|
 |52.| Curve/Analysis/Control Points – Drag a Control Points component onto the canvas|![IMAGE](images/1-5-3/1-5-3_052-control-points.png)|
 |53.| Curve/Spline/Interpolate – Drag and drop the Interpolate component onto the canvas|![IMAGE](images/1-5-3/1-5-3_053-interpolate.png)|
-|54.| Connect the Line (L) outputs of each Line component to the Curves (C) input of the Join Curves component  <br><br>*Hold down the Shift key to connect multiple wires to a single input* ||
+|54.| Connect the Line (L) outputs of each Line component to the Curves (C) input of the Join Curves component  <br><blockquote>Hold down the Shift key to connect multiple wires to a single input<blockquote> ||
 |55.| Connect the Curves (C) output of the Join Curves component to the Curve (C) input of the Control Points component||
-|56.| Connect the Points (P) output of the Control Points component to the Vertices (V) input of the Interpolate component||
-||![IMAGE](images/1-5-3/1-5-3_054-definition6.png)<br><blockquote>We have now joined our lines into polylines and reconstructed them as NURBS curves by interpolating their control points. In the Rhino viewport, you might notice that the shorter curves are still straight lines. This is because you cannot make a degree three NURBS curve with fewer than four control points. Let’s manipulate the data tree to eliminate lists of control points with less than four items.</blockquote>||
+|56.| Connect the Points (P) output of the Control Points component to the Vertices (V) input of the Interpolate component|||
+
+![IMAGE](images/1-5-3/1-5-3_054-definition6.png)
+>We have now joined our lines into polylines and reconstructed them as NURBS curves by interpolating their control points. In the Rhino viewport, you might notice that the shorter curves are still straight lines. This is because you cannot make a degree three NURBS curve with fewer than four control points. Let’s manipulate the data tree to eliminate lists of control points with less than four items.
+
+||||
+|--|--|--|
 |57.| Sets/Tree/Prune Tree – Drag and drop the Prune Tree component onto the canvas|![IMAGE](images/1-5-3/1-5-3_055-prune-tree.png)|
 |58.| Params/Input/Panel – Drag a Panel onto the canvas||
-|59.| Connect the Points (P) output of the Control Points component to the Tree (T) input of the Prune Tree component <br><br>*If you connect one Param Viewer to the Points (P) output of the Control Points component, and another to the Tree (T) output of the Prune Tree component, you can see that the number of branches has been reduced.*||
+|59.| Connect the Points (P) output of the Control Points component to the Tree (T) input of the Prune Tree component <br><blockquote>If you connect one Param Viewer to the Points (P) output of the Control Points component, and another to the Tree (T) output of the Prune Tree component, you can see that the number of branches has been reduced.</blockquote>||
 |60.| Double click the Panel and enter 4.|![IMAGE](images/1-5-3/1-5-3_056-panel.png)|
 |61.| Connect the output of the Panel to the Minimum (N0) input of the Prune Tree component||
 |62.| Connect the Tree (T) output of the Prune Tree||
