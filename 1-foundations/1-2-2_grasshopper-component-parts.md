@@ -75,8 +75,8 @@ settings and details. You can access this context menu by right-clicking on the 
 Some components can be modified to increase the number of inputs or outputs through the Zoomable User Interface (ZUI). By zooming in on the component on the canvas, an additional set of options will appear which allows you add or remove Inputs or Outputs to that component. The Addition component allows you to add inputs, representing additional items for the addition operation.
 
 ![IMAGE](images/1-2-2/1-2-2_011-zoomable-ui.png)
->1. Click the - sign to remove an Input.
-2. Click the + sign to add an Input.
+>1. Click the + sign to add an Input.
+2. Click the - sign to remove an Input.
 
 The panel component also has a zoomable user interface. A Panel is like a Post-It™ sticker. It allows you to add little remarks or explanations to a Document. You can change the text through the menu or by double-clicking the panel surface. Panels can also receive and display data from elsewhere. If you plug an output into a Panel, you can see the contents of that parameter in real-time. All data in Grasshopper can be viewed in this way. When you zoom in on a panel, a menu appears allowing you to change the background, font, and other attributes. These options are also available when you right-click the panel
 

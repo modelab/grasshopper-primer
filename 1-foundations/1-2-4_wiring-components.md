@@ -5,13 +5,19 @@
 ####1.2.4.1. CONNECTION MANAGEMENT
 To connect components, click and drag near the circle on the output side of an object. A connecting wire will be attached to the mouse. Once the mouse hovers over a potential target input, the wire will connect and become solid. This is not a permanent connection until you release the mouse button. It doesn’t matter if we make the connections in a ‘left to right’ or ‘right to left’ manner.
 
-![IMAGE](images/1-2-4/1-2-4_001-connection-management.png)
+![IMAGE](images/1-2-4/1-2-4_001a.png)
 >1. The Divide Curve component - divides a curve into equal length segments.
 2. Curve parameter - right click and select Set One Curve to reference Rhino Geometry.
-3. Left click and drag the wire from the output of one object to the input of another.
-4. If you hold down CONTROL, the cursor will become red, and the targeted source will be removed from the source list.
+
+![IMAGE](images/1-2-4/1-2-4_001b.png)
+>3. Left click and drag the wire from the output of one object to the input of another.
+
+![IMAGE](images/1-2-4/1-2-4_001c.png)
+>4. If you hold down CONTROL, the cursor will become red, and the targeted source will be removed from the source list.
 5. By default, a new connection will erase existing connections. Hold the SHIFT button while dragging connection wires to difne multiple sources. The cursor will turn green to indicate the addition behavior.
-6. You can also disconnect wires through the context popup menu - right click the grip of the input or output and select disconnect.
+
+![IMAGE](images/1-2-4/1-2-4_001d.png)
+>6. You can also disconnect wires through the context popup menu - right click the grip of the input or output and select disconnect.
 7. If there are multiple connections, select the one you want to disconnect from the list.
 8. When you hover over an item, the wire will be highlighted in red.
 
