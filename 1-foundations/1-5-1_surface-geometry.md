@@ -81,13 +81,18 @@ surface with a geometric component.
 3. Surface divided into patches.
 4. Twisted boxes arrayed on surface.
 
+<style>
+td:nth-child(1) {color: #008DB2}
+td:nth-child(3)	{font-size: 70%;width: 15%;}
+td {background-color: #F9F9F9;}
+thead {display: none}
+</style>
 
-<!-- STEP-BY-STEP USING TABLE-->
 ||||
 |--|--|--|
 |01.|Start a new definition, type Ctrl+N (in Grasshopper)||
-|02.|Params/Geometry/Surface – Drag and drop a Surface parameter onto the canvas|![](images/1-5-1/1-5-1_ex_01-surface.png)|
-|03.|Params/Geometry/Geometry – Drag a Geometry parameter to the canvas|![](images/1-5-1/1-5-1_ex_02-geometry.png)|
+|02.|Params/Geometry/Surface – Drag and drop a Surface parameter onto the canvas<br><blockquote>This is the surface that we will populate with geometric components.</blockquote>|![](images/1-5-1/1-5-1_ex_01-surface.png)|
+|03.|Params/Geometry/Geometry – Drag a Geometry parameter to the canvas<br><blockquote>This is the component that will be arrayed over the surface.</blockquote>|![](images/1-5-1/1-5-1_ex_02-geometry.png)|
 |04.|Right click the Surface Parameter and select “Set One Surface” – select a surface to reference in the Rhino viewport||
 |05.|Right click the Geometry parameter and select “Set One Geometry” – select the your Rhino geometry||
 |06.|Paths/Domain/Divide Domain2 – Drag and drop the Divide Domain2 component onto the canvas|![](images/1-5-1/1-5-1_ex_03-divide-domain2.png)|
@@ -102,6 +107,7 @@ surface with a geometric component.
 |15.|Connect the Segements (S) output of the Divide Domain2 component to the Domain (D) input of the Surface Box component|||
 
 ![IMAGE](images/1-5-1/1-5-1_ex_05-definition1.png)
+>You should see a grid of twisted boxes populating your referenced surface. Change the U and V count sliders to change the number of boxes, and use the height slider to adjust their height.
 
 ||||
 |--|--|--|
@@ -111,70 +117,11 @@ surface with a geometric component.
 |19.|Connect the output of the Geometry parameter to the Content (C) input of the Bounding Box component||
 |20.|Connect the output of the Geometry parameter to the Geometry (G) input of the Box Morph component||
 |21.|Connect the Box (B) output of the Bounding Box component to the Reference (R) input of the Box Morph component||
-|22.|Connect the Twisted Box (B) output of the Surface Box component to the Target (T) input of the Box Morph component||
+|22.|Connect the Twisted Box (B) output of the Surface Box component to the Target (T) input of the Box Morph component|||
 
 ![IMAGE](images/1-5-1/1-5-1_ex_08-definition2.png)
 
-
-<!-- ORIGINAL TEXT
-01. Start a new definition, type Ctrl+N (in Grasshopper)
-02. Params/Geometry/Surface – Drag and drop a Surface parameter onto the
-canvas
-(Border Image)(Border Text)
-03. Params/Geometry/Geometry – Drag a Geometry parameter to the
-canvas
-(Border Image)(Border Text)
-04. Right click the Surface Parameter and select “Set One Surface” – select a
-surface to reference in the Rhino viewport
-05. Right click the Geometry parameter and select “Set One Geometry” –
-select the your Rhino geometry
-06. Maths/Domain/Divide Domain2 – Drag and drop the Divide Domain2
-component onto the canvas
-(Border Image)
-07. Params/Input/Number Slider – Drag three Number sliders onto the
-canvas
-08. Double click the first slider and set the following:
-Rounding: Integer
-Lower Limit: 0
-Upper Limit: 10
-Value: 5
-09. Set the same values on the second and third sliders
-10. Connect the output of the Surface parameter to the Domain (I) input of
-the Divide Domain2 component
-11. Connect the first Number Slider to the U Count (U) input of the Divide
-Domain2 component
-12. Connect the second Number Slider to the V Count (V) input of the Divide
-Domain2 component
-13. Transform/Morph/Surface Box – Drag the Surface Box component to the
-canvas
-(Border Image)
-14. Connect the output of the Surface parameter to the Surface (S) input of
-the Surface Box component
-15. Connect the Segements (S) output of the Divide Domain2 component to
-the Domain (D) input of the Surface Box component
-
-(Insert Image)
-
-16. Connect the third Number Slider to the Height (H) input of the Surface
-Box component
-17. Surface/Primitive/Bounding Box – Drag a Bounding Box component to
-the canvas
-(Border Image)
-18. Transform/Morph/Box Morph – Drag and drop the Box Morph
-component onto the canvas
-(Border Image)
-19. Connect the output of the Geometry parameter to the Content (C) input
-of the Bounding Box component
-20. Connect the output of the Geometry parameter to the Geometry (G)
-input of the Box Morph component
-21. Connect the Box (B) output of the Bounding Box component to the
-Reference (R) input of the Box Morph component
-((Border Text)
-22. Connect the Twisted Box (B) output of the Surface Box component to the
-Target (T) input of the Box Morph component
-
-(Insert Image)
--->
+>You should now see your geometry populating your surface.
 
 ![IMAGE](images/1-5-1/1-5-1_end-image.png)
 
