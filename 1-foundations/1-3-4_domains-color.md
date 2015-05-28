@@ -51,7 +51,7 @@ In this example, we will use Grasshopper’s domain and color components to crea
 |20.| Connect the **Number Slider** (Segments) to the Count (C) input of the **Divide Domain** component||
 |21.| **Math/Domain/Deconstruct Domain** – Drag and drop the **Deconstruct Domain** component|[![IMAGE](images/1-3-4/1-3-4_10b-deconstruct-domain.png)](/appendix/index.html#index)|
 |22.| Connect the Segments (S) output of the **Divide Domain** component to the Domain (I) input of the **Deconstruct Domain** component||
-|23.| **Display/Colour/Colour HSL** – Drag and drop the **Colour HSL** component|[![](images/1-3-4/1-3-4_11-color-HSL.png)](/appendix/index.html#index)|
+|23.| **Display/Colour/Colour HSL** – Drag and drop the **Colour HSL** component|[![IMAGE](images/1-3-4/1-3-4_11-colou r-HSL.png)](/appendix/index.html#index)|
 |24.| Connect the Start (S) output of the **Deconstruct Domain** component to the Hue (H) input of the **Colour HSL** components||
 |25.| **Display/Preview/Custom Preview** – Drag and drop the **Custom Preview** component|[![](images/1-3-4/1-3-4_12-custom-preview.png)](/appendix/index.html#index)|
 |26.| Right click on the Geometry (G) input of the **Custom Preview** component and select Flatten<blockquote>See 1-4 Designing with Data Trees for details about flattening</blockquote>||
