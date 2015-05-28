@@ -1,4 +1,4 @@
-## F.0.2 TALKING TO RHINO
+###1.1.3. TALKING TO RHINO
 
 #####Unlike a Rhino document, a Grasshopper definition does not contain any actual objectsor geometry. Instead, a Grasshopper definition represents a set of rules & instructions for how Rhino can automate tasks.
 
@@ -8,7 +8,7 @@
 3. Rhino viewports.
 
 
-###F.0.2.0 VIEWPORT FEEDBACK
+####1.1.3.1. VIEWPORT FEEDBACK
 All geometry that is generated using the various Grasshopper components will
 show up (by default) in the Rhino viewport. This preview is just an Open GL
 approximation of the actual geometry, and as such you will not be able to select
@@ -25,13 +25,13 @@ provide visual feedback. The image below outlines the default color scheme.
 3. Red geometry in the viewport belongs to a component which is currently unselected.
 4. Point geometry is drawn as a cross rather than a rectangle to distinguish it from other Rhino point objects.
 
-###F.0.2.1 LIVE WIRES
+####1.1.3.2. LIVE WIRES
 Grasshopper is a dynamic environment. Changes that are made are live and their
 preview display is updated in the Rhino viewport.
 
 ![](images/f0-2/f0-2_Live-Wires.jpg)
 
-###F.0.2.2 GUMBALL WIDGET
+####1.1.3.3. GUMBALL WIDGET
 When storing geometry as internalized in a Grasshopper parameter, the gumball
 allows you to interface with that geometry in the Rhino viewport. This update is
 live and updates will occur as you manipulate the gumball. In contrast, geometry
@@ -41,7 +41,7 @@ to during).
 
 ![](images/f0-2/f0-2_Gumball-Widget.jpg)
 
-###F.0.2.3 BAKING GEOMETRY
+####1.1.3.4. BAKING GEOMETRY
 In order to work with (select, edit, transform, etc.) geometry in Rhino that was
 created in Grasshopper, you must “bake” it. Baking instantiates new geometry
 into the Rhino document based on the current state of the Grasshopper graph. It
@@ -54,7 +54,7 @@ bake.
 3. Grouping your baked geometry is a convenient way to manage the instantiated Rhino geometry, particularly if you are creating many objects with Grasshopper.
 
 
-###F.0.2.4 UNITS & TOLERANCES
+####1.1.3.5. UNITS & TOLERANCES
 Grasshopper inherits units and tolerances from Rhino. To change the units,
 type Document Properties in the Rhino command line to access the Document
 Properties menu. Select Units to change the units and tolerances.
@@ -62,7 +62,7 @@ Properties menu. Select Units to change the units and tolerances.
 ![](images/f0-2/f0-2_Units-Tolerances.jpg)
 >1. Change the units and tolerances in the Rhino Document Properties menu.
 
-###F.0.2.5 REMOTE CONTROL PANEL
+####1.1.3.6. REMOTE CONTROL PANEL
 Once you get the hang of it, Grasshopper is an incredibly powerful and flexible
 tool which allows you to explore design iterations using a graphic interface.
 However, if you’re working with a single screen then you may have already
@@ -108,7 +108,7 @@ to switch back to the standard Working Mode.
 
 
 
-###F.0.2.6 FILE MANAGEMENT
+####1.1.3.7. FILE MANAGEMENT
 If your Grasshopper file references geometry from Rhino, you must open that
 same file for the definition to work. Keep your files organized by storing the
 Grasshopper and Rhino files in the same folder, and giving them related names.
@@ -118,7 +118,7 @@ Grasshopper and Rhino files in the same folder, and giving them related names.
 2. Rhino file.
 3. Grasshopper file.
 
-###F.0.2.7 TEMPLATES
+####1.1.3.8. TEMPLATES
 Creating and specifiying a template file in your Grasshopper preferences is
 convenient way to set up every new Grasshopper definition you create. The
 template can include Grasshopper components as well as panels and sketch

@@ -1,8 +1,8 @@
-# 1.4.4 Creating Lists
+### 1.4.4. Creating Lists
 
 #####There are many different ways to generate lists in Grasshopper. Below, we’ll look at a few different methods for generating lists and then look at how the data can be used to convey information in the viewport via a visualization.
 
-###1.4.4.1 MANUAL LIST CREATION
+####1.4.4.1. MANUAL LIST CREATION
 Perhaps the easiest way to create a list (and one of the most over-looked
 methods) is to manually type in a list of values into a parameter. Using this method puts added responsibility on the user because this method relies on direct user input (ie. persistent data) for the list creation. In order to change the list values, the user has to manually type in each individual valuewhich can be difficult if the list has many entries. There are several ways to manually create a list. One way is to use a Number paramter. Right click the Number parameter and select “Manage Number Collection.”
 
@@ -15,7 +15,7 @@ Another method is to manually enter the list items into a panel. Make sure that 
 
 ![IMAGE](images/1-4-4/1-4-4_002-panel.png)
 
-###1.4.4.2 RANGE
+####1.4.4.2. RANGE
 The Range component, found under Sets/Sequence/Range, creates a list of
 evenly spaced numbers between a low and a high value called the Domain. A
 domain (also sometimes referred to as an interval) is every possible number between two numeric extremes.
@@ -38,13 +38,13 @@ You may have noticed something a little quirky about the setup we just made. We 
 ![IMAGE](images/1-4-4/1-4-4_005-construct-domain.png)
 >To create a Range from a domain that does not start at zero, use the Construct Domain component.
 
-###1.4.4.3 SERIES
+####1.4.4.3. SERIES
 The Series component is similar to the Range component, in that, it also creates a list of numbers. However a Series component is different because it creates a set of discreet numbers based on a start value, step size, and the number of values in the series.
 
 ![IMAGE](images/1-4-4/1-4-4_006-series.png)
 >The Series component creates a list based on a start value, step value, and the number of values in the list.
 
-###1.4.4.4 RANDOM
+###1.4.4.4. RANDOM
 The Random Component (Sets/Sequence/Random) can be used to generate a list of pseudo random numbers. They are referred to as “pseudo” random because the number sequence is unique but stable for each seed value. Thus, you can generate an entirely new set of random numbers by changing the seed value (S-input). The domain, as in the previous example, is a defined interval between two numeric extremes.
 
 ![IMAGE](images/1-4-4/1-4-4_007-random.png)

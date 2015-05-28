@@ -1,4 +1,4 @@
-# 1.4.2 What is a List?
+### 1.4.2. What is a List?
 
 #####It’s helpful to think of Grasshopper in terms of flow, since the graphical interface is designed to have data flow into and out of specific types of components. However, it is the data that define the information flowing in and out of the components. Understanding how to manipulate list data is critical to understanding the Grasshopper plug-in.
 
