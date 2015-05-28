@@ -61,12 +61,6 @@ In this example, we will manipulate lists and data trees to weave lists of point
 2. Dispatch curves into lists A and B, divide curves
 3. Cull poits, weave, and revolve
 
-----
-####TESTING LINK!####
-Click [here](/appendix/index.html#index) to test the link to the appendix.
-**ALSO** - try clicking the first icon in step 2 below.
-
----
 
 <style>
 td:nth-child(1) {color: #008DB2}
@@ -246,7 +240,7 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 
 ||||
 |--|--|--|
-|46.| **Curve/Primitive/Line** – Drag and drop two **Line** components onto the canvas||
+|46.| **Curve/Primitive/Line** – Drag and drop two **Line** components onto the canvas|![IMAGE]()|
 |47.| Connect the Branch 0 {0} output of the **Explode Tree** component to the Start Point (A) input of the first **Line** component||
 |48.| Connect the Branch 1 {1} output of the **Explode Tree** component to the Start Point (A) input of the second **Line** component||
 |49.| Connect the Branch 2 {2} output of the **Explode Tree** component to the End Point (B) input of the first **Line** component||
@@ -276,7 +270,7 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 |61.| Connect the output of the **Panel** to the Minimum (N0) input of the **Prune Tree** component||
 |62.| Connect the Tree (T) output of the **Prune Tree** component to the Vertices (V) input of the **Interpolate** component||
 |63.| **Surface/Freeform/Extrude** – Drag and drop the **Extrude** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_057-extrude.png)](/appendix/index.html#index)|
-|64.| **Vector/Vector/Unit Y** – Drag a **Unit Y** component onto the canvas<br><br>*You may need to use a Unit X vector, depending on the orientation of your referenced geometry in Rhino*||
+|64.| **Vector/Vector/Unit Y** – Drag a **Unit Y** component onto the canvas<br><br>*You may need to use a Unit X vector, depending on the orientation of your referenced geometry in Rhino*|![IMAGE]()|
 |65.| **Params/Input/Number Slider** – Drag a **Number Slider** onto the canvas||
 |66.| Double click the **Number Slider** and set the following:<ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 5<br>Value: 3</ul>||
 |67.| Connect the Curve (C) output of the **Interpolate** component to the Base (B) input of the **Extrude** component||
