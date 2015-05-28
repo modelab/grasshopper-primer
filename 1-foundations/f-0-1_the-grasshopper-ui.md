@@ -1,4 +1,4 @@
-## F.0.1 THE GRASSHOPPER UI
+### 1.1.2. THE GRASSHOPPER UI
 
 #####Grasshopper’s visual “plug-and-play” style gives designers the ability to combine creative problem solving with novel rule systems through the use of a fluid graphical interface.
 
@@ -25,7 +25,7 @@ will be very familiar to Rhino users. Let’s look at a few features of the inte
 8. The status bar tells you what version of Grasshopper is currently installed on your machine. If a newer version is available, a pop-up menu will appear in your tray providing instructions on how to download the latest version.
 
 
-###F.0.1.0 THE WINDOWS TITLE BAR
+####1.1.2.1. THE WINDOWS TITLE BAR
 The Editor Window title bar behaves differently from most other dialogs in
 Microsoft Windows. If the window is not minimized or maximized, double
 clicking the title bar will collapse the dialog into a minimized bar on your
@@ -39,7 +39,7 @@ This is because once it is launched from the command prompt, your session
 of Grasshopper stays active until that instance of Rhino is closed.
 
 
-###F.0.1.1 MAIN MENU BAR
+####1.1.2.2. MAIN MENU BAR
 The title bar is similar to typical Windows menus, except for the file browser
 control on the right (see next section). The File menu provides typical functions
 (eg. New File, Open, Save, etc.) in addition to a few utility tools which let you
@@ -62,7 +62,7 @@ and third-party plugins which can extend functionality.
 ![](images/f0-1/f0-1_File-Preferences.jpg)
 >1. The Preferences dialog allows you to set many of Grasshopper’s application settings.
 
-###F.0.1.2 FILE BROWSER CONTROL
+####1.1.2.3. FILE BROWSER CONTROL
 The File Browser allows you to quickly switch between different loaded files by
 selecting them through this drop-down list. Accessing your open files through
 the File Browser drop-down list enables you to quickly copy and paste items
@@ -109,7 +109,7 @@ any Grasshopper files that were open when Rhino was shut down.
 ![](images/f0-1/f0-1_Drag-Drop-File.jpg)
 >1. Drag and Drop Files onto the Canvas.
 
-###F.0.1.3 COMPONENT PALETTES
+####1.1.2.4. COMPONENT PALETTES
 This area organizes components into categories and sub-categories. Categories
 are displayed as tabs, and subcategories are displayed as drop-down panels. All
 components belong to a certain category. These categories have been labeled
@@ -137,12 +137,12 @@ provides access to all components in that sub-category.
 4. Drop-down menu.
 
 
-###F.0.1.4 THE CANVAS
+####1.1.2.5. THE CANVAS
 The canvas is the primary workspace for creating Grasshopper definitions. It is
 here where you interact with the elements of your visual program. You can start
 working in the canvas by placing components and connecting wires.
 
-###F.0.1.5 GROUPING
+####1.1.2.6. GROUPING
 Grouping components together on the canvas can be especially useful for
 readability and comprehensibility. Grouping allows you the ability to quickly
 select and move multiple components around the canvas. You can create a group
@@ -162,7 +162,7 @@ outline type can be defined by right-clicking on any group object.
 ![](images/f0-1f0-1_Bring-to-Front.jpg)
 >1. Two groups are nested inside one another. The color (light blue) has been changed on the outer group to help visually identify one group from the other. Groups are drawn “behind” the components within them and, in cases such as this, there is a depth order to the two groups. To change this, go to Edit > Arrange in the main menu bar.
 
-###F.0.1.6 WIDGETS
+####1.1.1.7. WIDGETS
 There are a few widgets that are available in Grasshopper that can help you
 perform useful actions. You can toggle any of these widgets on/off under the
 Display menu of the Main Menu bar. Below we’ll look at a few of the most
@@ -207,7 +207,7 @@ other corners of the canvas or to hide it completely.
 
 
 
-###F.0.1.7 USING THE SEARCH FEATURE
+####1.1.2.8. USING THE SEARCH FEATURE
 Although a lot of thought has gone into the placement of each component on
 the component panel to make it intuitive for new users, people sometimes find
 it difficult to locate a specific component that might be buried deep inside one
@@ -227,7 +227,7 @@ you will see a list of parameters or components that match your request.
 3. Divide Domain2 component.
 
 
-###F.0.1.8 THE FIND FEATURE
+####1.1.2.9. THE FIND FEATURE
 There are literally hundreds (if not thousands) of Grasshopper components
 which are available to you and it can be daunting as a beginner to know where
 to look to find a specific component within the Component Palettes. The quick
@@ -268,7 +268,7 @@ canvas) next to the Find dialog box.
 
 
 
-###F.0.1.9 USING THE RADIAL MENU
+####1.1.2.10. USING THE RADIAL MENU
 As you become more proficient in using the Grasshopper interface, you’ll
 begin to find ways to expedite your workflow. Using shortcuts is one way to do
 this, however there is another feature which can allow you to quickly access
@@ -284,7 +284,7 @@ dramatically increase the speed at which you create Grasshopper documents.
 ![](images/f0-1/f0-1_Radial-Menu.jpg)
 >1. The Radial UI menu allows you to quickly access frequently used menu items.
 
-###F.0.1.10 THE CANVAS TOOLBAR
+####1.1.2.11. THE CANVAS TOOLBAR
 The canvas toolbar provides quick access to a number of frequently used
 Grasshopper features. All of the tools are available through the menu as well,
 and you can hide the toolbar if you like. The toolbar can be re-enabled from the

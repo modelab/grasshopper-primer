@@ -1,4 +1,4 @@
-# F.2.1 Working with Attractors
+### 1.3.2. Working with Attractors
 
 #####Attractors are points that act like virtual magnets - either attracting or repelling other objects. In Grasshopper, any geometry referenced from Rhino or created withinGrasshopper can be used as an attractor. Attractors can influence any number of parameters of surrounding objects including scale, rotation, color, and position. These parameters are changed based on their relationship to the attractor geometry.
 
@@ -16,7 +16,7 @@ the length of each vector to scale the radius of each circle.
 
 ![Examples](images/f2-1/f2-1_002-attractor-examples.png)
 
-###F.2.1.0 ATTRACTOR DEFINITION
+####1.3.2.1. ATTRACTOR DEFINITION
 In this example, we will use an attractor point to orient a grid of circles, based on the vectors between the center points of the circles and the attractor point. Each circle will orient such that it is normal to (facing) the attractor point.
 <ol style="background-color:#EEEEEE">
 <li>Type Ctrl+N in Grasshopper to start a new definition</li><br>
