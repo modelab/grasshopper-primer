@@ -127,6 +127,7 @@ Sets
 |<a name="SLItem"></a>S.L.Item|List Item<br>Retrieve a specific item from a list.|![IMAGE](images/SLItem.png)|
 |<a name="SLLng"></a>S.L.Lng|List Length<br>Measure the length of a list. Elements in a list are identified by their index. The first element is stored at index zero, the second element is stored at index one and so on and so forth. The highest possible index in a list equals the length of the list minus one.|![IMAGE](images/SLLng.png)|
 |<a name="SLLong"></a>S.L.Long|Longest List<br>Grow a collection of lists to the longest length amongst them.|![IMAGE](images/SLLong.png)|
+|<a name="SLSplit"></a>S.L.Split|Split List<br>Split a list into separate parts.|![IMAGE](images/SLSplit.png)|
 |<a name="SLReplace"></a>S.L.Replace|Replace Items<br>Replace certain items in a list.|![IMAGE](images/SLReplace.png)|
 |<a name="SLRev"></a>S.L.Rev|Reverse List<br>Reverse the order of a list. The new index of each element will be N-i where N is the highest index in the list and i is the old index of the element.|![IMAGE](images/SLRev.png)|
 |<a name="SLShift"></a>S.L.Shift|Shift List<br>Offset all items in a list. Items in the list are offset (moved) towards the end of the list if the shift offset is positive. If Wrap equals True, then items that fall off the ends are re-appended.|![IMAGE](images/SLShift.png)|
@@ -188,6 +189,11 @@ Vector
 Curve
 --
 
+####Analysis
+||||
+|--|--|--|
+|<a name="CACP"></a>C.A.CP|Control Points<br>Extract the nurbs control points and knots of a curve.|![IMAGE](images/CACP.png)|
+
 ####Division
 ||||
 |--|--|--|
@@ -214,6 +220,7 @@ Curve
 ||||
 |--|--|--|
 |<a name="CUExplode"></a>C.U.Explode|Explode<br>Explode a curve into smaller segments.|![IMAGE](images/CUExplode.png)|
+|<a name="CUJoin"></a><C.U.Join|Join Curves<br>Join as many curves as possible.|![IMAGE](images/CUJoin.png)|
 |<a name="CUOffset"></a>C.U.Offset|Offset<br>Offset a curve with a specified distance.|![IMAGE](images/CUOffset.png)|
 
 Surface
