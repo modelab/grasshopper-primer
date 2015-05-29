@@ -172,8 +172,8 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 ||||
 |--|--|--|
 |01.| Start a new definition, type Ctrl+N (in Grasshopper) ||
-|02.| **Params/Geometry/Curve** – Drag and drop three **curve** parameters onto the canvas |[![IMAGE]()](/appendix/index.html#PGCrv)|
-|03.| **Surface/Freeform/Sweep2** – Drag a **Sweep2** component onto the canvas|[![IMAGE]()](/appendix/index.html#index)|
+|02.| **Params/Geometry/Curve** – Drag and drop three **curve** parameters onto the canvas |[![IMAGE](images/1-5-3/1-5-3_034a-curve.png)](/appendix/index.html#PGCrv)|
+|03.| **Surface/Freeform/Sweep2** – Drag a **Sweep2** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_034b-sweep2.png)](/appendix/index.html#index)|
 |04.| Right-click the first **Curve** parameter and select “Set one curve.” Select the first rail curve in the Rhino viewport||
 |05.| Right-click the second **Curve** parameter and select “Set one curve.” Select the second rail curve in the Rhino viewport||
 |06.| Right-click the third **Curve** parameter and select “Set one curve.” Select the section curve in the Rhino viewport||
@@ -184,7 +184,7 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 
 ||||
 |--|--|--|
-|08.| **Params/Geometry/Surface** – drag a **Surface** parameter to the canvas|[![IMAGE]()](/appendix/index.html#PGSrf)|
+|08.| **Params/Geometry/Surface** – drag a **Surface** parameter to the canvas|[![IMAGE](images/1-5-3/1-5-3_035a-surface.png)](/appendix/index.html#PGSrf)|
 |09.| Connect the Brep (S) output of the **Sweep2** component to the input of the **Surface** parameter||
 |10.| Right-click the **Surface** parameter and select “Reparameterize”. <br><blockquote>In this step, we re-mapped the u and v domains of the surface between 0 and 1. This will make future operations possible.</blockquote>|![IMAGE](images/1-5-3/1-5-3_035-reparameterize.png)|
 |11.| **Maths/Domain/Divide Domain2** – drag and drop a **Divide Domain2** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_036-divide-domain2.png)](/appendix/index.html#index)|
@@ -240,7 +240,7 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 
 ||||
 |--|--|--|
-|46.| **Curve/Primitive/Line** – Drag and drop two **Line** components onto the canvas|![IMAGE]()|
+|46.| **Curve/Primitive/Line** – Drag and drop two **Line** components onto the canvas|[![IMAGE](images/1-5-3/1-5-3_050a-line.png)](/appendix/index.html#index)|
 |47.| Connect the Branch 0 {0} output of the **Explode Tree** component to the Start Point (A) input of the first **Line** component||
 |48.| Connect the Branch 1 {1} output of the **Explode Tree** component to the Start Point (A) input of the second **Line** component||
 |49.| Connect the Branch 2 {2} output of the **Explode Tree** component to the End Point (B) input of the first **Line** component||
@@ -270,7 +270,7 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 |61.| Connect the output of the **Panel** to the Minimum (N0) input of the **Prune Tree** component||
 |62.| Connect the Tree (T) output of the **Prune Tree** component to the Vertices (V) input of the **Interpolate** component||
 |63.| **Surface/Freeform/Extrude** – Drag and drop the **Extrude** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_057-extrude.png)](/appendix/index.html#index)|
-|64.| **Vector/Vector/Unit Y** – Drag a **Unit Y** component onto the canvas<br><br>*You may need to use a Unit X vector, depending on the orientation of your referenced geometry in Rhino*|![IMAGE]()|
+|64.| **Vector/Vector/Unit Y** – Drag a **Unit Y** component onto the canvas<br><br>*You may need to use a Unit X vector, depending on the orientation of your referenced geometry in Rhino*|[![IMAGE](images/1-5-3/1-5-3_058a-vector-y.png)](/appendix/index.html#index)|
 |65.| **Params/Input/Number Slider** – Drag a **Number Slider** onto the canvas||
 |66.| Double click the **Number Slider** and set the following:<ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 5<br>Value: 3</ul>||
 |67.| Connect the Curve (C) output of the **Interpolate** component to the Base (B) input of the **Extrude** component||
