@@ -32,4 +32,5 @@
        * [Working with Data Trees](1-foundations/1-5-3_working-with-data-trees.md)
 * [Appendix](appendix/README.md)
    * [Index](appendix/index.md)
+   * [Resources](appendix/resources.md)
 
