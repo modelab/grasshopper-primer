@@ -2,10 +2,12 @@
 
 #####Unlike a Rhino document, a Grasshopper definition does not contain any actual objectsor geometry. Instead, a Grasshopper definition represents a set of rules & instructions for how Rhino can automate tasks.
 
-![](images/f0-2/f0-2_Talk-to-Rhino.jpg)
->1. Grasshopper Application window.
-2. Grasshopper preview geometry.
-3. Rhino viewports.
+![IMAGE](images/1-1-3/1-1-3_001-talking-to-rhino.png)
+>1. Grasshopper preview geometry.
+2. Rhino viewports.
+3. Grasshopper Application window.
+
+
 
 
 ####1.1.3.1. VIEWPORT FEEDBACK
@@ -17,19 +19,19 @@ can turn the geometry preview on/off by right-clicking on a component and
 selecting the Preview toggle. The geometry in the viewport is color coded to
 provide visual feedback. The image below outlines the default color scheme.
 
->_Note: This is the default color scheme, which can be modified using the Document Preview Settings tool on the canvas toolbar._
+>Note: This is the default color scheme, which can be modified using the Document Preview Settings tool on the canvas toolbar.
 
-![](images/f0-2/f0-2_Viewport-Feedback.jpg)
->1. Blue feedback means you are currently making a selection in the Rhino Viewport.
-2. Green geometry in the viewport belongs to a component which is currently selected.
-3. Red geometry in the viewport belongs to a component which is currently unselected.
-4. Point geometry is drawn as a cross rather than a rectangle to distinguish it from other Rhino point objects.
+![IMAGE](images/1-1-3/1-1-3_002-viewport-feedback.png)
+>1. Green geometry in the viewport belongs to a component which is currently selected.
+2. Red geometry in the viewport belongs to a component which is currently unselected.
+3. Point geometry is drawn as a cross rather than a rectangle to distinguish it from other Rhino point objects.
+4. Blue feedback means you are currently making a selection in the Rhino Viewport.
 
 ####1.1.3.2. LIVE WIRES
 Grasshopper is a dynamic environment. Changes that are made are live and their
 preview display is updated in the Rhino viewport.
 
-![](images/f0-2/f0-2_Live-Wires.jpg)
+![IMAGE](images/1-1-3/1-1-3_003-live-wires.png)
 
 ####1.1.3.3. GUMBALL WIDGET
 When storing geometry as internalized in a Grasshopper parameter, the gumball
@@ -39,7 +41,7 @@ referenced from Rhino directly will continue to exist in the Rhino document and
 updates from Grasshopper will happen only after any changes occur (as opposed
 to during).
 
-![](images/f0-2/f0-2_Gumball-Widget.jpg)
+![IMAGE](images/1-1-3/1-1-3_004-gumball.png)
 
 ####1.1.3.4. BAKING GEOMETRY
 In order to work with (select, edit, transform, etc.) geometry in Rhino that was
@@ -47,7 +49,7 @@ created in Grasshopper, you must “bake” it. Baking instantiates new geometry
 into the Rhino document based on the current state of the Grasshopper graph. It
 will no longer be responsive to the changes in your definition.
 
-![](images/f0-2/f0-2_Baking-Geometry.jpg)
+![IMAGE](images/1-1-3/1-1-3_005-baking.png)
 >1. Bake by right-clicking a component and selecting Bake.
 2. A dialog will appear that allows you to select onto which Rhino layer the geometry will
 bake.
@@ -59,8 +61,8 @@ Grasshopper inherits units and tolerances from Rhino. To change the units,
 type Document Properties in the Rhino command line to access the Document
 Properties menu. Select Units to change the units and tolerances.
 
-![](images/f0-2/f0-2_Units-Tolerances.jpg)
->1. Change the units and tolerances in the Rhino Document Properties menu.
+![IMAGE](images/1-1-3/1-1-3_006-units.png)
+>Change the units and tolerances in the Rhino Document Properties menu.
 
 ####1.1.3.6. REMOTE CONTROL PANEL
 Once you get the hang of it, Grasshopper is an incredibly powerful and flexible
@@ -84,11 +86,11 @@ multiple elements and populate a complete interface which can be used to
 control your file without having the clutter of the visual graph showing up on top
 of the Rhino viewport.
 
->_Note: The RCP will inherit the UI elements name and use it as the label. It is good practice to update your sliders and toggles with comprehensible and meaningful names. This will translate directly to your RCP making it easier to use._
+>Note: The RCP will inherit the UI elements name and use it as the label. It is good practice to update your sliders and toggles with comprehensible and meaningful names. This will translate directly to your RCP making it easier to use.
 
 
-![](images/f0-2/f0-2_Publish-RCP.jpg)
-> _In order to get a UI element (eg. slider, toggle, button, etc.) to show up in the Remote Control Panel, we have to first publish it._
+![IMAGE](images/1-1-3/1-1-3_007-remote-control1.png)
+> In order to get a UI element (eg. slider, toggle, button, etc.) to show up in the Remote Control Panel, we have to first publish it.
 
 The RCP UI can also be customized – allowing you to control where objects
 appear in the interface, the names and colors of different groups. To modify the
@@ -102,8 +104,8 @@ you are in Editing Mode. Instead, you will have to click on the green pencil ico
 to switch back to the standard Working Mode.
 
 >_The Remote Control Panel has two modes: Edit Mode (left) which allows you to reorganize the look and feel of the RCP, and Working Mode where you can modify the actual values of the UI elements._
-![](images/f0-2/f0-2_Edit-RCP.jpg)
->1. The Remote Control Panel in Edit Mode has an orange background.
+![IMAGE](images/1-1-3/1-1-3_008-remote2.png)
+>The Remote Control Panel in Edit Mode has an orange background.
 
 
 
@@ -113,7 +115,7 @@ If your Grasshopper file references geometry from Rhino, you must open that
 same file for the definition to work. Keep your files organized by storing the
 Grasshopper and Rhino files in the same folder, and giving them related names.
 
-![](images/f0-2/f0-2_File-Managment.jpg)
+![IMAGE](images/1-1-3/1-1-3_009-file-management.png)
 >1. Project Folder.
 2. Rhino file.
 3. Grasshopper file.
@@ -125,9 +127,9 @@ template can include Grasshopper components as well as panels and sketch
 objects for labeling.
 
 
-![](images/f0-2/f0-2_Templates.jpg)
->_Create a template file and save it_
+![IMAGE](images/1-1-3/1-1-3_010-templates.png)
+>Create a template file and save it
 
-![](images/f0-2/f0-2_Gh-Settings.jpg)
+![IMAGE](images/1-1-3/1-1-3_011-templates2.png)
 >1. In File/Preferences, load the file you just created under Template File. Your template will now be used each time you create a new file.
 

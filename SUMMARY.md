@@ -1,7 +1,7 @@
 # Summary
 
 * [About](README.md)
-* [Foundations](1-foundations/1-1_hello-grasshopper.md)
+* [Foundations](1-foundations/1-foundations.md)
    * [Hello Grasshopper!](1-foundations/1-1_hello-grasshopper.md)
        * [Installing and Launching Grasshopper](1-foundations/1-1-1_installing-and-launching-grasshopper.md)
        * [The Grasshopper UI](1-foundations/1-1-2_the-grasshopper-ui.md)
