@@ -1,6 +1,7 @@
 # Summary
 
 * [About](README.md)
+   * [Grasshopper - an Overview](about/0-1-grasshopper-an-overview.md)
 * [Foundations](1-foundations/1-foundations.md)
    * [Hello Grasshopper!](1-foundations/1-1_hello-grasshopper.md)
        * [Installing and Launching Grasshopper](1-foundations/1-1-1_installing-and-launching-grasshopper.md)
@@ -33,4 +34,5 @@
 * [Appendix](appendix/README.md)
    * [Index](appendix/index.md)
    * [Resources](appendix/resources.md)
+   * [About This Primer](appendix/about-this-primer.md)
 
