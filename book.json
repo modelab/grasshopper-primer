@@ -1,3 +1,5 @@
 {
-    "plugins": ["collapsible-menu"],
+	"name":	"gitbook",
+	"version": "1.0.3",
+    "plugins": ["toggle-chapters"]
 }

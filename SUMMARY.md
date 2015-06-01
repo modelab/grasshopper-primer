@@ -34,7 +34,7 @@
        * [Creating Data Trees](1-foundations/1-5-3_creating-data-trees.md)
        * [Working with Data Trees](1-foundations/1-5-4_working-with-data-trees.md)
 * [Appendix](appendix/README.md)
-   * [Index](appendix/index.md)
+   * [Index](appendix/index-of-components.md)
    * [Resources](appendix/resources.md)
    * [About This Primer](appendix/about-this-primer.md)
 
