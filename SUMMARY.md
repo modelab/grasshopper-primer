@@ -1,7 +1,8 @@
 # Summary
 
 * [About](README.md)
-* [Foundations](1-foundations/1-1_hello-grasshopper.md)
+   * [Grasshopper - an Overview](about/0-1-grasshopper-an-overview.md)
+* [Foundations](1-foundations/1-foundations.md)
    * [Hello Grasshopper!](1-foundations/1-1_hello-grasshopper.md)
        * [Installing and Launching Grasshopper](1-foundations/1-1-1_installing-and-launching-grasshopper.md)
        * [The Grasshopper UI](1-foundations/1-1-2_the-grasshopper-ui.md)
@@ -32,4 +33,6 @@
        * [Working with Data Trees](1-foundations/1-5-3_working-with-data-trees.md)
 * [Appendix](appendix/README.md)
    * [Index](appendix/index.md)
+   * [Resources](appendix/resources.md)
+   * [About This Primer](appendix/about-this-primer.md)
 
