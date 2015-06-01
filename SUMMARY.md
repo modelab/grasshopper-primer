@@ -2,6 +2,7 @@
 
 * [About](README.md)
    * [Grasshopper - an Overview](about/0-1-grasshopper-an-overview.md)
+   * [Grasshopper in Action](about/0-2-grasshopper-in-action.md)
 * [Foundations](1-foundations/1-foundations.md)
    * [Hello Grasshopper!](1-foundations/1-1_hello-grasshopper.md)
        * [Installing and Launching Grasshopper](1-foundations/1-1-1_installing-and-launching-grasshopper.md)
@@ -30,7 +31,8 @@
    * [Designing with Data Trees](1-foundations/1-5_designing-with-data-trees.md)
        * [Surface Geometry](1-foundations/1-5-1_surface-geometry.md)
        * [What is a Data Tree?](1-foundations/1-5-2_what-is-a-data-tree.md)
-       * [Working with Data Trees](1-foundations/1-5-3_working-with-data-trees.md)
+       * [Creating Data Trees](1-foundations/1-5-3_creating-data-trees.md)
+       * [Working with Data Trees](1-foundations/1-5-4_working-with-data-trees.md)
 * [Appendix](appendix/README.md)
    * [Index](appendix/index.md)
    * [Resources](appendix/resources.md)
