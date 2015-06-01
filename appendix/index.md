@@ -3,7 +3,7 @@ h4{color: #008DB2}
 td {background-color:white; vertical-align:top}
 td img{
 display: block;
-width: initial;
+width: 100%;
 max-width: 150px;
 margin-left: auto;
 margin-right: auto;
