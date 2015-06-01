@@ -14,7 +14,7 @@ word “Grasshopper” in the Rhino command prompt to display the Grasshopper
 Editor. The Grasshopper interface contains a number of elements, most of which
 will be very familiar to Rhino users. Let’s look at a few features of the interface.
 
-![](images/f0-1/f0-1_Open-Files.jpg)
+![IMAGE](images/1-1-2/1-1-2_001-grasshopper-ui.png)
 >1. Windows title bar.
 2. Main menu bar.
 3. File browser control.
@@ -57,10 +57,10 @@ often and where to store automatically saved file (in case the application is
 inadvertently closed or crashes). Finally, the Solver section lets you manage core
 and third-party plugins which can extend functionality.
 
-> *Note: Be careful when using shortcuts since they are handled by the active window which could either be Rhino, the Grasshopper canvas or any other window inside Rhino. It is quite easy to use a shortcut command, only to realize that you had the wrong active window selected and accidentally invoked the wrong command.*
+> Note: Be careful when using shortcuts since they are handled by the active window which could either be Rhino, the Grasshopper canvas or any other window inside Rhino. It is quite easy to use a shortcut command, only to realize that you had the wrong active window selected and accidentally invoked the wrong command.
 
-![](images/f0-1/f0-1_File-Preferences.jpg)
->1. The Preferences dialog allows you to set many of Grasshopper’s application settings.
+![IMAGE](images/1-1-2/1-1-2_002-settings.png)
+>The Preferences dialog allows you to set many of Grasshopper’s application settings.
 
 ####1.1.2.3. FILE BROWSER CONTROL
 The File Browser allows you to quickly switch between different loaded files by
@@ -75,8 +75,8 @@ Of course, you can go through the standard Open File dialog to load any
 Grasshopper document, although you can also drag and drop any Grasshopper
 file onto the canvas to load a particular definition.
 
-> *Grasshopper is a plug-in that works “on-top” of Rhino and as such has its own file types.
-The default file type is a binary data file, saved with an extension of .gh. The other file type is known as a Grasshopper XML file, which uses the extension .ghx. The XML (Extensible Markup Language) file type uses tags to define objects and object attributes (much like an .HTML document) but uses custom tags to define objects and the data within each object. Because XML files are formatted as textdocuments, you could open up any Grasshopper XML file in a text editor like NotePad to see the coding that is going on behind the scenes.*
+> Grasshopper is a plug-in that works “on-top” of Rhino and as such has its own file types.
+The default file type is a binary data file, saved with an extension of .gh. The other file type is known as a Grasshopper XML file, which uses the extension .ghx. The XML (Extensible Markup Language) file type uses tags to define objects and object attributes (much like an .HTML document) but uses custom tags to define objects and the data within each object. Because XML files are formatted as textdocuments, you could open up any Grasshopper XML file in a text editor like NotePad to see the coding that is going on behind the scenes.
 
 Grasshopper has several different methods by which it can open a file, and you
 will need to specify which option you would like to use when using this method.
@@ -104,10 +104,10 @@ under the File menu on the Main Menu Bar. When the active instance of Rhino is
 closed, a pop-up dialog box will appear asking whether or not you want to save
 any Grasshopper files that were open when Rhino was shut down.
 
->_Note: Autosave only works if the file has already been saved at least once._
+>Autosave only works if the file has already been saved at least once.
 
-![](images/f0-1/f0-1_Drag-Drop-File.jpg)
->1. Drag and Drop Files onto the Canvas.
+![IMAGE](images/1-1-2/1-1-2_003-autosave.png)
+>Drag and Drop Files onto the Canvas.
 
 ####1.1.2.4. COMPONENT PALETTES
 This area organizes components into categories and sub-categories. Categories
@@ -118,8 +118,8 @@ for all primitive data types or “Curves” for all curve related tools). To ad
 component to the canvas, you can either click on the objects in the drop-down
 menu or you can drag the component directly from the menu onto the canvas.
 
-![](images/f0-1/f0-1_Drag-Drop-Comp.jpg)
->_Drag + Drop a component from the palette to add a component to the canvas._
+![IMAGE](images/1-1-2/1-1-2_004-component-palette.png)
+>Drag + Drop a component from the palette to add a component to the canvas.
 
 Since there can be many more components in each sub-category than will fit into
 the palette, a limited number of icons are displayed on each panel. The height
@@ -130,9 +130,10 @@ the bottom of each sub-category panel. This will open a dropdown menu which
 provides access to all components in that sub-category.
 
 
-![](images/f0-1/f0-1_Palette.jpg)
->1. Catgory tab - click the black bar to open the sub-category panel menu.
+![IMAGE](images/1-1-2/1-1-2_005-subcategories.png)
+>1. Catgory tab
 2. Sub-category panel.
+3. Click the black bar to open the sub-category panel menu.
 3. Hover your mouse over a component for a short description.
 4. Drop-down menu.
 
@@ -151,16 +152,16 @@ can be found by using the “Group Selection” button under the Edit Menu on th
 Main Menu Bar. Custom parameters for group color, transparency, name, and
 outline type can be defined by right-clicking on any group object.
 
-![](images/f0-1/f0-1_Group-Box.jpg)
+![IMAGE](images/1-1-2/1-1-2_006-grouping1.png)
 >1. A group of components delineated by the Box Outline profile.
 2. Right-click anywhere on the group to edit the name and appearance of the group.
 
 
-![](images/f0-1/f0-1_Group-Blob.jpg)
->1. You can also define a group using a meta-ball algorithm by using the Blob Outline profile.
+![IMAGE](images/1-1-2/1-1-2_007-grouping2.png)
+>You can also define a group using a meta-ball algorithm by using the Blob Outline profile.
 
-![](images/f0-1f0-1_Bring-to-Front.jpg)
->1. Two groups are nested inside one another. The color (light blue) has been changed on the outer group to help visually identify one group from the other. Groups are drawn “behind” the components within them and, in cases such as this, there is a depth order to the two groups. To change this, go to Edit > Arrange in the main menu bar.
+![IMAGE](images/1-1-2/1-1-2_008-grouping3.png)
+>Two groups are nested inside one another. The color (light blue) has been changed on the outer group to help visually identify one group from the other. Groups are drawn “behind” the components within them and, in cases such as this, there is a depth order to the two groups. To change this, go to Edit > Arrange in the main menu bar.
 
 ####1.1.1.7. WIDGETS
 There are a few widgets that are available in Grasshopper that can help you
@@ -179,7 +180,7 @@ the way (it is possible to make the mistake of collapsing several components on
 top of each other). However, with a little practice these tools can be invaluable as
 you begin to structure graphs which are readable and comprehensible.
 
-![](images/f0-1/f0-1_Align.jpg)
+![IMAGE](images/1-1-2/1-1-2_009-align-widget.png)
 >1. Align right.
 2. Distribute vertically.
 
@@ -190,8 +191,8 @@ allowing you to track down bottlenecks in networks and to compare different
 components in terms of performance. Note that this widget is turned off by
 default.
 
-![](images/f0-1/f0-1_Profiler.jpg)
->1. The Profiler widget gives you visual feedback as to which components in your definition could be causing longer computational times.
+![IMAGE](images/1-1-2/1-1-2_010-profiler.png)
+>The Profiler widget gives you visual feedback as to which components in your definition could be causing longer computational times.
 
 **The Markov Widget**
 This widget uses Markov chains to ‘predict’ which component you may want to
@@ -216,13 +217,12 @@ double-clicking on any empty space on the canvas. This will invoke a pop-up
 search box. Simply type in the name of the component you are looking for and
 you will see a list of parameters or components that match your request.
 
-![](images/f0-1/f0-1_Search-Bar.jpg)
->1.Double-click anywhere on the canvas to invoke a key word search for a particular component found in the Component Panels.
+![IMAGE](images/1-1-2/1-1-2_011-search.png)
+>Double-click anywhere on the canvas to invoke a key word search for a particular component found in the Component Panels.
 
-![](images/f0-1/f0-1_Search-by-Function.jpg)
->_A search for “divide” lists a variety of components._
-
->1. Division operator component.
+![IMAGE](images/1-1-2/1-1-2_012-search2.png)
+>A search for “divide” lists a variety of components.
+1. Division operator component.
 2. Divide Surface component.
 3. Divide Domain2 component.
 
@@ -250,16 +250,14 @@ found, a list of components matching your search query will be displayed in the
 Find dialog box and hovering over an item in the list will turn that particular
 component on the canvas green.
 
-![](images/f0-1/f0-1_Find-Component.jpg)
->1. By right-clicking anywhere on the canvas or pressing the F3 key, you can invoke the Find feature. Start by typing in the name of the component that you are looking for.
+![IMAGE](images/1-1-2/1-1-2_013-find.png)
+>By right-clicking anywhere on the canvas or pressing the F3 key, you can invoke the Find feature. Start by typing in the name of the component that you are looking for.
 
-![](images/f0-1/f0-1_Find-Component-Menu-A.jpg)
->1. The Find feature can be quite helpful to locate a particular component on the canvas. Right-click anywhere on the canvas to launch the Find dialog box.
+![IMAGE](images/1-1-2/1-1-2_014-find2.png)
+>The Find feature can be quite helpful to locate a particular component on the canvas. Right-click anywhere on the canvas to launch the Find dialog box.
 
-![](images/f0-1/f0-1_Search-Componenet-Name.jpg)
->1. Clicking on the Find result will try to place the component (on the canvas) next to the Find dialog box.
-
-A small arrow will also be displayed next to each item in the list which points
+![IMAGE](images/1-1-2/1-1-2_015-find3.png)
+>A small arrow will also be displayed next to each item in the list which points
 to its corresponding component on the canvas. Try moving the Find dialog box
 around on the canvas and watch the arrows rotate in to keep track of their
 components. Clicking on the Find result will try to place the component (on the
@@ -281,8 +279,8 @@ the radial menu has more features available when clicking on top of a selected
 component versus just clicking anywhere else on the canvas. This menu can
 dramatically increase the speed at which you create Grasshopper documents.
 
-![](images/f0-1/f0-1_Radial-Menu.jpg)
->1. The Radial UI menu allows you to quickly access frequently used menu items.
+![IMAGE](images/1-1-2/1-1-2_016-radial-menu.png)
+>The Radial UI menu allows you to quickly access frequently used menu items.
 
 ####1.1.2.11. THE CANVAS TOOLBAR
 The canvas toolbar provides quick access to a number of frequently used
@@ -290,8 +288,7 @@ Grasshopper features. All of the tools are available through the menu as well,
 and you can hide the toolbar if you like. The toolbar can be re-enabled from the
 View tab on the Main Menu Bar.
 
-
-
+![IMAGE](images/1-1-2/1-1-2_017-toolbar1.png)
 >1. **Open File:** A shortcut to open a Grasshopper File.
 2.  **Save File:** A shortcut to save the currentGrasshopper File.
 3.  **Zoom Defaults**: Default zoom settings that allow you to zoom in or out of your canvas at predefined intervals.
@@ -300,12 +297,7 @@ View tab on the Main Menu Bar.
 6. **The Sketch Tool:** The sketch tool works similarly to the pencil
 tool set found in Adobe Photoshop with a few added features.
 
->_The sketch tool allows changes to the line weight, line type, and color. By right-clicking on the selected sketch object you can choose to simplify your line to create a smoother effect. Right-click on your sketch object and select “Load from Rhino”. When prompted, select any 2D shape in your Rhino scene. Once you have selected your referenced shape, hit Enter, and your previous sketch line will be reconfigured to your Rhino reference shape._
-
->_Note: Your sketch object may have moved from its original location once you have loaded a shape from Rhino. Grasshopper places your sketch object relative to the origin of the canvas (upper left hand corner) and the world xy plane origin in Rhino._
-
-
-
+![IMAGE](images/1-1-2/1-1-2_017-toolbar2.png)
 >1. **Preview Settings:** If a Grasshopper component generates some form of geometry, then a preview of this geometry will be visible in the viewport by default. You can disable the preview on a perobject basis by right-clicking each component and de-activating the preview feature, or globally change the preview state by using one of these three buttons.
 2. Wire-frame preview.
 3. Turn off preview.
@@ -313,6 +305,15 @@ tool set found in Adobe Photoshop with a few added features.
 5. **Preview Selected Objects:** With this button toggled, Grasshopper will only display geometry that is part of selected components, even if those components have a preview=off state.
 6. **Document Preview Settings:** Grasshopper has a default color scheme for selected (semi-transparent green) and unselected (semi-transparent red) geometry. It is possible to override this color scheme with the Document Preview Settings dialog.
 7. **Preview Mesh Quality:** For optimization purposes, these settings allow you to control the quality of the mesh/surface display of the geometry rendered in Rhino. Higher quality settings will cause longer calculation times, whereas lower settings will display less accurate preview geometry. It should be noted that the geometry still maintains a high-degree of resolution when baked into the Rhino document – these settings merely effect the display performance and quality.
+
+![IMAGE](images/1-1-2/1-1-2_018-sketch.png)
+>The sketch tool allows changes to the line weight, line type, and color. By right-clicking on the selected sketch object you can choose to simplify your line to create a smoother effect. Right-click on your sketch object and select “Load from Rhino”. When prompted, select any 2D shape in your Rhino scene. Once you have selected your referenced shape, hit Enter, and your previous sketch line will be reconfigured to your Rhino reference shape.
+
+>Note: Your sketch object may have moved from its original location once you have loaded a shape from Rhino. Grasshopper places your sketch object relative to the origin of the canvas (upper left hand corner) and the world xy plane origin in Rhino.
+
+![IMAGE](images/1-1-2/1-1-2_019-preview.png)
+>Grasshopper has a default color scheme for selected (semi-transparent green) and unselected (semi-transparent red) geometry. It is possible to override this color scheme with the Document Preview Settings dialog.
+
 
 
 
