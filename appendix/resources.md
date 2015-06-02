@@ -4,9 +4,9 @@
 
 ###Plug-in Communities
 <style>
-h3{clear:both}
-p{clear:both}
-img {float:left;padding:15px;}
+.page-inner h3{clear:both}
+.page-inner p{clear:both}
+.page-inner img {float:left;padding:15px;}
 
 </style>
 

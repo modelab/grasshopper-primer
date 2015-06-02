@@ -18,7 +18,6 @@ thead {display: none}
 </style>
 
 ## 2.1. Index
-<a name="index"></a>
 
 #####This index provides additional information on all the components used in this primer, as well as other components you might find useful. This is just an introduction to over 500 components in the Grasshopper plugin.
 

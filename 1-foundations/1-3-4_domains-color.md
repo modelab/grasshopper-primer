@@ -20,8 +20,8 @@ In this example, we will use Grasshopper’s domain and color components to crea
 ||||
 |--|--|--|
 |01.| Type Ctrl+N (in Grasshopper) to start a new definition||
-|02.| **Curve/Primitive/Polygon** – Drag and drop a **Polygon** component onto the canvas|[![](images/1-3-4/1-3-4_03-polygon.png)](/appendix/index-of-components.html#CPPolygon)|
-|03.| **Params/Geometry/Point** – Drag and drop a **Point** Parameter onto the canvas|[![](images/1-3-4/1-3-4_04-point.png)](/appendix/index-of-components.html#PGPt)|
+|02.| **Curve/Primitive/Polygon** – Drag and drop a **Polygon** component onto the canvas|[![](images/1-3-4/1-3-4_03-polygon.png)](../appendix/index-of-components.html#CPPolygon)|
+|03.| **Params/Geometry/Point** – Drag and drop a **Point** Parameter onto the canvas|[![](images/1-3-4/1-3-4_04-point.png)](../appendix/index-of-components.html#PGPt)|
 |04.| Right-Click on the **Point** Component and select set one point||
 |05.| Set a point in the model space.||
 |06.| Connect the **Point** Parameter (Base Point) to the Plane (P) input of the **Polygon** component||
@@ -35,25 +35,25 @@ In this example, we will use Grasshopper’s domain and color components to crea
 
 ||||
 |--|--|--|
-|12.| **Curve/Util/Explode** – Drag and drop an **Explode** component onto the canvas.|[![IMAGE](images/1-3-4/1-3-4_07-explode.png)](/appendix/index-of-components.html#CUExplode)|
+|12.| **Curve/Util/Explode** – Drag and drop an **Explode** component onto the canvas.|[![IMAGE](images/1-3-4/1-3-4_07-explode.png)](../appendix/index-of-components.html#CUExplode)|
 |13.| Connect the Polygon (P) output of the **Polygon** component to the Curve (C) input of the **Explode** component||
-|14.| **Surface/Freeform/Extrude Point** – Drag and drop the **Extrude Point** component onto the canvas|[![](images/1-3-4/1-3-4_08-extrude.png)](/appendix/index-of-components.html#SFExtrPt)|
+|14.| **Surface/Freeform/Extrude Point** – Drag and drop the **Extrude Point** component onto the canvas|[![](images/1-3-4/1-3-4_08-extrude.png)](../appendix/index-of-components.html#SFExtrPt)|
 |15.| Connect the Segments (S) output of the **Explode** component to the Base (B) input of the **Extrude Point**||
 |16.| Connect the **Point** Parameter (Base Point) to the Extrusion Tip (P) of the **Extrude Point** component||
-|17.| **Surface/Analysis/Deconstruct Brep** – Drag and drop the **Deconstruct Brep** component on to the canvas|[![](images/1-3-4/1-3-4_09-deconstruct-brep.png)](/appendix/index-of-components.html#SADeBrep)|
+|17.| **Surface/Analysis/Deconstruct Brep** – Drag and drop the **Deconstruct Brep** component on to the canvas|[![](images/1-3-4/1-3-4_09-deconstruct-brep.png)](../appendix/index-of-components.html#SADeBrep)|
 |18.| Connect the Extrusion (E) output of the **Extrude Point** component to the **Deconstruct Brep** (B) component|||
 
 ![IMAGE](images/1-3-4/1-3-4_09b-definition2.png)
 
 ||||
 |--|--|--|
-|19.| **Maths/Domain/Divide Domain** – Drag and drop the **Divide Domain** component<blockquote>The Base Domain (I) is automatically set between 0.0-1.0 which is what we need for this exercise</blockquote>|[![](images/1-3-4/1-3-4_10a-divide-domain.png)](/appendix/index-of-components.html#MDDivide)|
+|19.| **Maths/Domain/Divide Domain** – Drag and drop the **Divide Domain** component<blockquote>The Base Domain (I) is automatically set between 0.0-1.0 which is what we need for this exercise</blockquote>|[![](images/1-3-4/1-3-4_10a-divide-domain.png)](../appendix/index-of-components.html#MDDivide)|
 |20.| Connect the **Number Slider** (Segments) to the Count (C) input of the **Divide Domain** component||
-|21.| **Math/Domain/Deconstruct Domain** – Drag and drop the **Deconstruct Domain** component|[![IMAGE](images/1-3-4/1-3-4_10b-deconstruct-domain.png)](/appendix/index-of-components.html#MDDeDomain)|
+|21.| **Math/Domain/Deconstruct Domain** – Drag and drop the **Deconstruct Domain** component|[![IMAGE](images/1-3-4/1-3-4_10b-deconstruct-domain.png)](../appendix/index-of-components.html#MDDeDomain)|
 |22.| Connect the Segments (S) output of the **Divide Domain** component to the Domain (I) input of the **Deconstruct Domain** component||
-|23.| **Display/Colour/Colour HSL** – Drag and drop the **Colour HSL** component|[![IMAGE](images/1-3-4/1-3-4_11-colou r-HSL.png)](/appendix/index-of-components.html#DCHSL)|
+|23.| **Display/Colour/Colour HSL** – Drag and drop the **Colour HSL** component|[![IMAGE](images/1-3-4/1-3-4_11-colou r-HSL.png)](../appendix/index-of-components.html#DCHSL)|
 |24.| Connect the Start (S) output of the **Deconstruct Domain** component to the Hue (H) input of the **Colour HSL** components||
-|25.| **Display/Preview/Custom Preview** – Drag and drop the **Custom Preview** component|[![](images/1-3-4/1-3-4_12-custom-preview.png)](/appendix/index-of-components.html#DPPreview)|
+|25.| **Display/Preview/Custom Preview** – Drag and drop the **Custom Preview** component|[![](images/1-3-4/1-3-4_12-custom-preview.png)](../appendix/index-of-components.html#DPPreview)|
 |26.| Right click on the Geometry (G) input of the **Custom Preview** component and select Flatten<blockquote>See 1-4 Designing with Data Trees for details about flattening</blockquote>||
 |27.| Connect the Faces (F) output of the **Deconstruct Brep** component to the Geometry (G) input of the **Custom Preview** component||
 |28.| Connect the Colour (C) output of the **Colour HSL** component to the Shade (S) input of the **Custom Preview** component|||

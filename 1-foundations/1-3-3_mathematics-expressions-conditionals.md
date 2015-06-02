@@ -123,16 +123,16 @@ thead {display: none}
 ||||
 |--|--|--|
 |01.| Type Ctrl+N (in Grasshopper) to start a n]]]]]]]]]]ew definition||
-|02.| **Params/Geometry/Point** – Drag and drop a **Point** parameter  onto the canvas|[![](images/1-3-3/1-3-3_08-point-72dpi.png)](/appendix/index-of-components.html#PGPt)|
+|02.| **Params/Geometry/Point** – Drag and drop a **Point** parameter  onto the canvas|[![](images/1-3-3/1-3-3_08-point-72dpi.png)](../appendix/index-of-components.html#PGPt)|
 |03.| Right click the **Point** parameter and click Set One Point – select a point in the Rhino viewport||
-|04.| **Vector/Vector/Unit X** – Drag and drop the **Unit X** component to the canvas|[![](images/1-3-3/1-3-3_09-vector-72dpi.png)](/appendix/index-of-components.html#VVX)|
-|05.| **Params/Input/Number Slider** – Drag and drop the **Number Slider** component  onto the canvas|[![](images/1-3-3/1-3-3_10-slider-72dpi.png)](/appendix/index-of-components.html#PISlider)|
+|04.| **Vector/Vector/Unit X** – Drag and drop the **Unit X** component to the canvas|[![](images/1-3-3/1-3-3_09-vector-72dpi.png)](../appendix/index-of-components.html#VVX)|
+|05.| **Params/Input/Number Slider** – Drag and drop the **Number Slider** component  onto the canvas|[![](images/1-3-3/1-3-3_10-slider-72dpi.png)](../appendix/index-of-components.html#PISlider)|
 |06.| Double-click on the **Number Slider** and set the following:<ul>Rounding: Integer<br>Lower Limit: 10<br>Upper Limit: 40<br>Value: 20</ul>||
-|07.|** Transform/Array/Linear Array** – Drag and drop the **Linear Array** component onto the canvas|[![](images/1-3-3/1-3-3_11-linear-array-72dpi.png)](/appendix/index-of-components.html#TAArrLinear)|
+|07.|** Transform/Array/Linear Array** – Drag and drop the **Linear Array** component onto the canvas|[![](images/1-3-3/1-3-3_11-linear-array-72dpi.png)](../appendix/index-of-components.html#TAArrLinear)|
 |08.| Connect the output of the **Point** parameter to the Geometry (G) input of the **Linear Array** component||
 |09.| Connect the Unit Vector (V) output of the **Unit X** component to the Direction (D) input of the **Linear Array** component<br><blockquote>You should see a line of 20 points along the x axis in Rhino. Adjust the slider to change the number of points in the array.</blockquote>||
 |10.| Connect the **Number Slider** output to the Count (N) input of the **Linear Array** Component||
-|11.| **Curve/Spline/Interpolate** – Drag and drop the **Interpolate Curve** component to the canvas|[![](images/1-3-3/1-3-3_12-interpolate-curve-72dpi.png)](/appendix/index-of-components.html#CSIntCrv)|
+|11.| **Curve/Spline/Interpolate** – Drag and drop the **Interpolate Curve** component to the canvas|[![](images/1-3-3/1-3-3_12-interpolate-curve-72dpi.png)](../appendix/index-of-components.html#CSIntCrv)|
 |12.| Connect the Geometry (G) output of the **Linear Array** component to the Vertices (V) input of the **Interpolate Curve** component|||
 
 ![](images/1-3-3/1-3-3_13-connected-to-interpolate-curve.png)
@@ -140,9 +140,9 @@ thead {display: none}
 
 ||||
 |--|--|--|
-|13.| **Vector/Point/Deconstruct** – Drag and drop a **Deconstruct** component onto the canvas|[![](images/1-3-3/1-3-3_14-deconstruct-point-72dpi.png)](/appendix/index-of-components.html#VPpDecon)|
-|14.| **Vector/Point/Construct Point** - Drag and drop a **Construct Point** component onto the canvas|[![](images/1-3-3/1-3-3_15-construct-point-72dpi.png)](/appendix/index-of-components.html#VPPt)|
-|15.| **Maths/Trig/Sine** - Drag and drop a **Sine** component onto the canvas|[![](images/1-3-3/1-3-3_16-sine-72dpi.png)](/appendix/index-of-components.html#MTSin)|
+|13.| **Vector/Point/Deconstruct** – Drag and drop a **Deconstruct** component onto the canvas|[![](images/1-3-3/1-3-3_14-deconstruct-point-72dpi.png)](../appendix/index-of-components.html#VPpDecon)|
+|14.| **Vector/Point/Construct Point** - Drag and drop a **Construct Point** component onto the canvas|[![](images/1-3-3/1-3-3_15-construct-point-72dpi.png)](../appendix/index-of-components.html#VPPt)|
+|15.| **Maths/Trig/Sine** - Drag and drop a **Sine** component onto the canvas|[![](images/1-3-3/1-3-3_16-sine-72dpi.png)](../appendix/index-of-components.html#MTSin)|
 |16.| Disconnect the wire from the Vertices (V) input of the **Interpolate Curve** component.<br><blockquote>You can disconnect wires by holding down control and dragging, or by right-clicking the input and selecting Disconnect</blockquote>||
 |17.| Connect the Geometry (G) output of the **Linear Array** component to the Point (P) input of the **Deconstruct** component||
 |18.| Connect the Point X (X) output of the **Deconstruct** component to the X coordinate (X) input of the **Construct Point** Component||
@@ -155,7 +155,7 @@ thead {display: none}
 
 ||||
 |--|--|--|
-|22.| **Maths/Trig/Cosine** – Drag and drop a **Cosine** component to the canvas|[![](images/1-3-3/1-3-3_18a-cosine-72dpi.png)](/appendix/index-of-components.html#MTCos)|
+|22.| **Maths/Trig/Cosine** – Drag and drop a **Cosine** component to the canvas|[![](images/1-3-3/1-3-3_18a-cosine-72dpi.png)](../appendix/index-of-components.html#MTCos)|
 |23.| Connect a third wire from the Point X (X) output of the **Deconstruct** Component to the Value (x) input of the **Cosine** component||
 |24.| Connect the Result (y) output of the **Cosine** component to the Z coordinate (Z) input of the **Construct Point** component|||
 
@@ -164,7 +164,7 @@ thead {display: none}
 
 ||||
 |--|--|--|
-|25.| **Maths/Operators/Multiplication** – Drag and drop two **Multiplication** components onto the canvas|[![](images/1-3-3/1-3-3_19-multiply-72dpi.png)](/appendix/index-of-components.html#MOMultiply)|
+|25.| **Maths/Operators/Multiplication** – Drag and drop two **Multiplication** components onto the canvas|[![](images/1-3-3/1-3-3_19-multiply-72dpi.png)](../appendix/index-of-components.html#MOMultiply)|
 |26.| Connect wires from the Point X (X) output of the **Deconstruct** component to the (A) input of each **Multiplication** component||
 |27.| Connect the Result (y) output of the **Sine** component to the (B) input of the first **Multiplication** component||
 |28.| Connect the Result (y) output of the **Cosine** component to the (B) input of the second **Multiplication** component||
@@ -199,7 +199,7 @@ point.
 |03.| **Params/Input/Number Slider** – Drag and drop a Number Slider onto the canvas||
 |04.| Double-click on the **Number Slider** and set the following:<ul>Rounding: Float<br>Lower Limit: 0.000<br>Upper Limit: 1.000<br>Value: 1.000</ul>||
 |05.| Connect the **Number Slider** to the Factor (F) input of the Unit X component.<br><blockquote>This slider allows you to adjust the distance between the points in the array.</blockquote>||
-|06.| **Maths/Script/Expression** – Drag two **Expression** components onto the canvas|[![](images/1-3-3/1-3-3_23-expression-72dpi.png)](/appendix/index-of-components.html#MSExpression)|
+|06.| **Maths/Script/Expression** – Drag two **Expression** components onto the canvas|[![](images/1-3-3/1-3-3_23-expression-72dpi.png)](../appendix/index-of-components.html#MSExpression)|
 |07.| Double-click the first **Expression** component to open the Expression Editor and change the expression to: ```x*sin(x)```||
 |08.| Double-click the second **Expression** component to open the Expression Editor and change the expression to: ```x*cos(x)```|||
 
@@ -211,7 +211,7 @@ point.
 |09.| Connect two wires from the Point X (X) output of the **Deconstruct** component to the Variable x (x) input of each **Expression** component||
 |10.| Connect the Result (R) output of the first **Expression** component to the X coordinate (X) input of the **Construct Point** component||
 |11.| Connect the Result (R) output of the second **Expression** component to the Y coordinate (Y) input of the **Construct Point** component<br><blockquote>We have replaced the Trigonometry functions and multiplication operators with the expression components for a more efficient definition.</blockquote>||
-|12.| **Mesh/Triangulation/Voronoi** – Drag and drop the **Voronoi** component  onto the canvas|[![](images/1-3-3/1-3-3_25-voronoi-72dpi.png)](/appendix/index-of-components.html#MTVoronoi)|
+|12.| **Mesh/Triangulation/Voronoi** – Drag and drop the **Voronoi** component  onto the canvas|[![](images/1-3-3/1-3-3_25-voronoi-72dpi.png)](../appendix/index-of-components.html#MTVoronoi)|
 |13.| **Params/Input/Number Slider** – Drag and drop a **Number Slider** onto the canvas||
 |14.| Double-click on the **Number Slider** and set the following:<ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 30<br>Value: 30</ul>||
 |15.| Connect the **Number Slider** to the Radius (R) input of the **Voronoi** component||
