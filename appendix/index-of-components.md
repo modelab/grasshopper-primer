@@ -3,15 +3,21 @@ h4{color: #008DB2}
 td {background-color:white; vertical-align:top}
 td img{
 display: block;
+width: 100%;
+max-width: 150px;
 margin-left: auto;
 margin-right: auto;
 }
-td:nth-child(3){vertical-align:middle;}
+td:nth-child(1){width:150px;}
+td:nth-child(2){width:500px;}
+td:nth-child(3){
+vertical-align:middle;
+width:150px;
+}
 thead {display: none}
 </style>
 
 ## 2.1. Index
-<a name="index"></a>
 
 #####This index provides additional information on all the components used in this primer, as well as other components you might find useful. This is just an introduction to over 500 components in the Grasshopper plugin.
 

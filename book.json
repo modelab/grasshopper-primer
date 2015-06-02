@@ -1,0 +1,5 @@
+{
+	"name":	"gitbook",
+	"version": "2.1.0",
+    "plugins": ["toggle-chapters"]
+}

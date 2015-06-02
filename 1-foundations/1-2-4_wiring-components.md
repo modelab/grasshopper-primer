@@ -10,7 +10,7 @@ To connect components, click and drag near the circle on the output side of an o
 2. Curve parameter - right click and select Set One Curve to reference Rhino Geometry.
 
 ![IMAGE](images/1-2-4/1-2-4_001b.png)
->3. Left click and drag the wire from the output of one object to the input of another.
+>Left click and drag the wire from the output (1.) of one object to the input (2.) of another.
 
 ![IMAGE](images/1-2-4/1-2-4_001c.png)
 >4. If you hold down CONTROL, the cursor will become red, and the targeted source will be removed from the source list.

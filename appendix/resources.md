@@ -4,9 +4,9 @@
 
 ###Plug-in Communities
 <style>
-h3{clear:both}
-p{clear:both}
-img {float:left;padding:15px;}
+.page-inner h3{clear:both}
+.page-inner p{clear:both}
+.page-inner img {float:left;padding:15px;}
 
 </style>
 
@@ -23,6 +23,10 @@ http://www.grasshopper3d.com/page/addons-forgrasshopper
 ![IMAGE](images/resources/diva.png)
 DIVA-for-Rhino allows users to carry out a series of environmental performance evaluations of individual buildings and urban landscapes.
 http://diva4rhino.com/
+
+![IMAGE](images/resources/elementlogo.png)
+Element is a mesh geometry plugin for Grasshopper, enabling mesh creation, analysis, transformation, subdivision, and smoothing.
+http://www.food4rhino.com/project/element
 
 ![IMAGE](images/resources/firefly.png)
 Firefly offers a set of comprehensive software tools dedicated to bridging the gap between Grasshopper and the Arduino micro-controller.

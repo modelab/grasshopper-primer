@@ -92,18 +92,18 @@ thead {display: none}
 ||||
 |--|--|--|
 |01.|Start a new definition, type Ctrl+N (in Grasshopper)||
-|02.|**Params/Geometry/Surface** – Drag and drop a **Surface** parameter onto the canvas<br><blockquote>This is the surface that we will populate with geometric components.</blockquote>|[![IMAGE](images/1-5-1/1-5-1_ex_01-surface.png)](/appendix/index.html#PGSrf)|
-|03.|**Params/Geometry/Geometry** – Drag a **Geometry** parameter to the canvas<br><blockquote>This is the component that will be arrayed over the surface.</blockquote>|[![IMAGE](images/1-5-1/1-5-1_ex_02-geometry.png)](/appendix/index.html#PGGeo)|
+|02.|**Params/Geometry/Surface** – Drag and drop a **Surface** parameter onto the canvas<br><blockquote>This is the surface that we will populate with geometric components.</blockquote>|[![IMAGE](images/1-5-1/1-5-1_ex_01-surface.png)](../appendix/index-of-components.html#PGSrf)|
+|03.|**Params/Geometry/Geometry** – Drag a **Geometry** parameter to the canvas<br><blockquote>This is the component that will be arrayed over the surface.</blockquote>|[![IMAGE](images/1-5-1/1-5-1_ex_02-geometry.png)](../appendix/index-of-components.html#PGGeo)|
 |04.|Right click the **Surface** Parameter and select “Set One Surface” – select a surface to reference in the Rhino viewport||
 |05.|Right click the **Geometry** parameter and select “Set One Geometry” – select the your Rhino geometry||
-|06.|**Maths/Domain/Divide Domain2** – Drag and drop the **Divide Domain2** component onto the canvas|[![IMAGE](images/1-5-1/1-5-1_ex_03-divide-domain2.png)](/appendix/index.html#MDDivide)|
+|06.|**Maths/Domain/Divide Domain2** – Drag and drop the **Divide Domain2** component onto the canvas|[![IMAGE](images/1-5-1/1-5-1_ex_03-divide-domain2.png)](../appendix/index-of-components.html#MDDivide)|
 |07.|**Params/Input/Number Slider** – Drag three **Number Sliders** onto the canvas||
 |08.|Double click the first **Number Slider** and set the following: <ul>Rounding: Integer<br>Lower Limit: 0<br>Upper Limit: 10<br>Value: 5</ul>||
 |09.|Set the same values on the second and third **Number Sliders**||
 |10.|Connect the output of the **Surface** parameter to the Domain (I) input of the **Divide Domain2** component||
 |11.|Connect the first **Number Slider** to the U Count (U) input of the **Divide Domain2** component||
 |12.|Connect the second **Number Slider** to the V Count (V) input of the **Divide Domain2** component||
-|13.|**Transform/Morph/Surface Box** – Drag the **Surface Box** component to the canvas|[![IMAGE](images/1-5-1/1-5-1_ex_04-surface-box.png)](/appendix/index.html#TMSBox)|
+|13.|**Transform/Morph/Surface Box** – Drag the **Surface Box** component to the canvas|[![IMAGE](images/1-5-1/1-5-1_ex_04-surface-box.png)](../appendix/index-of-components.html#TMSBox)|
 |14.|Connect the output of the **Surface** parameter to the Surface (S) input of the **Surface Box** component||
 |15.|Connect the Segements (S) output of the **Divide Domain2** component to the Domain (D) input of the **Surface Box** component|||
 
@@ -113,8 +113,8 @@ thead {display: none}
 ||||
 |--|--|--|
 |16.|Connect the third **Number Slider** to the Height (H) input of the **Surface Box** component||
-|17.|**Surface/Primitive/Bounding Box** – Drag a **Bounding Box** component to the canvas|[![IMAGE](images/1-5-1/1-5-1_ex_06-bounding-box.png)](/appendix/index.html#SPBBox)|
-|18.|**Transform/Morph/Box Morph** – Drag and drop the **Box Morph** component onto the canvas|[![IMAGE](images/1-5-1/1-5-1_ex_07-box-morph.png)](/appendix/index.html#TMMorph)|
+|17.|**Surface/Primitive/Bounding Box** – Drag a **Bounding Box** component to the canvas|[![IMAGE](images/1-5-1/1-5-1_ex_06-bounding-box.png)](../appendix/index-of-components.html#SPBBox)|
+|18.|**Transform/Morph/Box Morph** – Drag and drop the **Box Morph** component onto the canvas|[![IMAGE](images/1-5-1/1-5-1_ex_07-box-morph.png)](../appendix/index-of-components.html#TMMorph)|
 |19.|Connect the output of the **Geometry** parameter to the Content (C) input of the **Bounding Box** component||
 |20.|Connect the output of the **Geometry** parameter to the Geometry (G) input of the **Box Morph** component||
 |21.|Connect the Box (B) output of the **Bounding Box** component to the Reference (R) input of the **Box Morph** component||
