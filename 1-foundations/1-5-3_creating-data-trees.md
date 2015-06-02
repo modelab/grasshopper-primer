@@ -72,10 +72,10 @@ thead {display: none}
 ||||
 |--|--|--|
 |01.| Start a new definition, type Ctrl+N (in Grasshopper)||
-|02.| **Curve/Primitive/Line SDL** – Drag and drop the **Line SDL** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_010-line-SDL.png)](/appendix/index.html#CPLine)|
-|03.| **Vector/Point/Construct Point** – Drag and drop the **Construct Point** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_011-construct-point.png)](/appendix/index.html#VPPt)|
+|02.| **Curve/Primitive/Line SDL** – Drag and drop the **Line SDL** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_010-line-SDL.png)](../appendix/index-of-components.html#CPLine)|
+|03.| **Vector/Point/Construct Point** – Drag and drop the **Construct Point** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_011-construct-point.png)](../appendix/index-of-components.html#VPPt)|
 |04.| Connect the Point (Pt) output of the **Construct Point** component to the Start (S) Input of the **Line SDL** component||
-|05.| **Vector/Vector/Unit Y** – Drag and drop the vector **Unit Y** component onto the canvas<br><blockquote>The factor of Unit Vector components is 1.0 by default.</blockquote>|[![IMAGE](images/1-5-3/1-5-3_012-unit-y.png)](/appendix/index.html#VVY)|
+|05.| **Vector/Vector/Unit Y** – Drag and drop the vector **Unit Y** component onto the canvas<br><blockquote>The factor of Unit Vector components is 1.0 by default.</blockquote>|[![IMAGE](images/1-5-3/1-5-3_012-unit-y.png)](../appendix/index-of-components.html#VVY)|
 |06.| Connect the **Unit Y** component to the Direction (D) input of the **Line SDL** component|||
 
 ![IMAGE](images/1-5-3/1-5-3_013-definition1.png)
@@ -85,9 +85,9 @@ thead {display: none}
 |07.| **Params/Input/Number Slider** – Drag and drop the **Number Slider** component onto the canvas||
 |08.| Double-click on the **Number Slider** and set the following: <ul>Name: Length<br>Rounding: Integer<br>Lower Limit: 0<br>Upper Limit: 96<br>Value: 96</ul>||
 |09.| Connect the **Number Slider** to the Length (L) input of the **Line SDL** component||
-|10.| **Transform/Array/Linear Array** – Drag and drop the **Linear Array** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_014-linear-array.png)](/appendix/index.html#TAArrLinear)|
+|10.| **Transform/Array/Linear Array** – Drag and drop the **Linear Array** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_014-linear-array.png)](../appendix/index-of-components.html#TAArrLinear)|
 |11.| Connect the Line (L) output of the **Line SDL** component to the Geometry (G) input of the **Linear Array** component||
-|12.| **Vector/Vector/Unit X** – Drag and drop the vector **Unit X** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_015-unit-x.png)](/appendix/index.html#VVX)|
+|12.| **Vector/Vector/Unit X** – Drag and drop the vector **Unit X** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_015-unit-x.png)](../appendix/index-of-components.html#VVX)|
 |13.| **Params/Input/Number Slider** – Drag and drop two **Number Slider** components onto the canvas||
 |14.| Double-click on the first **Number Slider** and set the following: <ul>Name: Offset Distance<br>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 10<br>Value: 4</ul>||
 |15.| Double-click on the second **Number Slider** and set the following: <ul>Name: # of Offsets<br>Rounding: Even<br>Lower Limit: 2<br>Upper Limit: 20<br>Value: 20</ul>||
@@ -102,12 +102,12 @@ thead {display: none}
 
 ||||
 |--|--|--|
-|19.| **Sets/Lists/Dispatch** – Drag and drop the **Dispatch** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_018-dispatch.png)](/appendix/index.html#SLDispatch)|
+|19.| **Sets/Lists/Dispatch** – Drag and drop the **Dispatch** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_018-dispatch.png)](../appendix/index-of-components.html#SLDispatch)|
 |20.| Connect the Geometry (G) output of the **Linear Array** component to the List (L) input of the **Dispatch** component||
 |21.| **Params/Input/Panel** – Drag and drop the **Panel** component onto the canvas ||
-|22.| Double-click the **Panel**, deselect Multiline Data, Wrap Items and Special Codes, and enter the following: <ul>true<br>false</ul>|[![IMAGE](images/1-5-3/1-5-3_019-panel.png)](/appendix/index.html#PIPanel)|
+|22.| Double-click the **Panel**, deselect Multiline Data, Wrap Items and Special Codes, and enter the following: <ul>true<br>false</ul>|[![IMAGE](images/1-5-3/1-5-3_019-panel.png)](../appendix/index-of-components.html#PIPanel)|
 |23.| Connect the **Panel** to the Pattern (P) input of the **Dispatch** component||
-|24.| **Curve/Division/Divide Curve** – Drag and drop two **Divide Curve** components onto the canvas|[![IMAGE](images/1-5-3/1-5-3_020-divide-curve.png)](/appendix/index.html#CDDivide)|
+|24.| **Curve/Division/Divide Curve** – Drag and drop two **Divide Curve** components onto the canvas|[![IMAGE](images/1-5-3/1-5-3_020-divide-curve.png)](../appendix/index-of-components.html#CDDivide)|
 |25.| Connect the List A (A) output of the **Dispatch** component to the Curve (C) input of the first **Divide Curve** component||
 |26.| Connect the List B (B) output of the **Dispatch** component to the Curve (C) input of the second **Divide Curve** component||
 |27.| **Params/Input/Number Slider** – Drag and drop the **Number Slider** component onto the canvas||
@@ -122,20 +122,20 @@ thead {display: none}
 
 ||||
 |--|--|--|
-|30.| **Sets/Sequence/Cull Pattern** – Drag and drop two **Cull Pattern** components onto the canvas|[![IMAGE](images/1-5-3/1-5-3_023-cull-pattern.png)](/appendix/index.html#SSCull)|
+|30.| **Sets/Sequence/Cull Pattern** – Drag and drop two **Cull Pattern** components onto the canvas|[![IMAGE](images/1-5-3/1-5-3_023-cull-pattern.png)](../appendix/index-of-components.html#SSCull)|
 |31.| Connect the Points (P) output of the first **Divide Curve** component to the List (L) input of the first **Cull Pattern** component||
 |32.| Connect the Points (P) output of the second **Divide Curve** component to the List (L) input of the second **Cull Pattern** component||
 |33.| **Params/Input/Panel** – Drag and drop a second **Panel** component onto the canvas||
-|34.| Double-click the second **Panel** and deselect: Multiline Data, Wrap Items, and Special Codes. Then enter the following:<ul>1<br>1<br>0<br>0</ul><br><blockquote>We are using 1 and 0 in place of true and false. These are the two syntaxes that Grasshopper accepts for boolean values.</blockquote>|[![IMAGE](images/1-5-3/1-5-3_024-panel.png)](/appendix/index.html#PIPanel)|
+|34.| Double-click the second **Panel** and deselect: Multiline Data, Wrap Items, and Special Codes. Then enter the following:<ul>1<br>1<br>0<br>0</ul><br><blockquote>We are using 1 and 0 in place of true and false. These are the two syntaxes that Grasshopper accepts for boolean values.</blockquote>|[![IMAGE](images/1-5-3/1-5-3_024-panel.png)](../appendix/index-of-components.html#PIPanel)|
 |35.| Connect the second **Panel** to the Pattern (P) input of the first **Cull Pattern** component||
 |36.| Connect the second **Pane**l to the Pattern (P) input of the second **ull Pattern** component||
 |37.| Right-click on the Pattern (P) input of the second **Cull Pattern** component and select Invert <br><blockquote>This will invert the **Cull Pattern**, a useful trick to keep definitions short.</blockquote>||
-|38.| **Sets/List/Weave** – Drag and drop the **Weave** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_025-weave.png)](/appendix/index.html#SLWeave)|
+|38.| **Sets/List/Weave** – Drag and drop the **Weave** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_025-weave.png)](../appendix/index-of-components.html#SLWeave)|
 |39.| Connect the second **Panel** to the Pattern (P) input of the **Weave** component||
 |40.| Right-click the Pattern (P) input of the **Weave** component and select reverse||
 |41.| Connect the List (L) output of the first **Cull Pattern** component to the Stream 0 (0) input of the **Weave** component||
 |42.| Connect the List (L) output of the second **Cull Pattern** component to the Stream 0 (0) input of the **Weave** component||
-|43.| **Curve/Spline/Nurbs Curve** – Drag and drop the **Nurbs Curve** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_026-nurbs.png)](/appendix/index.html#CSNurbs)|
+|43.| **Curve/Spline/Nurbs Curve** – Drag and drop the **Nurbs Curve** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_026-nurbs.png)](../appendix/index-of-components.html#CSNurbs)|
 |44.| Connect the Weave (W) output of the **Weave** component to the Vertices (V) input of the **Nurbs Curve** component.|||
 
 ![IMAGE](images/1-5-3/1-5-3_027-definition4.png)
@@ -146,7 +146,7 @@ thead {display: none}
 
 ||||
 |--|--|--|
-|45.| **Surface/Freeform/Revolution** – Drag and drop two **Revolution** components onto the canvas|[![IMAGE](images/1-5-3/1-5-3_029-revolution.png)](/appendix/index.html#SFRevSrf)|
+|45.| **Surface/Freeform/Revolution** – Drag and drop two **Revolution** components onto the canvas|[![IMAGE](images/1-5-3/1-5-3_029-revolution.png)](../appendix/index-of-components.html#SFRevSrf)|
 |46.| Connect the Curve output of the **Nurbs Curve** component to the Profile Curve (P) input of both **Revolution** components.||
 |47.| Right Click on Axis (A) input of both **Revolution** components and select Graft.||
 |48.| Connect the List A (A) output of the **Dispatch** component to the Axis (A) input of the first **Revolution** component||

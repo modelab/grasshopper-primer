@@ -1,6 +1,6 @@
 <style>
 h5 {color:#008DB2}
-img {
+.page-inner img {
 clear: both;
 float:left;
 width:275px;
