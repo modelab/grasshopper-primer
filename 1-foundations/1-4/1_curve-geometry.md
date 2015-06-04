@@ -42,6 +42,8 @@ NURBS curve knots as a result of varying degree:
 >D<sup>3</sup> is the most common type of NURBS curve and is the default in Rhino. You are probably very familiar with the visual progression of the spline, even though the knots appear to be in odd locations.
 
 ####1.4.1.2. GRASSHOPPER SPLINE COMPONENTS
+>Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.4.1.2_grasshopper spline components.gh)
+
 Grasshopper has a set of tools to express Rhino’s more advanced curve types like nurbs curves and poly curves. These tools can be found in the Curve/Splines tab.
 
 **Nurbs Curve** (Curve/Spline/Nurbs curve): The Nurbs Curve component

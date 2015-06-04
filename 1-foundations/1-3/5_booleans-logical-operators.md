@@ -1,4 +1,5 @@
 ###1.3.5. Booleans & Logical Operators
+>Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.3.5_booleans and logical operators.gh)
 
 ####1.3.5.1. BOOLEANS
 Numeric variables can store a whole range of different numbers. Boolean

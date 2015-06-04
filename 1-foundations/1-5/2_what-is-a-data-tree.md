@@ -14,6 +14,8 @@ The image below illustrates the difference between a list and a data tree. On th
 ![IMAGE](images/1-5-2/1-5-2_002-list-data-tree.png)
 
 ####1.5.2.1. DATA TREE VISUALIZATION
+>Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.5.2.1_data tree visualization.gh)
+
 Due to their complexity, Data Trees can be difficult to understand. Grasshopper has several tools to help visualize and understand the data stored in a tree.
 
 **The Param Viewer**

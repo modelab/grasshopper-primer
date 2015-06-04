@@ -6,6 +6,7 @@ thead {display: none}
 </style>
 
 ### 1.5.4. Working with Data Trees
+>Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.5.4_rail intersect definition.gh)
 
 In this example, we will use some of Grasshopper’s tools for manipulating data trees to retreive, reorganize, and interpolate the desired points contained in a data tree and create a lattice of intersecting fins.
 
@@ -20,8 +21,8 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 ||||
 |--|--|--|
 |01.| Start a new definition, type Ctrl+N (in Grasshopper) ||
-|02.| **Params/Geometry/Curve** – Drag and drop three **curve** parameters onto the canvas |[![IMAGE](images/1-5-3/1-5-3_034a-curve.png)](../../appendix/index-of-components.html#PGCrv)|
-|03.| **Surface/Freeform/Sweep2** – Drag a **Sweep2** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_034b-sweep2.png)](../../appendix/index-of-components.html#SFSwp2)|
+|02.| **Params/Geometry/Curve** – Drag and drop three **curve** parameters onto the canvas |[![IMAGE](images/1-5-3/1-5-3_034a-curve.png)](../../appendix/A-1/0_index-of-components.html#PGCrv)|
+|03.| **Surface/Freeform/Sweep2** – Drag a **Sweep2** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_034b-sweep2.png)](../../appendix/A-1/0_index-of-components.html#SFSwp2)|
 |04.| Right-click the first **Curve** parameter and select “Set one curve.” Select the first rail curve in the Rhino viewport||
 |05.| Right-click the second **Curve** parameter and select “Set one curve.” Select the second rail curve in the Rhino viewport||
 |06.| Right-click the third **Curve** parameter and select “Set one curve.” Select the section curve in the Rhino viewport||
@@ -32,17 +33,17 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 
 ||||
 |--|--|--|
-|08.| **Params/Geometry/Surface** – drag a **Surface** parameter to the canvas|[![IMAGE](images/1-5-3/1-5-3_035a-surface.png)](../../appendix/index-of-components.html#PGSrf)|
+|08.| **Params/Geometry/Surface** – drag a **Surface** parameter to the canvas|[![IMAGE](images/1-5-3/1-5-3_035a-surface.png)](../../appendix/A-1/0_index-of-components.html#PGSrf)|
 |09.| Connect the Brep (S) output of the **Sweep2** component to the input of the **Surface** parameter||
 |10.| Right-click the **Surface** parameter and select “Reparameterize”. <br><blockquote>In this step, we re-mapped the u and v domains of the surface between 0 and 1. This will make future operations possible.</blockquote>|![IMAGE](images/1-5-3/1-5-3_035-reparameterize.png)|
-|11.| **Maths/Domain/Divide Domain2** – drag and drop a **Divide Domain2** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_036-divide-domain2.png)](../../appendix/index-of-components.html#MDDivide)|
+|11.| **Maths/Domain/Divide Domain2** – drag and drop a **Divide Domain2** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_036-divide-domain2.png)](../../appendix/A-1/0_index-of-components.html#MDDivide)|
 |12.| **Params/Input/Number Slider** – drag two **Number Sliders** onto the canvas||
 |13.| Double click the first **Number Sliders** and set the following:<ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 40<br>Value: 20</ul>||
 |14.| Set the same values on the second **Number Sliders**||
 |15.| Connect the output of the reparameterized **Surface** parameter to the Domain (I) input of the **Divide Domain2** component||
 |16.| Connect the first **Number Sliders** to the U Count (U) input of the **Divide Domain2** component||
 |17.| Connect the second **Number Sliders** to the V Count (V) input of the **Divide Domain2** component||
-|18.| **Surface/Util/Isotrim** – Drag and drop the **Isotrim** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_037-isotrim.png)](../../appendix/index-of-components.html#SUSubSrf)|
+|18.| **Surface/Util/Isotrim** – Drag and drop the **Isotrim** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_037-isotrim.png)](../../appendix/A-1/0_index-of-components.html#SUSubSrf)|
 |19.| Connect the Segments (S) output of the **Divide Domain2** component to the Domain (D) input of the **Isotrim** component||
 |20.| Connect the output of the **Surface** parameter to the Surface (S) input of the **Isotrim** component|||
 
@@ -51,12 +52,12 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 
 ||||
 |--|--|--|
-|21.| **Maths/Domain/Deconstruct Domain2** – Drag a **Deconstruct Domain2** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_039-deconstruct-domain2.png)](../../appendix/index-of-components.html#MDDeDom2Num)|
-|22.| **Maths/Domain/Construct Domain2** – Drag a **Construct Domain2** component to the canvas|[![IMAGE](images/1-5-3/1-5-3_040-construct-domain2.png)](../../appendix/index-of-components.html#MDDom2Num)|
-|23.| **Params/Input/Graph Mapper** – Drag a **Graph Mapper** to the canvas|[![IMAGE](images/1-5-3/1-5-3_041-graph-mapper.png)](../../appendix/index-of-components.html#PIGraph)|
-|24.| **Sets/List/List Length** – Drag a **List Length** component to the canvas|[![IMAGE](images/1-5-3/1-5-3_042-list-length.png)](../../appendix/index-of-components.html#SLLng)|
-|25.| **Sets/Tree/Merge** – Drag a **Merge** component to the canvas |[![IMAGE](images/1-5-3/1-5-3_043-merge.png)](../../appendix/index-of-components.html#STMerge)|
-|26.| **Sets/List/Split List** – Drag a **Split List** component to the canvas <br><blockquote>The Merge and Split components are used here so that the same Graph Mapper could be used for both the U min and U max values.</blockquote>|[![IMAGE](images/1-5-3/1-5-3_044-split-list.png)](../../appendix/index-of-components.html#SLSplit)|
+|21.| **Maths/Domain/Deconstruct Domain2** – Drag a **Deconstruct Domain2** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_039-deconstruct-domain2.png)](../../appendix/A-1/0_index-of-components.html#MDDeDom2Num)|
+|22.| **Maths/Domain/Construct Domain2** – Drag a **Construct Domain2** component to the canvas|[![IMAGE](images/1-5-3/1-5-3_040-construct-domain2.png)](../../appendix/A-1/0_index-of-components.html#MDDom2Num)|
+|23.| **Params/Input/Graph Mapper** – Drag a **Graph Mapper** to the canvas|[![IMAGE](images/1-5-3/1-5-3_041-graph-mapper.png)](../../appendix/A-1/0_index-of-components.html#PIGraph)|
+|24.| **Sets/List/List Length** – Drag a **List Length** component to the canvas|[![IMAGE](images/1-5-3/1-5-3_042-list-length.png)](../../appendix/A-1/0_index-of-components.html#SLLng)|
+|25.| **Sets/Tree/Merge** – Drag a **Merge** component to the canvas |[![IMAGE](images/1-5-3/1-5-3_043-merge.png)](../../appendix/A-1/0_index-of-components.html#STMerge)|
+|26.| **Sets/List/Split List** – Drag a **Split List** component to the canvas <br><blockquote>The Merge and Split components are used here so that the same Graph Mapper could be used for both the U min and U max values.</blockquote>|[![IMAGE](images/1-5-3/1-5-3_044-split-list.png)](../../appendix/A-1/0_index-of-components.html#SLSplit)|
 |27.| Connect the U min (U0) and U max (U1) outputs of the **Deconstruct Domain2** component to the Data 1 (D1) and Data 2 (D2) inputs of the **Merge** component||
 |28.| Connect the Result (R) output of the **Merge** component to the input of the **Graph Mapper**||
 |29.| Right-click the **Graph Mapper** and select “Bezier” under “Graph Types”||
@@ -74,9 +75,9 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 
 ||||
 |--|--|--|
-|38.| **Surface/Analysis/Deconstruct Brep** – Drag the **Deconstruct Brep** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_046-deconstruct-brep.png)](../../appendix/index-of-components.html#SADeBrep)|
-|39.| **Sets/Tree/Flip Matrix** – Drag the **Flip Matrix** component to the canvas|[![IMAGE](images/1-5-3/1-5-3_047-flip-matrix.png)](../../appendix/index-of-components.html#STFlip)|
-|40.| **Sets/Tree/Explode Tree** – Drag the **Explode Tree** component to the canvas|[![IMAGE](images/1-5-3/1-5-3_048-explode-tree.png)](../../appendix/index-of-components.html#STExplode)|
+|38.| **Surface/Analysis/Deconstruct Brep** – Drag the **Deconstruct Brep** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_046-deconstruct-brep.png)](../../appendix/A-1/0_index-of-components.html#SADeBrep)|
+|39.| **Sets/Tree/Flip Matrix** – Drag the **Flip Matrix** component to the canvas|[![IMAGE](images/1-5-3/1-5-3_047-flip-matrix.png)](../../appendix/A-1/0_index-of-components.html#STFlip)|
+|40.| **Sets/Tree/Explode Tree** – Drag the **Explode Tree** component to the canvas|[![IMAGE](images/1-5-3/1-5-3_048-explode-tree.png)](../../appendix/A-1/0_index-of-components.html#STExplode)|
 |41.| Connect the Surface (S) output of the **Isotrim** component to the Brep (B) input of the **Deconstruct Brep** component <br><blockquote>The Deconstruct Brep component deconstructs a Brep into Faces, Edges, and Vertices. This is helpful if you want to operate on a specific constituent of the surface.</blockquote>||
 |42.| Connect the Vertices (V) output of the **Deconstruct Brep** component to the Data (D) input of the **Flip Matrix** component <br><blockquote>We just changed the Data tree structure from one list of four vertices that define each surface, to four lists, each containing one vertex of each surface.</blockquote>||
 |43.| Connect the Data (D) output of the **Flip Matrix** component to the Data (D) input of the **Explode Tree** component||
@@ -88,7 +89,7 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 
 ||||
 |--|--|--|
-|46.| **Curve/Primitive/Line** – Drag and drop two **Line** components onto the canvas|[![IMAGE](images/1-5-3/1-5-3_050a-line.png)](../../appendix/index-of-components.html#CPLine)|
+|46.| **Curve/Primitive/Line** – Drag and drop two **Line** components onto the canvas|[![IMAGE](images/1-5-3/1-5-3_050a-line.png)](../../appendix/A-1/0_index-of-components.html#CPLine)|
 |47.| Connect the Branch 0 {0} output of the **Explode Tree** component to the Start Point (A) input of the first **Line** component||
 |48.| Connect the Branch 1 {1} output of the **Explode Tree** component to the Start Point (A) input of the second **Line** component||
 |49.| Connect the Branch 2 {2} output of the **Explode Tree** component to the End Point (B) input of the first **Line** component||
@@ -99,9 +100,9 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 
 ||||
 |--|--|--|
-|51.| **Curve/Util/Join Curves** – Drag and drop the **Join Curves** component to the canvas|[![IMAGE](images/1-5-3/1-5-3_051-join-curves.png)](../../appendix/index-of-components.html#CUJoin)|
-|52.| **Curve/Analysis/Control Points** – Drag a **Control Points** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_052-control-points.png)](../../appendix/index-of-components.html#CACP)|
-|53.| **Curve/Spline/Interpolate** – Drag and drop the **Interpolate** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_053-interpolate.png)](../../appendix/index-of-components.html#CSIntCrv)|
+|51.| **Curve/Util/Join Curves** – Drag and drop the **Join Curves** component to the canvas|[![IMAGE](images/1-5-3/1-5-3_051-join-curves.png)](../../appendix/A-1/0_index-of-components.html#CUJoin)|
+|52.| **Curve/Analysis/Control Points** – Drag a **Control Points** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_052-control-points.png)](../../appendix/A-1/0_index-of-components.html#CACP)|
+|53.| **Curve/Spline/Interpolate** – Drag and drop the **Interpolate** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_053-interpolate.png)](../../appendix/A-1/0_index-of-components.html#CSIntCrv)|
 |54.| Connect the Line (L) outputs of each **Line** component to the Curves (C) input of the **Join Curve**s component  <br><blockquote>Hold down the Shift key to connect multiple wires to a single input<blockquote> ||
 |55.| Connect the Curves (C) output of the **Join Curves** component to the Curve (C) input of the **Control Points** component||
 |56.| Connect the Points (P) output of the **Control Points** component to the Vertices (V) input of the **Interpolate** component|||
@@ -111,14 +112,14 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 
 ||||
 |--|--|--|
-|57.| **Sets/Tree/Prune Tree** – Drag and drop the **Prune Tree** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_055-prune-tree.png)](../../appendix/index-of-components.html#STPrune)|
+|57.| **Sets/Tree/Prune Tree** – Drag and drop the **Prune Tree** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_055-prune-tree.png)](../../appendix/A-1/0_index-of-components.html#STPrune)|
 |58.| **Params/Input/Panel** – Drag a Panel onto the canvas||
 |59.| Connect the Points (P) output of the **Control Points** component to the Tree (T) input of the **Prune Tree** component <br><blockquote>If you connect one Param Viewer to the Points (P) output of the Control Points component, and another to the Tree (T) output of the Prune Tree component, you can see that the number of branches has been reduced.</blockquote>||
-|60.| Double click the **Panel** and enter 4.|[![IMAGE](images/1-5-3/1-5-3_056-panel.png)](../../appendix/index-of-components.html#PIPanel)|
+|60.| Double click the **Panel** and enter 4.|[![IMAGE](images/1-5-3/1-5-3_056-panel.png)](../../appendix/A-1/0_index-of-components.html#PIPanel)|
 |61.| Connect the output of the **Panel** to the Minimum (N0) input of the **Prune Tree** component||
 |62.| Connect the Tree (T) output of the **Prune Tree** component to the Vertices (V) input of the **Interpolate** component||
-|63.| **Surface/Freeform/Extrude** – Drag and drop the **Extrude** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_057-extrude.png)](../../appendix/index-of-components.html#SFExtr)|
-|64.| **Vector/Vector/Unit Y** – Drag a **Unit Y** component onto the canvas<br><br>*You may need to use a Unit X vector, depending on the orientation of your referenced geometry in Rhino*|[![IMAGE](images/1-5-3/1-5-3_058a-vector-y.png)](../../appendix/index-of-components.html#VVY)|
+|63.| **Surface/Freeform/Extrude** – Drag and drop the **Extrude** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_057-extrude.png)](../../appendix/A-1/0_index-of-components.html#SFExtr)|
+|64.| **Vector/Vector/Unit Y** – Drag a **Unit Y** component onto the canvas<br><br>*You may need to use a Unit X vector, depending on the orientation of your referenced geometry in Rhino*|[![IMAGE](images/1-5-3/1-5-3_058a-vector-y.png)](../../appendix/A-1/0_index-of-components.html#VVY)|
 |65.| **Params/Input/Number Slider** – Drag a **Number Slider** onto the canvas||
 |66.| Double click the **Number Slider** and set the following:<ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 5<br>Value: 3</ul>||
 |67.| Connect the Curve (C) output of the **Interpolate** component to the Base (B) input of the **Extrude** component||

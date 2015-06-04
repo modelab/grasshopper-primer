@@ -14,7 +14,7 @@ padding: 15px;
 ###Authors
 
 
-![IMAGE](images/about-this-primer/akos.png)
+![IMAGE](images/akos.png)
 #####Gil Akos, Mode Lab
 Gil Akos is a founding partner and Director of Technology at Mode Lab, a
 multidisciplinary design consultancy specializing in technology-driven process
@@ -26,7 +26,7 @@ http://modelab.is<br>
 http://modelab.is/education
 
 
-![IMAGE](images/about-this-primer/parsons.png)
+![IMAGE](images/parsons.png)
 #####Ronnie Parsons, Mode Lab
 Ronnie Parsons is a founding partner and Director of Education at Mode Lab, a
 multidisciplinary design consultancy specializing in technology-driven process
@@ -38,7 +38,7 @@ http://modelab.is<br>
 http://modelab.is/education
 
 
-![IMAGE](images/about-this-primer/modelab.png)
+![IMAGE](images/modelab.png)
 #####Mode Lab Team:
 <ul>Sharon Jamison<br>
 Andrew Reitz<br>
@@ -52,7 +52,7 @@ Christopher Morse</ul>
 ###Contributors
 
 
-![IMAGE](images/about-this-primer/payne.png)
+![IMAGE](images/payne.png)
 #####Andrew Payne, Principal, Lift Architects
 Andrew Payne is a registered architect who founded LIFT architects in 2007. Andrew’s work explores embedded computation, intelligent buildings,
 and generative design and he has published papers and taught workshops
@@ -66,20 +66,20 @@ http://www.liftarchitects.com/
 
 This primer provides a comprehensive guide to the most current Grasshopper build, version 0.90076, highlighting what we feel are some of the most exciting feature updates. It is our goal that this primer will serve as a field guide to new and existing users looking to navigate the ins and outs of using Grasshopper in their creative practice.
 
-![IMAGE](images/about-this-primer/modelab_logo.png)
+![IMAGE](images/modelab_logo.png)
 Mode Lab is a multidisciplinary design consultancy specializing in technology-driven process innovation.
 From its inception, Mode Lab has been a space for experimenting with the methods and technology used to design and make the world around us. We are compelled to understand and improve upon the process of materializing ideas – this is a journey we undertake in collaboration with our clients.
 http://modelab.is
 
-![IMAGE](images/about-this-primer/modelab_education.png)
+![IMAGE](images/modelab_education.png)
 Our Mode Lab Education brand provides blended learning solutions for consumers and businesses looking to get ahead. We design and develop targeted learning experiences that keep the learner at the center of every technique and design method we share with our community.
 http://modelab.is/education
 
-![IMAGE](images/about-this-primer/rhino.png)
+![IMAGE](images/rhino.png)
 McNeel is a software development company with worldwide sales, support, and training. Founded in 1980, McNeel is a privately-held, employee-owned company with sales and support offices and affiliates in Seattle, Boston, Miami, Buenos Aires, Barcelona, Rome, Tokyo, Taipei, Seoul, Kuala Lumpur, and Shanghai with more than 700 resellers, distributors, OEMs, and training centers around the world.
 http://www.en.na.mcneel.com/
 
-![IMAGE](images/about-this-primer/grasshopper.png)
+![IMAGE](images/grasshopper.png)
 For designers who are exploring new shapes using generative algorithms, Grasshopper is a graphical algorithm editor tightly integrated with Rhino’s 3D modeling tools. Unlike RhinoScript, Grasshopper requires no knowledge of programming or scripting, but still allows designers to build form generators from the simple to the awe-inspiring.
 http://www.grasshopper3d.com/
 
