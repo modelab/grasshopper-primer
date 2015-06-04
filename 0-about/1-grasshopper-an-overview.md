@@ -1,12 +1,6 @@
 ## Grasshopper - an Overview
 
 
-TESTING
-here is a link to an html file that is not in SUMMARY.MD
-[LINK](test.html)
-TESTING
-
-
 #####Grasshopper is a visual programming editor developed by David Rutten at Robert McNeel & Associates. As a plug-in for Rhino3D, Grasshopper is integrated with the robust and versatile modeling environment used by creative professionals across a diverse range of fields, including architecture, engineering, product design, and more. In tandem, Grasshopper and Rhino offer us the opportunity to define precise parametric control over models, the capability to explore generative design workflows, and a platform to develop higher-level programming logic – all within an intuitive, graphical interface.
 
 The origins of Grasshopper can be traced to the functionality of Rhino3d
@@ -72,7 +66,7 @@ as when your definitions become more complex, adeptly managing the flow of
 data, the status of the “solver,” and what is previewed in the Rhino viewport will
 prevent many unwanted headaches.
 
-![IMAGE](flow.png)
+![IMAGE](images/flow.png)
 >Program flow from left to right
 
 As you begin first exploring Grasshopper or further building your skills, you have
