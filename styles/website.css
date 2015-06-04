@@ -11,10 +11,6 @@ h1,h2,h3 {color:#008DB2}
 .book .book-summary ul.summary li.done>a{color:#008DB2}
 .book .book-summary ul.summary li.done>a:hover{color:#006B94}
 .book .book-summary ul.summary li.active>a{color:#000000;background:transparent;text-decoration:none}
-.book .book-summary ul.summary::before{
-	content: url(../modelab_logo.png)
-.book .book-summary ul.summary::after{
-	content: "hello world";
-}
 .book .book-summary ul.summary img{float:none}
-    .book .book-summary .copy{padding:15px}
+.book .book-summary .copy{padding:15px}
+.fa-check:before{content:none}
