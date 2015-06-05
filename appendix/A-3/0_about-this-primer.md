@@ -105,7 +105,7 @@ Under the following conditions:
 Please see the full text of this license (http://creativecommons.org/licenses/by-nc-sa/3.0/us/legalcode) to view all rights and restrictions associated with it.
 
 **MODE LAB’S ATTRIBUTION:**
-©2014 Studio Mode, LLC. All rights reserved. http://modelab.is
+©2015 Studio Mode, LLC. All rights reserved. http://modelab.is
 
 **TRANSLATIONS:**
 If you create translated versions of this Primer (in compliance with this license), please notify Mode Lab at hello@modelab.is. Mode Lab may choose to distribute and/or link to such translated versions (either as-is, or as further modified by Mode Lab)
