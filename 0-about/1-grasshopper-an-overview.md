@@ -65,7 +65,7 @@ as when your definitions become more complex, adeptly managing the flow of
 data, the status of the “solver,” and what is previewed in the Rhino viewport will
 prevent many unwanted headaches.
 
-![IMAGE](flow.png)
+![IMAGE](images/flow.png)
 >Program flow from left to right
 
 ####THINGS TO REMEMBER
