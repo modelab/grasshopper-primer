@@ -1,4 +1,4 @@
-##2.2.1. Grasshopper Example Files
+##2.2. Grasshopper Example Files
 
 #####These example files accompany the Grasshopper Primer, and are organized according to section.
 
