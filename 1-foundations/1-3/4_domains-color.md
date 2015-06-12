@@ -5,7 +5,12 @@ td {background-color: #F9F9F9;}
 thead {display: none}
 </style>
 ###1.3.4. Domains & Color
+
+{% if gitbook.generator == book.generatorName %}
+>Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+{% else %}
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.3.4_domains and color.gh)
+{% endif %}
 
 #####The color wheel is a model for organizing colors based on their hue. In Grasshopper, colors can be defined by their hue value in a range of 0.0 to 1.0. Domains are used to define a range of all possible values between a set of numbers between a lower limit(A) and an upper limit (B).
 

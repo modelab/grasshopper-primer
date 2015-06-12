@@ -1,5 +1,10 @@
 ### 1.5.3. Creating Data Trees
+{% if gitbook.generator == book.generatorName %}
+>Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+{% else %}
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.5.3_creating data trees.gh)
+{% endif %}
+
 
 #####Grasshopper contains tools for changing the structure of a data tree. Theese tools can help you access specific data within a tree, and change the way it is stored, ordered, and identified.
 
@@ -48,7 +53,11 @@ The Path Mapper component (Sets/Tree/Path Mapper) allows you to perform lexical 
 4. You can modify a data tree by re-mapping the path index and the desired branch
 
 ####1.5.3.6. WEAVING DEFINITION
+{% if gitbook.generator == book.generatorName %}
+>Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+{% else %}
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.5.3.6_weaving definition.gh)
+{% endif %}
 
 In this example, we will manipulate lists and data trees to weave lists of points, define a pattern, and create surface geometry.
 

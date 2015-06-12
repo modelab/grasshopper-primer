@@ -1,5 +1,9 @@
 ### 1.4.5. List Visualization
+{% if gitbook.generator == book.generatorName %}
+>Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+{% else %}
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.4.5_list visualization.gh)
+{% endif %}
 
 #####Understanding lists in Grasshopper can be difficult without being able to see the data flowing from one component to the next. There are several ways to visualize lists that can help to understand and manipulate data.
 

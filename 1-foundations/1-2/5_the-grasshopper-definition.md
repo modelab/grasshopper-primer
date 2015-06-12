@@ -1,5 +1,9 @@
 ### 1.2.5. THE GRASSHOPPER DEFINITION
+{% if gitbook.generator == book.generatorName %}
+>Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+{% else %}
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.2.5_the grasshopper definition.gh)
+{% endif %}
 
 #####Grasshopper Definitions have a Program Flow that represents where to start program execution, what to do in the middle and how to know when program execution is complete.
 

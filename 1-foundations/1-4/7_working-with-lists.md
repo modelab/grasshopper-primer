@@ -5,7 +5,11 @@ td {background-color: #F9F9F9;}
 thead {display: none}
 </style>
 ### 1.4.7. WORKING WITH LISTS
+{% if gitbook.generator == book.generatorName %}
+>Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+{% else %}
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.4.7_working with lists.gh)
+{% endif %}
 
 Lets take a look at an example using the components from the previous section. In this example, we are creating a tile pattern by mapping geometry to a rectangular grid. The pattern is created by using the List Item component to retrieve the desired tile from a list of geometry.
 

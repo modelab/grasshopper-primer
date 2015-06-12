@@ -2,7 +2,9 @@
 
 #####These example files accompany the Grasshopper Primer, and are organized according to section.
 
-
+{% if gitbook.generator == book.generatorName %}
+The example files listed below can all be found at the following site: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+{% endif %}
 
 <style>
 td {background-color: #F9F9F9;}
