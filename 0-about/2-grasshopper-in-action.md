@@ -5,5 +5,5 @@
 <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
 
 {% if gitbook.generator == book.generatorName %}
-![IMAGE](images/pinterest.png)
+[![IMAGE](images/pinterest.png)](http://www.pinterest.com/modelabnyc/grasshopper-in-action/)
 {% endif %}
