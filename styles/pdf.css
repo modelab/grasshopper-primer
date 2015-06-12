@@ -1,0 +1,7 @@
+body .page ol ol{list-style-type:upper-roman}
+OL { counter-reset: section -1 }
+LI { display: block }
+LI:before { content: counters(section, ".") "."; counter-increment: section }
+ol OL { counter-reset: section }
+ol LI { display: block }
+ol LI:before { content: counters(section, ".") "."; counter-increment: section }
