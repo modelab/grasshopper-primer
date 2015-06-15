@@ -1,5 +1,5 @@
 ### 1.5.3. Creating Data Trees
-{% if gitbook.generator == book.generatorName %}
+{% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 >Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.5.3_creating data trees.gh)
@@ -53,7 +53,7 @@ The Path Mapper component (Sets/Tree/Path Mapper) allows you to perform lexical 
 4. You can modify a data tree by re-mapping the path index and the desired branch
 
 ####1.5.3.6. WEAVING DEFINITION
-{% if gitbook.generator == book.generatorName %}
+{% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 >Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.5.3.6_weaving definition.gh)

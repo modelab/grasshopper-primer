@@ -23,7 +23,7 @@ the length of each vector to scale the radius of each circle.
 ![Examples](images/1-3-2/1-3-2_002-attractor-examples.png)
 
 ####1.3.2.1. ATTRACTOR DEFINITION
-{% if gitbook.generator == book.generatorName %}
+{% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 >Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.3.2.1_attractor definition.gh)

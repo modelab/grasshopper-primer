@@ -14,7 +14,7 @@ The image below illustrates the difference between a list and a data tree. On th
 ![IMAGE](images/1-5-2/1-5-2_002-list-data-tree.png)
 
 ####1.5.2.1. DATA TREE VISUALIZATION
-{% if gitbook.generator == book.generatorName %}
+{% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 >Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.5.2.1_data tree visualization.gh)

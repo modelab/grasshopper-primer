@@ -4,6 +4,6 @@
 <!-- Please call pinit.js only once per page -->
 <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
 
-{% if gitbook.generator == book.generatorName %}
+{% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 [![IMAGE](images/pinterest.png)](http://www.pinterest.com/modelabnyc/grasshopper-in-action/)
 {% endif %}

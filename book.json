@@ -3,10 +3,6 @@
 	"version": "2.1.0",
     "plugins": ["toggle-chapters"],
     
-    "variables": {
-        "generatorName": "pdf"
-    },
-    
     "pdf": {
         
         "headerTemplate":"<p class='header' style='font:10px arial,sans-serif'><span>The Grasshopper Primer v3.1</span></p>",
