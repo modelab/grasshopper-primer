@@ -115,11 +115,17 @@ light waves.
 
 ![](images/1-3-3/1-3-3_07-line-sine-helix-spiral.png)
 
-|1. Line|2. Sine Curve|3. Helix|4. Spiral|
-|----|----|----|----|
-|y(t) = 0|y(t) = sin(t)|x(t) = cos(t)|x(t) = t*cos(t)|
-|||y(t) = sin(t)|y(t) = t*cos(t)|
-|||z(t) = b(t)|||
+>1. Line<br>
+```y(t) = 0```
+2. Sine Curve<br>
+```y(t) = sin(t)```
+3. Helix<br>
+```x(t) = cos(t)```<br>
+```y(t) = sin(t)```<br>
+```z(t) = b(t)```
+4. Spiral<br>
+```x(t) = t*cos(t)```<br>
+```y(t) = t*cos(t)```
 
 In this example, we will use Grasshopper to construct various trigonometric
 curves using trigonometry function components found in the Math tab:

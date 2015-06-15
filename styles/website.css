@@ -14,3 +14,6 @@ h1,h2,h3 {color:#008DB2}
 .book .book-summary ul.summary img{float:none}
 .book .book-summary .copy{padding:15px}
 .fa-check:before{content:none}
+
+.book .book-body .body-inner td{background-color: #F9F9F9}
+.book.color-theme-2 .book-body .body-inner td{background-color: #14141A}

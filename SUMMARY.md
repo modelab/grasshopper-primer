@@ -35,7 +35,7 @@
        * [Working with Data Trees](1-foundations/1-5/4_working-with-data-trees.md)
 * [Appendix](appendix/README.md)
    * [Index](appendix/A-1/0_index-of-components.md)
+   * [Example Files](appendix/A-2/1_gh-files.md)
    * [Resources](appendix/A-2/0_resources.md)
-       * [Grasshopper Example Files](appendix/A-2/1_gh-files.md)
    * [About This Primer](appendix/A-3/0_about-this-primer.md)
 

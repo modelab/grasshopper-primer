@@ -1,4 +1,4 @@
-##2.2. Resources
+##2.3. Resources
 
 #####There are many resources available to learn more about Grasshopper and parametric design concepts. There are also over a hundred plugins and add-ons that extend Grasshopper’s functionality. Below are some of our favorites.
 
@@ -99,6 +99,10 @@ http://www.morphogenesism.com/media.html
 This primer is intended to teach programming to absolute beginners, people who have tinkered with programming a bit or expert programmers looking for a quick introduction to the methods in Rhino. Written by Skylar Tibbits.
 http://www.rhino3d.com/download/IronPython/5.0/RhinoPython101
 
+###General References
+**Wolfram MathWorld** is an online mathematics resource., assembled by Eric W. Weisstein
+with assistance from thousands of contributors. Since its contents first appeared online in 1995, MathWorld has emerged as a nexus of mathematical information in both the mathematics and educational communities. Its entries are extensively referenced in journals and books spanning all educational levels.
+http://mathworld.wolfram.com/
 
 ###Further Reading
 Burry, Jane, and Mark Burry. *The New Mathematics of Architecture.* London: Thames & Hudson, 2010.
