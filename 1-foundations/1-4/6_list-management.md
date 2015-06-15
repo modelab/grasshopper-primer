@@ -1,5 +1,9 @@
 ### 1.4.6. List Management
+{% if gitbook.generator == "pdf" or "mobi" or "epub" %}
+>Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+{% else %}
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.4.6_list management.gh)
+{% endif %}
 
 #####One of the most powerful features of Grasshopper is the ability to quickly build and manipulate various lists of data. We can store many different types of data in a list (numbers, points, vectors, curves, surfaces, breps, etc.) and there are a number of useful tools found under the Sets/List subcategory.
 

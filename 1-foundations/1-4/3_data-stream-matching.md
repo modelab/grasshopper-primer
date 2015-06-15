@@ -1,5 +1,9 @@
 ### 1.4.3. Data Stream Matching
+{% if gitbook.generator == "pdf" or "mobi" or "epub" %}
+>Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+{% else %}
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.4.3_data matching.gh)
+{% endif %}
 
 #####Data matching is a problem without a clean solution. It occurs when a component has access to differently sized inputs. Changing the data matching algorithm can lead to vastly different results.
 
