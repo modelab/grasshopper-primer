@@ -1,7 +1,11 @@
 
 
 ### 1.3.3. Mathematics, Expressions & Conditionals
+{% if gitbook.generator == "pdf" or "mobi" or "epub" %}
+>Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+{% else %}
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.3.3_operators and conditionals.gh)
+{% endif %}
 
 #####Knowing how to work with numeric information is an essential skill to master as you learn to use Grasshopper. Grasshopper contains many components to perform mathematical operations, evaluate conditions and manipulate sets of numbers.
 
@@ -96,7 +100,11 @@ equal to (<=) condition.
 ![](images/1-3-3/1-3-3_06-smaller-than.png)
 
 ####1.3.3.4. TRIGONOMETRY COMPONENTS
+{% if gitbook.generator == "pdf" or "mobi" or "epub" %}
+>Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+{% else %}
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.3.3.4_trigonometry components.gh)
+{% endif %}
 
 We have already shown that we can use an Expression (or Evaluate) component
 to evaluate conditional statements as well as compute algebraic equations.
@@ -188,7 +196,11 @@ thead {display: none}
 
 
 ####1.3.3.5. EXPRESSIONS
+{% if gitbook.generator == "pdf" or "mobi" or "epub" %}
+>Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+{% else %}
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.3.3.5_expressions.gh)
+{% endif %}
 
 The Expression component (and its brother the Evaluate component) are
 very flexible tools; that is to say that they can be used for a variety of different
