@@ -15,10 +15,8 @@ h1,h2,h3 {color:#008DB2}
 .book .book-summary .copy{padding:15px}
 .fa-check:before{content:none}
 
-.book .book-summary ul.summary a.gitbook-link:link{color: #484848}
-.book .book-summary ul.summary a.gitbook-link:hover{color: #484848}
-.book .book-summary ul.summary a.gitbook-link:visted{color: #484848}
 .book .book-summary ul.summary a.gitbook-link {font-size: 0.8em;display: none}
+.book .book-summary ul.summary div.ebook-link a{color:#008DB2}
 
 
 .book .book-body .body-inner td{background-color: #F9F9F9}
