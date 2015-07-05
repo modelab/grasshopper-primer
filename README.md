@@ -34,7 +34,7 @@ The Grasshopper Primer is an open source project, initiated by Bob McNeel, Scott
 
 ![Mode Lab Logo](0-about/images/MODELAB_Logo.png)
 
-If you would like to contribute to this project, check out the github project wiki (https://github.com/modelab/grasshopper-primer/wiki).
+If you would like to contribute to this project, check out the github project wiki to get started (https://github.com/modelab/grasshopper-primer/wiki).
 
 ### ACKNOWLEDGEMENTS
 A special thanks to David Rutten for the endless inspiration and invaluable
