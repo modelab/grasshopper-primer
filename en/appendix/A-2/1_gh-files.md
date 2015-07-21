@@ -34,7 +34,7 @@ td:nth-child(2){width:500px;}
 |1.5.||
 |--|--|
 ||[1.5.1.3_morphing definition.gh](gh-files/1.5.1.3_morphing definition.gh)
-||[1.5.2.1_Data Tree Visualization.gh](gh-files/1.5.2.1_data tree visualization.gh)
-||[1.5.3_working with data trees.gh](gh-files/1.5.3_creating data trees.gh)
+||[1.5.2.1_Data Tree Visualization.gh](gh-files/1.5.2.1_Data Tree Visualization.gh)
+||[1.5.3_working with data trees.gh](gh-files/1.5.3_working with data trees.gh)
 ||[1.5.3.6_weaving definition.gh](gh-files/1.5.3.6_weaving definition.gh)
 ||[1.5.4_rail intersect definition.gh](gh-files/1.5.4_rail intersect definition.gh)
