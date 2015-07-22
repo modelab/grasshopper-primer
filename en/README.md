@@ -1,5 +1,5 @@
 #The Grasshopper Primer
-##Third Edition V3.2
+##Third Edition V3.2 (EN)
 
 ![Primer Release Cover](0-about/images/GHP3_5Pages.png)
 
