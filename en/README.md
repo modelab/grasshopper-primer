@@ -1,6 +1,7 @@
 #The Grasshopper Primer (EN)
 ##Third Edition V3.2
 
+
 ![Primer Release Cover](0-about/images/GHP3_5Pages.png)
 
 > Grasshopper is a graphical algorithm editor tightly integrated with Rhino’s 3-D modeling tools, allowing designers to build form generators from the simple to the awe-inspiring.
