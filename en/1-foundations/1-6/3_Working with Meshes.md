@@ -34,10 +34,6 @@ NOTE: it is generally much easier to convert from a NURBS geometry to a mesh obj
 
 ####1.6.3.2 Mesh Operations
 
-**Cull Faces**
-
-FOR ARMON TO WRITE
-
 **Smooth**
 
 Smoother meshes can sometimes be achieved by simply increases the number of faces, but this can often lead to extremely large datasets which take a long time to calculate. In these situations, the **Smooth** component can be used as an alternative to make meshes less jagged or faceted.  The *strength*, *number of iterations*, and displacement *limit* can all be to adjust how much smoothing occurs.
@@ -80,12 +76,51 @@ The **Weld** component uses an input angle A. Any two adjacent faces with an ang
 
 ####1.6.3.3 Interactions with Other Objects
 
-**Intersect**
+**Mesh Inclusion**
 
-**Mesh Boolean**
+This component tests to determine whether a given point is inside a mesh solid or not. This only works with closed meshes.
+
+![IMAGE]()
+>Inclusion component picture
+
+**Mesh Closest Point**
+
+This component will calculate the position on a mesh that is closest to a given point. This component outputs three pieces of data: the coordinates of the calculated point on the mesh, the index of the face which contains that point, and the mesh parameter. This parameter is extremely useful in conjunction with the **Mesh Eval** component discussed below.
+
+For those users interested in a little more detail about how a mesh is parameterized, we can take a closer look at how a mesh parameter is structured. In the image below, we have attached a panel to the parameter output of a **Mesh Closest Point** component. The mesh parameter is N[A,B,C,D]. The first number, N, is the index of the face which contains the calculated point. The following four numbers define the *barycentric* coordinates of the point within that face. The coordinates of the referenced point can be found by multiplying each vertex of the face by these numbers in order and then add the results together. (Of course, this is already done for us, and is given in the Point output). Also note that barycentric coordinates are only unique for triangular faces, meaning that on a quad face the same point could have multiple different parameterizations. Grasshopper avoids this problem by internally triangulating a quad face when calculating a parameter, the result of which is that of the four numbers in a mesh parameter, at least one of them will always be zero.
+
+![IMAGE]()
+>Mesh parameter image
 
 **Mesh Eval**
 
-**Closest Point/Inclusion**
+The **Mesh Eval** component uses a mesh parameter as an input and returns the referenced point, as well as the normal and color at that point. The color and normal are calculated as interpolations of the vertex colors and vertex normals.
+
+![IMAGE]()
+>Mesh eval image
+
+**Mesh Join**
+
+Unline joining curves or NURBS surfaces, which require adjancent objects to join, any meshes can be joined into a single mesh, even meshes that are not touching. Recall that a mesh is simply a list of vertices, and a list of faces. There is no actual requirement for those faces to be connected.
+
+**Mesh Boolean**
+
+Meshes in Grasshopper have a set of boolean operations similar to boolean operations for NURBS solids:
+
+![IMAGE]()
+>1. Mesh Difference
+2. Mesh Intersection
+3. Mesh Split
+4. Mesh Union
+
+**Intersect**
+
+Intersections can be calculated between meshes and other objects: rays, planes, curves, and other meshes
+
+![IMAGE]()
+>1. Mesh | Ray
+2. Mesh | Plane
+3. Mesh | Curve
+4. Mesh | Mesh
 
 ####1.6.3.4 Exercise
