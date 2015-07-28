@@ -12,7 +12,7 @@ There are three fundamental ways of creating meshes in Grasshopper:
 **Primitives** - Grasshopper comes with a few simple mesh primitive components:
 1. **Mesh Box** - This primitve requires a Box object as an input which provides the size and location, as well as X,Y, and Z values that determine how many faces to divide the box into.
 2. **Mesh Plane** - This primitive requires a Rectangle input to determine the size and location of the plane, as well as W and H values to determine the number of faces.
-3. **Mesh Sphere** - This primitive requires a base plane to determine the center of the sphere, a radius for the size, and U and V values to determine the number of faces.
+3. **Mesh Sphere** - This primitive requires a base plane to determine the center and orientation of the sphere, a radius for the size, and U and V values to determine the number of faces.
 4. **Mesh Sphere Ex** - Also known as a Quadball, this primitive creates a sphere composed of six patches, which are subdivided according to the C input
 
 ![IMAGE]()
@@ -22,9 +22,11 @@ There are three fundamental ways of creating meshes in Grasshopper:
 
 We have already seen this component in the last section. The **Construct Mesh** component can be used to directly create a mesh from a list of vertices and a list of faces (and an optional list of vertex colors). Constructing an entire mesh manually can be extremely tedious, so this component is more often used with an existing list of faces and vertices which have been extracted using a **Deconstruct Mesh** component on an existing mesh.
 
-**NURBS to mesh**
+**NURBS to Mesh**
 
-Perhaps the most common method of creating a complex mesh is to generate one based off of NURBS geometry. This can be done with the **Mesh Brep** component. This component also has an optional Settings input, which can be set by using one of the built in *Speed*, *Quality*, or *Custom* Settings components, or by right-clicking the S input and selecting "Set Mesh Options". For efficient use of meshes, it is often necessary to refine this mesh by using various strategies such as rebuilding, smoothing, or subdividing. Some of these techniques will be discussed later in this Primer.
+Perhaps the most common method of creating a complex mesh is to generate one based off of NURBS geometry. Individual NURBS surfaces can be converted to a mesh using the **Mesh Surface** component, which simply subdivides the surface along its UV coordinates and creates quad faces.
+
+More complex polysurfaces can be converted to a single mesh with the **Mesh Brep** component. This component also has an optional Settings input, which can be set by using one of the built in *Speed*, *Quality*, or *Custom* Settings components, or by right-clicking the S input and selecting "Set Mesh Options". For efficient use of meshes, it is often necessary to refine this mesh by using various strategies such as rebuilding, smoothing, or subdividing. Some of these techniques will be discussed later in this Primer.
 
 ![IMAGE]()
 >Example of NURBS to mesh
@@ -36,7 +38,7 @@ NOTE: it is generally much easier to convert from a NURBS geometry to a mesh obj
 
 **Smooth**
 
-Smoother meshes can sometimes be achieved by simply increases the number of faces, but this can often lead to extremely large datasets which take a long time to calculate. In these situations, the **Smooth** component can be used as an alternative to make meshes less jagged or faceted.  The *strength*, *number of iterations*, and displacement *limit* can all be to adjust how much smoothing occurs.
+Smoother meshes can sometimes be achieved by simply increasing the number of faces, but this can often lead to extremely large datasets which take a long time to calculate. In these situations, the **Smooth** component can be used as an alternative to make meshes less jagged or faceted, without increasing vertex and face count.  The *strength*, *number of iterations*, and displacement *limit* can all be to adjust how much smoothing occurs.
 
 ![IMAGE]()
 >Image showing smoothing
@@ -50,14 +52,14 @@ The **Blur** component acts in a similar way as smooth, except it only affect th
 
 **Triangulate**
 
-In order to ensure each face is planar, or to export a mesh to a different software that might not allow quad faces, it is sometimes necessary to triangulate a mesh. Using the **Triangulate** component, each quad face is replaced with two triangle faces. 
+In order to ensure each face is planar, or to export a mesh to a different software that might not allow quad faces, it is sometimes necessary to triangulate a mesh. Using the **Triangulate** component, each quad face is replaced with two triangle faces by creating a new edge along the shortest diagonal of the face.
 
 ![IMAGE]()
 >Image showing triangluated mesh
 
 **Weld**
 
-In the last section, we noticed that a single vertex can be shared by adjacent faces and the normal for that vertex is calculated as the average of the two faces, allowing a smoother visualization. However, it is sometimes desireable to have a sharp crease or seam, where one face does not smoothly transition to the next by way of the vertex normals. For this situation, it is necessary for each face to have its own vertex with its own normal. The list of vertices would contain at least two point that have the same coordinates, but different indices.
+In the last section, we noticed that a single vertex can be shared by adjacent faces and the normal for that vertex is calculated as the average of the adjacent faces, allowing a smoother visualization. However, it is sometimes desireable to have a sharp crease or seam, where one face does not smoothly transition to the next by way of the vertex normals. For this situation, it is necessary for each face to have its own vertex with its own normal. The list of vertices would contain at least two point that have the same coordinates, but different indices.
 
 ![IMAGE]()
 >Faces with shared vertex and list of vertices
@@ -65,7 +67,7 @@ In the last section, we noticed that a single vertex can be shared by adjacent f
 
 The process of taking two vertices that are in the same position and combining them into a single vertex is called *welding*, while *unwelding* takes a single vertex and splits it into two.
 
-The **Weld** component uses an input angle A. Any two adjacent faces with an angle less than the input angle will be welded together, resulting in common vertices with a normal that is the average of the adjacent faces. 
+The **Weld** component uses a threshold angle as input. Any two adjacent faces with an angle less than the threshold angle will be welded together, resulting in common vertices with a normal that is the average of the adjacent faces. **Unweld** works in the opposite manner, where adjancent faces with an angle greater than the given threshold will be unwelded, and their shared vertices will be duplicated.
 
 ![IMAGE]()
 >1. The default Box Mesh has 726 vertices. The mesh is creased at the corners of the box, where vertices are doubled up.
@@ -94,14 +96,14 @@ For those users interested in a little more detail about how a mesh is parameter
 
 **Mesh Eval**
 
-The **Mesh Eval** component uses a mesh parameter as an input and returns the referenced point, as well as the normal and color at that point. The color and normal are calculated as interpolations of the vertex colors and vertex normals.
+The **Mesh Eval** component uses a mesh parameter as an input and returns the referenced point, as well as the normal and color at that point. The color and normal are calculated as interpolations of the vertex colors and vertex normals, using the same barycentric coordinates as the mesh parameter.
 
 ![IMAGE]()
 >Mesh eval image
 
 **Mesh Join**
 
-Unline joining curves or NURBS surfaces, which require adjancent objects to join, any meshes can be joined into a single mesh, even meshes that are not touching. Recall that a mesh is simply a list of vertices, and a list of faces. There is no actual requirement for those faces to be connected.
+Unlike joining curves or NURBS surfaces, which require adjacency, any meshes can be joined into a single mesh, even meshes that are not touching. Recall that a mesh is simply a list of vertices, and a list of faces. There is no actual requirement for those faces to be connected.
 
 **Mesh Boolean**
 

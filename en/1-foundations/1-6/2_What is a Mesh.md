@@ -2,12 +2,18 @@
 
 #####A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. This section discusses the structure of a mesh object, which includes vertices, edges, and faces, as well as additional characterstics such as colors and normals that can be used to refine a mesh.
 
+![IMAGE](images/1-6-2/01_mesh-structure.png)
+>1. Mesh vertices
+2. Mesh edges
+3. Mesh faces
+
 ####1.6.2.1 Basic Anatomy of a Mesh
 
-At their most basic, meshes are simply a collection of points that are grouped into polygons. The points of a mesh are called *vertices*, while the polygons are called *faces*. To create a mesh, then, we need a minimum of two parts:
+Grasshopper defines meshes using a Face-Vertex data structure. At its most basic, this structure is simply a collection of points which are grouped into polygons. The points of a mesh are called *vertices*, while the polygons are called *faces*. To create a mesh, then, we need a list of vertices, and a system of grouping those vertices into faces.
 
-1. A list of vertices
-2. A system of grouping those vertices into faces
+![IMAGE](images/1-6-2/02_mesh-topo.png)
+>1. A list of vertices
+2. Faces with groupings of vertices
 
 **Vertices**
 
@@ -21,33 +27,36 @@ The vertices of a mesh are simply a list of points. Recall that in Grasshopper, 
 
 A face is created by specifying an ordered list of either three or four vertices. We already have the list of vertices that make up the mesh, so instead of providing individual points to define a face, we instead simply use the index of the vertices. This also allows us to use the same vertex in more than one face.
 
-![IMAGE]()
+![IMAGE](images/1-6-2/04_tri-and-quad.png)
 >1. A Triangle Face made with indices 0,1, and 2
 2. A Quad Face made with indices 1,2,3, and 4
 
-In Grasshopper, we can create faces with either three or four vertices. These can be created with the **Mesh Triangle** and **Mesh Quad** components. The input for these components are integers that correspond to the index of the vertices we want to use for a face. By connecting a **Panel** to the output of these components, we can see that a triangular face is represented as T{A;B;C}, and a quad face as Q{A;B;C;D}. 
+In Grasshopper, faces can be created with the **Mesh Triangle** and **Mesh Quad** components. The input for these components are integers that correspond to the index of the vertices we want to use for a face. By connecting a **Panel** to the output of these components, we can see that a triangular face is represented as T{A;B;C}, and a quad face as Q{A;B;C;D}. 
 
 ![IMAGE]()
 >1. A triangular face with indices 0,1, and 2
 2. A quad face with indicies 0,1,2, and 3
 
-You may have been wondering about the fact that these two components so far do not have any connection to the actual list of vertices. If you right click on these components, you will also see that there is no option to 'Preview' them. This is because in Grasshopper a face is only a list of numbers, and only defines a specfic geometry when combined with a list of vertices to make a mesh. In addition to using these two components to construct mesh faces, we can also create faces manually by editing a **Panel** component and entering the appropriate format for either triangular or quad faces.
+These components have not yet created a mesh, but have simply defined a list of indices. By paying attention to the format of this list, we can also create a face manually by editing a **Panel** component and entering the appropriate format for either triangular or quad faces.
 
 ![IMAGE]()
 >1. A face created using a **Mesh Triangle** component
 2. A face created using a **Panel**
 
+So far we have a list of vertices and a set of face definitions, but have not yet created a mesh. In order to create a mesh, we need to connect the faces and vertices together by using the **Construct Mesh** component. We connect our list of vertices to the V input, and a face (or a list of faces) to the F input. (The component also has room for a Colour input, which is discussed below.) Connect a panel to the output of a **Construct Mesh** and notice that we get information about the number of faces and number of indices.
+
+![IMAGE]()
+>screen grab 
+
 It is extremely important to pay attention to the order of the indices when constructing a mesh face. The face will be constructed by connecting the vertices listed in order, so the quad face Q{0,1,2,3} and Q{1,0,2,3} are very different, despite using the same four vertices.
 
 ![IMAGE]()
 >1. A quad face with indices 0,1,2,3
-2. A quade with indicies 1,0,2,3
+2. A quad with indicies 1,0,2,3
 
-To create an actual Mesh, we can use the **Construct Mesh** component. We can connect our list of vertices to the V input, and a face (or a list of faces) to the F input. (The component also has room for a Colour input, which is discussed below.) Connect a panel to the output of a **Construct Mesh** and notice that we get information about the number of faces and number of indices.
+####1.6.2.2 Derived Mesh Components
 
-####1.6.2.2 Mesh Attributes
-
-While the vertices and faces make up the basic structure of a mesh, there are other attributes that are associated with the mesh as well. Some of these attributes are determined by the Vertex and Face structure of the mesh, such as edges and normals. Another attribute, vertex colour, can be modified and adjusted.
+In addition to faces and vertices, there is other information about a mesh that we will want to use. In a Face-Vertex based mesh, data such as edges and normals are calculated based on the given faces and vertices. This section describes ways to query this information.
 
 **Edges**
 
@@ -87,19 +96,23 @@ In addition to the face normals, it is also possible to calculate normals for ea
 ![IMAGE]()
 >
 
-**Colour**
+####1.6.2.3 Mesh Attributes
 
-As an additional attribute, each vertex can also be assigned a color. These colors are used for visualitizations, with each face rendered as an interpolation of the vertex colous. For example, the image below shows triangle face with vertex colors of Red, Green, and Blue.
+Meshes can also be assigned additional attributes to either vertices or faces. The simplest of these is vertex color, which is described below, but other attributes exist such as texture UV coordinates. (Some software even allows vertex normals to be assigned as attributes instead of being derived from the faces and vertices, which can provide even more flexibility in rendered surface appearance.)
+
+**Color**
+
+When using a **Construct Mesh** component, there is an option input for vertex color. Colors can also be assigned to an existing mesh using the **Mesh Color** component. These colors are used for visualitizations, with each face rendered as an interpolation of the vertex colous. For example, the image below shows triangle face with vertex colors of Red, Green, and Blue.
 
 ![IMAGE]()
 >COLORS!
 
 
-####1.6.2.3 Mesh Characteristics
+####1.6.2.4 Mesh Characteristics
 
 **Open vs Closed**
 
-It is often necessary to know whether a mesh is a *closed* mesh which represents a volumetric solid, or an *open* mesh that is just represents a 2-dimensional surface. We can use the **Mesh Edges** component to help determine this. If none of the edges of a mesh have a valence of 1 (if the E1 output is *null*), then we know that all the edges are 'Interior Edges' and the mesh does not have an external boundary edge, and is therefore a closed mesh.
+It is often necessary to know whether a mesh is a *closed* mesh which represents a volumetric solid, or an *open* mesh that is just represents a 2-dimensional surface. The difference can be imperative with respect to manufacturability and boolean operations (discussed in following section). The **Mesh Edges** component can be used to help determine this. If none of the edges of a mesh have a valence of 1 (if the E1 output is *null*), then we know that all the edges are 'Interior Edges' and the mesh does not have an external boundary edge, and is therefore a closed mesh.
 
 On the other hand, if there exist 'Naked Edges', then those edges must be on a boundary of the mesh, and the mesh is not closed.
 
@@ -108,13 +121,13 @@ On the other hand, if there exist 'Naked Edges', then those edges must be on a b
 
 **Manifold vs Non-Manifold**
 
-An edge with a valence greater than 2 would mean that at least three faces meet along a single edge. A mesh can also be considered Non-Manifold if there are any vertices which are shared by multiple faces, but do not share any edges. This situtation occurs when two faces meet at a single point rather than along an edge. Non-Manifold meshes are much more complicated to work with, and should generally be avoided.
+Non-manifold geometry is essentially geometry that cannot exist in the "real world". This does not necessarily make it "bad geometry" but it is something to be aware of due to complications it may present for tools and operations (for example: rendering of refractive effects, fluid simulations, boolean operations, 3d printing, etc). Common conditions that result in a non-manifold mesh include: self intersection, naked edges (from holes or internal faces), disjoint topology, and overlapping/duplicate faces. A mesh can also be considered *Non-Manifold* if it includes any vertices which are shared by faces that do not share edges or any edges with a valence greater than 2, creating a junction of at least 3 faces
 
 ![IMAGE]()
 >Examples of non-manifold meshes
 
 
-####1.6.2.4 Exercise
+####1.6.2.5 Exercise
 
 In this exercise, we use a basic Mesh primitive, perform a transformation on the vertices, and then assign a color based on the normal vectors to approximate the rendering process.
 
