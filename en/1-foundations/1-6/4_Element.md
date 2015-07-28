@@ -4,6 +4,8 @@
 
 ####1.6.4.1 Half Edge Data
 
+In the beginning of this chapter, we looked at how Grasshopper defines a mesh using a Face-Vertex data structure. This is a relatively simple data structure, and is widely used in.
+
 ####1.6.4.2 Analyse
 
 **Element Mesh Closest Point**
