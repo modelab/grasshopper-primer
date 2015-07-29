@@ -36,6 +36,9 @@ Note - barycentric coordinates are defined such that they always add to 1. If th
 
 This component is used to quickly extract color information from a mesh. It returns the Alpha, Red, Green, Blue, Hue, Saturation, and Luminosity values of the inputed points. If the given points are not on the mesh, this component will calculate the closest point.
 
+
+
+
 ####1.6.4.3 Data
 
 ![IMAGE]()
@@ -43,6 +46,7 @@ This component is used to quickly extract color information from a mesh. It retu
 2. Edge Neighbors
 3. Face Neighbors
 4. Vertex Neighbors
+
 
 **Element\* Data Visualizer**
 
@@ -76,13 +80,57 @@ EDIT - These three diagrams can potentially be shown next to each other as a sin
 
 ####1.6.4.4 Primitives
 
+Element\* provides four additional mesh primitives: the Icosohedron, Dodecahedron, Octahedron, and Tetrahedron. These components take a single number as input for the radius, and produce meshes centered at the origin, and composed of one face per side. With the addition of the Cube, which is already availible through Grasshopper's built-in primitives, these make up the five Platonic solids. 
+
+
+![IMAGE]()
+>1. Dodecahedron
+2. Icosohedron
+3. Octahedron
+4. Tetrahedron
+
 ####1.6.4.5 Smooth
+
+**Element\* Smooth** provides an optimized smoothing algorithm that is more efficient than Grasshopper's **Smooth Mesh** for large datasets. It makes use of the Lapacian Smoothing algorithm for Half-Edge structured meshes. It does not change the topology or vertex count of welded meshes, but will weld together any unwelded meshes.
+
+![IMAGE]()
+>
 
 ####1.6.4.6 Subdivide
 
+**Element\* Catmull Clark Subdivision** 
+
+This is a recursive subdivision defined by the Catmull Clark algorithm. We can specify the number of iterations as well as how to handle naked edge conditions.
+
+
+**Element\* Constant Quad**
+
+This subdivison component will create an all quad mesh by adding a face for each edge of the mesh.
+
 ####1.6.4.7 Transform
 
+These components provide a number of different transformations described below. Each component has the additional capability of accepting per-vertex distance data to allow for variations of the transformation magnitudes across the mesh.
+
+**Element\* Mesh Window**
+
+Reconstructs a new mesh on the inside of a face based on an offset value.
+
+**Element\* Mesh Frame**
+
+Outputs a frame aronud mesh faces. Each resultant face will have a new hole in the center.
+
+**Element\* Mesh Thicken**
+
+This component will thicken an input mesh along the vertex normals, and according to provided distance values.
+
+**Element\* Mesh Offset**
+
+This component creats an offset of the input mesh based on the vertex normals.
+
+
 ####1.6.4.8 Utility
+
+The **Element\* Mesh Combine and Clean** component will combine multiple meshes together and weld the vertices and vertex normals according to an input threshold angle.
 
 ####1.6.4.9 Exercise
 

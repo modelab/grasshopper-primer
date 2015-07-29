@@ -1,5 +1,5 @@
-## 1.6. Gwtting Started with Meshes
+## 1.6. Getting Started with Meshes
 
-####This chapter will blow your mind.
+####Intro paragraph
 
-![cant find!!!](images/00_testImage.jpg)
+![IMAGE](images/cover.jpg)
