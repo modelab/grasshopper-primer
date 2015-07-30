@@ -38,10 +38,9 @@ This component is used to quickly extract color information from a mesh. It retu
 
 
 
-
 ####1.6.4.3 Data
 
-![IMAGE]()
+![IMAGE](images/1-6-4/03_data-components.png)
 >1. Data Visualizer
 2. Edge Neighbors
 3. Face Neighbors
@@ -56,45 +55,37 @@ This component is used to help visualize the half-edge data of the faces of an i
 
 This component provides access to the adjacency data structured according to the edges of the input mesh. The output data is provided as a tree with one branch for each edge in the mesh. It provides the end points, center ponts of adjacent faces, neighboring edges as line objects, and the center points of the neighboring faces.
 
-EDIT - I don't currently know what a 'neighboring face' or 'neighboring edges' are with respect to an edge
-
-![IMAGE]()
->Diagram illustrating what a "neighboring face"
-
 **Element\* Face Neighbors**
 
 This component is similar to the others in this section, but the data is organized in a tree according to the faces of the mesh, with one branch per face. The outputs are the vertices of each face, the adjacent edges, and the centers of neighboring faces.
 
 Note - This component only allows triangulated meshes.
 
-![IMAGE]()
->Diagram illustrating neighbors
-
 **Element\* Vertex Neighbors**
 
 This component outputs neighboring vertices, edges, and face centers structured in a tree according to the vertices of the mesh.
 
-![IMAGE]()
->Diagram illustrating neighbors
-EDIT - These three diagrams can potentially be shown next to each other as a single image with three diagrams?
+![IMAGE](images/1-6-4/04_neighbors-diagram.png)
+>1. **Edge Neighbors** - End vertices, adjacent faces, neighboring edges, and neighboring faces
+2. **Face Neighbors** - Adjacent vertices, adjacent edges, and neighboring faces
+3. **Vertex Neighbors** - Adjacent Edges, adjactent faces, and neighboring vertices
 
 ####1.6.4.4 Primitives
 
 Element\* provides four additional mesh primitives: the Icosohedron, Dodecahedron, Octahedron, and Tetrahedron. These components take a single number as input for the radius, and produce meshes centered at the origin, and composed of one face per side. With the addition of the Cube, which is already availible through Grasshopper's built-in primitives, these make up the five Platonic solids. 
 
-
-![IMAGE]()
+![IMAGE](images/1-6-4/05_primitives.png)
 >1. Dodecahedron
 2. Icosohedron
 3. Octahedron
 4. Tetrahedron
+5. EDIT - THE COMPONENTS ARE OUT OF ORDER IN THE IMAGE
 
 ####1.6.4.5 Smooth
 
 **Element\* Smooth** provides an optimized smoothing algorithm that is more efficient than Grasshopper's **Smooth Mesh** for large datasets. It makes use of the Lapacian Smoothing algorithm for Half-Edge structured meshes. It does not change the topology or vertex count of welded meshes, but will weld together any unwelded meshes.
 
-![IMAGE]()
->
+![IMAGE](images/1-6-4/06_smooth.png)
 
 ####1.6.4.6 Subdivide
 
@@ -107,7 +98,17 @@ This is a recursive subdivision defined by the Catmull Clark algorithm. We can s
 
 This subdivison component will create an all quad mesh by adding a face for each edge of the mesh.
 
+![IMAGE](images/1-6-4/07_subdivide.png)
+>1. Catmull Clark subdivision
+2. Constant Quad subdivision
+
 ####1.6.4.7 Transform
+
+![IMAGE](images/1-6-4/08_transform-components.png)
+>1. Mesh Windown
+2. Mesh Frame
+3. Mesh Thicken
+4. Mesh Offset
 
 These components provide a number of different transformations described below. Each component has the additional capability of accepting per-vertex distance data to allow for variations of the transformation magnitudes across the mesh.
 
@@ -117,7 +118,7 @@ Reconstructs a new mesh on the inside of a face based on an offset value.
 
 **Element\* Mesh Frame**
 
-Outputs a frame aronud mesh faces. Each resultant face will have a new hole in the center.
+Outputs a frame around mesh faces. Each resultant face will have a new hole in the center.
 
 **Element\* Mesh Thicken**
 
@@ -127,6 +128,10 @@ This component will thicken an input mesh along the vertex normals, and accordin
 
 This component creats an offset of the input mesh based on the vertex normals.
 
+![IMAGE](images/1-6-4/09_transform-examples.png)
+>1. Mesh Window
+2. Mesh Frame
+3. Icosohedron transformed with mesh frame, then thickend and subdivided
 
 ####1.6.4.8 Utility
 
