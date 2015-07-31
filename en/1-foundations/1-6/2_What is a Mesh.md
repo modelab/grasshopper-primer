@@ -130,6 +130,9 @@ On the other hand, if there exist 'Naked Edges', then those edges must be on a b
 Non-manifold geometry is essentially geometry that cannot exist in the "real world". This does not necessarily make it "bad geometry" but it is something to be aware of due to complications it may present for tools and operations (for example: rendering of refractive effects, fluid simulations, boolean operations, 3d printing, etc). Common conditions that result in a non-manifold mesh include: self intersection, naked edges (from holes or internal faces), disjoint topology, and overlapping/duplicate faces. A mesh can also be considered *Non-Manifold* if it includes any vertices which are shared by faces that do not share edges or any edges with a valence greater than 2, creating a junction of at least 3 faces
 
 ![IMAGE](images/1-6-2/15_non-manifold.png)
+>1. A simple manifold mesh
+2. Three faces meeting on a single edge is non-manifold
+3. Two faces meeting at only one vertex but not sharing an edge is non-manifold
 
 ####1.6.2.5 Exercise
 
