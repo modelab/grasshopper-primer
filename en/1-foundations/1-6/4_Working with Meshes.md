@@ -106,3 +106,55 @@ Intersections can be calculated between meshes and other objects: rays, planes, 
 4. Mesh | Mesh
 
 ####1.6.4.3 Exercise
+
+{% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
+>Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+{% else %}
+>Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.6.4_working with meshes.gh)
+{% endif %}
+
+<style>
+td:nth-child(1) {color: #008DB2}
+td:nth-child(3)	{width: 10%;}
+td {background-color: #F9F9F9;}
+thead {display: none}
+</style>
+
+
+||||
+|--|--|--|
+|01.| Start a new definition, type Ctrl-N (in Grasshopper)||
+|02.| **Mesh/Primitive/Mesh Box** - Drag and drop a **Mesh Box** component onto the canvas|![IMAGE](images/1-6-4/mesh-box.png)|
+|03.| **Params/Input/Number Slider** - Drag and drop a **Number Slider** component onto the canvas and set the following values: <ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 10</ul>||
+|04.| Connect the **Number Slider** to the X,Y, and Z inputs of the **Mesh Box**||
+|05.| **Mesh/Util/Weld Mesh** - Drag and drop a **Weld Mesh** component onto the canvas|![IMAGE](images/1-6-4/weld-mesh.png)|
+|06.| Connect the Mesh (M) output of the **Mesh Box** component to the Mesh (M) input of the **Weld Mesh** Component||
+|07.| **Mesh/Util/Smooth Mesh** - Drag and drop a **Smooth Mesh** component onto the canvas|![IMAGE](images/1-6-4/smooth-mesh.png)|
+|08.| Connect the Result (R) output of the **Weld Mesh** component to the Mesh (M) input of the **Smooth Mesh** component.||
+|09.| **Params/Input/Number Slider** - Drag and drop a **Number Slider** component onto the canvas and set the following values: <ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit:100</ul>|| 
+|10.| Connect the Number Slider to the Iterations (I) input of the **Smooth Mesh** component|||
+
+![IMAGE](images/1-6-4/exercise-01.png)
+>Adjust the Iterations number slider and watch the smoothing of the cube mesh
+
+||||
+|--|--|--|
+|11.| **Vector/Sets/Populate 3D** - Drag and drop a **Populate 3D** component onto the canvas|![IMAGE](images/1-6-4/populate-3d.png)
+|12.| **Params/Input/Number Slider** - Drag and drop a **Number Slider component onto the canvas and set the following values: <ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 10<br>Value: 4</ul>||
+|13.| Connect the **Number Slider** to the Count (N) input of the **Populate 3D** component||
+|14.| Connect the Result (R) output of the **Weld Mesh** component to the Region (R) input of the **Populate 3D** component||
+|15.| **Mesh/Analysis/Mesh Closest Point** - Drag and drop a **Mesh Closest Point** component onto the canvas|![IMAGE](images/1-6-4/mesh-closest-point.png)|
+|16.| Connect the Points (P) output of the **Populate 3D** component to the Point (P) input of the **Mesh Closest Point** component.||
+|17.| Connect the Result (R) output of the **Weld Mesh** component to the Mesh (M) input of the **Mesh Closest Point** component.||
+|18.| **Mesh/Util/Delete Faces** - Drag and drop a **Delete Faces** component onto the canvas|![IMAGE](images/1-6-4/delete-faces.png)|
+|19.| Connect the Result (R) output of the **Weld Mesh** component to the Mesh (M) input of the **Delete Faces** component||
+|20.| Connect the Indices (I) output of the **Mesh Closest Point** component to the Index (I) input of the **Delete Faces** component||
+|21.| Connect the Mesh (M) output of the **Delete Faces** component to the Mesh (M) input of the the **Smooth Mesh** component|||
+
+![IMAGE](images/1-6-4/exercise-02.png)
+![IMAGE](images/1-6-4/exercise-03.png)
+>By default, the **Smooth Mesh** component skips naked edges when smoothing a mesh.
+
+||||
+|--|--|--|
+|22.|
