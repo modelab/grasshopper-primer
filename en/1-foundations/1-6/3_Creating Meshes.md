@@ -19,7 +19,9 @@ Grasshopper comes with a few simple mesh primitive components:
 
 ####1.6.3.2 Construct Mesh
 
-We have already seen this component in the last section. The **Construct Mesh** component can be used to directly create a mesh from a list of vertices and a list of faces (and an optional list of vertex colors). Constructing an entire mesh manually can be extremely tedious, so this component is more often used with an existing list of faces and vertices which have been extracted using a **Deconstruct Mesh** component on an existing mesh.
+![IMAGE](images/1-6-3/construct-mesh.png)
+
+We have already seen this component in an earlier section. The **Construct Mesh** component can be used to directly create a mesh from a list of vertices and a list of faces (and an optional list of vertex colors). Constructing an entire mesh manually can be extremely tedious, so this component is more often used with an existing list of faces and vertices which have been extracted using a **Deconstruct Mesh** component on an existing mesh.
 
 ####1.6.3.3 NURBS to Mesh
 
@@ -81,7 +83,7 @@ thead {display: none}
 |14.| Connect the Vertices (V) output of the **Deconstruct Mesh** component to the Point (P) input of the **Deconstruct** component||
 |15.| **Params/Input/Number Slider** - Drag and drop two **Number Slider** components onto the canvas||
 |16.| Set the values of the frist **Number Slider** to: <ul>Name: Amplitude<br> Rounding: Float<br>Lower Limit: 0<br>Upper Limit: 10</ul>||
-|17.| Set the values of the second **Number Slider** to: <ul>Name: Frequency<br>Rounding:Float<br>Lower Limit:0<br>Upper Limit:5</ul>||
+|17.| Set the values of the second **Number Slider** to: <ul>Name: Frequency<br>Rounding: Float<br>Lower Limit: 0<br>Upper Limit: 5</ul>||
 |18.| **Maths/Script/Expression** - Drag and drop an **Expression** component onto the canvas|![IMAGE](images/1-6-3/expression.png)|
 |19.| Zoom in to the **Expression** component until you see the options for adding or removing input variables and click on a '+' to add a 'z' variable||
 |20.| Right click the 'y' input of the **Expression** component and change the text to 'A'||

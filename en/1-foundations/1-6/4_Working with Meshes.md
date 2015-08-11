@@ -61,9 +61,13 @@ The **Weld** component uses a threshold angle as input. Any two adjacent faces w
 
 **Mesh Inclusion**
 
+![IMAGE](images/1-6-4/inclusion.png)
+
 This component tests to determine whether a given point is inside a mesh solid or not. This only works with closed meshes.
 
 **Mesh Closest Point**
+
+![IMAGE](images/1-6-4/mesh-closest-point.png)
 
 This component will calculate the position on a mesh that is closest to a given point. This component outputs three pieces of data: the coordinates of the calculated point on the mesh, the index of the face which contains that point, and the mesh parameter. This parameter is extremely useful in conjunction with the **Mesh Eval** component discussed below.
 
@@ -79,9 +83,13 @@ For those users interested in a little more detail about how a mesh is parameter
 
 **Mesh Eval**
 
+![IMAGE](images/1-6-4/mesh-eval.png)
+
 The **Mesh Eval** component uses a mesh parameter as an input and returns the referenced point, as well as the normal and color at that point. The color and normal are calculated as interpolations of the vertex colors and vertex normals, using the same barycentric coordinates as the mesh parameter.
 
 **Mesh Join**
+
+![IMAGE](images/1-6-4/mesh-join.png)
 
 Unlike joining curves or NURBS surfaces, which require adjacency, any meshes can be joined into a single mesh, even meshes that are not touching. Recall that a mesh is simply a list of vertices, and a list of faces. There is no actual requirement for those faces to be connected. 
 
@@ -104,6 +112,19 @@ Intersections can be calculated between meshes and other objects: rays, planes, 
 2. Mesh | Plane
 3. Mesh | Curve
 4. Mesh | Mesh
+
+**Occlusion**
+
+As we have seen, one of the many uses of mesh geometry is for visualizations and creating shaded rendering based on face normals. When rendering, it also necessary to know when an object is in shadow behind another object. The **Occlusion** component in Grasshopper allows us to enter a set of sample points, along with occluding mesh geometry that will 'cast shadows', and a *view ray*, or vector, to indicate the direction that 'light' is coming from.
+
+Such a process can be used to create shadows in rendering, or determine whether objects are hidden from a certain camera view.
+
+![IMAGE](images/1-6-4/12_mesh-occlusion.png)
+>1. View Ray to test for occlusion
+2. Occluding mesh geometry
+3. 'Hit' sample points
+4. 'Occluded' sample points
+
 
 ####1.6.4.3 Exercise
 

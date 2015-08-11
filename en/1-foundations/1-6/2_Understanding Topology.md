@@ -1,12 +1,8 @@
 ### 1.6.2 Understanding Topology
 
-
-#####Intro sentance
-![SEXY IMAGE]()
+![IMAGE](images/1-6-2/meshMorph2.png)
 
 #### 1.6.2.1 What is Topology?
-
-[network image?]
 
 Any introduction to meshes would be incomplete without at least a basic introduction to topology. Because topology is concerned with the interrelationships and properties of a set of “things” rather than the “things” themselves, it is mobilized for an enormous range of both tangible and intangible applications. In this primer, we are interested in its basic application with respect to parametric workflows that afford us the opportunity to create and control mesh geometry.
 
@@ -14,10 +10,32 @@ In Grasshopper, the two basic types of information required to define a mesh are
 
 Without connectivity information, a mesh is unstructured and therefore still undefined. The imposition of a set of faces, is the step (or leap) that ultimately actualizes a mesh and establishes its character in terms of continuity, convergence, and connectedness; this structural network is referred to as a topological space.
 
-[points with different connectivity]
+![IMAGE - points with different connectivity](images/1-6-2/meshConnect.png)
+>The same set of vertices can have different connectivity information, resulting in different topology.
 
+**Homeomorphism**
+
+![IMAGE - simple mesh diagram](images/1-6-2/meshMorph1.png)
+>The points of a mesh can be moved without altering the connectivity information. The new mesh has the same topology as the original.
+
+It is possible for two distinct mesh shapes to be topologically identical. All this would mean is that they are constructed out of the same number of points and that the points are structured by the same set of faces. Earlier, we established that a mesh face is only concerned with the indices of a set of points and has no interest in their actual location in rhino-space. Therefore, if the only difference between two distinct mesh shapes is the specific 3-dimentional position of the points that are used to define it, then the two meshes are considered to be “homeomorphic” (or topologically equivalent) and therefore share the same topological properties.
+
+![IMAGE - homeomorphic alphabet](images/1-6-2/Alphabet_homeo.png)
+>An example of homeomorphism among letters (note that some of the above homeomorphic groups might be different depending on what font is considered)
+
+![IMAGE](images/1-6-2/Mug_and_Torus_morph.gif)
+>A mug and a donut are topologically equivalent
+ 
  
 ####1.6.2.2 Mesh Characteristics
+
+**Orientable**
+
+A mesh is considered *orientable* if there are well-defined sides to the mesh, often thought of as an 'inside' and 'outside'. An simple example of a non-orientable mesh occurs when adjacent faces have normals pointing in opposite directions.
+
+![IMAGE](images/1-6-2/orientable.png)
+>1. An orientable surface with face normals pointing in the same direction.
+2. A non-orientable surface has adjacent normals pointing in different directions. 
 
 **Open vs Closed**
 
@@ -29,22 +47,13 @@ On the other hand, if there exist 'Naked Edges', then those edges must be on a b
 >1. A closed mesh. All edges are adjacent to exactly two faces.
 2. An open mesh. The white edges are each adjacent to only a single face.
 
-**Homeomorphism**
-
-[simple mesh diagram]
-
-It is possible for two distinct mesh shapes to be topologically identical. All this would mean is that they are constructed out of the same number of points and that the points are structured by the same set of faces. Earlier, we established that a mesh face is only concerned with the indices of a set of points and has no interest in their actual location in rhino-space. Therefore, if the only difference between two distinct mesh shapes is the specific 3-dimentional position of the points that are used to define it, then the two meshes are considered to be “homeomorphic” (or topologically equivalent) and therefore share the same topological properties.
-
-[Diagram showing homeomorphic alphabet]
-
-
 **Manifold vs Non-Manifold**
 
 Non-manifold geometry is essentially geometry that cannot exist in the "real world". This does not necessarily make it "bad geometry" but it is something to be aware of due to complications it may present for tools and operations (for example: rendering of refractive effects, fluid simulations, boolean operations, 3d printing, etc). Common conditions that result in a non-manifold mesh include: self intersection, naked edges (from holes or internal faces), disjoint topology, and overlapping/duplicate faces. A mesh can also be considered *Non-Manifold* if it includes any vertices which are shared by faces that do not share edges or any edges with a valence greater than 2, creating a junction of at least 3 faces
 
 ![IMAGE](images/1-6-2/15_non-manifold.png)
 >1. A simple manifold mesh
-2. Three faces meeting on a single edge is non-manifold
+2. Three faces meeting on a single edge is non-manifold, also known as a T-Junction
 3. Two faces meeting at only one vertex but not sharing an edge is non-manifold
 
  
@@ -55,6 +64,8 @@ How is mesh geometry different from NURBs geometry? When might you want to use o
 In a previous chapter, we saw that NURBs surfaces are defined as a series of NURBs curves going in two directions. These directions are labeled U and V, and allow a NURBs surface to be parameterized according to a two-dimensional surface domain. The curves themselves are stored as equations in the computer, allowing the resulting surfaces to be calculated to an arbitarily small degree of precision. It can be difficult, however, to combine multiple NURBS surfaces together. Joining two NURBS surfaces will result in a polysurface, where different sections of the geometry will have different UV parameters and curve definitions.
 
 Meshes, on the other hand, are comprised of a discrete number of defined vertices and faces. The network of vertices in general cannot be defined by simple UV coordinates, and because the faces are discrete, the amount of precision is built into the mesh, and can only be changed by refining the mesh and added more faces. The lack of UV coordinates, however, allows meshes the flexibility to handle more complicated geometry with a single mesh, instead of resorting to a polysurface in the case of NURBS.
+
+![IMAGE](images/1-6-2/NURBSvsMESH-02.jpg)
 
 One analogy that can be helpful is to compare a vector image (composed of lines and curves) with a raster image (composed of individual pixels). If you zoom into a vector image, the curves remain crisp and clear, while zooming into a raster image results in seeing individual pixels. In this analogy, NURBS surfaces can be compared to a vector image, while a mesh behaves similarly to a raster image.
 
