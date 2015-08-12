@@ -51,7 +51,11 @@ So far we have a list of vertices and a set of face definitions, but have not ye
 2. A panel shows that we have created a mesh with 5 vertices and 2 faces
 3. The resulting mesh (the vertices have been labeled with their indices)
 
-It is extremely important to pay attention to the order of the indices when constructing a mesh face. The face will be constructed by connecting the vertices listed in order, so the quad face Q{0,1,2,3} and Q{1,0,2,3} are very different, despite using the same four vertices. Incorrect vertex ordering can lead to problems such as holes, non-manifold mesh geometry, or non-orientable surfaces. These issues are discussed in more detail in section **1.6.2 Understand Topology**.
+By default, Grasshopper only previews the surfaces of mesh geometry without displaying the edges. To preview the edges as well as the surfaces, you can turn on mesh edge preview by using the shortcut Ctrl-M, or by going to the Display menu and selecting 'Preview Mesh Edges'.
+
+![IMAGE](images/1-6-1/preview-mesh-edges.png)
+
+It is extremely important to pay attention to the order of the indices when constructing a mesh face. The face will be constructed by connecting the vertices listed in order, so the quad face Q{0,1,2,3} and Q{1,0,2,3} are very different, despite using the same four vertices. Incorrect vertex ordering can lead to problems such as holes, non-manifold mesh geometry, or non-orientable surfaces. These issues are discussed in more detail in the **Understanding Topology** section.
 
 ![IMAGE](images/1-6-1/08_bowtie.png)
 >1. A quad face with indices 0,1,2,3
@@ -65,18 +69,18 @@ In addition to faces and vertices, there is other information about a mesh that 
 
 The Edges of a Mesh are lines connecting any two consecutive vertices in a face. Notice that some edges are shared between multiple faces, while other edges are only adjacent to one face. The number of faces an edge is adjacent to is called the *Valence* of that edge.
 
-We can use the **Mesh Edges** component to get the edges of a mesh. Notice that the mesh edges are split into three categories:
+Grasshopper groups edges into three categories based on the valence:
 
 1. E1 - 'Naked Edges' have a valence of 1. They make up the external boundary of a mesh.
 2. E2 - 'Interior Edges' have a valence of 2. 
-3. E3 - 'Non-Manifold Edges' have a valence of 3 or greater. Meshes that contain such structure are called "Non-Manifold", and are discussed in more detail below.
+3. E3 - 'Non-Manifold Edges' have a valence of 3 or greater. Meshes that contain such structure are called "Non-Manifold", and are discussed in the next section.
 
 ![IMAGE](images/1-6-1/09_edge-valence.png)
 >1. Naked edge with valence of 1
 2. Interior edge with valence of 2
 3. Non-manifold edge with valence of 3
 
-Sometimes it is more useful to have the full boundary of each face. For this, we can use the **Face Boundaries** component. This will return a polyline for each face.
+We can use the **Mesh Edges** component to get the edges of a mesh outputted according to valence. This allows us to locate edges along the boundary of a mesh, or to identify non-manifold edges. Sometimes, however, it is more useful to have the full boundary of each face. For this, we can use the **Face Boundaries** component. This will return a polyline for each face.
 
 ![IMAGE](images/1-6-1/10_edge-component.png)
 >1. A **Mesh Edges** component outputs three sets of edges. This mesh has 5 naked edges, 1 interior edge, and zero non-manifold edges
@@ -142,13 +146,13 @@ thead {display: none}
 |04.| Connect the Face (F) output of the **Mesh Quad** component to the Faces (F) input of the **Construct Mesh** component|||
 
 ![IMAGE](images/1-6-1/exercise-01.png)
-> The default values of **Mesh Quad** and **Construct Mesh** create a simple mesh even though we haven't added any input indices or vertices.
+> **Mesh Quad** and **Construct Mesh** have default values which create a single mesh face. Next, we will replace the default values with our own vertices and faces.
 
 ||||
 |--|--|--|
 |05.| **Params/Input/Panel** - Drag and drop a **Panel** component onto the canvas||
 |06.| Double-click the **Panel** component and set the value to '0'||
-|07.| **Params/Input/Panel** - Drag and drop four more **Panel** components onto the canvas and set their values to 1,2,3, and 4 <br><blockquote>You can also copy the original **Panel** by clicking and dragging, then tapping the Alt key before releasing the click</blockquote>||
+|07.| **Params/Input/Panel** - Drag and drop four more **Panel** components onto the canvas and set their values to 1,2,3, and 4 <br><br><blockquote>You can also copy the original **Panel** by clicking and dragging, then tapping the Alt key before releasing the click</blockquote>||
 |08.| Connect the **Panels** to the inputs of the **Mesh Quad** in the following order:<ul>0 - A<br>1 - B<br>2 - C<br>3 - D</ul>||
 |09.| **Mesh/Primitive/Mesh Triangle** - Drag and drop a **Mesh Triangle** component onto the canvas|![IMAGE](images/1-6-1/mesh-triangle.png)|
 |10.| Connect the **Panels** to the inputs of the **Mesh Triangle** component in the following order: <ul>1 - A<br>2 - B<br>4 - C</ul>||
@@ -162,8 +166,8 @@ thead {display: none}
 ||||
 |--|--|--|
 |14.| **Params/Input/Panel** - Drag and drop a **Panel** component onto the canvas||
-|15.| Right-click the **Panel** component and de-select the 'Multiline Data' option<br><blockquote>By default, a panel has 'Multiline Data' enabled. By disabling it, each line in the panel will be read as a separate item within a list.</blockquote>||
-|16.| Double-click the **Panel** component to edit it, and enter the following points: <ul>{0,0,0}<br>{1,0,0}<br>{1,1,0}<br>{0,1,0}<br>{2,0,0}</ul><br><blockquote>Make sure you use the correct notation. To define a point in a **Panel**, you have to use curly brackets: '{' and '}' with commas between the x, y, and z values</blockquote>||
+|15.| Right-click the **Panel** component and de-select the 'Multiline Data' option<br><br><blockquote>By default, a panel has 'Multiline Data' enabled. By disabling it, each line in the panel will be read as a separate item within a list.</blockquote>||
+|16.| Double-click the **Panel** component to edit it, and enter the following points: <ul>{0,0,0}<br>{1,0,0}<br>{1,1,0}<br>{0,1,0}<br>{2,0,0}</ul><blockquote>Make sure you use the correct notation. To define a point in a **Panel**, you have to use curly brackets: '{' and '}' with commas between the x, y, and z values</blockquote>||
 |17.| Connect the **Panel** component to the Vertices (V) input of the **Construct Mesh** component|||
 
 ![IMAGE](images/1-6-1/exercise-03.png)
@@ -174,11 +178,11 @@ Optionally, we can replace the **Mesh Quad** and **Mesh Triangle** components wi
 ||||
 |--|--|--|
 |18.|**Params/Input/Panel** - Drag and drop a **Panel** component onto the canvas||
-|19.|Right-click the **Panel** component and deselect 'Multiline Data' <br><blockquote>Alternatively, copy the existing **Panel** that we used for the points, which already has 'Multiline Data' disabled</blockquote>||
+|19.|Right-click the **Panel** component and deselect 'Multiline Data' <br><br><blockquote>Alternatively, copy the existing **Panel** that we used for the points, which already has 'Multiline Data' disabled</blockquote>||
 |20.|Double-click the **Panel** component to edit it, and enter the following: <ul>Q{0,1,2,3}<br>T{1,2,4}</ul>||
 |21.|Connect the **Panel** to the Faces (F) input of the **Construct Mesh** component|||
 
-![IMAGE](images/1-6-1/exrecise-04.png)
+![IMAGE](images/1-6-1/exercise-04.png)
 
 ||||
 |--|--|--|

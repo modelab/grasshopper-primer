@@ -31,7 +31,7 @@ It is possible for two distinct mesh shapes to be topologically identical. All t
 
 **Orientable**
 
-A mesh is considered *orientable* if there are well-defined sides to the mesh, often thought of as an 'inside' and 'outside'. An simple example of a non-orientable mesh occurs when adjacent faces have normals pointing in opposite directions.
+A mesh is considered *orientable* if there are well-defined sides to the mesh, often thought of as an 'inside' and 'outside'. An simple example of a non-orientable mesh occurs when adjacent faces have normals pointing in opposite directions. These 'flipped faces' can cause problems in visualizations and renderings, as well as manufacturing or 3D-printing.
 
 ![IMAGE](images/1-6-2/orientable.png)
 >1. An orientable surface with face normals pointing in the same direction.
@@ -61,11 +61,21 @@ Non-manifold geometry is essentially geometry that cannot exist in the "real wor
 
 How is mesh geometry different from NURBs geometry? When might you want to use one instead of the other? 
 
+#####Parameterization
 In a previous chapter, we saw that NURBs surfaces are defined as a series of NURBs curves going in two directions. These directions are labeled U and V, and allow a NURBs surface to be parameterized according to a two-dimensional surface domain. The curves themselves are stored as equations in the computer, allowing the resulting surfaces to be calculated to an arbitarily small degree of precision. It can be difficult, however, to combine multiple NURBS surfaces together. Joining two NURBS surfaces will result in a polysurface, where different sections of the geometry will have different UV parameters and curve definitions.
 
 Meshes, on the other hand, are comprised of a discrete number of defined vertices and faces. The network of vertices in general cannot be defined by simple UV coordinates, and because the faces are discrete, the amount of precision is built into the mesh, and can only be changed by refining the mesh and added more faces. The lack of UV coordinates, however, allows meshes the flexibility to handle more complicated geometry with a single mesh, instead of resorting to a polysurface in the case of NURBS.
 
+>While a mesh does not have implicit UV parameterization, it is often necessary to assign such a parameterization in order to map a texture or image file onto mesh geometry for rendering. The UV coordinates of a mesh vertex, therefore, are actually an *attribute* like vertex color, which can be manipulated and changed, and are not completely defined by the mesh itself.
+
+
+#####Local vs Global Influence
+
+Another important difference is the extent to which a local change in mesh or NURBS geometry affects the entire form. Mesh geometry is completely local. Moving one vertex affects only the faces that are adjacent to that vertex. In NURBS surfaces, the extent of the influence is more complicated and depends on the degree of the surface as well as the weights and knots of the control points. In general, however, moving a single control point in a NURBS surface creates a more global change in geometry.
+
 ![IMAGE](images/1-6-2/NURBSvsMESH-02.jpg)
+>1. NURBS Surface - moving a control point has global influence
+2. Mesh geometry - moving a vertex has local influence
 
 One analogy that can be helpful is to compare a vector image (composed of lines and curves) with a raster image (composed of individual pixels). If you zoom into a vector image, the curves remain crisp and clear, while zooming into a raster image results in seeing individual pixels. In this analogy, NURBS surfaces can be compared to a vector image, while a mesh behaves similarly to a raster image.
 
