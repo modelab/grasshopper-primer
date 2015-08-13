@@ -1,14 +1,17 @@
 ### 1.6.2 Understanding Topology
 
+#####While the vertices of a mesh contain position information, it is really the connections between the vertices that give a mesh geometry its unique structure and flexibility. 
+
+
 ![IMAGE](images/1-6-2/meshMorph2.png)
 
 #### 1.6.2.1 What is Topology?
 
-Any introduction to meshes would be incomplete without at least a basic introduction to topology. Because topology is concerned with the interrelationships and properties of a set of “things” rather than the “things” themselves, it is mobilized for an enormous range of both tangible and intangible applications. In this primer, we are interested in its basic application with respect to parametric workflows that afford us the opportunity to create and control mesh geometry.
+Any introduction to mesh geometry would be incomplete without at least a basic introduction to topology. Because topology is concerned with the inter-relationships and properties of a set of “things” rather than the “things” themselves, it is mobilized for an enormous range of both tangible and intangible applications. In this primer, we are interested in its basic application with respect to parametric workflows that afford us the opportunity to create and control mesh geometry.
 
 In Grasshopper, the two basic types of information required to define a mesh are geometry and connectivity; in other words, a set of points in rhino-space (vertices) and set of corresponding point-associations (faces).
 
-Without connectivity information, a mesh is unstructured and therefore still undefined. The imposition of a set of faces, is the step (or leap) that ultimately actualizes a mesh and establishes its character in terms of continuity, convergence, and connectedness; this structural network is referred to as a topological space.
+Without connectivity information, a mesh is unstructured and therefore still undefined. The introduction of a set of faces is the step (or leap) that ultimately actualizes a mesh and establishes its character in terms of continuity, convergence, and connectedness; this structural network is referred to as a *topological space*.
 
 ![IMAGE - points with different connectivity](images/1-6-2/meshConnect.png)
 >The same set of vertices can have different connectivity information, resulting in different topology.
@@ -31,7 +34,7 @@ It is possible for two distinct mesh shapes to be topologically identical. All t
 
 **Orientable**
 
-A mesh is considered *orientable* if there are well-defined sides to the mesh, often thought of as an 'inside' and 'outside'. An simple example of a non-orientable mesh occurs when adjacent faces have normals pointing in opposite directions. These 'flipped faces' can cause problems in visualizations and renderings, as well as manufacturing or 3D-printing.
+A mesh is considered *orientable* if there are well-defined sides to the mesh. An simple example of a non-orientable mesh occurs when adjacent faces have normals pointing in opposite directions. These 'flipped faces' can cause problems in visualizations and renderings, as well as manufacturing or 3D-printing.
 
 ![IMAGE](images/1-6-2/orientable.png)
 >1. An orientable surface with face normals pointing in the same direction.
@@ -39,7 +42,9 @@ A mesh is considered *orientable* if there are well-defined sides to the mesh, o
 
 **Open vs Closed**
 
-It is often necessary to know whether a mesh is a *closed* mesh which represents a volumetric solid, or an *open* mesh that is just represents a 2-dimensional surface. The difference can be imperative with respect to manufacturability and boolean operations (discussed in following section). The **Mesh Edges** component can be used to help determine this. If none of the edges of a mesh have a valence of 1 (if the E1 output is *null*), then we know that all the edges are 'Interior Edges' and the mesh does not have an external boundary edge, and is therefore a closed mesh.
+It is often necessary to know whether a mesh is a *closed* mesh which represents a volumetric solid, or an *open* mesh that just represents a 2-dimensional surface. The difference can be imperative with respect to manufacturability. You cannot 3D print a single surface which has no thickness, but must instead thicken the mesh so that it is a solid. Solid mesh geometry is also required for Boolean operations (discussed in following section). 
+
+The **Mesh Edges** component can be used to help determine this. If none of the edges of a mesh have a valence of 1 (if the E1 output is *null*), then we know that all the edges are 'Interior Edges' and the mesh does not have an external boundary edge, and is therefore a closed mesh.
 
 On the other hand, if there exist 'Naked Edges', then those edges must be on a boundary of the mesh, and the mesh is not closed.
 
@@ -64,9 +69,9 @@ How is mesh geometry different from NURBs geometry? When might you want to use o
 #####Parameterization
 In a previous chapter, we saw that NURBs surfaces are defined as a series of NURBs curves going in two directions. These directions are labeled U and V, and allow a NURBs surface to be parameterized according to a two-dimensional surface domain. The curves themselves are stored as equations in the computer, allowing the resulting surfaces to be calculated to an arbitarily small degree of precision. It can be difficult, however, to combine multiple NURBS surfaces together. Joining two NURBS surfaces will result in a polysurface, where different sections of the geometry will have different UV parameters and curve definitions.
 
-Meshes, on the other hand, are comprised of a discrete number of defined vertices and faces. The network of vertices in general cannot be defined by simple UV coordinates, and because the faces are discrete, the amount of precision is built into the mesh, and can only be changed by refining the mesh and added more faces. The lack of UV coordinates, however, allows meshes the flexibility to handle more complicated geometry with a single mesh, instead of resorting to a polysurface in the case of NURBS.
+Meshes, on the other hand, are comprised of a discrete number of exactly defined vertices and faces. The network of vertices generally cannot be defined by simple UV coordinates, and because the faces are discrete the amount of precision is built into the mesh and can only be changed by refining the mesh and added more faces. The lack of UV coordinates, however, allows meshes the flexibility to handle more complicated geometry with a single mesh, instead of resorting to a polysurface in the case of NURBS.
 
->While a mesh does not have implicit UV parameterization, it is often necessary to assign such a parameterization in order to map a texture or image file onto mesh geometry for rendering. The UV coordinates of a mesh vertex, therefore, are actually an *attribute* like vertex color, which can be manipulated and changed, and are not completely defined by the mesh itself.
+>Note - While a mesh does not have implicit UV parameterization, it is sometimes useful to assign such a parameterization in order to map a texture or image file onto mesh geometry for rendering. Some modeling software therefore treats the UV coordinates of a mesh vertex as an *attribute* (like vertex color) which can be manipulated and changed. These are usually assigned and not completely defined by the mesh itself.
 
 
 #####Local vs Global Influence

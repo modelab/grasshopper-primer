@@ -1,5 +1,5 @@
 ## 1.6. Getting Started with Meshes
 
-####Meshes are a type of geometry in Rhino that are distinct from the NURBs surfaces introduced in the last chapter. It is important to understand the structure and representation of meshes in order to make the best decisions for what type of geometry you choose to work with in Grasshopper.
+####In the field of computational modeling, meshes are one of the most pervasive forms of representing 3D geometry. Mesh geometry can be a light-weight and flexible alternative to NURBs surface, and are used in everything from rendering and visualizations to digital fabrication and 3D printing. This chapter will provide an introduction to how mesh geometry is handled in Grasshopper and some applications.
 
 ![IMAGE](images/cover.png)

@@ -1,6 +1,6 @@
 ### 1.6.6 Working with Mesh Geometry
 
-#####In this section, we will work through an exercise file for producing a complete mesh solid. By the end of this exercise, we will have a dynamic definition to produce custom vases that are ready to be 3D printed.
+#####In this section, we will work through an exercise file for producing a complete mesh solid. By the end of this exercise, we will have a dynamic definition to produce custom vases that can be 3D printed.
 
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
 >Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
@@ -18,8 +18,8 @@ Since this definition is somewhat longer than previous examples in this primer, 
 4. Cap the bottom of the mesh
 5. Introduce a twist to the vertical orientation for a more dynamic form
 6. Add corrugated ridges for a textured vase
-7. Offset the mesh surface to give the vase actual thickness
-8. Cap the top gap between the two surfaces to complete a thickened mesh
+7. Offset the mesh surface to give the vase thickness
+8. Cap the top gap between the two surfaces to produce a closed solid
 
 
 <style>
@@ -37,13 +37,13 @@ thead {display: none}
 |03.| Reference a point in Rhino by right-clicking the **Point** component and selecting "Set one point". This will serve as the origin point of our vase. <br><br><blockquote>You can create a point manually in Grasshopper by double-clicking the canvas to bring up the search window, then typing the coordinates of the point separated by commas, such as: '0,0,0' (without quotes)</blockquote>||
 |04.| **Params/Input/Number Slider** - Drag and drop a **Number Slider** component onto the canvas and set the following values: <ul>Name: Length<br>Lower Limit: 1<br>Upper Limit: 10</ul>||
 |05.| **Curve/Primitive/Line SDL** - Drag and drop a **Line SDL** component onto the canvas|![IMAGE](images/1-6-6/lineSDL.png)|
-|06.| Connect the **Point** component to the Start (S) input of the **Line SDL** component, and connect the **Number Slider** to the Length (L) input. <br><blockquote>The default Direction (D) value of **Line SDL** is the Unit Z vector, which is what we want for this example</blockquote>||
+|06.| Connect the **Point** component to the Start (S) input of the **Line SDL** component, and connect the **Number Slider** to the Length (L) input. <br><br><blockquote>The default Direction (D) value of **Line SDL** is the Unit Z vector, which is what we will use for this example</blockquote>||
 |07.| **Params/Input/Number Slider** - Drag and drop a **Number Slider** onto the canvas and set the following values: <ul>Name: V Count<br>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 100</ul>||
 |08.| **Curve/Division/Divide Curve** - Drag and drop a **Divide Curve** component onto the canvas|![IMAGE](images/1-6-6/divide-curve.png)|
 |09.| Connect the Line (L) output of the **Line SDL** component to the Curve (C) input of the **Divide Curve** component||
 |10.| Connect the **V Count** number slider to the Count (N) input of the **Divide Curve** component||
-|11.| **Curve/Primitive/Circle CNR** - Drga and drop a **Circle CNR** component onto the canvas|![IMAGE](images/1-6-6/circleCNR.png)|
-|12.| Connect the Points (P) output of the **Divide Curve** component to the Centers (C) input of the **Circle CNR** component|||
+|11.| **Curve/Primitive/Circle CNR** - Drag and drop a **Circle CNR** component onto the canvas|![IMAGE](images/1-6-6/circleCNR.png)|
+|12.| Connect the Points (P) output of the **Divide Curve** component to the Center (C) input of the **Circle CNR** component|||
 
 ![IMAGE](images/1-6-6/exercise-01.png)
 >We have a series of circles stacked vertically. We will use these to make the profile of our vase. 
@@ -67,12 +67,12 @@ Next, we will use a Graph Mapper to control the radii of the circles.
 ![IMAGE](images/1-6-6/exercise-02.png)
 >Use the handles on the **Graph Mapper** to adjust the profile of the circles. 
 
->NOTE: It is important to make sure the start point of the bezier curve on the **Graph Mapper** is not at zero.
+>NOTE: It is important to make sure the start point of the bezier curve on the **Graph Mapper** is not at zero. By lifting the start point to a number greater than zero, we produce a flat base for our vase.
 
 ![IMAGE](images/1-6-6/exercise-02a.png)
 
 
-We now have a profile for our vase. Next, we will construct a mesh surface.
+We now have a profile for our vase. Next, we will construct a mesh surface. This will require creating mesh vertices and defining mesh faces according to the index of those vertices.
 
 ||||
 |--|--|--|
@@ -88,7 +88,7 @@ We now have a profile for our vase. Next, we will construct a mesh surface.
 |30.| Connect the output of the second **Series** component and the **U Count** number slider to the A and B inputs of the first **Addition** component||
 |31.| Connect the output of the **Shift List** component and the **U Count** number slider to the A and B inputs of the second **Addition** component||
 |32.| **Mesh/Primitive/Mesh Quad** - Drag and drop a **Mesh Quad** component onto the canvas|![IMAGE](images/1-6-6/mesh-quad.png)|
-|33.| Connect the following to the inputs of the **Mesh Quad** component: <ul>A: Second **Series** component<br>B: **Shift List** <br> C: First **Addition** component <br>D: Second **Addition** component</ul><br><blockquote>We have just create the initial topology for our mesh. These faces will be combined with the vertices. The order of these connections is crucial, so go ahead and double check all the connections at this point!</blockquote>||
+|33.| Connect the following to the inputs of the **Mesh Quad** component: <ul>A - Second **Series** component<br>B - **Shift List** <br> C - First **Addition** component <br>D - Second **Addition** component</ul><br><blockquote>We have just create the initial topology for our mesh. These faces will be combined with the vertices. The order of these connections is crucial, so go ahead and double check all the connections at this point!</blockquote>||
 |34.| **Sets/Tree/Flatten** - Drag and drop a **Flatten Tree** component onto tha canvas|![IMAGE](images/1-6-6/flatten.png)|
 |35.| Connect the Points (P) output of the **Divide Curve** component to the Tree (T) input of the **Flatten Tree** Component||
 |36.| **Mesh/Primitive/Construct Mesh** - Drag and drop a **Construct Mesh** component onto the canvas|![IMAGE](images/1-6-6/construct-mesh.png)|
@@ -111,7 +111,7 @@ Next we will close the bottom of the vase. To do this, we will add the original 
 |42.| Connect the Tree (T) output of the **Flatten Tree** component to the List (L) input of the **List Length** component <br><br><blockquote>This will be the index of the origin point after we add it to the existing list of vertices.</blockquote>||
 |43.| **Sets/List/Shift List** - Drag and drop a **Shift List** component onto the canvas|![IMAGE](images/1-6-6/shift-list.png)|
 |44.| **Mesh/Primitive/Mesh Triangle** - Drag and drop a **Mesh Triangle** component onto the canvas|![IMAGE](images/1-6-6/mesh-triangle.png)|
-|45.| Connect the following to the inputs of the **Mesh Triangle** component: <ul>A: Newest **Series** component<br>B: **List Length**<br>C: **Shift List**</ul>||
+|45.| Connect the following to the inputs of the **Mesh Triangle** component: <ul>A - Newest **Series** component<br>B - **List Length**<br>C - **Shift List**</ul>||
 |46.| **Sets/Tree/Merge** - Drag and drop two **Merge** components onto the canvas|![IMAGE](images/1-6-6/merge.png)|
 |47.| Connect the Tree (T) output of the **Flatten Tree** component to the D1 input, and connect the initial **Point** component to the D2 input of the first **Merge** component||
 |48.| Connect the Faces (F) of the **Mesh Quad** component to the D1 input, and connect the **Mesh Triangle** output to the D2 input of the second **Merge** component||
@@ -131,7 +131,7 @@ We will now add some detailing to the vase. We will start by adding a curve to t
 |51.| Connect the Circle (C) output of the **Circle CNR** component to the Curve (C) input of the **Seam** component||
 |52.| Right click the Curve (C) input of the **Seam** component and select 'Reparameterize'||
 |53.| **Params/Input/Number Slider** - Drag and drop a **Number Slider** component onto the canvas. We will use the default settings for this slider||
-|54.| **Maths/Operator/Multiplication** - Drag and drop a **Multiplication component onto the canvas.||
+|54.| **Maths/Operator/Multiplication** - Drag and drop a **Multiplication** component onto the canvas.|![IMAGE](images/1-6-6/multiplication.png)|
 |55.| Connect the output from the **Graph Mapper** to the A input, and the newest **Number Slider** to the B input of the **Multiplication** component||
 |56.| Connect the Result (R) of the **Multiplication** component to the Parameter (t) input of the **Seam** component|||
 
@@ -189,7 +189,7 @@ We now have a single surface for our vase. If we wanted to print this vase using
 
 ![IMAGE](images/1-6-6/exercise-07a.png)
 
-The final step will be to join these mesh geometries into a single mesh solid by capping the gap at the top.
+The final step will be to create a closed mesh by creating a new mesh geometry to close the gap and then joining the meshes together.
 
 ||||
 |--|--|--|
@@ -198,18 +198,18 @@ The final step will be to join these mesh geometries into a single mesh solid by
 |86.| **Curve/Util/Join Curves** - Drag and drop a **Join Curves** component onto the canvas|![IMAGE](images/1-6-6/join-curves.png)|
 |87.| Connect the Naked Edges (E1) output of the **Mesh Edges** component to the Curves (C) input of the **Join Curves** component||
 |88.| **Curve/Analysis/Control Points** - Drag and drop a **Control Points** component onto the canvas|![IMAGE](images/1-6-6/control-points.png)|
-|89.| Connect the Curves (C) output of the **Join Curves** component to the Curve (C) input of the **Control Points** component <br><br><blockquote>By joining the curves and then extrating the control points, we ensure that the order of the points is correct along the rim of the vase</blockquote>||
+|89.| Connect the Curves (C) output of the **Join Curves** component to the Curve (C) input of the **Control Points** component <br><br><blockquote>By joining the curves and then extrating the control points, we ensure that the order of the points is consistent along the rim of the vase, which is important for making the resulting mesh orientable and manifold</blockquote>||
 |90.| **Sets/List/Shift List** - Drag and drop a **Shift List** component onto the canvas|![IMAGE](images/1-6-6/shift-list.png)|
 |91.| Connect the Points (P) output of the **Control Points** component to the List (L) input of the **Shift List** component||
 |92.| Repeat steps 84 through 91 for the second **Construct Mesh** component||
 |93.| **Sets/Tree/Entwine** - Drag and drop an **Entwine** component onto the canvas|![IMAGE](images/1-6-6/entwine.png)|
-|94.| Zoom in to the **Entwine** component to show the option to add an extra input. We will need four inputs. Connect them in the following way: <ul>{0;0}: Points (P) from first **Control Points** component<br>{0;1}: output from first **Shift List** <br>{0;2}: output from second **Shift List**<br>{0;3}: Points (P) from second **Control Points** component</ul>||
+|94.| Zoom in to the **Entwine** component to show the option to add an extra input. We will need four inputs. Connect them in the following way: <ul>{0;0} - Points (P) from first **Control Points** component<br>{0;1} - output from first **Shift List** <br>{0;2} - output from second **Shift List**<br>{0;3} - Points (P) from second **Control Points** component</ul>||
 |95.| **Sets/Tree/Flip Matrix** - Drag and drop a **Flip Matrix** component onto the canvas|![IMAGE](images/1-6-6/flip-matrix.png)|
 |96.| Connect the Result (R) from the **Entwine** component to the Data (D) input of the **Flip Matrix** component||
 |97.| **Mesh/Primitive/Construct Mesh** - Drag and drop a **Construct Mesh** component onto the canvas|![IMAGE](images/1-6-6/construct-mesh.png)|
 |98.| Connect the Data (D) outut of the **Flip Matrix** component to the Vertices (V) input of the **Construct Mesh** component||
 |99.| **Mesh/Util/Mesh Join** - Drag and drop a **Mesh Join** component onto the canvas|![IMAGE](images/1-6-6/mesh-join.png)|
-|100.| Connect all three **Construct Mesh** components to the **Mesh Join** component by holding down the Shift key while connecting the wires. Right-click the Mesh(M) input of the **Mesh Join** component and select 'Flatten'|||
+|100.| Connect all three **Construct Mesh** components to the **Mesh Join** component by holding down the Shift key while connecting the wires (or use a **Merge** component). Right-click the Mesh (M) input of the **Mesh Join** component and select 'Flatten'|||
 
 ![IMAGE](images/1-6-6/exercise-08.png)
 ![IMAGE](images/1-6-6/exercise-08a.png)

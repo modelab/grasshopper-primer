@@ -9,18 +9,18 @@
 
 ####1.6.1.1 Basic Anatomy of a Mesh
 
-What is the minimum amount of information needed to define a mesh? Grasshopper defines meshes using a Face-Vertex data structure. At its most basic, this structure is simply a collection of points which are grouped into polygons. The points of a mesh are called *vertices*, while the polygons are called *faces*. To create a mesh we need a list of vertices and a system of grouping those vertices into faces.
+Grasshopper defines meshes using a Face-Vertex data structure. At its most basic, this structure is simply a collection of points which are grouped into polygons. The points of a mesh are called *vertices*, while the polygons are called *faces*. To create a mesh we need a list of vertices and a system of grouping those vertices into faces.
 
 ![IMAGE](images/1-6-1/02_basic-anatomy.png)
->1. A list of vertices
+>1. A list of vertices. 
 2. Faces with groupings of vertices
 
 **Vertices**
 
-The vertices of a mesh are simply a list of points. Recall that in Grasshopper, a *list* is a collection of objects and each object in the list has an *index* which describes that objects position in a list. The index of the vertices is very important when constructing a mesh, or getting information about the structure of a mesh.
+The vertices of a mesh are simply a list of points. Recall that  a *list* in Grasshopper is a collection of objects. Each object in the list has an *index* which describes that objects position in a list. The index of the vertices is very important when constructing a mesh, or getting information about the structure of a mesh.
 
 ![IMAGE](images/1-6-1/03_vertices.png)
->1. A list of points in Grasshopper
+>1. A list of points. All lists in Grasshopper begin with an index of zero
 2. The set of points labeled with their index
 
 **Faces**
@@ -31,7 +31,7 @@ A face is an ordered list of three or four vertices. The “surface” represent
 >1. A Quad Face made with indices 0, 1, 2, and 3
 2. A Triangle Face made with indices 1, 4, and 2
 
-In Grasshopper, faces can be created with the **Mesh Triangle** and **Mesh Quad** components. The input for these components are integers that correspond to the index of the vertices we want to use for a face. By connecting a **Panel** to the output of these components, we can see that a triangular face is represented as T{A;B;C}, and a quad face as Q{A;B;C;D}. 
+In Grasshopper, faces can be created with the **Mesh Triangle** and **Mesh Quad** components. The input for these components are integers that correspond to the index of the vertices we want to use for a face. By connecting a **Panel** to the output of these components, we can see that a triangular face is represented as T{A;B;C}, and a quad face as Q{A;B;C;D}. Faces with more than 4 sides are not allowed. To make a 5-sided mesh element, the mesh must be broken into two or more faces.
 
 ![IMAGE](images/1-6-1/05_construct-faces.png)
 >1. **Mesh Quad** component with indices 0, 1, 2, and 3
@@ -55,7 +55,7 @@ By default, Grasshopper only previews the surfaces of mesh geometry without disp
 
 ![IMAGE](images/1-6-1/preview-mesh-edges.png)
 
-It is extremely important to pay attention to the order of the indices when constructing a mesh face. The face will be constructed by connecting the vertices listed in order, so the quad face Q{0,1,2,3} and Q{1,0,2,3} are very different, despite using the same four vertices. Incorrect vertex ordering can lead to problems such as holes, non-manifold mesh geometry, or non-orientable surfaces. These issues are discussed in more detail in the **Understanding Topology** section.
+It is extremely important to pay attention to the order of the indices when constructing a mesh face. The face will be constructed by connecting the vertices listed in order, so the quad faces Q{0,1,2,3} and Q{1,0,2,3} are very different, despite using the same four vertices. Incorrect vertex ordering can lead to problems such as holes, non-manifold mesh geometry, or non-orientable surfaces. Such mesh geometry is usually not correctly rendered, and not able to be 3D printed. These issues are discussed in more detail in the **Understanding Topology** section.
 
 ![IMAGE](images/1-6-1/08_bowtie.png)
 >1. A quad face with indices 0,1,2,3
@@ -63,11 +63,11 @@ It is extremely important to pay attention to the order of the indices when cons
 
 ####1.6.1.2 Implicit Mesh Data
 
-In addition to faces and vertices, there is other information about a mesh that we will want to use. In a Face-Vertex based mesh, data such as edges and normals are calculated implicitly based on the given faces and vertices. This section describes ways to query this information.
+In addition to faces and vertices, there is other information about a mesh that we will want to use. In a Face-Vertex based mesh, data such as *edges* and *normals* are calculated implicitly based on the given faces and vertices. This section describes ways to query this information.
 
 **Edges**
 
-The Edges of a Mesh are lines connecting any two consecutive vertices in a face. Notice that some edges are shared between multiple faces, while other edges are only adjacent to one face. The number of faces an edge is adjacent to is called the *Valence* of that edge.
+The *edges* of a mesh are lines connecting any two consecutive vertices in a face. Notice that some edges are shared between multiple faces, while other edges are only adjacent to one face. The number of faces an edge is adjacent to is called the *valence* of that edge.
 
 Grasshopper groups edges into three categories based on the valence:
 
@@ -89,7 +89,7 @@ We can use the **Mesh Edges** component to get the edges of a mesh outputted acc
 
 **Face Normals**
 
-In the case of triangular faces, we know that any three points must be planar, so the normal will be perpendicular to that plane, but how do we know which direction ('up' or 'down') the normal will be pointing? Once again, the *order* of the indicies is crucial here. Mesh faces in Grasshopper are defined counter-clockwise, so a face with indices {0,1,2} will be 'flipped' as compared to the indicies {1,0,2}. Another way to visualize this is to use the *Right-Hand-Rule*. 
+A *normal vector* is a vector with a magnitude of one that is perpendicular to a surface. In the case of triangular faces, we know that any three points must be planar, so the normal will be perpendicular to that plane, but how do we know which direction ('up' or 'down') the normal will be pointing? Once again, the order of the indicies is crucial here. Mesh faces in Grasshopper are defined counter-clockwise, so a face with indices {0,1,2} will be 'flipped' as compared to the indicies {1,0,2}. Another way to visualize this is to use the *Right-Hand-Rule*. 
 
 ![IMAGE](images/1-6-1/11_face-normals.png)
 >1. The **Face Normals** component will return a list of center points and normal vectors for each face
@@ -100,7 +100,9 @@ Grasshopper also allows quad faces, in which case the 4 points will not always b
 
 **Vertex Normals**
 
-In addition to the face normals, it is also possible to calculate normals for each vertex of a mesh. For a vertex that is only used in a single face, the normal at the vertex will be equal to the normal of the face. If a vertex has multiple adjacent faces, the vertex normal is calculated by taking the average of the faces. While less intuitive than face normals, vertex normals are important for smooth visualization of meshes. You might notice that even though a triangulated mesh is composed of planar facets, such a mesh can still appear smooth and rounded when shaded in Rhino. Using the vertex normals allows this smooth visualization.
+In addition to the face normals, it is also possible to calculate normals for each vertex of a mesh. For a vertex that is only used in a single face, the normal at the vertex will point in the same direction as the face normal. If a vertex has multiple adjacent faces, the vertex normal is calculated by taking the average of the faces. 
+
+While less intuitive than face normals, vertex normals are important for smooth visualization of meshes. You might notice that even when mesh is composed of planar faces, such a mesh can still appear smooth and rounded when shaded in Rhino. Using the vertex normals allows this smooth visualization.
 
 ![IMAGE](images/1-6-1/12_vertex-normals.png)
 >1. Normals set according to the face normal results in discrete polygonal shading
@@ -117,7 +119,7 @@ When using a **Construct Mesh** component, there is an option input for vertex c
 ![IMAGE](images/1-6-1/13_single-colors.png)
 >Trianglular mesh objects colored with red, green, or blue
 
-While the above examples colored the entire mesh, color data are actually assigned for each vertex. By using a list of three colors, we can color each vertex in the triangle separately. These colors are used for visualitizations, with each face rendered as an interpolation of the vertex colors. For example, the image below shows triangle face with vertex colors of Red, Green, and Blue.
+While the above examples colored the entire mesh, color data are actually assigned for each vertex. By using a list of three colors, we can color each vertex in the triangle separately. These colors are used for visualitizations, with each face rendered as an interpolation of the vertex colors. For example, the image below shows a triangular face with vertex colors of Red, Green, and Blue.
 
 ![IMAGE](images/1-6-1/14_multi-color.png)
 >1. Red, green, and blue are assigned to the three vertices of a mesh
@@ -161,7 +163,7 @@ thead {display: none}
 |13.| Connect the Result (R) output of the **Merge** component to the Faces (F) input of the **Construct Mesh** component|||
 
 ![IMAGE](images/1-6-1/exercise-02.png)
->The default Vertices list of **Construct Mesh** only has 4 points, but the **Mesh Triangle** component uses an index of 4, which would correspond to the fifth point in a list. Since there are not enough vertices, the **Construct Mesh** component gives an error. To fix it, we will provide our own list of points.
+>The default Vertices (V) list of **Construct Mesh** only has 4 points, but our **Mesh Triangle** component uses an index of 4, which would correspond to the fifth point in a list. Since there are not enough vertices, the **Construct Mesh** component gives an error. To fix it, we will provide our own list of points.
 
 ||||
 |--|--|--|

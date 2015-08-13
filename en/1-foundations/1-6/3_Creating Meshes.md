@@ -1,8 +1,8 @@
 ### 1.6.3 Creating  Meshes
 
-#####In the last section, we looked at the basic structure of meshes. In this section, we will look at ways to create and manipulate meshes, as well as methods to extract data and information.
+#####In the last section, we looked at the basic structure of meshes. In this section, we give a brief introduction to different ways of generating mesh geometry.
 
-There are three fundamental ways of creating meshes in Grasshopper:
+There are three fundamental ways of creating mesh geometry in Grasshopper:
 1. Starting with a mesh primitive
 2. Manually constructing a mesh from faces and vertices
 3. Converting NURBS geometry into a mesh
@@ -12,16 +12,16 @@ There are three fundamental ways of creating meshes in Grasshopper:
 Grasshopper comes with a few simple mesh primitive components:
 
 ![IMAGE](images/1-6-3/01_primitives.png)
->1. **Mesh Box** - This primitve requires a Box object as an input which provides the size and location, as well as X,Y, and Z values that determine how many faces to divide the box into. The six sides of a Mesh Box are *unwelded* allowing for creases. (See below for more information about welded meshes)
+>1. **Mesh Box** - This primitve requires a Box object as an input which provides the size and location, as well as X,Y, and Z values that determine how many faces to divide the box into. The six sides of a Mesh Box are *unwelded* allowing for creases. (See the following section for more information about welded meshes)
 2. **Mesh Plane** - This primitive requires a Rectangle input to determine the size and location of the plane, as well as W and H values to determine the number of faces.
 3. **Mesh Sphere** - This primitive requires a base plane to determine the center and orientation of the sphere, a radius for the size, and U and V values to determine the number of faces.
-4. **Mesh Sphere Ex** - Also known as a Quadball, this primitive creates a sphere composed of six patches, which are subdivided according to the C input. Like the Mesh Box, these six patches are unwelded.
+4. **Mesh Sphere Ex** - Also known as a Quadball, this primitive creates a sphere composed of six patches, which are subdivided according to the C input. A quadball is topologically equivalent to a cube, even though it is geometrically spherical.
 
 ####1.6.3.2 Construct Mesh
 
 ![IMAGE](images/1-6-3/construct-mesh.png)
 
-We have already seen this component in an earlier section. The **Construct Mesh** component can be used to directly create a mesh from a list of vertices and a list of faces (and an optional list of vertex colors). Constructing an entire mesh manually can be extremely tedious, so this component is more often used with an existing list of faces and vertices which have been extracted using a **Deconstruct Mesh** component on an existing mesh.
+As we saw in the previous section, the **Construct Mesh** component can be used to directly create a mesh from a list of vertices and a list of faces (and an optional list of vertex colors). Constructing an entire mesh manually can be extremely tedious, so this component is more often used with an existing list of faces and vertices which have been extracted using a **Deconstruct Mesh** component on an existing mesh.
 
 ####1.6.3.3 NURBS to Mesh
 
@@ -61,7 +61,7 @@ thead {display: none}
 |04.| Connect the **Number Slider** to the U Count (U) and V Count (V) inputs of the **Mesh Sphere** Component|||
 
 ![IMAGE](images/1-6-3/exercise-01.png)
->Adjust the slider and notice how the resoultion of the sphere changes in the Rhino viewport. Higher numbers result in a smoother sphere, but larger dataset which will require more processing time.
+>Adjust the slider and notice how the resoultion of the sphere changes in the Rhino viewport. Higher numbers result in a smoother sphere, but also produce larger datasets which can require more processing time.
 
 ||||
 |--|--|--|
@@ -75,7 +75,9 @@ thead {display: none}
 |12.| Connect the Faces (F) output of the **Deconstruct Mesh** component to the Faces (F) of the **Construct Mesh** component|||
 
 ![IMAGE](images/1-6-3/exercise-02.png)
->We deconstructed the mesh to get its vertices, faces, and normals. We then simply moved each vertex according to its normal vector. Because we did not change the topology of the sphere at all, we re-used the list of faces to re-construct the new mesh. Normal vectors always have a length of one, so this ended up reconstructing a new mesh sphere with a radius of one more than the original sphere. Next, we will use a sine function to manipulate the sphere in a slightly more complicated way.
+>We deconstructed the mesh to get its vertices, faces, and normals. We then simply moved each vertex according to its normal vector. Because we did not change the topology of the sphere at all, we re-used the list of faces to re-construct the new mesh. Normal vectors always have a length of one, so this ended up reconstructing a new mesh sphere with a radius of one more than the original sphere. 
+
+Next, we will use a sine function to manipulate the sphere in a slightly more complicated way.
 
 ||||
 |--|--|--|
@@ -88,7 +90,7 @@ thead {display: none}
 |19.| Zoom in to the **Expression** component until you see the options for adding or removing input variables and click on a '+' to add a 'z' variable||
 |20.| Right click the 'y' input of the **Expression** component and change the text to 'A'||
 |21.| Right click the 'z' input of the **Expression** component and change the text to 'f'||
-|22.| Double click the **Expression** component to edit the expression, and enter the following: <codeblock>A*sin(x*f/π)</codeblock>||
+|22.| Double click the **Expression** component to edit the expression, and enter the following: <br>A\*sin(x\*f/π)||
 |23.| Connect the X output of the **Deconstruct** component to the 'x' input of the **Expression** component||
 |24.| Connect the Amplitude **Number Slider** to the A input, and the Frequency **Number Slider** to the 'f' input of the **Expression** component||
 |25.| **Maths/Operators/Multiplication** - Drag and drop a **Multiplication** component onto the canvas|![IMAGE](images/1-6-3/multiplication.png)|
@@ -103,20 +105,22 @@ thead {display: none}
 ||||
 |--|--|--|
 |29.| **Mesh/Primitive/Mesh Colours** - Drag and drop a **Mesh Colours** component onto the canvas|![IMAGE](images/1-6-3/mesh-colours.png)|
-|30.| **Params/Input/Gradient** - Drag and drop a **Gradient** component onto the canvas <br><codeblock>You can right-click the gradient component and select "Presets" to change the color gradient. In this example, we used the Red-Yellow-Blue gradient. </codeblock>|![IMAGE](images/1-6-3/gradient.png)|
+|30.| **Params/Input/Gradient** - Drag and drop a **Gradient** component onto the canvas <br><br><codeblock>You can right-click the gradient component and select "Presets" to change the color gradient. In this example, we used the Red-Yellow-Blue gradient. </codeblock>|![IMAGE](images/1-6-3/gradient.png)|
 |31.| Connect the Result (R) output of the **Expression** component to the Parameter (t) input of the **Gradient** component||
 |32.| Connect the output of the **Gradient** component to the Colours (C) input of the **Mesh Colours** component||
-|33.| Connect the Mesh (M) output of the **Construct Mesh** component to the Mesh (M) input of the **Mesh Colours** component <br><codeblock>In this step, we could achieve the same result by connecting the gradient directly to the Colours (C) input of the **Construct Mesh** component.</codeblock>|||
+|33.| Connect the Mesh (M) output of the **Construct Mesh** component to the Mesh (M) input of the **Mesh Colours** component <br><br><codeblock>In this step, we could achieve the same result by connecting the gradient directly to the Colours (C) input of the **Construct Mesh** component.</codeblock>|||
 
 ![IMAGE](images/1-6-3/exercise-05.png)
 ![IMAGE](images/1-6-3/exercise-06.png)
->We used the Expression results to drive both the movement of the vertices and the color of the mesh, so the color gradient in this case corresponds to the magnitude of the movement of the vertices. For the final portion of the exercise, we will instead use the direction of the normals relative to a 'light source' vector to simulate the basic process of rendering a mesh.
+>We used the Expression results to drive both the movement of the vertices and the color of the mesh, so the color gradient in this case corresponds to the magnitude of the movement of the vertices. 
+
+For the final portion of the exercise, we will instead use the direction of the normals relative to a 'light source' vector to simulate the basic process of rendering a mesh.
 
 ||||
 |--|--|--|
 |34.| **Mesh/Analysis/Deconstruct Mesh** - Drag and drop a **Deconstruct Mesh** component onto the canvas||
 |35.| Connect the Mesh (M) output of the **Construct Mesh** component to the Mesh (M) input of the **Deconstruct Mesh** component <br> <codeblock> While the topology of the original mesh has not changed, the normal vectors will be different, so we need to use a new **Deconstruct Mesh** to find the new normals.</codeblock>||
-|36.| **Vector/Vector/Unit Z** - Drag and drop a **Unit X** component onto the canvas <br><codeblock> We will use this as the direction of a light source. You can use other vectors, or reference a line from Rhino to make this more dynamic</codeblock>||
+|36.| **Vector/Vector/Unit Z** - Drag and drop a **Unit X** component onto the canvas <br><br><codeblock> We will use this as the direction of a light source. You can use other vectors, or reference a line from Rhino to make this more dynamic</codeblock>||
 |37.| **Vector/Vector/Angle** - Drag and drop an **Angle** component onto the canvas|![IMAGE](images/1-6-3/angle.png)|
 |38.| Connect the Normals (N) output of the **Deconstruct Mesh** component to the A input of the **Angle** component||
 |39.| Connect the output of the **Unit Z** component to the B input of the **Angle** component||
@@ -127,7 +131,6 @@ thead {display: none}
 ![IMAGE](images/1-6-3/exercise-07.png)
 ![IMAGE](images/1-6-3/exercise-08.png)
 >We used the white-to-black preset for our gradient. This sets the mesh color according to the angle between the normal and the light source, with normals that are directly facing the light source to black and the normals facing away from the source to white (To be a little more accurate, you can reverse the gradient by adjusting the handles). The actual process of rendering a mesh is much more complicated than this, obviously, but this is the basic process of creating light and shadow on a rendered object.
-
 --
 ![IMAGE](images/1-6-3/exercise-full.png)
 

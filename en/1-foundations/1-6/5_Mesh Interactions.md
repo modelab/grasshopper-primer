@@ -24,7 +24,9 @@ This component will calculate the position on a mesh that is closest to a given 
 2. The face that contains the closest point is identified
 3. The parameters of the closest point on the face are calculated
 
-For those users interested in a little more detail about how a mesh is parameterized, we can take a closer look at how a mesh parameter is structured. In the image below, we have attached a panel to the parameter output of a **Mesh Closest Point** component. The mesh parameter is N[A,B,C,D]. The first number, N, is the index of the face which contains the calculated point. The following four numbers define the *barycentric* coordinates of the point within that face. The coordinates of the referenced point can be found by multiplying each vertex of the face by these numbers in order and then add the results together. (Of course, this is already done for us, and is given in the Point output). Also note that barycentric coordinates are only unique for triangular faces, meaning that on a quad face the same point could have multiple different parameterizations. Grasshopper avoids this problem by internally triangulating a quad face when calculating a parameter, the result of which is that of the four numbers in a mesh parameter, at least one of them will always be zero.
+For those users interested in a little more detail about how a mesh is parameterized, we can take a closer look at how a mesh parameter is structured. You can see this structure by attaching a panel to the parameter output of a **Mesh Closest Point** component. The mesh parameter has the form: N[A,B,C,D]. The first number, N, is the index of the face which contains the calculated point. 
+
+The following four numbers define the *barycentric* coordinates of the point within that face. The coordinates of the referenced point can be found by multiplying each vertex of the face by these numbers in order and then add the results together. (Of course, this is already done for us, and is given in the Point output). Also note that barycentric coordinates are only unique for triangular faces, meaning that on a quad face the same point could have multiple different parameterizations. Grasshopper avoids this problem by internally triangulating a quad face when calculating a parameter, the result of which is that of the four numbers in a mesh parameter, at least one of them will always be zero.
 
 ![IMAGE](images/1-6-4/09_barycentric.png)
 >Barycentric Coordinates
@@ -41,7 +43,9 @@ The **Mesh Eval** component uses a mesh parameter as an input and returns the re
 
 ![IMAGE](images/1-6-4/mesh-join.png)
 
-Unlike joining curves or NURBS surfaces, which require adjacency, any meshes can be joined into a single mesh, even meshes that are not touching. Recall that a mesh is simply a list of vertices, and a list of faces. There is no actual requirement for those faces to be connected. 
+Unlike joining curves or NURBS surfaces which require adjacency, any meshes can be joined into a single mesh - even meshes that are not touching. Recall that a mesh is simply a list of vertices, and a list of faces. There is no actual requirement for those faces to be connected (Although in most applications, such a mesh would not be very desirable!!).
+
+This component does not weld mesh vertices together, so it is often useful to use this in combination with a **Weld** component.
 
 **Mesh Boolean**
 
@@ -68,7 +72,7 @@ Intersections can be calculated between meshes and other objects: rays, planes, 
 
 **Occlusion**
 
-As we have seen, one of the many uses of mesh geometry is for visualizations and creating shaded rendering based on face normals. When rendering, it also necessary to know when an object is in shadow behind another object. The **Occlusion** component in Grasshopper allows us to enter a set of sample points, along with occluding mesh geometry that will 'cast shadows', and a *view ray*, or vector, to indicate the direction that 'light' is coming from.
+As we have discussed, one of the (many) uses of mesh geometry is for visualizations and creating shaded rendering based on face normals. When rendering, it also necessary to know when an object is in shadow behind another object. The **Occlusion** component in Grasshopper allows us to enter a set of sample points, along with occluding mesh geometry that will 'cast shadows', and a *view ray*, or vector, to indicate the direction that 'light' is coming from.
 
 Such a process can be used to create shadows in rendering, or determine whether objects are hidden from a certain camera view.
 
