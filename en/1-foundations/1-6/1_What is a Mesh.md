@@ -1,4 +1,4 @@
-## 1.6.1 What is a Mesh?
+### 1.6.1 What is a Mesh?
 
 #####A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. This section discusses the structure of a mesh object, which includes vertices, edges, and faces, as well as additional characterstics such as colors and normals that can be used to refine a mesh.
 
@@ -9,7 +9,7 @@
 
 ####1.6.1.1 Basic Anatomy of a Mesh
 
-What is the minimum amount of information needed to define a mesh? Grasshopper defines meshes using a Face-Vertex data structure. At its most basic, this structure is simply a collection of points which are grouped into polygons. The points of a mesh are called *vertices*, while the polygons are called *faces*. To create a mesh, then, we need a list of vertices, and a system of grouping those vertices into faces.
+What is the minimum amount of information needed to define a mesh? Grasshopper defines meshes using a Face-Vertex data structure. At its most basic, this structure is simply a collection of points which are grouped into polygons. The points of a mesh are called *vertices*, while the polygons are called *faces*. To create a mesh we need a list of vertices and a system of grouping those vertices into faces.
 
 ![IMAGE](images/1-6-1/02_basic-anatomy.png)
 >1. A list of vertices
