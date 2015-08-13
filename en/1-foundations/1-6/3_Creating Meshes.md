@@ -90,7 +90,7 @@ Next, we will use a sine function to manipulate the sphere in a slightly more co
 |19.| Zoom in to the **Expression** component until you see the options for adding or removing input variables and click on a '+' to add a 'z' variable||
 |20.| Right click the 'y' input of the **Expression** component and change the text to 'A'||
 |21.| Right click the 'z' input of the **Expression** component and change the text to 'f'||
-|22.| Double click the **Expression** component to edit the expression, and enter the following: <br>A\*sin(x\*f/π)||
+|22.| Double click the **Expression** component to edit the expression, and enter the following: <br><br>A\*sin(x\*f/π)||
 |23.| Connect the X output of the **Deconstruct** component to the 'x' input of the **Expression** component||
 |24.| Connect the Amplitude **Number Slider** to the A input, and the Frequency **Number Slider** to the 'f' input of the **Expression** component||
 |25.| **Maths/Operators/Multiplication** - Drag and drop a **Multiplication** component onto the canvas|![IMAGE](images/1-6-3/multiplication.png)|
@@ -105,10 +105,10 @@ Next, we will use a sine function to manipulate the sphere in a slightly more co
 ||||
 |--|--|--|
 |29.| **Mesh/Primitive/Mesh Colours** - Drag and drop a **Mesh Colours** component onto the canvas|![IMAGE](images/1-6-3/mesh-colours.png)|
-|30.| **Params/Input/Gradient** - Drag and drop a **Gradient** component onto the canvas <br><br><codeblock>You can right-click the gradient component and select "Presets" to change the color gradient. In this example, we used the Red-Yellow-Blue gradient. </codeblock>|![IMAGE](images/1-6-3/gradient.png)|
+|30.| **Params/Input/Gradient** - Drag and drop a **Gradient** component onto the canvas <br><br><codeblock>You can right-click the gradient component and select "Presets" to change the color gradient. In this example, we used the Red-Yellow-Blue gradient</codeblock>|![IMAGE](images/1-6-3/gradient.png)|
 |31.| Connect the Result (R) output of the **Expression** component to the Parameter (t) input of the **Gradient** component||
 |32.| Connect the output of the **Gradient** component to the Colours (C) input of the **Mesh Colours** component||
-|33.| Connect the Mesh (M) output of the **Construct Mesh** component to the Mesh (M) input of the **Mesh Colours** component <br><br><codeblock>In this step, we could achieve the same result by connecting the gradient directly to the Colours (C) input of the **Construct Mesh** component.</codeblock>|||
+|33.| Connect the Mesh (M) output of the **Construct Mesh** component to the Mesh (M) input of the **Mesh Colours** component <br><br><codeblock>In this step, we could achieve the same result by connecting the gradient directly to the Colours (C) input of the **Construct Mesh** component</codeblock>|||
 
 ![IMAGE](images/1-6-3/exercise-05.png)
 ![IMAGE](images/1-6-3/exercise-06.png)
@@ -119,7 +119,7 @@ For the final portion of the exercise, we will instead use the direction of the 
 ||||
 |--|--|--|
 |34.| **Mesh/Analysis/Deconstruct Mesh** - Drag and drop a **Deconstruct Mesh** component onto the canvas||
-|35.| Connect the Mesh (M) output of the **Construct Mesh** component to the Mesh (M) input of the **Deconstruct Mesh** component <br> <codeblock> While the topology of the original mesh has not changed, the normal vectors will be different, so we need to use a new **Deconstruct Mesh** to find the new normals.</codeblock>||
+|35.| Connect the Mesh (M) output of the **Construct Mesh** component to the Mesh (M) input of the **Deconstruct Mesh** component <br><br><codeblock> While the topology of the original mesh has not changed, the normal vectors will be different, so we need to use a new **Deconstruct Mesh** to find the new normals.</codeblock>||
 |36.| **Vector/Vector/Unit Z** - Drag and drop a **Unit X** component onto the canvas <br><br><codeblock> We will use this as the direction of a light source. You can use other vectors, or reference a line from Rhino to make this more dynamic</codeblock>||
 |37.| **Vector/Vector/Angle** - Drag and drop an **Angle** component onto the canvas|![IMAGE](images/1-6-3/angle.png)|
 |38.| Connect the Normals (N) output of the **Deconstruct Mesh** component to the A input of the **Angle** component||
@@ -131,7 +131,8 @@ For the final portion of the exercise, we will instead use the direction of the 
 ![IMAGE](images/1-6-3/exercise-07.png)
 ![IMAGE](images/1-6-3/exercise-08.png)
 >We used the white-to-black preset for our gradient. This sets the mesh color according to the angle between the normal and the light source, with normals that are directly facing the light source to black and the normals facing away from the source to white (To be a little more accurate, you can reverse the gradient by adjusting the handles). The actual process of rendering a mesh is much more complicated than this, obviously, but this is the basic process of creating light and shadow on a rendered object.
---
+
+---
 ![IMAGE](images/1-6-3/exercise-full.png)
 
 

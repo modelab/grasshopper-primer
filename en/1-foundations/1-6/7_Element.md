@@ -236,6 +236,6 @@ thead {display: none}
 
 ![IMAGE](images/1-6-7/exercise_07.png)
 ![IMAGE](images/1-6-7/exercise_08.png)
---
+---
 ![IMAGE](images/1-6-7/exercise_full.png)
 

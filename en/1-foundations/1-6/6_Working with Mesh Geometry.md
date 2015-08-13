@@ -213,7 +213,7 @@ The final step will be to create a closed mesh by creating a new mesh geometry t
 
 ![IMAGE](images/1-6-6/exercise-08.png)
 ![IMAGE](images/1-6-6/exercise-08a.png)
---
+---
 ![IMAGE](images/1-6-6/exercise-full.png)
 ![IMAGE](images/1-6-6/vaseFINAL.png)
 
