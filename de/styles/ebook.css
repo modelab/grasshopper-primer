@@ -1,0 +1,15 @@
+body .page-toc ol ol{list-style-type:decimal}
+.page-toc OL { counter-reset: section -1 }
+.page-toc LI { display: block }
+.page-toc LI:before { content: counters(section, ".") "."; counter-increment: section }
+.page-toc ol OL { counter-reset: section }
+.page-toc ol LI { display: block }
+.page-toc ol LI:before { content: counters(section, ".") "."; counter-increment: section }
+
+.page .normal td{page-break-inside: avoid}
+.page .normal img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
