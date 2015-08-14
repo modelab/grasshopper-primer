@@ -1,6 +1,6 @@
 ### 1.6.1 What is a Mesh?
 
-#####A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. This section discusses the structure of a mesh object, which includes vertices, edges, and faces, as well as additional characterstics such as colors and normals that can be used to refine a mesh.
+#####A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. This section discusses the structure of a mesh object, which includes vertices, edges, and faces, as well as additional mesh properties such as colors and normals.
 
 ![IMAGE](images/1-6-1/01_mesh-structure.png)
 >1. Mesh vertices
@@ -28,8 +28,8 @@ The vertices of a mesh are simply a list of points. Recall that  a *list* in Gra
 A face is an ordered list of three or four vertices. The “surface” representation of a mesh face is therefore implied according to the position of the vertices being indexed. We already have the list of vertices that make up the mesh, so instead of providing individual points to define a face, we instead simply use the index of the vertices. This also allows us to use the same vertex in more than one face.
 
 ![IMAGE](images/1-6-1/04_faces.png)
->1. A Quad Face made with indices 0, 1, 2, and 3
-2. A Triangle Face made with indices 1, 4, and 2
+>1. A quad face made with indices 0, 1, 2, and 3
+2. A triangle face made with indices 1, 4, and 2
 
 In Grasshopper, faces can be created with the **Mesh Triangle** and **Mesh Quad** components. The input for these components are integers that correspond to the index of the vertices we want to use for a face. By connecting a **Panel** to the output of these components, we can see that a triangular face is represented as T{A;B;C}, and a quad face as Q{A;B;C;D}. Faces with more than 4 sides are not allowed. To make a 5-sided mesh element, the mesh must be broken into two or more faces.
 
@@ -37,7 +37,7 @@ In Grasshopper, faces can be created with the **Mesh Triangle** and **Mesh Quad*
 >1. **Mesh Quad** component with indices 0, 1, 2, and 3
 2. **Mesh Triangle** component with indices 1, 4, and 2
 
-These components have not yet created a mesh, but have simply defined a list of indices. By paying attention to the format of this list, we can also create a face manually by editing a **Panel** component and entering the appropriate format for either triangular or quad faces.
+It is important to remember that these components do not result in the creation of mesh geometry, rather the output is a list of indices that define how a mesh should be constructed. By paying attention to the format of this list, we can also create a face manually by editing a **Panel** component and entering the appropriate format for either triangular or quad faces.
 
 ![IMAGE](images/1-6-1/06_faces-with-panel.png)
 >1. A face created using a **Mesh Quad** component
@@ -51,9 +51,9 @@ So far we have a list of vertices and a set of face definitions, but have not ye
 2. A panel shows that we have created a mesh with 5 vertices and 2 faces
 3. The resulting mesh (the vertices have been labeled with their indices)
 
-By default, Grasshopper only previews the surfaces of mesh geometry without displaying the edges. To preview the edges as well as the surfaces, you can turn on mesh edge preview by using the shortcut Ctrl-M, or by going to the Display menu and selecting 'Preview Mesh Edges'.
+By default, Grasshopper does not preview the edges of mesh geometry. To preview the edges as well as the surfaces, you can turn on mesh edge preview by using the shortcut Ctrl-M, or by going to the Display menu and selecting 'Preview Mesh Edges'.
 
-![IMAGE](images/1-6-1/preview-mesh-edges.png)
+![IMAGE](images/1-6-1/08_preview-mesh-edges.png)
 
 It is extremely important to pay attention to the order of the indices when constructing a mesh face. The face will be constructed by connecting the vertices listed in order, so the quad faces Q{0,1,2,3} and Q{1,0,2,3} are very different, despite using the same four vertices. Incorrect vertex ordering can lead to problems such as holes, non-manifold mesh geometry, or non-orientable surfaces. Such mesh geometry is usually not correctly rendered, and not able to be 3D printed. These issues are discussed in more detail in the **Understanding Topology** section.
 
@@ -83,9 +83,9 @@ Grasshopper groups edges into three categories based on the valence:
 We can use the **Mesh Edges** component to get the edges of a mesh outputted according to valence. This allows us to locate edges along the boundary of a mesh, or to identify non-manifold edges. Sometimes, however, it is more useful to have the full boundary of each face. For this, we can use the **Face Boundaries** component. This will return a polyline for each face.
 
 ![IMAGE](images/1-6-1/10_edge-component.png)
->1. A **Mesh Edges** component outputs three sets of edges. This mesh has 5 naked edges, 1 interior edge, and zero non-manifold edges
+>1. The **Mesh Edges** component outputs three sets of edges. This mesh has 5 naked edges, 1 interior edge, and zero non-manifold edges
 2. The E3 output is empty, because this mesh does not have any non-manifold edges, resulting in an orange wire.
-3. A **Face Boundaries** component outputs one polyline for each face
+3. The **Face Boundaries** component outputs one polyline for each face
 
 **Face Normals**
 

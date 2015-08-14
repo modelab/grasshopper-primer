@@ -4,6 +4,8 @@
 
 ####1.6.4.1 Smooth
 
+![IMAGE](images/1-6-4/smooth.png)
+
 Smoother meshes can sometimes be achieved by simply increasing the number of faces in a process called *subdivision*. This can often lead to extremely large datasets which take a long time to calculate, and requires additional add-ons to Grasshopper that are not built-in. In these situations, the **Smooth** component can be used as an alternative to make meshes less jagged or faceted, without increasing vertex and face count or changing the topology.  The *strength*, *number of iterations*, and displacement *limit* can all be used to adjust how much smoothing occurs.
 
 Attaching a boolean value to the input N provides option to skip naked vertices. A vertex is naked if it is connected to a naked edge, meaning the vertex is on the boundary of an open mesh. By toggling this option, you maintain the exterior boundary of a mesh while smoothing the interior edges.
@@ -17,6 +19,8 @@ Attaching a boolean value to the input N provides option to skip naked vertices.
 
 ####1.6.4.2 Blur
 
+![IMAGE](images/1-6-4/blur.png)
+
 The **Blur** component acts in a similar way as smooth, except it only affect the vertex colors. It can also be used to reduce the jagged appearance of colored meshes, although to a lesser extent since it does not change any geometry.
 
 ![IMAGE](images/1-6-4/04_blur.png)
@@ -28,6 +32,8 @@ The **Blur** component acts in a similar way as smooth, except it only affect th
 
 ####1.6.4.3 Triangulate
 
+![IMAGE](images/1-6-4/triangulate.png)
+
 In order to ensure each face is planar, or to export a mesh to a different software that might not allow quad faces, it is sometimes necessary to triangulate a mesh. Using the **Triangulate** component, each quad face is replaced with two triangle faces. Grasshopper always uses the shortest diagonal of the face to create a new edge.
 
 ![IMAGE](images/1-6-4/05_triangulate.png)
@@ -36,6 +42,8 @@ In order to ensure each face is planar, or to export a mesh to a different softw
 3. Triangulated resultant mesh
 
 ####1.6.4.4 Weld
+
+![IMAGE](images/1-6-4/weld.png)
 
 In the last section, we noticed that a single vertex can be shared by adjacent faces and the normal for that vertex is calculated as the average of the adjacent faces, allowing a smoother visualization. However, it is sometimes desireable to have a sharp crease or seam where one face does not smoothly transition to the next by way of the vertex normals. For this situation it is necessary for each face to have its own vertex with its own normal. The list of vertices would contain at least two points that have the same coordinates, but different indices.
 

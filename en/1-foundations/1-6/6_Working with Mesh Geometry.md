@@ -10,7 +10,7 @@
 
 Since this definition is somewhat longer than previous examples in this primer, we will first walk through the basic steps we will take:
 
-![IMAGE](images/1-6-6/vase-steps.png)
+![IMAGE](images/1-6-6/01_vase-steps.png)
 
 >1. Create a series of circles as a base cylinder
 2. Use a Graph Mapper component to define the profile of our vase
