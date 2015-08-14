@@ -5,7 +5,7 @@ td {background-color: #F9F9F9;}
 thead {display: none}
 </style>
 ### 1.4.7. WORKING WITH LISTS
-{% if gitbook.generator == "pdf" or "mobi" or "epub" %}
+{% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
 >Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 
 {% else %}
