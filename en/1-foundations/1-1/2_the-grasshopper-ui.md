@@ -161,18 +161,9 @@ outline type can be defined by right-clicking on any group object.
 >You can also define a group using a meta-ball algorithm by using the Blob Outline profile.
 
 ![IMAGE](images/1-1-2/1-1-2_008-grouping3.png)
->Two groups are nested inside one another. The color (light blue) has been changed on the outer group to help visually identify one group from the other. Groups are drawn “behind” the components within them.
+>Two groups are nested inside one another. The color (light blue) has been changed on the outer group to help visually identify one group from the other. Groups are drawn “behind” the components within them and, in cases such as this, there is a depth order to the two groups. To change this, go to Edit > Arrange in the main menu bar.
 
-####1.1.2.6.1 Front-To-Back Ordering
-Although one can (and should) usually arrange components and groups far enough apart that they do not need to overlap, crowding items closer together is manageable using Edit->Arrange from the main menu bar.  You can manipulate the front-to-back order in which overlapped components appear.  The front-to-back order in which overlapped groups appear can also be controlled.
-
-![IMAGE](image/1-1-2/1-1-2_009-depthOrder1.png)
-> A group of related components which could be used to orient a 3D vector is arranged without any overlapping components.
-
-![IMAGE](image/1-1-2/1-1-2_009-depthOrder1.png)
-> The same group is arranged with some overlapping components. The Multi-dimensional Slider has been placed in front of the Decompose-Vector component but behind the Number Slider so that all the user-interface functionality is still available.
-
-####1.1.2.7. WIDGETS
+####1.1.1.7. WIDGETS
 There are a few widgets that are available in Grasshopper that can help you
 perform useful actions. You can toggle any of these widgets on/off under the
 Display menu of the Main Menu bar. Below we’ll look at a few of the most
