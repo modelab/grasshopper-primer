@@ -65,28 +65,25 @@ Properties menu. Select Units to change the units and tolerances.
 >Change the units and tolerances in the Rhino Document Properties menu.
 
 ####1.1.3.6. REMOTE CONTROL PANEL
-Once you get the hang of it, Grasshopper is an incredibly powerful and flexible
-tool which allows you to explore design iterations using a graphic interface.
-However, if you’re working with a single screen then you may have already
-noticed that the Grasshopper editor takes up a lot of screen real-estate. Other
-than constantly zooming in and out and moving windows around your screen,
-there really isn’t an elegant solution to this problem. That is…until the release of the Remote Control Panel!
+Grasshopper is an incredibly powerful and flexible tool which allows you to explore
+design iterations using a rich graphic interface. However, because the Grasshopper editor
+occupies a considerable portion of the screen, especially in single-screen environments,
+trying to manipulate Grasshopper user elements and the Rhino viewport can get tricky.
+Fortunately an elegant solution that minimizes the need for window switching and re-sizing exists.
 
-The Remote Control Panel (RCP) provides a minimal interface to control your
-definition without taking up a substantial portion of your screen. The RCP can
-be instantiated by clicking on the toggle under the View menu of the Main Menu
-bar. By default, the RCP is blank — meaning it doesn’t contain any information
-about your current Grasshopper document. To populate the RCP with UI
-elements like sliders, toggles, and buttons, simply right click on the element
-and click Publish To Remote Panel. This will create a new group and create a
-synchronized UI element in the RCP. Changing the value of the element in the
-RCP will also update the value in the graph, as well as modify any geometry
-in the viewport which might be dependant on this parameter. You can publish
-multiple elements and populate a complete interface which can be used to
-control your file without having the clutter of the visual graph showing up on top
-of the Rhino viewport.
+The Remote Control Panel (RCP) provides a more visually compact way to control your
+Grasshopper definition. The RCP can be instantiated by clicking on the toggle
+under the View menu of the Main Menu bar. By default, the RCP is blank — meaning
+it doesn’t contain any information about your current Grasshopper document. To
+populate the RCP with UI elements like sliders, toggles, and buttons, simply
+right click on the element in Grasshopper and click Publish To Remote Panel. Publishing
+a control creates an alternate access to that control in the RCP that will still be visible
+when the Rhino window is maximized. Multiple Grasshopper UI elements can be published to the RCP
+so they can all be accessible simultaneously while allowing Rhino the maximum possible screen area.
 
->Note: The RCP will inherit the UI elements name and use it as the label. It is good practice to update your sliders and toggles with comprehensible and meaningful names. This will translate directly to your RCP making it easier to use.
+>Note: Each UI element access point created in the RCP will be labelled with the UI element's
+ name. It is best to provide all of the UI elements with comprehensible and meaningful
+ names. Properly labelled RCP controls will make your RCP easier to use.
 
 
 ![IMAGE](images/1-1-3/1-1-3_007-remote-control1.png)
