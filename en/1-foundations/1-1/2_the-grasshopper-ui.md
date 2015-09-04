@@ -78,26 +78,6 @@ file onto the canvas to load a particular definition.
 > Grasshopper is a plug-in that works “on-top” of Rhino and as such has its own file types.
 The default file type is a binary data file, saved with an extension of .gh. The other file type is known as a Grasshopper XML file, which uses the extension .ghx. The XML (Extensible Markup Language) file type uses tags to define objects and object attributes (much like an .HTML document) but uses custom tags to define objects and the data within each object. Because XML files are formatted as textdocuments, you could open up any Grasshopper XML file in a text editor like NotePad to see the coding that is going on behind the scenes.
 
-Grasshopper has several different methods by which it can open a file, and you
-will need to specify which option you would like to use when using this method.
-
-**Open File:** As the name suggests, this file option will simply open any
-definition that you drag and drop onto the canvas.
-
-**Insert File:** You can use this option to insert an existing file into the current
-document as loose components.
-
-**Group File:** This method will insert a file into an existing document, but will
-group all of the objects together.
-
-**Cluster File:** Similar to the group function, this method will insert a file into
-an existing document, but will create a cluster object for the entire group
-of objects.
-
-**Examine File:** Allows you to open a file in a locked state, meaning you
-can look around a particular file but you can’t make any changes to the
-definition.
-
 Grasshopper also has an Autosave feature which will be triggered periodically
 based on specific user actions. A list of Autosave preferences can be found
 under the File menu on the Main Menu Bar. When the active instance of Rhino is
@@ -161,9 +141,18 @@ outline type can be defined by right-clicking on any group object.
 >You can also define a group using a meta-ball algorithm by using the Blob Outline profile.
 
 ![IMAGE](images/1-1-2/1-1-2_008-grouping3.png)
->Two groups are nested inside one another. The color (light blue) has been changed on the outer group to help visually identify one group from the other. Groups are drawn “behind” the components within them and, in cases such as this, there is a depth order to the two groups. To change this, go to Edit > Arrange in the main menu bar.
+>Two groups are nested inside one another. The color (light blue) has been changed on the outer group to help visually identify one group from the other. Groups are drawn “behind” the components within them.
 
-####1.1.1.7. WIDGETS
+####1.1.2.6.1 Front-To-Back Ordering
+Although one can (and should) usually arrange components and groups far enough apart that they do not need to overlap, crowding items closer together is manageable using Edit->Arrange from the main menu bar.  You can manipulate the front-to-back order in which overlapped components appear.  The front-to-back order in which overlapped groups appear can also be controlled.
+
+![IMAGE](images/1-1-2/1-1-2_008-5depthOrder1.png)
+> A group of related components which could be used to orient a 3D vector is arranged without any overlapping components.
+
+![IMAGE](images/1-1-2/1-1-2_008-5depthOrder2.png)
+> The same group is arranged with some overlapping components. The Multi-dimensional Slider has been placed in front of the Decompose-Vector component but behind the Number Slider so that all the user-interface functionality is still available.
+
+####1.1.2.7. WIDGETS
 There are a few widgets that are available in Grasshopper that can help you
 perform useful actions. You can toggle any of these widgets on/off under the
 Display menu of the Main Menu bar. Below we’ll look at a few of the most
