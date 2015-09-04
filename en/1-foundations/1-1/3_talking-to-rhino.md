@@ -95,9 +95,9 @@ will make both Grasshopper and RCP interfaces easier to use.
 Panel, we have to first publish it.
 
 To help users understand your RCP user-interface, arrange elements in the RCP
-into groups and provide them with labels and colors. Clicking the green pencil
-in the upper right hand corner of the RCP toggles it between Working Mode and
-Editing Mode. To delete UI elements, simply drag them past the edge of the RCP.
+into groups that you can label and color. Clicking the green pencil in the
+upper right hand corner of the RCP toggles it between Working Mode and Editing
+Mode. To delete UI elements, simply drag them past the edge of the RCP.
 
 >_The Remote Control Panel has two modes: Edit Mode (left) which allows you to
 reorganize the look and feel of the RCP, and Working Mode where you can modify
