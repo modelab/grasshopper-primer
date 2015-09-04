@@ -69,7 +69,7 @@ Grasshopper is an incredibly powerful and flexible tool which allows you to expl
 design iterations using a rich graphic interface. However, because the Grasshopper editor
 occupies a considerable portion of the screen, especially in single-screen environments,
 trying to manipulate Grasshopper user elements and the Rhino viewport can get tricky.
-Fortunately an elegant solution that minimizes the need for window switching and re-sizing exists.
+Fortunately an elegant solution avoids requiring the two interfaces to share the screen.
 
 The Remote Control Panel (RCP) provides a more visually compact way to control your
 Grasshopper definition. The RCP can be instantiated by clicking on the toggle
