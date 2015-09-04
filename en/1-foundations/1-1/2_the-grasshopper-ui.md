@@ -78,26 +78,6 @@ file onto the canvas to load a particular definition.
 > Grasshopper is a plug-in that works “on-top” of Rhino and as such has its own file types.
 The default file type is a binary data file, saved with an extension of .gh. The other file type is known as a Grasshopper XML file, which uses the extension .ghx. The XML (Extensible Markup Language) file type uses tags to define objects and object attributes (much like an .HTML document) but uses custom tags to define objects and the data within each object. Because XML files are formatted as textdocuments, you could open up any Grasshopper XML file in a text editor like NotePad to see the coding that is going on behind the scenes.
 
-Grasshopper has several different methods by which it can open a file, and you
-will need to specify which option you would like to use when using this method.
-
-**Open File:** As the name suggests, this file option will simply open any
-definition that you drag and drop onto the canvas.
-
-**Insert File:** You can use this option to insert an existing file into the current
-document as loose components.
-
-**Group File:** This method will insert a file into an existing document, but will
-group all of the objects together.
-
-**Cluster File:** Similar to the group function, this method will insert a file into
-an existing document, but will create a cluster object for the entire group
-of objects.
-
-**Examine File:** Allows you to open a file in a locked state, meaning you
-can look around a particular file but you can’t make any changes to the
-definition.
-
 Grasshopper also has an Autosave feature which will be triggered periodically
 based on specific user actions. A list of Autosave preferences can be found
 under the File menu on the Main Menu Bar. When the active instance of Rhino is
