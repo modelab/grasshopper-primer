@@ -248,7 +248,7 @@ component on the canvas green.
 ![IMAGE](images/1-1-2/1-1-2_015-find3.png)
 >A small arrow will also be displayed next to each item in the list which points
 to its corresponding component on the canvas. Try moving the Find dialog box
-around on the canvas and watch the arrows rotate in to keep track of their
+around on the canvas and watch the arrows rotating to remain pointed at their
 components. Clicking on the Find result will try to place the component (on the
 canvas) next to the Find dialog box.
 
