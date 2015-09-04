@@ -101,7 +101,7 @@ you are in Editing Mode. Instead, you will have to click on the green pencil ico
 to switch back to the standard Working Mode.
 
 >_The Remote Control Panel has two modes: Edit Mode (left) which allows you to reorganize the look and feel of the RCP, and Working Mode where you can modify the actual values of the UI elements._
-![IMAGE](images/1-1-3/1-1-3_008-remote2.png)
+![IMAGE](images/1-1-3/1-1-3_008-remote-control2.png)
 >The Remote Control Panel in Edit Mode has an orange background.
 
 
