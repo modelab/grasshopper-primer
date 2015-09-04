@@ -68,7 +68,7 @@ Properties menu. Select Units to change the units and tolerances.
 Grasshopper is an incredibly powerful and flexible tool which allows you to explore
 design iterations using a rich graphic interface. However, because the Grasshopper editor
 occupies a considerable portion of the screen, especially in single-screen environments,
-trying to manipulate Grasshopper user elements and the Rhino viewport can get tricky.
+trying to manipulate its user interface elements and the Rhino viewport can get tricky.
 Fortunately an elegant solution avoids requiring the two interfaces to share the screen.
 
 Grasshopper's Remote Control Panel (RCP) can hover over Rhino or dock into it, providing 
