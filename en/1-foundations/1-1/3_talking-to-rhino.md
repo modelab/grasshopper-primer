@@ -1,6 +1,6 @@
 ###1.1.3. TALKING TO RHINO
 
-#####Unlike a Rhino document, a Grasshopper definition does not contain any actual objectsor geometry. Instead, a Grasshopper definition represents a set of rules & instructions for how Rhino can automate tasks.
+#####Unlike a Rhino document, a Grasshopper definition does not contain any actual objects or geometry. Instead, a Grasshopper definition represents a set of rules & instructions for how Rhino can automate tasks.
 
 ![IMAGE](images/1-1-3/1-1-3_001-talking-to-rhino.png)
 >1. Grasshopper preview geometry.

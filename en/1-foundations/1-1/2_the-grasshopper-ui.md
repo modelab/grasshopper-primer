@@ -265,7 +265,7 @@ or by clicking your middle mouse button. The radial menu will enable different
 tools depending on whether you invoke the menu by clicking directly on top
 of a component, or just anywhere on the canvas. In the image below, you see
 the radial menu has more features available when clicking on top of a selected
-component versus just clicking anywhere else on the canvas. This menu can
+component than when just clicking on the canvas. This menu can
 dramatically increase the speed at which you create Grasshopper documents.
 
 ![IMAGE](images/1-1-2/1-1-2_016-radial-menu.png)
@@ -279,7 +279,7 @@ View tab on the Main Menu Bar.
 
 ![IMAGE](images/1-1-2/1-1-2_017-toolbar1.png)
 >1. **Open File:** A shortcut to open a Grasshopper File.
-2.  **Save File:** A shortcut to save the currentGrasshopper File.
+2.  **Save File:** A shortcut to save the current Grasshopper File.
 3.  **Zoom Defaults**: Default zoom settings that allow you to zoom in or out of your canvas at predefined intervals.
 4. **Zoom Extents:** Zoom to the extents of your definition. Click on the arrow next to the Zoom Extents icon to select one of the sub-menu items to zoom to a particular region within your definition.
 5. **Named Views: **This feature exposes a menu allowing you to store or recall any view area in your definition.
@@ -293,7 +293,7 @@ tool set found in Adobe Photoshop with a few added features.
 4. Shaded preview (default).
 5. **Preview Selected Objects:** With this button toggled, Grasshopper will only display geometry that is part of selected components, even if those components have a preview=off state.
 6. **Document Preview Settings:** Grasshopper has a default color scheme for selected (semi-transparent green) and unselected (semi-transparent red) geometry. It is possible to override this color scheme with the Document Preview Settings dialog.
-7. **Preview Mesh Quality:** For optimization purposes, these settings allow you to control the quality of the mesh/surface display of the geometry rendered in Rhino. Higher quality settings will cause longer calculation times, whereas lower settings will display less accurate preview geometry. It should be noted that the geometry still maintains a high-degree of resolution when baked into the Rhino document – these settings merely effect the display performance and quality.
+7. **Preview Mesh Quality:** For optimization purposes, these settings allow you to control the quality of the mesh/surface display of the geometry rendered in Rhino. Higher quality settings will cause longer calculation times, whereas lower settings will display less accurate preview geometry. It should be noted that the geometry still maintains a high-degree of resolution when baked into the Rhino document – these settings merely affect the display performance and quality.
 
 ![IMAGE](images/1-1-2/1-1-2_018-sketch.png)
 >The sketch tool allows changes to the line weight, line type, and color. By right-clicking on the selected sketch object you can choose to simplify your line to create a smoother effect. Right-click on your sketch object and select “Load from Rhino”. When prompted, select any 2D shape in your Rhino scene. Once you have selected your referenced shape, hit Enter, and your previous sketch line will be reconfigured to your Rhino reference shape.
