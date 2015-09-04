@@ -79,10 +79,10 @@ Main Menu bar. Initially, the RCP is blank — it doesn’t yet contain any
 Grasshopper user interface element links. To add linked copies of Grasshopper
 UI elements like sliders, toggles, and buttons to the RCP, right-click on the
 element in Grasshopper and click Publish To Remote Panel. Publishing a control
-copies a linked version of it into the RCP which can be positioned to remain
-visible even when the Grasshopper window is not. Multiple Grasshopper UI
-elements can be published to the RCP so they can all be accessible
-simultaneously while allowing Rhino the maximum possible screen area.
+copies a linked version of it into the RCP which helps since it acts like other
+dockable Rhino toobars, active when the Rhino window has the focus. Multiple
+Grasshopper UI elements can be published to the RCP so they are conveniently
+accessible in a way that maximizes the screen area available for viewing Rhino.
 
 >Note: Each linked copy of published UI elements will be labelled in the RCP
 with the original UI element's name. As a best practice, provide all UI input
@@ -91,8 +91,8 @@ will make both Grasshopper and RCP interfaces easier to use.
 
 
 ![IMAGE](images/1-1-3/1-1-3_007-remote-control1.png)
-> In order to get a UI element (eg. slider, toggle, button, etc.) to show up in the Remote Control
-Panel, we have to first publish it.
+> In order to get a UI element (eg. slider, toggle, button, etc.) to show up in
+the Remote Control Panel, we have to first publish it.
 
 To help users understand your RCP user-interface, arrange elements in the RCP
 into groups that you can label and color. Clicking the green pencil in the
