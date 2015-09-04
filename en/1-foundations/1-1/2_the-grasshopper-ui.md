@@ -146,10 +146,10 @@ outline type can be defined by right-clicking on any group object.
 ####1.1.2.6.1 Front-To-Back Ordering
 Although one can (and should) usually arrange components and groups far enough apart that they do not need to overlap, crowding items closer together is manageable using Edit->Arrange from the main menu bar.  You can manipulate the front-to-back order in which overlapped components appear.  The front-to-back order in which overlapped groups appear can also be controlled.
 
-![IMAGE](images/1-1-2/1-1-2_008_5-depthOrder1.png)
+![IMAGE](images/1-1-2/1-1-2_008-5depthOrder1.png)
 > A group of related components which could be used to orient a 3D vector is arranged without any overlapping components.
 
-![IMAGE](images/1-1-2/1-1-2_008_5-depthOrder2.png)
+![IMAGE](images/1-1-2/1-1-2_008-5depthOrder2.png)
 > The same group is arranged with some overlapping components. The Multi-dimensional Slider has been placed in front of the Decompose-Vector component but behind the Number Slider so that all the user-interface functionality is still available.
 
 ####1.1.2.7. WIDGETS
