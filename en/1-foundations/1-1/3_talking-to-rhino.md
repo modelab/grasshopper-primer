@@ -71,15 +71,15 @@ occupies a considerable portion of the screen, especially in single-screen envir
 trying to manipulate Grasshopper user elements and the Rhino viewport can get tricky.
 Fortunately an elegant solution avoids requiring the two interfaces to share the screen.
 
-The Remote Control Panel (RCP) provides a more visually compact way to control your
-Grasshopper definition. The RCP can be instantiated by clicking on the toggle
-under the View menu of the Main Menu bar. By default, the RCP is blank — meaning
-it doesn’t contain any information about your current Grasshopper document. To
-populate the RCP with UI elements like sliders, toggles, and buttons, simply
-right click on the element in Grasshopper and click Publish To Remote Panel. Publishing
-a control creates an alternate access to that control in the RCP that will still be visible
-when the Rhino window is maximized. Multiple Grasshopper UI elements can be published to the RCP
-so they can all be accessible simultaneously while allowing Rhino the maximum possible screen area.
+Grasshopper's Remote Control Panel (RCP) can hover over Rhino or dock into it, providing 
+a more visually compact way to control your Grasshopper definition. The RCP can be
+instantiated by activating the toggle under the View menu of the Main Menu bar. Initially,
+the RCP is blank — it doesn’t yet contain any access points to current Grasshopper UI elements.
+To add access points to Grasshopper UI elements like sliders, toggles, and buttons through the RCP,
+simply right-click on the element in Grasshopper and click Publish To Remote Panel. Publishing
+a control creates an access-point to that control in the RCP you can ensure stays visible
+even when the Grasshopper window is not. Multiple Grasshopper UI elements can be published to the
+RCP so they can all be accessible simultaneously while allowing Rhino the maximum possible screen area.
 
 >Note: Each UI element access point created in the RCP will be labelled with the UI element's
  name. It is best to provide all of the UI elements with comprehensible and meaningful
