@@ -94,18 +94,14 @@ will make both Grasshopper and RCP interfaces easier to use.
 > In order to get a UI element (eg. slider, toggle, button, etc.) to show up in the Remote Control
 Panel, we have to first publish it.
 
-The RCP UI can also be customized – allowing you to control where access points
-appear in the interface, the names and colors of different groups. To modify the
-layout of the RCP you first have to switch from Working Mode (the default RCP
-view) to Editing Mode. You can enter the Editing Mode by clicking on the green
-pencil in the upper right hand corner of the RCP. Once in Editing Mode, you can
-create new UI groups, rearrange elements within groups, add labels, change
-colors and more. To delete a UI element, simply drag the element outside the
-border of the RCP. You cannot change the individual values of the parameters if
-you are in Editing Mode. Instead, you will have to click on the green pencil icon
-to switch back to the standard Working Mode.
+To help users understand your RCP user-interface, arrange elements in the RCP
+into groups and provide them with labels and colors. Clicking the green pencil
+in the upper right hand corner of the RCP toggles it between Working Mode and
+Editing Mode. To delete UI elements, simply drag them past the edge of the RCP.
 
->_The Remote Control Panel has two modes: Edit Mode (left) which allows you to reorganize the look and feel of the RCP, and Working Mode where you can modify the actual values of the UI elements._
+>_The Remote Control Panel has two modes: Edit Mode (left) which allows you to
+reorganize the look and feel of the RCP, and Working Mode where you can modify
+the actual values of the UI elements._
 ![IMAGE](images/1-1-3/1-1-3_008-remote-control2.png)
 >The Remote Control Panel in Edit Mode has an orange background.
 
