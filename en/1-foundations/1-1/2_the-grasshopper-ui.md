@@ -78,26 +78,6 @@ file onto the canvas to load a particular definition.
 > Grasshopper is a plug-in that works “on-top” of Rhino and as such has its own file types.
 The default file type is a binary data file, saved with an extension of .gh. The other file type is known as a Grasshopper XML file, which uses the extension .ghx. The XML (Extensible Markup Language) file type uses tags to define objects and object attributes (much like an .HTML document) but uses custom tags to define objects and the data within each object. Because XML files are formatted as textdocuments, you could open up any Grasshopper XML file in a text editor like NotePad to see the coding that is going on behind the scenes.
 
-Grasshopper has several different methods by which it can open a file, and you
-will need to specify which option you would like to use when using this method.
-
-**Open File:** As the name suggests, this file option will simply open any
-definition that you drag and drop onto the canvas.
-
-**Insert File:** You can use this option to insert an existing file into the current
-document as loose components.
-
-**Group File:** This method will insert a file into an existing document, but will
-group all of the objects together.
-
-**Cluster File:** Similar to the group function, this method will insert a file into
-an existing document, but will create a cluster object for the entire group
-of objects.
-
-**Examine File:** Allows you to open a file in a locked state, meaning you
-can look around a particular file but you can’t make any changes to the
-definition.
-
 Grasshopper also has an Autosave feature which will be triggered periodically
 based on specific user actions. A list of Autosave preferences can be found
 under the File menu on the Main Menu Bar. When the active instance of Rhino is
@@ -161,9 +141,18 @@ outline type can be defined by right-clicking on any group object.
 >You can also define a group using a meta-ball algorithm by using the Blob Outline profile.
 
 ![IMAGE](images/1-1-2/1-1-2_008-grouping3.png)
->Two groups are nested inside one another. The color (light blue) has been changed on the outer group to help visually identify one group from the other. Groups are drawn “behind” the components within them and, in cases such as this, there is a depth order to the two groups. To change this, go to Edit > Arrange in the main menu bar.
+>Two groups are nested inside one another. The color (light blue) has been changed on the outer group to help visually identify one group from the other. Groups are drawn “behind” the components within them.
 
-####1.1.1.7. WIDGETS
+####1.1.2.6.1 Front-To-Back Ordering
+Although one can (and should) usually arrange components and groups far enough apart that they do not need to overlap, crowding items closer together is manageable using Edit->Arrange from the main menu bar.  You can manipulate the front-to-back order in which overlapped components appear.  The front-to-back order in which overlapped groups appear can also be controlled.
+
+![IMAGE](images/1-1-2/1-1-2_008-5depthOrder1.png)
+> A group of related components which could be used to orient a 3D vector is arranged without any overlapping components.
+
+![IMAGE](images/1-1-2/1-1-2_008-5depthOrder2.png)
+> The same group is arranged with some overlapping components. The Multi-dimensional Slider has been placed in front of the Decompose-Vector component but behind the Number Slider so that all the user-interface functionality is still available.
+
+####1.1.2.7. WIDGETS
 There are a few widgets that are available in Grasshopper that can help you
 perform useful actions. You can toggle any of these widgets on/off under the
 Display menu of the Main Menu bar. Below we’ll look at a few of the most
@@ -259,7 +248,7 @@ component on the canvas green.
 ![IMAGE](images/1-1-2/1-1-2_015-find3.png)
 >A small arrow will also be displayed next to each item in the list which points
 to its corresponding component on the canvas. Try moving the Find dialog box
-around on the canvas and watch the arrows rotate in to keep track of their
+around on the canvas and watch the arrows rotating to remain pointed at their
 components. Clicking on the Find result will try to place the component (on the
 canvas) next to the Find dialog box.
 
@@ -276,7 +265,7 @@ or by clicking your middle mouse button. The radial menu will enable different
 tools depending on whether you invoke the menu by clicking directly on top
 of a component, or just anywhere on the canvas. In the image below, you see
 the radial menu has more features available when clicking on top of a selected
-component versus just clicking anywhere else on the canvas. This menu can
+component than when just clicking on the canvas. This menu can
 dramatically increase the speed at which you create Grasshopper documents.
 
 ![IMAGE](images/1-1-2/1-1-2_016-radial-menu.png)
@@ -290,7 +279,7 @@ View tab on the Main Menu Bar.
 
 ![IMAGE](images/1-1-2/1-1-2_017-toolbar1.png)
 >1. **Open File:** A shortcut to open a Grasshopper File.
-2.  **Save File:** A shortcut to save the currentGrasshopper File.
+2.  **Save File:** A shortcut to save the current Grasshopper File.
 3.  **Zoom Defaults**: Default zoom settings that allow you to zoom in or out of your canvas at predefined intervals.
 4. **Zoom Extents:** Zoom to the extents of your definition. Click on the arrow next to the Zoom Extents icon to select one of the sub-menu items to zoom to a particular region within your definition.
 5. **Named Views: **This feature exposes a menu allowing you to store or recall any view area in your definition.
@@ -304,7 +293,7 @@ tool set found in Adobe Photoshop with a few added features.
 4. Shaded preview (default).
 5. **Preview Selected Objects:** With this button toggled, Grasshopper will only display geometry that is part of selected components, even if those components have a preview=off state.
 6. **Document Preview Settings:** Grasshopper has a default color scheme for selected (semi-transparent green) and unselected (semi-transparent red) geometry. It is possible to override this color scheme with the Document Preview Settings dialog.
-7. **Preview Mesh Quality:** For optimization purposes, these settings allow you to control the quality of the mesh/surface display of the geometry rendered in Rhino. Higher quality settings will cause longer calculation times, whereas lower settings will display less accurate preview geometry. It should be noted that the geometry still maintains a high-degree of resolution when baked into the Rhino document – these settings merely effect the display performance and quality.
+7. **Preview Mesh Quality:** For optimization purposes, these settings allow you to control the quality of the mesh/surface display of the geometry rendered in Rhino. Higher quality settings will cause longer calculation times, whereas lower settings will display less accurate preview geometry. It should be noted that the geometry still maintains a high-degree of resolution when baked into the Rhino document – these settings merely affect the display performance and quality.
 
 ![IMAGE](images/1-1-2/1-1-2_018-sketch.png)
 >The sketch tool allows changes to the line weight, line type, and color. By right-clicking on the selected sketch object you can choose to simplify your line to create a smoother effect. Right-click on your sketch object and select “Load from Rhino”. When prompted, select any 2D shape in your Rhino scene. Once you have selected your referenced shape, hit Enter, and your previous sketch line will be reconfigured to your Rhino reference shape.
