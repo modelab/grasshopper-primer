@@ -92,7 +92,7 @@ This subdivison component will create an all quad mesh by adding a face for each
 
 ####2.1.2.6 Transform
 
-![IMAGE](images/08_transform-components.png)
+![IMAGE](images/08_transforms-components.png)
 >1. Mesh Windown
 2. Mesh Frame
 3. Mesh Thicken
