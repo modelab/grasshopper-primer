@@ -21,7 +21,7 @@ Note - barycentric coordinates are defined such that they always add to 1. If th
 
 **Element\* Mesh Sample Plus**
 
-This component is used to quickly extract color information from a mesh. It returns the Alpha, Red, Green, Blue, Hue, Saturation, and Luminosity values of the inputed points. If the given points are not on the mesh, this component will calculate the closest point.
+This component is used to quickly extract color information from a mesh. It returns the Alpha, Red, Green, Blue, Hue, Saturation, and Luminosity values of the inputed points. If the given points are not on the mesh, this component will calculate the closest point. This component uses Parallel Computing for speed.
 
 
 
@@ -40,10 +40,10 @@ This component is used to help visualize the half-edge data of the faces of an i
 
 **Element\* Edge Neighbors**
 
-This component provides access to the adjacency data structured according to the edges of the input mesh. The output data is provided as a tree with one branch for each edge in the mesh. It provides the end points, center ponts of adjacent faces, neighboring edges as line objects, and the center points of the neighboring faces.
+This component provides access to the adjacency data structured according to the edges of the input mesh. The output data is provided as a tree with one branch for each edge in the mesh. It provides a list of edges, the end points, center ponts of adjacent faces (dual), neighboring edges as line objects, and neighbouring face centers (center points of faces adjacent to the edge start and end points)
 
 ![IMAGE](images/04A_edge-neighbors.png)
-> **Edge Neighbors** - End vertices, adjacent faces, neighboring edges, and neighboring faces
+> **Edge Neighbors** - List of Edges, End vertices, Adjacent face centers, Neighboring edges, and Neighbouring face centers
 
 **Element\* Face Neighbors**
 
