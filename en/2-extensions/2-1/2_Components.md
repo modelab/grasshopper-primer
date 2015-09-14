@@ -129,7 +129,7 @@ For example, a four-sided polygon (quad) is split into 4 three-sided polygons wi
 
 ####2.1.2.7 Utility
 
-![IMAGE](images/09_Utility-components.png)
+![IMAGE](images/09_Utility-Components.png)
 >1. Mesh Combine & Clean
 2. Mesh Edges
 3. Mesh Status
