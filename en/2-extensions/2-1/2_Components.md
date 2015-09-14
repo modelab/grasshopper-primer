@@ -1,3 +1,5 @@
+####2.1.2 Element* Components
+
 ####2.1.2 Analyse
 
 ![IMAGE](images/02_analyse-components.png)
