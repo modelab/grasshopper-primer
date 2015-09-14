@@ -1,8 +1,10 @@
-### 2.1 Element* 
+### 2.1.3 Element* Architectural Case Study 
 
 #####Element\* is a mesh geometry plugin for Grasshopper, enabling mesh creation, analysis, transformation, subdivision, and smoothing. Element* provides access to mesh topology data using the Plankton half-edge data structure for polygon meshes.
 
-####2.1.1 Half Edge Data
+![IMAGE](images/Arch_CaseStudy/Main_Render.jpg)
+
+####2.1.3 Half Edge Data
 
 In the beginning of this chapter, we looked at how Grasshopper defines a mesh using a Face-Vertex data structure. This is a relatively simple data structure and is widely used in applications that use meshes, but can be computationally inefficient for more advanced algorithms. The Element\* add-on restructures the mesh using Half-Edge data in order to allow for efficient queries of adjacent vertices, faces, and edges, which can vastly improve on algorithm speed and performance.
 
@@ -10,7 +12,7 @@ The half-edge data structure is a representation for a mesh in which each edge i
 
 ![IMAGE](images/01_half-edge-edit.png)
 
-####2.1.2 Analyse
+####2.1.3 Analyse
 
 ![IMAGE](images/02_analyse-components.png)
 >1. Mesh Closest Point
@@ -30,111 +32,6 @@ Note - barycentric coordinates are defined such that they always add to 1. If th
 **Element\* Mesh Sample Plus**
 
 This component is used to quickly extract color information from a mesh. It returns the Alpha, Red, Green, Blue, Hue, Saturation, and Luminosity values of the inputed points. If the given points are not on the mesh, this component will calculate the closest point.
-
-
-
-####2.1.3 Data
-
-![IMAGE](images/03_data-components.png)
->1. Data Visualizer
-2. Edge Neighbors
-3. Face Neighbors
-4. Vertex Neighbors
-
-
-**Element\* Data Visualizer**
-
-This component is used to help visualize the half-edge data of the faces of an input mesh. 
-
-**Element\* Edge Neighbors**
-
-This component provides access to the adjacency data structured according to the edges of the input mesh. The output data is provided as a tree with one branch for each edge in the mesh. It provides the end points, center ponts of adjacent faces, neighboring edges as line objects, and the center points of the neighboring faces.
-
-![IMAGE](images/04A_edge-neighbors.png)
-> **Edge Neighbors** - End vertices, adjacent faces, neighboring edges, and neighboring faces
-
-**Element\* Face Neighbors**
-
-This component is similar to the others in this section, but the data is organized in a tree according to the faces of the mesh, with one branch per face. The outputs are the vertices of each face, the adjacent edges, and the centers of neighboring faces.
-
-Note - This component only allows triangulated meshes.
-
-![IMAGE](images/04B_face-neighbors.png)
-> **Face Neighbors** - Adjacent vertices, adjacent edges, and neighboring faces
-
-**Element\* Vertex Neighbors**
-
-This component outputs neighboring vertices, edges, and face centers structured in a tree according to the vertices of the mesh.
-
-![IMAGE](images/04C_vertex-neighbors.png)
-> **Vertex Neighbors** - Adjacent Edges, adjactent faces, and neighboring vertices
-
-####2.1.4 Primitives
-
-Element\* provides four additional mesh primitives: the Icosohedron, Dodecahedron, Octahedron, and Tetrahedron. These components take a single number as input for the radius, and produce meshes centered at the origin, and composed of one face per side. With the addition of the Cube, which is already availible through Grasshopper's built-in primitives, these make up the five Platonic solids. 
-
-![IMAGE](images/05_primitives.png)
->1. Dodecahedron
-2. Tetrahedron
-3. Octahedron
-4. Tetrahedron
-
-####2.1.5 Smooth
-
-**Element\* Smooth** provides an optimized smoothing algorithm that is more efficient than Grasshopper's **Smooth Mesh** for large datasets. It makes use of the Lapacian Smoothing algorithm for Half-Edge structured meshes. It does not change the topology or vertex count of welded meshes, but will weld together any unwelded meshes.
-
-![IMAGE](images/06_smooth.png)
-
-####2.1.6 Subdivide
-
-**Element\* Catmull Clark Subdivision** 
-
-This is a recursive subdivision defined by the Catmull Clark algorithm. We can specify the number of iterations as well as how to handle naked edge conditions.
-
-
-**Element\* Constant Quad**
-
-This subdivison component will create an all quad mesh by adding a face for each edge of the mesh.
-
-![IMAGE](images/07_subdivide.png)
->1. Catmull Clark subdivision
-2. Constant Quad subdivision
-
-####2.1.7 Transform
-
-![IMAGE](images/08_transform-components.png)
->1. Mesh Windown
-2. Mesh Frame
-3. Mesh Thicken
-4. Mesh Offset
-
-These components provide a number of different transformations described below. Each component has the additional capability of accepting per-vertex distance data to allow for variations of the transformation magnitudes across the mesh.
-
-**Element\* Mesh Window**
-
-Reconstructs a new mesh on the inside of a face based on an offset value. This component accepts either a mesh or a list of closed polylines as input.
-
-**Element\* Mesh Frame**
-
-Outputs a frame around mesh faces. Each resultant face will have a new hole in the center. This component accepts either a mesh or a list of closed polylines as input.
-
-**Element\* Mesh Thicken**
-
-This component will thicken an input mesh along the vertex normals, and according to provided distance values.
-
-**Element\* Mesh Offset**
-
-This component creats an offset of the input mesh based on the vertex normals.
-
-![IMAGE](images/09_transform-examples.png)
->1. Mesh Window
-2. Mesh Frame
-3. Icosohedron transformed with mesh frame, then thickend and subdivided
-
-####2.1.8 Utility
-
-The **Element\* Mesh Combine and Clean** component will combine multiple meshes together and weld the vertices and vertex normals according to an input threshold angle.
-
 
 ####2.1.9 Exercise
 
