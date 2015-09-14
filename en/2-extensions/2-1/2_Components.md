@@ -129,4 +129,9 @@ For example, a four-sided polygon (quad) is split into 4 three-sided polygons wi
 
 ####2.1.2.7 Utility
 
+![IMAGE](images/09_Utility-components.png)
+>1. Mesh Combine & Clean
+2. Mesh Edges
+3. Mesh Status
+
 The **Element\* Mesh Combine and Clean** component will combine multiple meshes together and weld the vertices and vertex normals according to an input threshold angle.
