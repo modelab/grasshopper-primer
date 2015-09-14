@@ -61,17 +61,17 @@ This component outputs the mesh vertices, neighboring vertices (arranged in cloc
 
 ####2.1.2.3 Primitives
 
-Element\* provides four additional mesh primitives: the Icosohedron, Dodecahedron, Octahedron, and Tetrahedron. These components take a single number as input for the radius, and produce meshes centered at the origin, and composed of one face per side. With the addition of the Cube, which is already availible through Grasshopper's built-in primitives, these make up the five Platonic solids. 
+Element\* provides four additional mesh primitives: the Dodecahedron, Tetrahedron, Octahedron, and Icosahedron. These components take a single number as input for the radius, and produce meshes centered at the origin, and composed of one face per side. With the addition of the Cube, which is already availible through Grasshopper's built-in primitives, these make up the five Platonic solids. 
 
 ![IMAGE](images/05_primitives.png)
 >1. Dodecahedron
 2. Tetrahedron
 3. Octahedron
-4. Tetrahedron
+4. Icosahedron
 
 ####2.1.2.4 Smooth
 
-**Element\* Smooth** provides an optimized smoothing algorithm that is more efficient than Grasshopper's **Smooth Mesh** for large datasets. It makes use of the Lapacian Smoothing algorithm for Half-Edge structured meshes. It does not change the topology or vertex count of welded meshes, but will weld together any unwelded meshes.
+**Element\* Smooth** provides an optimized smoothing algorithm that is more efficient than Grasshopper's **Smooth Mesh** for large datasets. It makes use of the Lapacian Smoothing algorithm for Half-Edge structured meshes. It does not change the topology or vertex count of welded meshes, but will combine identical vertices if there are any duplicates caused by an unwelded mesh.
 
 ![IMAGE](images/06_smooth.png)
 
@@ -97,6 +97,7 @@ This subdivison component will create an all quad mesh by adding a face for each
 2. Mesh Frame
 3. Mesh Thicken
 4. Mesh Offset
+5. Mesh Poke Face
 
 These components provide a number of different transformations described below. Each component has the additional capability of accepting per-vertex distance data to allow for variations of the transformation magnitudes across the mesh.
 
@@ -115,6 +116,11 @@ This component will thicken an input mesh along the vertex normals, and accordin
 **Element\* Mesh Offset**
 
 This component creats an offset of the input mesh based on the vertex normals.
+
+**Element\* Mesh Poke Face**
+
+First the mesh face goes through the frame operation then the face inner is split the selected faces and allows the user to specify the push or pull amount from the center of the original polygon.
+For example, a four-sided polygon (quad) is split into 4 three-sided polygons with one shared vertex in the middle. The height input allows you to transform that vertex.
 
 ![IMAGE](images/09_transform-examples.png)
 >1. Mesh Window
