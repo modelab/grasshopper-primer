@@ -40,17 +40,17 @@ This component is used to help visualize the half-edge data of the faces of an i
 
 **Element\* Edge Neighbors**
 
-This component provides access to the adjacency data structured according to the edges of the input mesh. The output data is provided as a tree with one branch for each edge in the mesh. It provides a list of edges, the end points, center ponts of adjacent faces (dual), neighboring edges as line objects, and neighbouring face centers (center points of faces adjacent to the edge start and end points)
+This component provides access to the adjacency data structured according to the edges of the input mesh. The output data is provided as a tree with one branch for each edge in the mesh. It returns the mesh edges, the edge end points, center ponts of the faces adjacent to each edge (dual), the neighboring edges as line objects, and neighbouring face centers (center points of faces adjacent to the edge start and end points)
 
 ![IMAGE](images/04A_edge-neighbors.png)
-> **Edge Neighbors** - List of Edges, End vertices, Adjacent face centers, Neighboring edges, and Neighbouring face centers
+> **Edge Neighbors** - Edges, End vertices, Adjacent face centers, Neighboring edges, and Neighbouring face centers
 
 **Element\* Face Neighbors**
 
-This component is similar to the others in this section, but the data is organized in a tree according to the faces of the mesh, with one branch per face. The outputs are the vertices of each face, the adjacent edges, and the centers of neighboring faces.
+This component is similar to the others in this section, but the data is organized in a tree according to the faces of the mesh, with one branch per face. The outputs are the face centers, vertices of each face, neighbouring edges, and the centers of neighboring faces.
 
 ![IMAGE](images/04B_face-neighbors.png)
-> **Face Neighbors** - Adjacent vertices, adjacent edges, and neighboring faces
+> **Face Neighbors** - Face centers, face vertices, neighbouring edges, neighbouring face centers
 
 **Element\* Vertex Neighbors**
 
