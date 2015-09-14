@@ -9,11 +9,6 @@ In the beginning of this chapter, we looked at how Grasshopper defines a mesh us
 The half-edge data structure is a representation for a mesh in which each edge is split up into two half-edges with opposite directions. This allows explicit and implicit access to data from one mesh element to adjacent elements.
 
 ![IMAGE](images/01_half-edge-edit.png)
->1. Half-Edge
-2. Face
-3. Vertex
-4. Next
-5. Half-Edge Face
 
 ####2.1.2 Analyse
 
