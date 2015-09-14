@@ -4,6 +4,8 @@
 
 ![IMAGE](images/Arch_CaseStudy/Main_Render.jpg)
 
+![IMAGE](images/Arch_CaseStudy/Animation_01A.gif)
+
 ####2.1.3.1 Exercise
 
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
