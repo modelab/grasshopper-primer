@@ -87,8 +87,8 @@ This is a recursive subdivision defined by the Catmull Clark algorithm. We can s
 This subdivison component will create an all quad mesh by adding a face for each edge of the mesh.
 
 ![IMAGE](images/07_subdivide.png)
->1. Catmull Clark subdivision
-2. Constant Quad subdivision
+>1. Constant Quad subdivision
+2. Catmull Clark subdivision
 
 ####2.1.2.6 Transform
 
