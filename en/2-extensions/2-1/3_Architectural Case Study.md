@@ -1,6 +1,6 @@
 ### 2.1.3 Element* Architectural Case Study 
 
-#####In this section, we will work through an exercise file for producing architectural facades. The case studies will be broken down into 3 Phases with this being Phase 1. This example incorporates basic Element* components without the use of per vertex features. These features will be used in 
+#####In this section, we will work through a simple exercise file for producing architectural facades. The case studies will be broken down into 3 Phases with this being Phase 1. Phase 2 and 3 will come at a later time. This example incorporates Half Edge data structures along with basic Element* components without the use of per vertex features.
 
 ![IMAGE](images/Arch_CaseStudy/Main_Render.jpg)
 

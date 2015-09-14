@@ -1,6 +1,6 @@
 ####2.1.2 Element* Components
 
-####2.1.2 Analyse
+####2.1.2.1 Analyse
 
 ![IMAGE](images/02_analyse-components.png)
 >1. Mesh Closest Point
@@ -23,7 +23,7 @@ This component is used to quickly extract color information from a mesh. It retu
 
 
 
-####2.1.3 Data
+####2.1.2.2 Data
 
 ![IMAGE](images/03_data-components.png)
 >1. Data Visualizer
@@ -47,8 +47,6 @@ This component provides access to the adjacency data structured according to the
 
 This component is similar to the others in this section, but the data is organized in a tree according to the faces of the mesh, with one branch per face. The outputs are the vertices of each face, the adjacent edges, and the centers of neighboring faces.
 
-Note - This component only allows triangulated meshes.
-
 ![IMAGE](images/04B_face-neighbors.png)
 > **Face Neighbors** - Adjacent vertices, adjacent edges, and neighboring faces
 
@@ -59,7 +57,7 @@ This component outputs neighboring vertices, edges, and face centers structured 
 ![IMAGE](images/04C_vertex-neighbors.png)
 > **Vertex Neighbors** - Adjacent Edges, adjactent faces, and neighboring vertices
 
-####2.1.4 Primitives
+####2.1.2.3 Primitives
 
 Element\* provides four additional mesh primitives: the Icosohedron, Dodecahedron, Octahedron, and Tetrahedron. These components take a single number as input for the radius, and produce meshes centered at the origin, and composed of one face per side. With the addition of the Cube, which is already availible through Grasshopper's built-in primitives, these make up the five Platonic solids. 
 
@@ -69,13 +67,13 @@ Element\* provides four additional mesh primitives: the Icosohedron, Dodecahedro
 3. Octahedron
 4. Tetrahedron
 
-####2.1.5 Smooth
+####2.1.2.4 Smooth
 
 **Element\* Smooth** provides an optimized smoothing algorithm that is more efficient than Grasshopper's **Smooth Mesh** for large datasets. It makes use of the Lapacian Smoothing algorithm for Half-Edge structured meshes. It does not change the topology or vertex count of welded meshes, but will weld together any unwelded meshes.
 
 ![IMAGE](images/06_smooth.png)
 
-####2.1.6 Subdivide
+####2.1.2.5 Subdivide
 
 **Element\* Catmull Clark Subdivision** 
 
@@ -90,7 +88,7 @@ This subdivison component will create an all quad mesh by adding a face for each
 >1. Catmull Clark subdivision
 2. Constant Quad subdivision
 
-####2.1.7 Transform
+####2.1.2.6 Transform
 
 ![IMAGE](images/08_transform-components.png)
 >1. Mesh Windown
@@ -121,6 +119,6 @@ This component creats an offset of the input mesh based on the vertex normals.
 2. Mesh Frame
 3. Icosohedron transformed with mesh frame, then thickend and subdivided
 
-####2.1.8 Utility
+####2.1.2.7 Utility
 
 The **Element\* Mesh Combine and Clean** component will combine multiple meshes together and weld the vertices and vertex normals according to an input threshold angle.
