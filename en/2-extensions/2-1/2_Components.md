@@ -1,5 +1,7 @@
 ####2.1.2 Element* Components
 
+![IMAGE](images/2.1.2_Components/COMPONENT_TABS.png)
+
 ####2.1.2.1 Analyse
 
 ![IMAGE](images/02_analyse-components.png)
