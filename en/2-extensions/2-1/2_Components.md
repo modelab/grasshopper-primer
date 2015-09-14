@@ -73,7 +73,7 @@ Element\* provides four additional mesh primitives: the Dodecahedron, Tetrahedro
 
 **Element\* Smooth** provides an optimized smoothing algorithm that is more efficient than Grasshopper's **Smooth Mesh** for large datasets. It makes use of the Lapacian Smoothing algorithm for Half-Edge structured meshes. It does not change the topology or vertex count of welded meshes, but will combine identical vertices if there are any duplicates caused by an unwelded mesh. We can specify the number of smoothing strength, boundary condition, boundary tolerance as well as the number of iterations.
 
-![IMAGE](images/06_smoothed.png)
+![IMAGE](images/06_smooth.png)
 
 ####2.1.2.5 Subdivide
 
