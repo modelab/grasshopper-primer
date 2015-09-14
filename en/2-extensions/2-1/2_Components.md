@@ -134,4 +134,11 @@ For example, a four-sided polygon (quad) is split into 4 three-sided polygons wi
 2. Mesh Edges
 3. Mesh Status
 
-The **Element\* Mesh Combine and Clean** component will combine multiple meshes together and weld the vertices and vertex normals according to an input threshold angle.
+The **Element\* Mesh Combine and Clean** 
+This component combines multiple meshes, has options for either welding a mesh based on input angle or combining identical vertices. We can also flip the orientation of the mesh. This component also detects potential topology issues and returns Remarks and Warnings with detailed explanantions. In the event that combining identical vertices creates bad topology the component will return the input list of meshes instead of a combined merged mesh. The user can also choose to combine the mesh without merging any of its vertices.
+
+The **Element\* Mesh Edges** 
+This component returns the mesh naked edges, mesh edges, face polylines and if the mesh is unwelded it will return the unwelded mesh edges.
+
+The **Element\* Mesh Status** 
+component will combine multiple meshes together and weld the vertices and vertex normals according to an input threshold angle.
