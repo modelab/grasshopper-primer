@@ -26,6 +26,8 @@ thead {display: none}
 
 ![IMAGE](images/Arch_CaseStudy/Example_A_Part_A.png)
 ![IMAGE](images/Arch_CaseStudy/Example_A_Part_B.png)
+![IMAGE](images/Arch_CaseStudy/Example_A_Part_C.png)
+![IMAGE](images/Arch_CaseStudy/Example_A_Part_D.png)
 
 ||||
 |--|--|--|
