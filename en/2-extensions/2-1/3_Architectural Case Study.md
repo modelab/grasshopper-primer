@@ -22,7 +22,7 @@ td {background-color: #F9F9F9;}
 thead {display: none}
 </style>
 
-![IMAGE](images/Arch_CaseStudy/ExampleA1.png)
+![IMAGE](images/Arch_CaseStudy/ExampleAA.png)
 
 ||||
 |--|--|--|
