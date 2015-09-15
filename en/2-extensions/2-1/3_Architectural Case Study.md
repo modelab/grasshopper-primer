@@ -5,10 +5,9 @@
 ![IMAGE](images/Arch_CaseStudy/Main_Render.jpg)
 ![IMAGE](images/Arch_CaseStudy/Example_A.png)
 ![IMAGE](images/Arch_CaseStudy/Animation_01A.gif)
-![IMAGE](images/Arch_CaseStudy/Animation_03.gif)
 
 
-####2.1.3.1 Exercise
+####2.1.3.1 Example 1
 
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
 >Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
@@ -111,6 +110,6 @@ thead {display: none}
 ---
 ![IMAGE](images/exercise_full.png)
 
+####2.1.3.2 Example 2
 
-
-
+![IMAGE](images/Arch_CaseStudy/Animation_03.gif)
