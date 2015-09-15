@@ -3,8 +3,6 @@
 #####In this section, we will work through a simple exercise file for producing architectural facades. The case studies will be broken down into 3 Phases with this being Phase 1. Phase 2 and 3 will come at a later time. This example incorporates Half Edge data structures along with basic Element* components without the use of per vertex features.
 
 ![IMAGE](images/Arch_CaseStudy/Main_Render.jpg)
-![IMAGE](images/Arch_CaseStudy/Example_A.png)
-![IMAGE](images/Arch_CaseStudy/Animation_01A.gif)
 
 
 ####2.1.3.1 Example 1
@@ -22,7 +20,8 @@ td {background-color: #F9F9F9;}
 thead {display: none}
 </style>
 
-
+![IMAGE](images/Arch_CaseStudy/Animation_01A.gif)
+![IMAGE](images/Arch_CaseStudy/Example_A.png)
 ![IMAGE](images/Arch_CaseStudy/Example_A_Part_A.png)
 
 
