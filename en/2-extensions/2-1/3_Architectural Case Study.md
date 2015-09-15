@@ -6,7 +6,7 @@
 ![IMAGE](images/Arch_CaseStudy/Example_A.png)
 ![IMAGE](images/Arch_CaseStudy/Animation_01A.gif)
 ![IMAGE](images/Arch_CaseStudy/Animation_03.gif)
-![IMAGE](images/Arch_CaseStudy/ExampleAA.png)
+![IMAGE](images/Arch_CaseStudy/Example_A_STEP_A.jpg)
 
 ####2.1.3.1 Exercise
 
