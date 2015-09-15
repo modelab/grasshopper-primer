@@ -22,6 +22,7 @@ td {background-color: #F9F9F9;}
 thead {display: none}
 </style>
 
+![IMAGE](images/Arch_CaseStudy/EX_A_1_Leader.png)
 
 ||||
 |--|--|--|
