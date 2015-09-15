@@ -6,6 +6,7 @@
 ![IMAGE](images/Arch_CaseStudy/Example_A.png)
 ![IMAGE](images/Arch_CaseStudy/Animation_01A.gif)
 ![IMAGE](images/Arch_CaseStudy/Animation_03.gif)
+![IMAGE](images/Arch_CaseStudy/ExampleAA.png)
 
 ####2.1.3.1 Exercise
 
@@ -22,7 +23,8 @@ td {background-color: #F9F9F9;}
 thead {display: none}
 </style>
 
-![IMAGE](images/Arch_CaseStudy/ExampleAA.png)
+
+
 
 ||||
 |--|--|--|
