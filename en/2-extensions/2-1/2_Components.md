@@ -1,8 +1,8 @@
-####2.1.2 Element* Components
+####2.1.3 Element* Components
 
 ![IMAGE](images/2.1.2_Components/COMPONENT_TABS.png)
 
-####2.1.2.1 Analyse
+####2.1.3.1 Analyse
 
 ![IMAGE](images/02_analyse-components.png)
 >1. Mesh Closest Point
@@ -25,7 +25,7 @@ This component is used to quickly extract color information from a mesh. It retu
 
 
 
-####2.1.2.2 Data
+####2.1.3.2 Data
 
 ![IMAGE](images/03_data-components.png)
 >1. Data Visualizer
@@ -59,7 +59,7 @@ This component outputs the mesh vertices, neighboring vertices (arranged in cloc
 ![IMAGE](images/04C_vertex-neighbors.png)
 > **Vertex Neighbors** - Vertices, neighbouring vertices, neighbouring edges, neighbouring face centers
 
-####2.1.2.3 Primitives
+####2.1.3.3 Primitives
 
 Element\* provides four additional mesh primitives: the Dodecahedron, Tetrahedron, Octahedron, and Icosahedron. These components take a single number as input for the radius, and produce meshes centered at the origin, and composed of one face per side. With the addition of the Cube, which is already availible through Grasshopper's built-in primitives, these make up the five Platonic solids. 
 
@@ -69,13 +69,13 @@ Element\* provides four additional mesh primitives: the Dodecahedron, Tetrahedro
 3. Octahedron
 4. Icosahedron
 
-####2.1.2.4 Smooth
+####2.1.3.4 Smooth
 
 **Element\* Smooth** provides an optimized smoothing algorithm that is more efficient than Grasshopper's **Smooth Mesh** for large datasets. It makes use of the Lapacian Smoothing algorithm for Half-Edge structured meshes. It does not change the topology or vertex count of welded meshes, but will combine identical vertices if there are any duplicates caused by an unwelded mesh. We can specify the number of smoothing strength, boundary condition, boundary tolerance as well as the number of iterations.
 
 ![IMAGE](images/06_smooth.png)
 
-####2.1.2.5 Subdivide
+####2.1.3.5 Subdivide
 
 **Element\* Catmull Clark Subdivision** 
 
@@ -90,7 +90,7 @@ This subdivison component will create an all quad mesh by adding a face for each
 >1. Constant Quad subdivision
 2. Catmull Clark subdivision
 
-####2.1.2.6 Transform
+####2.1.3.6 Transform
 
 ![IMAGE](images/08_transforms-components.png)
 >1. Mesh Windown
@@ -127,7 +127,7 @@ For example, a four-sided polygon (quad) is split into 4 three-sided polygons wi
 2. Mesh Frame
 3. Icosohedron transformed with mesh frame, then thickend and subdivided
 
-####2.1.2.7 Utility
+####2.1.3.7 Utility
 
 ![IMAGE](images/09_Utility-Component.png)
 >1. Mesh Combine & Clean

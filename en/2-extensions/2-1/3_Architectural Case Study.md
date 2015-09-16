@@ -1,11 +1,11 @@
-### 2.1.3 Element* Architectural Case Study 
+### 2.1.4 Element* Architectural Case Study 
 
 #####In this section, we will work through a simple exercise file for producing architectural facades. The case studies will be broken down into 3 Phases with this being Phase 1. Phase 2 and 3 will come at a later time. This example incorporates Half Edge data structures along with basic Element* components without the use of per vertex features.
 
 ![IMAGE](images/Arch_CaseStudy/Main_Render.jpg)
 
 
-####2.1.3.1 Example 1
+####2.1.4.1 Example 1
 
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
 >Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
@@ -32,12 +32,12 @@ thead {display: none}
 |01.| **Params/Geometry/Mesh** - Drag and drop a **Mesh** container onto the canvas|![IMAGE](images/mesh.png)|
 |01.| Reference a mesh in Rhino by right-clicking the **Mesh** component and selecting "Set one Mesh". <br><br><blockquote>We are going to use a simple mesh plane to walk through the definition, feel free to swap out the mesh with your own mesh</blockquote>||
 |02.| **Element\*/Utility/Mesh Combine and Clean** - Drag and drop a **Mesh Combine and Clean** component on the canvas|![IMAGE](images/combine-and-clean_new.png)|
-|03.| **Element\*/Data/Vertex Neighbors** - Drag and drop the **Vertex Neighbors** component onto the canvas| ![IMAGE](images/vertex-neighbors.png)|
+|03.| **Element\*/Data/Vertex Neighbors** - Drag and drop the **Element* Vertex Neighbors** component onto the canvas| ![IMAGE](images/vertex-neighbors.png)|
 |04.| **Params/Input/Number Slider** - Drag and drop a **Number Slider** component onto the canvas and set the following values: <ul>Lower Limit: 0.0000<br>Upper Limit: 1.0000</ul>||
 |05.| **Curve/Analysis/Evaluate Curve** - Drag and drop a **Evaluate Curve** container onto the canvas|![IMAGE](images/evaluate-curve-b.png)|
-|05b.| Connect the Neighbouring Edges (NE) output of the **Vertex Neighbors** component to the Curve (C) input of the **Evaluate Curve** component||
-|05c.| Connect the **Number Slider** to the input of the Float (t) input of the **Evaluate Curve** component||
-|05d.| Right click the Curve (C) input of the **Evaluate Curve** component and enable **Reparameterize** ||
+|05b.| Connect the Neighbouring Edges (NE) output of the **Element* Vertex Neighbors** component to the Curve (C) input of the **Evaluate Curve** component||
+|05c.| Connect the **Number Slider** to the Float (t) input of the **Evaluate Curve** component||
+|05d.| Right click the Curve (C) input of the **Evaluate Curve** component and enable **Reparameterize** |||
 
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_A.png)
 ---
@@ -46,17 +46,16 @@ thead {display: none}
 
 ||||
 |--|--|--|
-|08.| **Params/Input/Number Slider** - Drag and drop a **Number Slider** component onto the canvas and set the following values: <ul>Rounding: Float<br>Lower Limit:0<br>Upper Limit: 0.5</ul>||
-|09.| **Params/Input/Panel** - Drag and drop a **Panel** component onto the canvas||
-|10.| Double-click the **Panel** component and enter "1" into the text-field||
-|11.| **Math/Operators/Subtraction** - Drag and drop a **Subtraction** component onto the canvas|![IMAGE](images/subtraction.png)|
-|12.| Connect the **Panel** with a value of "1" into the A input and connect the number slider to the B input of the **Subtraction** component||
-|13.| **Sets/Tree/Merge** - Drag and drop a **Merge** component onto the canvas|![IMAGE](images/merge.png)|
-|14.| Connect the **Number Slider** to the D1 input of **Merge**, and connect the output R of the **Subtraction** component to the D2 input of **Merge**||
-|15.| **Curve/Analysis/Evaluate Curve** - Drag and drop an **Evaluate Curve** component onto the canvas|![IMAGE](images/evaluate-curve.png)
-|16.| Connect the Face Edges (NE) output of the **Face Neighbors** component to the Curve (C) input of the the **Evaluate Curve** component||
-|17.| Right click the Curve (C) input of the **Evaluate Curve** component and select Graft. This will create a new branch for each edge.||
-|18.| Connect the Result (R) output of the **Merge** component to the Parameter (t) input of the **Evaluate Curve** component. Because we grafted the Curve input, each edge is evaluated at both parameters from **Merge**|||
+|06.| **Element\*/Analyse/Mesh Closest Point** - Drag and drop a **Element* Mesh Closest Point** container onto the canvas|![IMAGE](images/element_MeshClosestPoint.png)|
+|06a.| Connect the Mesh output (M) of the **Element\*/Utility/Mesh Combine and Clean** component to the Mesh (M) input of the **Element* Mesh Closest Point** component||
+|06b.| Connect the Points output (P) of the **Curve/Analysis/Evaluate Curve** component to the Point (P) input of the **Element* Mesh Closest Point** component||
+|07.| **Params/Input/Number Slider** - Drag and drop a **Number Slider** component onto the canvas and set the following values: <ul>Rounding: Float<br>Lower Limit:0<br>Upper Limit: 10.000</ul>||
+|08.| **Vector/Vector/Amplitude** - Drag and drop a **Amplitude** component onto the canvas|![IMAGE](images/vec_Amplitude.png)|
+|09.| **Transform/Euclidean/Move** - Drag and drop a **Move** component onto the canvas|![IMAGE](images/transform_move.png)|
+|10.| **Params/Geometry/Point** - Drag and drop a **Point** container onto the canvas|![IMAGE](images/point.png)|
+|10b.| Connect the Face Centers output (FC) of the **Element* Vertex Neighbors** component to the **Point** component||
+|11.| **Sets/List/Weave** - Drag and drop a **Weave** component onto the canvas|![IMAGE](images/weave.png)||
+
 
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_B.png)
 ---
@@ -64,15 +63,13 @@ thead {display: none}
 
 ||||
 |--|--|--|
-|19.| **Sets/Tree/Trim Tree** - Drag and drop a **Trim Tree** component onto the canvas|![IMAGE](images/trim-tree.png)|
-|20.| Connect the Points (P) output of **Evaluate Curve** to the Tree (T) input of the **Trim Tree** component. <br><blockquote>The default value of Depth (D) input for **Trim Tree** is 1. This reduce the depth of our data tree one level by merging the outer most branch. The result is 20 branches, each with six points. </blockquote>||
-|21.| **Curve/Spline/Polyline** - Drag and drop a **Polyline** component onto the canvas|![IMAGE](images/polyline.png)|
-|22.| Connect the Tree (T) output of the **Trim Tree** component to the Vertices (V) input of the **Polyline** component ||
-|23.| Right click the Closed (C) input of the **Polyline** component, click "Set Boolean" and set the value to True <br><blockquote>This has created a closed polyline of six sides for each original face of the mesh.</blockquote>||
-|24.| **Element\*/Transform/Mesh Frame** - Drag and drop a **Mesh Frame** component onto the canvas.|![IMAGE](images/mesh-frame.png)
-|25.| Connect the Polyline (Pl) output of the **Polyline** component to the Geometry (G) input of the **Mesh Frame** component <br><blockquote>Note that the **Mesh Frame** component can take either meshes or a list of closed polyline curves as input</blockquote>||
-|26.| **Params/Input/Number Slider** - Drage and drop a **Number Silder** component onto the canvas. We will keep the default range of 0 to 1 for this slider||
-|27.| Connect the **Number Slider** to the Factor (F) input of the **Mesh Frame** component|||
+|12.| **Curve/Primitive/Polyline** - Drag and drop a **Polyline** component onto the canvas|![IMAGE](images/polyline.png)|
+|12b.| Connect the Weave output (W) of the **Weave** component to the Vertices (V) input of the **Polyline** component||
+|12c.| Right click the Closed (C) input of the **Polyline** component, click "Set Boolean" and set the value to True <br><blockquote>This has created a closed polyline.</blockquote>||
+|13.| **Params/Input/Number Slider** - Drage and drop a **Number Silder** component onto the canvas. We will keep the default range of 0 to 1 for this slider||
+|14.| **Element\*/Transform/Mesh Frame** - Drag and drop a **Mesh Frame** component onto the canvas.|![IMAGE](images/mesh-frame.png)
+|14b.| Connect the Polyline (Pl) output of the **Polyline** component to the Geometry (G) input of the **Mesh Frame** component <br><blockquote>Note that the **Mesh Frame** component can take either meshes or a list of closed polyline curves as input</blockquote>||
+|14c.| Connect the **Number Slider** to the Factor (F) input of the **Mesh Frame** component|||
 
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_C.png)
 ---
@@ -102,7 +99,7 @@ thead {display: none}
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A.png)
 ---
 
-####2.1.3.2 Example 2
+####2.1.4.2 Example 2
 ---
 ![IMAGE](images/Arch_CaseStudy/Example_B/Animation_03.gif)
 
