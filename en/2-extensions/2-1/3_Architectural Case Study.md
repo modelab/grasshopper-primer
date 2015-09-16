@@ -24,22 +24,22 @@ thead {display: none}
 ---
 ![IMAGE](images/Arch_CaseStudy/Example_A/Animation_01A.gif)
 ---
-![IMAGE](images/Arch_CaseStudy/Example_A/Example_A.png)
----
-![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_A.png)
-
+![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_A_Images.png)
 
 ||||
 |--|--|--|
-|01.| Start a new definition, type Ctrl-N (in Grasshopper)||
-|02.| **Element\*/Primitive/Icosohedron** - Drag and drop the **Icosohedron** component onto the canvas|![IMAGE](images/icosohedron.png)|
-|03.| **Params/Input/Number Slider** - Drag and drop the **Number Slider** component onto the canvas||
-|04.| Connect the **Number Slider** to the Radius (R) input of the **Icosohedron** component||
-|05.| Double-click the **Number Slider** and set appropriate values. For this example, we used: <ul>Name: Radius<br>Rounding: Integer<br>Lower Limit: 5<br>Upper Limit: 50<br>Value: 25</ul> ||
-|06.| **Element\*/Data/Face Neighbors** - Drag and drop the **Face Neighbors** component onto the canvas| ![IMAGE](images/face-neighbors.png)|
-|07.| Connect the Mesh (M) output of the **Icosohedron** component to the Mesh (M) input of the **Face Neighbors** component.|||
+|00.| Create a meshplane in Rhino with **XFaces = 2 & YFaces==2** and Start a new definition, type Ctrl-N (in Grasshopper)||
+|01.| **Params/Geometry/Mesh** - Drag and drop a **Mesh** container onto the canvas|![IMAGE](images/mesh.png)|
+|01.| Reference a mesh in Rhino by right-clicking the **Mesh** component and selecting "Set one Mesh". <br><br><blockquote>We are going to use a simple mesh plane to walk through the definition, feel free to swap out the mesh with your own mesh</blockquote>||
+|02.| **Element\*/Utility/Mesh Combine and Clean** - Drag and drop a **Mesh Combine and Clean** component on the canvas|![IMAGE](images/combine-and-clean_new.png)|
+|03.| **Element\*/Data/Vertex Neighbors** - Drag and drop the **Vertex Neighbors** component onto the canvas| ![IMAGE](images/vertex-neighbors.png)|
+|04.| **Params/Input/Number Slider** - Drag and drop a **Number Slider** component onto the canvas and set the following values: <ul>Lower Limit: 0.0000<br>Upper Limit: 1.0000</ul>||
+|05.| **Curve/Analysis/Evaluate Curve** - Drag and drop a **Evaluate Curve** container onto the canvas|![IMAGE](images/evaluate-curve-b.png)|
+|05b.| Connect the Neighbouring Edges (NE) output of the **Vertex Neighbors** component to the Curve (C) input of the **Evaluate Curve** component||
+|05c.| Connect the **Number Slider** to the input of the Float (t) input of the **Evaluate Curve** component||
+|05d.| Right click the Curve (C) input of the **Evaluate Curve** component and enable **Reparameterize** ||
 
-![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_A_Images.png)
+![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_A.png)
 ---
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_B.png)
 >Looking at the data of the Neighboring Face Edges (NE) output, we see that we have a tree with 20 branches, where each branch contains three lines. The 20 branches each represent a face of the icosohedron which has 20 sides, while the three lines are the edges of each triangular face.
@@ -111,6 +111,9 @@ thead {display: none}
 |48.| Right click the Type (T) input of the **Thicken** component, select "Set Integer" and enter a value of 1 <br><blockquote>You can also enable the PerVertex Data by using a **Boolean Toggle** component set to True.</blockquote>|||
 
 ![IMAGE](images/exercise_07.png)
+
+![IMAGE](images/Arch_CaseStudy/Example_A/Example_A.png)
+---
 
 ####2.1.3.2 Example 2
 ---
