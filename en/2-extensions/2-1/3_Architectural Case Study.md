@@ -41,7 +41,6 @@ thead {display: none}
 
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_A.png)
 ---
-![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_B.png)
 >Looking at the data of the Neighboring Face Edges (NE) output, we see that we have a tree with 20 branches, where each branch contains three lines. The 20 branches each represent a face of the icosohedron which has 20 sides, while the three lines are the edges of each triangular face.
 
 
@@ -59,8 +58,9 @@ thead {display: none}
 |17.| Right click the Curve (C) input of the **Evaluate Curve** component and select Graft. This will create a new branch for each edge.||
 |18.| Connect the Result (R) output of the **Merge** component to the Parameter (t) input of the **Evaluate Curve** component. Because we grafted the Curve input, each edge is evaluated at both parameters from **Merge**|||
 
-![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_C.png)
+![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_B.png)
 
+![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_C.png)
 
 ||||
 |--|--|--|
