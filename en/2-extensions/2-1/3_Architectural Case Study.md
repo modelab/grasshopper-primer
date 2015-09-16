@@ -26,7 +26,6 @@ thead {display: none}
 ---
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A.png)
 ---
-![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_A_Images.png)
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_A.png)
 
 
@@ -40,7 +39,8 @@ thead {display: none}
 |06.| **Element\*/Data/Face Neighbors** - Drag and drop the **Face Neighbors** component onto the canvas| ![IMAGE](images/face-neighbors.png)|
 |07.| Connect the Mesh (M) output of the **Icosohedron** component to the Mesh (M) input of the **Face Neighbors** component.|||
 
-
+![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_A_Images.png)
+---
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_B.png)
 >Looking at the data of the Neighboring Face Edges (NE) output, we see that we have a tree with 20 branches, where each branch contains three lines. The 20 branches each represent a face of the icosohedron which has 20 sides, while the three lines are the edges of each triangular face.
 
