@@ -59,8 +59,8 @@ thead {display: none}
 |18.| Connect the Result (R) output of the **Merge** component to the Parameter (t) input of the **Evaluate Curve** component. Because we grafted the Curve input, each edge is evaluated at both parameters from **Merge**|||
 
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_B.png)
-
-![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_C.png)
+---
+![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_C_Images.png)
 
 ||||
 |--|--|--|
@@ -74,23 +74,9 @@ thead {display: none}
 |26.| **Params/Input/Number Slider** - Drage and drop a **Number Silder** component onto the canvas. We will keep the default range of 0 to 1 for this slider||
 |27.| Connect the **Number Slider** to the Factor (F) input of the **Mesh Frame** component|||
 
-![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_C_Images.png)
+![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_C.png)
 ---
-![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_D.png)
-![IMAGE](images/exercise_04.png)
 
-||||
-|--|--|--|
-|28.| **Element\*/Utility/Mesh Combine and Clean** - Drag and drop a **Mesh Combine and Clean** component on the canvas|![IMAGE](images/combine-and-clean.png)|
-|29.| Connect the Mesh (M) output of **Mesh Frames** to the Mesh (M) input of the **Mesh Combine and Clean** component||
-|30.| Right click the Mesh (M) input of **Mesh Combine and Clean** and select Flatten <br><blockquote>By flattening the tree of meshes, **Combine and Clean** will merge all 20 face meshes into a single mesh</blockquote>||
-|31.| **Element\*/Transform/Mesh Thicken** - Drag and drop a **Mesh Thicken** component onto the canvas|![IMAGE](images/mesh-thicken.png)|
-|32.| Connect the Mesh (M) output of **Combine and Clean** to the Mesh (M) input of **Mesh Thicken**||
-|33.| **Element\*/Subdivide/Catmull Clark Subdivision** - Drag and drop a **Catmull Clark Subdivision** component onto the canvas|![IMAGE](images/catmull-clark.png)
-|34.| Connect the Mesh (M) output of **Mesh Thicken** to the Mesh (M) input of the **Catmull Clark Subdivision** component|||
-
-![IMAGE](images/exercise_05.png)
-![IMAGE](images/exercise_06.png)
 >We have truncated the triangular faces of the initial mesh, effectively also creating rings around each original vertex. We have also created a frame for each face, then thickened the mesh and refined it with subdivision. Next we will take advantage of the Per Vertex capabilities of the transform components by using an attractor point.
 
 ||||
@@ -110,7 +96,8 @@ thead {display: none}
 |47.| Connect the Domain (I) output of the **Construct Domain** component to the Min and Max Values (D) input of the **Mesh Thicken** component.||
 |48.| Right click the Type (T) input of the **Thicken** component, select "Set Integer" and enter a value of 1 <br><blockquote>You can also enable the PerVertex Data by using a **Boolean Toggle** component set to True.</blockquote>|||
 
-![IMAGE](images/exercise_07.png)
+![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_D.png)
+
 
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A.png)
 ---
