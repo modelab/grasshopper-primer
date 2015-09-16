@@ -27,7 +27,6 @@ thead {display: none}
 ![IMAGE](images/Arch_CaseStudy/Example_A.png)
 ---
 ![IMAGE](images/Arch_CaseStudy/Example_A_Part_A.png)
----
 
 
 ||||
@@ -108,10 +107,16 @@ thead {display: none}
 |48.| Right click the Type (T) input of the **Thicken** component, select "Set Integer" and enter a value of 1 <br><blockquote>You can also enable the PerVertex Data by using a **Boolean Toggle** component set to True.</blockquote>|||
 
 ![IMAGE](images/exercise_07.png)
-![IMAGE](images/exercise_08.png)
----
-![IMAGE](images/exercise_full.png)
 
 ####2.1.3.2 Example 2
 ---
 ![IMAGE](images/Arch_CaseStudy/Animation_03.gif)
+
+---
+![IMAGE](images/Arch_CaseStudy/Example_B.png)
+---
+![IMAGE](images/Arch_CaseStudy/Example_B_Part_A.png)
+---
+![IMAGE](images/Arch_CaseStudy/Example_B_Part_B.png)
+---
+![IMAGE](images/Arch_CaseStudy/Example_B_Part_C.png)
