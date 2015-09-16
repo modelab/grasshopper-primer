@@ -39,7 +39,7 @@ thead {display: none}
 |06.| **Element\*/Data/Face Neighbors** - Drag and drop the **Face Neighbors** component onto the canvas| ![IMAGE](images/face-neighbors.png)|
 |07.| Connect the Mesh (M) output of the **Icosohedron** component to the Mesh (M) input of the **Face Neighbors** component.|||
 
-![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Images.png)
+![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_A_Images.png)
 ---
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_B.png)
 >Looking at the data of the Neighboring Face Edges (NE) output, we see that we have a tree with 20 branches, where each branch contains three lines. The 20 branches each represent a face of the icosohedron which has 20 sides, while the three lines are the edges of each triangular face.
@@ -74,7 +74,7 @@ thead {display: none}
 |26.| **Params/Input/Number Slider** - Drage and drop a **Number Silder** component onto the canvas. We will keep the default range of 0 to 1 for this slider||
 |27.| Connect the **Number Slider** to the Factor (F) input of the **Mesh Frame** component|||
 
-![IMAGE](images/Arch_CaseStudy/Example_A/Example_C_Images.png)
+![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_C_Images.png)
 ---
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_D.png)
 ![IMAGE](images/exercise_04.png)
