@@ -30,13 +30,13 @@ thead {display: none}
 |--|--|--|
 |00.| Create a meshplane in Rhino with **XFaces = 2 & YFaces==2** and Start a new definition, type Ctrl-N (in Grasshopper)||
 |01.| **Params/Geometry/Mesh** - Drag and drop a **Mesh** container onto the canvas|![IMAGE](images/mesh.png)|
-|01.| Reference a mesh in Rhino by right-clicking the **Mesh** component and selecting "Set one Mesh". <br><br><blockquote>We are going to use a simple mesh plane to walk through the definition, feel free to swap out the mesh with your own mesh</blockquote>||
-|02.| **Element\*/Utility/Mesh Combine and Clean** - Drag and drop a **Mesh Combine and Clean** component on the canvas|![IMAGE](images/combine-and-clean_new.png)|
+|01b.| Reference a mesh in Rhino by right-clicking the **Mesh** component and selecting "Set one Mesh". <br><blockquote>We are going to use a simple mesh plane to walk through the definition, feel free to swap out the mesh with your own mesh</blockquote>||
+|02.| **Element\*/Utility/Mesh Combine and Clean** - Drag and drop a **Element* Mesh Combine and Clean** component on the canvas|![IMAGE](images/combine-and-clean_new.png)|
 |03.| **Element\*/Data/Vertex Neighbors** - Drag and drop the **Element* Vertex Neighbors** component onto the canvas| ![IMAGE](images/vertex-neighbors.png)|
 |04.| **Params/Input/Number Slider** - Drag and drop a **Number Slider** component onto the canvas and set the following values: <ul>Lower Limit: 0.0000<br>Upper Limit: 1.0000</ul>||
 |05.| **Curve/Analysis/Evaluate Curve** - Drag and drop a **Evaluate Curve** container onto the canvas|![IMAGE](images/evaluate-curve-b.png)|
 |05b.| Connect the Neighbouring Edges (NE) output of the **Element* Vertex Neighbors** component to the Curve (C) input of the **Evaluate Curve** component||
-|05c.| Connect the **Number Slider** to the Float (t) input of the **Evaluate Curve** component||
+|05c.| Connect the **Number Slider** to the Float (t) input of the **Evaluate Curve** component and set the value to 0.5000||
 |05d.| Right click the Curve (C) input of the **Evaluate Curve** component and enable **Reparameterize** |||
 
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_A.png)
@@ -67,47 +67,38 @@ thead {display: none}
 |12b.| Connect the Weave output (W) of the **Weave** component to the Vertices (V) input of the **Polyline** component||
 |12c.| Right click the Closed (C) input of the **Polyline** component, click "Set Boolean" and set the value to True <br><blockquote>This has created a closed polyline.</blockquote>||
 |13.| **Params/Input/Number Slider** - Drage and drop a **Number Silder** component onto the canvas. We will keep the default range of 0 to 1 for this slider||
-|14.| **Element\*/Transform/Mesh Frame** - Drag and drop a **Mesh Frame** component onto the canvas.|![IMAGE](images/mesh-frame.png)
+|14.| **Element\*/Transform/Mesh Frame** - Drag and drop a **Element* Mesh Frame** component onto the canvas.|![IMAGE](images/mesh-frame.png)|
 |14b.| Connect the Polyline (Pl) output of the **Polyline** component to the Geometry (G) input of the **Mesh Frame** component <br><blockquote>Note that the **Mesh Frame** component can take either meshes or a list of closed polyline curves as input</blockquote>||
 |14c.| Connect the **Number Slider** to the Factor (F) input of the **Mesh Frame** component|||
 
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_C.png)
 ---
 
->We have truncated the triangular faces of the initial mesh, effectively also creating rings around each original vertex. We have also created a frame for each face, then thickened the mesh and refined it with subdivision. Next we will take advantage of the Per Vertex capabilities of the transform components by using an attractor point.
+*>We have truncated the triangular faces of the initial mesh, effectively also creating rings around each original vertex. We have also created a frame for each face, then thickened the mesh and refined it with subdivision. Next we will take advantage of the Per Vertex capabilities of the transform components by using an attractor point.
 
 ||||
 |--|--|--|
-|35.| **Params/Geometry/Point** - Drag and drop a **Point** parameter onto the canvas|![IMAGE](images/point.png)|
-|36.| Right click the **Point** parameter and select "Set on point" to select a point in the Rhino viewport <br><blockquote>Tip - you can also create a point directly in Grasshopper by double-clicking the canvas to bring up the Search window, then typing a point coordinate such as "10,10,0" (without the quotes) </blockquote>||
-|37.| **Mesh/Analysis/Deconstruct Mesh** - Drag and drop a **Deconstruct Mesh** component onto the canvas|![IMAGE](images/deconstruct-mesh.png)|
-|38.| Connect the Mesh (M) output of the **Combine and Clean** component to the Mesh (M) input of the **Deconstruct Mesh** component. <br><blockquote>We will use this to extract the vertices of our combined mesh, and then apply an attractor point to these vertices</blockquote>||
-|39.| **Vector/Point/Distance** - Drag and drop a **Distance** component onto the canvas|![IMAGE](images/distance.png)|
-|40.| Connect the Vertices (V) output of the **Deconstruct Mesh** component to the A input of the the **Distance** component||
-|41.| Connect the **Point** parameter to the B input of the **Distance** component||
-|42.| Connect the Distance (D) output of the **Distance** component to the PerVectex Data (VD) input of the **Thicken** component||
-|43.| **Params/Input/Number Slider** - Drag and drop two **Number Slider** components onto the canvas. We will use these to set the lower and upper limits for the **Mesh Thicken** component||
-|44.| Double-click the **Number Sliders** and set the values. In this example, we left the first slider at default values, and set the Upper Limit of the second slider to 5.0||
-|45.| **Maths/Domain/Construct Domain** - Drag and drop a **Construct Domain** component onto the canvas|![IMAGE](images/construct-domain.png)
-|46.| Connect the two number sliders to the A and B inputs of the **Construct Domain** component||
-|47.| Connect the Domain (I) output of the **Construct Domain** component to the Min and Max Values (D) input of the **Mesh Thicken** component.||
-|48.| Right click the Type (T) input of the **Thicken** component, select "Set Integer" and enter a value of 1 <br><blockquote>You can also enable the PerVertex Data by using a **Boolean Toggle** component set to True.</blockquote>|||
+|15.| **Element\*/Utility/Mesh Combine and Clean** - Drag and drop a **Element* Mesh Combine and Clean** component on the canvas|![IMAGE](images/combine-and-clean_new.png) |
+|15b.| Right click the Combine Type (CT) input of the **Element* Mesh Combine and Clean** component, click "Set Integer" and set the value to 1. <br><blockquote>The Combine Type input has two options (0, which combines and cleans the meshes) and (1, which joins the meshes in the list without merging vertices). In this example we want to join the meshes  </blockquote>||
+|16.| Right click the Mesh (M) input of the **Element* Mesh Combine and Clean** component, click "Flatten". <br><blockquote>This will flatten the list so we can join the mesh list together.</blockquote>||
+|17.| **Element\*/Utility/Mesh Status** - Drag and drop a **Element* Mesh Status** component on the canvas|![IMAGE](images/mesh_status.png) |
+|17b| Connect the Info (I) and Status (S) outputs of **Element* Mesh Status** to a **Params/Input/Panel** component <br><blockquote>The mesh **Info** output contains mesh validity information, closed or open type and mesh component counts (vertices, faces, normals). The mesh **Status** informs the user if the mesh is in "Good" condition as well as data regarding non manifold edges, unused vertex count, degenerate face count, naked edge count and disjoined mesh count. </blockquote>||
+|18.| **Params/Input/Colour Swatch** - Drag and drop a **Colour Swatch** component on the canvas||
+|19.| **Display/Preview/Custom Preview** - Drag and drop a **Custom Preview** component on the canvas|||
 
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_D.png)
-
-
+---
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A.png)
 ---
 
 ####2.1.4.2 Example 2
 ---
 ![IMAGE](images/Arch_CaseStudy/Example_B/Animation_03.gif)
-
----
-![IMAGE](images/Arch_CaseStudy/Example_B/Example_B.png)
 ---
 ![IMAGE](images/Arch_CaseStudy/Example_B/Example_B_Part_A.png)
 ---
 ![IMAGE](images/Arch_CaseStudy/Example_B/Example_B_Part_B.png)
 ---
 ![IMAGE](images/Arch_CaseStudy/Example_B/Example_B_Part_C.png)
+---
+![IMAGE](images/Arch_CaseStudy/Example_B/Example_B.png)
