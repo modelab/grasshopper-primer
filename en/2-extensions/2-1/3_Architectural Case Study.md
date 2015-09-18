@@ -1,6 +1,6 @@
-### 2.1.5.1 Element* Architectural Case Study 
+###2.1.5.1 Element* Architectural Case Study 
 
-#####In this section, we will work through a simple exercise file that is meant as an introduction to working with Element*\ tools. We will explore some patterning and facade treatments in the field of Architecture which will incorporate Half Edge data structures along with basic Element*/ components without the use of per vertex features.
+#####In this section, we will work through a simple exercise file that is meant as an introduction to working with Element tools. We will explore some patterning and facade treatments in the field of Architecture which will incorporate Half Edge data structures along with basic Element components without the use of per vertex features.
 
 ![IMAGE](images/Arch_CaseStudy/Main_Render.jpg)
 
@@ -28,7 +28,7 @@ thead {display: none}
 
 ||||
 |--|--|--|
-|00.| Create a meshplane in Rhino with **XFaces = 2 & YFaces==2** and Start a new definition, type Ctrl-N (in Grasshopper)||
+|00.| Create a meshplane in Rhino with **XFaces = 2 & YFaces = 2** and Start a new definition, type Ctrl-N (in Grasshopper)||
 |01.| **Params/Geometry/Mesh** - Drag and drop a **Mesh** container onto the canvas|![IMAGE](images/mesh.png)|
 |01b.| Reference a mesh in Rhino by right-clicking the **Mesh** component and selecting "Set one Mesh". <br><blockquote>We are going to use a simple mesh plane to walk through the definition, feel free to swap out the mesh with your own mesh</blockquote>||
 |02.| **Element\*/Utility/Mesh Combine and Clean** - Drag and drop a **Element* Mesh Combine and Clean** component on the canvas|![IMAGE](images/combine-and-clean_new.png)|
@@ -41,8 +41,6 @@ thead {display: none}
 
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_A.png)
 ---
-*>Looking at the data of the Neighboring Face Edges (NE) output, we see that we have a tree with 20 branches, where each branch contains three lines. The 20 branches each represent a face of the icosohedron which has 20 sides, while the three lines are the edges of each triangular face.
-
 
 ||||
 |--|--|--|
@@ -73,8 +71,6 @@ thead {display: none}
 
 ![IMAGE](images/Arch_CaseStudy/Example_A/Example_A_Part_C.png)
 ---
-
-*>We have truncated the triangular faces of the initial mesh, effectively also creating rings around each original vertex. We have also created a frame for each face, then thickened the mesh and refined it with subdivision. Next we will take advantage of the Per Vertex capabilities of the transform components by using an attractor point.
 
 ||||
 |--|--|--|
@@ -111,7 +107,7 @@ thead {display: none}
 ---
 ||||
 |--|--|--|
-|00.| Create a meshplane in Rhino with **XFaces = 2 & YFaces==2** and Start a new definition, type Ctrl-N (in Grasshopper)||
+|00.| Create a meshplane in Rhino with **XFaces = 2 & YFaces = 2** and Start a new definition, type Ctrl-N (in Grasshopper)||
 |01.| **Params/Geometry/Mesh** - Drag and drop a **Mesh** container onto the canvas|![IMAGE](images/mesh.png)|
 |01b.| Reference a mesh in Rhino by right-clicking the **Mesh** component and selecting "Set one Mesh". <br><blockquote>We are going to use a simple mesh plane to walk through the definition, feel free to swap out the mesh with your own mesh</blockquote>||
 |02.| **Element\*/Utility/Mesh Combine and Clean** - Drag and drop a **Element* Mesh Combine and Clean** component on the canvas|![IMAGE](images/combine-and-clean_new.png)|
