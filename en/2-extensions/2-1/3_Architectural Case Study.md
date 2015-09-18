@@ -1,6 +1,6 @@
 ### 2.1.5.1 Element* Architectural Case Study 
 
-#####In this section, we will work through a simple exercise file for producing architectural facades. The case studies will be broken down into 3 Phases with this being Phase 1. Phase 2 and 3 will come at a later time. This example incorporates Half Edge data structures along with basic Element* components without the use of per vertex features.
+#####In this section, we will work through a simple exercise file that is meant as an introduction to working with Element*\ tools. We will explore some patterning and facade treatments in the field of Architecture which will incorporate Half Edge data structures along with basic Element*/ components without the use of per vertex features.
 
 ![IMAGE](images/Arch_CaseStudy/Main_Render.jpg)
 
@@ -10,7 +10,7 @@
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
 >Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
->Example files that accompany this section: [Download](../../appendix/A-2/gh-files/2.1_element addon.gh)
+>Example files that accompany this section: [Download](../../appendix/A-2/gh-files/2.1.5.1_Architecture Case Study_A.gh)
 {% endif %}
 
 <style>
@@ -92,6 +92,20 @@ thead {display: none}
 ---
 
 ####2.1.5.1.2 Example 2
+
+{% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
+>Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+{% else %}
+>Example files that accompany this section: [Download](../../appendix/A-2/gh-files/2.1.5.2_Architecture Case Study_B.gh)
+{% endif %}
+
+<style>
+td:nth-child(1) {color: #008DB2}
+td:nth-child(3)	{width: 10%;}
+td {background-color: #F9F9F9;}
+thead {display: none}
+</style>
+
 ---
 ![IMAGE](images/Arch_CaseStudy/Example_B/Animation_03.gif)
 ---
@@ -122,10 +136,12 @@ thead {display: none}
 |15b.| Right click the Result (R) output of the **Merge** component and click "Flatten". ||
 |16.| **Element\*/Utility/Mesh Combine and Clean** - Drag and drop a **Element* Mesh Combine and Clean** component on the canvas|![IMAGE](images/combine-and-clean_new.png)||
 
->Fill in with info about the Warnings and Remarks
+>Components have detailed remarks and warnings to inform the user of the current or potential issues that might come about from interaction with other components. In some instances you might use the Element* Combine and Clean component to join and combine identical vertices on a mesh which could lead to non manifold edges if that mesh is thickend later on. The Element* Combine and Clean component will inform you of this issue that will return the list back to you. You have the option of setting the Combine Type to a value of 1 which will combine the meshes in the list but not combine identical vertices.
 
 ![IMAGE](images/Arch_CaseStudy/Example_B/Example_B_Part_B.png)
 ---
+![IMAGE](images/Arch_CaseStudy/Example_B/Example_B_Part_C_Images.png)
+
 ||||
 |--|--|--|
 |17.| **Element\*/Utility/Mesh Edges** - Drag and drop a **Element* Mesh Edges** component on the canvas|![IMAGE](images/meshEdges.png) |

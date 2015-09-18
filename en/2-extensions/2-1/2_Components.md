@@ -1,4 +1,4 @@
-####2.1.3 Element* Components
+###2.1.3 Element* Components
 
 ![IMAGE](images/2.1.2_Components/COMPONENT_TABS.png)
 
