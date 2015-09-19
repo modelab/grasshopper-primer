@@ -1,0 +1,30 @@
+h1,h2,h3 {color:#008DB2}
+
+.book .book-summary{
+	font-family: Lato,Arial,sans-serif;
+}
+.book .book-summary {background-color: #F9F9F9)}
+.book .book-summary ul.summary li.active>a{color:#006B94;background:transparent;text-decoration:none}
+.book .book-summary ul.summary li a{color:#008DB2;background:transparent;text-decoration:none}
+.book .book-summary ul.summary li a:link{color:#008DB2;background:transparent;text-decoration:none}
+.book .book-summary ul.summary li a:hover{color:#006B94;background:transparent;text-decoration:none}
+.book .book-summary ul.summary li.done>a{color:#008DB2}
+.book .book-summary ul.summary li.done>a:hover{color:#006B94}
+.book .book-summary ul.summary li.active>a{color:#000000;background:transparent;text-decoration:none}
+.book .book-summary ul.summary img{float:none}
+.book .book-summary .copy{padding:15px}
+.fa-check:before{content:none}
+
+.book .book-summary ul.summary a.gitbook-link {font-size: 0.8em;display: none}
+.book .book-summary ul.summary div.ebook-link a{color:#008DB2}
+.book .book-summary ul.summary div.ebook-link a:hover{color:#006B94}
+.book .book-summary ul.summary div.ebook-link a:done{color:#006B94}
+
+
+.book .book-body .body-inner td{background-color: #F9F9F9}
+.book.color-theme-2 .book-body .body-inner td{background-color: #14141A}
+
+.book .book-summary .book-search{position:relative; top: 0px; opacity: 0; visibility: hidden;-webkit-transition:visibility .5s, opacity .5s ease;-moz-transition:visibility .5s, opacity .5s ease;-o-transition:visibility .5s, opacity .5s ease;transition:visibility .5s, opacity .5s ease}
+.book .book-summary ul.summary {position:relative; top:-50px}
+.book.with-search .book-summary .book-search{visibility:visible;opacity: 1}
+.book.with-search .book-summary ul.summary{top:0px;}

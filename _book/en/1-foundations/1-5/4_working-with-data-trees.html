@@ -1,0 +1,1551 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <!-- Start book The Grasshopper Primer (EN) -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Working with Data Trees | The Grasshopper Primer (EN)</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="../../styles/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../../1-foundations/1-6/0_Getting Started with Meshes.html" />
+    
+    
+    <link rel="prev" href="../../1-foundations/1-5/3_creating-data-trees.html" />
+    
+
+        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-37765741-8', 'auto');ga('send', 'pageview');</script>
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book" data-level="1.5.4" data-basepath="../.." data-revision="Fri Sep 18 2015 22:02:02 GMT-0700 (Pacific Daylight Time)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        About
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="0.1" data-path="0-about/1-grasshopper-an-overview.html">
+            
+                
+                    <a href="../../0-about/1-grasshopper-an-overview.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                        Grasshopper - an Overview
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.2" data-path="0-about/2-grasshopper-in-action.html">
+            
+                
+                    <a href="../../0-about/2-grasshopper-in-action.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                        Grasshopper in Action
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="1-foundations/1-foundations.html">
+            
+                
+                    <a href="../../1-foundations/1-foundations.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Foundations
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="1-foundations/1-1/0_hello-grasshopper.html">
+            
+                
+                    <a href="../../1-foundations/1-1/0_hello-grasshopper.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Hello Grasshopper!
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="1-foundations/1-1/1_installing-and-launching-grasshopper.html">
+            
+                
+                    <a href="../../1-foundations/1-1/1_installing-and-launching-grasshopper.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.1.</b>
+                        
+                        Installing and Launching Grasshopper
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="1-foundations/1-1/2_the-grasshopper-ui.html">
+            
+                
+                    <a href="../../1-foundations/1-1/2_the-grasshopper-ui.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.2.</b>
+                        
+                        The Grasshopper UI
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="1-foundations/1-1/3_talking-to-rhino.html">
+            
+                
+                    <a href="../../1-foundations/1-1/3_talking-to-rhino.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.3.</b>
+                        
+                        Talking to Rhino
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1-foundations/1-2/0_anatomy-of-a-grasshopper-definition.html">
+            
+                
+                    <a href="../../1-foundations/1-2/0_anatomy-of-a-grasshopper-definition.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Anatomy of a Grasshopper Definition
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1-foundations/1-2/1_grasshopper-object-types.html">
+            
+                
+                    <a href="../../1-foundations/1-2/1_grasshopper-object-types.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.1.</b>
+                        
+                        Grasshopper Object Types
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="1-foundations/1-2/2_grasshopper-component-parts.html">
+            
+                
+                    <a href="../../1-foundations/1-2/2_grasshopper-component-parts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.2.</b>
+                        
+                        Grasshopper Component Parts
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="1-foundations/1-2/3_data-types.html">
+            
+                
+                    <a href="../../1-foundations/1-2/3_data-types.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.3.</b>
+                        
+                        Data Types
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="1-foundations/1-2/4_wiring-components.html">
+            
+                
+                    <a href="../../1-foundations/1-2/4_wiring-components.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.4.</b>
+                        
+                        Wiring Components
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="1-foundations/1-2/5_the-grasshopper-definition.html">
+            
+                
+                    <a href="../../1-foundations/1-2/5_the-grasshopper-definition.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.5.</b>
+                        
+                        The Grasshopper Definition
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="1-foundations/1-3/0_building-blocks-of-algorithms.html">
+            
+                
+                    <a href="../../1-foundations/1-3/0_building-blocks-of-algorithms.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Building Blocks of Algorithms
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="1-foundations/1-3/1_points-planes-vectors.html">
+            
+                
+                    <a href="../../1-foundations/1-3/1_points-planes-vectors.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.1.</b>
+                        
+                        Points Planes &amp; Vectors
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="1-foundations/1-3/2_working-with-attractors.html">
+            
+                
+                    <a href="../../1-foundations/1-3/2_working-with-attractors.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.2.</b>
+                        
+                        Working With Attractors
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="1-foundations/1-3/3_mathematics-expressions-conditionals.html">
+            
+                
+                    <a href="../../1-foundations/1-3/3_mathematics-expressions-conditionals.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.3.</b>
+                        
+                        Mathematics, Expressions &amp; Conditionals
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="1-foundations/1-3/4_domains-color.html">
+            
+                
+                    <a href="../../1-foundations/1-3/4_domains-color.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.4.</b>
+                        
+                        Domains &amp; Color
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="1-foundations/1-3/5_booleans-logical-operators.html">
+            
+                
+                    <a href="../../1-foundations/1-3/5_booleans-logical-operators.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.5.</b>
+                        
+                        Booleans and Logical Operators
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="1-foundations/1-4/0_designing-with-lists.html">
+            
+                
+                    <a href="../../1-foundations/1-4/0_designing-with-lists.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Designing with Lists
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="1-foundations/1-4/1_curve-geometry.html">
+            
+                
+                    <a href="../../1-foundations/1-4/1_curve-geometry.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.1.</b>
+                        
+                        Curve Geometry
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="1-foundations/1-4/2_what-is-a-list.html">
+            
+                
+                    <a href="../../1-foundations/1-4/2_what-is-a-list.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.2.</b>
+                        
+                        What is a List?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="1-foundations/1-4/3_data-stream-matching.html">
+            
+                
+                    <a href="../../1-foundations/1-4/3_data-stream-matching.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.3.</b>
+                        
+                        Data Stream Matching
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="1-foundations/1-4/4_creating-lists.html">
+            
+                
+                    <a href="../../1-foundations/1-4/4_creating-lists.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.4.</b>
+                        
+                        Creating Lists
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="1-foundations/1-4/5_list-visualization.html">
+            
+                
+                    <a href="../../1-foundations/1-4/5_list-visualization.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.5.</b>
+                        
+                        List Visualization
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="1-foundations/1-4/6_list-management.html">
+            
+                
+                    <a href="../../1-foundations/1-4/6_list-management.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.6.</b>
+                        
+                        List Management
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="1-foundations/1-4/7_working-with-lists.html">
+            
+                
+                    <a href="../../1-foundations/1-4/7_working-with-lists.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.7.</b>
+                        
+                        Working with Lists
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="1-foundations/1-5/0_designing-with-data-trees.html">
+            
+                
+                    <a href="../../1-foundations/1-5/0_designing-with-data-trees.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        Designing with Data Trees
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="1-foundations/1-5/1_surface-geometry.html">
+            
+                
+                    <a href="../../1-foundations/1-5/1_surface-geometry.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.1.</b>
+                        
+                        Surface Geometry
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="1-foundations/1-5/2_what-is-a-data-tree.html">
+            
+                
+                    <a href="../../1-foundations/1-5/2_what-is-a-data-tree.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.2.</b>
+                        
+                        What is a Data Tree?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="1-foundations/1-5/3_creating-data-trees.html">
+            
+                
+                    <a href="../../1-foundations/1-5/3_creating-data-trees.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.3.</b>
+                        
+                        Creating Data Trees
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.4" data-path="1-foundations/1-5/4_working-with-data-trees.html">
+            
+                
+                    <a href="../../1-foundations/1-5/4_working-with-data-trees.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.4.</b>
+                        
+                        Working with Data Trees
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="1-foundations/1-6/0_Getting Started with Meshes.html">
+            
+                
+                    <a href="../../1-foundations/1-6/0_Getting Started with Meshes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        Getting Started with Meshes
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="1-foundations/1-6/1_What is a Mesh.html">
+            
+                
+                    <a href="../../1-foundations/1-6/1_What is a Mesh.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.1.</b>
+                        
+                        What is a Mesh?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="1-foundations/1-6/2_Understanding Topology.html">
+            
+                
+                    <a href="../../1-foundations/1-6/2_Understanding Topology.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.2.</b>
+                        
+                        Understanding Topology
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="1-foundations/1-6/3_Creating Meshes.html">
+            
+                
+                    <a href="../../1-foundations/1-6/3_Creating Meshes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.3.</b>
+                        
+                        Creating Meshes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="1-foundations/1-6/4_Mesh Operations.html">
+            
+                
+                    <a href="../../1-foundations/1-6/4_Mesh Operations.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.4.</b>
+                        
+                        Mesh Operations
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="1-foundations/1-6/5_Mesh Interactions.html">
+            
+                
+                    <a href="../../1-foundations/1-6/5_Mesh Interactions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.5.</b>
+                        
+                        Mesh Interactions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="1-foundations/1-6/6_Working with Mesh Geometry.html">
+            
+                
+                    <a href="../../1-foundations/1-6/6_Working with Mesh Geometry.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.6.</b>
+                        
+                        Working with Mesh Geometry
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="2-extensions/2-extensions.html">
+            
+                
+                    <a href="../../2-extensions/2-extensions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Extensions
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="2-extensions/2-1/0_Element.html">
+            
+                
+                    <a href="../../2-extensions/2-1/0_Element.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Element*
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="2-extensions/2-1/0_Element_Intro.html">
+            
+                
+                    <a href="../../2-extensions/2-1/0_Element_Intro.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.1.</b>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="2-extensions/2-1/1_HalfEdge_Data.html">
+            
+                
+                    <a href="../../2-extensions/2-1/1_HalfEdge_Data.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.2.</b>
+                        
+                        Half Edge Data
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="2-extensions/2-1/2_Components.html">
+            
+                
+                    <a href="../../2-extensions/2-1/2_Components.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.3.</b>
+                        
+                        Components
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="2-extensions/2-1/4_Exercise.html">
+            
+                
+                    <a href="../../2-extensions/2-1/4_Exercise.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.4.</b>
+                        
+                        Exercise
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="2-extensions/2-1/5-Case Studies.html">
+            
+                
+                    <a href="../../2-extensions/2-1/5-Case Studies.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.5.</b>
+                        
+                        Case Studies
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.5.1" data-path="2-extensions/2-1/3_Architectural Case Study.html">
+            
+                
+                    <a href="../../2-extensions/2-1/3_Architectural Case Study.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.5.1.</b>
+                        
+                        Architectural Case Study
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="appendix/index.html">
+            
+                
+                    <a href="../../appendix/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Appendix
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="appendix/A-1/0_index-of-components.html">
+            
+                
+                    <a href="../../appendix/A-1/0_index-of-components.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Index
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="appendix/A-2/1_gh-files.html">
+            
+                
+                    <a href="../../appendix/A-2/1_gh-files.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Example Files
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="appendix/A-2/0_resources.html">
+            
+                
+                    <a href="../../appendix/A-2/0_resources.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Resources
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="appendix/A-3/0_about-this-primer.html">
+            
+                
+                    <a href="../../appendix/A-3/0_about-this-primer.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        About This Primer
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >The Grasshopper Primer (EN)</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <style>
+td:nth-child(1) {color: #008DB2}
+td:nth-child(3)    {font-size: 70%;width: 15%;}
+td {background-color: #F9F9F9;}
+thead {display: none}
+</style>
+
+<h3 id="1-5-4-working-with-data-trees">1.5.4. Working with Data Trees</h3>
+<blockquote>
+<p>Example files that accompany this section: <a href="http://grasshopperprimer.com/appendix/A-2/1_gh-files.html" target="_blank">http://grasshopperprimer.com/appendix/A-2/1_gh-files.html</a></p>
+</blockquote>
+<p>In this example, we will use some of Grasshopper&#x2019;s tools for manipulating data trees to retreive, reorganize, and interpolate the desired points contained in a data tree and create a lattice of intersecting fins.</p>
+<p><img src="images/1-5-3/1-5-3_033-rail-intersect.png" alt="IMAGE"></p>
+<blockquote>
+<ol>
+<li>Sweep with two rails to create a NURBS surface.</li>
+<li>Divide the surface into variable sized segments, extract vertices. Data comprised of one list with four items in each segment.</li>
+<li>Flip the matrix to change the data structure. Data comprised of four lists, each containing a single corner point of each segment.</li>
+<li>Explode the tree to connect corner points and draw diagonal lines across each segement.</li>
+<li>Prune the tree to cull branches containing insufficient points to construct a degree 3 NURBS curve and interpolate points.</li>
+<li>Extrude the curves to create intersecting fins.</li>
+</ol>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01.</td>
+<td>Start a new definition, type Ctrl+N (in Grasshopper)</td>
+<td></td>
+</tr>
+<tr>
+<td>02.</td>
+<td><strong>Params/Geometry/Curve</strong> &#x2013; Drag and drop three <strong>curve</strong> parameters onto the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#PGCrv"><img src="images/1-5-3/1-5-3_034a-curve.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>03.</td>
+<td><strong>Surface/Freeform/Sweep2</strong> &#x2013; Drag a <strong>Sweep2</strong> component onto the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#SFSwp2"><img src="images/1-5-3/1-5-3_034b-sweep2.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>04.</td>
+<td>Right-click the first <strong>Curve</strong> parameter and select &#x201C;Set one curve.&#x201D; Select the first rail curve in the Rhino viewport</td>
+<td></td>
+</tr>
+<tr>
+<td>05.</td>
+<td>Right-click the second <strong>Curve</strong> parameter and select &#x201C;Set one curve.&#x201D; Select the second rail curve in the Rhino viewport</td>
+<td></td>
+</tr>
+<tr>
+<td>06.</td>
+<td>Right-click the third <strong>Curve</strong> parameter and select &#x201C;Set one curve.&#x201D; Select the section curve in the Rhino viewport</td>
+<td></td>
+</tr>
+<tr>
+<td>07.</td>
+<td>Connect the outputs of the <strong>Curve</strong> parameters to the Rail 1 (R1), Rail 2 (R2), and Sections (S) inputs of the <strong>Sweep2</strong> respectively</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/1-5-3/1-5-3_034-definition1.png" alt="IMAGE"></p>
+<blockquote>
+<p>We have just created a NURBS surface</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>08.</td>
+<td><strong>Params/Geometry/Surface</strong> &#x2013; drag a <strong>Surface</strong> parameter to the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#PGSrf"><img src="images/1-5-3/1-5-3_035a-surface.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>09.</td>
+<td>Connect the Brep (S) output of the <strong>Sweep2</strong> component to the input of the <strong>Surface</strong> parameter</td>
+<td></td>
+</tr>
+<tr>
+<td>10.</td>
+<td>Right-click the <strong>Surface</strong> parameter and select &#x201C;Reparameterize&#x201D;. <br><blockquote>In this step, we re-mapped the u and v domains of the surface between 0 and 1. This will make future operations possible.</blockquote></td>
+<td><img src="images/1-5-3/1-5-3_035-reparameterize.png" alt="IMAGE"></td>
+</tr>
+<tr>
+<td>11.</td>
+<td><strong>Maths/Domain/Divide Domain2</strong> &#x2013; drag and drop a <strong>Divide Domain2</strong> component onto the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#MDDivide"><img src="images/1-5-3/1-5-3_036-divide-domain2.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>12.</td>
+<td><strong>Params/Input/Number Slider</strong> &#x2013; drag two <strong>Number Sliders</strong> onto the canvas</td>
+<td></td>
+</tr>
+<tr>
+<td>13.</td>
+<td>Double click the first <strong>Number Sliders</strong> and set the following:<ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 40<br>Value: 20</ul></td>
+<td></td>
+</tr>
+<tr>
+<td>14.</td>
+<td>Set the same values on the second <strong>Number Sliders</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>15.</td>
+<td>Connect the output of the reparameterized <strong>Surface</strong> parameter to the Domain (I) input of the <strong>Divide Domain2</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>16.</td>
+<td>Connect the first <strong>Number Sliders</strong> to the U Count (U) input of the <strong>Divide Domain2</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>17.</td>
+<td>Connect the second <strong>Number Sliders</strong> to the V Count (V) input of the <strong>Divide Domain2</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>18.</td>
+<td><strong>Surface/Util/Isotrim</strong> &#x2013; Drag and drop the <strong>Isotrim</strong> component onto the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#SUSubSrf"><img src="images/1-5-3/1-5-3_037-isotrim.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>19.</td>
+<td>Connect the Segments (S) output of the <strong>Divide Domain2</strong> component to the Domain (D) input of the <strong>Isotrim</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>20.</td>
+<td>Connect the output of the <strong>Surface</strong> parameter to the Surface (S) input of the <strong>Isotrim</strong> component</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/1-5-3/1-5-3_038-definition2.png" alt="IMAGE"></p>
+<blockquote>
+<p>We have now divided out surface into smaller, equally sized, surfaces. Adjust the U and V Count sliders to change the number of divisions. Lets add a Graph Mapper to give the segments variable size.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21.</td>
+<td><strong>Maths/Domain/Deconstruct Domain2</strong> &#x2013; Drag a <strong>Deconstruct Domain2</strong> component onto the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#MDDeDom2Num"><img src="images/1-5-3/1-5-3_039-deconstruct-domain2.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>22.</td>
+<td><strong>Maths/Domain/Construct Domain2</strong> &#x2013; Drag a <strong>Construct Domain2</strong> component to the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#MDDom2Num"><img src="images/1-5-3/1-5-3_040-construct-domain2.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>23.</td>
+<td><strong>Params/Input/Graph Mapper</strong> &#x2013; Drag a <strong>Graph Mapper</strong> to the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#PIGraph"><img src="images/1-5-3/1-5-3_041-graph-mapper.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>24.</td>
+<td><strong>Sets/List/List Length</strong> &#x2013; Drag a <strong>List Length</strong> component to the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#SLLng"><img src="images/1-5-3/1-5-3_042-list-length.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>25.</td>
+<td><strong>Sets/Tree/Merge</strong> &#x2013; Drag a <strong>Merge</strong> component to the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#STMerge"><img src="images/1-5-3/1-5-3_043-merge.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>26.</td>
+<td><strong>Sets/List/Split List</strong> &#x2013; Drag a <strong>Split List</strong> component to the canvas <br><blockquote>The Merge and Split components are used here so that the same Graph Mapper could be used for both the U min and U max values.</blockquote></td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#SLSplit"><img src="images/1-5-3/1-5-3_044-split-list.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>27.</td>
+<td>Connect the U min (U0) and U max (U1) outputs of the <strong>Deconstruct Domain2</strong> component to the Data 1 (D1) and Data 2 (D2) inputs of the <strong>Merge</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>28.</td>
+<td>Connect the Result (R) output of the <strong>Merge</strong> component to the input of the <strong>Graph Mapper</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>29.</td>
+<td>Right-click the <strong>Graph Mapper</strong> and select &#x201C;Bezier&#x201D; under &#x201C;Graph Types&#x201D;</td>
+<td></td>
+</tr>
+<tr>
+<td>30.</td>
+<td>Connect a second wire from the U max (U1) output of the <strong>Deconstruct Domain2</strong> component to the List (L) input of the <strong>List Length</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>31.</td>
+<td>Connect the <strong>Graph Mapper</strong> output to the List (L) input of the <strong>Split List</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>32.</td>
+<td>Connect the Length (L) output of the <strong>List Length</strong> component to the Index (i) input of the <strong>Split List</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>33.</td>
+<td>Connect the List A (A) output of the <strong>Split List</strong> component to the U min (U0) input of the <strong>Construct Domain2</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>34.</td>
+<td>Connect the List B (B) output of the <strong>Split List</strong> component to the U max (U1) input of the <strong>Construct Domain2</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>35.</td>
+<td>Connect the V min (V0) output of the <strong>Deconstruct Domain2</strong> component to the V min (V1) input of the <strong>Construct Domain2</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>36.</td>
+<td>Connect the V max (V1) output of the <strong>Deconstruct Domain2</strong> component to the V max (V1) input of the <strong>Construct Domain2</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>37.</td>
+<td>Connect the 2D Domain (I2) output of the <strong>Construct Domain2</strong> component to the Domain (D) input of the <strong>Isotrim</strong> component, replacing the existing connection</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/1-5-3/1-5-3_045-definition3.png" alt="IMAGE"></p>
+<blockquote>
+<p>We have just deconstructed the domains of each surface segment, remapped the U values using a Graph Mapper, and reconstructed the domains. Adjust the grips of the Graph Mapper to change the distribution of the surface segments. Let&#x2019;s use Data Trees to manipulate the surface divisions.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>38.</td>
+<td><strong>Surface/Analysis/Deconstruct Brep</strong> &#x2013; Drag the <strong>Deconstruct Brep</strong> component onto the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#SADeBrep"><img src="images/1-5-3/1-5-3_046-deconstruct-brep.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>39.</td>
+<td><strong>Sets/Tree/Flip Matrix</strong> &#x2013; Drag the <strong>Flip Matrix</strong> component to the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#STFlip"><img src="images/1-5-3/1-5-3_047-flip-matrix.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>40.</td>
+<td><strong>Sets/Tree/Explode Tree</strong> &#x2013; Drag the <strong>Explode Tree</strong> component to the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#STExplode"><img src="images/1-5-3/1-5-3_048-explode-tree.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>41.</td>
+<td>Connect the Surface (S) output of the <strong>Isotrim</strong> component to the Brep (B) input of the <strong>Deconstruct Brep</strong> component <br><blockquote>The Deconstruct Brep component deconstructs a Brep into Faces, Edges, and Vertices. This is helpful if you want to operate on a specific constituent of the surface.</blockquote></td>
+<td></td>
+</tr>
+<tr>
+<td>42.</td>
+<td>Connect the Vertices (V) output of the <strong>Deconstruct Brep</strong> component to the Data (D) input of the <strong>Flip Matrix</strong> component <br><blockquote>We just changed the Data tree structure from one list of four vertices that define each surface, to four lists, each containing one vertex of each surface.</blockquote></td>
+<td></td>
+</tr>
+<tr>
+<td>43.</td>
+<td>Connect the Data (D) output of the <strong>Flip Matrix</strong> component to the Data (D) input of the <strong>Explode Tree</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>44.</td>
+<td>Right-click the <strong>Explode Tree</strong> component and select &#x201C;Match Outputs&#x201D;</td>
+<td></td>
+</tr>
+<tr>
+<td>45.</td>
+<td>Right-click the Data (D) input of the <strong>Explode Tree</strong> component and select simplify</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/1-5-3/1-5-3_049-definition4.png" alt="IMAGE"></p>
+<blockquote>
+<p>Each output of the Explode Tree component contains a list of one vertex of each surface. In other words, one list with all the top right corners, one list with all the bottom right corners, one list of top left corners, and one list of bottom left corners.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>46.</td>
+<td><strong>Curve/Primitive/Line</strong> &#x2013; Drag and drop two <strong>Line</strong> components onto the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#CPLine"><img src="images/1-5-3/1-5-3_050a-line.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>47.</td>
+<td>Connect the Branch 0 {0} output of the <strong>Explode Tree</strong> component to the Start Point (A) input of the first <strong>Line</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>48.</td>
+<td>Connect the Branch 1 {1} output of the <strong>Explode Tree</strong> component to the Start Point (A) input of the second <strong>Line</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>49.</td>
+<td>Connect the Branch 2 {2} output of the <strong>Explode Tree</strong> component to the End Point (B) input of the first <strong>Line</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>50.</td>
+<td>Connect the Branch 3 {3} output of the <strong>Explode Tree</strong> component to the End Point (B) input of the second <strong>Line</strong> component</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/1-5-3/1-5-3_050-definition5.png" alt="IMAGE"></p>
+<blockquote>
+<p>We have now connected the corner points of each surface diagonally with lines.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>51.</td>
+<td><strong>Curve/Util/Join Curves</strong> &#x2013; Drag and drop the <strong>Join Curves</strong> component to the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#CUJoin"><img src="images/1-5-3/1-5-3_051-join-curves.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>52.</td>
+<td><strong>Curve/Analysis/Control Points</strong> &#x2013; Drag a <strong>Control Points</strong> component onto the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#CACP"><img src="images/1-5-3/1-5-3_052-control-points.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>53.</td>
+<td><strong>Curve/Spline/Interpolate</strong> &#x2013; Drag and drop the <strong>Interpolate</strong> component onto the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#CSIntCrv"><img src="images/1-5-3/1-5-3_053-interpolate.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>54.</td>
+<td>Connect the Line (L) outputs of each <strong>Line</strong> component to the Curves (C) input of the <strong>Join Curve</strong>s component  <br><blockquote>Hold down the Shift key to connect multiple wires to a single input<blockquote></blockquote></blockquote></td>
+<td></td>
+</tr>
+<tr>
+<td>55.</td>
+<td>Connect the Curves (C) output of the <strong>Join Curves</strong> component to the Curve (C) input of the <strong>Control Points</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>56.</td>
+<td>Connect the Points (P) output of the <strong>Control Points</strong> component to the Vertices (V) input of the <strong>Interpolate</strong> component</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/1-5-3/1-5-3_054-definition6.png" alt="IMAGE"></p>
+<blockquote>
+<p>We have now joined our lines into polylines and reconstructed them as NURBS curves by interpolating their control points. In the Rhino viewport, you might notice that the shorter curves are still straight lines. This is because you cannot make a degree three NURBS curve with fewer than four control points. Let&#x2019;s manipulate the data tree to eliminate lists of control points with less than four items.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>57.</td>
+<td><strong>Sets/Tree/Prune Tree</strong> &#x2013; Drag and drop the <strong>Prune Tree</strong> component onto the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#STPrune"><img src="images/1-5-3/1-5-3_055-prune-tree.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>58.</td>
+<td><strong>Params/Input/Panel</strong> &#x2013; Drag a Panel onto the canvas</td>
+<td></td>
+</tr>
+<tr>
+<td>59.</td>
+<td>Connect the Points (P) output of the <strong>Control Points</strong> component to the Tree (T) input of the <strong>Prune Tree</strong> component <br><blockquote>If you connect one Param Viewer to the Points (P) output of the Control Points component, and another to the Tree (T) output of the Prune Tree component, you can see that the number of branches has been reduced.</blockquote></td>
+<td></td>
+</tr>
+<tr>
+<td>60.</td>
+<td>Double click the <strong>Panel</strong> and enter 4.</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#PIPanel"><img src="images/1-5-3/1-5-3_056-panel.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>61.</td>
+<td>Connect the output of the <strong>Panel</strong> to the Minimum (N0) input of the <strong>Prune Tree</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>62.</td>
+<td>Connect the Tree (T) output of the <strong>Prune Tree</strong> component to the Vertices (V) input of the <strong>Interpolate</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>63.</td>
+<td><strong>Surface/Freeform/Extrude</strong> &#x2013; Drag and drop the <strong>Extrude</strong> component onto the canvas</td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#SFExtr"><img src="images/1-5-3/1-5-3_057-extrude.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>64.</td>
+<td><strong>Vector/Vector/Unit Y</strong> &#x2013; Drag a <strong>Unit Y</strong> component onto the canvas<br><br><em>You may need to use a Unit X vector, depending on the orientation of your referenced geometry in Rhino</em></td>
+<td><a href="../../appendix/A-1/0_index-of-components.html#VVY"><img src="images/1-5-3/1-5-3_058a-vector-y.png" alt="IMAGE"></a></td>
+</tr>
+<tr>
+<td>65.</td>
+<td><strong>Params/Input/Number Slider</strong> &#x2013; Drag a <strong>Number Slider</strong> onto the canvas</td>
+<td></td>
+</tr>
+<tr>
+<td>66.</td>
+<td>Double click the <strong>Number Slider</strong> and set the following:<ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 5<br>Value: 3</ul></td>
+<td></td>
+</tr>
+<tr>
+<td>67.</td>
+<td>Connect the Curve (C) output of the <strong>Interpolate</strong> component to the Base (B) input of the <strong>Extrude</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>68.</td>
+<td>Connect the <strong>Number Slider</strong> output to the Factor (F) input of the <strong>Unit Y</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>69.</td>
+<td>Connect the Unit Vector (V) output of the <strong>Unit Y</strong> component to the Direction (D) input of the <strong>Extrude</strong> component</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/1-5-3/1-5-3_058-final-definition.png" alt="IMAGE"></p>
+<blockquote>
+<p>You should now see a diagonal grid of strips or fins in the Rhino Viewport. Adjust the Factor slider to chnage the depth of the fins</p>
+</blockquote>
+<p><img src="images/1-5-3/1-5-3_059-final-example.png" alt="IMAGE"></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../1-foundations/1-5/3_creating-data-trees.html" class="navigation navigation-prev " aria-label="Previous page: Creating Data Trees"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../1-foundations/1-6/0_Getting Started with Meshes.html" class="navigation navigation-next " aria-label="Next page: Getting Started with Meshes"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book The Grasshopper Primer (EN) -->
+</html>

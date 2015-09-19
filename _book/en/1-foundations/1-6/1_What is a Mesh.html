@@ -1,0 +1,1439 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <!-- Start book The Grasshopper Primer (EN) -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>What is a Mesh? | The Grasshopper Primer (EN)</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="../../styles/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../../1-foundations/1-6/2_Understanding Topology.html" />
+    
+    
+    <link rel="prev" href="../../1-foundations/1-6/0_Getting Started with Meshes.html" />
+    
+
+        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-37765741-8', 'auto');ga('send', 'pageview');</script>
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book" data-level="1.6.1" data-basepath="../.." data-revision="Fri Sep 18 2015 22:02:02 GMT-0700 (Pacific Daylight Time)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        About
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="0.1" data-path="0-about/1-grasshopper-an-overview.html">
+            
+                
+                    <a href="../../0-about/1-grasshopper-an-overview.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                        Grasshopper - an Overview
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.2" data-path="0-about/2-grasshopper-in-action.html">
+            
+                
+                    <a href="../../0-about/2-grasshopper-in-action.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                        Grasshopper in Action
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="1-foundations/1-foundations.html">
+            
+                
+                    <a href="../../1-foundations/1-foundations.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Foundations
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="1-foundations/1-1/0_hello-grasshopper.html">
+            
+                
+                    <a href="../../1-foundations/1-1/0_hello-grasshopper.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Hello Grasshopper!
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="1-foundations/1-1/1_installing-and-launching-grasshopper.html">
+            
+                
+                    <a href="../../1-foundations/1-1/1_installing-and-launching-grasshopper.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.1.</b>
+                        
+                        Installing and Launching Grasshopper
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="1-foundations/1-1/2_the-grasshopper-ui.html">
+            
+                
+                    <a href="../../1-foundations/1-1/2_the-grasshopper-ui.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.2.</b>
+                        
+                        The Grasshopper UI
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="1-foundations/1-1/3_talking-to-rhino.html">
+            
+                
+                    <a href="../../1-foundations/1-1/3_talking-to-rhino.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.3.</b>
+                        
+                        Talking to Rhino
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1-foundations/1-2/0_anatomy-of-a-grasshopper-definition.html">
+            
+                
+                    <a href="../../1-foundations/1-2/0_anatomy-of-a-grasshopper-definition.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Anatomy of a Grasshopper Definition
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1-foundations/1-2/1_grasshopper-object-types.html">
+            
+                
+                    <a href="../../1-foundations/1-2/1_grasshopper-object-types.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.1.</b>
+                        
+                        Grasshopper Object Types
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="1-foundations/1-2/2_grasshopper-component-parts.html">
+            
+                
+                    <a href="../../1-foundations/1-2/2_grasshopper-component-parts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.2.</b>
+                        
+                        Grasshopper Component Parts
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="1-foundations/1-2/3_data-types.html">
+            
+                
+                    <a href="../../1-foundations/1-2/3_data-types.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.3.</b>
+                        
+                        Data Types
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="1-foundations/1-2/4_wiring-components.html">
+            
+                
+                    <a href="../../1-foundations/1-2/4_wiring-components.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.4.</b>
+                        
+                        Wiring Components
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="1-foundations/1-2/5_the-grasshopper-definition.html">
+            
+                
+                    <a href="../../1-foundations/1-2/5_the-grasshopper-definition.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.5.</b>
+                        
+                        The Grasshopper Definition
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="1-foundations/1-3/0_building-blocks-of-algorithms.html">
+            
+                
+                    <a href="../../1-foundations/1-3/0_building-blocks-of-algorithms.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Building Blocks of Algorithms
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="1-foundations/1-3/1_points-planes-vectors.html">
+            
+                
+                    <a href="../../1-foundations/1-3/1_points-planes-vectors.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.1.</b>
+                        
+                        Points Planes &amp; Vectors
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="1-foundations/1-3/2_working-with-attractors.html">
+            
+                
+                    <a href="../../1-foundations/1-3/2_working-with-attractors.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.2.</b>
+                        
+                        Working With Attractors
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="1-foundations/1-3/3_mathematics-expressions-conditionals.html">
+            
+                
+                    <a href="../../1-foundations/1-3/3_mathematics-expressions-conditionals.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.3.</b>
+                        
+                        Mathematics, Expressions &amp; Conditionals
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="1-foundations/1-3/4_domains-color.html">
+            
+                
+                    <a href="../../1-foundations/1-3/4_domains-color.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.4.</b>
+                        
+                        Domains &amp; Color
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="1-foundations/1-3/5_booleans-logical-operators.html">
+            
+                
+                    <a href="../../1-foundations/1-3/5_booleans-logical-operators.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.5.</b>
+                        
+                        Booleans and Logical Operators
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="1-foundations/1-4/0_designing-with-lists.html">
+            
+                
+                    <a href="../../1-foundations/1-4/0_designing-with-lists.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Designing with Lists
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="1-foundations/1-4/1_curve-geometry.html">
+            
+                
+                    <a href="../../1-foundations/1-4/1_curve-geometry.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.1.</b>
+                        
+                        Curve Geometry
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="1-foundations/1-4/2_what-is-a-list.html">
+            
+                
+                    <a href="../../1-foundations/1-4/2_what-is-a-list.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.2.</b>
+                        
+                        What is a List?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="1-foundations/1-4/3_data-stream-matching.html">
+            
+                
+                    <a href="../../1-foundations/1-4/3_data-stream-matching.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.3.</b>
+                        
+                        Data Stream Matching
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="1-foundations/1-4/4_creating-lists.html">
+            
+                
+                    <a href="../../1-foundations/1-4/4_creating-lists.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.4.</b>
+                        
+                        Creating Lists
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="1-foundations/1-4/5_list-visualization.html">
+            
+                
+                    <a href="../../1-foundations/1-4/5_list-visualization.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.5.</b>
+                        
+                        List Visualization
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="1-foundations/1-4/6_list-management.html">
+            
+                
+                    <a href="../../1-foundations/1-4/6_list-management.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.6.</b>
+                        
+                        List Management
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="1-foundations/1-4/7_working-with-lists.html">
+            
+                
+                    <a href="../../1-foundations/1-4/7_working-with-lists.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.7.</b>
+                        
+                        Working with Lists
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="1-foundations/1-5/0_designing-with-data-trees.html">
+            
+                
+                    <a href="../../1-foundations/1-5/0_designing-with-data-trees.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        Designing with Data Trees
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="1-foundations/1-5/1_surface-geometry.html">
+            
+                
+                    <a href="../../1-foundations/1-5/1_surface-geometry.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.1.</b>
+                        
+                        Surface Geometry
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="1-foundations/1-5/2_what-is-a-data-tree.html">
+            
+                
+                    <a href="../../1-foundations/1-5/2_what-is-a-data-tree.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.2.</b>
+                        
+                        What is a Data Tree?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="1-foundations/1-5/3_creating-data-trees.html">
+            
+                
+                    <a href="../../1-foundations/1-5/3_creating-data-trees.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.3.</b>
+                        
+                        Creating Data Trees
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="1-foundations/1-5/4_working-with-data-trees.html">
+            
+                
+                    <a href="../../1-foundations/1-5/4_working-with-data-trees.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.4.</b>
+                        
+                        Working with Data Trees
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="1-foundations/1-6/0_Getting Started with Meshes.html">
+            
+                
+                    <a href="../../1-foundations/1-6/0_Getting Started with Meshes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        Getting Started with Meshes
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="1-foundations/1-6/1_What is a Mesh.html">
+            
+                
+                    <a href="../../1-foundations/1-6/1_What is a Mesh.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.1.</b>
+                        
+                        What is a Mesh?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="1-foundations/1-6/2_Understanding Topology.html">
+            
+                
+                    <a href="../../1-foundations/1-6/2_Understanding Topology.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.2.</b>
+                        
+                        Understanding Topology
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="1-foundations/1-6/3_Creating Meshes.html">
+            
+                
+                    <a href="../../1-foundations/1-6/3_Creating Meshes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.3.</b>
+                        
+                        Creating Meshes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="1-foundations/1-6/4_Mesh Operations.html">
+            
+                
+                    <a href="../../1-foundations/1-6/4_Mesh Operations.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.4.</b>
+                        
+                        Mesh Operations
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="1-foundations/1-6/5_Mesh Interactions.html">
+            
+                
+                    <a href="../../1-foundations/1-6/5_Mesh Interactions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.5.</b>
+                        
+                        Mesh Interactions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="1-foundations/1-6/6_Working with Mesh Geometry.html">
+            
+                
+                    <a href="../../1-foundations/1-6/6_Working with Mesh Geometry.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.6.</b>
+                        
+                        Working with Mesh Geometry
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="2-extensions/2-extensions.html">
+            
+                
+                    <a href="../../2-extensions/2-extensions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Extensions
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="2-extensions/2-1/0_Element.html">
+            
+                
+                    <a href="../../2-extensions/2-1/0_Element.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Element*
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="2-extensions/2-1/0_Element_Intro.html">
+            
+                
+                    <a href="../../2-extensions/2-1/0_Element_Intro.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.1.</b>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="2-extensions/2-1/1_HalfEdge_Data.html">
+            
+                
+                    <a href="../../2-extensions/2-1/1_HalfEdge_Data.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.2.</b>
+                        
+                        Half Edge Data
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="2-extensions/2-1/2_Components.html">
+            
+                
+                    <a href="../../2-extensions/2-1/2_Components.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.3.</b>
+                        
+                        Components
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="2-extensions/2-1/4_Exercise.html">
+            
+                
+                    <a href="../../2-extensions/2-1/4_Exercise.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.4.</b>
+                        
+                        Exercise
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="2-extensions/2-1/5-Case Studies.html">
+            
+                
+                    <a href="../../2-extensions/2-1/5-Case Studies.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.5.</b>
+                        
+                        Case Studies
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.5.1" data-path="2-extensions/2-1/3_Architectural Case Study.html">
+            
+                
+                    <a href="../../2-extensions/2-1/3_Architectural Case Study.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.5.1.</b>
+                        
+                        Architectural Case Study
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="appendix/index.html">
+            
+                
+                    <a href="../../appendix/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Appendix
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="appendix/A-1/0_index-of-components.html">
+            
+                
+                    <a href="../../appendix/A-1/0_index-of-components.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Index
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="appendix/A-2/1_gh-files.html">
+            
+                
+                    <a href="../../appendix/A-2/1_gh-files.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Example Files
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="appendix/A-2/0_resources.html">
+            
+                
+                    <a href="../../appendix/A-2/0_resources.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Resources
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="appendix/A-3/0_about-this-primer.html">
+            
+                
+                    <a href="../../appendix/A-3/0_about-this-primer.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        About This Primer
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >The Grasshopper Primer (EN)</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h3 id="1-6-1-what-is-a-mesh">1.6.1 What is a Mesh?</h3>
+<h5 id="a-mesh-is-a-collection-of-quadrilaterals-and-triangles-that-represents-a-surface-or-solid-geometry-this-section-discusses-the-structure-of-a-mesh-object-which-includes-vertices-edges-and-faces-as-well-as-additional-mesh-properties-such-as-colors-and-normals">A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. This section discusses the structure of a mesh object, which includes vertices, edges, and faces, as well as additional mesh properties such as colors and normals.</h5>
+<p><img src="images/1-6-1/01_mesh-structure.png" alt="IMAGE"></p>
+<blockquote>
+<ol>
+<li>Mesh vertices</li>
+<li>Mesh edges</li>
+<li>Mesh faces</li>
+</ol>
+</blockquote>
+<h4 id="1-6-1-1-basic-anatomy-of-a-mesh">1.6.1.1 Basic Anatomy of a Mesh</h4>
+<p>Grasshopper defines meshes using a Face-Vertex data structure. At its most basic, this structure is simply a collection of points which are grouped into polygons. The points of a mesh are called <em>vertices</em>, while the polygons are called <em>faces</em>. To create a mesh we need a list of vertices and a system of grouping those vertices into faces.</p>
+<p><img src="images/1-6-1/02_basic-anatomy.png" alt="IMAGE"></p>
+<blockquote>
+<ol>
+<li>A list of vertices. </li>
+<li>Faces with groupings of vertices</li>
+</ol>
+</blockquote>
+<p><strong>Vertices</strong></p>
+<p>The vertices of a mesh are simply a list of points. Recall that  a <em>list</em> in Grasshopper is a collection of objects. Each object in the list has an <em>index</em> which describes that objects position in a list. The index of the vertices is very important when constructing a mesh, or getting information about the structure of a mesh.</p>
+<p><img src="images/1-6-1/03_vertices.png" alt="IMAGE"></p>
+<blockquote>
+<ol>
+<li>A list of points. All lists in Grasshopper begin with an index of zero</li>
+<li>The set of points labeled with their index</li>
+</ol>
+</blockquote>
+<p><strong>Faces</strong></p>
+<p>A face is an ordered list of three or four vertices. The &#x201C;surface&#x201D; representation of a mesh face is therefore implied according to the position of the vertices being indexed. We already have the list of vertices that make up the mesh, so instead of providing individual points to define a face, we instead simply use the index of the vertices. This also allows us to use the same vertex in more than one face.</p>
+<p><img src="images/1-6-1/04_faces.png" alt="IMAGE"></p>
+<blockquote>
+<ol>
+<li>A quad face made with indices 0, 1, 2, and 3</li>
+<li>A triangle face made with indices 1, 4, and 2</li>
+</ol>
+</blockquote>
+<p>In Grasshopper, faces can be created with the <strong>Mesh Triangle</strong> and <strong>Mesh Quad</strong> components. The input for these components are integers that correspond to the index of the vertices we want to use for a face. By connecting a <strong>Panel</strong> to the output of these components, we can see that a triangular face is represented as T{A;B;C}, and a quad face as Q{A;B;C;D}. Faces with more than 4 sides are not allowed. To make a 5-sided mesh element, the mesh must be broken into two or more faces.</p>
+<p><img src="images/1-6-1/05_construct-faces.png" alt="IMAGE"></p>
+<blockquote>
+<ol>
+<li><strong>Mesh Quad</strong> component with indices 0, 1, 2, and 3</li>
+<li><strong>Mesh Triangle</strong> component with indices 1, 4, and 2</li>
+</ol>
+</blockquote>
+<p>It is important to remember that these components do not result in the creation of mesh geometry, rather the output is a list of indices that define how a mesh should be constructed. By paying attention to the format of this list, we can also create a face manually by editing a <strong>Panel</strong> component and entering the appropriate format for either triangular or quad faces.</p>
+<p><img src="images/1-6-1/06_faces-with-panel.png" alt="IMAGE"></p>
+<blockquote>
+<ol>
+<li>A face created using a <strong>Mesh Quad</strong> component</li>
+<li>A face created using a <strong>Panel</strong></li>
+<li>A Panel Properties window is automatically opened when double-clicking a panel while zoomed out, or by right-clicking a panel and selecting &quot;Edit Notes...&quot;</li>
+</ol>
+</blockquote>
+<p>So far we have a list of vertices and a set of face definitions, but have not yet created a mesh. In order to create a mesh, we need to connect the faces and vertices together by using the <strong>Construct Mesh</strong> component. We connect our list of vertices to the V input, and a merged list of faces to the F input. (The component also has room for an optional Color input, which is discussed below.) If we connect a panel to the output of the <strong>Construct Mesh</strong> we can see information about the number of faces and number of indices.</p>
+<p><img src="images/1-6-1/07_construct-mesh.png" alt="IMAGE"></p>
+<blockquote>
+<ol>
+<li>The <strong>Construct Mesh</strong> component takes a list of vertices and a list of faces as input. The Color input is optional, and is left blank for now</li>
+<li>A panel shows that we have created a mesh with 5 vertices and 2 faces</li>
+<li>The resulting mesh (the vertices have been labeled with their indices)</li>
+</ol>
+</blockquote>
+<p>By default, Grasshopper does not preview the edges of mesh geometry. To preview the edges as well as the surfaces, you can turn on mesh edge preview by using the shortcut Ctrl-M, or by going to the Display menu and selecting &apos;Preview Mesh Edges&apos;.</p>
+<p><img src="images/1-6-1/08_preview-mesh-edges.png" alt="IMAGE"></p>
+<p>It is extremely important to pay attention to the order of the indices when constructing a mesh face. The face will be constructed by connecting the vertices listed in order, so the quad faces Q{0,1,2,3} and Q{1,0,2,3} are very different, despite using the same four vertices. Incorrect vertex ordering can lead to problems such as holes, non-manifold mesh geometry, or non-orientable surfaces. Such mesh geometry is usually not correctly rendered, and not able to be 3D printed. These issues are discussed in more detail in the <strong>Understanding Topology</strong> section.</p>
+<p><img src="images/1-6-1/08_bowtie.png" alt="IMAGE"></p>
+<blockquote>
+<ol>
+<li>A quad face with indices 0,1,2,3</li>
+<li>A quad with indicies 0,3,1,2</li>
+</ol>
+</blockquote>
+<h4 id="1-6-1-2-implicit-mesh-data">1.6.1.2 Implicit Mesh Data</h4>
+<p>In addition to faces and vertices, there is other information about a mesh that we will want to use. In a Face-Vertex based mesh, data such as <em>edges</em> and <em>normals</em> are calculated implicitly based on the given faces and vertices. This section describes ways to query this information.</p>
+<p><strong>Edges</strong></p>
+<p>The <em>edges</em> of a mesh are lines connecting any two consecutive vertices in a face. Notice that some edges are shared between multiple faces, while other edges are only adjacent to one face. The number of faces an edge is adjacent to is called the <em>valence</em> of that edge.</p>
+<p>Grasshopper groups edges into three categories based on the valence:</p>
+<ol>
+<li>E1 - &apos;Naked Edges&apos; have a valence of 1. They make up the external boundary of a mesh.</li>
+<li>E2 - &apos;Interior Edges&apos; have a valence of 2. </li>
+<li>E3 - &apos;Non-Manifold Edges&apos; have a valence of 3 or greater. Meshes that contain such structure are called &quot;Non-Manifold&quot;, and are discussed in the next section.</li>
+</ol>
+<p><img src="images/1-6-1/09_edge-valence.png" alt="IMAGE"></p>
+<blockquote>
+<ol>
+<li>Naked edge with valence of 1</li>
+<li>Interior edge with valence of 2</li>
+<li>Non-manifold edge with valence of 3</li>
+</ol>
+</blockquote>
+<p>We can use the <strong>Mesh Edges</strong> component to get the edges of a mesh outputted according to valence. This allows us to locate edges along the boundary of a mesh, or to identify non-manifold edges. Sometimes, however, it is more useful to have the full boundary of each face. For this, we can use the <strong>Face Boundaries</strong> component. This will return a polyline for each face.</p>
+<p><img src="images/1-6-1/10_edge-component.png" alt="IMAGE"></p>
+<blockquote>
+<ol>
+<li>The <strong>Mesh Edges</strong> component outputs three sets of edges. This mesh has 5 naked edges, 1 interior edge, and zero non-manifold edges</li>
+<li>The E3 output is empty, because this mesh does not have any non-manifold edges, resulting in an orange wire.</li>
+<li>The <strong>Face Boundaries</strong> component outputs one polyline for each face</li>
+</ol>
+</blockquote>
+<p><strong>Face Normals</strong></p>
+<p>A <em>normal vector</em> is a vector with a magnitude of one that is perpendicular to a surface. In the case of triangular faces, we know that any three points must be planar, so the normal will be perpendicular to that plane, but how do we know which direction (&apos;up&apos; or &apos;down&apos;) the normal will be pointing? Once again, the order of the indicies is crucial here. Mesh faces in Grasshopper are defined counter-clockwise, so a face with indices {0,1,2} will be &apos;flipped&apos; as compared to the indicies {1,0,2}. Another way to visualize this is to use the <em>Right-Hand-Rule</em>. </p>
+<p><img src="images/1-6-1/11_face-normals.png" alt="IMAGE"></p>
+<blockquote>
+<ol>
+<li>The <strong>Face Normals</strong> component will return a list of center points and normal vectors for each face</li>
+<li>Face normals according to vertex sequence</li>
+<li>&quot;Right-Hand-Rule&quot; for determining normal direction</li>
+</ol>
+</blockquote>
+<p>Grasshopper also allows quad faces, in which case the 4 points will not always be planar. For these faces, the center point will be simply the average of the coordinates of the 4 vertices (in the case of a non-planar quad, note that this point is not necessarily on the mesh). To calculate the normal of a quad face, we need to first trianglulate the quad by splitting it into two planar triangles. The normal of the overall face is then the average of the two normals, weighted according to the area of the two triangles.</p>
+<p><strong>Vertex Normals</strong></p>
+<p>In addition to the face normals, it is also possible to calculate normals for each vertex of a mesh. For a vertex that is only used in a single face, the normal at the vertex will point in the same direction as the face normal. If a vertex has multiple adjacent faces, the vertex normal is calculated by taking the average of the faces. </p>
+<p>While less intuitive than face normals, vertex normals are important for smooth visualization of meshes. You might notice that even when mesh is composed of planar faces, such a mesh can still appear smooth and rounded when shaded in Rhino. Using the vertex normals allows this smooth visualization.</p>
+<p><img src="images/1-6-1/12_vertex-normals.png" alt="IMAGE"></p>
+<blockquote>
+<ol>
+<li>Normals set according to the face normal results in discrete polygonal shading</li>
+<li>Adjancent face normals are averaged together to create vertex normals, resulting in smooth shading across faces</li>
+</ol>
+</blockquote>
+<h4 id="1-6-1-3-mesh-attributes">1.6.1.3 Mesh Attributes</h4>
+<p>Meshes can also be assigned additional attributes to either vertices or faces. The simplest of these is vertex color, which is described below, but other attributes exist such as texture UV coordinates. (Some programs even allow vertex normals to be assigned as attributes instead of being derived from the faces and vertices, which can provide even more flexibility in rendered surface appearance.)</p>
+<p><strong>Color</strong></p>
+<p>When using a <strong>Construct Mesh</strong> component, there is an option input for vertex color. Colors can also be assigned to an existing mesh using the <strong>Mesh Color</strong> component. By using a single color for a mesh, we can color the entire mesh.</p>
+<p><img src="images/1-6-1/13_single-colors.png" alt="IMAGE"></p>
+<blockquote>
+<p>Trianglular mesh objects colored with red, green, or blue</p>
+</blockquote>
+<p>While the above examples colored the entire mesh, color data are actually assigned for each vertex. By using a list of three colors, we can color each vertex in the triangle separately. These colors are used for visualitizations, with each face rendered as an interpolation of the vertex colors. For example, the image below shows a triangular face with vertex colors of Red, Green, and Blue.</p>
+<p><img src="images/1-6-1/14_multi-color.png" alt="IMAGE"></p>
+<blockquote>
+<ol>
+<li>Red, green, and blue are assigned to the three vertices of a mesh</li>
+<li>The resulting mesh interpolates the colors of the vertices</li>
+</ol>
+</blockquote>
+<h4 id="1-6-1-4-exercise">1.6.1.4 Exercise</h4>
+<blockquote>
+<p>Example files that accompany this section: <a href="../../appendix/A-2/gh-files/1.6.1_what%20is%20a%20mesh.gh">Download</a></p>
+</blockquote>
+<style>
+td:nth-child(1) {color: #008DB2}
+td:nth-child(3)    {width: 10%;}
+td {background-color: #F9F9F9;}
+thead {display: none}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01.</td>
+<td>Start a new definition, type Ctrl-N (in Grasshopper)</td>
+<td></td>
+</tr>
+<tr>
+<td>02.</td>
+<td><strong>Mesh/Primitive/Mesh Quad</strong> - Drag and drop a <strong>Mesh Quad</strong> component onto the canvas</td>
+<td><img src="images/1-6-1/mesh-quad.png" alt="IMAGE"></td>
+</tr>
+<tr>
+<td>03.</td>
+<td><strong>Mesh/Primitive/Construct Mesh</strong> - Drag and drop a <strong>Construct Mesh</strong> component onto the canvas</td>
+<td><img src="images/1-6-1/construct-mesh.png" alt="IMAGE"></td>
+</tr>
+<tr>
+<td>04.</td>
+<td>Connect the Face (F) output of the <strong>Mesh Quad</strong> component to the Faces (F) input of the <strong>Construct Mesh</strong> component</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/1-6-1/exercise-01.png" alt="IMAGE"></p>
+<blockquote>
+<p><strong>Mesh Quad</strong> and <strong>Construct Mesh</strong> have default values which create a single mesh face. Next, we will replace the default values with our own vertices and faces.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>05.</td>
+<td><strong>Params/Input/Panel</strong> - Drag and drop a <strong>Panel</strong> component onto the canvas</td>
+<td></td>
+</tr>
+<tr>
+<td>06.</td>
+<td>Double-click the <strong>Panel</strong> component and set the value to &apos;0&apos;</td>
+<td></td>
+</tr>
+<tr>
+<td>07.</td>
+<td><strong>Params/Input/Panel</strong> - Drag and drop four more <strong>Panel</strong> components onto the canvas and set their values to 1,2,3, and 4 <br><br><blockquote>You can also copy the original **Panel** by clicking and dragging, then tapping the Alt key before releasing the click</blockquote></td>
+<td></td>
+</tr>
+<tr>
+<td>08.</td>
+<td>Connect the <strong>Panels</strong> to the inputs of the <strong>Mesh Quad</strong> in the following order:<ul>0 - A<br>1 - B<br>2 - C<br>3 - D</ul></td>
+<td></td>
+</tr>
+<tr>
+<td>09.</td>
+<td><strong>Mesh/Primitive/Mesh Triangle</strong> - Drag and drop a <strong>Mesh Triangle</strong> component onto the canvas</td>
+<td><img src="images/1-6-1/mesh-triangle.png" alt="IMAGE"></td>
+</tr>
+<tr>
+<td>10.</td>
+<td>Connect the <strong>Panels</strong> to the inputs of the <strong>Mesh Triangle</strong> component in the following order: <ul>1 - A<br>2 - B<br>4 - C</ul></td>
+<td></td>
+</tr>
+<tr>
+<td>11.</td>
+<td><strong>Sets/Tree/Merge</strong> - Drag and drop a <strong>Merge</strong> component onto the canvas</td>
+<td><img src="images/1-6-1/merge.png" alt="IMAGE"></td>
+</tr>
+<tr>
+<td>12.</td>
+<td>Connect the Face (F) output of the <strong>Mesh Quad</strong> component to the Data1 (D1) input of the <strong>Merge</strong> component, and the Face (F) output of the <strong>Mesh Triangle</strong> component to the Data2 (D2) input of the <strong>Merge</strong> component</td>
+<td></td>
+</tr>
+<tr>
+<td>13.</td>
+<td>Connect the Result (R) output of the <strong>Merge</strong> component to the Faces (F) input of the <strong>Construct Mesh</strong> component</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/1-6-1/exercise-02.png" alt="IMAGE"></p>
+<blockquote>
+<p>The default Vertices (V) list of <strong>Construct Mesh</strong> only has 4 points, but our <strong>Mesh Triangle</strong> component uses an index of 4, which would correspond to the fifth point in a list. Since there are not enough vertices, the <strong>Construct Mesh</strong> component gives an error. To fix it, we will provide our own list of points.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14.</td>
+<td><strong>Params/Input/Panel</strong> - Drag and drop a <strong>Panel</strong> component onto the canvas</td>
+<td></td>
+</tr>
+<tr>
+<td>15.</td>
+<td>Right-click the <strong>Panel</strong> component and de-select the &apos;Multiline Data&apos; option<br><br><blockquote>By default, a panel has &apos;Multiline Data&apos; enabled. By disabling it, each line in the panel will be read as a separate item within a list.</blockquote></td>
+<td></td>
+</tr>
+<tr>
+<td>16.</td>
+<td>Double-click the <strong>Panel</strong> component to edit it, and enter the following points: <ul>{0,0,0}<br>{1,0,0}<br>{1,1,0}<br>{0,1,0}<br>{2,0,0}</ul><blockquote>Make sure you use the correct notation. To define a point in a **Panel**, you have to use curly brackets: &apos;{&apos; and &apos;}&apos; with commas between the x, y, and z values</blockquote></td>
+<td></td>
+</tr>
+<tr>
+<td>17.</td>
+<td>Connect the <strong>Panel</strong> component to the Vertices (V) input of the <strong>Construct Mesh</strong> component</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/1-6-1/exercise-03.png" alt="IMAGE"></p>
+<blockquote>
+<p>We now have a mesh with two faces and 5 vertices.  </p>
+</blockquote>
+<p>Optionally, we can replace the <strong>Mesh Quad</strong> and <strong>Mesh Triangle</strong> components with a panel specifying the indices of the faces.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>18.</td>
+<td><strong>Params/Input/Panel</strong> - Drag and drop a <strong>Panel</strong> component onto the canvas</td>
+<td></td>
+</tr>
+<tr>
+<td>19.</td>
+<td>Right-click the <strong>Panel</strong> component and deselect &apos;Multiline Data&apos; <br><br><blockquote>Alternatively, copy the existing **Panel** that we used for the points, which already has &apos;Multiline Data&apos; disabled</blockquote></td>
+<td></td>
+</tr>
+<tr>
+<td>20.</td>
+<td>Double-click the <strong>Panel</strong> component to edit it, and enter the following: <ul>Q{0,1,2,3}<br>T{1,2,4}</ul></td>
+<td></td>
+</tr>
+<tr>
+<td>21.</td>
+<td>Connect the <strong>Panel</strong> to the Faces (F) input of the <strong>Construct Mesh</strong> component</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/1-6-1/exercise-04.png" alt="IMAGE"></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>22.</td>
+<td><strong>Params/Input/Colour Swatch</strong> - Drag and drop a <strong>Colour Swatch</strong> component onto the canvas</td>
+<td><img src="images/1-6-1/colour-swatch.png" alt="IMAGE"></td>
+</tr>
+<tr>
+<td>23.</td>
+<td>Click the colored section of the component (the default is White) to open the color selection panel</td>
+<td></td>
+</tr>
+<tr>
+<td>24.</td>
+<td>Use the sliders to set the G and B values to zero. The swatch should now be Red</td>
+<td></td>
+</tr>
+<tr>
+<td>25.</td>
+<td><strong>Params/Input/Colour Swatch</strong> - Drag and drop two more <strong>Colour Swatch</strong> components onto the canvas and set their colors to Blue and Green</td>
+<td></td>
+</tr>
+<tr>
+<td>26.</td>
+<td><strong>Sets/Tree/Merge</strong> - Drag and drop a <strong>Merge</strong> component onto the canvas</td>
+<td></td>
+</tr>
+<tr>
+<td>27.</td>
+<td>Connect the three <strong>Color Swatch</strong> components into the D1, D2, and D3 inputs of the <strong>Merge</strong> component.</td>
+<td></td>
+</tr>
+<tr>
+<td>28.</td>
+<td>Connect the Result (R) output of the <strong>Merge</strong> component to the Colours (C) input of the <strong>Construct Mesh</strong> component</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/1-6-1/exercise-05.png" alt="IMAGE"></p>
+<blockquote>
+<p>We have 5 vertices, but only 3 colors. Grasshopper will assign the colors in a repeating pattern, so in this cases vertices 0 and 3 will be Red, vertices 1 and 4 will be Green, and the final vertex 2 will be Blue.</p>
+</blockquote>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../1-foundations/1-6/0_Getting Started with Meshes.html" class="navigation navigation-prev " aria-label="Previous page: Getting Started with Meshes"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../1-foundations/1-6/2_Understanding Topology.html" class="navigation navigation-next " aria-label="Next page: Understanding Topology"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book The Grasshopper Primer (EN) -->
+</html>
