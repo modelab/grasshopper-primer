@@ -1,9 +1,6 @@
 # 2. Extensions
 
-#####The Extensions Section will feature Primers to add-ons which extend Grasshopper's functionality.
+#####This volume will feature primer chapters for plugins which extend Grasshopper's functionality. 
 
-###Featured Add-ons 
+![IMAGE](Appendix_Plugin_Icons.png)
 
-![IMAGE](elementlogo.png)
-Element is a mesh geometry plugin for Grasshopper, enabling mesh creation, analysis, transformation, subdivision, and smoothing.
-http://www.food4rhino.com/project/element
