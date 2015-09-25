@@ -1,4 +1,6 @@
 # 2. Extensions
 
-#### PLACEHOLDER TEXT
-![COVER IMAGE](images/001-extensions.png)
+#####This volume will feature primer chapters for plugins which extend Grasshopper's functionality. 
+
+![IMAGE](Appendix_Plugin_Icons.png)
+
