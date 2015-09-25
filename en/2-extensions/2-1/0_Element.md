@@ -2,7 +2,7 @@
 
 #### Version 1.1 Mesh Plugin for Grasshopper
 
-![IMAGE](Element_Primer_Diagram_Convert.png)
+![IMAGE](images/2-1/2-1_001_Element-Primer-Diagram-Convert.png)
 
 
 

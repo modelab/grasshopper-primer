@@ -4,13 +4,13 @@ In the Grasshopper primer, we looked at how Grasshopper defines a mesh using a F
 
 The half-edge data structure is a representation for a mesh in which each edge is split up into two half-edges with opposite directions. This allows explicit and implicit access to data from one mesh element to adjacent elements.
 
-![IMAGE](images/01_half-edge-edit.png)
+![IMAGE](images/2-1-2/2-1-2_001_Half-Edge.png)
 
 ####2.1.2.1 Half-Edge Connectivity
 The half-edge highlighted in blue explicitly stores indices to its termination point, adjacent half-edges, and the face it belongs to. The other information (gray) can be accessed implicitly.
-![IMAGE](images/halfedge_2.png)
+![IMAGE](images/2-1-2/2-1-2_002_Half-Edge.png)
 ####2.1.2.2 Vertex Connectivity
 The vertex highlighted in blue explicitly stores an index to one of its outgoing half-edges. The other information (gray) can be accessed implicitly.
-![IMAGE](images/halfedge_3.png)
+![IMAGE](images/2-1-2/2-1-2_003_Half-Edge.png)
 
 

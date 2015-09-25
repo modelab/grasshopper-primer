@@ -1,10 +1,10 @@
 ###2.1.3 Element* Components
 
-![IMAGE](images/2.1.2_Components/COMPONENT_TABS.png)
+![IMAGE](images/2-1-3/2-1-3_001_Components-Tabs.png)
 
 ####2.1.3.1 Analyse
 
-![IMAGE](images/02_analyse-components.png)
+![IMAGE](images/2-1-3/2-1-3_002_Analyse-Components.png)
 >1. Mesh Closest Point
 2. Mesh Evaluate
 3. Mesh Sample Plus
@@ -27,7 +27,7 @@ This component is used to quickly extract color information from a mesh. It retu
 
 ####2.1.3.2 Data
 
-![IMAGE](images/03_data-components.png)
+![IMAGE](images/2-1-3/2-1-3_003_Data-Components.png)
 >1. Data Visualizer
 2. Edge Neighbors
 3. Face Neighbors
@@ -42,28 +42,28 @@ This component is used to help visualize the half-edge data of the faces of an i
 
 This component provides access to the adjacency data structured according to the edges of the input mesh. The output data is provided as a tree with one branch for each edge in the mesh. It returns the mesh edges, the edge end points, center ponts of the faces adjacent to each edge (dual), the neighboring edges as line objects (arranged in clockwise order) , and neighbouring face centers (center points of faces adjacent to the edge start and end points)
 
-![IMAGE](images/04A_edge-neighbors.png)
+![IMAGE](images/2-1-3/2-1-3_004_Edge-Neighbors.png)
 > **Edge Neighbors** - Edges, End vertices, Adjacent face centers, Neighboring edges, and Neighbouring face centers
 
 **Element\* Face Neighbors**
 
 This component is similar to the others in this section, but the data is organized in a tree according to the faces of the mesh, with one branch per face. The outputs are the face centers, vertices of each face (arranged in counter clockwise order), neighbouring edges (arranged in counter clockwise order), and the centers of neighboring faces (arranged in counter clockwise order).
 
-![IMAGE](images/04B_face-neighbors.png)
+![IMAGE](images/2-1-3/2-1-3_005_Face-Neighbors.png)
 > **Face Neighbors** - Face centers, face vertices, neighbouring edges, neighbouring face centers
 
 **Element\* Vertex Neighbors**
 
 This component outputs the mesh vertices, neighboring vertices (arranged in clockwise order), neighbouring edges (arranged in clockwise order), and neighbouring face centers (arranged in clockwise order) structured in a tree according to the vertices of the mesh.
 
-![IMAGE](images/04C_vertex-neighbors.png)
+![IMAGE](images/2-1-3/2-1-3_006_Vertex-Neighbors.png)
 > **Vertex Neighbors** - Vertices, neighbouring vertices, neighbouring edges, neighbouring face centers
 
 ####2.1.3.3 Primitives
 
 Element\* provides four additional mesh primitives: the Dodecahedron, Tetrahedron, Octahedron, and Icosahedron. These components take a single number as input for the radius, and produce meshes centered at the origin, and composed of one face per side. With the addition of the Cube, which is already availible through Grasshopper's built-in primitives, these make up the five Platonic solids. 
 
-![IMAGE](images/05_primitives.png)
+![IMAGE](images/2-1-3/2-1-3_007_Primitives.png)
 >1. Dodecahedron
 2. Tetrahedron
 3. Octahedron
@@ -73,7 +73,7 @@ Element\* provides four additional mesh primitives: the Dodecahedron, Tetrahedro
 
 **Element\* Smooth** provides an optimized smoothing algorithm that is more efficient than Grasshopper's **Smooth Mesh** for large datasets. It makes use of the Lapacian Smoothing algorithm for Half-Edge structured meshes. It does not change the topology or vertex count of welded meshes, but will combine identical vertices if there are any duplicates caused by an unwelded mesh. We can specify the smoothing strength, boundary condition, boundary tolerance as well as the number of iterations.
 
-![IMAGE](images/06_smooth.png)
+![IMAGE](images/2-1-3/2-1-3_008_Smooth.png)
 
 ####2.1.3.5 Subdivide
 
@@ -86,13 +86,13 @@ This is a recursive subdivision defined by the Catmull Clark algorithm. We can s
 
 This subdivison component will create an all quad mesh by adding a face for each edge of the mesh.
 
-![IMAGE](images/07_subdivide.png)
+![IMAGE](images/2-1-3/2-1-3_009_Subdivide.png)
 >1. Constant Quad subdivision
 2. Catmull Clark subdivision
 
 ####2.1.3.6 Transform
 
-![IMAGE](images/08_transforms-components.png)
+![IMAGE](images/2-1-3/2-1-3_010_Transform-Components.png)
 >1. Mesh Windown
 2. Mesh Frame
 3. Mesh Thicken
@@ -122,14 +122,14 @@ This component creats an offset of the input mesh based on the vertex normals.
 First the mesh face goes through the frame operation then the face inner is split the selected faces and allows the user to specify the push or pull amount from the center of the original polygon.
 For example, a four-sided polygon (quad) is split into 4 three-sided polygons with one shared vertex in the middle. The height input allows you to transform that vertex.
 
-![IMAGE](images/09_transform-examples.png)
+![IMAGE](images/2-1-3/2-1-3_011_Transform.png)
 >1. Mesh Window
 2. Mesh Frame
 3. Icosohedron transformed with mesh frame, then thickend and subdivided
 
 ####2.1.3.7 Utility
 
-![IMAGE](images/09_Utility-Component.png)
+![IMAGE](images/2-1-3/2-1-3_012_Utility-Component.png)
 >1. Mesh Combine & Clean
 2. Mesh Edges
 3. Mesh Status

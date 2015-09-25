@@ -17,3 +17,7 @@ _book
 
 #thumbs
 Thumbs.db
+
+#gitbook local serve
+node_modules/.bin
+node_modules/gitbook
