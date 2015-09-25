@@ -20,7 +20,7 @@ is the first volume in a forthcoming collection of Grasshopper primers. Here's w
 * **Anatomy of a Grasshopper Definition** - What makes up a definition?
 * **Building Blocks of Algorithms** - Start simple and build complexity
 * **Designing with Lists** - What's a list and how do I manage them?
-* **Designing with Data Tree** - What's a data structure and what do they mean for my process?
+* **Designing with Data Trees** - What's a data structure and what do they mean for my process?
 * **Appendix** - References and Working files for continued exploration
 
 We hope that at the very least this primer will inspire you to begin exploring the many opportunities of programming with Grasshopper. We wish you the best of
