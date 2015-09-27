@@ -1,2 +1,2 @@
-# The Grasshopper Primer V3.2
+# The Grasshopper Primer V3.3
 The full book can be found in each of the language folders.
