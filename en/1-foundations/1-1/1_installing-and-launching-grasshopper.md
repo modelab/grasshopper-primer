@@ -1,37 +1,36 @@
-### 1.1.1. INSTALLING AND LAUNCHING GRASSHOPPER
+### 1.1.1. INSTALLATION UND START VON GRASSHOPPER
 
-#####The Grasshopper plugin is updated frequently so be sure to update to the latest build.
-#####Note that there is currently no version of Grasshopper for Mac.
+#####Das Grasshopper plugin wird haeufig aktualisiert, weshalb Du sicher stellen solltest, immer die neueste Version installiert zu haben.
+#####Es sei darauf hingewiesen, dass es momentan keine Version von Grasshopper fuer Mac gibt.
 
 
-####1.1.1.1. DOWNLOADING
-To download the Grasshopper plug-in, visit the Grasshopper web site. Click on the Download tab at the top of the page, and when prompted on the next screen, enter your email address. Now, right click on the download link, and choose Save Target As from the menu. Select a location on your hard drive (note: the file cannot be loaded over a network connection, so the file must be saved locally to your computer’s hard drive) and save the executable file to that address.
+####1.1.1.1. HERUNTERLADEN
+Um das Grasshopper Plug-In herunterzuladen, besuche die Grasshopper Webseite. Klicke auf die Registrierkarte Download  am oberen Rand der Seite, und wenn Du auf der naechsten Seite dazu aufgefordert wirst, gebe Deine Emailadresse ein. Nun kannst Du den Link zum Herunterladen mit der rechten Maustaste anklicken und die Option “Ziel speichern unter” aus dem Menue auswaehlen. Waehle den Speicherort auf Deiner Festplatte (Hinweis: Die Datei kann nicht ueber eine Netzwerkverbindung geladen werden, deshalb muss die Datei lokal auf Deiner Festplatte gespeichert werden.) und speichere dort die ausfuehrbaren Dateien.
+
 
 ![](images/1-1-1/1-1-1_001-downloading.png)
 
->Download Grasshopper from the [grasshopper3d.com](http://grasshopper3d.com) website.
+>Lade Grasshopper von der [grasshopper3d.com](http://grasshopper3d.com) Webseite herunter.
 
 
-####1.1.1.2. INSTALLING
-Select Run from the download dialog box follow the installer instructions. (note: you must have Rhino 5 already installed on your computer for the plug-in to install properly).
+####1.1.1.2. INSTALLATION
+Waehle “ausfuehren” von den Downloadoptionen aus und folge den Anweisungen im Installationsdialog. (Hinweis: Du musst Rhino 5 bereits auf Deinem Computer installiert haben, damit das Plug-In ausgefuehrt werden kann.).
 
 ![IMAGE](images/1-1-1/1-1-1_002-installing.png)
->Follow the steps in the Installation wizard.
+>Folge den Anweisungen des Installationsdialogs.
 
-####1.1.1.3. LAUNCHING
-To Launch Grasshopper, type Grasshopper into the Rhino Command line. When you launch Grasshopper, the first thing you will see is a new window floating in front of Rhino. Within this window you can create node-based programs to automate various types of functionality in Rhino. Best practice is to arrange the windows so that they do not overlap and Grasshopper does not obstruct the Rhino viewports.
+####1.1.1.3. STARTEN
+Um Grasshopper zu starten, gebe “Grasshopper” in die Rhino Befehlszeile ein. Wenn Du Grasshopper startest, wirst Du als erstes ein neues Fenster vor dem Rhinofenster schweben sehen. In diesem Fenster kannst Du knotenbasierte Programme erstellen, welche die vielfaeltige Funktionalitaet von Rhino automatisieren koennen. Eine bewaehrte Methode ist es, die Fenster so nebeneinander anzuordnen, dass sie sich nicht ueberlappen und Grasshopper nicht die Ansichtsfenster von Rhino versperrt.
 
 ![IMAGE](images/1-1-1/1-1-1_003-launching-a.png)
->Type “Grasshopper” into the Rhino command line to launch the Grasshopper plugin.
+>Gebe “Grasshopper” in die Rhino Befehlszeile ein, um das Grasshopper Plug-In zu starten.
 
 
 ![IMAGE](images/1-1-1/1-1-1_004-launching-b.png)
->1. The Grasshopper window floats on top of the Rhino viewports.
->2. Grasshopper displays the version number at the bottom of the window.
+>1. Das Grasshopperfenster schwebt ueber den Ansichtsfenstern von Rhino.
+>2. Grasshopper zeigt die Versionsnummer am unteren Ende des Fensters an.
 
 ![IMAGE](images/1-1-1/1-1-1_005-launching-c.png)
->Split the screen so that Grasshopper does not obstruct the Rhino Viewports.
-You can do this by dragging each window to opposite sides of the screen, or by
-holding the Wondows key and pressing the left or right arrows.
+>Unterteile den Bildschirm, so dass Grasshopper nicht die Ansichtsfenster von Rhino versperrt. Du kannst dies erreichen, indem Du die Fenster auf gegenueberliegende Seiten des Bildschirms ziehst, oder indem Du die Windowstaste gedrueckt haeltst und die Cursorpfeile nach links oder rechts drueckst. 
 
 
