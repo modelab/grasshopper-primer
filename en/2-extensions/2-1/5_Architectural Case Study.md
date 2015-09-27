@@ -1,4 +1,4 @@
-###2.1.5 Element* Architectural Case Study 
+###2.1.5. Element* Architectural Case Study 
 
 #####In this section, we will work through a simple exercise file that is meant as an introduction to working with Element tools. We will explore some patterning and facade treatments in the field of Architecture which will incorporate Half Edge data structures along with basic Element components without the use of per vertex features.
 

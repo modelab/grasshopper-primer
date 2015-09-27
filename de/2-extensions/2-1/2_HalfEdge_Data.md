@@ -1,4 +1,4 @@
-###2.1.2 Half Edge Data
+###2.1.2. Half Edge Data
 
 In the Grasshopper primer, we looked at how Grasshopper defines a mesh using a Face-Vertex data structure. This is a relatively simple data structure and is widely used in applications that use meshes, but can be computationally inefficient for more advanced algorithms. The Element\* add-on restructures the mesh using Half-Edge data, an edge-centered data structure, which allows for efficient queries of adjacent vertices, faces, and edges, which can vastly improve on algorithm speed and performance. This structure is capable of maintaining incidence information of vertices, edges and faces. This method facilitates the creation of new patterns and geometries all based on the topological relationship of the base geometry.
 

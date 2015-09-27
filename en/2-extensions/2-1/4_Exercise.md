@@ -1,4 +1,4 @@
-###2.1.4 Exercise
+###2.1.4. Exercise
 
 #####In this section, we will work through a simple exercise using the Element* primitives as a base. We will incorporate the half-edge data structure as well using both features of the transform components (uniform and per vertex)
 ![IMAGE](images/2-1-4/2-1-4_000_Cover.png)
