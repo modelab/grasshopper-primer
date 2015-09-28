@@ -38,3 +38,9 @@ td:nth-child(2){width:500px;}
 ||[1.5.3_working with data trees.gh](gh-files/1.5.3_working with data trees.gh)
 ||[1.5.3.6_weaving definition.gh](gh-files/1.5.3.6_weaving definition.gh)
 ||[1.5.4_rail intersect definition.gh](gh-files/1.5.4_rail intersect definition.gh)
+
+|1.6.||
+|--|--|
+||[1.6.1_what is a mesh.gh](gh-files/1.6.1_what is a mesh.gh)
+||[1.6.3_creating meshes.gh](gh-files/1.6.3_creating meshes.gh)
+||[1.6.6_working with meshes.gh](gh-files/1.6.6_working with meshes.gh)

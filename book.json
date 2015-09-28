@@ -5,7 +5,7 @@
     
     "pdf": {
         
-        "headerTemplate":"<p class='header' style='font:10px arial,sans-serif'><span>The Grasshopper Primer v3.1</span></p>",
+        "headerTemplate":"<p class='header' style='font:10px arial,sans-serif'><span>The Grasshopper Primer V3.3</span></p>",
         "footerTemplate":"<p class='footer' style='font:10px arial,sans-serif'><span>_SECTION_</span> <span style='float:right;'>_PAGENUM_</span></p>"
     }
 }
