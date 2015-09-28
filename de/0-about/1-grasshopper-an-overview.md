@@ -1,88 +1,31 @@
-## Grasshopper - an Overview
+## Grasshopper - Eine Uebersicht
 
-#####Grasshopper is a visual programming editor developed by David Rutten at Robert McNeel & Associates. As a plug-in for Rhino3D, Grasshopper is integrated with the robust and versatile modeling environment used by creative professionals across a diverse range of fields, including architecture, engineering, product design, and more. In tandem, Grasshopper and Rhino offer us the opportunity to define precise parametric control over models, the capability to explore generative design workflows, and a platform to develop higher-level programming logic – all within an intuitive, graphical interface.
+#####Grasshopper ist ein visueller Programmeditor, der von David Rutten und Robert McNeel & Associates entwickelt wurde. Als Plug-In fuer Rhino3D, ist Grasshopper integriert in eine robuste und vielseitige Modellierungsumgebung. Diese wird von kreativen Profis in verschiedenen Bereichen, wie z.B. Architektur, Ingenieurwissenschaften und Produktdesign genutzt. Zusammen mit Rhino bietet Grasshopper uns die Moeglichkeit praezise parametrische Beziehungen in Modellen zu definieren, die Faehigkeit generative Entwurfsablaeufe zu erkunden und eine Plattform um uebergeordnete Programmierlogik zu entwickeln – und all das in einer intuitiven, graphischen Oberflaeche.
 
-The origins of Grasshopper can be traced to the functionality of Rhino3d
-Version 4’s “Record History” button. This built-in feature enabled users to
-store modeling procedures implicitly in the background as you go. If you lofted
-four curves with the recording on and then edited the control points of one of
-these curves, the surface geometry would update. Back in 2008, David posed
-the question: “what if you could have more explicit control over this history?”
-and the precursor to Grasshopper, Explicit History, was born. This exposed
-the history tree to editing in detail and empowered the user to develop logical
-sequences beyond the existing capabilities of Rhino3D’s built in features. Six
-years later, Grasshopper is now a robust visual programming editor that can
-be extended by suites of externally developed add-ons. Furthermore, it has
-fundamentally altered the workflows of professionals across multiple industries
-and fostered an active global community of users.
+Die Urspruenge von Grasshopper koennen bis zur Funktionalitaet des "Record History" Knopfes in Rhino3d Version 4 zurueckverfolgt werden. Dieses spezifische Merkmal erlaubte es Anwendern Modellierungsverfahren waehrend des Ablaufes implizit im Hintergrund zu speichern. Falls Du aus vier Kurven mit der eingeschalteten Aufzeichnungsfunktion eine Loftflaeche erstellt hattest, konntest Du die Kontrollpunkte der Kurven bearbeiten und die Geometrie der Flaeche wurde automatisch aktualisiert. Im Jahr 2008 hat David folgende Frage gestellt: “Was wuerde geschehen, wenn man mehr explizite Kontrolle ueber die Aufzeichnungsfunktion haette?”. Dies war der Geburtsmoment fuer den Vorlaeufer von Grasshopper - Explicit History. Diese Funktion erlaubte es die gespeicherten Arbeitsablaeufe im Detail zu bearbeiten und befaehigte den Anwender logische Sequenzen zu entwickeln, welche ueber die bestehenden Faehigkeiten von Rhino3Ds eingebaute Funktionalitaet hinausreichen. Sechs Jahre spaeter ist Grasshopper nun eine robuster, visueller  Programmiereditor, der mit verschiedenen extern entwickelten Plug-Ins erweitert werden kann. Ausserdem wurden dadurch Arbeitsablaeufe von Profis in verschiedenen Industrien grundsaetzlich veraendert und eine aktive, globale Gemeinschaft der Anwender beguenstigt.
 
-This primer focuses on Foundations, offering the core knowledge you need
-to dive into regular use of Grasshopper and several on-ramps to how you
-might go further within your own creative practice. Before diving into the
-descriptions, diagrams, and examples supplied hereafter, let’s discuss what visual
-programming is, the basics of the Grasshopper interface and terminology, as well
-as the “live” characteristics of the viewport feedback and user experience.
+Dieser Primer legt seinen Fokus sowohl auf die Grundlagen um Kernwissen anzubieten, das Du brauchst um in eine regelmaessige Nutzung von Grasshopper einzutauchen, als auch auf einige Sprungbretter fuer die naechsten Schritte in Deiner eigenen kreativen Praxis.  Bevor wir in die Beschreibungen, Diagramme und Beispiele einsteigen, welche in der Folge dargeboten werden, sollten wir darueber sprechen, was visuellen Programmierung ist, wie die Grasshopper Benutzeroberflaeche aufgebaut ist, welche grundlegenden Begriffe Grasshopper nutzt und welche "live" Eigenschaften die Rueckkopplung des Ansichtsfensters bzgl. des Benutzererlebnisses hat.
 
-Visual Programming is a paradigm of computer programming within which
-the user manipulates logic elements graphically instead of textually. Some of
-the most well-known textual programming languages such as C#, Visual Basic,
-Processing – and more close to home for Rhino – Python and Rhinoscript require
-us to write code that is bound by language-specific syntax. In contrast, visual
-programming allows us to connect functional blocks into a sequence of actions
-where the only “syntax” required is that the inputs of the blocks receive the data
-of the appropriate type, and ideally, that is organized according to the desired
-result – see the sections on Data Stream Matching and Designing with Data
-Trees. This characteristic of visual programming avoids the barrier to entry
-commonly found in trying to learn a new language, even a spoken one, as well as
-foregrounds the interface, which for designers locates Grasshopper within more
-familiar territory.
+Visueller Programmierung ist ein Paradigma der Computerprogrammierung innerhalb dessen der Benutzer logische Elemente graphisch statt textbasiert manipuliert. Einige der bekanntesten text-basierten Programmiersprachen, wie C#, Visual Basic oder Processing – und naeher an Rhinoceros – Python und Rhinoscript, verlangen von un, dass wir Code schreiben, der an sprachspezifische Syntax gebunden ist. > Im Unterschied dazu erlaubt uns visuelles programmieren funktionale Bloecke in einer Sequenz von Aktionen miteinander zu verbinden. Dabei ist die einizig benoetigte “Syntax” dass die Eingabeparameter Daten des entsprechenden Typs bekommen, und idealerweise, dass das Skript auf das beabsichtigte Resultat hin organisiert ist. Mehr dazu in den Abschnitten ueber die Abgleichung des Datenflusses und das Entwerfen mit Baumstrukturen. Diese Charakteristik des visuellen programmierens senkt die Einstiegsbarriere, welche ueblicherweise bei dem Erlernen einer neuen Sprache - auch bei einer gesprochenen - vorgefunden wird. In den Vordergrund zu stellen ist auch die graphische Benutzeroberflaeche, die Grasshopper fuer Designer in einem vertrauten Umfeld verortet.
 
 ![IMAGE](images/python-and-gh-sine.png)
->This image show the process for drawing a sine curve in python and in Grashopper.
+>Dieses Bild zeigt die Entwicklung eine gezeichneten Sinuskurve in Python und Grsshopper.
 
-To access Grasshopper and its visual programming capabilities, we need to
-download and install the program from the Grasshopper3D.com website.
-Once installed, we can open the plug-in by typing “Grasshopper” into the Rhino
-Command Line. The first time we do so in a new session of Rhino, we will be
-presented with the Grasshopper loading prompt followed by the Grasshopper
-editor window. We can now add functional blocks called “components” to the
-“canvas,” connect them with “wires,” and save the entire “definition” in the .ghx
-file format.
+Um bei Grasshopper einzusteigen und seine Faehigkeiten bezueglich visuellen programmierens nutzen zu koennen, muessen wir das Programm von der Grasshopper3D.com Webseite laden und auf unserem Computer installieren. Einmal installiert, koennen wir das das Plug-In oeffnen, indem wir “Grasshopper” in die Rhino Befehlszeile eingeben. Das erste Mal wenn wir diese Eingabe in einer neuen Rhinositzung machen, werden wir die Grasshopper Ladeanzeige sehen, bevor wir das Fenster des Grasshoppereditors sehen. Wir koenen nun funktionale Bloecke – “Komponenten” genannt- auf der “Leinwand” einfuegen, mit Kabeln verbinden und die gesamte “Definition” im .ghx Dateiformat speichern.
 
 ![IMAGE](images/gh-definition.png)
->A Grasshopper definition, made up of components connected with wires on the canvas
+>Eine Grasshopperdefinition, bestehend aus Komponenten die mit Kabeln auf der Leinwand verbunden sind.
 
-Once we’ve started to develop a Grasshopper definition and created “slider”
-objects within our canvas to control geometry, we may naturally intuit the
-connection we’ve made between this input object to what we see in Rhino’s
-viewports. This connection is essentially live – if we adjust the grip on the slider,
-we will see the consequences in that, within our definition an input somewhere
-has changed and the program must be solved again to recompute a solution and
-display the update. To our benefit when getting started with using Grasshopper,
-the geometry preview we see is a lightweight representation of the solution
-and it automatically updates. It is important to take note this connection now
-as when your definitions become more complex, adeptly managing the flow of
-data, the status of the “solver,” and what is previewed in the Rhino viewport will
-prevent many unwanted headaches.
+Sobald wir begonnen haben eine Grasshopperdefinition zu entwickeln und Schieberegler in unserer Leinwand erstellt haben um Geometrien zu kontrollieren, koennen wir unsere natuerliche Intuition nutzen um Verbindungen zwischen den Komponenten zu verstehen, da die Ergebnisse direkt im Rhinosansichtsfenster sichtbar werden. Die Verbindung zwischen Grasshopper und Rhino ist grundsaetzlich in Echtzeit – wenn wir einen Schieberegler veraendern, wird die Folge dieser Handlung im Rahmen der Definition ausgewertet und die Loesung neu berechnet, bevor das Ansichtsfenster aktualisiert wird. Beim Einstieg in Grasshopper ist es von Vorteil, dass die Vorschau der Geometrie, die wir sehen eine leichtgewichtige Darstellung der Loesung ist und diese automatisch aktualisiert wird. Es ist jetzt wichtig zu wissen, dass sobald Deine Definitionen komplexer werden und auf geschickte Art und Weise den Datenfluss regeln, das Rhinoansichtsfenster den Status der Rechnerloesung wiederspiegeln, um ungewollte Kopfschmerzen zu vermeiden.
 
 ![IMAGE](images/flow.png)
->Program flow from left to right
+>Programmfluss von links nach rechts.
 
-####THINGS TO REMEMBER
-* Grasshopper is a graphical algorithm editor that is integrated with
-Rhino3D’s modeling tools.
-* Algorithms are step by step procedures designed to perform an operation.
-* You use Grasshopper to design algorithms that then automate tasks in
-Rhino3D.
-* An easy way to get started if you are unclear how to perform a specific
-operation in Grasshopper would be to try manually and incrementally
-creating an algorithm using Rhino commands.
+####MERKPUNKTE
+* Grasshopper ist ein grafischer Algorithmeneditor, der in das Rhino3D Modellierwerkzeug integriert ist.
+* Algorithmen sind schrittweise Prozeduren, die entworfen wurden um eine bestimmte Operation durchzufuehren.
+* Du benutzt Grasshopper um Algorithmen zu entwerfen, die dann Aufgaben in Rhino3D automatisieren.
+* Ein einfacher Weg um einzusteigen, wenn Du Dir nicht sicher bist, wie eine bestimmte Operation in Grasshopper ausgefuehrt werden kann, waere es den Algorithmus haendisch und schrittweise mit Rhinobefehlen zu erarbeiten.
 
-As you begin first exploring Grasshopper or further building your skills, you have
-joined the global Grasshopper community, one that is full of active members
-from many fields, with diverse experience levels. The forum at Grasshopper3D.
-com is a useful resource for posing questions, sharing findings, and gaining
-knowledge. This is a community that we have held dear as we’ve written this
-primer and watched Grasshopper develop over the years. Welcome!
-
-
+Sobald Du erstmals beginnst Grasshopper zu erkunden oder Deine Faehigkeiten weiter entwickelst, bist Du ein Teil der weltweiten Grasshoppergemeinschaft. Diese Gemeinschaft besteht aus aktiven Mitgliedern aus vielen verschiedenen Anwendungsgebieten und vielfaeltigen Erfahrungsniveaus. Das Forum auf Grasshopper3D.com ist eine nuetzliche Quelle um Fragen zu stellen, Ergebnisse zu teilen und Wissen zu sammeln. Diese Gemeinschaft hat uns waehrend des Schreibens des Primers sehr geholfen und wir haben uns daran erfreut, wie sich Grasshopper ueber die Jahre entwickelt hat.
+Herzlich Willkommen!
