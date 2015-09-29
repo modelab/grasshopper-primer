@@ -1,52 +1,62 @@
-### 1.2.1. GRASSHOPPER OBJEKTTYPEN
+### 1.2.1. GRASSHOPPER OBJECT TYPES
 
-#####Grasshopper besteht aus zwei primaeren Typen von Benutzerobjekten: Parameter und Komponenten. Parameter speichern Daten, wobei Komponenten Aktionen ausfuehren, welche wiederum Daten erzeugen. Der einfachste Weg, um Grasshopper zu verstehen ist, sich daran zu erinnern, dass wir Daten nutzen werden, um die Eingabe von Aktionen zu definieren (was neue Daten erzeugt, die wir im weiteren Verlauf nutzen koennen). 
-####1.2.1.1. PARAMETER
-Parameter speichern die Daten – Zahlen, Farben, Geometrien , u.a. – die wir durch den Graph unserer Definition senden. Parameter sind Containerobjekte, welche gewoehnlich als kleine rechteckige Kaestchen mit einer einzelnen Eingabe und Ausgabe angezeigt werden. Wir koennen Parameter auch an der Form des Symbols erkennen, da alle Parameterobjekte eine sechseckige Einfassung haben.
+#####Grasshopper consists of two primary types of user objects: parameters andcomponents. Parameters store data, whereas components perform actions that resultin data. The most basic way to understand Grasshopper is to remember that we willuse data to define the inputs of actions (which will result in new data that we cancontinue to use).
 
-Geometrieparameter koennen Geometrien aus Rhino referenzieren oder Geometrien von anderen Komponenten aufnehmen. Punkt- und Kurvenobjekte sind beide Geometrieparameter.
+####1.2.1.1. PARAMETERS
+Parameters store the data - numbers, colors, geometry, and more - that we send through the graph in our definition. Parameters are container objects which are usually shown as small rectangular boxes with a single input and single output. We also know that these are parameters because of the shape of their icon. All parameter objects have a hexagonal border around their icon.
+
+Geometry parameters can reference geometry from Rhino, or inherit geometry from other components. The point and curve objects are both geometry parameters.
 
 ![IMAGE](images/1-2-1/1-2-1_001-geometry-parameters.png)
 
-Eingabeparameter sind dynamische Schnittstellenobjekte, die es ermoeglichen direkt mit der Definition zu interagieren. Die Schieberegler und der Graphmapper sind jeweils Eingabeparameter. 
+Input parameters are dynamic interface objects that allow you to interact with your definition. The number slider and the graph mapper are both input parameters.
+
 ![IMAGE](images/1-2-1/1-2-1_002-input-parameters.png)
 
-####1.2.1.2. KOMPONENTEN
-Komponenten fuehren Aktionen auf Basis der Eingaben aus, welche sie erhalten. Es gibt viele verschiedene Typen von Komponenten fuer verschiedene Aufgaben. 
+####1.2.1.2. COMPONENTS
+Components perform actions based on the inputs they receive. There are manytypes of components for different tasks.
+
 ![IMAGE](images/1-2-1/1-2-1_003-components.png)
 
->1. Die Multiplikations-Komponente ist ein Operator, der das Produkt zweier Zahlen berechnet.
-2. Die Divide Curve-Komponente arbeitet mit Geometrien. Sie teilt eine Kurve in gleich lange Segmente. 
+>1. The multiplication component is an operator that calculates the product of twonumbers.
+2. The Divide component operates on geometry, dividing a curve into equal
+segments.
+3. The Circle CNR component constructs a circle geometry from input data; a center point, normal vector, and radius.
+4. The Loft component constructs a surface by lofting curves.
 
-3. Die Circle CNR-Komponente konstruiert eine Kreisgeometrie von den Eingaben, dem Mittelpunkt, Normalenvektor und Radius.
-4. Die Loft-Komponente konstruiert eine Loftflaeche von zwei Kurven.
+####1.2.1.3. OBJECT COLORS
+We can glean some information about the state of each object based on their color. Let’s take a look at Grasshopper’s default color coding system.
 
-####1.2.1.3. OBJEKTFARBEN
-Wir koennen einige Informationen ueber die Objekte erhalten, wenn wir ihre Farben betrachten. Schauen wir uns die grundsaetzliche Farbcodierung von Grasshopper gemeinsam an. 
-Ein Parameter, der keine Warnungen oder Fehlermeldungen enthaelt, wird in hellgrau angezeigt. Diese Objektfarbe zeigt an, dass dieser Parameter einwandfrei arbeitet. 
-Ein Parameter, der Warnungen enthaelt, wird als orangenes Kaestchen angezeigt. Objekte, die keine Daten als Eingabe erhalten, sind verdaechtig, weil sie nicht zur Grasshopperdefinition beitragen. Deshalb werden alle Parameter, wenn sie frisch hinzugefuegt werden, erst einmal orange dargestellt, um anzuzeigen, dass sie keine Daten enthalten und keinen Einfluss auf das Ergebnis der Definition haben. Standardmaessig erhalten orange angezeigte Parameter und Komponenten einen kleinen Ballon an der rechten, oberen Ecke des Objekts. Sobald du mit der Maus ueber den Ballon faehrst, wird er Informationen darueber anzeigen, warum die Warnung aufgetreten ist. Sobald ein Parameter Daten enthaelt oder definiert, wird er in grau angezeigt und der Ballon verschwindet.
+A parameter which contains neither warnings nor errors is shown in light
+gray. This color object indicates that everything is working properly with this
+parameter.
+
+A parameter which contains warnings is displayed as an orange box. Any object which fails to collect data is considered suspect in a Grasshopper definition since it is not contributing to the solution.. Therefore, all parameters (when freshly added) are orange, to indicate they do not contain any data and have thus no functional effect on the outcome of the solution. By default, parameters and components that are orange also have a small balloon at the upper right hand corner of the object. If you hover your mouse over this balloon, it will reveal information about why the component is giving you a warning. Once a parameter inherits or defines data, it will become grey and the baloon will disappear.
 
 ![IMAGE](images/1-2-1/1-2-1_004-parameter-warning.png)
 
-Eine Komponente ist immer ein staerker eingebundenes Objekt, weshalb wir seine Eingabe und Ausgabe bewusst verstehen und anschliessend koordinieren muessen. Wie bei den Parametern wird eine Komponente, die Warnungen enthaelt, orange dargestellt. Behalte im Hinterkopf, dass Warnungen nicht gezwungenermassen schlecht sind, sondern dass Grasshopper dich mit ihnen lediglich auf ein potenzielles Problem in der Definition hinweisen moechte.
+A component is always a more involved object, since we have to understand and then coordinate what its inputs and outputs are. Like parameters, a component with warnings is displayed as orange. Remember, warnings aren’t necessarily bad, it usually just means that Grasshopper is alerting you to a potential problem in your definition.
 
 ![IMAGE](images/1-2-1/1-2-1_005-component-warning.png)
 
-Eine Komponente, die weder Warnungen noch Fehlermeldungen enthaelt, wird in hellgrau angezeigt.
+A component which contains neither warnings nor errors is shown in light gray.
 
-Eine Komponente, deren Vorschau deaktiviert wurde, wird in einem etwas dunkleren Grauton dargestellt. Es gibt zwei Moeglichkeiten, um die Vorschau einer Komponente zu deaktivieren. Zuerst einmal kannst du einfach einen Rechtsklick auf der Komponente ausfuehren und den Vorschauschalter umschalten. Um die Vorschau verschiedener Komponenten gleichzeitig auszuschalten, musst du die gewuenschten Komponenten auswaehlen und dann den entsprechenden Schalter (Mann mit verbundenen Augen) im Dropdownmenue auswaehlen, nachdem du irgendwo auf der Leinwand einen rechten Mausklick ausgefuehrt hast.
+A component whose preview has been disabled is shown in a slightly darker
+gray. There are two ways to disable a component’s preview. First, simply right-click on the component and toggle the preview button. To disable the preview for multiple components at the same time, first select the desired components and then toggle the disable preview icon (blindfolded man) by right clicking anywhere on the canvas.
 
-Eine deaktivierte Komponente wird in einem stumpfen Grauton dargestellt. Um eine Komponente zu deaktivieren, kannst du einen Rechtsklick auf einer Komponente machen und den Disable-Schalter betaetigen, oder die gewuenschten Komponenten auswaehlen und nach einem Rechtsklick auf der Leinwand die Option Disable auswaehlen. Deaktivierte Komponenten senden keine Daten mehr an nachgelagerte Komponenten.
+A component that has been disabled is shown in a dull gray. To disable a
+component you may right-click on the component and toggle the disable button, or you may select the desired components, right click anywhere on the canvas and select Disable. Disabled components stop sending data to downstream components.
 
-Eine ausgewaehlte Komponente wird in hellgruen angezeigt. Falls die Komponente Geometrien in der Rhinoszene erzeugt hat, werden diese ebenfalls gruen, um dir eine optische Rueckmeldung zu geben.
-Eine Komponente, die mindestens eine Fehlermeldung enthaelt, wird rot dargestellt. Die Fehlermeldung kann durch die Komponente selbst oder ihre Eingabe und Ausgabe ausgeloest werden.
+A component which has been selected will be shown in a light green color. If the selected component has generated some geometry within the Rhino scene, this will also turn green to give you some visual feedback.
+
+A component which contains at least 1 error is displayed in red. The error can come either from the component itself or from one of its inputs or outputs.
 
 ![IMAGE](images/1-2-1/1-2-1_006-object-colors.png)
->1. Ein Parameter ohne Warnungen und Fehlermeldungen
-2. Ein Parameter mit Warnungen
-3. Eine Komponente mit Warnungen
-4. Eine Komponente ohne Warnungen und Fehlermeldungen
-5. Eine Komponente mit deaktivierter Vorschau
-6. Eine deaktivierte Komponente
-7. Eine ausgewaehlte Komponente
-8. Eine Komponente mit einer Fehlermeldung
+>1. A parameter with no warnings or erros
+2. A parameter with warnings
+3. A component with warnings
+4. A component with no warnings or errors
+5. A component with preview disabled
+6. A component that has been disabled
+7. A selected component
+8. A component with an error
