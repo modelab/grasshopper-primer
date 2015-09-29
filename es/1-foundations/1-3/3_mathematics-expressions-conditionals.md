@@ -139,7 +139,7 @@ thead {display: none}
 
 ||||
 |--|--|--|
-|01.| Type Ctrl+N (in Grasshopper) to start a n]]]]]]]]]]ew definition||
+|01.| Type Ctrl+N (in Grasshopper) to start a new definition||
 |02.| **Params/Geometry/Point** – Drag and drop a **Point** parameter  onto the canvas|[![](images/1-3-3/1-3-3_08-point-72dpi.png)](../../appendix/A-1/0_index-of-components.html#PGPt)|
 |03.| Right click the **Point** parameter and click Set One Point – select a point in the Rhino viewport||
 |04.| **Vector/Vector/Unit X** – Drag and drop the **Unit X** component to the canvas|[![](images/1-3-3/1-3-3_09-vector-72dpi.png)](../../appendix/A-1/0_index-of-components.html#VVX)|

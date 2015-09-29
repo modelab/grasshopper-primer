@@ -30,7 +30,7 @@ A Range component divides a numeric domain into even segments and returns a list
 ![IMAGE](images/1-4-4/1-4-4_003-range.png)
 >1. Number of Steps = 10
 2. Domain goes from 0 to 1
-3. Total number of points = 13
+3. Total number of points = 11
 
 In the example below, the numeric domain has been defined as every possible number between 0 and 20. The Range component takes that domain and divides it up by the number of steps (in this case 10). So, we have 10 even spaced segments. The Range component returns a list of values. Because it keeps the first and the last values in the list, the output of a Range component is always one more than the number of steps. In the example above, we created 10 steps, so the Range component returns 11 values.
 
