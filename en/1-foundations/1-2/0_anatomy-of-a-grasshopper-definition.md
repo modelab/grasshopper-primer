@@ -1,5 +1,5 @@
-## 1.2. ANATOMIE EINER GRASSHOPPER DEFINTION
+## 1.2. ANATOMY OF A GRASSHOPPER DEFINTION
 
-####Grasshopper  ermoeglicht es Dir visuelle Programme zu erstellen, die Definitionen genannt werden. Diese Definitionen bestehen aus Knoten, die mit Kabeln verbunden werden. Die folgenden Kapitel fuehren Grasshopperobjekte ein und erklaeren, wie man mit ihnen interagiert, um Definitionen aufzubauen.
+####Grasshopper allows you to create visual programs called definitions. These definitions are made up of nodes connected by wires. The following chapter introduces Grasshopper objects and how to interact with them to start building definitions.
 
 ![IMAGE](images/1-2/1-2_001-anatomy-of-definition.png)

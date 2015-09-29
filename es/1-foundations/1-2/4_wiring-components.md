@@ -22,7 +22,7 @@ To connect components, click and drag near the circle on the output side of an o
 8. When you hover over an item, the wire will be highlighted in red.
 
 ####1.2.4.2. FANCY WIRES
-Wires represent the connections as well as the flow of data within the graph in our definition. Grasshopper can also give us visual clues as to what is flowing through the wires. The default setting for these so-called “fancy wires” is off, so you have to enable them before you can view the different types of line types for the connection wires. To do this, simply click on the View Tab on the Main Menu Bar and select the button labeled “Draw Fancy Wires.” Fancy wires can tell you a lot of information about what type of information is flowing from one component to another.
+Wires represent the connections as well as the flow of data within the graph in our definition. Grasshopper can also give us visual clues as to what is flowing through the wires. The default setting for these so-called “fancy wires” is off, so you have to enable them before you can view the different types of line types for the connection wires. To do this, simply click on the Display Tab on the Main Menu Bar and select the button labeled “Draw Fancy Wires.” Fancy wires can tell you a lot of information about what type of information is flowing from one component to another.
 
 ![IMAGE](images/1-2-4/1-2-4_002-fancy-wires.png)
 >1. Empty Item – An orange wire type indicates that no information has been transferred. This parameter has generated a warning message because it contains no data, and thus no information is being sent across the wire.

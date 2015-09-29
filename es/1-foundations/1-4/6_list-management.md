@@ -12,13 +12,13 @@ The List Length component (Sets/List/List Length) essentially measures the lengt
 
 ![IMAGE](images/1-4-6/1-4-6_001-list-length.png)
 
-##>#1.4.6.2. LIST ITEM
-Our List is fed into a List Item component (Sets/List/List Item) in order to retrieve a specific data item from within a data set. When accessing individual items in a list, we have to specify the i-input; which corresponds to the index number we would like to retrieve. We can feed a single integer or a list of integers into the i-input depending on how many items we would like to retrieve.The L-input defines the base list which we will be analyzing. In this example, we have set the i-input to 5.0 so the List Item component returns the data item associated with the 5th entry number in our list.
+####1.4.6.2. LIST ITEM
+Our List is fed into a List Item component (Sets/List/List Item) in order to retrieve a specific data item from within a data set. When accessing individual items in a list, we have to specify the i-input; which corresponds to the index number we would like to retrieve. We can feed a single integer or a list of integers into the i-input depending on how many items we would like to retrieve.The L-input defines the base list which we will be analyzing. In this example, we have set the i-input to 2 so the List Item component returns the data item associated with the 3rd entry number in our list.
 
 ![IMAGE](images/1-4-6/1-4-6_002-list-item.png)
 
 ####1.4.6.3. REVERSE LIST
-We can invert the order of our list by using a Reverse List component (Sets/List/Reverse). If we input an ascending list of numbers from 0.0 to 9.0 into the Reverse List component; the output returns a descending list from 9.0 to 0.0.
+We can invert the order of our list by using a Reverse List component (Sets/List/Reverse). If we input an ascending list of numbers from 0.0 to 50.0 into the Reverse List component; the output returns a descending list from 50.0 to 0.0.
 
 ![IMAGE](images/1-4-6/1-4-6_003-reverse-list.png)
 
