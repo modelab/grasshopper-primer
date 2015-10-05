@@ -1,4 +1,4 @@
-# 1. FOUNDATIONS
+# 1. FUNDAMENTE
 
-#### A strong foundation is built to last. This volume of the Primer introduces the key concepts and features of parametric modeling with Grasshopper.
+#### Ein starkes Fundament ist fuer die Ewigkeit gebaut. Dieser Teil des Primers fuehrt Schluesselkonzepte und -eigenschaften des parametrischen Modellierens mit Grasshopper ein.
 ![IMAGE](images/001-foundations.png)
