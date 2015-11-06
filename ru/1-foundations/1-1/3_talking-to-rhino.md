@@ -1,135 +1,133 @@
-###1.1.3. TALKING TO RHINO
+###1.1.3. ВЗАИМОДЕЙСТВИЕ С RHINO
 
-#####Unlike a Rhino document, a Grasshopper definition does not contain any actual objectsor geometry. Instead, a Grasshopper definition represents a set of rules & instructions for how Rhino can automate tasks.
+#####В отличие от документа Rhino, определение Grasshopper не содержит реального объекта или геометрии. Вместо этого, определение Grasshopper представляет собой набор правил и инструкций о том, как Rhino может автоматизировать задачи.
 
 ![IMAGE](images/1-1-3/1-1-3_001-talking-to-rhino.png)
->1. Grasshopper preview geometry.
-2. Rhino viewports.
-3. Grasshopper Application window.
+>1. Предпросмотр геометрии Grasshopper.
+2. Видовые окна Rhino.
+3. Окно Grasshopper.
 
 
 
 
-####1.1.3.1. VIEWPORT FEEDBACK
-All geometry that is generated using the various Grasshopper components will
-show up (by default) in the Rhino viewport. This preview is just an Open GL
-approximation of the actual geometry, and as such you will not be able to select
-the geometry in the Rhino viewport (you must first bake it into the scene). You
-can turn the geometry preview on/off by right-clicking on a component and
-selecting the Preview toggle. The geometry in the viewport is color coded to
-provide visual feedback. The image below outlines the default color scheme.
+####1.1.3.1. ОБРАТНАЯ СВЯЗЬ С ВИДОВЫМ ОКНОМ
+Вся геометрия, которая генерируется при использовании различных компонентов 
+Grasshopper, будет отображаться (по умолчанию) в видовом окне Rhino. Этот 
+предпросмотр является, всего лишь, Open GL апроксимацией действительной геометрии
+и, поэтому, вы не сможете выбрать геометрию в видовом окне Rhino (сначала вам 
+нужно запечь ее). Вы можете отключить / включить предпросмотр геометрии правым
+кликом мыши по компоненту и выбрав Preview toggle. Геометрия в видовом окне 
+кодируется цветом, чтобы предоставить визуальный отклик. Изображение ниже 
+представляет цветовую схему по умолчанию.
 
->Note: This is the default color scheme, which can be modified using the Document Preview Settings tool on the canvas toolbar.
+>Примечание: Это цветовая схема по умолчанию, которую можно изменять, используя настройки просмотра документа на панели инструментов холста.
 
 ![IMAGE](images/1-1-3/1-1-3_002-viewport-feedback.png)
->1. Green geometry in the viewport belongs to a component which is currently selected.
-2. Red geometry in the viewport belongs to a component which is currently unselected.
-3. Point geometry is drawn as a cross rather than a rectangle to distinguish it from other Rhino point objects.
-4. Blue feedback means you are currently making a selection in the Rhino Viewport.
+>1. Зеленый цвет в видовом окне относится к компоненту, который выбран в текущий момент.
+2. Красный цвет в видовом окне относится к компоненту, который не выбран в текущий момент.
+3. Точечная геометрия, в виде крестов, а не прямоугольников, для отличения ее от других точечных объектов Rhino.
+4. Голубой цвет означает, что в данный момент вы выбираете объект в видовом окне Rhino.
 
-####1.1.3.2. LIVE WIRES
-Grasshopper is a dynamic environment. Changes that are made are live and their
-preview display is updated in the Rhino viewport.
+####1.1.3.2. СВЯЗИ
+Grasshopper - это динамическая среда. Изменения, которые происходят в реальном 
+времени и их предпросмотр, обновляются в видовом окне Rhino.
 
 ![IMAGE](images/1-1-3/1-1-3_003-live-wires.png)
 
-####1.1.3.3. GUMBALL WIDGET
-When storing geometry as internalized in a Grasshopper parameter, the gumball
-allows you to interface with that geometry in the Rhino viewport. This update is
-live and updates will occur as you manipulate the gumball. In contrast, geometry
-referenced from Rhino directly will continue to exist in the Rhino document and
-updates from Grasshopper will happen only after any changes occur (as opposed
-to during).
+####1.1.3.3. ВИДЖЕТ GUMBALL
+При сохранении геометрии как внутренней в параметре Grasshopper, Gumball 
+позволяет вам взаимодействовать с геометрией в видовом окне Rhino. При 
+манипулировании Gumball обновление будет происходить сразу же. Напротив, геометрия, 
+исходящая из Rhino, будет и дальше существовать в документе Rhino и обновления 
+из Grasshopper произойдут только после того, как произойдут какие-либо изменения.
 
 ![IMAGE](images/1-1-3/1-1-3_004-gumball.png)
 
-####1.1.3.4. BAKING GEOMETRY
-In order to work with (select, edit, transform, etc.) geometry in Rhino that was
-created in Grasshopper, you must “bake” it. Baking instantiates new geometry
-into the Rhino document based on the current state of the Grasshopper graph. It
-will no longer be responsive to the changes in your definition.
+####1.1.3.4. "ЗАПЕКАНИЕ" ГЕОМЕТРИИ
+Для того, чтобы работать с геометрией в Rhino (выбрать, редактировать, изменять и т.д.), 
+которая была создана в Grasshopper, вы должны "запечь" ее. "Запекание" создает новую
+геометрию в Rhino, берущей за основу текущее состояние из Grasshopper. Больше геометрия 
+не будет реагировать на изменения в вашем определении.
 
 ![IMAGE](images/1-1-3/1-1-3_005-baking.png)
->1. Bake by right-clicking a component and selecting Bake.
-2. A dialog will appear that allows you to select onto which Rhino layer the geometry will
-bake.
-3. Grouping your baked geometry is a convenient way to manage the instantiated Rhino geometry, particularly if you are creating many objects with Grasshopper.
+>1. Чтобы запечь геометрию, кликните правой клавишей мыши на компоненте и выберите Bake.
+2. Появится диалоговое окно, в котором вы сможете выбрать, в какой слой Rhino вы хотите "запечь" геометрию.
+3. Группирование "запеченой" геометрии является удобным способом управления созданной в Rhino геометрией, особенно, если вы создаете много объектов в Grasshopper.
 
 
-####1.1.3.5. UNITS & TOLERANCES
-Grasshopper inherits units and tolerances from Rhino. To change the units,
-type Document Properties in the Rhino command line to access the Document
-Properties menu. Select Units to change the units and tolerances.
+####1.1.3.5. ЕДИНИЦЫ ИЗМЕРЕНИЯ И ТОЧНОСТЬ
+Grasshopper наследует единицы измерения и точность от Rhino. Чтобы изменить 
+единицы измерения, впишите в командную строку Rhino Document Properties, 
+чтобы зайти в меню  Document Properties. Выберите Units, чтобы изменить 
+единицы измерения и точность.
 
 ![IMAGE](images/1-1-3/1-1-3_006-units.png)
->Change the units and tolerances in the Rhino Document Properties menu.
+>Измените единицы измерения и точность в Rhino в меню Document Properties.
 
-####1.1.3.6. REMOTE CONTROL PANEL
-Once you get the hang of it, Grasshopper is an incredibly powerful and flexible
-tool which allows you to explore design iterations using a graphic interface.
-However, if you’re working with a single screen then you may have already
-noticed that the Grasshopper editor takes up a lot of screen real-estate. Other
-than constantly zooming in and out and moving windows around your screen,
-there really isn’t an elegant solution to this problem. That is…until the release of the Remote Control Panel!
+####1.1.3.6. ПАНЕЛЬ ДИСТАНЦИОННОГО УПРАВЛЕНИЯ
+Как только вы научитесь использовать ее, вы убедитесь, что Grasshopper - это 
+невероятно мощный и гибкий инструмент, который позволяет исследовать итерации 
+проектирования, используя графический интерфейс. Тем не менее, если вы работаете
+с одним экраном, вы уже могли заметить, что Grasshopper занимает много пространства
+экрана. И другого, более удобного, решения этой проблемы, только как постоянное
+приближение и отдаление окон, не существует. Так было, пока не выпустили панель дистанционного управления!
 
-The Remote Control Panel (RCP) provides a minimal interface to control your
-definition without taking up a substantial portion of your screen. The RCP can
-be instantiated by clicking on the toggle under the View menu of the Main Menu
-bar. By default, the RCP is blank — meaning it doesn’t contain any information
-about your current Grasshopper document. To populate the RCP with UI
-elements like sliders, toggles, and buttons, simply right click on the element
-and click Publish To Remote Panel. This will create a new group and create a
-synchronized UI element in the RCP. Changing the value of the element in the
-RCP will also update the value in the graph, as well as modify any geometry
-in the viewport which might be dependant on this parameter. You can publish
-multiple elements and populate a complete interface which can be used to
-control your file without having the clutter of the visual graph showing up on top
-of the Rhino viewport.
+Панель дистанционного управления (ПДУ) предоставляет минимальный интерфейс для 
+осуществления контроля над вашим определением и не занимает львиную долю вашего
+экрана. ПДУ можно создать кликнув по кнопке под меню View (вид) на панели 
+главного меню. По умолчанию, ПДУ отключен, т.е. не содержит никакой информации
+о вашем текущем файле Grasshopper. Чтобы наполнить ПДУ такими элементами ПИ как
+слайдеры, переключатели и кнопки, просто кликните по элементу и кликните 
+Publish To Remote Panel (вывести на ПДУ). Так вы создадите новую группу и 
+синхронизируйте элементы ПИ с ПДУ. Изменяя значение элемента в ПДУ, вы также обновите
+значение в графике, а также изменит любую геометрию в видовом окне, которая может
+зависеть от этого параметра. Вы можете опубликовать многочисленные элементы и 
+создать полный интерфейс, который можно использовать для контроля вашего файла, 
+при этом не создавать бардак из визуальных графиков выделяющихся поверх видовых окон Rhino.
 
->Note: The RCP will inherit the UI elements name and use it as the label. It is good practice to update your sliders and toggles with comprehensible and meaningful names. This will translate directly to your RCP making it easier to use.
+>Примечание: ПДУ перенимает название элементов ПИ и использует их как ярлыки. Принято обновлять названия слайдеров и переключателей на четкие и понятные названия. Это также переместиться прямо в ПДУ и сделает его использование проще.
 
 
 ![IMAGE](images/1-1-3/1-1-3_007-remote-control1.png)
-> In order to get a UI element (eg. slider, toggle, button, etc.) to show up in the Remote Control Panel, we have to first publish it.
+> Чтобы достать элемент ПИ (например, слайдер, переключатель, кнопки и т.д.) и отобразить его в ПДУ сначала необходимо опубликовать его.
 
-The RCP UI can also be customized – allowing you to control where objects
-appear in the interface, the names and colors of different groups. To modify the
-layout of the RCP you first have to switch from Working Mode (the default RCP
-view) to Edit Mode. You can enter the Editing Mode by clicking on the green
-pencil in the upper right hand corner of the RCP. Once in Editing Mode, you can
-create new UI groups, rearrange elements within groups, add labels, change
-colors and more. To delete a UI element, simply drag the element outside the
-border of the RCP. You cannot change the individual values of the parameters if
-you are in Editing Mode. Instead, you will have to click on the green pencil icon
-to switch back to the standard Working Mode.
+ПИ ПДУ также можно настроить для себя и это позволит вам контролировать появление
+объектов на интерфейсе, названия и цвета различных групп. Чтобы изменить слой ПДУ,
+вам сначала надо переключиться из режима Working Mode (по умолчанию) в Edit Mode.
+Вы можете перейти в Edit Mode, кликнув по зеленому карандашу в правом верхнем углу
+ПДУ. Находясь в Edit Mode, вы можете создавать новые группы ПИ, перегруппировать
+элементы внутри группы, добавлять ярдыки, менять цвета и др. Чтобы удалить элемент
+ПИ, просто перетащите элемент за границы ПДУ. Вы не можете изменять индивидуальные
+значения параметров, если вы находитесь в Edit Mode. Вместо этого, вам необходимо 
+кликнуть на иконку зеленого карандаша, чтобы переключиться обратно в стандартный режим (Working).
 
->_The Remote Control Panel has two modes: Edit Mode (left) which allows you to reorganize the look and feel of the RCP, and Working Mode where you can modify the actual values of the UI elements._
+>_У ПДУ имеются два режима работы: Edit Mode (режим редактирования) (слева) - позволяет реорганизовать внешний вид ПДУ, Working Mode (рабочий режим) позволяет менять реальные значения элементов ПИ._
 ![IMAGE](images/1-1-3/1-1-3_008-remote2.png)
->The Remote Control Panel in Edit Mode has an orange background.
+>В Edit Mode у ПДУ оранжевый фон.
 
 
 
 
-####1.1.3.7. FILE MANAGEMENT
-If your Grasshopper file references geometry from Rhino, you must open that
-same file for the definition to work. Keep your files organized by storing the
-Grasshopper and Rhino files in the same folder, and giving them related names.
+####1.1.3.7. УПРАВЛЕНИЕ ФАЙЛАМИ
+Если ваш файл Grasshopper берет начальную геометрию из Rhino, вам следует 
+открыть тот же самый файл. Храните файлы Rhino и Grasshopper организованно в
+одной папке с одинаковыми именами файлов.
 
 ![IMAGE](images/1-1-3/1-1-3_009-file-management.png)
->1. Project Folder.
-2. Rhino file.
-3. Grasshopper file.
+>1. Папка проекта.
+2. Файл Rhino.
+3. Файл Grasshopper.
 
-####1.1.3.8. TEMPLATES
-Creating and specifiying a template file in your Grasshopper preferences is
-convenient way to set up every new Grasshopper definition you create. The
-template can include Grasshopper components as well as panels and sketch
-objects for labeling.
+####1.1.3.8. ОБРАЗЦЫ
+Создавая и устанавливая файл образец в настройках Grasshopper создает
+удобный способ создания каждого нового определения Grasshopper. Образец
+может включать компоненты Grasshopper также как панели и скетч-объекты 
+для обозначения.
 
 
 ![IMAGE](images/1-1-3/1-1-3_010-templates.png)
->Create a template file and save it
+>Создайте образец файла и сохраните его
 
 ![IMAGE](images/1-1-3/1-1-3_011-templates2.png)
->1. In File/Preferences, load the file you just created under Template File. Your template will now be used each time you create a new file.
+>1. В File/Preferences, загрузите файл, который вы создали в образцах. Ваш образец будет теперь использоваться каждый раз при создании нового файла.
 
