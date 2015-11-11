@@ -1,35 +1,33 @@
-### 1.2.1. GRASSHOPPER OBJECT TYPES
+### 1.2.1. ТИПЫ ОБЪЕКТОВ GRASSHOPPER
 
-#####Grasshopper consists of two primary types of user objects: parameters andcomponents. Parameters store data, whereas components perform actions that resultin data. The most basic way to understand Grasshopper is to remember that we willuse data to define the inputs of actions (which will result in new data that we cancontinue to use).
+#####Grasshopper состоит из двух основных типов пользовательских объектов: параметров и компонентов. Параметры хранят данные, а компоненты выполняют действия, которые превращаются в данные. Самый основной способ понять Grasshopper - это помнить о том, что мы будем использовать данные для определения вводных параметров действий (что в итоге превратится в новые данные, которые мы сможем продолжить использовать).
 
-####1.2.1.1. PARAMETERS
-Parameters store the data - numbers, colors, geometry, and more - that we send through the graph in our definition. Parameters are container objects which are usually shown as small rectangular boxes with a single input and single output. We also know that these are parameters because of the shape of their icon. All parameter objects have a hexagonal border around their icon.
+####1.2.1.1. ПАРАМЕТРЫ
+Параметры хранят данные - числа, цвета, геометрию и т.д - которые мы передаем посредством схемы в нашем определении. Параметры - это такие контейнеры, которые обычно выглядят как небольшие прямоугольники с одним входом и одним выходом. Мы также понимаем, что это параметры, исходя из формы их иконки. У всех параметров вокруг их иконки есть шестиугольная рамка.
 
-Geometry parameters can reference geometry from Rhino, or inherit geometry from other components. The point and curve objects are both geometry parameters.
+Геометрические параметры могут ссылаться на геометрию из Rhino или наследовать геометрию от других компонентов. Точка и кривая - это геометрические параметры.
 
 ![IMAGE](images/1-2-1/1-2-1_001-geometry-parameters.png)
 
-Input parameters are dynamic interface objects that allow you to interact with your definition. The number slider and the graph mapper are both input parameters.
+Параметры ввода - это динамические объекты интерфейса, которые позволяют вам взаимодействовать с вашим определением. Number slider (числовой слайдер) и graph mapper оба являются параметрами ввода.
 
 ![IMAGE](images/1-2-1/1-2-1_002-input-parameters.png)
 
-####1.2.1.2. COMPONENTS
-Components perform actions based on the inputs they receive. There are manytypes of components for different tasks.
+####1.2.1.2. КОМПОНЕНТЫ
+Компоненты выполняют действия, основываясь на вводных параметрах, которые они получили. Имеется много типов компонентов для различных задач.
 
 ![IMAGE](images/1-2-1/1-2-1_003-components.png)
 
->1. The multiplication component is an operator that calculates the product of twonumbers.
-2. The Divide component operates on geometry, dividing a curve into equal
-segments.
-3. The Circle CNR component constructs a circle geometry from input data; a center point, normal vector, and radius.
-4. The Loft component constructs a surface by lofting curves.
+>1. Компонент multiplication- это оператор, который просчитывает продукт двух чисел.
+2. Компонент Divide работает с геометрией, разделяя кривую на равные сегменты.
+3. Компонент Circle CNR создает геометрию круга из вводных данных: точка начала координат, вектор нормали и радиус.
+4. Компонент Loft создает поверхность посредством крупномасштабных восходящих кривых.
 
-####1.2.1.3. OBJECT COLORS
-We can glean some information about the state of each object based on their color. Let’s take a look at Grasshopper’s default color coding system.
+####1.2.1.3. ЦВЕТА ОБЪЕКТОВ
+Мы можем почерпнуть информацию о состоянии каждого объекта, основываясь на их цветах. Давайте посмотрим на цветовую кодовую систему Grasshopper по умолчанию.
 
-A parameter which contains neither warnings nor errors is shown in light
-gray. This color object indicates that everything is working properly with this
-parameter.
+Параметр, который не содержит ни предупреждений ни ошибок, светло-серого цвета.
+Этот цвет объекта показывает, что этот параметр работает должным образом.
 
 A parameter which contains warnings is displayed as an orange box. Any object which fails to collect data is considered suspect in a Grasshopper definition since it is not contributing to the solution.. Therefore, all parameters (when freshly added) are orange, to indicate they do not contain any data and have thus no functional effect on the outcome of the solution. By default, parameters and components that are orange also have a small balloon at the upper right hand corner of the object. If you hover your mouse over this balloon, it will reveal information about why the component is giving you a warning. Once a parameter inherits or defines data, it will become grey and the baloon will disappear.
 
