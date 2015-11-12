@@ -29,32 +29,30 @@
 Параметр, который не содержит ни предупреждений ни ошибок, светло-серого цвета.
 Этот цвет объекта показывает, что этот параметр работает должным образом.
 
-A parameter which contains warnings is displayed as an orange box. Any object which fails to collect data is considered suspect in a Grasshopper definition since it is not contributing to the solution.. Therefore, all parameters (when freshly added) are orange, to indicate they do not contain any data and have thus no functional effect on the outcome of the solution. By default, parameters and components that are orange also have a small balloon at the upper right hand corner of the object. If you hover your mouse over this balloon, it will reveal information about why the component is giving you a warning. Once a parameter inherits or defines data, it will become grey and the baloon will disappear.
+Параметр, который содержит предупреждение, отображается оранжевым цветом. Любой объект, который не смог собрать данные, считается подозрительным в определении Grasshopper из-за того, что он не работает на достижение решения. Таким образом, все параметры (недавно добавленные) - оранжевого цвета, чтобы отобразить, что они не содержат каких-либо данных и, поэтому, не несут функционального влияния на решение. По умолчанию, параметры и компоненты оранжевого цвета также имеют маленький шарик в верхнем правом углу объекта. Если вы наведете курсор мышки на этот шарик, он отобразит информацию о том, почему этот компонент содержит предупреждение. Как только параметр унаследует или приобретет данные, он станет серого цвета и шарик сверху исчезнет.
 
 ![IMAGE](images/1-2-1/1-2-1_004-parameter-warning.png)
 
-A component is always a more involved object, since we have to understand and then coordinate what its inputs and outputs are. Like parameters, a component with warnings is displayed as orange. Remember, warnings aren’t necessarily bad, it usually just means that Grasshopper is alerting you to a potential problem in your definition.
+Компонент - это всегда более сложный объект из-за того, что нам приходится разбираться и, затем, координировать каковы его входы и выходы. Как и параметры, компонент с предупреждением отображается оранжевым цветом. Запомните, предупреждение- это не обязательно что-то плохое. Просто Grasshopper привлекает ваше внимание к потенциальной проблеме в вашем определении.
 
 ![IMAGE](images/1-2-1/1-2-1_005-component-warning.png)
 
-A component which contains neither warnings nor errors is shown in light gray.
+Параметр, который не содержит ни предупреждений ни ошибок, светло-серого цвета.
 
-A component whose preview has been disabled is shown in a slightly darker
-gray. There are two ways to disable a component’s preview. First, simply right-click on the component and toggle the preview button. To disable the preview for multiple components at the same time, first select the desired components and then toggle the disable preview icon (blindfolded man) by right clicking anywhere on the canvas.
+Компонент, просмотр которого был отключен, имеет темно-серый цвет. Существует два способа отключить просмотр компонента. Первый - просто нажмите правой клавишей мышки на компоненте и переключите кнопку просмотра. Чтобы одновременно отключить просмотр более чем одного компонента, сначала выберите требуемые компоненты и затем переключите иконку просмотра (человек с завязанными глазами) кликнув правой клавишей мыши в любом месте холста.
 
-A component that has been disabled is shown in a dull gray. To disable a
-component you may right-click on the component and toggle the disable button, or you may select the desired components, right click anywhere on the canvas and select Disable. Disabled components stop sending data to downstream components.
+Компонент, который был отключен, имеет тускло-серый цвет. Чтобы отключить компонент, нажмите правой клавишей мыши на компоненте и переключите кнопку отключения. Также вы можете выбрать требуемые компоненты, кликнув правой клавишей мыши в любом месте на холсте и выбрать Disable. Отключенные компоненты прекращают отправлять данные компонентам, следующим за ними.
 
-A component which has been selected will be shown in a light green color. If the selected component has generated some geometry within the Rhino scene, this will also turn green to give you some visual feedback.
+Выбранный компонент будет иметь светло-зеленый цвет. Если выбранный компонент сгенерировал какую-либо геометрию с использованием среды Rhino, то он также будет зеленого цвета.
 
-A component which contains at least 1 error is displayed in red. The error can come either from the component itself or from one of its inputs or outputs.
+Компонент, содержащий хотя бы 1 ошибку, будет красного цвета. Ошибка может произойти из-за самого компонента или из-за одного из его входов и выходов.
 
 ![IMAGE](images/1-2-1/1-2-1_006-object-colors.png)
->1. A parameter with no warnings or erros
-2. A parameter with warnings
-3. A component with warnings
-4. A component with no warnings or errors
-5. A component with preview disabled
-6. A component that has been disabled
-7. A selected component
-8. A component with an error
+>1. Параметр без предупреждений или ошибок
+2. Параметр с предупреждением
+3. Компонент с предупреждением
+4. Компонент без предупреждений или ошибок
+5. Компонент с отключенным просмотром
+6. Отключенный компонент
+7. Выбранный компонент
+8. Компонент с ошибкой
