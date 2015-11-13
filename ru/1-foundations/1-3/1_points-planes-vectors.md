@@ -1,28 +1,27 @@
-###1.3.1. Points, Planes & Vectors
+###1.3.1. Точки, плоскости и векторы
 
-#####Everything begins with points. A point is nothing more than one or more values called coordinates. The number of coordinate values corresponds with the number of dimensions of the space in which it resides. Points, planes, and vectors are the base for creating and transforming geometry in Grasshopper.
+#####Все начинается с точки. Точка - это ничего более, чем одно или несколько значений, называемых координатами. Число значений координат соответствует числу измерений пространства, в котором оно располагается. Точки, плоскости и векторы - это основа для создания и трансформации геометрии в Grasshopper.
 
 ![Points, Vectors, and Planes](images/1-3-1/1-3-1_001-intro.png)
 
-####1.3.1.1 POINTS
-Points in 3D space have three coordinates, usually referred to as [x,y,z]. Points in 2D space have only two coordinates which are either called [x,y] or [u,v] depending on what kind of two dimensional space we’re talking about.
-2D parameter space is bound to a finite surface. It is still continuous, I.e. hypothetically there are an infinite amount of points on the surface, but the maximum distance between any of these points is very much limited. 2D parameter coordinates are only valid if they do not exceed a certain range. In the example drawing, the range has been set between 0.0 and 1.0 for both [u] and [v] directions, but it could be any finite domain. A point with coordinates [1.5, 0.6] would be somewhere outside the surface and thus invalid.
+####1.3.1.1 ТОЧКИ
+Точки в пространстве 3D имеют три координаты - обычно их обозначают [x,y,z]. Точки в пространстве 2D имеет только две координаты, которые обозначают либо [x,y] либо [u,v], в зависимости от того, о каком двухмерном пространстве мы говорим. 2D параметрическое пространство ограничено конечной поверхностью. Тем не менее, она все-таки непрерывная, т.е. гипотетически существует бесконечное число точек на поверхности, но максимальное расстояние между этими точками очень сильно ограничено. 2D параметрические координаты действительны, только если они не превышают определенный диапазон. На примере показано, что диапазон был установлен от 0.0 до 1.0  для обоих направлений [u] и [v], но также это может быть и любой конечный диапазон. Точка с координатами [1.5, 0.6] будет находиться где-то снаружи поверхности и, поэтому, не будет работать.
 
-Since the surface which defines this particular parameter space resides in regular 3D world space, we can always translate a parametric coordinate into a 3D world coordinate. The point [0.2, 0.5] on the surface for example is the same as point [1.8, 2.0, 4.1] in world coordinates. Once we transform or deform the surface, the 3D coordinates which correspond with [0.2, 0.5] will change.
+Так как поверхность, которая определяет это параметрическое пространство находится в правильном 3D пространстве, мы всегда можем переместить параметрическую координату в координату 3D пространства. Точка [0.2, 0.5] на поверхности, например, такая же как точка [1.8, 2.0, 4.1] в мировых координатах. Как только мы изменили поверхность, 3D координаты, которые связаны с [0.2, 0.5] будут меняться.
 
 ![Points](images/1-3-1/1-3-1_002-points.png)
 
-If this is a hard concept to grasp, it might help to think of yourself and your position in space. We tend to use local coordinate systems to describe our whereabouts; “I’m sitting in the third seat on the seventh row in the movie theatre”, “I’m in the back seat”. If the car you’re in is on the road, your position in global coordinates is changing all the time, even though you remain in the same back seat ‘coordinate’.
+Если это сложная идея для понимания, то вам может помочь следующее - представить себя и свое положение в пространстве. Мы обычно используем местную систему координат, чтобы описать наше положение: "Я сижу на третьем месте седьмого ряда в кинотеатре", "Я на заднем сидении". Если вы находитесь в автомобиле, едущем по дороге, ваше положение в системе глобальных координат будет меняться все время, даже если вы остаетесь сидеть в том же самом кресле.
 
-####1.3.1.2. VECTORS
-A vector is a geometric quantity describing Direction and Magnitude.
-Vectors are abstract; ie. they represent a quantity, not a geometrical element.
+####1.3.1.2. ВЕКТОРЫ
+Вектор - это геометрическая величина, описывающая Направление и Амплитуду.
+Векторы абстрактны, т.е. они представляют величину, а не геометрический элемент.
 
-Vectors are indistinguishable from points. That is, they are both lists of three numbers so there’s absolutely no way of telling whether a certain list represents a point or a vector. There is a practical difference though; points are absolute, vectors are relative. When we treat a list of three doubles as a point it represents a certain coordinate in space, when we treat it as a vector it represents a certain direction. A vector is an arrow in space which always starts at the world origin (0.0, 0.0, 0.0) and ends at the specified coordinate.
+Векторы неотделимы от точек. Так как, они оба представляют собой список из трех чисел, поэтому совершенно нет возможности определить, что представляет из себя некий список - точку или вектор. Хотя на практике разница есть; точки абсолютны, векторы относительны. Когда мы относимся к списку из трех пар как к точке - она представляет определенную координату в пространстве, когда мы относимся к нему как к вектору, он представляет собой определенное направление. Вектор - это стрелка в пространстве, которая всегда начинается с мировых координат (0.0, 0.0, 0.0) и заканчивается в указанной координате.
 
 ![Vectors](images/1-3-1/1-3-1_003-vectors.png)
 
-####1.3.1.3. PLANES
-Planes are “Flat” and extend infinitely in two directions, defining a local coordinate system. Planes are not genuine objects in Rhino, they are used to define a coordinate system in 3D world space. In fact, it’s best to think of planes as vectors, they are merely mathematical constructs.
+####1.3.1.3. ПЛОСКОСТИ
+Плоскости - "плоские" и вытягиваются бесконечно в двух направлениях, определяя локальную систему координат. Плоскости не подлинные объекты в Rhino, они используются для определения системы координат 3D пространстве. На деле, лучше думать о плоскостях как о векторах, т.к. это просто математические структуры.
 
 ![Planes](images/1-3-1/1-3-1_004-planes.png)
