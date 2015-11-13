@@ -138,109 +138,110 @@ thead {display: none}
 ||||
 |--|--|--|
 |01.| Чтобы начать новое определение, нажмите Ctrl+N в Grasshopper||
-|02.| Зайдите в **Params/Geometry/Point** – Drag and drop a **Point** parameter  onto the canvas|[![](images/1-3-3/1-3-3_08-point-72dpi.png)](../../appendix/A-1/0_index-of-components.html#PGPt)|
-|03.| Right click the **Point** parameter and click Set One Point – select a point in the Rhino viewport||
-|04.| **Vector/Vector/Unit X** – Drag and drop the **Unit X** component to the canvas|[![](images/1-3-3/1-3-3_09-vector-72dpi.png)](../../appendix/A-1/0_index-of-components.html#VVX)|
-|05.| **Params/Input/Number Slider** – Drag and drop the **Number Slider** component  onto the canvas|[![](images/1-3-3/1-3-3_10-slider-72dpi.png)](../../appendix/A-1/0_index-of-components.html#PISlider)|
-|06.| Double-click on the **Number Slider** and set the following:<ul>Rounding: Integer<br>Lower Limit: 10<br>Upper Limit: 40<br>Value: 20</ul>||
-|07.|** Transform/Array/Linear Array** – Drag and drop the **Linear Array** component onto the canvas|[![](images/1-3-3/1-3-3_11-linear-array-72dpi.png)](../../appendix/A-1/0_index-of-components.html#TAArrLinear)|
-|08.| Connect the output of the **Point** parameter to the Geometry (G) input of the **Linear Array** component||
-|09.| Connect the Unit Vector (V) output of the **Unit X** component to the Direction (D) input of the **Linear Array** component<br><blockquote>You should see a line of 20 points along the x axis in Rhino. Adjust the slider to change the number of points in the array.</blockquote>||
-|10.| Connect the **Number Slider** output to the Count (N) input of the **Linear Array** Component||
-|11.| **Curve/Spline/Interpolate** – Drag and drop the **Interpolate Curve** component to the canvas|[![](images/1-3-3/1-3-3_12-interpolate-curve-72dpi.png)](../../appendix/A-1/0_index-of-components.html#CSIntCrv)|
-|12.| Connect the Geometry (G) output of the **Linear Array** component to the Vertices (V) input of the **Interpolate Curve** component|||
+|02.| Зайдите в **Params/Geometry/Point** – перетащите параметр **Point** на холст|[![](images/1-3-3/1-3-3_08-point-72dpi.png)](../../appendix/A-1/0_index-of-components.html#PGPt)|
+|03.| Кликните правой клавишей мыши по параметру **Point** и кликните по Set One Point – выберите точку в видовом окне Rhino||
+|04.| Зайдите в **Vector/Vector/Unit X** – перетащите компонент **Unit X** на холст|[![](images/1-3-3/1-3-3_09-vector-72dpi.png)](../../appendix/A-1/0_index-of-components.html#VVX)|
+|05.| Зайдите в **Params/Input/Number Slider** – перетащите слайдер **Number Slider** на холст|[![](images/1-3-3/1-3-3_10-slider-72dpi.png)](../../appendix/A-1/0_index-of-components.html#PISlider)|
+|06.| Дважды кликните по слайдеру **Number Slider** и установите следующее:<ul>Rounding: Integer<br>Lower Limit: 10<br>Upper Limit: 40<br>Value: 20</ul>||
+|07.| Зайдите в** Transform/Array/Linear Array** – перетащите компонент **Linear Array** на холст|[![](images/1-3-3/1-3-3_11-linear-array-72dpi.png)](../../appendix/A-1/0_index-of-components.html#TAArrLinear)|
+|08.| Соедините выход параметра **Point** с входом Geometry (G) компонента **Linear Array**||
+|09.| Соедините выход Unit Vector (V) компонента **Unit X** с входом Direction (D) компонента **Linear Array** <br><blockquote>Вы должны увидеть линию из 20 точек вдоль оси Х в Rhino. Настройте слайдер, чтобы менять количество точек в массиве.</blockquote>||
+|10.| Соедините выход **Number Slider** с входом Count (N) компонента **Linear Array**||
+|11.| Зайдите в **Curve/Spline/Interpolate** – перетащите компонент **Interpolate Curve** на холст |[![](images/1-3-3/1-3-3_12-interpolate-curve-72dpi.png)](../../appendix/A-1/0_index-of-components.html#CSIntCrv)|
+|12.| Соедините выход Geometry (G) компонента **Linear Array** с входом Vertices (V) компонента **Interpolate Curve**|||
 
 ![](images/1-3-3/1-3-3_13-connected-to-interpolate-curve.png)
->We have just created a line by connecting an array of points with a curve. Let’s try using some of Grasshopper’s Trigonometry components to alter this curve:
+>Мы только что создали линию, соединив массив точек с кривой. Давайте попытаемся использовать некоторые из Тригонометрических компонентов Grasshopper, чтобы изменить кривую:
 
 ||||
 |--|--|--|
-|13.| **Vector/Point/Deconstruct** – Drag and drop a **Deconstruct** component onto the canvas|[![](images/1-3-3/1-3-3_14-deconstruct-point-72dpi.png)](../../appendix/A-1/0_index-of-components.html#VPpDecon)|
-|14.| **Vector/Point/Construct Point** - Drag and drop a **Construct Point** component onto the canvas|[![](images/1-3-3/1-3-3_15-construct-point-72dpi.png)](../../appendix/A-1/0_index-of-components.html#VPPt)|
-|15.| **Maths/Trig/Sine** - Drag and drop a **Sine** component onto the canvas|[![](images/1-3-3/1-3-3_16-sine-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MTSin)|
-|16.| Disconnect the wire from the Vertices (V) input of the **Interpolate Curve** component.<br><blockquote>You can disconnect wires by holding down control and dragging, or by right-clicking the input and selecting Disconnect</blockquote>||
-|17.| Connect the Geometry (G) output of the **Linear Array** component to the Point (P) input of the **Deconstruct** component||
-|18.| Connect the Point X (X) output of the **Deconstruct** component to the X coordinate (X) input of the **Construct Point** Component||
-|19.| Connect a second wire from the Point X (X) output of the **Deconstruct** Component to the Value (x) input of the **Sine** component||
-|20.| Connect the Result (y) output of the **Sine** component to the Y coordinate (Y) input of the **Construct Point** component<br><blockquote>We have now reconstructed our points with the same X values, modifying the Y values with a sine curve.</blockquote>||
-|21.| Connect the Point (Pt) output of the **Construct Point** component to the Vertices (V) input of the **Interpolate** component|||
+|13.| Зайдите в **Vector/Point/Deconstruct** – перетащите компонент **Deconstruct** на холст|[![](images/1-3-3/1-3-3_14-deconstruct-point-72dpi.png)](../../appendix/A-1/0_index-of-components.html#VPpDecon)|
+|14.| Зайдите в **Vector/Point/Construct Point** - перетащите компонент **Construct Point** на холст|[![](images/1-3-3/1-3-3_15-construct-point-72dpi.png)](../../appendix/A-1/0_index-of-components.html#VPPt)|
+|15.| Зайдите в **Maths/Trig/Sine** - перетащите компонент **Sine** на холст|[![](images/1-3-3/1-3-3_16-sine-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MTSin)|
+|16.| Отсоедините связь от входа Vertices (V) компонента **Interpolate Curve**.<br><blockquote>YВы можете разъединить связи, зажав Control и перетащив связь, либо кликнув правой клавишей на входе и выбрав Disconnect</blockquote>||
+|17.| Соедините выход Geometry (G) компонента **Linear Array** с входом Point (P) компонента **Deconstruct**||
+|18.| Соедините выход Point X (X) компонента **Deconstruct** с входом X coordinate (X) компонента **Construct Point**||
+|19.| Соедините второй связью выход Point X (X) компонента **Deconstruct** с входом Value (x) компонента **Sine**||
+|20.| Соедините выход Result (y) компонента **Sine** с входом Y coordinate (Y) компонента **Construct Point**<br><blockquote>Мы переделали наши точки с такими же X значениями, изменив значения Y с синусоидальной кривой.</blockquote>||
+|21.| Соедините выход Point (Pt) компонента **Construct Point** с входом Vertices (V) компонента **Interpolate**|||
 
 ![](images/1-3-3/1-3-3_17-connected-with-sine.png)</li><br>
->You should now see a sine wave curve along the X axis in Rhino
+>Сейчас вы должны видеть синусоидальную волновую кривую вдоль оси X в Rhino
 
 ||||
 |--|--|--|
-|22.| **Maths/Trig/Cosine** – Drag and drop a **Cosine** component to the canvas|[![](images/1-3-3/1-3-3_18a-cosine-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MTCos)|
-|23.| Connect a third wire from the Point X (X) output of the **Deconstruct** Component to the Value (x) input of the **Cosine** component||
-|24.| Connect the Result (y) output of the **Cosine** component to the Z coordinate (Z) input of the **Construct Point** component|||
+|22.| Зайдите в **Maths/Trig/Cosine** – перетащите компонент **Cosine** на холст|[![](images/1-3-3/1-3-3_18a-cosine-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MTCos)|
+|23.| Соедините третьей связью выход Point X (X) компонента **Deconstruct** с входом Value (x) компонента **Cosine**||
+|24.| Соедините выход Result (y) компонента **Cosine** с входом Z coordinate (Z) компонента **Construct Point**|||
 
 ![](images/1-3-3/1-3-3_18b-connected-with-sine-and-cosine.png)</li><br>
->We have now created a 3D helix
+>Сейчас мы создали 3D винтовую спираль
 
 ||||
 |--|--|--|
-|25.| **Maths/Operators/Multiplication** – Drag and drop two **Multiplication** components onto the canvas|[![](images/1-3-3/1-3-3_19-multiply-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MOMultiply)|
-|26.| Connect wires from the Point X (X) output of the **Deconstruct** component to the (A) input of each **Multiplication** component||
-|27.| Connect the Result (y) output of the **Sine** component to the (B) input of the first **Multiplication** component||
-|28.| Connect the Result (y) output of the **Cosine** component to the (B) input of the second **Multiplication** component||
-|29.| Disconnect the wire from the Y Coordinate (Y) input of the **Construct Point** component||
-|30.| Connect the Result (R) output of the first **Multiplication** component to the X Coordinate (X) input of the **Construct Point** component||
-|31.| Connect the Result (R) output of the second **Multiplication** component to the Z Coordinate (Z) input of the **Construct Point** component|||
+|25.| Зайдите в **Maths/Operators/Multiplication** – перетащите два компонента **Multiplication** на холст|[![](images/1-3-3/1-3-3_19-multiply-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MOMultiply)|
+|26.| Соедините связями выход Point X (X) компонента **Deconstruct** с входом (A) каждого компонента **Multiplication**||
+|27.| Соедините выход Result (y) компонента **Sine** с входом (B) первого компонента **Multiplication**||
+|28.| Соедините выход Result (y) компонента **Cosine** с входом (B) второго компонента **Multiplication**||
+|29.| Отсоедините связь от входа Y Coordinate (Y) компонента **Construct Point**||
+|30.| Соедините выход Result (R) первого компонента **Multiplication** со входом X Coordinate (X) компонента **Construct Point**||
+|31.| Соедините выход Result (R) второго компонента **Multiplication** со входом Z Coordinate (Z) компонента **Construct Point**|||
 
 ![](images/1-3-3/1-3-3_20-connected-with-spiral.png)
->You should now see a spiral curve
+>Сейчас вы должны увидеть спиральную кривую
 
 ![](images/1-3-3/1-3-3_21-spiral.png)
 
 
-####1.3.3.5. EXPRESSIONS
+####1.3.3.5. ВЫРАЖЕНИЯ
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
->Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+>Файлы упражнения, которые сопровождают этот раздел: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
->Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.3.3.5_expressions.gh)
+>Файлы упражнения, которые сопровождают этот раздел: [Download](../../appendix/A-2/gh-files/1.3.3.5_expressions.gh)
 {% endif %}
 
-The Expression component (and its brother the Evaluate component) are
-very flexible tools; that is to say that they can be used for a variety of different
-applications. We can use an Expression (or Evaluate component) to solve
-mathematical algorithms and return numeric data as the output.
+Компонент Expression (и его брат компонент Evaluate) представляет 
+собой очень гибкий инструмент, который можно использовать для 
+различных приложений. Мы можем использовать компонент Expression 
+(или Evaluate), чтобы решать математические алгоритмы и выдавать 
+числовые данные.
 
 ![](images/1-3-3/1-3-3_22-expression-evaluate.png)
 
-In the following example, we will look at mathematical spirals found in nature
-and how we can use a few Functions components to create similar patterns in
-Grasshopper. We will build on our trigonometric curves definition as a starting
-point.
+В следующем примере, мы рассмотрим математические спирали, которые
+можно наблюдать в природе, и как мы можем использовать несколько 
+компонентов Functions для создания похожих паттернов в Grasshopper. 
+Наши тригонометрические кривые мы возьмем за начальную точку.
 
 
 ||||
 |--|--|--|
-|01.| Open your Trigonometric curves Grasshopper definition from the previous example||
-|02.| Delete the **Sine**, **Cosine**, **Multiplication**, and **Interpolate** components||
-|03.| **Params/Input/Number Slider** – Drag and drop a Number Slider onto the canvas||
-|04.| Double-click on the **Number Slider** and set the following:<ul>Rounding: Float<br>Lower Limit: 0.000<br>Upper Limit: 1.000<br>Value: 1.000</ul>||
-|05.| Connect the **Number Slider** to the Factor (F) input of the Unit X component.<br><blockquote>This slider allows you to adjust the distance between the points in the array.</blockquote>||
-|06.| **Maths/Script/Expression** – Drag two **Expression** components onto the canvas|[![](images/1-3-3/1-3-3_23-expression-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MSExpression)|
-|07.| Double-click the first **Expression** component to open the Expression Editor and change the expression to: ```x*sin(x)```||
-|08.| Double-click the second **Expression** component to open the Expression Editor and change the expression to: ```x*cos(x)```|||
+|01.| Из предыдущего определения Grasshopper откройте тригонометрические кривые||
+|02.| Удалите компоненты **Sine**, **Cosine**, **Multiplication** и **Interpolate**||
+|03.| Зайдите в **Params/Input/Number Slider** – перетащите слайдер Number Slider на холст||
+|04.| Дважды кликните по слайдеру **Number Slider** и установите следующее:<ul>Rounding: Float<br>Lower Limit: 0.000<br>Upper Limit: 1.000<br>Value: 1.000</ul>||
+|05.| Подключите слайдер **Number Slider** к входу Factor (F) компонента Unit X.<br><blockquote>Этот слайдер позволит настроить расстояние между точками в массиве.</blockquote>||
+|06.| Зайдите в **Maths/Script/Expression** – перетащите два компонента **Expression** на холст|[![](images/1-3-3/1-3-3_23-expression-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MSExpression)|
+|07.| Дважды кликните на первом компоненте **Expression** чтобы открыть редактор Expression и изменить выражение: ```x*sin(x)```||
+|08.| 8.	Дважды кликните на втором компоненте **Expression**чтобы открыть редактор Expression и изменить выражение: ```x*cos(x)```|||
 
 ![](images/1-3-3/1-3-3_24-expression-editor.png)
->Double click the Expression component to open the Grasshopper Expression Editor
+>Дважды кликните на компоненте Expression, чтобы открыть редактор Grasshopper Expression
 
 ||||
 |--|--|--|
-|09.| Connect two wires from the Point X (X) output of the **Deconstruct** component to the Variable x (x) input of each **Expression** component||
-|10.| Connect the Result (R) output of the first **Expression** component to the X coordinate (X) input of the **Construct Point** component||
-|11.| Connect the Result (R) output of the second **Expression** component to the Y coordinate (Y) input of the **Construct Point** component<br><blockquote>We have replaced the Trigonometry functions and multiplication operators with the expression components for a more efficient definition.</blockquote>||
-|12.| **Mesh/Triangulation/Voronoi** – Drag and drop the **Voronoi** component  onto the canvas|[![](images/1-3-3/1-3-3_25-voronoi-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MTVoronoi)|
-|13.| **Params/Input/Number Slider** – Drag and drop a **Number Slider** onto the canvas||
-|14.| Double-click on the **Number Slider** and set the following:<ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 30<br>Value: 30</ul>||
-|15.| Connect the **Number Slider** to the Radius (R) input of the **Voronoi** component||
-|16.| Connect the Point (Pt) output of the **Construct Point** component to the Points (P) input of the **Voronoi** component|||
+|09.| CСоедините две связи из выхода Point X (X) компонента **Deconstruct** с входом Variable x (x) каждого компонента  **Expression**||
+|10.| Соедините выход Result (R) первого компонента **Expression** с входом X coordinate (X) компонента **Construct Point**||
+|11.| Соедините выход Result (R) второго компонента **Expression** с входом Y coordinate (Y) компонента **Construct Point** <br><blockquote>Мы заменили тригонометрические функции и операторы умножения компонентами Expression для того, чтобы определение было более эффективным.</blockquote>||
+|12.| Зайдите в **Mesh/Triangulation/Voronoi** – перетащите компонент **Voronoi** на холст|[![](images/1-3-3/1-3-3_25-voronoi-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MTVoronoi)|
+|13.| Зайдите в **Params/Input/Number Slider** – перетащите слайдер **Number Slider** на холст||
+|14.| Дважды кликните по слайдеру **Number Slider** и установите следующее:<ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 30<br>Value: 30</ul>||
+|15.| Подключите слайдер **Number Slider** к входу Radius (R) в компоненте**Voronoi**||
+|16.| Соедините выход Point (Pt) компонента **Construct Point** с входом Points (P) компонента **Voronoi**|||
 
 ![](images/1-3-3/1-3-3_26-connected-with-voronoi.png)
 
-You can create different Voronoi patterns by manipulating the Factor, Count, and Radius sliders. Below are three examples:
+Вы можете создавать различные паттерны Вороного, меняя значение слайдеров Factor, Count и Radius. Ниже приведены три примера:
 
 ![](images/1-3-3/1-3-3_27-voronoi-patterns.png)
 >1. Factor = 1.000, Radius = 15
