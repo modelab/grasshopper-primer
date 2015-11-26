@@ -1,5 +1,5 @@
-## 1.4. Designing with Lists
+## 1.4. Проектирование с использованием списков
 
-####One of the most powerful features of Grasshopper is the ability to quickly build and manipulate lists of data. This chapter will explain how to create, manipulate, and visualize list data.
+####Одна из самых мощных характеристик Grasshopper - это способность быстро строить и изменять списки данных. Эта глава объяснит, как создавать, изменять и визуализировать список данных.
 
 ![IMAGE](images/1-4/1-4_001-designing-with-lists.png)
