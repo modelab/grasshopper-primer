@@ -1,47 +1,46 @@
-### 1.4.5. List Visualization
+### 1.4.5. Визуализация Списка
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
->Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+>Файлы упражнения, которые сопровождают этот раздел: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
->Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.4.5_list visualization.gh)
+>Файлы упражнения, которые сопровождают этот раздел: [Download](../../appendix/A-2/gh-files/1.4.5_list visualization.gh)
 {% endif %}
 
-#####Understanding lists in Grasshopper can be difficult without being able to see the data flowing from one component to the next. There are several ways to visualize lists that can help to understand and manipulate data.
+#####Понимание работы со списками в Grasshopper может быть трудно без возможности видеть как данные перетекают из одного компонента в другой. Существует несколько способов визуализации списков, которые могут помочь понять и работать с данными.
 
-There are many different ways to visualize a list of data. The most common way is to create some geometry with the list of data. By connecting the R output of the Range component to the Y input of the Construct Point component, we can see an array of points in the Y direction.
+Существует много разных способов визуализации списка данных. Самый распространенный способ - это создать некую геометрию со списком данных. Затем соединяя выход R компонента Range со входом Y компонента Construct Point, мы сможем увидеть массив точек в направлении Y.
 
 ![IMAGE](images/1-4-5/1-4-5_001-list-visualization.png)
 
-Lets look at some components that can help us understand the data.
+Давайте посмотрим на некоторые компоненты, которые могут помочь нам понять данные.
 
-####1.4.5.1. THE POINT LIST COMPONENT
-The Point List component is an extremely useful tool for visualizing the order of a set of points in a list. Essentially, the Point List component places the index item number next to the point geometry in the viewport. You can also specify whether or not you want to draw the number tags, the connection lines, or the size of the text tags.
+####1.4.5.1. КОМПОНЕНТ POINT LIST
+Компонент Point List - это невероятно полезный инструмент для визуализации порядка в наборе точек в списке. Главным образом, компонент Point List размещает число индекс элемента рядом с точкой геометрии в видовом окне. Вы также можете указать хотите ли вы или нет указывать числовые тэги, соединительные линии или размер текстовых тэгов.
 
 ![IMAGE](images/1-4-5/1-4-5_002-point-list.png)
->You can visualize the order of a set of points using the Point List component.
+>Вы можете визуализировать порядок набора точек, используя компонент Point List.
 
-####1.4.5.2. TEXT TAGS
-The text tag component allows you to draw little strings (a string is a set of ASCII characters) in the viewport as feedback items. Text and location are specified as input parameters. When text tags are baked into the scene, they turn into Text Dots. The other interesting thing about Text Tags is that they are viewport independent - meaning the tags always face the camera (including perspective views) and they always remain the same size on the screen regardless of your zoom settings.
+####1.4.5.2. КОМПОНЕНТ TEXT TAGS
+Компонент text tag позволяет отобразить небольшие текстовые типы данных (набор знаков ASCII) в видовом окне как элементы обратной связи. Текст и расположение определяются как параметры ввода. Когда текстовые тэги запекаются в сцене, они превращаются в Text Dots (текстовые точки). Другой занимательный момент, касающийся Текстовых Тэгов, они независимы от видового окна - это значит, что тэги всегда обращены к камере (включая вид перспективы) и они всегда остаются того же размера на экране, независимо от ваших настроек масштаба.
 
 ![IMAGE](images/1-4-5/1-4-5_003-text-tags.png)
->You can visualize any string information in the viewport using the Text Tag component. In this setup, we have decided to display the value of each point on top of each point locaiton. We could have assigned any text to display.
+>Вы можете визуализировать любую информацию текстовых типов данных в видовом окне, используя компонент Text Tag. В этом наборе мы решили отобразить значение каждой точки поверх расположения каждой точки. Мы могли бы назначить любой текст для отображения.
 
-The Text Tag 3d component works very similarly to the Text Tag component.
-They differ, in that, when Text Tag 3d objects are baked into the scene, they become Text objects in Rhino. The scale of the Text Tag 3d font can also be controlled via an input (which is inaccessible in the Text Tag component).
+Компонент Text Tag 3d работает так же как компонент Text Tag. Они отличаются тем, что когда объекты Text Tag 3d запекаются в сцене, они становятся Текстовыми объектами в Rhino. Масштаб шрифта Text Tag 3d также можно контролировать через вход (который недоступен в компоненте Text Tag).
 
 ![IMAGE](images/1-4-5/1-4-5_004-text-tag-3d.png)
->You can use a Text Tag 3d component to visualize information like a Text object in Rhino.
+>Вы также можете использовать компонент Text Tag 3d для визуализации информации подобно Текстовому объекту в Rhino.
 
 ####1.4.5.3. COLOR
-One of the other things we can do to visualize the list data is to assign color to the geometry. Grasshopper has limited ‘rendering’ capabilities, but we can control simple Open GL settings like color, specular color, transparency, etc. The L0 value represents the low end (left side) of the gradient, whereas the L1 value represents the upper end (right side). These values correspond to the start and end of our domain. The t-values are the elements in the list that will get mapped somewhere within the L0 and L1 range. The output of the gradient is a list of RGB color values which correspond to each point in our list. Right-click on the Gradient to set one of the gradient presets, or define your own using the color node points.
+Еще одна из вещей, которые мы можем сделать для визуализации списка данных, - это присвоить геометрии цвет. У Grasshopper ограниченные возможности рендера, но мы можем контролировать простые Open GL настройки, такие как цвет, отраженный цвет, прозрачность и т.д. Значение L0 представляет нижную границу (левая сторона) градиента, в то время как значение L1 представляет верхнюю границу (правая сторона). Эти значения совпадают с началом и концом нашего диапазона. T-значения - это элементы списка, который будет перенесен где-то внутри диапазона L0 и L1. Выход градиента - это список цветовых значений RGB, которые соответствуют каждой точке в нашем списке. Кликните правой клавишей мыши по Gradient, чтобы настроить одну из преднастроек градиента или определить ваш собственный, используя цветовые точки.
 
 ![IMAGE](images/1-4-5/1-4-5_005-custom-preview.png)
 
 ![IMAGE](images/1-4-5/1-4-5_006-visualization-example.png)
->1. Points
-2. Point list
-3. Text Tag
+>1. Точки
+2. Список точек
+3. Текстовые тэги
 4. Text Tag 3D
-5. Custom color preview
+5. Предпросмотр настроенного цвета
 
 
 
