@@ -1,5 +1,5 @@
-##1.5. DESIGNING WITH DATA TREES
+##1.5. ПРОЕКТИРОВАНИЕ С ИСПОЛЬЗОВАНИЕМ ДЕРЕВЬЕВ ДАННЫХ
 
-####As your definitions increase in complexity, the amount of data flowing through also increases. In order to effectively use Grasshopper, it is important to understand how large quantities of data are stored, accessed, and manipulated.
+####При увеличении сложности ваших определений, объем данных  также увеличивается. Чтобы эффективно использовать Grasshopper, важно понимать, как хранятся большие объемы данных, как к ним можно получить доступ и как с ними обращаться.
 
 ![IMAGE](images/1-5/1-5_001-designing-with-data-trees.png)
