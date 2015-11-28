@@ -1,4 +1,4 @@
-# 1. FOUNDATIONS
+# 1. ОСНОВНЫЕ ПОЛОЖЕНИЯ
 
-#### A strong foundation is built to last. This volume of the Primer introduces the key concepts and features of parametric modeling with Grasshopper.
+#### Прочный фундамент долго простоит. Эта часть Пособия дает представление о ключевых концептах и чертах параметрического моделирования в Grasshopper.
 ![IMAGE](images/001-foundations.png)
