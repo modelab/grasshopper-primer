@@ -1,9 +1,9 @@
-# Summary
+# Содержание
 
-* [About](README.md)
-   * [Grasshopper - an Overview](0-about/1-grasshopper-an-overview.md)
-   * [Grasshopper in Action](0-about/2-grasshopper-in-action.md)
-* [Foundations](1-foundations/1-foundations.md)
+* [Введение](README.md)
+   * [Grasshopper - Обзор](0-about/1-grasshopper-an-overview.md)
+   * [Grasshopper в действии](0-about/2-grasshopper-in-action.md)
+* [Основные положения](1-foundations/1-foundations.md)
    * [Hello Grasshopper!](1-foundations/1-1/0_hello-grasshopper.md)
        * [Installing and Launching Grasshopper](1-foundations/1-1/1_installing-and-launching-grasshopper.md)
        * [The Grasshopper UI](1-foundations/1-1/2_the-grasshopper-ui.md)
