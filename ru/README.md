@@ -1,88 +1,91 @@
-#The Grasshopper Primer (RU)
-##Third Edition V3.3
+#Пособие по Grasshopper (RU)
+##Третье издание V3.3
 
 
 ![Primer Release Cover](0-about/images/GHP3_5Pages.png)
 
-> Grasshopper is a graphical algorithm editor tightly integrated with Rhino’s 3-D modeling tools, allowing designers to build form generators from the simple to the awe-inspiring.
+> Grasshopper - это редактор графических алгоритмов, тесно связанный с 3-D моделирующими инструментами программы Rhino, позволяя дизайнерам создавать генераторы форм от самых простых до захватывающих дух.
 
-###WELCOME
-You have just opened the third edition of the Grasshopper Primer. This primer was originally written by Andrew O. Payne of Lift Architects for Rhino4 and Grasshopper version 0.6.0007 which, at the time of its release, was a giant upgrade to the already robust Grasshopper platform. We now find ourselves at another critical shift in Grasshopper development, so a much needed update to the existing primer was in order. We are thrilled to add this updated, *and now web-based*, primer to the many amazing contributions put forth by Grasshopper community members.
+###ДОБРО ПОЖАЛОВАТЬ
+Перед вами третье издание пособия по Grasshopper. Данное пособие было написано Эндрю О.Пэйн из Lift Architects для Rhino4 и Grasshopper версии 0.6.0007, в момент публикования оно представляло собой гигантское обновление для, и так, уже мощной платформы Grasshopper. В данный момент мы стоим перед следующим важным изменением в развитии Grasshopper и, поэтому, было подготовлено необходимое обновление существующего пособия. Мы взволнованы предстоящим добавлением данного обновленного пособия, а теперь и *интернет-пособия*, к тому невероятному вкладу, который уже внесли члены сообщества Grasshopper.
 
-With an already excellent foundation from which to build, our team at [Mode Lab](http://modelab.is) went to work designing and developing the look and feel of the third edition. This revision provides a comprehensive guide to the most current Grasshopper build, version 0.90076, highlighting what we feel are some of the most exciting feature updates. The revised text, graphics, and working examples are intended to teach visual programming to the absolute beginner, as well as provide a quick introduction to Generative Design workflows for the seasoned veteran. It is our goal that this primer will serve as a field guide to new and existing users looking
-to navigate the ins and outs of using Grasshopper in their creative practice.
+Уже имея превосходную базу, взятую за основу, наша команда в [Mode Lab](http://modelab.is) отправились создавать и развивать третье издание. Такая переработка имеющегося материала предоставила нам полный гид для наиболее современной версии Grasshopper 0,90076, подчеркивая, как нам кажется, обновления самых восхитительных функций. Обновленные тексты, графика и примеры работ направлены на то, чтобы обучить визуальному программированию даже самого начинающего новичка, а также провести быстрое введение в Генеративное Проектирование для опытного пользователя. Цель этого пособия в том, чтобы служить полевым гидом для новичков и давних пользователей, направленным на изучение азов использования Grasshopper в их творческой деятельности.
 
-This primer introduces you to the fundamental concepts and
-essential skill-building workflows to effectively use Grasshopper. Foundations
-is the first volume in a forthcoming collection of Grasshopper primers. Here's what you can expect to learn from the primer:
-* **Introduction** - What is Grasshopper and how is it being used?
-* **Hello Grasshopper** - Make your first definition
-* **Anatomy of a Grasshopper Definition** - What makes up a definition?
-* **Building Blocks of Algorithms** - Start simple and build complexity
-* **Designing with Lists** - What's a list and how do I manage them?
-* **Designing with Data Trees** - What's a data structure and what do they mean for my process?
-* **Appendix** - References and Working files for continued exploration
+Это пособие расскажет вам о фундаментальных идеях и важных
+навыках построения работы для эффективного использования Grasshopper. Основные 
+положения - это первая часть грядущей коллекции пособий по Grasshopper. Вот о чем мы расскажем в этом пособии:
+* **Введение** - Что такое Grasshopper и как его используют?
+* **Поприветствуем Grasshopper** - Создайте ваше первое определение
+* **Структура определения Grasshopper** - Из чего состоит определение?
+* **Построение блоков алгоритмов** - Начните с простого и создайте сложное
+* **Проектирование с использованием списков** - Что такое список и как с ним справится?
+* **Проектирование с использование деревьев данных** - Что такое структура данных и какое они имеют значение для моего проекта?
+* **Приложение** - Ссылки и Рабочие файлы для продолжения изучения
 
-We hope that at the very least this primer will inspire you to begin exploring the many opportunities of programming with Grasshopper. We wish you the best of
-luck as you embark on this journey.
+Мы надеемся, что, в конце концов, это пособие вдохновит вас на изучение
+многочисленных возможностей программирования с Grasshopper. 
+Мы желаем вам удачи в начале вашего путешествия.
 
 ---
-### THE GRASSHOPPER PRIMER PROJECT
+### ПРОЕКТ ПОСОБИЕ ПО GRASSHOPPER
 
-The Grasshopper Primer is an open source project, initiated by Bob McNeel, Scott Davidson, and the Grasshopper Development team at [Robert McNeel & Associates](http://www.en.na.mcneel.com/).
+Пособие по Grasshopper - это открытый проект, основателем которого является Боб МакНил, Скотт Дэвидсон и команда Grasshopper Development в [Robert McNeel & Associates](http://www.en.na.mcneel.com/).
 
-**Mode Lab** authored the Third Edition of the primer. http://modelab.is
+**Mode Lab** стали авторами Третьего Издания пособия. http://modelab.is
 
 ![Mode Lab Logo](0-about/images/MODELAB_Logo.png)
 
-If you would like to contribute to this project, check out the github project wiki to get started (https://github.com/modelab/grasshopper-primer/wiki).
+Если вы хотите принять участие в этом проекте, зайдите на наш проект на GitHub, разде Wiki, что узнать с чего начать  (https://github.com/modelab/grasshopper-primer/wiki).
 
-### ACKNOWLEDGEMENTS
-A special thanks to David Rutten for the endless inspiration and invaluable
-work pioneering Grasshopper. We would also like to thank Andrew O. Payne
-for providing the assets from which this work initiated. Lastly, many thanks to
-Bob McNeel and everyone at Robert McNeel & Associates for their generous
-support over the years.
+### БЛАГОДАРНОСТЬ
+Особую благодарность мы выражаем Дэвиду Руттену за нескончаемое вдохновение
+и бесценную работу первопроходца в Grasshopper. Мы бы также хотели поблагодарить
+Эндрю О.Пэйна за предоставление ресурсов, с которых началась эта работа. 
+Ну, и наконец, огромная благодарность Бобу МакНилу и всем в Robert McNeel & Associates 
+за их щедрую поддержку все эти годы.
 
 ---
-### REQUIRED SOFTWARE
+### НЕОБХОДИМОЕ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ
 **Rhino5**
 
-Rhino 5.0 is the market leader in industrial design modeling software. Highly
-complicated shapes can be directly modeled or acquired through 3D digitizers.
-With its powerful NURBS based engine Rhino 5.0 can create, edit, analyze, and
-translate curves, surfaces, and solids. There are no limits on complexity, degree,
-or size.
+Rhino 5.0 является лидером на рынке моделирующего ПО для промышленного
+проектирования. Крайне сложные формы могут быть смоделированы или 
+получены прямо посредством 3D преобразователей. Имея мощный движок 
+на основе NURBS (рациональной совокупности последовательных 
+сложнопрофильных кривых), Rhino 5.0 способен создавать, редактировать,
+анализировать и переводить кривые, поверхности и твердые тела. 
+Ограничений по сложности, степени или размеру просто нет.
 
 http://www.rhino3d.com/download/rhino/5/latest
 
 **Grasshopper**
 
-For designers who are exploring new shapes using generative algorithms,
-Grasshopper is a graphical algorithm editor tightly integrated with Rhino’s
-3D modeling tools. Unlike RhinoScript or Python, Grasshopper requires no
-knowledge of the abstract syntax of scripting, but still allows designers to build
-form generators from the simple to the awe inspiring.
+Для проектировщиков, исследующих новые формы использу генеративные 
+алгоритмы, Grasshopper - это редактор графических алгоритмов, тесно
+связанный с 3D моделирующими инструментами Rhino. В отличие от 
+RhinoScript или Python, Grasshopper не требует знания абстрактного
+синтаксиса программирования, но при этом позволяет проектировщикам
+создавать генераторы формы от самых простых до захватывающих дух.
 
 http://www.grasshopper3d.com/page/download-1
 
-###FORUMS
-The Grasshopper forum is very active and offers a wonderful resource for
-posting questions/answers and finding help on just about anything.
-The forum has categories for general discussion, errors & bugs, samples &
-examples, and FAQ.
+###ФОРУМ
+Форум Grasshopper - очень активный и предлагает прекрасный ресурс 
+для размещения вопросов/ответов и нахождения помощи по всему, чего
+угодно. Форум делится на следующие категории: обсуждение общих 
+вопросов, ошибки, примеры, популярные вопросы.
 
 http://www.grasshopper3d.com/forum
 
-The Common Questions section of the Grasshopper site contains answers to
-many questions you may have, as well as helpful links:
+Раздел общих вопросов по Grasshopper содержит ответы на многие 
+вопросы, которые у вас могут возникнуть, а также полезные ссылки:
 
 http://www.grasshopper3d.com/notes/index/allNotes
 
-For more general questions pertaining to Rhino3D be sure to check out the
-McNeel Forum powered by Discourse.
+Касательно общих вопросов относительно Rhino3D, сначала проверьте
+на Форуме МакНила, Discourse.
 
 http://discourse.mcneel.com/
 
-###LICENSING INFORMATION
-The Grasshopper Primer is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported license. The full text of this license is available here: http://creativecommons.org/licenses/by-nc-sa/3.0/us/legalcode
+###ИНФОРМАЦИЯ ПО ЛИЦЕНЗИИ
+Пособие по Grasshopper - лицензировано в Creative Commons Attribution - NonCommercial-ShareAlike 3.0 Unported license. Полный текст этой лицензии доступен по этому адресу: http://creativecommons.org/licenses/by-nc-sa/3.0/us/legalcode
