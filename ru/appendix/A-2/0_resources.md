@@ -1,8 +1,8 @@
-##2.3. Resources
+##2.3. Ресурсы
 
-#####There are many resources available to learn more about Grasshopper and parametric design concepts. There are also over a hundred plugins and add-ons that extend Grasshopper’s functionality. Below are some of our favorites.
+#####Существует множество ресурсов доступных для дальнейшего изучения Grasshopper и концептов параметрического проектирования. Также существует больше сотни плагинов и аддонов, которые расширяют функциональность Grasshopper. Ниже некоторые наши любимые ресурсы.
 
-###Plug-in Communities
+###Сообщества по плагинам
 <style>
 .page-inner h3{clear:both}
 .page-inner p{clear:both}
@@ -11,100 +11,99 @@
 </style>
 
 ![IMAGE](images/rhino.png)
-food4Rhino (WIP) is the new Plug-in Community Service by McNeel. As a user, find the newest Rhino Plug-ins, Grasshopper Add-ons, Textures and Backgrounds, add your comments, discuss about new tools, get in contact with the developers of these applications, share your scripts.
+food4Rhino (WIP) ) - это новое сообщество с плагинами, созданное McNeel. Как пользователь, вы найдете новейшие плагины для Rhino, аддоны для Grasshopper,Textures и Backgrounds. Добавляйте ваши комментарии, обсуждайте новые инструменты, связывайтесь с разработчиками этих приложений, делитесь своими скриптами.
 http://www.food4rhino.com/
 
 ![IMAGE](images/grasshopper.png)
-Grasshopper add-ons page
+Страница аддонов Grasshopper
 http://www.grasshopper3d.com/page/addons-forgrasshopper
 <br>
-###Add-ons We Love
+###Аддоны, которые мы любим
 
 ![IMAGE](images/diva.png)
-DIVA-for-Rhino allows users to carry out a series of environmental performance evaluations of individual buildings and urban landscapes.
+DIVA-for-Rhino позволяет пользователям выполнять оценку экологическое воздействие индивидуальных строений и городского ландшафта.
 http://diva4rhino.com/
 
 ![IMAGE](images/elementlogo.png)
-Element is a mesh geometry plugin for Grasshopper, enabling mesh creation, analysis, transformation, subdivision, and smoothing.
+Element это плагин mesh геомерии для Grasshopper, позволяющий создавать mesh, анализировать, изменять, подразделять и сглаживать.
 http://www.food4rhino.com/project/element
 
 ![IMAGE](images/firefly.png)
-Firefly offers a set of comprehensive software tools dedicated to bridging the gap between Grasshopper and the Arduino micro-controller.
+Firefly предоставляет всеобъемлющий комплект ПО инструментов, направленный на создание связи между Grasshopper и микро-контроллером Arduino.
 http://fireflyexperiments.com
 
 ![IMAGE](images/python.png)
-GhPython is the Python interpreter component for Grasshopper that allows you to execute dynamic scripts of any type. Unlike other scripting components, GhPython allows the use of rhinoscriptsyntax to start scripting without needing to be a programmer.
+GhPython - это интерпретирующий компонент Python для Grasshopper, который позволяет выполнять динамические скрипты любого типа. В отличие от других скриптовых компонентов, GhPython позволяет использовать rhynoscriptsyntax, чтобы начать писать скрипт без необходимости быть программистом.
 http://www.food4rhino.com/project/ghpython
 
 ![IMAGE](images/hal.png)
-HAL is a Grasshopper plugin for industrial robots programming supporting ABB, KUKA and Universal Robots machines.
+HAL это плагин Grasshopper для программирования промышленных роботов, поддерживающих ABB, KUKA и Universal Robots.
 http://hal.thibaultschwartz.com/
 
 ![IMAGE](images/human.png)
-Extends Grasshopper’s ability to create and reference geometry including lights, blocks, and text objects. Also enables access to information about the active Rhino document, pertaining to materials, layers, linetypes, and other settings.
+Расширяет возможности Grasshopper для создания и привязывания к геометрии, включая свет, блоки и текстовые объекты. Также обеспечивает доступ к информации об активном документе Rhino, касающейся материалов, слоев, типов линий и других настроек.
 http://www.food4rhino.com/project/human
 
 ![IMAGE](images/karamba.png)
-Karamba is an interactive, parametric finite element program. It lets you analyze the response of 3-dimensional beam and shell structures under arbitrary loads.
+Karamba это интерактивная программа, параметрических конечных элементов. Она позволяет проанализировать реакцию 3-пространственной балки и оболочки под произвольными нагрузками.
 http://www.karamba3d.com/
 
 ![IMAGE](images/kangaroo.png)
-Kangaroo is a Live Physics engine for interactive simulation, optimization and form-finding directly within Grasshopper.
+Kangaroo это движок Live Physics для интерактивной симуляции, оптимизации и нахождения формы прямо из Grasshopper.
 http://www.food4rhino.com/project/kangaroo
 
 ![IMAGE](images/kingkong.png)
-Fold panels using curved folding and control panel distribution on surfaces with a range of attractor systems.
+Fold panels используют изогнутое сгибание и распространение контрольной панели на поверхности с порядком системы аттракторов.
 http://www.food4rhino.com/project/robofoldkingkong
 
 ![IMAGE](images/lunchbox.png)
-LunchBox is a plug-in for Grasshopper for exploring mathematical shapes, paneling, structures, and workflow.
+LunchBox плагин для Grasshopper для исследования математических форм, панелизации, структуры и организации рабочего процесса.
 http://www.food4rhino.com/project/lunchbox
 
 ![IMAGE](images/meshedit.png)
-Meshedit is a set of components which extend Grasshopper’s ability to work with meshes.
+Meshedit это набор компонентов, которые расширяют возможности Grasshopper в работе с mesh.
 http://www.food4rhino.com/project/meshedittools
 
 ![IMAGE](images/parametric-tools.png)
-Parametric tools to create and manipulate rectangular grids, attractors and support creative morphing of parametric patterns.
+Параметрические инструменты для создания и использования прямоугольных сеток, аттракторов и поддержки креативного преобразования параметрических шаблонов.
 http://www.food4rhino.com/project/pt-gh
 
 ![IMAGE](images/platypus.png)
-Platypus allows Grasshopper authors to stream geometry to the web in real time. It works like a chatroom for parametric geometry, and allows for on-the-fly 3D model mashups in the web browser.
+Platypus позволяет авторам Grasshopper передавать геометрию в веб пространство в реальном времени. Он работает как чат-комната для параметрической геометрии и позволяет немедленно делать мэшап 3D модели в браузере.
 http://www.food4rhino.com/project/platypus
 
 ![IMAGE](images/tt-toolbox.png)
-TT Toolbox features a range of different tools that we from the Core Studio at Thornton Tomasetti use on a regular basis, and we thought some of you might appreciate these.
+TT Toolbox представляет набор различных инструментов, которые мы используем на регулярной основе из Core Studio у Thornton Tomasetti. Надеемся, что вы оцените это приложение.
 http://www.food4rhino.com/project/tttoolbox
 
 ![IMAGE](images/weaverbird.png)
-Weaverbird is a topological modeler that contains many of the known subdivision and transformation operators, readily usable by designers. This plug-in reconstructs the shape, subdivides any mesh, even made by polylines, and helps preparing for fabrication.
+Weaverbirdтопологический моделер, который содержит много из известных подразделений и изменяемых операторов, с легкостью используется дизайнерами. Этот плагин реконструирует форму, разделяет любую mesh, состоящую даже из полилиний, и помогающую подготовить ее к производству.
 http://www.giuliopiacentino.com/weaverbird/
 
 
 
-###Additional Primers
+###Дополнительные пособия
 **The Firefly Primer**
-This book is intended to teach the basics of electronics (using an Arduino) as well as various digital/physical prototyping techniques to people new to the field. It is not a comprehensive book on electronics (as there are already a number of great resources already dedicated to this topic). Instead, this book focuses on expediting the prototyping process. Written by Andrew Payne.
+Эта книга направлена на обучение основам электроники (использование Ардуино), а так же различным цифровым/ физическим техникам прототипирования для специалистов новых в этой сфере. Это не всеобъемлющая книга по электронике (так как уже написано много великолепных книг посвященных это теме). Вместо этого, эта книга сфокусирована на ускорении процесса прототипирования. Автор - Andrew Payne.
 http://fireflyexperiments.com/resources/
 
 **Essential Mathematics**
-Essential Mathematics uses Grasshopper to introduce design professionals to foundation mathematical concepts that are necessary for effective development of computational methods for 3D modeling and computer graphics. Written by Rajaa Issa.
+Essential Mathematics использует Grasshopper для объяснения проектировщикам основных положений математических идей, необходимых для эффективного развития вычислительных методов 3D моделирования и компьютерной графики. Автор - Rajaa Issa.
 http://www.rhino3d.com/download/rhino/5.0/EssentialMathematicsThirdEdition/
 
 **Generative Algorithms**
-A series of books which is aimed to develop different concepts in the field of Generative Algorithms and Parametric Design. Written by Zubin Khabazi.
+Серия книг, которые нацелены на развитие различных концептов в области Генеративных Алгоритмов и Параметрического Проектирования. Автор - Zubin Khabazi.
 http://www.morphogenesism.com/media.html
 
 **Rhino Python Primer**
-This primer is intended to teach programming to absolute beginners, people who have tinkered with programming a bit or expert programmers looking for a quick introduction to the methods in Rhino. Written by Skylar Tibbits.
+Это пособие направлено на обучение программированию абсолютных новичков, людей, которые немного пробовали себя в программировании или экспертов-программистов, ищущих быстрое введение в методологию Rhino. Автор - Skylar Tibbits.
 http://www.rhino3d.com/download/IronPython/5.0/RhinoPython101
 
-###General References
-**Wolfram MathWorld** is an online mathematics resource., assembled by Eric W. Weisstein
-with assistance from thousands of contributors. Since its contents first appeared online in 1995, MathWorld has emerged as a nexus of mathematical information in both the mathematics and educational communities. Its entries are extensively referenced in journals and books spanning all educational levels.
+###Общие ссылки
+**Wolfram MathWorld** математический онлайн ресурс, организованный Эриком В. Вайсштайном при помощи нескольких тысяч участников. С тех пор, как первый контент появился онлайн в 1995 MathWorld превратился в связующее звено математической информации между математическим и образовательным сообществами. Данные этого ресурса широко используются в журналах и книгах на всех уровнях образования.
 http://mathworld.wolfram.com/
 
-###Further Reading
+###Дальнейшее чтение
 Burry, Jane, and Mark Burry. *The New Mathematics of Architecture.* London: Thames & Hudson, 2010.
 
 Burry, Mark. *Scripting Cultures: Architectural Design and Programming.* Chichester, UK: Wiley, 2011.
