@@ -170,34 +170,34 @@ thead {display: none}
 |14.| Зайдите в **Params/Input/Panel** - вытащите компонент **Panel** на холст||
 |15.| Кликните правой клавишей мыши по компоненту **Panel** и снимите выделение с опции 'Multiline Data'<br><br><blockquote>По умолчанию, у панели опция 'Multiline Data' включена. Отключая ее, каждая строчка с панели будет прочитываться как отдельный элемент внутри списка.</blockquote>||
 |16.| Дважды кликните по компоненту **Panel** для его редактирования, введите следующие точки: <ul>{0,0,0}<br>{1,0,0}<br>{1,1,0}<br>{0,1,0}<br>{2,0,0}</ul><blockquote>Убедитесь, что вы используете правильную систему чисел. Чтобы определить точку на **Panel**, вы должны использовать фигурные скобки: '{' и '}' с запятыми между значениями x, y и z</blockquote>||
-|17.| Connect the **Panel** component to the Vertices (V) input of the **Construct Mesh** component|||
+|17.| Соедините компонент **Panel** с входом Vertices (V) компонента **Construct Mesh**|||
 
 ![IMAGE](images/1-6-1/exercise-03.png)
->We now have a mesh with two faces and 5 vertices.  
+>У нас сейчас есть mesh с двумя полигонами и 5 вершинами.  
 
-Optionally, we can replace the **Mesh Quad** and **Mesh Triangle** components with a panel specifying the indices of the faces.
+На выбор, мы можем заменить компоненты **Mesh Quad** и **Mesh Triangle** Панелью, указав индексы полигонов.
 
 ||||
 |--|--|--|
-|18.| Зайдите в **Params/Input/Panel** - Drag and drop a **Panel** component onto the canvas||
-|19.|Right-click the **Panel** component and deselect 'Multiline Data' <br><br><blockquote>Alternatively, copy the existing **Panel** that we used for the points, which already has 'Multiline Data' disabled</blockquote>||
-|20.|Double-click the **Panel** component to edit it, and enter the following: <ul>Q{0,1,2,3}<br>T{1,2,4}</ul>||
-|21.|Connect the **Panel** to the Faces (F) input of the **Construct Mesh** component|||
+|18.| Зайдите в **Params/Input/Panel** - вытащите компонент **Panel** на холст||
+|19.|Кликните правой клавишей мыши по компоненту **Panel** и снимите выделение с опции 'Multiline Data' <br><br><blockquote>Либо скопируйте существующую **Panel**которую мы использовали для точек, у которых уже снято выделение с опции 'Multiline Data'</blockquote>||
+|20.|Дважды кликните по компоненту **Panel** для его редактирования, введите следующее: <ul>Q{0,1,2,3}<br>T{1,2,4}</ul>||
+|21.|Соедините компонент **Panel** с входом Faces (F) компонента **Construct Mesh**|||
 
 ![IMAGE](images/1-6-1/exercise-04.png)
 
 ||||
 |--|--|--|
-|22.| Зайдите в **Params/Input/Colour Swatch** - Drag and drop a **Colour Swatch** component onto the canvas|![IMAGE](images/1-6-1/colour-swatch.png)|
-|23.| Click the colored section of the component (the default is White) to open the color selection panel||
-|24.| Use the sliders to set the G and B values to zero. The swatch should now be Red||
-|25.| Зайдите в **Params/Input/Colour Swatch** - Drag and drop two more **Colour Swatch** components onto the canvas and set their colors to Blue and Green||
-|26.| Зайдите в **Sets/Tree/Merge** - Drag and drop a **Merge** component onto the canvas||
-|27.| Connect the three **Color Swatch** components into the D1, D2, and D3 inputs of the **Merge** component.||
-|28.| Connect the Result (R) output of the **Merge** component to the Colours (C) input of the **Construct Mesh** component|||
+|22.| Зайдите в **Params/Input/Colour Swatch** - вытащите компонент **Colour Swatch** на холст|![IMAGE](images/1-6-1/colour-swatch.png)|
+|23.| Кликните по цветной секции компонента (по умолчанию указан белый цвет), чтобы открыть панель выбора цвета||
+|24.| Используйте слайдеры, чтобы установить значение G и B на ноль. Палитра должна стать красной||
+|25.| Зайдите в **Params/Input/Colour Swatch** - перетащите на холст еще два компонента **Colour Swatch** и настройте их цвета на Blue (голубой) и Green (зеленый)||
+|26.| Зайдите в **Sets/Tree/Merge** - вытащите компонент **Merge** на холст||
+|27.| Соедините три компонента **Color Swatch** с входами D1, D2, и D3 компонента **Merge**.||
+|28.| Соедините выход Result (R) компонента **Merge** с входом Colours (C)компонента **Construct Mesh**|||
 
 ![IMAGE](images/1-6-1/exercise-05.png)
->We have 5 vertices, but only 3 colors. Grasshopper will assign the colors in a repeating pattern, so in this cases vertices 0 and 3 will be Red, vertices 1 and 4 will be Green, and the final vertex 2 will be Blue.
+>У нас есть 5 вершин и только 3 цвета. Grasshopper назначит цвета в соответствии с повторяющимся паттерном, так что в этом случае вершины 0 и 3 будут красного цвета, вершины 1 и 4 будут зеленого цвета, а вершина 2 будет голубого цвета.
 
 
 
