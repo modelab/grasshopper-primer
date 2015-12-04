@@ -1,73 +1,73 @@
-### 1.6.1 What is a Mesh?
+### 1.6.1 Что такое Mesh?
 
-#####A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. This section discusses the structure of a mesh object, which includes vertices, edges, and faces, as well as additional mesh properties such as colors and normals.
+#####Mesh - это набор четырехугольников и треугольников, который образует поверхность или твердое тело. В этой секции обсуждается структура объекта Mesh, которая включает вершины, ребра и поверхности, а также дополнительные характеристики mesh, такие как цвет и нормали.
 
 ![IMAGE](images/1-6-1/01_mesh-structure.png)
->1. Mesh vertices
-2. Mesh edges
-3. Mesh faces
+>1. Вершины Mesh
+2. Ребра Mesh
+3. Поверхности Mesh
 
-####1.6.1.1 Basic Anatomy of a Mesh
+####1.6.1.1 Основное строение Mesh
 
-Grasshopper defines meshes using a Face-Vertex data structure. At its most basic, this structure is simply a collection of points which are grouped into polygons. The points of a mesh are called *vertices*, while the polygons are called *faces*. To create a mesh we need a list of vertices and a system of grouping those vertices into faces.
+Grasshopper определяет mesh, используя структуру данных Face-Vertex. На самом примитивном уровне, это структура представляет собой набор точек, которые группируются в полигоны. Точки mesh называются vertices (вершины), а полигоны - faces. Чтобы создать mesh, нам требуется список вершин и система группирования этих вершин в полигоны.
 
 ![IMAGE](images/1-6-1/02_basic-anatomy.png)
->1. A list of vertices. 
-2. Faces with groupings of vertices
+>1. Список вершин.
+2. Полигоны с группами вершин
 
-**Vertices**
+**Вершины**
 
-The vertices of a mesh are simply a list of points. Recall that  a *list* in Grasshopper is a collection of objects. Each object in the list has an *index* which describes that objects position in a list. The index of the vertices is very important when constructing a mesh, or getting information about the structure of a mesh.
+Вершины mesh - это просто список точек. Напомним, что список Grasshopper - это набор объектов. Каждый объект в списке, имеет индекс, который описывает положение объектов в списке. Индекс вершины имеет большую важность при создании mesh, при получении информации о структуре mesh.
 
 ![IMAGE](images/1-6-1/03_vertices.png)
->1. A list of points. All lists in Grasshopper begin with an index of zero
-2. The set of points labeled with their index
+>1. Список точек. Все списки в Grasshopper начинаются с индекса ноль
+2. Набор точек со своими индексами
 
-**Faces**
+**Полигоны**
 
-A face is an ordered list of three or four vertices. The “surface” representation of a mesh face is therefore implied according to the position of the vertices being indexed. We already have the list of vertices that make up the mesh, so instead of providing individual points to define a face, we instead simply use the index of the vertices. This also allows us to use the same vertex in more than one face.
+Face - это структурированный список из трех-четырех вершин. "Поверхностное" представление поверхности mesh означает в соответствии с положением вершины и ее индексом. У нас уже есть список вершин, которые составляют mesh, поэтому, вместо предоставления отдельных точек для определения face, мы просто используем индекс вершин. Это также позволяет нам использовать одну и ту же вершину в более чем одном полигоне.
 
 ![IMAGE](images/1-6-1/04_faces.png)
->1. A quad face made with indices 0, 1, 2, and 3
-2. A triangle face made with indices 1, 4, and 2
+>1. Четырехугольный полигон состоит из индексов 0, 1, 2 и 3
+2. Треугольный полигон состоит из индексов 1, 4 и 2
 
-In Grasshopper, faces can be created with the **Mesh Triangle** and **Mesh Quad** components. The input for these components are integers that correspond to the index of the vertices we want to use for a face. By connecting a **Panel** to the output of these components, we can see that a triangular face is represented as T{A;B;C}, and a quad face as Q{A;B;C;D}. Faces with more than 4 sides are not allowed. To make a 5-sided mesh element, the mesh must be broken into two or more faces.
+В Grasshopper face могут создаваться компонентами **Mesh Triangle** и **Mesh Quad**Вводные параметры для этих компонентов - целые числа, которые соответствуют индексу вершин, которые мы хотим использовать для создания полигона. Соединяя **Panel** с выходом этих компонентов, мы можем увидеть, что треугольный полигон представлен как T{A;B;C} и четырехугольный полигон как Q{A;B;C;D}. Полигон с более чем 4 сторонами не допускаются. Чтобы создать 5-сторонний элемент mesh, mesh должна быть разбита на два или более полигона.
 
 ![IMAGE](images/1-6-1/05_construct-faces.png)
->1. **Mesh Quad** component with indices 0, 1, 2, and 3
-2. **Mesh Triangle** component with indices 1, 4, and 2
+>1. Компонент **Mesh Quad** с индексами 0, 1, 2 и 3
+2. Компонент **Mesh Triangle** с индексами 1, 4 и 2
 
-It is important to remember that these components do not result in the creation of mesh geometry, rather the output is a list of indices that define how a mesh should be constructed. By paying attention to the format of this list, we can also create a face manually by editing a **Panel** component and entering the appropriate format for either triangular or quad faces.
+Важно помнить, что эти компоненты не создают геометрию mesh, также как и выход - это список индексов, которые определяют, как mesh должна создаваться. Уделяя внимание формату этого списка, мы также можем создать полигон вручную путем редактирования компонента **Panel** вводя подходящий формат для треугольных либо четырехугольных полигонов.
 
 ![IMAGE](images/1-6-1/06_faces-with-panel.png)
->1. A face created using a **Mesh Quad** component
-2. A face created using a **Panel**
-3. A Panel Properties window is automatically opened when double-clicking a panel while zoomed out, or by right-clicking a panel and selecting "Edit Notes..."
+>1. Полигон, созданный с использованием компонента **Mesh Quad**
+2. Полигон, созданный с использованием **Panel**
+3. Окно характеристик Panel автоматически открывается при двойном клике по панели при масштабировании или при правом клике по панели и выборе "Edit Notes..."
 
-So far we have a list of vertices and a set of face definitions, but have not yet created a mesh. In order to create a mesh, we need to connect the faces and vertices together by using the **Construct Mesh** component. We connect our list of vertices to the V input, and a merged list of faces to the F input. (The component also has room for an optional Color input, which is discussed below.) If we connect a panel to the output of the **Construct Mesh** we can see information about the number of faces and number of indices.
+На данный момент у нас есть список вершин и набор файлов полигонов, но мы все еще не создали mesh. Чтобы создать mesh, нам нужно соединить полигон и вершины используя компонент **Construct Mesh** Мы подключаем наш список вершин к входу V и смешанный список полигонов к входу F. (У компонента также есть дополнительный вход для цвета, мы обсудим это позже.) Если мы подключим panel к выходу **Construct Mesh** мы сможем увидеть информацию о числе полигонов и числе индексов.
 
 ![IMAGE](images/1-6-1/07_construct-mesh.png)
->1. The **Construct Mesh** component takes a list of vertices and a list of faces as input. The Color input is optional, and is left blank for now
-2. A panel shows that we have created a mesh with 5 vertices and 2 faces
-3. The resulting mesh (the vertices have been labeled with their indices)
+>1. Компонент **Construct Mesh** берет список вершин и список полигонов как вводные данные. Вход Color опциональный, оставляется пустым пока что
+2. Panel показывает, что мы создали mesh с 5 вершинами и 2 полигонами
+3. Итоговая mesh (вершины были пронумерованы по их индексам)
 
-By default, Grasshopper does not preview the edges of mesh geometry. To preview the edges as well as the surfaces, you can turn on mesh edge preview by using the shortcut Ctrl-M, or by going to the Display menu and selecting 'Preview Mesh Edges'.
+По умолчанию, Grasshopper не показывает ребра геометрии mesh. Чтобы предварительно посмотреть на ребра и на поверхности, вы можете включить предпросмотр ребер mesh, используя комбинацию Ctrl-M или пройдя в меню Display и выбрав "Preview Mesh Edges".
 
 ![IMAGE](images/1-6-1/08_preview-mesh-edges.png)
 
-It is extremely important to pay attention to the order of the indices when constructing a mesh face. The face will be constructed by connecting the vertices listed in order, so the quad faces Q{0,1,2,3} and Q{1,0,2,3} are very different, despite using the same four vertices. Incorrect vertex ordering can lead to problems such as holes, non-manifold mesh geometry, or non-orientable surfaces. Such mesh geometry is usually not correctly rendered, and not able to be 3D printed. These issues are discussed in more detail in the **Understanding Topology** section.
+Очень важно обратить внимание на порядок индексов при создании полигона mesh. Полигон будет создаваться при соединении пронумерованных вершин по порядку, так что четырехугольные полигоны Q{0,1,2,3} и Q{1,0,2,3} очень отличаются, несмотря на то, что используют одни и те же четыре вершины. Неправильное упорядочивание вершин может вести к проблемам, таким как щели (отверстия), неоднородная геометрия mesh либо неориентируемая поверхность. Такая геометрия mesh обычно неправильно рендерится и ее невозможно отправить на 3D печать. Эти вопросы обсуждаются более подробно в разделе **Understanding Topology**.
 
 ![IMAGE](images/1-6-1/08_bowtie.png)
->1. A quad face with indices 0,1,2,3
-2. A quad with indicies 0,3,1,2
+>1. Четырехугольный полигон с индексами 0,1,2,3
+2. Четырехугольный полигон с индексами 0,3,1,2
 
-####1.6.1.2 Implicit Mesh Data
+####1.6.1.2 Скрытые данные Mesh
 
-In addition to faces and vertices, there is other information about a mesh that we will want to use. In a Face-Vertex based mesh, data such as *edges* and *normals* are calculated implicitly based on the given faces and vertices. This section describes ways to query this information.
+В дополнение к полигонам и вершинам, есть и другая информация о mesh, которую мы хотим использовать. В mesh, основанной на Face-Vertex, такие данные как *edges* (ребра) и *normals* (нормали) рассчитываются непрямо, на основе данных полигона и вершин. Этот раздел описывает способы получение этой информации.
 
-**Edges**
+**Ребра**
 
-The *edges* of a mesh are lines connecting any two consecutive vertices in a face. Notice that some edges are shared between multiple faces, while other edges are only adjacent to one face. The number of faces an edge is adjacent to is called the *valence* of that edge.
+*Ребра* это линии, соединяющие любые две последовательные вершины в полигоне. Заметьте, что некоторые ребра принадлежат к нескольким полигонам, в то время как другие ребра принадлежат только одному полигону. Число полигонов, к которым ребра принадлежат, называется *valence* (валентность) этого ребра.
 
 Grasshopper groups edges into three categories based on the valence:
 
