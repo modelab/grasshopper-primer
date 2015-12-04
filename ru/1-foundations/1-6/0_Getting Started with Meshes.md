@@ -1,5 +1,5 @@
-## 1.6. Getting Started with Meshes
+## 1.6. Начало работы с Mesh
 
-####In the field of computational modeling, meshes are one of the most pervasive forms of representing 3D geometry. Mesh geometry can be a light-weight and flexible alternative to working with NURBS, and are used in everything from rendering and visualizations to digital fabrication and 3D printing. This chapter will provide an introduction to how mesh geometry is handled in Grasshopper.
+####В области вычислительного моделирования, mesh - одна из самых распространенных форм представления 3D геометрии. Геометрия Mesh может быть легковесной и гибкой альтернативой работе с NURBS и используется везде, начиная от рендера и визуализации и заканчивая цифровым производством и 3D печатью. Эта глава представляет собой введение в то, как работать с геометрией Mesh в Grasshopper.
 
 ![IMAGE](images/cover.png)
