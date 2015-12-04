@@ -1,4 +1,4 @@
-### 1.6.3 Создание Meshes
+### 1.6.3 Создание Mesh
 
 #####В последнем разделе мы рассмотрели основные структуры mesh. В этом разделе мы представим краткое введение в различные способы создания геометрии mesh.
 
@@ -75,62 +75,62 @@ thead {display: none}
 |12.| Соедините выход Faces (F) компонента **Deconstruct Mesh** с входом Faces (F) компонента **Construct Mesh**|||
 
 ![IMAGE](images/1-6-3/exercise-02.png)
->We deconstructed the mesh to get its vertices, faces, and normals. We then simply moved each vertex according to its normal vector. Because we did not change the topology of the sphere at all, we re-used the list of faces to re-construct the new mesh. Normal vectors always have a length of one, so this ended up reconstructing a new mesh sphere with a radius of one more than the original sphere. 
+>Мы разобрали mesh на вершины, полигоны и нормали. Затем мы просто передвигаем каждую вершину в соответствии с ее нормаль вектором. Из-за того, что мы совсем не изменили топологию сферы, мы заново использовали список полигонов, чтобы реконструировать новую mesh. Нормаль векторы всегда имеют длину один, поэтому это привело к реконструированию новой сферы mesh с радиусом больше на один больше, чем исходная сфера. 
 
-Next, we will use a sine function to manipulate the sphere in a slightly more complicated way.
+Далее, мы будем использовать функцию синуса для работы со сферой более сложным способом.
 
 ||||
 |--|--|--|
-|13.| **Vector/Point/Deconstruct** - Drag and drop a **Deconstruct** component onto the canvas|![IMAGE](images/1-6-3/deconstruct.png)|
-|14.| Connect the Vertices (V) output of the **Deconstruct Mesh** component to the Point (P) input of the **Deconstruct** component||
-|15.| **Params/Input/Number Slider** - Drag and drop two **Number Slider** components onto the canvas||
-|16.| Set the values of the frist **Number Slider** to: <ul>Name: Amplitude<br> Rounding: Float<br>Lower Limit: 0<br>Upper Limit: 10</ul>||
-|17.| Set the values of the second **Number Slider** to: <ul>Name: Frequency<br>Rounding: Float<br>Lower Limit: 0<br>Upper Limit: 5</ul>||
-|18.| **Maths/Script/Expression** - Drag and drop an **Expression** component onto the canvas|![IMAGE](images/1-6-3/expression.png)|
-|19.| Zoom in to the **Expression** component until you see the options for adding or removing input variables and click on a '+' to add a 'z' variable||
-|20.| Right click the 'y' input of the **Expression** component and change the text to 'A'||
-|21.| Right click the 'z' input of the **Expression** component and change the text to 'f'||
-|22.| Double click the **Expression** component to edit the expression, and enter the following: <ul>A\*sin(x\*f/π)</ul>||
-|23.| Connect the X output of the **Deconstruct** component to the 'x' input of the **Expression** component||
-|24.| Connect the Amplitude **Number Slider** to the A input, and the Frequency **Number Slider** to the 'f' input of the **Expression** component||
-|25.| **Maths/Operators/Multiplication** - Drag and drop a **Multiplication** component onto the canvas|![IMAGE](images/1-6-3/multiplication.png)|
-|26.| Connect the Normals (N) output of the **Deconstruct Mesh** component to the A input of the **Multiplication** component||
-|27.| Connect the Result (R) output of the **Expression** component to the the B input of the **Multiplication** component||
-|28.| Connect the Result (R) output of the **Multiplication** component to the Motion (T) input of the **Move** component|||
+|13.| Зайдите в **Vector/Point/Deconstruct** - перетащите компонент **Deconstruct** на холст|![IMAGE](images/1-6-3/deconstruct.png)|
+|14.| Соедините выход Vertices (V) компонента **Deconstruct Mesh** с входом Point (P) компонента **Deconstruct**||
+|15.| Зайдите в **Params/Input/Number Slider** - вытащите два слайдера **Number Slider** на холст||
+|16.| Установите значения на первом слайдере **Number Slider**: <ul>Name: Amplitude (амплитуда)<br> Rounding: Float<br>Lower Limit: 0<br>Upper Limit: 10</ul>||
+|17.| Установите значения на втором слайдере **Number Slider**: <ul>Name: Frequency<br>Rounding: Float<br>Lower Limit: 0<br>Upper Limit: 5</ul>||
+|18.| Зайдите в **Maths/Script/Expression** - перетащите компонент **Expression** на холст|![IMAGE](images/1-6-3/expression.png)|
+|19.| Приблизьте компонент **Expression**, пока не увидите опцию для добавления или удаления вводных переменных и кликните на '+', чтобы добавить переменную 'z'||
+|20.| Кликните правой клавишей мыши по входу 'y' компонента **Expression** и измените текст на 'A'||
+|21.| Кликните правой клавишей мыши по входу 'z' компонента **Expression** и измените текст на 'f'||
+|22.| Дважды кликните по компоненту **Expression** для редактирования выражения и введите следующее: <ul>A\*sin(x\*f/π)</ul>||
+|23.| Соедините выход X компонента **Deconstruct** с входом 'x' компонента **Expression**||
+|24.| Соедините слайдер Amplitude **Number Slider** с входом A и слайдер Frequency **Number Slider** с входом 'f' компонента **Expression**||
+|25.| Зайдите в **Maths/Operators/Multiplication** - перетащите компонент **Multiplication** на холст|![IMAGE](images/1-6-3/multiplication.png)|
+|26.| Соедините выход Normals (N) компонента **Deconstruct Mesh** с входом A компонента **Multiplication**||
+|27.| Соедините выход Result (R) компонента **Expression** с входом B компонента **Multiplication**||
+|28.| Соедините выход Result (R) компонента **Multiplication** с входом Motion (T) компонента **Move**|||
 
 ![IMAGE](images/1-6-3/exercise-03.png)
 ![IMAGE](images/1-6-3/exercise-04.png)
->Adjust the Amplitude and Frequency number sliders to see how the newly constructed mesh changes.
+>Настройте слайдеры Amplitude и Frequency, чтобы посмотреть, как вновь созданные mesh изменятся.
 
 ||||
 |--|--|--|
-|29.| **Mesh/Primitive/Mesh Colours** - Drag and drop a **Mesh Colours** component onto the canvas|![IMAGE](images/1-6-3/mesh-colours.png)|
-|30.| **Params/Input/Gradient** - Drag and drop a **Gradient** component onto the canvas <br><br><blockquote>You can right-click the gradient component and select "Presets" to change the color gradient. In this example, we used the Red-Yellow-Blue gradient</blockquote>|![IMAGE](images/1-6-3/gradient.png)|
-|31.| Connect the Result (R) output of the **Expression** component to the Parameter (t) input of the **Gradient** component||
-|32.| Connect the output of the **Gradient** component to the Colours (C) input of the **Mesh Colours** component||
-|33.| Connect the Mesh (M) output of the **Construct Mesh** component to the Mesh (M) input of the **Mesh Colours** component <br><br><blockquote>In this step, we could achieve the same result by connecting the gradient directly to the Colours (C) input of the **Construct Mesh** component</blockquote>|||
+|29.| Зайдите в **Mesh/Primitive/Mesh Colours** - перетащите компонент **Mesh Colours** на холст|![IMAGE](images/1-6-3/mesh-colours.png)|
+|30.| Зайдите в **Params/Input/Gradient** - вытащите компонент **Gradient** на холст <br><br><blockquote>Вы можете кликнуть правой клавишей мыши по компоненту Gradient и выберите "Presets", чтобы изменить цвет градиента. В этом примере мы использовали Красно-Желтый-Синий градиент</blockquote>|![IMAGE](images/1-6-3/gradient.png)|
+|31.| Соедините выход Result (R) компонента **Expression** с входом Parameter (t) компонента **Gradient**||
+|32.| Соедините выход компонента **Gradient** с входом Colours (C) компонента **Mesh Colours**||
+|33.| Соедините выход Mesh (M) компонента **Construct Mesh** с входом Mesh (M) компонента **Mesh Colours** <br><br><blockquote>В этом шаге, мы могли достигнуть такого же результата, если бы соединили Gradient прямо с входом Colours (C) компонента **Construct Mesh** </blockquote>|||
 
 ![IMAGE](images/1-6-3/exercise-05.png)
 ![IMAGE](images/1-6-3/exercise-06.png)
->We used the Expression results to drive both the movement of the vertices and the color of the mesh, so the color gradient in this case corresponds to the magnitude of the movement of the vertices. 
+>Мы использовали результаты Expression, чтобы перемещать движения и вершин и цвет mesh, так что цветовой градиент, в этом случае, соответствует амплитуде движения вершин.
 
-For the final portion of the exercise, we will instead use the direction of the normals relative to a 'light source' vector to simulate the basic process of rendering a mesh.
+В конце этого упражнения, мы будем использовать направление нормалей относительно вектора источника света, чтобы симулировать основной процесс рендера mesh.
 
 ||||
 |--|--|--|
-|34.| **Mesh/Analysis/Deconstruct Mesh** - Drag and drop a **Deconstruct Mesh** component onto the canvas||
-|35.| Connect the Mesh (M) output of the **Construct Mesh** component to the Mesh (M) input of the **Deconstruct Mesh** component <br><br><blockquote> While the topology of the original mesh has not changed, the normal vectors will be different, so we need to use a new **Deconstruct Mesh** to find the new normals.</blockquote||
-|36.| **Vector/Vector/Unit Z** - Drag and drop a **Unit X** component onto the canvas <br><br><blockquote> We will use this as the direction of a light source. You can use other vectors, or reference a line from Rhino to make this more dynamic</blockquote>||
-|37.| **Vector/Vector/Angle** - Drag and drop an **Angle** component onto the canvas|![IMAGE](images/1-6-3/angle.png)|
-|38.| Connect the Normals (N) output of the **Deconstruct Mesh** component to the A input of the **Angle** component||
-|39.| Connect the output of the **Unit Z** component to the B input of the **Angle** component||
-|40.| **Maths/Util/Pi** - Drag and drop a **Pi** component onto the canvas|![IMAGE](images/1-6-3/pi.png)|
-|41.| Connect the **Pi** component to the Upper Limit (L1) input of the **Gradient** component||
-|42.| Connect the Angle (A) output of the **Angle** component to the Parameter (t) input of the **Gradient** component|||
+|34.| **Mesh/Analysis/Deconstruct Mesh** - перетащите компонент **Deconstruct Mesh** на холст||
+|35.| Соедините выход Mesh (M) компонента **Construct Mesh** с входом Mesh (M) компонента **Deconstruct Mesh** <br><br><blockquote> В то время как топология исходной mesh изменилась, нормаль векторы будут отличаться, поэтому нам необходимо использовать новый компонент **Deconstruct Mesh**, чтобы найти новые нормали.</blockquote||
+|36.| Зайдите в **Vector/Vector/Unit Z** - перетащите компонент **Unit X** на холст <br><br><blockquote> Мы будем использовать это как направление источника света. Вы можете использовать другие векторы, или ссылаться на линию из Rhino, чтобы сделать ее более динамичной</blockquote>||
+|37.| Зайдите в **Vector/Vector/Angle** - перетащите компонент **Angle** на холст|![IMAGE](images/1-6-3/angle.png)|
+|38.| Соедините выход Normals (N) компонента **Deconstruct Mesh** с входом A компонента **Angle**||
+|39.| Соедините выход компонента **Unit Z** с входом B компонента **Angle**||
+|40.| Зайдите в **Maths/Util/Pi** - перетащите компонент **Pi** на холст|![IMAGE](images/1-6-3/pi.png)|
+|41.| Соедините компонент **Pi** с входом Upper Limit (L1) компонента **Gradient**||
+|42.| Соедините выход Angle (A) компонента **Angle** с входом Parameter (t) компонента **Gradient**|||
 
 ![IMAGE](images/1-6-3/exercise-07.png)
 ![IMAGE](images/1-6-3/exercise-08.png)
->We used the white-to-black preset for our gradient. This sets the mesh color according to the angle between the normal and the light source, with normals that are directly facing the light source to black and the normals facing away from the source to white (To be a little more accurate, you can reverse the gradient by adjusting the handles). The actual process of rendering a mesh is much more complicated than this, obviously, but this is the basic process of creating light and shadow on a rendered object.
+>Мы использовали черно-белую настройку для этого градиента. Это устанавливает цвет mesh в соответствии с углом между нормалью и источником света, с нормалями, которые направлены прямо на источник черного света, и с нормалями, которые направлены от источника белого цвета (чтобы быть более точными, вы можете развернуть градиент, настраивая ползунки). Реальный процесс рендера mesh намного более сложный, чем этот, конечно же, но это базовый процесс создания света и тени на отрендеренном объекте.
 
 ---
 ![IMAGE](images/1-6-3/exercise-full.png)
