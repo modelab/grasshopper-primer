@@ -1,64 +1,64 @@
-### 1.6.4 Mesh Operations
+### 1.6.4 Операции с Mesh
 
-#####In the last section, we looked at the basic structure of a mesh. In this section, we will look at ways to manipulate mesh geometry.
+#####В последнем разделе мы рассмотрели основные структуры mesh. В этом разделе мы рассмотрим способы работы с геометрией mesh.
 
 ####1.6.4.1 Smooth
 
 ![IMAGE](images/1-6-4/smooth.png)
 
-Smoother meshes can sometimes be achieved by simply increasing the number of faces in a process called *subdivision*. This can often lead to extremely large datasets which take a long time to calculate, and requires additional add-ons to Grasshopper that are not built-in. In these situations, the **Smooth** component can be used as an alternative to make meshes less jagged or faceted, without increasing vertex and face count or changing the topology.  The *strength*, *number of iterations*, and displacement *limit* can all be used to adjust how much smoothing occurs.
+Сглаженные mesh иногда могут быть получены простым увеличением числа полигонов в процессе, который называется *subdivision* (дробление). Это часто может вести к невероятно огромным массивам данных, вычисление которых занимает длительное время. Также Grasshopper требуется установить дополнительные не-встроенные аддоны для этого. В этих ситуациях компонент **Smooth** может использоваться как альтернатива, чтобы сделать mesh менее шероховатой или граненной без увеличения числа вершин и полигонов или изменения топологии. *Прочность*, *число итераций*, и *ограничение* смещения  можно использовать для настройки того, как происходит сглаживание.
 
-Attaching a boolean value to the input N provides option to skip naked vertices. A vertex is naked if it is connected to a naked edge, meaning the vertex is on the boundary of an open mesh. By toggling this option, you maintain the exterior boundary of a mesh while smoothing the interior edges.
+При прикреплении булевого значения к входу N предоставляет возможность пропустить naked вершины. Вершина является naked, если она подключена к naked ребру, что означает, что вершина находится на границе открытой mesh. Переключая эту опцию вы поддерживаете внешнюю границу mesh в то время как вы глаживаете внешние ребра.
 
 ![IMAGE](images/1-6-4/03_smooth.png)
->1. Initial box mesh with 3 faces removed
-2. Smoothing after 2 iterations
-3. 6 iterations
-4. 25 iterations
-5. 50 iterations
+>1. Исходная форма mesh, 3 полигона удалены
+2. Сглаживание после 2 итераций
+3. 6 итераций
+4. 25 итераций
+5. 50 итераций
 
 ####1.6.4.2 Blur
 
 ![IMAGE](images/1-6-4/blur.png)
 
-The **Blur** component acts in a similar way as smooth, except it only affect the vertex colors. It can also be used to reduce the jagged appearance of colored meshes, although to a lesser extent since it does not change any geometry.
+Компонент **Blur** работает почти так же как компонент smooth, за исключением того, что он воздействует только на цвета вершин. Он также может использоваться для сокращения шероховатости цветной mesh, хотя и в меньшем объеме, т.к. он не меняет никакой геометрии.
 
 ![IMAGE](images/1-6-4/04_blur.png)
->1. Initial mesh
-2. Blur after 1 iterations
-3. 6 iterations
-4. 12 iterations
-5. 20 iterations
+>1. Исходная mesh
+2. Размытие после 1 итерации
+3. 6 итераций
+4. 12 итераций
+5. 20 итераций
 
 ####1.6.4.3 Triangulate
 
 ![IMAGE](images/1-6-4/triangulate.png)
 
-In order to ensure each face is planar, or to export a mesh to a different software that might not allow quad faces, it is sometimes necessary to triangulate a mesh. Using the **Triangulate** component, each quad face is replaced with two triangle faces. Grasshopper always uses the shortest diagonal of the face to create a new edge.
+Чтобы убедиться в том, что каждый полигон планарный или чтобы экспортировать mesh в другое ПО, которое не допускает четырехугольные полигоны, иногда необходимо триангулировать mesh. При использовании компонента **Triangulate** каждый четырехугольный полигон заменяется двумя треугольными полигонами. Grasshopper всегда использует самую короткую диагональ полигона, чтобы создать новое ребро.
 
 ![IMAGE](images/1-6-4/05_triangulate.png)
->1. Original quad mesh
-2. Added edges according to shortest distance across quads
-3. Triangulated resultant mesh
+>1. Исходная четырехугольная mesh
+2. Добавленные ребра в соответствии с самым коротким расстоянием через четырехугольники
+3. 3.	Триангулированная итоговая mesh
 
 ####1.6.4.4 Weld
 
 ![IMAGE](images/1-6-4/weld.png)
 
-In the last section, we noticed that a single vertex can be shared by adjacent faces and the normal for that vertex is calculated as the average of the adjacent faces, allowing a smoother visualization. However, it is sometimes desireable to have a sharp crease or seam where one face does not smoothly transition to the next by way of the vertex normals. For this situation it is necessary for each face to have its own vertex with its own normal. The list of vertices would contain at least two points that have the same coordinates, but different indices.
+В последнем разделе мы заметили, что одиночная вершина может разделяться смежными полигонами и нормаль для этой вершины рассчитывается как среднее смежных полигонов, выдавая сглаженную визуализацию. Тем не менее, иногда желательно иметь резкий сгиб или шов, где один полигон не переход гладко в следующий путем вершины нормали. Для этой ситуации необходимо, чтобы каждый полигон имел свою собственную вершину со своей собственной нормалью. Список вершин будет содержать по меньшей мере две точки, которые имеют одинаковые координаты, но разные индексы.
 
 ![IMAGE](images/1-6-4/06_simple-weld.png)
->1. Welded Faces - Both faces share vertices 1 and 2. The vertex normals at these vertices are the average of the face vertices.
-2. Unwelded Faces - Duplicate vertices are added to the list. The faces do not share any vertex indices. Vertices 1 and 6, and vertices 2 and 5 have identical coordinates, but are separate vertices. They each have their own vertex normal
+>1. Спаенные полигоны - оба полигона коллективно используют вершины 1 и 2. Нормали вершин в этих вершинах - среднее вершин полигонов.
+2. 2.	Неспаенные Полигоны - Дублирующиеся вершины добавлены к списку. Полигоны не используют коллективно ни одну из вершин. Вершины 1 и 6 и вершины 2 и 5 имеют одинаковые координаты, но являются разными вершинами. Они каждая имеют свою собственную нормаль вершины
 
-The process of taking two vertices that are in the same position and combining them into a single vertex is called *welding*, while *unwelding* takes a single vertex and splits it into multiple vertices.
+Процесс, когда берутся две вершины, находящиеся в одном и том же месте, и объединяются в одну вершину, называется *спайка*, в то время как *неспаивание* берет одну вершину и разделяет ее на множество вершин.
 
-The **Weld** component uses a threshold angle as input. Any two adjacent faces with an angle less than the threshold angle will be welded together, resulting in common vertices with a normal that is the average of the adjacent faces. **Unweld** works in the opposite manner, where adjancent faces with an angle greater than the given threshold will be unwelded, and their shared vertices will be duplicated.
+Компонент **Weld** использует предельные значения угла как ввод. Любые два смежных полигона с углом меньше, чем предельное значение угла будут спаиваться вместе, приводя к общим вершинам с нормалью, которая является средним смежных полигонов. Компонент **Unweld** работает противоположным образом, где смежные полигоны с углом больше, чем данное предельное значение, будут расспаиваться и их совместные вершины будут дублироваться.
 
 ![IMAGE](images/1-6-4/07_box-weld.png)
->1. The default Box Mesh has 726 vertices. The mesh is creased at the corners of the box, where vertices are doubled up.
-2. If the mesh is welded with an angle greater than 90 degrees, the resulting mesh faces are welded together, and the number of vertices has decreased to 602 while the number of faces has remained the same.
-3. Looking at the previewed geometry, you can also notice that the rendered welded mesh has smoothed corners. 
-4. Unlike the Smooth component which changes the mesh geometry, this mesh only appears smoother due to the vertex normal's role in rendering and shading. The actual positions of the vertices remain unchanged.
+>1. По умолчанию Box Mesh имеет 726 вершин. Mesh сгибается в углах коробки, где вершины сдваиваются.
+2. Если mesh спаивается с углом больше, чем 90 градусов, итоговые полигоны mesh спаиваются вместе, число вершин уменьшилось до 602, в то время как число полигонов осталось таким же.
+3. Если посмотреть на геометрию в предпросмотре, вы можете заметить, что отрендеренная спаенная mesh имеет сглаженные углы.
+4. В отличие от компонента Smooth, который меняет геометрию mesh, эта mesh выглядит более сглаженно, только из-за роли нормалей вершин в рендере и затенении. Реальное положение вершин остается без изменений.
 
-In the above image, we used the angle 91 degrees because we know that the sides of a square will be at 90 degree angles. To completely weld an entire mesh you should use an angle of 180 degrees.
+В изображении ниже, мы использовали угол 91 градус, потому что мы знаем, что стороны квадрата будут 90 градусов. Чтобы полностью спаить целую mesh, вам следует использовать угол 180 градусов.
