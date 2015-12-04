@@ -1,25 +1,25 @@
-### 1.6.6 Working with Mesh Geometry
+### 1.6.6 Работа с геометрией Mesh
 
-#####In this section, we will work through an exercise file for producing a complete mesh solid. By the end of this exercise, we will have a dynamic definition to produce custom vases that can be 3D printed.
+#####В этом разделе мы будем работать над производством твердого тела mesh. К концу этого упражнения у нас будет динамическое определение для производства индивидуальных ваз, которые можно напечатать на 3D принтере.
 
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
->Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+>Файлы упражнения, которые сопровождают этот раздел: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
->Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.6.6_working with meshes.gh)
+>Файлы упражнения, которые сопровождают этот раздел: [Download](../../appendix/A-2/gh-files/1.6.6_working with meshes.gh)
 {% endif %}
 
-Since this definition is somewhat longer than previous examples in this primer, we will first walk through the basic steps we will take:
+Так как это определение несколько больше, чем предыдущие упражнения в этом пособии, мы сначала разберем базовые этапы, через которые мы пройдем:
 
 ![IMAGE](images/1-6-6/01_vase-steps.png)
 
->1. Create a series of circles as a base cylinder
-2. Use a Graph Mapper component to define the profile of our vase
-3. Construct the topology of the mesh faces to produce a single mesh surface
-4. Cap the bottom of the mesh
-5. Introduce a twist to the vertical orientation for a more dynamic form
-6. Add corrugated ridges for a textured vase
-7. Offset the mesh surface to give the vase thickness
-8. Cap the top gap between the two surfaces to produce a closed solid
+>1. Создадим последовательность кругов в качестве базового цилиндра
+2. Используем компонент Graph Mapper, чтобы определить контур нашей вазы
+3. Создадим топологию полигонов mesh, чтобы  произвести единую поверхность mesh
+4. Закроем низ mesh
+5. Введем закручивание по вертикали для создания более динамической формы
+6. Добавим складчатые ребра для текстуры
+7. Сместим поверхность mesh, чтобы придать вазе толщину
+8. Закроем верхний зазор между двумя поверхностями, чтобы создать закрытое твердое тело
 
 
 <style>
@@ -32,71 +32,71 @@ thead {display: none}
 
 ||||
 |--|--|--|
-|01.| Start a new definition, type Ctrl-N (in Grasshopper)||
-|02.| **Params/Geometry/Point** - Drag and drop a **Point** container onto the canvas|![IMAGE](images/1-6-6/point.png)|
-|03.| Reference a point in Rhino by right-clicking the **Point** component and selecting "Set one point". This will serve as the origin point of our vase. <br><br><blockquote>You can create a point manually in Grasshopper by double-clicking the canvas to bring up the search window, then typing the coordinates of the point separated by commas, such as: '0,0,0' (without quotes)</blockquote>||
-|04.| **Params/Input/Number Slider** - Drag and drop a **Number Slider** component onto the canvas and set the following values: <ul>Name: Length<br>Lower Limit: 1<br>Upper Limit: 10</ul>||
-|05.| **Curve/Primitive/Line SDL** - Drag and drop a **Line SDL** component onto the canvas|![IMAGE](images/1-6-6/lineSDL.png)|
-|06.| Connect the **Point** component to the Start (S) input of the **Line SDL** component, and connect the **Number Slider** to the Length (L) input. <br><br><blockquote>The default Direction (D) value of **Line SDL** is the Unit Z vector, which is what we will use for this example</blockquote>||
-|07.| **Params/Input/Number Slider** - Drag and drop a **Number Slider** onto the canvas and set the following values: <ul>Name: V Count<br>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 100</ul>||
-|08.| **Curve/Division/Divide Curve** - Drag and drop a **Divide Curve** component onto the canvas|![IMAGE](images/1-6-6/divide-curve.png)|
-|09.| Connect the Line (L) output of the **Line SDL** component to the Curve (C) input of the **Divide Curve** component||
-|10.| Connect the **V Count** number slider to the Count (N) input of the **Divide Curve** component||
-|11.| **Curve/Primitive/Circle CNR** - Drag and drop a **Circle CNR** component onto the canvas|![IMAGE](images/1-6-6/circleCNR.png)|
-|12.| Connect the Points (P) output of the **Divide Curve** component to the Center (C) input of the **Circle CNR** component|||
+|01.| Запустите новое определение, набрав Ctrl+N (в Grasshopper)||
+|02.| Зайдите в **Params/Geometry/Point** - вытащите контейнер **Point** на холст|![IMAGE](images/1-6-6/point.png)|
+|03.| Кликните правой клавишей мыши в Rhino по компоненту **Point** и выберите Set one Point, чтобы привязать точку. Она будет служить исходной точкой нашей вазы. <br><br><blockquote>Вы можете создать точку вручную в Grasshopper, дважды кликнув по холсту, чтобы вызвать окно поиска, затем ввести координаты точки, разделенные запятыми, вот так: '0,0,0' (без кавычек) </blockquote>||
+|04.| Зайдите в **Params/Input/Number Slider** - вытащите компонент **Number Slider** на холст и установите следующие значения: <ul>Name: Length<br>Lower Limit: 1<br>Upper Limit: 10</ul>||
+|05.| Зайдите в **Curve/Primitive/Line SDL** - вытащите компонент **Line SDL** на холст|![IMAGE](images/1-6-6/lineSDL.png)|
+|06.| Соедините компонент **Point** с входом Start (S) компонента **Line SDL** и соедините слайдер **Number Slider** с входом Length (L). <br><br><blockquote>Значение Direction (D) компонента **Line SDL**, по умолчанию, Unit Z вектор, который мы будем использовать в этом упражнении.</blockquote>||
+|07.| Зайдите в **Params/Input/Number Slider** - вытащите компонент **Number Slider** на холст и установите следующие значения: <ul>Name: V Count<br>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 100</ul>||
+|08.| Зайдите в **Curve/Division/Divide Curve** - вытащите компонент **Divide Curve** на холст|![IMAGE](images/1-6-6/divide-curve.png)|
+|09.| Соедините выход Line (L) компонента **Line SDL** с входом Curve (C) компонента **Divide Curve**||
+|10.| Подключите слайдер **V Count** к входу Count (N) компонента **Divide Curve**||
+|11.| Зайдите в **Curve/Primitive/Circle CNR** - вытащите компонент **Circle CNR** на холст|![IMAGE](images/1-6-6/circleCNR.png)|
+|12.| Соедините выход Points (P) компонента **Divide Curve** с входом Center (C) компонента **Circle CNR**|||
 
 ![IMAGE](images/1-6-6/exercise-01.png)
->We have a series of circles stacked vertically. We will use these to make the profile of our vase. 
+>Теперь у нас есть последовательность вертикально расположенных кругов. Мы будем далее использовать их для создания контура нашей вазы.
 
 ![IMAGE](images/1-6-6/exercise-01a.png)
 
 
-Next, we will use a Graph Mapper to control the radii of the circles.
+Далее, мы будем использовать Graph Mapper, чтобы контролировать радиус кругов.
 
 ||||
 |--|--|--|
-|13.| **Sets/Sequence/Range** - Drag and drop a **Range** component onto the canvas|![IMAGE](images/1-6-6/range.png)|
-|14.| Connect the **V Count** number slider to the Steps (N) input of the **Range** component||
-|15.| **Params/Input/Graph Mapper** - Drag and drop a **Graph Mapper** component onto the canvas||
-|16.| Right-click the **Graph Mapper**, click 'Graph Types' from the menu and select 'Bezier'||
-|17.| **Params/Input/Number Slider** - Drag and drop a **Number Slider** component onto the canvas and set the following values: <ul>Name: Width<br>Lower Limit: 0<br>Upper Limit: 10</ul>||
-|18.| **Maths/Operators/Multiplication** - Drag and drop a **Multiplication** component onto the canvas|![IMAGE](images/1-6-6/multiplication.png)|
-|19.| Connect the **Graph Mapper** and the **Width** number slider to the A and B inputs of the **Multiplication** component||
-|20.| Connect the Result (R) output of the **Multiplication** component to the Radius (R) input of the **Circle CNR** component|||
+|13.| Зайдите в **Sets/Sequence/Range** - вытащите компонент **Range** на холст|![IMAGE](images/1-6-6/range.png)|
+|14.| Подключите слайдер **V Count** к входу Steps (N) компонента **Range**||
+|15.| Зайдите в **Params/Input/Graph Mapper** - вытащите компонент **Graph Mapper** на холст||
+|16.| Кликните правой клавишей мыши по **Graph Mapper**, кликните по 'Graph Types' в меню и выберите 'Bezier'||
+|17.| Зайдите в **Params/Input/Number Slider** - вытащите компонент **Number Slider** на холст и установите следующие значения: <ul>Name: Width<br>Lower Limit: 0<br>Upper Limit: 10</ul>||
+|18.| Зайдите в **Maths/Operators/Multiplication** - перетащите компонент **Multiplication** на холст|![IMAGE](images/1-6-6/multiplication.png)|
+|19.| Соедините **Graph Mapper** и слайдер **Width** с входами A и B компонента **Multiplication**||
+|20.| Соедините выход Result (R) компонента **Multiplication** с входом Radius (R) компонента **Circle CNR**|||
 
 ![IMAGE](images/1-6-6/exercise-02.png)
->Use the handles on the **Graph Mapper** to adjust the profile of the circles. 
+>Используйте ползунки на **Graph Mapper** для настройки контура кругов. 
 
->NOTE: It is important to make sure the start point of the bezier curve on the **Graph Mapper** is not at zero. By lifting the start point to a number greater than zero, we produce a flat base for our vase.
+>ПРИМЕЧАНИЕ: Важно убедиться, что начальная точка кривой Безье (Bezier curve) на **Graph Mapper**не равна нулю. Для этого мы поднимаем начальную точку до числа больше нуля и, таким образом, создаем плоскую основу для нашей вазы.
 
 ![IMAGE](images/1-6-6/exercise-02a.png)
 
 
-We now have a profile for our vase. Next, we will construct a mesh surface. This will require creating mesh vertices and defining mesh faces according to the index of those vertices.
+Теперь у нас есть контур для нашей вазы. Далее, мы построим поверхность mesh. Это потребует создания вершин mesh и определения полигонов mesh в соответствии с индексами тех вершин.
 
 ||||
 |--|--|--|
-|21.| **Params/Input/Number Slider** - Drag and drop a **Number Slider** component onto the canvas and set the following values: <ul>Name: U Count<br>Rounding: Even<br>Lower Limit: 2<br>Upper Limit: 100</ul>||
-|22.| **Curve/Division/Divide Curve** - Drag and drop a **Divide Curve** component onto the canvas||
-|23.| Connect the Circle (C) output of the **Circle CNR** component to the the Curve (C) input of the **Divide Curve** component, and connect the **U Count** number slider to the Count (N) input <br><br><blockquote>The Points(P) output of this component are the vertices we will use for our mesh</blockquote>||
-|24.| **Sets/Sequence/Series** - Drag and drop two **Series** components onto the canvas|![IMAGE](images/1-6-6/series.png)|
-|25.| Connect the **U Count** number slider to the Step (N) input of the first **Series** component, and connect the **V Count** number slider to the Count (C) input of the same **Series** component||
-|26.| Connect the Series (S) output of the first **Series** component to the Start (S) input of the second **Series** component, and connect the **U Count** number slider to the Count (C) input||
-|27.| **Sets/List/Shift List** - Drag and drop a **Shift List** component onto the canvas|![IMAGE](images/1-6-6/shift-list.png)|
-|28.| Connect the output of the second **Series** component to the List (L) input of the **Shift List** component||
-|29.| **Maths/Operators/Addition** - Drag and drop two **Addition** components onto the canvas|![IMAGE](images/1-6-6/addition.png)|
-|30.| Connect the output of the second **Series** component and the **U Count** number slider to the A and B inputs of the first **Addition** component||
-|31.| Connect the output of the **Shift List** component and the **U Count** number slider to the A and B inputs of the second **Addition** component||
-|32.| **Mesh/Primitive/Mesh Quad** - Drag and drop a **Mesh Quad** component onto the canvas|![IMAGE](images/1-6-6/mesh-quad.png)|
-|33.| Connect the following to the inputs of the **Mesh Quad** component: <ul>A - Second **Series** component<br>B - **Shift List** <br> C - First **Addition** component <br>D - Second **Addition** component</ul><br><blockquote>We have just create the initial topology for our mesh. These faces will be combined with the vertices. The order of these connections is crucial, so go ahead and double check all the connections at this point!</blockquote>||
-|34.| **Sets/Tree/Flatten** - Drag and drop a **Flatten Tree** component onto tha canvas|![IMAGE](images/1-6-6/flatten.png)|
-|35.| Connect the Points (P) output of the **Divide Curve** component to the Tree (T) input of the **Flatten Tree** Component||
-|36.| **Mesh/Primitive/Construct Mesh** - Drag and drop a **Construct Mesh** component onto the canvas|![IMAGE](images/1-6-6/construct-mesh.png)|
-|37.| Connect the Tree (T) output of the **Flatten Tree** component to the Vertices (V) input of the **Construct Mesh** component||
-|38.| Connect the Face (F) output of the **Mesh Quad** component to the Faces (F) input of the **Construct Mesh** component. Right-click the F (Faces) input and select 'Flatten'|||
+|21.| Зайдите в **Params/Input/Number Slider** - вытащите компонент **Number Slider** на холст и установите следующие значения: <ul>Name: U Count<br>Rounding: Even<br>Lower Limit: 2<br>Upper Limit: 100</ul>||
+|22.| Зайдите в **Curve/Division/Divide Curve** - вытащите компонент **Divide Curve** на холст||
+|23.| Соедините выход Circle (C) компонента **Circle CNR** с входом Curve (C) компонента **Divide Curve**, соедините слайдер **U Count** с входом Count (N) <br><br><blockquote>Выход Points(P) этого компонента - вершины, которые мы будем использовать для нашей mesh</blockquote>||
+|24.| Зайдите в **Sets/Sequence/Series** - вытащите два компонента **Series** на холст|![IMAGE](images/1-6-6/series.png)|
+|25.| Соедините слайдер **U Count** с входом Step (N) первого компонента **Series**, и соедините слайдер **V Count** с входом Count (C) того же самого компонента **Series**||
+|26.| Соедините выход Series (S) первого компонента **Series** с входом Start (S) второго компонента **Series**, и соедините слайдер **U Count** с входом Count (C)||
+|27.| Зайдите в **Sets/List/Shift List** - вытащите компонент **Shift List** на холст|![IMAGE](images/1-6-6/shift-list.png)|
+|28.| Соедините выход второго компонента **Series** с входом List (L) компонента **Shift List**||
+|29.| Зайдите в **Maths/Operators/Addition** - перетащите два компонента **Addition** на холст|![IMAGE](images/1-6-6/addition.png)|
+|30.| Соедините выход второго компонента **Series** и слайдер **U Count** с входами A и B первого компонента **Addition**||
+|31.| Соедините выход компонента **Shift List** и слайдер **U Count** с входами A и B второго компонента **Addition**||
+|32.| **Mesh/Primitive/Mesh Quad** - перетащите компонент **Mesh Quad** на холст|![IMAGE](images/1-6-6/mesh-quad.png)|
+|33.| Соедините следующее с входами компонента **Mesh Quad**: <ul>A - Второй компонент **Series**<br>B - **Shift List** <br> C - Первый компонент **Addition** <br>D - Второй компонент **Addition** </ul><br><blockquote>Мы только что создали начальную топологию нашей mesh. Эти полигоны будут комбинироваться с вершинами. Порядок этих соединений критичен, поэтому далее дважды проверяйте все соединения в этой точке!</blockquote>||
+|34.| Зайдите в **Sets/Tree/Flatten** - вытащите компонент **Flatten Tree** на холст|![IMAGE](images/1-6-6/flatten.png)|
+|35.| Соедините выход Points (P) компонента **Divide Curve** с входом Tree (T) компонента **Flatten Tree**||
+|36.| **Mesh/Primitive/Construct Mesh** - перетащите компонент **Construct Mesh** на холст|![IMAGE](images/1-6-6/construct-mesh.png)|
+|37.| Соедините выход Tree (T) компонента **Flatten Tree** с входом Vertices (V) компонента **Construct Mesh**||
+|38.| Соедините выход Face (F) компонента **Mesh Quad** с входом Faces (F) компонента **Construct Mesh**. Кликните правой клавишей мыши по входу F (Faces) и выберите 'Flatten'|||
 
 ![IMAGE](images/1-6-6/exercise-03.png)
->We now have a mesh surface for our vase.
+>Теперь у нас есть поверхность mesh для нашей вазы.
 
 ![IMAGE](images/1-6-6/exercise-03a.png)
  
