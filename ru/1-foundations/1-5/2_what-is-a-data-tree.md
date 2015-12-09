@@ -1,51 +1,50 @@
-### 1.5.2. What is a Data Tree?
+### 1.5.2. Что такое Дерево Данных?
 
-#####A Data Tree is a hierarchical structure for storing data in nested lists. Data trees are created when a grasshopper component is structured to take in a data set and output multiple sets of data. Grasshopper handles this new data by nesting it in the form of sub-lists. These nested sub-lists work in the same way as folder structures on your computer in that accessing indexed items require moving through paths that are informed by their generation of parent lists and their own sub-index.
+#####Дерево данных - это иерархическая структура для хранения данных, состоящая из списков. Деревья данных создаются, когда компонент grasshopper структурируется, чтобы принять набор данных и вывести множественные наборы данных. Grasshopper работает с этими новыми данными, размещая их в под-списки. Эти под-списки работают таким же образом, как и структуры папок на вашем компьютере, а именно, чтобы получить доступ к индексированным элементам требуется пройти по путям, которые проинформированы своим поколением родительских списков и их собственными под-индексами.
 
-It’s possible to have multiple lists of data inside a single parameter. Since multiple lists are available, there needs to be a way to identify each individual list. A Data Tree is essentially a list of lists, or sometimes a list of lists of lists (and so on).
+Это становится возможным иметь множественные списки данных внутри одного параметра. Как только становятся доступны множественные списки, возникает необходимость в способе распознавания каждого отдельного списка. Дерево данных, по сути, список списков или, иногда, список списков списков (и т.д.).
 
 ![IMAGE](images/1-5-2/1-5-2_001-data-tree.png)
 
-In the image above, there is a single master branch (you could call this a trunk, but since it’s possible to have multiple master branches, it might be a bit of a misnomer) at path {0}. This path contains no data, but does have 6 sub-branches. Each of these sub-branches inherit the index of the parent branch {0} and add their own sub-index (0, 1, 2, 3, 4, and 5 respectively). It would be wrong to call this an “index”, because that implies just a single number. It is probably better to refer to this as a “path”, since it resembles a folder-structure on the disk. At each of these sub-branches, we encounter some data. Each data item is thus part of
-one (and only one) branch in the tree, and each item has an index that specifies its location within the branch. Each branch has a path that specifies its location within the tree.
+В изображении выше, вы видите одну главную ветку (можете называть ее стволом, но так как тут возможно наличие множества главных веток, то этот термин может быть неточным) пути {0}. Этот путь не содержит данных, но имеет 6 под-веток. Каждая из этих под-веток наследует индекс родительской ветки {0} и добавляет свой собственный под-индекс (0, 1, 2, 3, 4 и 5, соответственно). Будет неправильно называть это число "индекс", потому что это подразумевает только одно число.
+Возможно, лучше называть это "путь", так как он похож на структуру папок на диске. У каждой из этих под-веток мы встречаем какие-либо данные. Каждый элемент данных, таким образом, часть одной (и только одной) ветки в дереве, каждый элемент имеет индекс, который указывает его расположение внутри ветки. У каждой ветки есть свой путь, который указывает ее расположение внутри дерева.
 
-The image below illustrates the difference between a list and a data tree. On the left, an array of four columns of six points each is all contained in one list. The first column numbered 0-5, the second 6-11, and so on. On the right is the same array of points contained in a data tree. The data tree is a list of four columns, and each column is a list of six points. The index of each point is (column number, row number). This is a much more useful way of organizing this data, because you can easily access and operate on all the points in a given row or column, delete every second row of points, connect alternating points, etc.
+Изображение ниже иллюстрирует разницу между списком и деревом данных. Слева, массив из четырех колонок по 6 точек каждая - это все, что содержится в одном списке. Первая колонка пронумерована 0-5, вторая 6-11 и т.д. Справа расположен тот же самый массив точек, содержащихся в дереве данных. Дерево данных - это список из четырех колонок, где каждая колонка - это список из шести точек. Индекс каждой точки это (номер колонки, номер ряда). Это намного более полезный способ организации этих данных, потому что вы можете легко получить доступ и работать со всеми точками в данном ряду или колонке, удалить каждый второй ряд точек, соединить чередующиеся точки и прочее.
 
 ![IMAGE](images/1-5-2/1-5-2_002-list-data-tree.png)
 
-####1.5.2.1. DATA TREE VISUALIZATION
+####1.5.2.1. ВИЗУАЛИЗАЦИЯ ДЕРЕВА ДАННЫХ
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
->Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+>Файлы упражнения, которые сопровождают этот раздел: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
->Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.5.2.1_data tree visualization.gh)
+>Файлы упражнения, которые сопровождают этот раздел: [Download](../../appendix/A-2/gh-files/1.5.2.1_data tree visualization.gh)
 {% endif %}
 
-Due to their complexity, Data Trees can be difficult to understand. Grasshopper has several tools to help visualize and understand the data stored in a tree.
+Из-за их комплексности понять, как работают деревья данных, может быть затруднительно. У Grasshopper есть несколько инструментов для визуализации и понимания данных, хранящихся в дереве.
 
 **The Param Viewer**
-The Param Viewer (Params/Util/Param Viewer) allows you to visualize data in text form and as a tree. Connect any output containing data to the input of the Param Viewer. To show the tree, right-click the Param Viewer and select “draw tree.” In this example, the Param Viewer is connected to the Points (P) output of a Divide Curve component that divided 10 curves into 10 segements each. The ten branches correspond to the ten curves, each containing a list of 11 points which are the division points of the curve.
+Param Viewer (Params/Util/Param Viewer) позволяет визуализировать данные в текстовом формате и в виде дерева. Соедините любой выход, содержащий данные, с входом Param Viewer. Чтобы данные отобразились в виде дерева, кликните правой клавишей мыши по Param Viewer и выберите "draw tree". В этом примере, Param Viewer соединен с выходом Points (P) компонента Divide Curve, который разделил 10 кривых на 10 сегментов каждую кривую. Десять веток соответствуют десяти кривым, каждая содержит список из 11 точек, которые являются точками деления кривой.
 
 ![IMAGE](images/1-5-2/1-5-2_003-param-viewer.png)
->1. Path of each list
-2. Number of items in each list
-3. Select "Draw Tree" to display the data tree
+>1. Путь каждого списка
+2. Число элементов в каждом списке
+3. Выберите "Draw Tree" для отображения дерева данных
 
-If we connect a panel to the same output, it displays ten lists of 11 items each. You can see that each item is a point defined by three coordinates. The path is displayed at the top of each list, and corresponds to the paths listed in the Param Viewer.
+Если подсоединить панель к тому же самому выходу, то она отобразит десять списков из 11 элементов каждый. Вы также можете заметить, что каждый элемент является точкой, определяемой тремя координатами. Путь отображается поверх каждого списка и соответствует путям, перечисленным в Param Viewer
 
 ![IMAGE](images/1-5-2/1-5-2_004-panel-display.png)
->1. Path
-2. List of 11 items
+>1. Путь
+2. Список из 11 элементов
 
 **Tree Statistics**
-The Tree Statistics component (Sets/Tree/Tree Statistics) Returns some
-statistics of the Data Tree including:
-* P - All the paths of the tree
-* L - The length of each branch in the tree
-* C - Number of paths and branches in the tree
+Компонент Tree Statistics (Sets/Tree/Tree Statistics) выдает обратно некоторую статистику Дерева Данных, включая:
+* P - все пути дерева
+* L - длина каждой ветки дерева
+* C - число путей и веток у дерева
 
-If we connect the Points output of the same Divide Curve component, we can display the paths, lengths, and the count in panels. This component is helpful because it separates the statistics into three outputs, allowing you to view only the one that is relevant.
+Если соединить выход Points того же самого компонента Divide Curve, мы сможем показать все пути, длины и число панелей. Этот компонент полезен тем, что он разделяет статистику на три выхода, позволяя просматривать только один, которые необходим.
 
 ![IMAGE](images/1-5-2/1-5-2_005-tree-stats.png)
 
 
-Both the Param Viewer and the Tree Statistics component are helpful for visualizing changes in the structure of the Data Tree. In the next section, we will look at some operations that can be performed to change this structure.
+Оба компонента Param Viewer и Tree Statistics полезны для визуализации изменений в структуре Дерева данных. В следующем разделе, мы рассмотрим некоторые операции, которые могут быть выполнены, чтобы изменить эту структуру.

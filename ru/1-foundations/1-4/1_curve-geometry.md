@@ -1,70 +1,69 @@
-### 1.4.1. CURVE GEOMETRY
+### 1.4.1. ГЕОМЕТРИЯ КРИВОЙ
 
-#####NURBS (non-uniform rational B-splines) are mathematical representations that can accurately model any shape from a simple 2D line, circle, arc, or box to the most complex 3D free-form organic surface or solid. Because of their flexibility and accuracy, NURBS models can be used in any process from illustration and animation to manufacturing.
+#####NURBS (неоднородные рациональные Б-сплайны) - математическое представление, которое может точно смоделировать любую форму из простой 2D линии, круга, арки или коробки в самую сложную 3D произвольной формы органическую поверхность или тело. Благодаря своей гибкости и точности, NURBS модели могут использоваться в любом процессе от иллюстрации и анимации до производства.
 
-Since curves are geometric objects, they possess a number of properties or characteristics which can be used to describe or analyze them. For example, every curve has a starting coordinate and every curve has an ending coordinate. When the distance between these two coordinates is zero, the curve is closed. Also, every curve has a number of control-points, if all these points are located in the same plane, the curve as a whole is planar. Some properties apply to the curve as a whole, while others only apply to specific points on the curve. For
-example, planarity is a global property while tangent vectors are a local property. Also, some properties only apply to some curve types. So far we’ve discussed some of Grasshopper’s Primitive Curve Components such as: lines, circles, ellipses, and arcs.
+Так как кривая является геометрическим объектом, она обладает некоторым числом характеристик, которые можно использовать для ее описания или анализа. Например, каждая кривая имеет начальную координату, и каждая кривая имеет конечную координату. Когда расстояние между этими двумя координатами равно нулю, кривая замкнута. Также, у каждой кривой есть некое число контрольных точек, если все эти точки расположены на одной плоскости, кривая, в целом, будет планарной. Некоторые характеристики применимы ко всей кривой, в целом, в то время как другие применимы к особым точкам на кривой. Например, планарность - это универсальная характеристика, в то время как тангенс векторы - это узкая характеристика. Также, некоторые характеристики применимы только к некоторым типам кривых. На данный момент мы обсудили некоторые компоненты Grasshopper из раздела Primitive Curve, такие как линии, круги, эллипсы и арки.
 
 ![IMAGE](images/1-4-1/1-4-1_001-curve-types.png)
->1. Line
-2. Polyline
-3. Circle
-4. Ellipse
-5. Arc
-6. NURBS Curve
-7. Polycurve
+>1. Линия
+2. Полилиния
+3. Круг
+4. Эллипс
+5. Арка
+6. NURBS кривая
+7. Поликривая
 
 ![IMAGE](images/1-4-1/1-4-1_002-bezier-curve.png)
->1. End Point
-2. Edit Point
-3. Control Point
+>1. Конечная точка
+2. Точка редактирования
+3. Контрольная точка
 
-####1.4.1.1. NURBS CURVES
-**Degree:** The degree is a positive whole number. This number is usually 1, 2, 3 or 5, but can be any positive whole number. The degree of the curve determines the range of influence the control points have on a curve; where the higher the degree, the larger the range. NURBS lines and polylines are usually degree 1, NURBS circles are degree 2, and most free-form curves are degree 3 or 5.
+####1.4.1.1. КРИВЫЕ NURBS
+**Порядок:** Порядок это положительное целое число. Обычно это число 1, 2, 3 или 5, но это может быть любое положительное целое число. Порядок кривой определяет степень влияния контрольных точек на кривую, где чем выше порядок, тем больше степень влияния. NURBS линии и полилинии обычно имеют порядок 1, NURBS круги - порядок 2, большая часть кривых произвольной формы порядок 3 или 5.
 
-**Control Points:** The control points are a list of at least degree+1 points. One of the easiest ways to change the shape of a NURBS curve is to move its control points.
+**Контрольные точки:** Контрольные точки - это списки точек, у которых порядок+1, по меньшей мере. Один из самых легких способов изменить форму NURBS кривой - переместить контрольные точки.
 
-**Weight:** Control points have an associated number called a weight . Weights are usually positive numbers. When a curve’s control points all have the same weight (usually 1), the curve is called non-rational, otherwise the curve is called rational. Most NURBS curves are non-rational. A few NURBS curves, such as circles and ellipses, are always rational.
+**Вес:** Контрольные точки имеют соответствующие им числа, называемые весом. Вес обычно положительное число. Когда контрольные точки кривой имеют одинаковый вес (обычно 1), кривая называется нерациональной, в противном случае, кривая называется рациональной. Большинство NURBS кривых являются нерациональными. Несколько NURBS кривых, таких как круги и эллипсы, всегда являются рациональными.
 
-**Knots:** Knots are a list of (degree+N-1) numbers, where N is the number of control points.
+**Узлы:** Узлы - это список чисел (порядок+N-1), где N - число контрольных точек.
 
-**Edit Points:** Points on the curve evaluated at knot averages. Edit points are like control points except they are always located on the curve and moving one edit point generally changes the shape of the entire curve (moving one control point only changes the shape of the curve locally). Edit points are useful when you need a point on the interior of a curve to pass exactly through a certain location.
+**Точки редактирования:** Точки на кривой определяются по средней величине узла. Точки редактирования похожи на контрольные точки, за исключением того, что они всегда располагаются на кривой и при перемещении одной точки редактирования, будет меняться форма всей кривой (перемещая одну контрольную точку, форма кривой будет меняться локально). Точки редактирования полезны, когда вам нужна точка на кривой, чтобы она проходила точно через определенный участок.
 
-NURBS curve knots as a result of varying degree:
+NNURBS кривые образуют узел как результат различного порядка:
 
 ![IMAGE](images/1-4-1/1-4-1_003-degree-one.png)
->A D<sup>1</sup> NURBS curve behaves the same as a polyline. A D<sup>1</sup> curve has a knot for every control point.
+>A D<sup>1</sup> кривая ведет себя также как полилиния. A D<sup>1</sup> кривой есть узел для каждой контрольной точки.
 
 ![IMAGE](images/1-4-1/1-4-1_004-degree-two.png)
->D<sup>2</sup> NURBS curves are typically only used to approximate arcs and circles. The spline intersects with the control polygon halfway each segment.
+>D<sup>2</sup> NURBS кривые обычно используются только для аппроксимации арок и кругов. Сплайн пересекается с контрольным полигоном наполовину каждого сегмента.
 
 ![IMAGE](images/1-4-1/1-4-1_005-degree-three.png)
->D<sup>3</sup> is the most common type of NURBS curve and is the default in Rhino. You are probably very familiar with the visual progression of the spline, even though the knots appear to be in odd locations.
+>D<sup>3</sup> это самый распространенный тип NURBS кривой и он включен по умолчанию в Rhino. Возможно вы знакомы с визуальной прогрессией сплайна, даже хотя узлы и появляются в странных местах.
 
-####1.4.1.2. GRASSHOPPER SPLINE COMPONENTS
+####1.4.1.2. КОМПОНЕНТЫ СПЛАЙН GRASSHOPPER
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
->Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+>Файлы упражнения, которые сопровождают этот раздел: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
->Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.4.1.2_grasshopper spline components.gh)
+>Файлы упражнения, которые сопровождают этот раздел: [Download](../../appendix/A-2/gh-files/1.4.1.2_grasshopper spline components.gh)
 {% endif %}
 
-Grasshopper has a set of tools to express Rhino’s more advanced curve types like nurbs curves and poly curves. These tools can be found in the Curve/Splines tab.
+Grasshopper обладает набором инструментов для передачи более продвинутых типов кривых Rhino, таких как NURBS кривые и поликривые. Эти инструменты можно найти во вкладке Curve/Splines.
 
-**Nurbs Curve** (Curve/Spline/Nurbs curve): The Nurbs Curve component
-constructs a NURBS curve from control points. The V input defines these points, which can be described implicitly by selecting points from within the Rhino scene, or by inheriting volatile data from other components. The Nurbs Curve-D input sets the degree of the curve.
+**Nurbs Curve** (Curve/Spline/Nurbs curve): Компонент Nurbs Curve
+создает NURBS кривую из контрольных точек. Вход V определяет эти точки, которые могут быть описаны косвенно путем выбора точек из Rhino или путем наследования изменяемых данных из других компонентов. Вход D компонента Nurbs Curve устанавливает порядок кривой.
 
 ![IMAGE](images/1-4-1/1-4-1_006-nurbs-curve.png)
 
-**Interpolate Curve** (Curve/Spline/Interpolate): Interpolated curves behave slightly differently than NURBS curves. The V-input is for the component is similar to the NURBS component, in that it asks for a specific set of points to create the curve. However, with the Interpolated Curve method, the resultant curve will actually pass through these points, regardless of the curve degree. In the NURBS curve component, we could only achieve this when the curve degree was set to one. Also, like the NURBS curve component, the D input defines the
-degree of the resultant curve. However, with this method, it only takes odd numbered values for the degree input. Again, the P-input determines if the curve is Periodic. You will begin to see a bit of a pattern in the outputs for many of the curve components, in that, the C, L, and D outputs generally specify the resultant curve, the length, and the curve domain respectively.
+**Interpolate Curve** (Curve/Spline/Interpolate): Интерполированные кривые ведут себя немного по-другому, чем NURBS кривые. Вход V для компонента, похожего на компонент NURBS в том, что он требует особый набор точек для создания кривой. Тем не менее, при применении метода интерполированной кривой, полученная кривая будет проходить через эти точки, вне зависимости от порядка кривой. В компоненте NURBS кривой, мы можем добиться этого, только когда порядок кривой был установлен на 1. Также, как и компонент NURBS кривая, вход D определяет порядок итоговой кривой.
+Тем не менее, при применении этого метода, используются только нечетные числовые значения для входа порядка. Снова, вход P определяет, является ли кривая периодической (Periodic). Вы начнете видеть некий паттерн в выходах для многих компонентов кривой, в том плане, что выходы C, L и D указывают, в основном, итоговую кривую, длину и диапазон кривой соответственно.
+
 
 ![IMAGE](images/1-4-1/1-4-1_007-interpolate-curve.png)
 
-**Kinky Curve** (Curve/Spline/Kinky Curve): The kinky curve component allows you the ability to control a specific angle threshold, A, where the curve will transition from a kinked line, to a smooth, interpolated curve. It should be noted that the A-input requires an input in radians.
+**Kinky Curve** (Curve/Spline/Kinky Curve): Компонент kinky curve позволяет вам контролировать особые предельные значения угла, А, где кривая осуществит переход от узловатой линии к сглаженной, интерполированной кривой. Следует отметить, что вход А требует ввода в радианах.
 
 ![IMAGE](images/1-4-1/1-4-1_008-kinky-curve.png)
 
-**Polyline** (Curve/Spline/Polyline): A polyline is a collection of line segments connecting two or more points, the resultant line will always pass through its control points; similar to an Interpolated Curve. Like the curve types mentioned above, the V-input of the Polyline component specifies a set of points that will define the boundaries of each line segment that make up the polyline. The C-input of the component defines whether or not the polyline is an open or closed curve. If the first point location does not coincide with the last point location, a line segment will be created to close the loop. The output for the Polyline component is different than that of the previous examples, in that the
-only resultant is the curve itself.
+**Polyline** (Curve/Spline/Polyline): Полилиния - это набор сегментов линии, соединяющих две или более точек, результирующая линия будет всегда проходить через ее контрольные точки, что схоже с Interpolated Curve. Как вышеуказанные типы кривых, вход V компонента Polyline указывают набор точек, которые будут определять границы каждого сегмента линии, составляющей полилинию. Вход C компонента определяет является ли полилиния открытой или закрытой кривой. Если расположение первой точки не совпадает с расположением последней точки, будет создаваться сегмент линии для закрытия loop. Выход компонента Polyline отличается от предыдущих примеров в том, что в результате получается только сама кривая.
 
 ![IMAGE](images/1-4-1/1-4-1_009-polyline.png)

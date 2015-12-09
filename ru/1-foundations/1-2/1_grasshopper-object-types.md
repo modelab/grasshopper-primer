@@ -1,62 +1,58 @@
-### 1.2.1. GRASSHOPPER OBJECT TYPES
+### 1.2.1. ТИПЫ ОБЪЕКТОВ GRASSHOPPER
 
-#####Grasshopper consists of two primary types of user objects: parameters andcomponents. Parameters store data, whereas components perform actions that resultin data. The most basic way to understand Grasshopper is to remember that we willuse data to define the inputs of actions (which will result in new data that we cancontinue to use).
+#####Grasshopper состоит из двух основных типов пользовательских объектов: параметров и компонентов. Параметры хранят данные, а компоненты выполняют действия, которые превращаются в данные. Самый основной способ понять Grasshopper - это помнить о том, что мы будем использовать данные для определения вводных параметров действий (что в итоге превратится в новые данные, которые мы сможем продолжить использовать).
 
-####1.2.1.1. PARAMETERS
-Parameters store the data - numbers, colors, geometry, and more - that we send through the graph in our definition. Parameters are container objects which are usually shown as small rectangular boxes with a single input and single output. We also know that these are parameters because of the shape of their icon. All parameter objects have a hexagonal border around their icon.
+####1.2.1.1. ПАРАМЕТРЫ
+Параметры хранят данные - числа, цвета, геометрию и т.д - которые мы передаем посредством схемы в нашем определении. Параметры - это такие контейнеры, которые обычно выглядят как небольшие прямоугольники с одним входом и одним выходом. Мы также понимаем, что это параметры, исходя из формы их иконки. У всех параметров вокруг их иконки есть шестиугольная рамка.
 
-Geometry parameters can reference geometry from Rhino, or inherit geometry from other components. The point and curve objects are both geometry parameters.
+Геометрические параметры могут ссылаться на геометрию из Rhino или наследовать геометрию от других компонентов. Точка и кривая - это геометрические параметры.
 
 ![IMAGE](images/1-2-1/1-2-1_001-geometry-parameters.png)
 
-Input parameters are dynamic interface objects that allow you to interact with your definition. The number slider and the graph mapper are both input parameters.
+Параметры ввода - это динамические объекты интерфейса, которые позволяют вам взаимодействовать с вашим определением. Number slider (числовой слайдер) и graph mapper оба являются параметрами ввода.
 
 ![IMAGE](images/1-2-1/1-2-1_002-input-parameters.png)
 
-####1.2.1.2. COMPONENTS
-Components perform actions based on the inputs they receive. There are manytypes of components for different tasks.
+####1.2.1.2. КОМПОНЕНТЫ
+Компоненты выполняют действия, основываясь на вводных параметрах, которые они получили. Имеется много типов компонентов для различных задач.
 
 ![IMAGE](images/1-2-1/1-2-1_003-components.png)
 
->1. The multiplication component is an operator that calculates the product of twonumbers.
-2. The Divide component operates on geometry, dividing a curve into equal
-segments.
-3. The Circle CNR component constructs a circle geometry from input data; a center point, normal vector, and radius.
-4. The Loft component constructs a surface by lofting curves.
+>1. Компонент multiplication- это оператор, который просчитывает произведение двух чисел.
+2. Компонент Divide работает с геометрией, разделяя кривую на равные сегменты.
+3. Компонент Circle CNR создает геометрию круга из вводных данных: точка начала координат, вектор нормали и радиус.
+4. Компонент Loft создает поверхность посредством кривых.
 
-####1.2.1.3. OBJECT COLORS
-We can glean some information about the state of each object based on their color. Let’s take a look at Grasshopper’s default color coding system.
+####1.2.1.3. ЦВЕТА ОБЪЕКТОВ
+Мы можем почерпнуть информацию о состоянии каждого объекта, основываясь на их цветах. Давайте посмотрим на цветовую кодовую систему Grasshopper по умолчанию.
 
-A parameter which contains neither warnings nor errors is shown in light
-gray. This color object indicates that everything is working properly with this
-parameter.
+Параметр, который не содержит ни предупреждений ни ошибок, светло-серого цвета.
+Этот цвет объекта показывает, что этот параметр работает должным образом.
 
-A parameter which contains warnings is displayed as an orange box. Any object which fails to collect data is considered suspect in a Grasshopper definition since it is not contributing to the solution.. Therefore, all parameters (when freshly added) are orange, to indicate they do not contain any data and have thus no functional effect on the outcome of the solution. By default, parameters and components that are orange also have a small balloon at the upper right hand corner of the object. If you hover your mouse over this balloon, it will reveal information about why the component is giving you a warning. Once a parameter inherits or defines data, it will become grey and the baloon will disappear.
+Параметр, который содержит предупреждение, отображается оранжевым цветом. Любой объект, который не смог собрать данные, считается подозрительным в определении Grasshopper из-за того, что он не работает на достижение решения. Таким образом, все параметры (недавно добавленные) - оранжевого цвета, чтобы отобразить, что они не содержат каких-либо данных и, поэтому, не несут функционального влияния на решение. По умолчанию, параметры и компоненты оранжевого цвета также имеют маленький шарик в верхнем правом углу объекта. Если вы наведете курсор мышки на этот шарик, он отобразит информацию о том, почему этот компонент содержит предупреждение. Как только параметр унаследует или приобретет данные, он станет серого цвета и шарик сверху исчезнет.
 
 ![IMAGE](images/1-2-1/1-2-1_004-parameter-warning.png)
 
-A component is always a more involved object, since we have to understand and then coordinate what its inputs and outputs are. Like parameters, a component with warnings is displayed as orange. Remember, warnings aren’t necessarily bad, it usually just means that Grasshopper is alerting you to a potential problem in your definition.
+Компонент - это всегда более сложный объект из-за того, что нам приходится разбираться и, затем, координировать каковы его входы и выходы. Как и параметры, компонент с предупреждением отображается оранжевым цветом. Запомните, предупреждение- это не обязательно что-то плохое. Просто Grasshopper привлекает ваше внимание к потенциальной проблеме в вашем определении.
 
 ![IMAGE](images/1-2-1/1-2-1_005-component-warning.png)
 
-A component which contains neither warnings nor errors is shown in light gray.
+Параметр, который не содержит ни предупреждений ни ошибок, светло-серого цвета.
 
-A component whose preview has been disabled is shown in a slightly darker
-gray. There are two ways to disable a component’s preview. First, simply right-click on the component and toggle the preview button. To disable the preview for multiple components at the same time, first select the desired components and then toggle the disable preview icon (blindfolded man) by right clicking anywhere on the canvas.
+Компонент, просмотр которого был отключен, имеет темно-серый цвет. Существует два способа отключить просмотр компонента. Первый - просто нажмите правой клавишей мышки на компоненте и переключите кнопку просмотра. Чтобы одновременно отключить просмотр более чем одного компонента, сначала выберите требуемые компоненты и затем переключите иконку просмотра (человек с завязанными глазами) кликнув правой клавишей мыши в любом месте холста.
 
-A component that has been disabled is shown in a dull gray. To disable a
-component you may right-click on the component and toggle the disable button, or you may select the desired components, right click anywhere on the canvas and select Disable. Disabled components stop sending data to downstream components.
+Компонент, который был отключен, имеет тускло-серый цвет. Чтобы отключить компонент, нажмите правой клавишей мыши на компоненте и переключите кнопку отключения. Также вы можете выбрать требуемые компоненты, кликнув правой клавишей мыши в любом месте на холсте и выбрать Disable. Отключенные компоненты прекращают отправлять данные компонентам, следующим за ними.
 
-A component which has been selected will be shown in a light green color. If the selected component has generated some geometry within the Rhino scene, this will also turn green to give you some visual feedback.
+Выбранный компонент будет иметь светло-зеленый цвет. Если выбранный компонент сгенерировал какую-либо геометрию с использованием среды Rhino, то он также будет зеленого цвета.
 
-A component which contains at least 1 error is displayed in red. The error can come either from the component itself or from one of its inputs or outputs.
+Компонент, содержащий хотя бы 1 ошибку, будет красного цвета. Ошибка может произойти из-за самого компонента или из-за одного из его входов и выходов.
 
 ![IMAGE](images/1-2-1/1-2-1_006-object-colors.png)
->1. A parameter with no warnings or erros
-2. A parameter with warnings
-3. A component with warnings
-4. A component with no warnings or errors
-5. A component with preview disabled
-6. A component that has been disabled
-7. A selected component
-8. A component with an error
+>1. Параметр без предупреждений или ошибок
+2. Параметр с предупреждением
+3. Компонент с предупреждением
+4. Компонент без предупреждений или ошибок
+5. Компонент с отключенным просмотром
+6. Отключенный компонент
+7. Выбранный компонент
+8. Компонент с ошибкой

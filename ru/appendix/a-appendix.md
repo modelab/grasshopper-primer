@@ -1,5 +1,5 @@
-# Appendix
+# Приложение
 
-#### The following section contains useful references including an index of all the components used in this primer, as well as additional resources to learn more about Grasshopper.
+#### Следующий раздел содержит полезные ссылки, включая список всех компонентов, использованных в этом пособии, а также дополнительные ресурсы для изучения Grasshopper.
 
 ![IMAGE](images/001-about-image.png)

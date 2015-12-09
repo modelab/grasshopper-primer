@@ -5,132 +5,133 @@ td {background-color: #F9F9F9;}
 thead {display: none}
 </style>
 
-### 1.5.4. Working with Data Trees
+### 1.5.4. Работа с Деревьями Данных
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
->Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+>Файлы упражнения, которые сопровождают этот раздел: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
->Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.5.4_rail intersect definition.gh)
+>Файлы упражнения, которые сопровождают этот раздел: [Download](../../appendix/A-2/gh-files/1.5.4_rail intersect definition.gh)
 {% endif %}
 
-In this example, we will use some of Grasshopper’s tools for manipulating data trees to retreive, reorganize, and interpolate the desired points contained in a data tree and create a lattice of intersecting fins.
+В этом примере, мы будем использовать некоторые инструменты Grasshopper для работы с деревьями данных для извлечения, реорганизации и интерполяции нужных точек, содержащихся в дереве данных и создания решетки пересекающихся ребер.
 
 ![IMAGE](images/1-5-3/1-5-3_033-rail-intersect.png)
->1. Sweep with two rails to create a NURBS surface.
-2. Divide the surface into variable sized segments, extract vertices. Data comprised of one list with four items in each segment.
-3. Flip the matrix to change the data structure. Data comprised of four lists, each containing a single corner point of each segment.
-4. Explode the tree to connect corner points and draw diagonal lines across each segement.
-5. Prune the tree to cull branches containing insufficient points to construct a degree 3 NURBS curve and interpolate points.
-6. Extrude the curves to create intersecting fins.
+>1. Проведите две перекладины для создания NURBS поверхности.
+2. Разделите поверхность на сегменты, переменного размера, исключите вершины. Данные, собранные в один список с четырьмя элементами для каждого сегмента.
+3. Сделайте Flip матрицы, чтобы изменить структуру данных. Данные, собранные из четырех списков, каждый содержит одну угловую точку каждого сегмента.
+4. Разбейте дерево, чтобы соединить угловые точки и прорисовать диагональные линий через каждый сегмент.
+5. Сократите дерево до cull веток, содержащих неполные точки, чтобы создать NURBS кривую третьего порядка и интерполировать точки.
+6. Вытянуть кривые, чтобы создать пересекающиеся окончания.
 
 ||||
 |--|--|--|
-|01.| Start a new definition, type Ctrl+N (in Grasshopper) ||
-|02.| **Params/Geometry/Curve** – Drag and drop three **curve** parameters onto the canvas |[![IMAGE](images/1-5-3/1-5-3_034a-curve.png)](../../appendix/A-1/0_index-of-components.html#PGCrv)|
-|03.| **Surface/Freeform/Sweep2** – Drag a **Sweep2** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_034b-sweep2.png)](../../appendix/A-1/0_index-of-components.html#SFSwp2)|
-|04.| Right-click the first **Curve** parameter and select “Set one curve.” Select the first rail curve in the Rhino viewport||
-|05.| Right-click the second **Curve** parameter and select “Set one curve.” Select the second rail curve in the Rhino viewport||
-|06.| Right-click the third **Curve** parameter and select “Set one curve.” Select the section curve in the Rhino viewport||
-|07.| Connect the outputs of the **Curve** parameters to the Rail 1 (R1), Rail 2 (R2), and Sections (S) inputs of the **Sweep2** respectively|||
+|01.| Запустите новое определение, набрав Ctrl+N (в Grasshopper) ||
+|02.| Зайдите в **Params/Geometry/Curve** – перетащите три параметра **curve** на холст |[![IMAGE](images/1-5-3/1-5-3_034a-curve.png)](../../appendix/A-1/0_index-of-components.html#PGCrv)|
+|03.| Зайдите в **Surface/Freeform/Sweep2** – перетащите компонент **Sweep2** на холст|[![IMAGE](images/1-5-3/1-5-3_034b-sweep2.png)](../../appendix/A-1/0_index-of-components.html#SFSwp2)|
+|04.| Кликните правой клавишей мыши по первому параметру **Curve** и выберите “Set one curve.” Выберите первую rail кривую в видовом окне Rhino||
+|05.| Кликните правой клавишей мыши по второму параметру **Curve** и выберите “Set one curve.” Выберите вторую rail кривую в видовом окне Rhino||
+|06.| Кликните правой клавишей мыши по третьему параметру **Curve** и выберите “Set one curve.” Выберите кривую в видовом окне Rhino||
+|07.| Соедините выходы параметров **Curve** с входами Rail 1 (R1), Rail 2 (R2) и Sections (S) компонента **Sweep2** соответственно|||
 
 ![IMAGE](images/1-5-3/1-5-3_034-definition1.png)
->We have just created a NURBS surface
+>Мы только что создали NURBS поверхность
 
 ||||
 |--|--|--|
-|08.| **Params/Geometry/Surface** – drag a **Surface** parameter to the canvas|[![IMAGE](images/1-5-3/1-5-3_035a-surface.png)](../../appendix/A-1/0_index-of-components.html#PGSrf)|
-|09.| Connect the Brep (S) output of the **Sweep2** component to the input of the **Surface** parameter||
-|10.| Right-click the **Surface** parameter and select “Reparameterize”. <br><blockquote>In this step, we re-mapped the u and v domains of the surface between 0 and 1. This will make future operations possible.</blockquote>|![IMAGE](images/1-5-3/1-5-3_035-reparameterize.png)|
-|11.| **Maths/Domain/Divide Domain2** – drag and drop a **Divide Domain2** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_036-divide-domain2.png)](../../appendix/A-1/0_index-of-components.html#MDDivide)|
-|12.| **Params/Input/Number Slider** – drag two **Number Sliders** onto the canvas||
-|13.| Double click the first **Number Sliders** and set the following:<ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 40<br>Value: 20</ul>||
-|14.| Set the same values on the second **Number Sliders**||
-|15.| Connect the output of the reparameterized **Surface** parameter to the Domain (I) input of the **Divide Domain2** component||
-|16.| Connect the first **Number Sliders** to the U Count (U) input of the **Divide Domain2** component||
-|17.| Connect the second **Number Sliders** to the V Count (V) input of the **Divide Domain2** component||
-|18.| **Surface/Util/Isotrim** – Drag and drop the **Isotrim** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_037-isotrim.png)](../../appendix/A-1/0_index-of-components.html#SUSubSrf)|
-|19.| Connect the Segments (S) output of the **Divide Domain2** component to the Domain (D) input of the **Isotrim** component||
-|20.| Connect the output of the **Surface** parameter to the Surface (S) input of the **Isotrim** component|||
+|08.| Зайдите в **Params/Geometry/Surface** – вытащите параметр **Surface** на холст|[![IMAGE](images/1-5-3/1-5-3_035a-surface.png)](../../appendix/A-1/0_index-of-components.html#PGSrf)|
+|09.| Соедините выход Brep (S) компонента **Sweep2** с входом параметра **Surface**||
+|10.| Кликните правой клавишей мыши по параметру **Surface** и выберите “Reparameterize”. <br><blockquote>На этом шаге мы заново перенесли диапазоны u и v поверхности между 0 и
+1. Это позволит совершить дальнейшие операции.</blockquote>|![IMAGE](images/1-5-3/1-5-3_035-reparameterize.png)|
+|11.| Зайдите в **Maths/Domain/Divide Domain2** – перетащите компонент **Divide Domain2** на холст|[![IMAGE](images/1-5-3/1-5-3_036-divide-domain2.png)](../../appendix/A-1/0_index-of-components.html#MDDivide)|
+|12.| Зайдите в **Params/Input/Number Slider** – вытащите два слайдера **Number Sliders**на холст||
+|13.| Дважды кликните по первому **Number Sliders** и установите следующее:<ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 40<br>Value: 20</ul>||
+|14.| Установите такие же значения на втором **Number Sliders**||
+|15.| Соедините выход репараметризированого параметра **Surface** с входом Domain (I) компонента **Divide Domain2**||
+|16.| Подключите первый **Number Sliders** к входу U Count (U) в компоненте **Divide Domain2**||
+|17.| Подключите второй **Number Sliders** к входу V Count (V) в компоненте **Divide Domain2**||
+|18.| Зайдите в **Surface/Util/Isotrim** – вытащите компонент **Isotrim** на холст|[![IMAGE](images/1-5-3/1-5-3_037-isotrim.png)](../../appendix/A-1/0_index-of-components.html#SUSubSrf)|
+|19.| Соедините выход Segments (S) компонента **Divide Domain2** с входом Domain (D) компонента **Isotrim**||
+|20.| Соедините выход параметра **Surface** с входом Surface (S) компонента **Isotrim**|||
 
 ![IMAGE](images/1-5-3/1-5-3_038-definition2.png)
->We have now divided out surface into smaller, equally sized, surfaces. Adjust the U and V Count sliders to change the number of divisions. Lets add a Graph Mapper to give the segments variable size.
+>Сейчас мы разделили поверхность на небольшие, легко измеримые, поверхности. Настройте слайдеры U и V Count для изменения числа подразделений. Давайте добавим Graph Mapper, чтобы размеры сегментов стали переменными.
 
 ||||
 |--|--|--|
-|21.| **Maths/Domain/Deconstruct Domain2** – Drag a **Deconstruct Domain2** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_039-deconstruct-domain2.png)](../../appendix/A-1/0_index-of-components.html#MDDeDom2Num)|
-|22.| **Maths/Domain/Construct Domain2** – Drag a **Construct Domain2** component to the canvas|[![IMAGE](images/1-5-3/1-5-3_040-construct-domain2.png)](../../appendix/A-1/0_index-of-components.html#MDDom2Num)|
-|23.| **Params/Input/Graph Mapper** – Drag a **Graph Mapper** to the canvas|[![IMAGE](images/1-5-3/1-5-3_041-graph-mapper.png)](../../appendix/A-1/0_index-of-components.html#PIGraph)|
-|24.| **Sets/List/List Length** – Drag a **List Length** component to the canvas|[![IMAGE](images/1-5-3/1-5-3_042-list-length.png)](../../appendix/A-1/0_index-of-components.html#SLLng)|
-|25.| **Sets/Tree/Merge** – Drag a **Merge** component to the canvas |[![IMAGE](images/1-5-3/1-5-3_043-merge.png)](../../appendix/A-1/0_index-of-components.html#STMerge)|
-|26.| **Sets/List/Split List** – Drag a **Split List** component to the canvas <br><blockquote>The Merge and Split components are used here so that the same Graph Mapper could be used for both the U min and U max values.</blockquote>|[![IMAGE](images/1-5-3/1-5-3_044-split-list.png)](../../appendix/A-1/0_index-of-components.html#SLSplit)|
-|27.| Connect the U min (U0) and U max (U1) outputs of the **Deconstruct Domain2** component to the Data 1 (D1) and Data 2 (D2) inputs of the **Merge** component||
-|28.| Connect the Result (R) output of the **Merge** component to the input of the **Graph Mapper**||
-|29.| Right-click the **Graph Mapper** and select “Bezier” under “Graph Types”||
-|30.| Connect a second wire from the U max (U1) output of the **Deconstruct Domain2** component to the List (L) input of the **List Length** component||
-|31.| Connect the **Graph Mapper** output to the List (L) input of the **Split List**||
-|32.| Connect the Length (L) output of the **List Length** component to the Index (i) input of the **Split List** component||
-|33.| Connect the List A (A) output of the **Split List** component to the U min (U0) input of the **Construct Domain2** component||
-|34.| Connect the List B (B) output of the **Split List** component to the U max (U1) input of the **Construct Domain2** component||
-|35.| Connect the V min (V0) output of the **Deconstruct Domain2** component to the V min (V1) input of the **Construct Domain2** component||
-|36.| Connect the V max (V1) output of the **Deconstruct Domain2** component to the V max (V1) input of the **Construct Domain2** component||
-|37. |Connect the 2D Domain (I2) output of the **Construct Domain2** component to the Domain (D) input of the **Isotrim** component, replacing the existing connection|||
+|21.| Зайдите **Maths/Domain/Deconstruct Domain2** – вытащите компонент **Deconstruct Domain2** на холст|[![IMAGE](images/1-5-3/1-5-3_039-deconstruct-domain2.png)](../../appendix/A-1/0_index-of-components.html#MDDeDom2Num)|
+|22.| Зайдите **Maths/Domain/Construct Domain2** – вытащите компонент **Construct Domain2** на холст|[![IMAGE](images/1-5-3/1-5-3_040-construct-domain2.png)](../../appendix/A-1/0_index-of-components.html#MDDom2Num)|
+|23.| Зайдите в **Params/Input/Graph Mapper** – вытащите **Graph Mapper** на холст|[![IMAGE](images/1-5-3/1-5-3_041-graph-mapper.png)](../../appendix/A-1/0_index-of-components.html#PIGraph)|
+|24.| Зайдите в **Sets/List/List Length** – вытащите компонент **List Length** на холст|[![IMAGE](images/1-5-3/1-5-3_042-list-length.png)](../../appendix/A-1/0_index-of-components.html#SLLng)|
+|25.| Зайдите в **Sets/Tree/Merge** – вытащите компонент **Merge** на холст|[![IMAGE](images/1-5-3/1-5-3_043-merge.png)](../../appendix/A-1/0_index-of-components.html#STMerge)|
+|26.| Зайдите в **Sets/List/Split List** – вытащите компонент **Split List** на холст <br><blockquote>Компоненты Merge и Split используются, чтобы тот же самый Graph Mapper мог использоваться для обоих значений U min и U max.</blockquote>|[![IMAGE](images/1-5-3/1-5-3_044-split-list.png)](../../appendix/A-1/0_index-of-components.html#SLSplit)|
+|27.| Соедините выходы U min (U0) и U max (U1) компонента **Deconstruct Domain2** с входами Data 1 (D1) и Data 2 (D2) компонента **Merge**||
+|28.| Соедините выход Result (R) компонента **Merge** с входом **Graph Mapper**||
+|29.| Кликните правой клавишей мыши по **Graph Mapper** и выберите “Bezier” в “Graph Types”||
+|30.| Соедините второй связью из выхода U max (U1) компонента **Deconstruct Domain2** с входом List (L) компонента **List Length**||
+|31.| Соедините выход **Graph Mapper** с входом List (L) компонента **Split List**||
+|32.| Соедините выход Length (L) компонента **List Length** со входом Index (i) компонента **Split List**||
+|33.| Соедините выход List A (A) компонента **Split List** с входом U min (U0) компонента **Construct Domain2**||
+|34.| Соедините выход List B (B) компонента **Split List** с входом U max (U1) компонента **Construct Domain2**||
+|35.| Соедините выход V min (V0) компонента **Deconstruct Domain2** с входом V min (V1) компонента **Construct Domain2**||
+|36.| Соедините выход V max (V1) компонента **Deconstruct Domain2** с входом V max (V1) компонента **Construct Domain2**||
+|37. |Соедините выход 2D Domain (I2) компонента **Construct Domain2** с входом Domain (D) компонента **Isotrim**, заменяя существующую связь|||
 
 ![IMAGE](images/1-5-3/1-5-3_045-definition3.png)
->We have just deconstructed the domains of each surface segment, remapped the U values using a Graph Mapper, and reconstructed the domains. Adjust the grips of the Graph Mapper to change the distribution of the surface segments. Let’s use Data Trees to manipulate the surface divisions.
+>Мы только что поменяли строение диапазонов каждого сегмента поверхности, заново перенесли значения U, используя Graph Mapper, и реконструировали диапазоны. Настройте ползунки Graph Mapper чтобы изменить распределение сегментов поверхности. Давайте используем Деревья Данных для работы с подразделениями поверхности.
 
 ||||
 |--|--|--|
-|38.| **Surface/Analysis/Deconstruct Brep** – Drag the **Deconstruct Brep** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_046-deconstruct-brep.png)](../../appendix/A-1/0_index-of-components.html#SADeBrep)|
-|39.| **Sets/Tree/Flip Matrix** – Drag the **Flip Matrix** component to the canvas|[![IMAGE](images/1-5-3/1-5-3_047-flip-matrix.png)](../../appendix/A-1/0_index-of-components.html#STFlip)|
-|40.| **Sets/Tree/Explode Tree** – Drag the **Explode Tree** component to the canvas|[![IMAGE](images/1-5-3/1-5-3_048-explode-tree.png)](../../appendix/A-1/0_index-of-components.html#STExplode)|
-|41.| Connect the Surface (S) output of the **Isotrim** component to the Brep (B) input of the **Deconstruct Brep** component <br><blockquote>The Deconstruct Brep component deconstructs a Brep into Faces, Edges, and Vertices. This is helpful if you want to operate on a specific constituent of the surface.</blockquote>||
-|42.| Connect the Vertices (V) output of the **Deconstruct Brep** component to the Data (D) input of the **Flip Matrix** component <br><blockquote>We just changed the Data tree structure from one list of four vertices that define each surface, to four lists, each containing one vertex of each surface.</blockquote>||
-|43.| Connect the Data (D) output of the **Flip Matrix** component to the Data (D) input of the **Explode Tree** component||
-|44.| Right-click the **Explode Tree** component and select “Match Outputs”||
-|45.| Right-click the Data (D) input of the **Explode Tree** component and select simplify|||
+|38.| Зайдите в **Surface/Analysis/Deconstruct Brep** – вытащите компонент **Deconstruct Brep** вытащите компонент|[![IMAGE](images/1-5-3/1-5-3_046-deconstruct-brep.png)](../../appendix/A-1/0_index-of-components.html#SADeBrep)|
+|39.| Зайдите в **Sets/Tree/Flip Matrix** – вытащите компонент **Flip Matrix** на холст|[![IMAGE](images/1-5-3/1-5-3_047-flip-matrix.png)](../../appendix/A-1/0_index-of-components.html#STFlip)|
+|40.| Зайдите в **Sets/Tree/Explode Tree** – вытащите компонент **Explode Tree** на холст|[![IMAGE](images/1-5-3/1-5-3_048-explode-tree.png)](../../appendix/A-1/0_index-of-components.html#STExplode)|
+|41.| Соедините выход Surface (S) компонента **Isotrim** с входом Brep (B) компонента **Deconstruct Brep** <br><blockquote>Компонент Deconstruct Brep деконструирует Brep в Полигоны, Ребра и Вершины. Это полезно, если вы хотите работать со специфически сложенной поверхностью.</blockquote>||
+|42.| Соедините выход Vertices (V) компонента **Deconstruct Brep** с входом Data (D) компонента **Flip Matrix** <br><blockquote>Мы изменили структуру Дерева Данных из одного списка из четырех вершин, которые определяют каждую поверхность, в четыре списка, каждый содержит одну вершину каждой поверхности.</blockquote>||
+|43.| Соедините выход Data (D) компонента **Flip Matrix** с входом Data (D) компонента **Explode Tree**||
+|44.| Кликните правой клавишей мыши по компоненту **Explode Tree** и выберите “Match Outputs”||
+|45.| Кликните правой клавишей мыши по входу Data (D) компонента **Explode Tree** и выберите simplify|||
 
 ![IMAGE](images/1-5-3/1-5-3_049-definition4.png)
->Each output of the Explode Tree component contains a list of one vertex of each surface. In other words, one list with all the top right corners, one list with all the bottom right corners, one list of top left corners, and one list of bottom left corners.
+>Каждый выход компонента Explode Tree содержит список из одной вершины каждой поверхности. Другими словами, один список со всеми верхними углами справа, один список со всеми нижними углами справа, одни список с верхними левыми углами и один список с нижними левыми углами.
 
 ||||
 |--|--|--|
-|46.| **Curve/Primitive/Line** – Drag and drop two **Line** components onto the canvas|[![IMAGE](images/1-5-3/1-5-3_050a-line.png)](../../appendix/A-1/0_index-of-components.html#CPLine)|
-|47.| Connect the Branch 0 {0} output of the **Explode Tree** component to the Start Point (A) input of the first **Line** component||
-|48.| Connect the Branch 1 {1} output of the **Explode Tree** component to the Start Point (A) input of the second **Line** component||
-|49.| Connect the Branch 2 {2} output of the **Explode Tree** component to the End Point (B) input of the first **Line** component||
-|50.| Connect the Branch 3 {3} output of the **Explode Tree** component to the End Point (B) input of the second **Line** component|||
+|46.| Зайдите в **Curve/Primitive/Line** – вытащите два компонента **Line** на холст|[![IMAGE](images/1-5-3/1-5-3_050a-line.png)](../../appendix/A-1/0_index-of-components.html#CPLine)|
+|47.| Соедините выход Branch 0 {0} компонента **Explode Tree** с входом Start Point (A) первого компонента **Line**||
+|48.| Соедините выход Branch 1 {1} компонента **Explode Tree** с входом Start Point (A) второго компонента **Line**||
+|49.| Соедините выход Branch 2 {2} компонента **Explode Tree** с входом End Point (B) первого компонента **Line**||
+|50.| Соедините выход Branch 3 {3} компонента **Explode Tree** с входом End Point (B) второго компонента **Line**|||
 
 ![IMAGE](images/1-5-3/1-5-3_050-definition5.png)
->We have now connected the corner points of each surface diagonally with lines.
+>Сейчас мы соединили угловые точки каждой поверхности диагонально с линиями.
 
 ||||
 |--|--|--|
-|51.| **Curve/Util/Join Curves** – Drag and drop the **Join Curves** component to the canvas|[![IMAGE](images/1-5-3/1-5-3_051-join-curves.png)](../../appendix/A-1/0_index-of-components.html#CUJoin)|
-|52.| **Curve/Analysis/Control Points** – Drag a **Control Points** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_052-control-points.png)](../../appendix/A-1/0_index-of-components.html#CACP)|
-|53.| **Curve/Spline/Interpolate** – Drag and drop the **Interpolate** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_053-interpolate.png)](../../appendix/A-1/0_index-of-components.html#CSIntCrv)|
-|54.| Connect the Line (L) outputs of each **Line** component to the Curves (C) input of the **Join Curve**s component  <br><blockquote>Hold down the Shift key to connect multiple wires to a single input<blockquote> ||
-|55.| Connect the Curves (C) output of the **Join Curves** component to the Curve (C) input of the **Control Points** component||
-|56.| Connect the Points (P) output of the **Control Points** component to the Vertices (V) input of the **Interpolate** component|||
+|51.| Зайдите в **Curve/Util/Join Curves** – вытащите компонент **Join Curves** на холст|[![IMAGE](images/1-5-3/1-5-3_051-join-curves.png)](../../appendix/A-1/0_index-of-components.html#CUJoin)|
+|52.| Зайдите в **Curve/Analysis/Control Points** – вытащите компонент **Control Points** на холст|[![IMAGE](images/1-5-3/1-5-3_052-control-points.png)](../../appendix/A-1/0_index-of-components.html#CACP)|
+|53.| Зайдите в **Curve/Spline/Interpolate** – вытащите компонент **Interpolate** на холст|[![IMAGE](images/1-5-3/1-5-3_053-interpolate.png)](../../appendix/A-1/0_index-of-components.html#CSIntCrv)|
+|54.| Соедините выходы Line (L) каждого компонента **Line** с входом Curves (C) компонента **Join Curves**  <br><blockquote>Зажмите клавишу Shift, чтобы подключить множественные связи к одному входу<blockquote> ||
+|55.| Соедините выход Curves (C) компонента **Join Curves** с входом Curve (C) компонента **Control Points**||
+|56.| Соедините выход Points (P) компонента **Control Points** с входом Vertices (V) компонента **Interpolate**|||
 
 ![IMAGE](images/1-5-3/1-5-3_054-definition6.png)
->We have now joined our lines into polylines and reconstructed them as NURBS curves by interpolating their control points. In the Rhino viewport, you might notice that the shorter curves are still straight lines. This is because you cannot make a degree three NURBS curve with fewer than four control points. Let’s manipulate the data tree to eliminate lists of control points with less than four items.
+>Сейчас мы соединили наши линии в полилинии и реконструировали их как NURBS кривые путем интерполяции их контрольных точек. В видовом окне Rhino, вы могли заметить, что более короткие кривые - это прямые линии. Это потому, что вы не можете создать NURBS кривую третьего порядка с менее, чем четыре контрольных точки. Давайте поработаем с деревом данных, чтобы устранить списки контрольных точек с менее, чем четыре элемента.
 
 ||||
 |--|--|--|
-|57.| **Sets/Tree/Prune Tree** – Drag and drop the **Prune Tree** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_055-prune-tree.png)](../../appendix/A-1/0_index-of-components.html#STPrune)|
-|58.| **Params/Input/Panel** – Drag a Panel onto the canvas||
-|59.| Connect the Points (P) output of the **Control Points** component to the Tree (T) input of the **Prune Tree** component <br><blockquote>If you connect one Param Viewer to the Points (P) output of the Control Points component, and another to the Tree (T) output of the Prune Tree component, you can see that the number of branches has been reduced.</blockquote>||
-|60.| Double click the **Panel** and enter 4.|[![IMAGE](images/1-5-3/1-5-3_056-panel.png)](../../appendix/A-1/0_index-of-components.html#PIPanel)|
-|61.| Connect the output of the **Panel** to the Minimum (N0) input of the **Prune Tree** component||
-|62.| Connect the Tree (T) output of the **Prune Tree** component to the Vertices (V) input of the **Interpolate** component||
-|63.| **Surface/Freeform/Extrude** – Drag and drop the **Extrude** component onto the canvas|[![IMAGE](images/1-5-3/1-5-3_057-extrude.png)](../../appendix/A-1/0_index-of-components.html#SFExtr)|
-|64.| **Vector/Vector/Unit Y** – Drag a **Unit Y** component onto the canvas<br><br>*You may need to use a Unit X vector, depending on the orientation of your referenced geometry in Rhino*|[![IMAGE](images/1-5-3/1-5-3_058a-vector-y.png)](../../appendix/A-1/0_index-of-components.html#VVY)|
-|65.| **Params/Input/Number Slider** – Drag a **Number Slider** onto the canvas||
-|66.| Double click the **Number Slider** and set the following:<ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 5<br>Value: 3</ul>||
-|67.| Connect the Curve (C) output of the **Interpolate** component to the Base (B) input of the **Extrude** component||
-|68.| Connect the **Number Slider** output to the Factor (F) input of the **Unit Y** component||
-|69.| Connect the Unit Vector (V) output of the **Unit Y** component to the Direction (D) input of the **Extrude** component|||
+|57.| Зайдите в **Sets/Tree/Prune Tree** – вытащите компонент **Prune Tree** на холст|[![IMAGE](images/1-5-3/1-5-3_055-prune-tree.png)](../../appendix/A-1/0_index-of-components.html#STPrune)|
+|58.| Зайдите в **Params/Input/Panel** – вытащите Panel на холст||
+|59.| Соедините выход Points (P) компонента **Control Points** с входом Tree (T) компонента **Prune Tree** <br><blockquote>Если вы подключите один Param Viewer к входу Points (P) компонента Control Points и другой вход Tree (T) компонента Prune Tree, вы увидите, что число веток сократилось.</blockquote>||
+|60.| Дважды кликните по **Panel** и введите значение 4.|[![IMAGE](images/1-5-3/1-5-3_056-panel.png)](../../appendix/A-1/0_index-of-components.html#PIPanel)|
+|61.| Соедините выход **Panel** с входом Minimum (N0) компонента **Prune Tree**||
+|62.| Соедините выход Tree (T) компонента **Prune Tree** с входом Vertices (V) компонента **Interpolate**||
+|63.| Зайдите в **Surface/Freeform/Extrude** – вытащите компонент **Extrude** на холст|[![IMAGE](images/1-5-3/1-5-3_057-extrude.png)](../../appendix/A-1/0_index-of-components.html#SFExtr)|
+|64.| Зайдите в **Vector/Vector/Unit Y** – вытащите компонент **Unit Y** на холст<br><br>*Вам может понадобиться использовать вектор Unit X, в зависимости от ориентации вашей исходной геометрии в Rhino*|[![IMAGE](images/1-5-3/1-5-3_058a-vector-y.png)](../../appendix/A-1/0_index-of-components.html#VVY)|
+|65.| Зайдите в **Params/Input/Number Slider** – вытащите слайдер **Number Slider** на холст||
+|66.| Дважды кликните по **Number Slider** и установите следующее:<ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 5<br>Value: 3</ul>||
+|67.| Соедините выход Curve (C) компонента **Interpolate** с входом Base (B) компонента **Extrude**||
+|68.| Подключите выход **Number Slider** к входу Factor (F) компонента **Unit Y**||
+|69.| Соедините выход Unit Vector (V) компонента **Unit Y** с входом Direction (D) компонента **Extrude**|||
 
 ![IMAGE](images/1-5-3/1-5-3_058-final-definition.png)
->You should now see a diagonal grid of strips or fins in the Rhino Viewport. Adjust the Factor slider to chnage the depth of the fins
+>Сейчас вы должны увидеть диагональную сетку полосок или окончаний в видовом окне Rhino. Настройте слайдер Factor, чтобы изменить глубину окончаний
 
 ![IMAGE](images/1-5-3/1-5-3_059-final-example.png)

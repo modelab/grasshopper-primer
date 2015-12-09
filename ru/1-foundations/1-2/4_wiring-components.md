@@ -1,42 +1,42 @@
-### 1.2.4. WIRING COMPONENTS
+### 1.2.4. КОМПОНЕНТЫ СВЯЗИ
 
-#####When data is not stored in the permanent record set of a parameter, it must be inherited from elsewhere. Data is passed from one component to another through wires. You can think of them literally as electrical wires that carry pulses of data from one object to the next.
+#####Когда данные не хранятся в постоянном месте записи в Параметрах, появляется необходимость взять их откуда-то. Данные передаются из одного компонента в другой посредством связей. Можете представить их себе, буквально, электрическими цепями, которые переносят сигналы данных из одного объекта в следующий объект.
 
-####1.2.4.1. CONNECTION MANAGEMENT
-To connect components, click and drag near the circle on the output side of an object. A connecting wire will be attached to the mouse. Once the mouse hovers over a potential target input, the wire will connect and become solid. This is not a permanent connection until you release the mouse button. It doesn’t matter if we make the connections in a ‘left to right’ or ‘right to left’ manner.
+####1.2.4.1. УПРАВЛЕНИЕ СВЯЗЯМИ
+Для того, чтобы соединить компоненты, кликните и перетащите рядом с кругом на сторону выхода объекта. Соединительная связь прикрепится к мышке. Как только мышка будет наведена над потенциальным входом, связь подсоединится и станет прочной. Это не постоянная связь, пока вы не отпустите кнопку мыши. Не имеет значения, как мы осуществим подключения - слева-направо или справа-налево.
 
 ![IMAGE](images/1-2-4/1-2-4_001a.png)
->1. The Divide Curve component - divides a curve into equal length segments.
-2. Curve parameter - right click and select Set One Curve to reference Rhino Geometry.
+>1. Компонент Divide Curve - разделяет кривую на равные по длине сегменты.
+2. Параметр Curve (кривая) - кликните правой клавишей мыши и выберите Set One Curve (установить одну кривую), чтобы привязаться к геометрии Rhino.
 
 ![IMAGE](images/1-2-4/1-2-4_001b.png)
->Left click and drag the wire from the output (1.) of one object to the input (2.) of another.
+>Кликните левой клавишей мыши и перетащите связь из выхода (1) одного объекта в выход (2) другого объекта.
 
 ![IMAGE](images/1-2-4/1-2-4_001c.png)
->4. If you hold down CONTROL, the cursor will become red, and the targeted source will be removed from the source list.
-5. By default, a new connection will erase existing connections. Hold the SHIFT button while dragging connection wires to difne multiple sources. The cursor will turn green to indicate the addition behavior.
+>4. Если вы зажмете CONTROL, курсор станет красного цвета и целевой источник удалится из списка ресурсов.
+5. По умолчанию, новое соединение удалит существующее соединение. Зажмите SHIFT во время перемещения соединений, чтобы выбрать множество источников. Курсор станет зеленого цвета, т.о. отображая дополнительное поведение.
 
 ![IMAGE](images/1-2-4/1-2-4_001d.png)
->6. You can also disconnect wires through the context popup menu - right click the grip of the input or output and select disconnect.
-7. If there are multiple connections, select the one you want to disconnect from the list.
-8. When you hover over an item, the wire will be highlighted in red.
+>6. Вы также можете разъединить связь через контекстное выпадающее меню - правый клик по ползунку входа или выхода и выберите разъединить.
+7. При наличии нескольких соединений, выберите одно, которое вы хотите отсоединить от списка.
+8. При наведении мышки на элемент, связь подсветиться красным.
 
-####1.2.4.2. FANCY WIRES
-Wires represent the connections as well as the flow of data within the graph in our definition. Grasshopper can also give us visual clues as to what is flowing through the wires. The default setting for these so-called “fancy wires” is off, so you have to enable them before you can view the different types of line types for the connection wires. To do this, simply click on the Display Tab on the Main Menu Bar and select the button labeled “Draw Fancy Wires.” Fancy wires can tell you a lot of information about what type of information is flowing from one component to another.
+####1.2.4.2. FANCY СВЯЗИ
+Связи представляют соединения так же как поток данных внутри графика в нашем определении. Grasshopper может также давать нам визуальные подсказки о том, что протекает через связи. Настройки по умолчанию, так называемые, "fancy wires" отключены, поэтому вам необходимо включить их до того как вы сможете просматривать различные типы линий для соединительных связей. Чтобы выполнить это, просто кликните на Display Tab в Строке основного меню и выберите кнопку "Draw Fancy Wires.” Fancy wires могут поведать много информации о том, какой тип информации протекает из одного компонента в другой.
 
 ![IMAGE](images/1-2-4/1-2-4_002-fancy-wires.png)
->1. Empty Item – An orange wire type indicates that no information has been transferred. This parameter has generated a warning message because it contains no data, and thus no information is being sent across the wire.
-2. The Merge component is an alternative to conecting more than one source to a single input.
-3. List – If the information flowing out of a component contains a list of information, the wire type will be shown as a grey double line.
-4. Single Item – The data flowing out of any parameter that contains a single item will be shown with a solid grey line.
-5.  Tree – Information transferred between components which contain a data structure will be shown in a grey double-line-dash wire type.
+>1. Empty Item - тип связи оранжевого цвета, сигнализирует о том, что никакой информации не передается. Этот параметр генерирует предупреждающее сообщение, потому что оно не содержит данных и, поэтому, никакой информации не транслируется по связям.
+2. Компонент Merge - это альтернатива подключению больше, чем одного источника к одному входу.
+3. List - если информация, исходящая из компонента, содержит список информации, тип связи будет отображаться двойной серой линией.
+4. Single Item - поток данных из любого параметра, который содержит один элемент, будет показан цельной серой линией.
+5. Tree (дерево) - информация, передающаяся между компонентами, которые содержат структуры данных, отображается связью серой двойной линией с точками.
 
-####1.2.4.3. WIRE DISPLAY
-If you have spent any great deal of time working on a single Grasshopper definition, you may have realized that the canvas can get cluttered with a nest of wires quite quickly. Fortunately, we have the ability to manage the wire displays for each input of a component.
+####1.2.4.3. ОТОБРАЖЕНИЕ СВЯЗЕЙ
+Если вы уже провели достаточно много времени работая над одним определением Grasshopper, вы уже столкнулись с тем, что холст сильно и быстро захламляется "гнездами" связей. К счастью, у нас есть возможность управлять отображением связей для каждого входа компонента.
 
-There are three wire displays: Default Display, Faint Display, and Hidden Display. To change the wire display, simply right-click on any input on a component and select one of the views available under the Wire Display pop out menu.
+Существуют три вида отображения связей: Default Display (по умолчанию), Faint Display (исчезающее отображение), and Hidden Display (скрытое отображение). Чтобы изменить отображение связи, просто кликните правой клавишей мыши на любом входе компонента и выберите один из видов, доступных под Wire Display в выпадающем меню.
 
 ![IMAGE](images/1-2-4/1-2-4_003-wire-display.png)
->1. Hidden Display – When hidden display is selected, the wire will be completely ‘invisible’. The data is transferred ‘wirelessly’ from the source to the input parameter. If you select the source or target component, a green wire will appear to show you which components are connected to each other. Once you deselect the component, the wire will disappear.
-2. Default Display – The default wire display will draw all connections (if fancy wires is turned on).
-3. Faint Display – The faint wire display will draw the wire connection as a very thin, semi-transparent line. Faint and Hidden wire displays can be very helpful if you have many source wires coming into a single input.
+>1. Hidden Display - когда выбран этот режим, связь будет абсолютно не видимой. Данные передаются "беспроводным" путем от источника к параметру входа. Если вы выберете исходный или конечный компонент, появится зеленая связь, которая показывает какие компоненты соединены с какими компонентами. При отмене выбора компонента, связь исчезнет.
+2. Default Display (отображение по умолчанию) - отображение связи по умолчанию отобразит все соединения (при условии, что fancy wires отключены).
+3. Faint Display - исчезающее отображение связей будет отображать соединение связей очень тонкими полупрозрачными линиями. Faint и Hidden отображение связей могут очень полезны, если в один вход входит несколько исходных связей.

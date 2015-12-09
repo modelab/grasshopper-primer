@@ -1,60 +1,65 @@
-###1.3.5. Booleans & Logical Operators
+###1.3.5. Булевые и Логические Операторы
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
->Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+>Файлы упражнения, которые сопровождают этот раздел: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
->Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.3.5_booleans and logical operators.gh)
+>Файлы упражнения, которые сопровождают этот раздел: [Download](../../appendix/A-2/gh-files/1.3.5_booleans and logical operators.gh)
 {% endif %}
 
-####1.3.5.1. BOOLEANS
-Numeric variables can store a whole range of different numbers. Boolean
-variables can only store two values referred to as Yes or No, True or False, 1 or 0. Obviously we never use booleans to perform calculations because of their limited range. We use booleans to evaluate conditions.
+####1.3.5.1. БУЛЕВЫЕ ЗНАЧЕНИЯ
+Числовые переменные могут хранить целый ряд различных чисел. Булевые переменные могут хранить только два значения, обозначаемые как Да или Нет, Правда или Ложь, 1 или 0. Очевидно, мы никогда не сможем использовать булевые значения для выполнения расчетов из-за их ограниченного диапазона. Мы можем использовать булевые значения для определения условий.
 
 ![](images/1-3-5/1-3-5_001-boolean-parameter.png)
->Boolean Parameter
+>Параметр Boolean
 
-In Grasshopper, booleans can be used in several ways. The boolean parameter is a container for one or multiple boolean values, while the Boolean Toggle allows you to quickly change between single true and false values as inputs.
+В Grasshopper, Boolean могут использоваться несколькими способами. Параметр Boolean - это контейнер для одного или нескольких булевых значений, в то время как Boolean Toggle позволяет быстро изменить значение правды или лжи как входов.
 
 ![](images/1-3-5/1-3-5_002-boolean-toggle.png)
->Boolean Toggle - double click the boolean value to toggle between true and false
+>Boolean Toggle - дважды кликните по переключателю булевых значений для изменения значения правда или ложь
 
-Grasshopper also has objects that test conditions and output boolean values. For example, the Includes component allows you to test a numeric value to see if it is included in a domain.
+Grasshopper также содержит объекты, которые проверяют условие и результат булевых значений. Например, компонент Includes позволяет проверить числовое значение на то, включено ли оно в диапазон.
 
 ![](images/1-3-5/1-3-5_003-includes.png)
->The Includes component is testing whether the number 6.8 is included in the domain from 0 to 10. It returns a boolean value of True.
+>Компонент Includes проверяет включено ли число 6.8 в диапазон 0 - 10. Возвращается булевое значение Правда.
 
-####1.3.5.2. LOGICAL OPERATORS
-Logical operators mostly work on booleans and they are indeed very logical. As you will remember, booleans can only have two values. Boolean mathematics
-were developed by George Boole (1815-1864) and today they are at the very
-core of the entire digital industry. Boolean algebra provides us with tools to analyze, compare and describe sets of data. Although Boole originally defined six boolean operators we will only discuss three of them:
+####1.3.5.2. ЛОГИЧЕСКИЕ ОПЕРАТОРЫ
+Логические операторы, в своем большинстве, работают с булевыми значениями и очень логичны. 
+Как вы помните, булевые значения могут иметь только два значения. 
+Булевая математика была разработана Джорджом Буле (1815-1864) и сегодня она является
+ядром всей цифровой индустрии. Булевая алгебра дает нам инструменты анализа, 
+сравнения и описания наборов данных. Хотя Буле изначально определил шесть операторов
+булевых значений, мы обсудим только три из них:
 
-1. Not
-2. And
-3. Or
+1. Not (Нет)
+2. And (И)
+3. Or (Или)
 
-The Not operator is a bit of an oddity among operators, because it doesn’t
-require two values. Instead, it simply inverts the one on the right. Imagine we have a script which checks for the existence of a bunch of Block definitions in Rhino. If a block definition does not exist, we want to inform the user and abort the script.
+Оператор Nor немного выделяется среди других операторов, потому что ему не требуются
+два значения. Вместо этого, он просто преобразует одно значение в правильное. 
+Представьте, у вас есть скрипт, который проверяет существование набора Блок 
+определений в Rhino. Если Блок определение не существует, мы хотим проинформировать 
+пользователя и прервать скрипт.
 
 ![](images/1-3-5/1-3-5_004-not.png)
->The Grasshopper Not operator (gate)
+>Оператор Grasshopper Nor
 
-And and Or take two arguments on either side. The And operator requires both
-of them to be True in order for it to evaluate to True. The Or operator is more than happy with a single True value.
+And и Or требуют наличие двух аргументов с обеих сторон. Оператору And требуются два аргумента
+True, чтобы определить значение как True. Оператору Or достаточно одного значения True.
 
-As you can see, the problem with Logical operators is not the theory, it’s what happens when you need a lot of them to evaluate something. Stringing them together quickly results in convoluted code; not to mention operator precedence problems.
+Как видите, сложность в работе с логическими операторами не в теории, а в том, что происходит, когда вам требуется их большое количество для оценки чего-либо. Использование их вместе быстро приводит к запутанности, не говоря уже о проблемах с приоритетом операторов.
 
 ![](images/1-3-5/1-3-5_005-and.png)
->The Grasshopper And operator (gate)
+>Оператор Grasshopper And
 
 ![](images/1-3-5/1-3-5_006-or.png)
->The Grasshopper Or operator (gate)
+>Оператор Grasshopper Or
 
-A good way to exercise your own boolean logic is to use Venn diagrams. A Venn
-diagram is a graphical representation of boolean sets, where every region
-contains a (sub)set of values that share a common property. The most famous
-one is the three-circle diagram:
+Хороший способ поработать над вашей булевой логикой - это использовать диаграммы Venn. 
+Диаграмма Venn - это графическое представление наборов булевых значений, где 
+каждый диапазон содержит (под)набор значений, которые обладают общими характеристиками.
+Самая известная из них - это диаграмма из трех кругов:
 
 ![](images/1-3-5/1-3-5_007-venn-diagram.png)
 
-Every circular region contains all values that belong to a set; the top circle for example marks off set {A}. Every value inside that circle evaluates True for {A} and every value not in that circle evaluates False for {A}. By coloring the regions we can mimic boolean evaluation in programming code:
+Каждый круговой диапазон содержит все значения, которые принадлежат этого набору; верхний круг, например, отмечает набор {A}. Каждое значение внутри этого круга определяет True для {A} и каждое значение вне этого круга оценивает False для {A}. Цветовая кодировка диапазонов помогает нам изобразить булевое определение в программном коде:
 
 ![](images/1-3-5/1-3-5_008-venn-diagram-examples.png)

@@ -1,30 +1,30 @@
-### 1.2.5. THE GRASSHOPPER DEFINITION
+### 1.2.5. ОПРЕДЕЛЕНИЕ GRASSHOPPER
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
->Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+>Файлы упражнения, которые сопровождают этот раздел: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
->Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.2.5_the grasshopper definition.gh)
+>Файлы упражнения, которые сопровождают этот раздел: [Download](../../appendix/A-2/gh-files/1.2.5_the grasshopper definition.gh)
 {% endif %}
 
-#####Grasshopper Definitions have a Program Flow that represents where to start program execution, what to do in the middle and how to know when program execution is complete.
+#####У определений Grasshopper есть процесс работы программы, который отображает, где начать выполнение программы, что делать в середине и как узнать, когда выполнение программы закончено.
 
-####1.2.5.1. PROGRAM FLOW
-Grasshopper visual programs are executed from left to right. Reading the graph relative to the wired connections from upstream to downstream provides understanding about the Program Flow.
+####1.2.5.1. ПРОЦЕСС РАБОТЫ ПРОГРАММЫ
+Визуальные программы Grasshopper выполняются слева направо. Чтение графика, связанного с соединениями связей из upstream с downstream, предоставляет понимание о процессе работы программы.
 
 ![IMAGE](images/1-2-5/1-2-5_001-program-flow.png)
->Directionality of data is left to right.
+>Направление данных слева направо.
 
-####1.2.5.2. THE LOGICAL PATH
-All of the objects and the wires connecting the objects represent the logical graph of our program. This graph reveals the flow of data, dependencies of any input to its wiired output. Any time our graph changes, sometimes referrred to as being “dirtied,” every downstream connection and object will be updated.
+####1.2.5.2. ЛОГИЧЕСКИЙ ГРАФИК
+Все объекты и связи, соединяющие объекты, представляют логический график нашей программы. Этот график показывает поток данных, взаимозависимости каждого входа от подключенного выхода. Каждый раз когда график изменяется, иногда в связи с "загрязненностью", каждое соединение downstream и объект будут обновляться.
 
 ![IMAGE](images/1-2-5/1-2-5_002-logical-graph.png)
->1. Reparameterize the curve domain between 0.0 and 1.0.
-2. Reference a curve from Rhino.
-3. Divide the curve into 13 equal segments.
-4. Run the parameter values at each curve division point through the graph.
-5. Multiply each value by 27.
-6. Draw a circle at each division point along th ecurve, normal to the tangent vector at each pont, with a radius defined by the parameter values (t) modified by the graph mapper and multiplied by 27.
-7. Loft a surface between the circles
+>1. Перепараметризировать домейн кривой между 0.0 и 1.0.
+2. Ссылка на кривую из Rhino.
+3. Разделить кривую на 13 равных сегментов.
+4. Запустить значение параметров на каждой точке деление кривой через график.
+5. Умножьте каждое значение на 27.
+6. Нарисуйте круг у каждой точки деления вдоль кривой, нормальный тангенс вектор у каждой точки с радиусом, определяемым значением параметра (t), изменяемым при помощи graph mapper и умноженным на 27.
+7. Пространство между поверхностями кругов.
 
 ![IMAGE](images/1-2-5/1-2-5_003-lofted-variable-circles.png)
->1. Variable circle radius.
-2. Loft between circles.
+>1. Изменяемый радиус круга.
+2. Пространство между кругами

@@ -4,65 +4,65 @@ td:nth-child(3)	{font-size: 70%;width: 15%;}
 td {background-color: #F9F9F9;}
 thead {display: none}
 </style>
-### 1.3.2. Working with Attractors
+### 1.3.2. Работая с аттракторами
 
-#####Attractors are points that act like virtual magnets - either attracting or repelling other objects. In Grasshopper, any geometry referenced from Rhino or created withinGrasshopper can be used as an attractor. Attractors can influence any number of parameters of surrounding objects including scale, rotation, color, and position. These parameters are changed based on their relationship to the attractor geometry.
+#####Аттракторы - это точки, которые ведут себя как виртуальные магниты - либо притягивают либо отталкивают другие объекты. В Grasshopper, любая геометрия, взятая из Rhino или созданная в Grasshopper, может быть использована как аттрактор. Аттракторы могут влиять на любое число параметров окружающих объектов включая масштаб, вращение, цвет и положение. Эти параметры изменяются на основе их отношений с геометрией аттрактора.
 
 ![Overview](images/1-3-2/1-3-2_001-attractor-overview.png)
->1. Attractor point
-2. Vectors
-3. Circles orient towards attractor based on their normals
+>1. Точка аттрактора
+2. Векторы
+3. Круги ориентируются по направлению к аттрактору на основе их нормалей
 
-In the image above, vectors are drawn between an attractor point and the center
-point of each circle. These vectors are used to define the orientation of the
-circles so they are always facing the attractor point.
-This same attractor could be used to change other parameters of the circles. For
-example, circles that are closest to the attractor could be scaled larger by using
-the length of each vector to scale the radius of each circle.
+На изображении выше, векторы изображены между точкой аттрактора и точкой начала 
+координат каждого круга. Эти векторы используются для определения ориентации кругов, 
+таким образом, что они всегда обращены к точке аттрактора. Тот же самый аттрактор 
+может быть использован для изменения других параметров кругов. Например, те круги,
+которые ближе всего к аттрактору, могут иметь больший размер, используя длину 
+каждого вектора, чтобы масштабировать радиус каждого круга.
 
 ![Examples](images/1-3-2/1-3-2_002-attractor-examples.png)
 
-####1.3.2.1. ATTRACTOR DEFINITION
+####1.3.2.1. ОПРЕДЕЛЕНИЕ АТТРАКТОРА
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
->Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+>Файлы упражнения, которые сопровождают этот раздел: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
->Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.3.2.1_attractor definition.gh)
+>Файлы упражнения, которые сопровождают этот раздел: [Download](../../appendix/A-2/gh-files/1.3.2.1_attractor definition.gh)
 {% endif %}
 
-In this example, we will use an attractor point to orient a grid of circles, based on the vectors between the center points of the circles and the attractor point. Each circle will orient such that it is normal to (facing) the attractor point.
+В этом примере, мы будем использовать точку аттрактора, чтобы расположить сетку кругов, основанную на векторах между точками начала координат кругов и точками аттракторов. Каждый круг будет ориентироваться таким образом, что он будет перпендикулярен (обращен) к точке аттрактора.
 
 ||||
 |--|--|--|
-|01.| Type Ctrl+N in Grasshopper to start a new definition||
-|02.| **Vector/Grid/Hexagonal** - Drag and drop the **Hexagonal Grid** component onto the canvas|[![IMAGE](images/1-3-2/1-3-2_003-hex-grid-component.png)](../../appendix/A-1/0_index-of-components.html#VGHexGrid)|
-|03.| **Params/Input/Slider** - Drag and drop two **Numeric Sliders** on the canvas||
-|04.| Double-click on the first **Numeric Sliders** and set the following:<ul>Name: Cell Radius<br>Rounding: Floating Point<br>Lower Limit: 0.000<br>Upper Limit: 1.000<br>Value: 0.500</ul>||
-|05.| Double-click on the second **Numeric Sliders** and set the following:<ul>Name: # of Cells<br>Rounding: Integers<br>Lower Limit: 0<br>Upper Limit: 10<br>Value: 10</ul>||
-|06.| Connect the **Number Slider** (Cell Radius) to the Size (S) input of the Hexagon Grid component||
-|07.| Connect the **Number Slider** (# of Cells) to the Extent X (Ex) input and the Extent Y (Ey) input of the Hexagon Grid component|||
+|01.| Чтобы начать новое определение, нажмите Ctrl+N в Grasshopper||
+|02.| Зайдите в **Vector/Grid/Hexagonal** - перетащите компонент **Hexagonal Grid** на холст|[![IMAGE](images/1-3-2/1-3-2_003-hex-grid-component.png)](../../appendix/A-1/0_index-of-components.html#VGHexGrid)|
+|03.| Зайдите в **Params/Input/Slider** - перетащите два слайдера **Numeric Sliders** на холст||
+|04.| Дважды кликните по первому слайдеру **Numeric Sliders** и установите следующее:<ul>Name (Имя): Cell Radius (радиус ячейки)<br>Rounding (Округление): Floating Point (с плавающей точкой)<br>Lower Limit (нижняя граница): 0.000<br>Upper Limit (верхняя граница): 1.000<br>Value (значение): 0.500</ul>||
+|05.| Дважды кликните по второму слайдеру **Numeric Sliders** и установите следующее:<ul>Name (Имя): # of Cells (число ячеек)<br>Rounding (Округление): Integers (целые числа)<br>Lower Limit (нижняя граница): 0<br>Upper Limit (верхняя граница): 10<br>Value (значение): 10</ul>||
+|06.| Соедините слайдер **Number Slider** (Cell Radius) с входом Size (S) компонента Hexagon Grid||
+|07.| Соедините слайдер **Number Slider** (# of Cells) с входом Extent X (Ex) и входом Extent Y (Ey)  компонента Hexagon Grid|||
 
 ![](images/1-3-2/1-3-2_004-definition1.png)
 
 ||||
 |--|--|--|
-|08.| **Curve/Primitive/Circle CNR** - Drag and drop a **Circle CNR** component onto the canvas|[![](images/1-3-2/1-3-2_005-circle-CNR.png)](../../appendix/A-1/0_index-of-components.html#CPCirCNR)|
-|09.| Connect the Points (P) output of the **Hexagon Grid** to the Center (C) input of the **Circle CNR** component||
-|10.| Connect the **Number Slider** (Cell Radius) to the Radius (R) input of the **Circle CNR** component.||
-|11.| **Vector/Vector/Vector 2Pt** - Drag and Drop the **Vector 2Pt** component onto the canvas|[![IMAGE](images/1-3-2/1-3-2_006-vector-2pt.png)](../../appendix/A-1/0_index-of-components.html#VVVec2Pt)|
-|12.| Connect the Points output (P) of the **Hexagonal Grid** component to the Base Point (A) input of the **Vector 2Pt** component.||
-|13.| **Params/Geometry/Point** – Drag and Drop the **Point** component onto the canvas|[![IMAGE](images/1-3-2/1-3-2_007-point.png)](../../appendix/A-1/0_index-of-components.html#PGPt)|
-|14.| Right-Click the **Point** component and select set one point. In the model space select where you would like the attractor point to be||
-|15.| Connect the **Point** component to the Tip Point (B) input of the **Vector 2Pt** component||
-|16.| Connect the Vector (V) output of the **Vector 2Pt** to the Normal (N) input of the **Circle CNR** component.|||
+|08.| Зайдите в **Curve/Primitive/Circle CNR** - перетащите компонент **Circle CNR** на холст|[![](images/1-3-2/1-3-2_005-circle-CNR.png)](../../appendix/A-1/0_index-of-components.html#CPCirCNR)|
+|09.| Соедините выход Points (P) компонента **Hexagon Grid** с входом Center (C) компонента **Circle CNR**||
+|10.| Соедините слайдер **Number Slider** (Cell Radius) с входом Radius (R) компонента **Circle CNR**.||
+|11.| Зайдите в **Vector/Vector/Vector 2Pt** - перетащите компонент **Vector 2Pt**на холст|[![IMAGE](images/1-3-2/1-3-2_006-vector-2pt.png)](../../appendix/A-1/0_index-of-components.html#VVVec2Pt)|
+|12.| Соедините выход Points (P) компонента **Hexagonal Grid** с входом Base Point (A) компонента **Vector 2Pt**.||
+|13.| Зайдите в **Params/Geometry/Point** – перетащите компонент **Point** на холст|[![IMAGE](images/1-3-2/1-3-2_007-point.png)](../../appendix/A-1/0_index-of-components.html#PGPt)|
+|14.| Кликните правой клавишей мыши по компоненту **Point** и выберите set one point. В модели пространства выберите место, где вы хотите разместить точку аттрактора||
+|15.| Соедините компонент **Point** с входом Tip Point (B) компонента **Vector 2Pt**||
+|16.| Соедините выход Vector (V) компонента **Vector 2Pt** с входом Normal (N) компонента **Circle CNR**.|||
 
 ![IMAGE](images/1-3-2/1-3-2_008-definition2.png)
 
 ||||
 |--|--|--|
-|17.| **Curve/Util/Offset** – Drag and Drop the **Offset Component** onto the canvas.|[![IMAGE](images/1-3-2/1-3-2_009-offset.png)](../../appendix/A-1/0_index-of-components.html#CUOffset)|
-|18.| **Params/Input/Slider** - Drag and drop a **Numeric Slider** on the canvas||
-|19.| Double-click on the Number Slider and set the following:<ul>Name: Offset Distance<br>Rounding: Floating Point<br>Lower Limit: - 0.500<br>Upper Limit: 0.500<br>Value: -0.250</ul>||
-|20.| Connect the **Number Slider** (Offset Distance) to the Distance (D) input of the **Offset** component|||
+|17.| Зайдите в **Curve/Util/Offset** – перетащите компонент **Offset Component** на холст.|[![IMAGE](images/1-3-2/1-3-2_009-offset.png)](../../appendix/A-1/0_index-of-components.html#CUOffset)|
+|18.| Зайдите в **Params/Input/Slider** - перетащите слайдер **Numeric Slider** на холст||
+|19.| Дважды кликните по слайдеру и установите следующее:<ul>Name: Offset Distance<br>Rounding: Floating Point<br>Lower Limit: - 0.500<br>Upper Limit: 0.500<br>Value: -0.250</ul>||
+|20.| Соедините слайдер **Number Slider** (Offset Distance) с входом Distance (D) компонента **Offset**|||
 
 ![IMAGE](images/1-3-2/1-3-2_010-definition3.png)
 
@@ -70,8 +70,8 @@ In this example, we will use an attractor point to orient a grid of circles, bas
 
 ||||
 |--|--|--|
-|21.| **Surface/Freeform/Boundary Surfaces** – Drag and drop **Boundary Surfaces** on to the canvas|[![IMAGE](images/1-3-2/1-3-2_012-boundary-surface.png)](../../appendix/A-1/0_index-of-components.html#SFBoundary)|
-|22.| Connect the Curves (C) output of the **Offset** component to the Edges (E) input of the **Boundary Surfaces**|||
+|21.| Зайдите в **Surface/Freeform/Boundary Surfaces** – перетащите компонент **Boundary Surfaces** на холст|[![IMAGE](images/1-3-2/1-3-2_012-boundary-surface.png)](../../appendix/A-1/0_index-of-components.html#SFBoundary)|
+|22.| Соедините выход Curves (C) компонента **Offset** с входом Edges (E) компонента **Boundary Surfaces**|||
 
 ![IMAGE](images/1-3-2/1-3-2_013-definition4.png)
 

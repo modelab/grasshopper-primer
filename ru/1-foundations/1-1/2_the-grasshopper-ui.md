@@ -1,318 +1,326 @@
-### 1.1.2. THE GRASSHOPPER UI
+### 1.1.2. ПОЛЬЗОВАТЕЛЬСКИЙ ИНТЕРФЕЙС GRASSHOPPER
 
-#####Grasshopper’s visual “plug-and-play” style gives designers the ability to combine creative problem solving with novel rule systems through the use of a fluid graphical interface.
+#####Визуальный стиль Grasshopper "plug-and-play" дает дизайнерам возможность сочетать творческое решение вопросов с инновационными системами правил посредством использования потокового графического интерфейса.
 
-Let’s start by exploring Grasshopper’s user interface UI. Grasshopper is a
-visual programming application where you are able to create programs, called
-definitions or documents, by dragging components onto the main editing
-window (called the canvas). The outputs to these components are connected to
-the inputs of subsequent components — creating a graph of information which
-can be read from left to right. Let’s get started with the basics.
+Давайте начнем знакомство с Grasshopper с пользовательского интерфейса UI. Grasshopper - это
+приложение визуального программирования, где вы можете создавать программы, называемые
+definition (определение) или documents (документы), путем расположения компонентов на главном окне
+редактирования (canvas - холст). Выходы этих компонентов соединяются
+с входами последующих компонентов - создавая график информации, который
+можно прочитать слева направо. Давайте начнем с этих основ.
 
-Assuming you’ve already installed the Grasshopper plugin (see F.0.0), type the
-word “Grasshopper” in the Rhino command prompt to display the Grasshopper
-Editor. The Grasshopper interface contains a number of elements, most of which
-will be very familiar to Rhino users. Let’s look at a few features of the interface.
+Предположим, вы уже установили плагин Grasshopper (см. F.0.0), наберите слово "Grasshopper" в командной строке Rhino, чтобы показать редактор Grasshopper. Интерфейс Grasshopper содержит некоторое кол-во элементов, большинство которых будут хорошо знакомы пользователям Rhino. Давайте посмотрим на несколько функций интерфейса.
 
 ![IMAGE](images/1-1-2/1-1-2_001-grasshopper-ui.png)
->1. Windows title bar.
-2. Main menu bar.
-3. File browser control.
-4. Component palettes.
-5. Canvas toolbar.
-6. Canvas.
-7. This area, indicated by a grid of rectangular boxes, provides an interface with which to open recently accessed file. The 3x3 menu shows the files most recently accessed (chronologically) and will display a red rectangular box if the file cannot be found (which can occur if you move a file to a new folder or delete it).
-8. The status bar tells you what version of Grasshopper is currently installed on your machine. If a newer version is available, a pop-up menu will appear in your tray providing instructions on how to download the latest version.
+>1. Строка заголовка окна.
+2. Строка главного меню.
+3. Контроль диспетчера файлов.
+4. Панели компонентов.
+5. Панель инструментов холста.
+6. Холст.
+7. Эта область, отмеченная сеткой из прямоугольных ячеек, открывает интерфейс, с помощью которого можно открыть недавно вызванные файлы. Меню 3x3 показывает файлы, которые были недавно изменены (в хронологическом порядке). Красным цветом будет отмечен файл, который не удается найти (такое может случится если вы перемещали файл в новую папку или удалили его).
+8. Строка состояния сообщает вам о том, какая версия Grasshopper установлена в текущий момент на вашем компьютере. При наличии более новой версии, выпадает меню с инструкциями, как скачать последнюю версию.
 
 
-####1.1.2.1. THE WINDOWS TITLE BAR
-The Editor Window title bar behaves differently from most other dialogs in
-Microsoft Windows. If the window is not minimized or maximized, double
-clicking the title bar will collapse the dialog into a minimized bar on your
-screen. This is a great way to switch between the plug-in and Rhino because it
-minimizes the Editor without moving it to the bottom of the screen or behind
-other windows. Note that if you close the Editor, the Grasshopper geometry
-preview in the Rhino viewport will disappear, but the file won’t actually be
-closed. The next time you run the “Grasshopper” command in the Rhino dialog
-box, the window will come back in the same state with the same files loaded.
-This is because once it is launched from the command prompt, your session
-of Grasshopper stays active until that instance of Rhino is closed.
+####1.1.2.1. СТРОКА ЗАГОЛОВКА ОКНА
+Редактор строки заголовка окна ведет себя по-разному в отличие от 
+большинства других диалоговых окон в Microsoft Windows. Если окно 
+находится не в уменьшенном или увеличенном размере, двойной клик 
+по строке заголовка свернет окно в уменьшенный размер на вашем экране.
+Это хороший способ переключаться между плагином Grasshopper и Rhino, 
+т.к. это окно редактора сворачивается без необходимости перемещать его 
+к краю экрана или размещения позади других окон. Помните, что если вы 
+закроете окно редактора, предпросмотр геометрии Grasshopper в видовом 
+окне Rhino исчезнет, но сам файл не будет закрыт. В следующий раз когда 
+вы запустите команду "Grasshopper" в диалоговом окне Rhino, окно вернется 
+в том же виде с теми же загруженными файлами. Так происходит потому, 
+что как только оно загружено по запросу команды, ваша сессия в 
+Grasshopper остается активной до тех пор, пока Rhino не закрыт.
 
 
-####1.1.2.2. MAIN MENU BAR
-The title bar is similar to typical Windows menus, except for the file browser
-control on the right (see next section). The File menu provides typical functions
-(eg. New File, Open, Save, etc.) in addition to a few utility tools which let you
-export images of your current Grasshopper document (see Export Quick Image
-and Export Hi-Res Image). You can control different aspects of the user interface
-using the View and Display menus, while the Solution menu lets you manage
-different attributes about how the solver computes the graph solution.
 
-It is worth noting that many application settings can be controlled through the
-Preferences dialog box found under the File menu. The Author section allows
-you to set personal metadata which will be stored with each Grasshopper
-document while the Display section gives you fine grain control over the look
-and feel of the interface. The Files section lets you specify things like how
-often and where to store automatically saved file (in case the application is
-inadvertently closed or crashes). Finally, the Solver section lets you manage core
-and third-party plugins which can extend functionality.
+####1.1.2.2. СТРОКА ГЛАВНОГО МЕНЮ
+Эта строка похожа на обычное меню Windows, за исключением контроля диспетчера 
+файла справа (см.следующий раздел). Меню файла предоставляет стандартные функции 
+(например, New File (новый документ), Open (открыть), Save (сохранить) и т.д.) в 
+добавок к нескольким инструментам, которые позволяют вам экспортировать 
+изображения вашего текущего документа Grasshopper (см. Export Quick Image - быстрый
+экспорт изображения и Export Hi-Res Image - экспорт изображения высокого разрешения).
+Вы можете контролировать различные аспекты пользовательского интерфейса, используя 
+меню View (вид) и Display (дисплей/отображение). Меню Solution (решение) позволяет 
+управлять различными параметрами того, как инструмент проверки вычисляет схемы решений.
 
-> Note: Be careful when using shortcuts since they are handled by the active window which could either be Rhino, the Grasshopper canvas or any other window inside Rhino. It is quite easy to use a shortcut command, only to realize that you had the wrong active window selected and accidentally invoked the wrong command.
+Следует упомянуть, что многие настройки приложения можно контролировать через 
+диалоговое окно Preferences (Настройки), располагающееся под меню File. Секция
+Author (Автор) позволяет настраивать персональные метаданные, которые будут 
+сохраняться с каждым документом Grasshopper, в то время как секция Display 
+(дисплей/отображение) предоставляет точный контроль за видом и функцией 
+интерфейса. Секция File (файл) позволяет уточнить такие моменты, как часто и 
+где сохранять автоматически сохраняемые файлы (в случае если приложение было 
+непреднамеренно закрыто или дало сбой). Ну и наконец, секция Solver (инструмент
+проверки) позволяет управлять основными и сторонними плагинами, которые могут 
+увеличить функциональность.
+
+> Примечание: Будьте внимательны при использовании "горячих" клавиш, так как они осуществляются активным окном, а это может быть как Rhino так холст Grasshopper или любое другое окно внутри Rhino. Довольно легко использовать "горячие" клавиши, а потом осознать, что у вас выбрано не то окно и случайно вы вызвали не ту команду.
 
 ![IMAGE](images/1-1-2/1-1-2_002-settings.png)
->The Preferences dialog allows you to set many of Grasshopper’s application settings.
+>Окно Preferences позволяет настроить большинство из настроек приложения Grasshopper.
 
-####1.1.2.3. FILE BROWSER CONTROL
-The File Browser allows you to quickly switch between different loaded files by
-selecting them through this drop-down list. Accessing your open files through
-the File Browser drop-down list enables you to quickly copy and paste items
-from open definitions. Just click on the active file name in the browser control
-window and a cascading list of all open files will be displayed (along with a small
-thumbnail picture of each open definition) for easy access. You can also hit
-Alt+Tab to quickly switch between any open Grasshopper documents.
+####1.1.2.3. УПРАВЛЕНИЕ ДИСПЕТЧЕРОМ ФАЙЛОВ
+Диспетчер файлов позволяет быстро переключаться между различными загруженными 
+файлами, выбирая их через выпадающий список. Получив доступ к вашим открытым 
+файлам через выпадающий список диспетчера файлов, вы сможете быстро копировать
+и вставлять элементы из открытых определений. Просто кликните на имени 
+активного файла в окне управления диспетчера, и каскадный список отобразит все
+открытые файлы для быстрого доступа к ним (рядом будет миниатюрное изображение
+каждого открытого определения). Можно также нажать комбинацию клавиш Alt+Tab, 
+чтобы быстро переключиться между любыми открытыми документами Grasshopper.
 
-Of course, you can go through the standard Open File dialog to load any
-Grasshopper document, although you can also drag and drop any Grasshopper
-file onto the canvas to load a particular definition.
+Конечно, вы можете пойти через стандартный диалог Open File для загрузки 
+любого документа Grasshopper, хотя вы можете также перетащить любой файл
+Grasshopper на холсте, чтобы загрузить определенное определение.
 
-> Grasshopper is a plug-in that works “on-top” of Rhino and as such has its own file types.
-The default file type is a binary data file, saved with an extension of .gh. The other file type is known as a Grasshopper XML file, which uses the extension .ghx. The XML (Extensible Markup Language) file type uses tags to define objects and object attributes (much like an .HTML document) but uses custom tags to define objects and the data within each object. Because XML files are formatted as textdocuments, you could open up any Grasshopper XML file in a text editor like NotePad to see the coding that is going on behind the scenes.
+> Grasshopper - это плагин, который работает "поверх" Rhino и поэтому имеет свои типы файлов. 
+Тип файла по умолчанию - файл с бинарными данными, сохраняется с расширением .gh. Другой тип файлов известен как Grasshopper XML файл, имеет расширение .ghx. Тип файлов XML (расширяемый язык разметки) использует тэги для определения объектов и характеристики объектов (почти как .HTML документ), но использует настраиваемые тэги для определения объектов и данных внутри каждого объекта. Из-за того, что XML файлы отформатированы как текстовые документы, вы можете открыть любой файл Grasshopper XML в текстовом редакторе, например NotePad, чтобы посмотреть на код, который стоит за всем этим.
 
-Grasshopper has several different methods by which it can open a file, and you
-will need to specify which option you would like to use when using this method.
+Grasshopper может открыть файл несколькими способами, поэтому вам нужно будет 
+указать, какой способ вы хотите использовать.
 
-**Open File:** As the name suggests, this file option will simply open any
-definition that you drag and drop onto the canvas.
+**Open File (Открыть Файл):** Как и предполагает имя, этот способ открытия файла 
+просто откроет любое определение, которое вы перетащите на холст.
 
-**Insert File:** You can use this option to insert an existing file into the current
-document as loose components.
+**Insert File (Вставьте Файл):** Вы можете воспользоваться этим способом, чтобы 
+вставить существующий файл в текущий документ как свободный компонент.
 
-**Group File:** This method will insert a file into an existing document, but will
-group all of the objects together.
+**Group File (Сгруппировать Файл):** Этот метод вставит файл в существующий 
+документ, и сгруппирует все объекты вместе.
 
-**Cluster File:** Similar to the group function, this method will insert a file into
-an existing document, but will create a cluster object for the entire group
-of objects.
+**Cluster File (Кластеризовать Файл):** Похоже на функцию Сгруппировать,
+этот метод вставит файл в существующий документ, но создаст объединенный объект 
+(кластер) для целой группы объектов.
 
-**Examine File:** Allows you to open a file in a locked state, meaning you
-can look around a particular file but you can’t make any changes to the
-definition.
+**Examine File (Исследовать Файл):** Позволяет вам открыть файл в защищенном
+режиме, то есть вы сможете рассмотреть определенный файл, но вы не сможете 
+внести изменения в определение.
 
-Grasshopper also has an Autosave feature which will be triggered periodically
-based on specific user actions. A list of Autosave preferences can be found
-under the File menu on the Main Menu Bar. When the active instance of Rhino is
-closed, a pop-up dialog box will appear asking whether or not you want to save
-any Grasshopper files that were open when Rhino was shut down.
+Grasshopper также обладает функцией Автосохранения, которая периодически
+будет срабатывать, основываясь на особых действиях пользователя. Список 
+параметров Автосохранения находится под меню File на Строке основного меню. 
+При закрытии активной сессии Rhino, во всплывающем окне появится вопрос - 
+хотите вы или нет сохранить какие-либо файлы Grasshopper, которые были 
+открыты на момент закрытия Rhino.
 
->Autosave only works if the file has already been saved at least once.
+>Автосохранение работает при условии, что файл уже однажды был сохранен, по крайней мере, один раз.
 
 ![IMAGE](images/1-1-2/1-1-2_003-autosave.png)
->Drag and Drop Files onto the Canvas.
+>Файлы, которые перетащили на холст.
 
-####1.1.2.4. COMPONENT PALETTES
-This area organizes components into categories and sub-categories. Categories
-are displayed as tabs, and subcategories are displayed as drop-down panels. All
-components belong to a certain category. These categories have been labeled
-to help you find the specific component that you are looking for (e.g. “Params”
-for all primitive data types or “Curves” for all curve related tools). To add a
-component to the canvas, you can either click on the objects in the drop-down
-menu or you can drag the component directly from the menu onto the canvas.
+####1.1.2.4. ПАНЕЛИ КОМПОНЕНТОВ
+В этой области размещены компоненты, которые разделены на категории и свитки. 
+Категории отображаются как вкладки, свитки отображаются как выпадающие панели. 
+Все компоненты принадлежат к определенной категории. Эти категории были разбиты
+на классы, чтобы помочь вам найти определенный компонент (например, "Params" 
+для всех примитивных типов данных или "Curves" для всех инструментов, связанных
+с кривыми). Два способа добавления компонента на холст: кликнуть на объект в 
+выпадающем меню или перетащить компонент прямо из меню на холст. 
 
 ![IMAGE](images/1-1-2/1-1-2_004-component-palette.png)
->Drag + Drop a component from the palette to add a component to the canvas.
+>Компонент, который перетащили с панели для добавления компонента на холст.
 
-Since there can be many more components in each sub-category than will fit into
-the palette, a limited number of icons are displayed on each panel. The height
-of the component palette and the width of the Grasshopper window can be
-adjusted to display more or fewer components per sub-category. To see a menu
-of all of the components in a given sub-category, simply click on the black bar at
-the bottom of each sub-category panel. This will open a dropdown menu which
-provides access to all components in that sub-category.
+Так как в каждом свитке может быть гораздо больше компонентов, чем поместиться 
+на палитру, на каждой панели отображается ограниченное число иконок. Высоту 
+панели компонентов и ширину окна Grasshopper можно настроить так, чтобы отображалось
+больше или меньше компонентов в подкатегории. Чтобы посмотреть меню всех компонентов
+в данном свитке, просто кликните на черной строке внизу каждой панели свитка. Тогда 
+откроется выпадающее меню, которое покажет все компоненты в данной подкатегории.
 
 
 ![IMAGE](images/1-1-2/1-1-2_005-subcategories.png)
->1. Catgory tab
-2. Sub-category panel.
-3. Click the black bar to open the sub-category panel menu.
-3. Hover your mouse over a component for a short description.
-4. Drop-down menu.
+>1. Вкладка категории
+2. Панель свитка.
+3. Кликните на черной строке, чтобы открыть панель меню свитка.
+4. Наведите мышку на компонент для получения краткого описания.
+5. Выпадающее меню.
 
 
-####1.1.2.5. THE CANVAS
-The canvas is the primary workspace for creating Grasshopper definitions. It is
-here where you interact with the elements of your visual program. You can start
-working in the canvas by placing components and connecting wires.
+####1.1.2.5. ХОЛСТ
+Холст - это основное рабочее пространство для создания определения Grasshopper.
+Здесь вы можете взаимодействовать с элементами вашего визуального программирования.
+Вы можете начать работать на холсте, размещая компоненты и соединяя их связями.
 
-####1.1.2.6. GROUPING
-Grouping components together on the canvas can be especially useful for
-readability and comprehensibility. Grouping allows you the ability to quickly
-select and move multiple components around the canvas. You can create a group
-by typing Ctrl+G with the desired components selected. An alternate method
-can be found by using the “Group Selection” button under the Edit Menu on the
-Main Menu Bar. Custom parameters for group color, transparency, name, and
-outline type can be defined by right-clicking on any group object.
+####1.1.2.6. ГРУППИРОВАНИЕ
+Группирование компонентов вместе на холсте может быть особенно полезно для
+разборчивости и доступности для восприятия. Группирование позволяет вам быстро
+выбирать и передвигать множество компонентов по холсту. Вы можете создать группу,
+набрав Ctrl+G при этом желаемый компонент должен быть выбран. Можно выбрать 
+альтернативный метод группирования -  нажав кнопку "Group Selection" (Выбор Группы)
+под Меню Edit на Строке главного меню. Настройте параметры цвета группы, 
+прозрачности, имени и типа контура кликнув правой кнопкой мыши на любом объекте группы.
 
 ![IMAGE](images/1-1-2/1-1-2_006-grouping1.png)
->1. A group of components delineated by the Box Outline profile.
-2. Right-click anywhere on the group to edit the name and appearance of the group.
+>1. Группа компонентов, очерченная прямоугольником.
+2. Щелкните правой кнопкой мыши в любом месте группы для редактирования имени и вида группы.
 
 
 ![IMAGE](images/1-1-2/1-1-2_007-grouping2.png)
->You can also define a group using a meta-ball algorithm by using the Blob Outline profile.
+>Вы также можете обозначить группу, используя алгоритм метабол с использованием силуэта расплывчатого пятна.
 
 ![IMAGE](images/1-1-2/1-1-2_008-grouping3.png)
->Two groups are nested inside one another. The color (light blue) has been changed on the outer group to help visually identify one group from the other. Groups are drawn “behind” the components within them and, in cases such as this, there is a depth order to the two groups. To change this, go to Edit > Arrange in the main menu bar.
+>Две группы расположены одна внутри другой. Цвет (светло-голубой) был изменен у внешней группы для лучшей визуальной идентификации одной группы от другой. Группы начерчены "позади" компонентов и включают их, в таких случаях как этот, присутствует глубина цвета в соответствии и порядком двух групп. Чтобы изменить это, нажмите Edit>Arrange в строке главного меню.
 
-####1.1.1.7. WIDGETS
-There are a few widgets that are available in Grasshopper that can help you
-perform useful actions. You can toggle any of these widgets on/off under the
-Display menu of the Main Menu bar. Below we’ll look at a few of the most
-frequently used widgets.
+####1.1.1.7. ВИДЖЕТЫ
+В Grasshopper доступны несколько виджетов, которые могут помочь вам выполнять
+полезные действия. Вы можете включить/выключить любые из этих виджетов под 
+меню Display (дисплей/отображение) на Строке главного меню. Ниже мы познакомимся
+с несколькими самыми часто используемыми виджетами.
 
 **The Align Widget**
-One useful UI widget which can help you keep your canvas clean is the Align
-widget. You can access the Align widget by selecting multiple components at the
-same time and clicking on one of the options found in the dashed outline that
-surrounds your selected components. You can align left, vertical center, right, or
-top, horizontal center, bottom, or distribute components equally through this
-interface. When first starting out, you may find that these tools sometimes get in
-the way (it is possible to make the mistake of collapsing several components on
-top of each other). However, with a little practice these tools can be invaluable as
-you begin to structure graphs which are readable and comprehensible.
+Один из полезных виджетов для пользовательского интерфейса, который помогает 
+поддерживать порядок на холсте - это Align виджет. Вы получите доступ к виджет
+у Align, если выберите несколько компонентов одновременно и кликните на одной
+из опций, обнаруженных на пунктирном силуэте, которые окружают выбранные вами
+компоненты. Вы можете выравнивать по левой стороне, вертикально по центру, 
+по правой стороне, по верху, горизонтально по центру, по низу или расположить
+компоненты равномерно через этот интерфейс. В самом начале вы можете столкнуться
+с тем, что инструменты мешают при работе (есть вероятность совершить ошибку 
+при накладывании нескольких компонентов один на другой). Тем не менее, после
+небольшой практики эти инструменты могут стать бесценными, когда вы начнете 
+структурировать графики, чтобы они были удобочитаемыми и понятными.
 
 ![IMAGE](images/1-1-2/1-1-2_009-align-widget.png)
->1. Align right.
-2. Distribute vertically.
+>1. Выровнять по правой стороне.
+2. Распределить по вертикали.
 
 
 **The Profiler Widget**
-The profiler lists worst-case runtimes for parameters and components,
-allowing you to track down bottlenecks in networks and to compare different
-components in terms of performance. Note that this widget is turned off by
-default.
+Этот виджет выдает список наихудшего времени выполнения для параметров
+и компонентов, позволяя отслеживать узкие места в сети и сравнивать 
+различные компоненты в плане затрат на выполнение. Помните, что этот
+виджет отключен по умолчанию.
 
 ![IMAGE](images/1-1-2/1-1-2_010-profiler.png)
->The Profiler widget gives you visual feedback as to which components in your definition could be causing longer computational times.
+>Виджет Profiler предоставляет визуальную обратную связь по тому, какие компоненты в вашем определении могут занять длительное время на выполнение операции.
 
 **The Markov Widget**
-This widget uses Markov chains to ‘predict’ which component you may want to
-use next based on your behavior in the past. A Markov chain is a process that
-consists of a finite number of states (or levels) and some known probabilities. It
-can take some time for this widget to become accustomed to a particular user,
-but over time you should begin to notice that this widget will begin to suggest
-components that you may want to use next.
-The Markov Widget can suggest up to five possible components depending
-on your recent activity. You can right-click on the Markov widget (the default
-location is the bottom left-hand corner of the canvas) to dock it into one of the
-other corners of the canvas or to hide it completely.
+Этот виджет использует цепь Маркова, чтобы предугадать какой компонент вы захотите
+использовать следующим, основываясь на вашем предыдущем поведении. Цепь Маркова - 
+это процесс, который состоит из четного числа состояний (или уровней) и некоторых
+известных возможностей. Этому виджету потребуется некоторое время для настройки под
+определенного пользователя, но спустя некоторое время вы должны начать замечать, 
+что этот виджет начинает предлагать компоненты, которые вы хотите использовать 
+следующими. Виджет Markov может предлагать до 5 возможных компонентов в зависимости
+от недавней активности. Кликните правой кнопкой мыши по виджету (по умолчанию 
+располагается в левом нижнем углу холста), чтобы разметить его в одном из других
+углов холста или полностью спрятать.
 
 
 
-####1.1.2.8. USING THE SEARCH FEATURE
-Although a lot of thought has gone into the placement of each component on
-the component panel to make it intuitive for new users, people sometimes find
-it difficult to locate a specific component that might be buried deep inside one
-of the category panels. Fortunately, you can also find components by name, by
-double-clicking on any empty space on the canvas. This will invoke a pop-up
-search box. Simply type in the name of the component you are looking for and
-you will see a list of parameters or components that match your request.
+####1.1.2.8. ИСПОЛЬЗОВАНИЕ ФУНКЦИИ ПОИСКА
+Несмотря на то, что было много размышлений насчет того, как лучше расположить
+каждый компонент на панели, чтобы это было интуитивно легко для новых пользователей, 
+им все равно иногда трудно найти определенный компонент, который может быть 
+расположен в глубинах панелей категорий. К счастью, вы также можете находить
+компоненты по имени, дважды кликнув в любом пустом месте на холсте. Сделав это,
+вы вызовете окно поиска. Далее, просто наберите название компонента, появится 
+список параметров или компонентов, подходящих под ваш поиск.
 
 ![IMAGE](images/1-1-2/1-1-2_011-search.png)
->Double-click anywhere on the canvas to invoke a key word search for a particular component found in the Component Panels.
+>Кликните дважды в любом месте на холсте, чтобы вызвать поиск по ключевым словам для поиска определенного компонента.
 
 ![IMAGE](images/1-1-2/1-1-2_012-search2.png)
->A search for “divide” lists a variety of components.
-1. Division operator component.
-2. Divide Surface component.
-3. Divide Domain2 component.
+>Набрав "divide", вы получите список различных компонентов.
+1. Компонент Division Operator.
+2. Компонент Divide Surface.
+3. Компонент Divide Domain2.
 
 
-####1.1.2.9. THE FIND FEATURE
-There are literally hundreds (if not thousands) of Grasshopper components
-which are available to you and it can be daunting as a beginner to know where
-to look to find a specific component within the Component Palettes. The quick
-solution is to double-click anywhere on the canvas to launch a search query for
-the component you are looking for. However, what if we need to find a particular
-component already placed on our canvas? No need to worry. By right-clicking
-anywhere on the canvas or pressing the F3 key, you can invoke the Find feature.
-Start by typing in the name of the component that you are looking for.
+####1.1.2.9. ФУНКЦИЯ ПОИСКА
+Существуют, в буквальном смысле, сотни (если не тысячи) компонентов Grasshopper, 
+которые вы можете использовать, и вас, как новичка, может испугать поиск
+определенного компонента на Панели Компонентов. Быстрое решение - это 
+дважды кликнуть в любом месте холста, чтобы запустить поиск необходимого 
+компонента. Тем не менее, что если нам требуется найти определенный компонент,
+уже расположенный на нашем холсте? Беспокоиться не о чем. Кликнув правой клавишей
+мыши на холсте или нажав F3, вы вызовете функцию поиска. Начните печатать название
+компонента, который вы ищете.
 
-The Find feature employs the use of some very sophisticated algorithms which
-search not only for any instances of a component’s name within a definition (a
-component’s name is the title of the component found under the Component
-Panel which we as users cannot change), but also any unique signatures which
-we may have designated for a particular component (known as nicknames).
-The Find feature can also search for any component type on the canvas or
-search through text panel, scribble, and group content. Once the Find feature
-has found a match, it will automatically grey out the rest of the definition and
-draw a dashed line around the highlighted component. If multiple matches are
-found, a list of components matching your search query will be displayed in the
-Find dialog box and hovering over an item in the list will turn that particular
-component on the canvas green.
+Функция поиска использует некоторые сложно организованные алгоритмы, которые 
+осуществляют поиск не только по отдельным наименованиям компонентов внутри 
+определения (наименование компонента - это название компонента, которое 
+находится под Панелью Компонентов и которое мы, как пользователи, не может
+изменить), но и также по любым уникальным признакам, которые мы присвоили 
+определенным компонентам (известным как псевдоним или прозвище). Функция 
+поиска также может осуществлять поиск по типу компонента на холсте или поиск
+по текстовой панели, наброскам и групповому контенту. Как только функция поиска
+нашла совпадение, она автоматически выделит серым цветом остальное определение
+и проведет пунктирную линию вокруг выделенного компонента. Если будут обнаружены
+несколько совпадений, список компонентов, отвечающих вашему поиску, будут 
+отображены в диалоговом окне и будут находиться поверх наименования из списка,
+которое будет подсвечено зеленым цветом.
 
 ![IMAGE](images/1-1-2/1-1-2_013-find.png)
->By right-clicking anywhere on the canvas or pressing the F3 key, you can invoke the Find feature. Start by typing in the name of the component that you are looking for.
+>Кликнув правой клавишей мыши на холсте или нажав F3, вы вызовете функцию поиска. Начните печатать название компонента, который вы ищете.
 
 ![IMAGE](images/1-1-2/1-1-2_014-find2.png)
->The Find feature can be quite helpful to locate a particular component on the canvas. Right-click anywhere on the canvas to launch the Find dialog box.
+>Функция поиска может быть очень полезной для нахождения определенного компонента на холсте. Кликните правой клавишей мыши по холсту, чтобы запустить окно поиска.
 
 ![IMAGE](images/1-1-2/1-1-2_015-find3.png)
->A small arrow will also be displayed next to each item in the list which points
-to its corresponding component on the canvas. Try moving the Find dialog box
-around on the canvas and watch the arrows rotate in to keep track of their
-components. Clicking on the Find result will try to place the component (on the
-canvas) next to the Find dialog box.
+>Маленькая стрелка также будет отображаться рядом с каждым элементом в списке, 
+указывая на соответствующий компонент на холсте. Попробуйте покрутить поисковое
+диалоговое окно по холсту и посмотрите, как стрелки вращаются, чтобы отследить 
+их компоненты. Кликнув по результатам поиска, компонент разместится (на холсте)
+рядом с диалоговым окном Поиска.
 
 
 
-
-####1.1.2.10. USING THE RADIAL MENU
-As you become more proficient in using the Grasshopper interface, you’ll
-begin to find ways to expedite your workflow. Using shortcuts is one way to do
-this, however there is another feature which can allow you to quickly access
-a number of useful tools – the radial UI menu. You can invoke the radial menu
-by hitting the space bar (while your mouse is over the canvas or a component)
-or by clicking your middle mouse button. The radial menu will enable different
-tools depending on whether you invoke the menu by clicking directly on top
-of a component, or just anywhere on the canvas. In the image below, you see
-the radial menu has more features available when clicking on top of a selected
-component versus just clicking anywhere else on the canvas. This menu can
-dramatically increase the speed at which you create Grasshopper documents.
+####1.1.2.10. ИСПОЛЬЗОВАНИЕ РАДИАЛЬНОГО МЕНЮ
+По мере того, как вы будете становиться большими профессионалами в использовании
+интерфейса Grasshopper, вы будете находить способы ускорить вашу работу. 
+Один из таких способов - это использование быстрых клавиш. Также существует и 
+другой способ быстрого доступа к некоторым полезным инструментам - радиальное
+меню UI. Вы можете вызвать радиальное меню, нажав клавишу пробела (в то время
+как ваша мышка находится над холстом или компонентом) или кликнув средней 
+клавишей мыши. Радиальное меню включает различные инструменты, в зависимости от
+того, вызвали ли вы меню кликнув прямо над компонентом или просто в любом месте
+холста. На изображении ниже, вы можете увидеть, что радиальное меню имеет больше
+доступных функций при клике над выбранным компонентом в отличие от клика просто
+в любом месте холста. Использование этого меню может значительно ускорить вашу
+скорость работы с документами Grasshopper.
 
 ![IMAGE](images/1-1-2/1-1-2_016-radial-menu.png)
->The Radial UI menu allows you to quickly access frequently used menu items.
+>UI радиального меню позволит быстро получить доступ к часто используемым пунктам меню.
 
-####1.1.2.11. THE CANVAS TOOLBAR
-The canvas toolbar provides quick access to a number of frequently used
-Grasshopper features. All of the tools are available through the menu as well,
-and you can hide the toolbar if you like. The toolbar can be re-enabled from the
-View tab on the Main Menu Bar.
+####1.1.2.11. ПАНЕЛЬ ИНСТРУМЕНТОВ ХОЛСТА
+Панель инструментов холста предоставляет быстрый доступ к часто используемым
+компонентам Grasshopper. Все инструменты доступны через меню, вы можете спрятать
+панель инструментов, если захотите. Панель инструментов можно редактировать во 
+вкладке View (вид) на Строке главного меню.
 
 ![IMAGE](images/1-1-2/1-1-2_017-toolbar1.png)
->1. **Open File:** A shortcut to open a Grasshopper File.
-2.  **Save File:** A shortcut to save the currentGrasshopper File.
-3.  **Zoom Defaults**: Default zoom settings that allow you to zoom in or out of your canvas at predefined intervals.
-4. **Zoom Extents:** Zoom to the extents of your definition. Click on the arrow next to the Zoom Extents icon to select one of the sub-menu items to zoom to a particular region within your definition.
-5. **Named Views: **This feature exposes a menu allowing you to store or recall any view area in your definition.
-6. **The Sketch Tool:** The sketch tool works similarly to the pencil
-tool set found in Adobe Photoshop with a few added features.
+>1. **Open File (Открыть Файл):**  Ссылка для открытия файла Grasshopper.
+2.  **Save File (Сохранить файл):** Ссылка для сохранения текущего файла Grasshopper.
+3.  **Zoom Defaults (Масштаб по умолчанию)**: Настройки масштаба по умолчанию позволяют вам увеличивать или уменьшать холст по предустановленным интервалам.
+4. **Zoom Extents (Масштаб):** Масштабируйте по размеру вашего определения. Кликните по стрелке рядом с иконкой Zoom Extents, чтобы выбрать один из элементов подменю для масштабирования определенной области вашего определения.
+5. **Named Views (Именнованный просмотр):** Эта функция раскрывает меню, позволяя вам разместить или переименовать любую область просмотра в вашем определении.
+6. **The Sketch Tool (Инструмент для скетчей):** Этот инструмент работает также как инструмент "карандаш" в
+программе Adobe Photoshop, но имеет несколько дополнительных функций.
 
 ![IMAGE](images/1-1-2/1-1-2_017-toolbar2.png)
->1. **Preview Settings:** If a Grasshopper component generates some form of geometry, then a preview of this geometry will be visible in the viewport by default. You can disable the preview on a perobject basis by right-clicking each component and de-activating the preview feature, or globally change the preview state by using one of these three buttons.
-2. Wire-frame preview.
-3. Turn off preview.
-4. Shaded preview (default).
-5. **Preview Selected Objects:** With this button toggled, Grasshopper will only display geometry that is part of selected components, even if those components have a preview=off state.
-6. **Document Preview Settings:** Grasshopper has a default color scheme for selected (semi-transparent green) and unselected (semi-transparent red) geometry. It is possible to override this color scheme with the Document Preview Settings dialog.
-7. **Preview Mesh Quality:** For optimization purposes, these settings allow you to control the quality of the mesh/surface display of the geometry rendered in Rhino. Higher quality settings will cause longer calculation times, whereas lower settings will display less accurate preview geometry. It should be noted that the geometry still maintains a high-degree of resolution when baked into the Rhino document – these settings merely effect the display performance and quality.
+>1. **Настройки просмотра:** Если компонент Grasshopper генерирует какую-либо геометрию, тогда предпросмотр этой геометрии будет происходить в видовом окне по умолчанию. Вы можете отключить предпросмотр для каждого отдельного объекта правым кликом мыши по каждому компоненту и отключить функцию предпросмотра, либо вы можете глобально изменить способы предпросмотра, используя одну из трех кнопок.
+2. Режим просмотра структуры / каркаса.
+3. Отключить предпросмотр.
+4. Просмотр с тенью (по умолчанию).
+5. **Предпросмотр выбранного объекта:** При нажатии этой кнопки, Grasshopper будет отображать геометрию, которая является частью выбранных компонентов, даже если у тех компонентов выключен режим предпросмотра.
+6. **Настройки просмотра документа:** В Grasshopper по умолчанию настроена цветовая схема для выбранных (полупрозрачный зеленый) и невыбранных (полупрозрачный красный) геометрий. Эти цвета можно переназначить с использованием диалогового окна Настройки просмотра документа.
+7. **Предпросмотр качества Mesh:**  В целях оптимизации эти настройки позволят вам контролировать качество отображения mesh/поверхности той геометрии, которая была отрендерена в Rhino. Высокие настройки качества станут причиной долгих просчетов, в то время как низкие настройки будут отображать не аккуратную геометрию при просмотре. Следует заметить, что геометрия все равно будет сохранять высокое разрешение при запекании файла в Rhino. Эти настройки, в основном, влияют на выполнение отображения и качество.
 
 ![IMAGE](images/1-1-2/1-1-2_018-sketch.png)
->The sketch tool allows changes to the line weight, line type, and color. By right-clicking on the selected sketch object you can choose to simplify your line to create a smoother effect. Right-click on your sketch object and select “Load from Rhino”. When prompted, select any 2D shape in your Rhino scene. Once you have selected your referenced shape, hit Enter, and your previous sketch line will be reconfigured to your Rhino reference shape.
+>Скетч инструмент позволяет поменять толщину линии, тип линии и цвет. Кликнув правой клавишей мыши по выбранному скетч-объекту, вы сможете выбрать упростить линию, чтобы создать эффект сглаживания. Кликните правой клавишей мыши по скетч-объекту и выберите "Load from Rhino". При появлении подсказки выберите любую 2Д форму в среде Rhino. Как только вы выбрали исходную форму, нажмите Enter, и предыдущий скетч будет отредактирован по вашей исходной форме в Rhino.
 
->Note: Your sketch object may have moved from its original location once you have loaded a shape from Rhino. Grasshopper places your sketch object relative to the origin of the canvas (upper left hand corner) and the world xy plane origin in Rhino.
+>Примечание: Ваш скетч-объект может сместиться с первоначального положения, когда вы загрузите форму из Rhino. Grasshopper располагает ваш скетч-объект относительно исходной точки холста (верхний левый угол) и мировых координат в Rhino.
 
 ![IMAGE](images/1-1-2/1-1-2_019-preview.png)
->Grasshopper has a default color scheme for selected (semi-transparent green) and unselected (semi-transparent red) geometry. It is possible to override this color scheme with the Document Preview Settings dialog.
+>В Grasshopper, по умолчанию, настроена цветовая схема для выбранных (полупрозрачный зеленый) и невыбранных (полупрозрачный красный) геометрий. Эти цвета можно переназначить с использованием диалогового окна Настройки просмотра документа.
 
 
 

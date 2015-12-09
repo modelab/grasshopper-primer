@@ -1,67 +1,66 @@
-### 1.2.3. DATA TYPES
+### 1.2.3. ТИПЫ ДАННЫХ
 
-#####Most parameters can store two different kinds of data: Volatile and Persistent. Volatile data is inherited from one or more sources and is destroyed (i.e. recollected) whenever a new solution starts. Persistent data is data which has been specifically set by the user.
+#####Большинство параметров хранят два различных типа данных: изменяемые и постоянные. Изменяемые данные наследуются из одного или более ресурсов и разрушаются (т.е. собираются заново) всякий раз, когда начинается новое решение. Постоянные данные - это данные, которые были специально введены пользователем.
 
-####1.2.3.1. PERSISTENT DATA
-Persistent data is accessed through the menu, and depending on the kind of parameter has a different manager. A Point parameter for example allows you to set one or more points through its menu. But, let’s back up a few steps and see how a Point Parameter behaves.
+####1.2.3.1. ПОСТОЯННЫЕ ДАННЫЕ
+Постоянные данные доступны через меню и, в зависимости от типа параметра, имеют разных управляющих. Параметр Point, например, позволяет вам настроить одну или больше точек через меню. Но, давайте вернемся на несколько шагов назад и посмотрим, как ведет себя параметр Point.
 
-When you drag and drop a Point Parameter from the Params/Geometry Panel onto the canvas, the Parameter is orange, indicating it generated a warning. It’s nothing serious, the warning is simply there to inform you that the parameter is empty (it contains no persistent records and it failed to collect volatile data) and thus has no effect on the outcome of the solution. The context menu of the Parameter offers two ways of setting persistent data: single and multiple. Right click on the parameter to set Multiple Points. Once you click on either of these menu items, the Grasshopper window will disappear and you will be asked to pick a point in one of the Rhino viewports.
+Когда вы перетащили параметр Point из Params/Geometry Panel на холст, параметр оранжевого цвета, сигнализируя о наличии предупреждения. Это не очень страшно, предупреждение просто информирует вас о том, что параметр пустой (не содержит постоянных записей и не может собрать изменяемые данные) и, таким образом, не влияет на результат решения. Контекстное меню параметра предлагает два способа настройки постоянных данных: один и множество. Кликните правой клавишй мыши по параметру, чтобы установить Multiple Points. Когда вы кликнете по какому-либо из этих элементов меню, окно Grasshopper закроется и программа попросит вас выбрать точку в одном из видовых окон Rhino.
 
 ![IMAGE](images/1-2-3/1-2-3_001-set-multiple-points.png)
 
-Once you have defined all the points you can press Enter and they will become part of the Parameters persistent data record. This means the Parameter is now no longer empty and it turns from orange to grey. (Notice that the information balloon in the upper right corner also disappears as there are no more warnings). At this point you can use the points stored in this Parameter for any subsequent input in your definition.
+Как только вы выберете все точки, нажмите Enter и они станут частью постоянных данных параметра. Это означает, что параметр больше не пустой и он поменяет цвет с оранжевого на серый. (Заметьте, что информационный шарик в правом верхнем углу также исчезнет, так как предупреждения больше нет). В этот момент вы можете использовать точки, хранящиеся в этом параметре, для любого последующего входа в вашем значении.
 
 ![IMAGE](images/1-2-3/1-2-3_002-parameter-persistent-data.png)
->1. The parameter is orange, indicating it contains no persistent records (and it failed to collect volatile data) and thus has no effect on the outcome of the solution. Right click on any parameter to set its persistent data.
-2. Once the parameter contains some persistent data, the component will turn from orange to grey.
-3. The tooltip for the point parameter shows the persistent data (a collection of referenced points) that is stored.
+>1. Оранжевый параметр информирует о том, что параметр не содержит постоянных данных (параметр не смог собрать изменяемые данные), таким образом, не влияет на результат решения. Кликните правой клавишей мыши по любому параметру, чтобы установить его постоянные данные.
+2. Как только параметр содержит какие-либо постоянные данные, компонент из оранжевого превращается в серый.
+3. Подсказка по инструменту для параметра Point отображает постоянные данные (набор исходных точек), которые он хранит.
 
-####1.2.3.2. VOLATILE DATA
-Volatile data, as the name suggests, is not permanent and will be destroyed each time the solution is expired. However, this will often trigger an event to rebuild the solution and update the scene. Generally speaking, most of the data generated ‘on the fly’ is considered volatile.
+####1.2.3.2. ИЗМЕНЯЕМЫЕ ДАННЫЕ
+Изменяемые данные, как подразумевает название, не постоянные и будут уничтожаться каждый раз, когда срабатывает решение. Тем не менее, это будет также часто запускать событие для перестроения решения и обновления сцены. Говоря в целом, большая часть данных, сгенерированных "на лету", считается изменяемой.
 
-As previously stated, Grasshopper data is stored in Parameters (either in Volatile or Persistent form) and is used in various Components. When data is not stored in the permanent record set of a Parameter, it must be inherited from elsewhere. Every Parameter (except output parameters) defines where it gets its data from and most Parameters are not very particular. You can plug a number Parameter (which just means that it is a decimal number) into an integer source and it will take care of the conversion.
+Как упоминалось раньше, данные Grasshopper хранятся в разделе Параметры (либо в Изменяемой или Постоянной  форме) и используются в различных Компонентах. Когда данные не хранятся в постоянном месте записи в Параметрах, появляется необходимость взять их откуда-то. Каждый Параметр (за исключением параметров выхода) сам определяет, откуда он получает свои данные, и большинство Параметров не очень точно определяют это. Вы можете подключить числовой Параметр (тот, который определяет, что это десятичное число) в целый источник и он возьмет на себя обязанность произвести конвертацию.
 
-You can change the way data is inherited and stored in the context menu of a parameter or component input. To change store referenced Rhino geometry in the grasshopper definition itself, right click a parameter and select Internalise data from the menu. This is useful if you want your grasshopper definition to be independent from a Rhino file.
+Вы можете изменить способ получения данных и способ хранения данных в контекстном меню параметра или входа компонента. Чтобы изменить хранящуюся исходную геометрию Rhino в самом определении Grasshopper, кликните правой клавишей мыши по параметру и выберите Internalise data из меню. Это полезно, если вы хотите, чтобы ваше определение Grasshopper было независимым от файла Rhino.
 
-You can also Internalise data in a component input. Once you select Internalise data in the menu, any wires will disconnect from that input. The data has been changed from volatile to persistent, and will no longer update.
+Вы также можете подключить Internalise data ко входу компонента. Как только вы выберете Internalise data в меню, все связи отсоединяться от этого входа. Данные изменились с изменяемых на постоянные и больше не будут обновляться.
 
-If you want the data to become volatile again, simply reconnect the wires to the input and the values will automatically be replaced. You can also right click the input and select Extract parameter. Grasshopper will create a parameter connected to the input with a wire that contains the data.
+Если вы хотите, чтобы данные снова превратились в изменяемые, просто отсоедините связи от входа и значения автоматически заменятся. Вы также можете кликнуть правой клавишей мыши по входу и выбрать параметр Extract (извлекать). Grasshopper создаст параметр, подключенный связью с входом, которая содержит данные.
 
 ![IMAGE](images/1-2-3/1-2-3_003-right-click.png)
 
-####1.2.3.3. INPUT PARAMETERS
-Grasshopper has a variety of Parameters that offer you the ability to interface with the data that is begin supplied to Component inputs and thereby control for changing the result of your definition. Because they Parameters that change with our input, they generate Volatile Data.
+####1.2.3.3. ВВОДНЫЕ ПАРАМЕТРЫ
+У Grasshopper есть разнообразные параметры, которые дают возможность взаимодействовать с данными, которые поставляются во входы компонента и, таким образом, контролируют изменение результата вашего определения. Из-за того, что параметры меняются с входом, они генерируют изменяемые данные.
 
 **Number Slider**
-The number slider is the most important and widely used Input Parameter. It allows us to output a value between two given extremes by interacting with its grip with our mouse. Sliders can be used to specify a value and see the change to our deifnition that comes with adjusting the grip, but a slider should also be thought of as the means to identify successful ranges of our definition.
+Цифровой слайдер - это самый важный и широко используемые параметр входа. Он позволяет нам выводить значения между двумя данными экстремумами, путем взаимодействия с его ползунками при помощи нашей мышки. Слайдеры могут использоваться, чтобы указывать значение и наблюдать за изменением нашего определения, которые происходят при перемещении  ползунка, но слайдер также должен рассматриваться как средство определения успешного диапазона нашего определения.
 
 ![IMAGE](images/1-2-3/1-2-3_004-number-slider.png)
->1. Drag the slider grip to change the value - each time you do this, Grasshopper will recompute the solution.
-2. Right click the slider component to change the name, type, and values.
-3. Editable text field for the slider name.
-4. Select the type of number for the slider to use.
-5. Edite the range of values.
-6. Double click the name portion of the slider component to open the Slider Editor.
+>1. Перемещайте ползунок слайдера, чтобы поменять значение. При каждом перемещении ползунка, Grasshopper будет пересчитывать решение.
+2. Кликните правой клавишей мыши по слайдеру, чтобы изменить имя, тип и значение.
+3. Редактируемое текстовое поле, которое отображает имя слайдера.
+4. Выберите тип числа для использования слайдером.
+5. Изменить диапазон значений.
+6. Дважды кликните по имени слайдера, чтобы открыть Slider Editor (редактор слайдера).
 
 
 **Graph mapper**
-The Graph Mapper is a two-dimensional interface with which we can modify
-numerical values by plotting the input along the Graph’s X Axis and outputting the corresponding value along the Y Axis at the X value intersection of the Graph. It is extremely useful for modulating a set of values within an institutive, grip-based interface.
+Graph Mapper - это двух-пространственный интерфейс, с помощью которого вы можете изменять числовые значения, выстраивая вход вдоль оси Х и выводя соответствующие значения вдоль оси Y на пересечении с осью X на графике. Это очень полезно при варьировании набора значений внутри установленного интерфейса с ползунками.
 
 ![IMAGE](images/1-2-3/1-2-3_005-graph-mapper-a.png)
->1. Move the grips to edit the graph - each time you do this, Grasshopper will recompute the solution.
-2. Right click the graph mapper compenent to select the graph type.
+>1. Перемещайте ползунки, чтобы отредактировать график. При каждом перемещении ползунка, Grasshopper будет пересчитывать решение.
+2. Кликните правой клавишей мыши по компоненту graph mapper, чтобы выбрать тип графика.
 
 ![IMAGE](images/1-2-3/1-2-3_006-graph-mapper-b.png)
->1. Double click the graph mapper to open the Graph Editor.
-2. Change thex and y domains.
+>1. Дважды кликните по graph mapper, чтобы открыть Graph Editor (редактор графика).
+2. Измените диапазоны x и y.
 
 **Value List**
-The Value List stores a collection of values with corresponding list of Labels associated by way of an equal sign. It is particularly useful when you want to have a few options, labeled with meaning, that can supply specific output values.
+Value List (список значений) хранит набор значений с соответствующим списком ярлыков, связанных при помощи знака равенства. Это особенно полезно, когда вы хотите иметь несколько опций, названных по значению, которые могут предоставить специфические значения на выходе.
 
 ![IMAGE](images/1-2-3/1-2-3_007-value-list.png)
->1. Right click the Value List component and select an option from the menu.
-2. Double click the Value List component to open the editor and add or change values.
-3. In Dropdown List mode, click the arrow to select one of the values. The solution will recompute each time you change the value.
-4. In Check List mode, click next to each value to check it. The component will output all the values that are checked.
-5. In Value Sequence and Value Cycle modes, click the left and right facing arrows to cycle through the values.
+>1. Кликните правой клавишей мыши по компоненту Value List и выберите опцию из меню.
+2. Дважды кликните по компоненту Value List, чтобы открыть редактир и добавить или изменить значения.
+3. В режиме Dropdown List (Выпадающий Список) кликните по стрелке, чтобы выбрать одно из значений. Решение будет вычисляться каждый раз, когда вы меняете значение.
+4. В режиме Check List (Проверочный список) кликните рядом с каждым значением, чтобы проверить его. Компонент выдаст все значения, которые были проверены.
+5. В режимах Value Sequence (Последовательность значений) и Value Cycle (Цикл значений), кликните по левой или правой стрелочке, чтобы пролистать значения.

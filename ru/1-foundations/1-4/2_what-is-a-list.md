@@ -1,19 +1,19 @@
-### 1.4.2. What is a List?
+### 1.4.2. Что такое Список?
 
-#####It’s helpful to think of Grasshopper in terms of flow, since the graphical interface is designed to have data flow into and out of specific types of components. However, it is the data that define the information flowing in and out of the components. Understanding how to manipulate list data is critical to understanding the Grasshopper plug-in.
+#####Полезно думать о Grasshopper в рамках потока, так как графический интерфейс спроектирован таким образом, чтобы данные входили в и выходили из разных типов компонентов. Тем не менее, именно данные определяют, какая информация будет входить и выходить из компонентов. Понимание того, как работать со списком данных критично для понимания плагина Grasshopper.
 
-Grasshopper generally has two types of data: persistent and volatile. Even though the data types have different characteristics, typically Grasshopper stores this data in an array, a list of variables.
+В целом, Grasshopper имеет два типа данных: постоянные и изменяемые. Даже при том, что типы данных имеют разные характеристики, обычно Grasshopper хранит эти данные в массиве, в списке переменных.
 
-When storing data in a list, it’s helpful to know the position of each item in that list so that we can begin to access or manipulate certain items. The position of an item in the list is called its index number.
+При сохранении данных в список, полезно знать расположение каждого элемента в этом списке, чтобы иметь возможность получить доступ или работать с определенными элементами. Положение элемента в списке называется индекс.
 
 ![IMAGE](images/1-4-2/1-4-2_001-list-index.png)
->1. List Item
-2. Index
+>1. Элемент списка
+2. Индекс
 
-The only thing that might seem odd at first is that the first index number of a list is always 0; not 1. So, when we talk about the first item of a list, we actually mean the item that corresponds to index number 0.
+Единственное, что может показаться странным сначала, что первый индекс списка всегда 0, а не 1. Поэтому, когда мы говорим о первом элементе списка, мы, на самом деле, подразумеваем элемент, который соответствует индексу 0.
 
-For example, if we were to count the number of fingers we have on our right hand, chances are that you would have counted from 1 to 5. However, if this list has been stored in an array, then our list would have counted from 0 to 4. Note, that we still have 5 items in the list; it’s just that the array is using a zero-based counting system. The items being stored in the list don’t just have to be numbers. They can be any data type that Grasshopper supports, such as points, curves, surfaces, meshes, etc.
+Например, если бы нам нужно было посчитать число пальцев на нашей правой руке, вы бы посчитали от 1 до 5. Тем не менее, если бы этот список сохранялся в массиве, тогда наш список считался бы от 0 до 4. Заметьте, что у нас все равно 5 элементов в списке; дело только в том, что в массиве начинает счет с нуля. Элементы, хранящиеся в списке, не обязательно должны быть только числами. Это может быть любой тип данных, которые поддерживает Grasshopper, такой как точки, кривые, поверхности, mesh и т.д.
 
-Often times the easiest way to take a look at the type of data stored in a list is to connect a Text Panel (Params/Input/Panel) to the output of a particular component. By default, the Text Panel automatically shows all index numbers to the left side of the panel and displays the data items on the right side of the panel. The index numbers will become a crucial element when we begin working with our lists. You can turn the index numbers on and off by right-clicking on the Text Panel and clicking on the “Draw Indices” item in the sub-menu. For now, let’s leave the entry numbers turned on for all of our text panels.
+Часто, самый легкий способ, чтобы посмотреть какой тип данных хранится в списке, это подключить Text Panel (Params/Input/Panel) к выходу определенного компонента. По умолчанию, Text Panel автоматически показывает все индексы слева от панели и отображает элементы данных справа от панели. Индекс становятся важным элементом, когда мы начинаем работать со списками. Вы можете включить и выключить индекс правым кликом по Text Panel (текстовой панели) и кликнув по элементу "Draw Indices" в свитке. Ну а теперь, давайте оставим вводные числа включенными на всех наших текстовых панелях.
 
 ![IMAGE](images/1-4-2/1-4-2_002-list-menu.png)

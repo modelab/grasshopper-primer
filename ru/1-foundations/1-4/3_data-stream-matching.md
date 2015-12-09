@@ -1,72 +1,69 @@
-### 1.4.3. Data Stream Matching
+### 1.4.3. Соединение Потока Данных
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
->Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+>Файлы упражнения, которые сопровождают этот раздел: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
->Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.4.3_data matching.gh)
+>Файлы упражнения, которые сопровождают этот раздел: [Download](../../appendix/A-2/gh-files/1.4.3_data matching.gh)
 {% endif %}
 
-#####Data matching is a problem without a clean solution. It occurs when a component has access to differently sized inputs. Changing the data matching algorithm can lead to vastly different results.
+#####Соединение данных - это проблема, для которой нет одного решения. Это происходит, когда компонент имеет доступ к входам различного размера. Изменение алгоритма соединения данных может привести к значительно отличающимся результатам.
 
-Imagine a component which creates line segments between points. It will have two input parameters which both supply point coordinates (List A and List B):
+Представьте компонент, который создает сегменты линии между точками. Он будет иметь два параметра ввода, которые оба будут предоставлять координаты точек (Список А и Список Б):
 
 ![IMAGE](images/1-4-3/1-4-3_001-blank-connection.png)
 
-As you can see there are different ways in which we can draw lines between these sets of points. New to Grasshopper 0.9 are three components for data matching, found under the Sets/List panel: Shortest List, Longest List, and Cross Reference. These new components allow for greater flexibility within the three basic data matching algorithms. Right clicking each component allows you to select a data matching option from the menu.
+Как вы можете видеть, существуют разные способы рисования линий между этими наборами точек. В Grasshopper 0.9 есть три новых компонента для соединения данных, они находятся в разделе Sets/List panel: Shortest List (самый короткий список), Longest List (самый длинный список) и Cross Reference (перекрестные ссылки). Эти новые компоненты позволяют добиться большей гибкости внутри трех базовых алгоритмов соединения данных. Кликните правой клавишей мыши по каждому компоненту и вы сможете выбрать опцию соединения данных из меню.
 
-The simplest way is to connect the inputs one-on-one until one of the streams runs dry. This is called the **“Shortest List” **algorithm:
+Самый простой способ - соединить входы один к одному пока один из потоков не исчерпает себя. Этот алгоритм называется  **“Shortest List” ** (самый короткий список):
 
 ![IMAGE](images/1-4-3/1-4-3_002-shortest-list.png)
 
 ![IMAGE](images/1-4-3/1-4-3_003-matching-algorithm.png)
->Select a matching algorithm option from the component menu by right-clicking the component.
+>Выберите опцию алгоритма соединения из меню компонента правым кликом мыши по компоненту.
 
-The **“Longest List”** algorithm keeps connecting inputs until all streams run dry. This is the default behavior for components:
+Алгоритм **“Longest List”** соединяет входы пока все потоки не иссякнут. Это поведение включено по умолчанию у всех компонентов:
 
 ![IMAGE](images/1-4-3/1-4-3_004-longest-list.png)
 
-Finally, the **“Cross Reference”** method makes all possible connections:
+И последнее, метод **“Cross Reference”** создает все возможные соединения:
 
 ![IMAGE](images/1-4-3/1-4-3_005-cross-reference.png)
 
-This is potentially dangerous since the amount of output can be humongous. The problem becomes more intricate as more input parameters are involved and when the volatile data inheritance starts to multiply data, but the logic remains the same.
+Это может быть потенциально опасно, так как создается невероятно огромное количество выходов. Проблема усложняется еще тем, что вовлекается больше параметров ввода и наследование изменяемых данных начинает увеличивать данные, при этом  логика остается той же.
 
-Let’s look more closely at the Shortest List component:
+Давайте более подробно разберем компонент Shortest List:
 
 ![IMAGE](images/1-4-3/1-4-3_006-trim-end.png)
 
-Here we have two input lists {A,B,C,D,E} and {X,Y,Z}. Using the Trim End option, the last two items in the first list are disregarded., so that the lists are of equal length.
+Тут у нас имеются два входных списка {A,B,C,D,E} и {X,Y,Z}. Используя опцию Trim End, два последних элемента в первом списке не учитываются, поэтому списки становятся одинаковой длины.
 
 ![IMAGE](images/1-4-3/1-4-3_007-trim-start.png)
 
-Using the Trim Start option, the first two items in the first list are disregarded, so that the lists are of equal length.
+Используя опцию Trim Start, два первых элемента в первом списке не учитываются, поэтому списки становятся одинаковой длины.
 
 ![IMAGE](images/1-4-3/1-4-3_008-interpolate.png)
 
-The Interpolate option skips the second and fourth items in the first list. Now let’s look at the Cross Reference component:
+Опция Interpolate пропускает второй и четвертый элементы в первом списке. Теперь давайте посмотрим на компонент Cross Reference:
 
 ![IMAGE](images/1-4-3/1-4-3_009-holistic.png)
 
-Here we have two input lists {A,B,C} and {X,Y,Z}. Normally Grasshopper would iterate over these lists and only consider the combinations {A,X}, {B,Y} and {C,Z}. There are however six more combinations that are not typically considered, to wit: {A,Y}, {A,Z}, {B,X}, {B,Z}, {C,X} and {C,Y}. As you can see the output of the Cross Reference component is such that all nine permutations are indeed present.
+Тут у нас имеются два входных списка {A,B,C} и {X,Y,Z}. Обычно Grasshopper провел бы итерацию этих списков и рассмотрел бы только комбинации {A,X}, {B,Y} и {C,Z}. Тем не менее, тут имеются еще шесть комбинаций, которые обычно не рассматриваются, а именно: {A,Y}, {A,Z}, {B,X}, {B,Z}, {C,X} и {C,Y}. Как вы можете видеть, выход компонента Cross Reference таков, что присутствуют все девять сочетаний.
 
-We can denote the behaviour of data cross referencing using a table. The
-rows represent the first list of items, the columns the second. If we create all possible permutations, the table will have a dot in every single cell, as every cell represents a unique combination of two source list indices.
+Мы можем отметить поведение данных перекрестных ссылок используя таблицу. Ряды представляют первый список элементов, колонки второй. Если мы создадим все возможные сочетания, таблица будет иметь точку в каждой отдельной ячейке, так как каждая ячейка представляет собой уникальную комбинацию двух индексов исходных списков.
 
 ![IMAGE](images/1-4-3/1-4-3_010-cross-reference-table.png)
 
-Sometimes however you don’t want all possible permutations. Sometimes you
-wish to exclude certain areas because they would result in meaningless or invalid computations. A common exclusion principle is to ignore all cells that are on the diagonal of the table. The image above shows a ‘holistic’ matching, whereas the ‘diagonal’ option (available from the Cross Reference]component menu has gaps for {0,0}, {1,1}, {2,2} and {3,3}.
-If we apply this to our {A,B,C}, {X,Y,Z} example, we should expect to not see the combinations for {A,X}, {B,Y} and {C,Z}:
+Иногда, тем не менее, вы не хотите, чтобы происходили все возможные сочетания. Иногда вы хотите исключить некоторые области потому, что они приведут к бессмысленным или неправильным вычислениям. Общий принцип исключения - это игнорировать все ячейки, располагающиеся по диагонали таблицы. Изображение выше представляет "холистическое" соединение, где "диагональная" опция (доступна из меню компонента Cross Reference) имеет пропуски в {0,0}, {1,1}, {2,2} и {3,3}. Если мы применим это к нашим примерам {A,B,C}, {X,Y,Z}, нам следует ожидать, что мы не увидим комбинации для {A,X}, {B,Y} и {C,Z}:
 
 ![IMAGE](images/1-4-3/1-4-3_011-diagonal.png)
 
-The rule that is applied to ‘diagonal’ matching is: “Skip all permutations where all items have the same list index”. ‘Coincident’ matching is the same as ‘diagonal’ matching in the case of two input lists, but the rule is subtly different: “Skip all permutations where any two items have the same list index”.
+Правило, которое применяется к "диагональному" соединению, следующее: "Пропустить все подстановки, где все элементы имеют такой же индекс списка". "Случайное" соединение - это то же самое, что "диагональное" соединение в случае двух вводных списков, но правило несколько отличается: "Пропустить все подстановки, где любые два элемента имеют такой же индекс списка".
 
-The four remaining matching algorithms are all variations on the same theme. ‘Lower triangle’ matching applies the rule: “Skip all permutations where the index of an item is less than the index of the item in the next list”, resulting in an empty triangle but with items on the diagonal.
+Четыре оставшихся алгоритма соединения - это все вариации на ту же тему. Соединение "нижний треугольник" применяет правило: "Пропускать все подстановки, где индекс элемента меньше, чем индекс элемента в следующем списке", приводя в пустому треугольнику, но с элементами по диагонали.
 
 ![IMAGE](images/1-4-3/1-4-3_012-lower.png)
 
-‘Lower triangle (strict)’ matching goes one step further and also eliminates the items on the diagonal:
+Соединение "нижний треугольник" (строгий) идет на один шаг вперед и также устраняет элементы по диагонали:
 
 ![IMAGE](images/1-4-3/1-4-3_013-lower-strict.png)
 
-‘Upper Triangle’ and ‘Upper Triangle (strict)’ are mirror images of the previous two algorithms, resulting in empty triangles on the other side of the diagonal line.
+"Верхний Треугольник" и "Верхний Треугольник (строгий)" - это зеркальное изображение двух предыдущих алгоритмов, результат которых пустой треугольник на другой стороне диагональной линии.
