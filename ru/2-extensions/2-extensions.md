@@ -1,6 +1,6 @@
-# 2. Extensions
+# 2. Расширения
 
-#### Foundations are meant to be built upon. This volume features an array of key plugins for Grasshopper that will extend the application's functionality *and* your ability to take your designs further.
+#### Основные положения должны иметь поддержку. Эта часть представляет массив ключевых плагинов для Grasshopper, которые расширяют его функциональность *и* ваши возможности в проектировании.
 
 ![IMAGE](Appendix_Plugin_Icons.png)
 
