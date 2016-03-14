@@ -1,67 +1,44 @@
+﻿
 
-
-### 1.3.3. Mathematics, Expressions & Conditionals
+### 1.3.3. Mathematik, Funktionen & Konditionale
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
->Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+>Beispiedateien zu diesem Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
->Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.3.3_operators and conditionals.gh)
+>Beispiedateien zu diesem Abschnitt: [Download](../../appendix/A-2/gh-files/1.3.3_operators and conditionals.gh)
 {% endif %}
 
-#####Knowing how to work with numeric information is an essential skill to master as you learn to use Grasshopper. Grasshopper contains many components to perform mathematical operations, evaluate conditions and manipulate sets of numbers.
+#####Zu wissen wie man mit nummerischen Informationen umgeht, ist eine grundlegende Fertigkeit, die Du lernen musst um Grasshopper zu nutzen. Grasshopper enthaelt viele Komponenten um mathematische Operationen auszufuehren, Konditionale auszuwerten und Mengen von Zahlen zu manipulieren.
 
-In mathematics, numbers are organized by sets and there are two that you are probably familiar with:
+In der Mathematik werden Zahlen in Mengen organisiert und es gibt zwei mit denen Du wahrscheinlich bekannt bist:
 
-Integer Numbers: […, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, …]<br>
-Real Numbers: [8, …, -4.8, -3.6, -2.4, -1.2, 0.0, 1.234, e, 3.0, 4.0, …, 8]
+Integer Zahlen: […, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, …]<br>
+Reelle Zahlen: [8, …, -4.8, -3.6, -2.4, -1.2, 0.0, 1.234, e, 3.0, 4.0, …, 8]
 
-While there are other types of number sets, these two interest us the most
-because Grasshopper uses these extensively. Although there are limitations in representing these sets exactly in a digital environment, we can approximate them to a high level of precision. In addition, it should be understood that the
-distinction between Integral types (integers) and Floating types (real numbers) corresponds to the distinction between discrete and continuous domains. In
-this chapter, we’re going to explore different methods for working with and
-evaluating various sets of numbers.
+Neben anderen Zahlenmengen die es gibt, interessieren uns diese beiden am meisten, da Grasshopper diese bevorzugt verwendet. Obwohl es Grenzen in der Darstellung dieser Mengen gibt und diese in einer digitalen Umgebung genau definiert sind, koennen wir sie mit einem hohen Grad an Praezision annaehern. Zusaetzlich sollten wir die Unterscheidung zwischen integralen Zahlenarten (integers) and Gleitkommazahlen (real numbers) als Unterschied zwischen einer diskreten und einer kontinuierichen Domaene verstehen. In diesem Kapitel werden wir verschiedene Methoden fuer die Arbeit mit und die Auswertung von verschiedenen Zahlenmengen erkunden. 
 
-####1.3.3.1. THE MATH TAB
-Most of the components that deal with mathematical operations and functions can be found under the following sub-categories of the Math tab:
+####1.3.3.1. DER MATH REITER
+Die meisten Komponenten die mit mathematischen Operationen und Funktionen zu tun haben, koennen unter den folgenden Unterkategorien des "Math" Reiters gefunden werden:
 
 ![](images/1-3-3/1-3-3_01-the-math-tab.png)
 
->1. Domains are used to define a range of values (formerly known as intervals) between two numbers. The components under the Domain tab allow you to create or decompose different domain types.
-2. In mathematics, a matrix is an array of numbers organized in rows and columns. This subcategory contains a series of utility tools to construct and modify matrices.
-3. Operators are used to perform mathematical operations such as Addition, Subtraction, Multiplication, etc. Conditional operators allow you to determine whether a set of numbers are larger than, less than, or similar to another set of numbers.
-4. Polynomials are one of the most important concepts in algebra and throughout mathematics and science. You can use the components found in this subcategory to compute factorials, logarithms, or to raise a number to the nth power.
-5. The script subcategory contains single and multi-variable expressions as well as the VB.NET and C# scripting components.
-6. These components allow you to solve trigonometric functions such as Sine,Cosine, Tangent, etc.
-7. The time subcategory has a number of components which allow you to construct instances of dates and times.
-8. The utility subcategory is a ‘grab bag’ of useful components that canbe used in various mathematical equations. Check here if you’re trying find the maximum or minimum values between two lists of numbers; or average a group of numbers.
+>1. Domaenen werden benutzt um die Bandbreite von Werten (frueher als Intervalle bekannt) zwischen zwei Werten zu definieren. Die Komponenten unter dem "Domain"Reiter erlauben es Dir verschiedene Domaenen zu schaffen oder zu zerlegen.
+2. In der Mathematik organisiert eine Matrix eine Reihe von Zahlen in Zeilen und Spalten. Diese Unterkategorie enthaelt eine Reihe von nuetzlichen Werkzeugen um Matrizen zu schaffen und zu veraendern.
+3. Operatoren werden genutzt um mathematische Operationen, wie Addition, Subtraktion, Multiplikation, u.a. auszufuehren. Konditionale Operatoren erlauben es festzulegen, ob eine Menge von Zahlen groesser als, kleiner als, oder gleich gross im Vergleich zu einer anderen Menge ist.
+4. Polynome sind eines der wichtigsten Konzepte in Algebra, Mathematik und Wissenschaft. Du kannst die Komponenten aus dieser Unterkategorie nutzen um Fakultaeten, Logarithmen oder Exponentiale zu berechnen.
+5. Die "Script" Unterkategorie enthaelt Einzel- und Multivariabel Ausdruecke, sowie VB.NET and C# Komponenten zur Entwicklung von Skripten.
+6. Diese Komponeten ermoeglichen es Dir trigonometrische Funktionen, wie Sinus, Kosinus und Tangent zu berechnen.
+7. Die "Time"Unterkategorie hat eine Anzahl von Komponenten, die er Dir erlauben Instanzen von Datum und Zeit zu erstellen.
+8. Die Unterkategorie "Utility" ist ein Sack von Komponenten, die in einer Bandbreite von mathematischen Gleichungen angewendet werden koennen. Suche hier, wenn Du versucht Minima oder Maxima ueber zwei Listen von Zahlen zu finden oder den Durchschnitt einer Menge von Zahlen zu berechnen.
 
-####1.3.3.2. OPERATORS
-As was previously mentioned, Operators are a set of components that use
-algebraic functions with two numeric input values, which result in one output
-value.
+####1.3.3.2. OPERATOREN
+Wie bereits genannt, sind Operatoren eine Menge an Komponenten, die algebraische Funktionen mit zwei nummerischen Eingabevariablen nutzen, welche in der Ausgabe eines einzelnen Wertes resultieren.
 
-Most of the time, you will use the Math Operators to perform arithmetical
-actions on a set of numbers. However, these operators can also be used on
-various data types, including points and vectors.
+Die meiste Zeit wirst Du die mathematische Operatoren in arithmetischen Prozessen im Bezug auf eine Zahlenmenge finden. Jedoch koennen diese Operatoren auch auf verschiedene Datentypen, inkl. Punkte und Vektoren angewendet werden.
 
 ![](images/1-3-3/1-3-3_02-operators.png)
 
-####1.3.3.3. CONDITIONAL OPERATORS
-Almost every programming language has a method for evaluating conditional
-statements. In most cases the programmer creates a piece of code to ask a
-simple question of “what if.” What if the area of a floor outline exceeds the
-programmatic requirements? Or, what if the curvature of my roof exceeds a
-realistic amount? These are important questions that represent a higher level
-of abstract thought. Computer programs have the ability to analyze “what if”
-questions and take actions depending on the answer to that question. Let’s take
-a look at a very simple conditional statement that a program might interpret:
-If the object is a curve, delete it. The piece of code first looks at an object and
-determines a single boolean value for whether or not it is a curve. There is
-no middle ground. The boolean value is True if the object is a curve, or False
-if the object is not a curve. The second part of the statement performs an
-action dependent on the outcome of the conditional statement; in this case,
-if the object is a curve then delete it. This conditional statement is called an
-If statement. There are four conditional operators (found under the Math/
-Operators subcategory) that evaluate a condition and return a boolean value.
+####1.3.3.3. KONDITIONALE OPERATOREN
+Fast jede Programmiersprache hat eine Methode um Konditionale Ausdruecke auszuwerten. In den meisten Faellen wird der Programmierer ein Stueck Cade entwerdfen, welches eine einfache Frage wie "Was waere wenn?" stellt. Was waere wenn die Flaeche einer Stockwerksumgrenzung einen realistischen Betrag ueberschreitet? Diese wichtigen Fragen stellen eine hoehere Ebene der Abstraktion da. Computerprogramme haben die Moeglichkeit auszuwerten "was waere wenn" und entsprechende Aktionen auf die Antwort der Frage folgen zu lassen. Las suns einen Blick auf ein einfaches Konditional werden, das ein Programm interpretieren wuerde: Wenn das Objekt eine Kurve ist, loesche es. Das Stueck Code schaut zuerst auf das Objekt und stellt in einer boolschen Variable fest, ob es sich dabei um eine Kurve handelt. Der boolsche Wert ist "wahr" wenn das Objekt eineKurve ist oder "falsch" wenn das Objekt keine Kurve ist. Der zweite Teil des Ausdruckes fuehrt eine Aktion entsprechend dem Ergebnis des konditionalen Ausdrucks aus; in diesem Fall wird das Objekt geloescht, wenn es keine Kurve sein sollte. Dieser konditionale Ausdruck wird "If Statement"genannt. In diesem Kontext gibt es vier konditionale Operatoren (in der "Math/Operators" Unterkategorie), die Konditionale auswerten und boolsche Werte ausgeben.
 
 The Equality component takes two lists and compares the first item of List A and
 compares it to the first item of List B. If the two values are the same, then a True
