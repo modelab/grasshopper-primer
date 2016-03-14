@@ -1,28 +1,27 @@
-###1.3.1. Points, Planes & Vectors
+﻿###1.3.1. Punkte, Ebenen & Vektoren
 
-#####Everything begins with points. A point is nothing more than one or more values called coordinates. The number of coordinate values corresponds with the number of dimensions of the space in which it resides. Points, planes, and vectors are the base for creating and transforming geometry in Grasshopper.
+#####Alles beginnt mit Punkten. Ein Punkt ist nicht mehr als ein oder mehrere Werte, die Koordinaten genannt werden. Die Anzahl der Koordinatenwerte korrespondieren mit der Anzahl der Dimensionen des Raums in welchem sie dargestellt werden. Punkte, Ebenen und Vektoren sind die Basis der Erstellung und Transformation von Geometrie in Grasshopper.
 
 ![Points, Vectors, and Planes](images/1-3-1/1-3-1_001-intro.png)
 
-####1.3.1.1 POINTS
-Points in 3D space have three coordinates, usually referred to as [x,y,z]. Points in 2D space have only two coordinates which are either called [x,y] or [u,v] depending on what kind of two dimensional space we’re talking about.
-2D parameter space is bound to a finite surface. It is still continuous, I.e. hypothetically there are an infinite amount of points on the surface, but the maximum distance between any of these points is very much limited. 2D parameter coordinates are only valid if they do not exceed a certain range. In the example drawing, the range has been set between 0.0 and 1.0 for both [u] and [v] directions, but it could be any finite domain. A point with coordinates [1.5, 0.6] would be somewhere outside the surface and thus invalid.
+####1.3.1.1 PUNKTE
+Punkte im dreidimensionalen Raum haben drei Koordinaten, normalerweise bezeichnet als [x,y,z]. Punkte in einem zweidimensionalen Raum haben nur zwei Koordinaten, die entweder [x,y] oder [u,v] genannt werden, abhaengig davon, von welcher Art zweidimensionalem Raum wir sprechen.
+2D Parameterraum ist an eine begrenzte Flaeche gebunden. Er ist immer noch kontionuierlich und kann hypothetisch gesprochen immer noch unendlich viele Punkte auf der Flaeche darstellen, aber die maximale Distanz zwischen beliebigen Punkten dieser Menege ist begrenzt. 2D Parameterkoordinaten sind nur gueltig, wenn sie eine bestimmte Spanne nicht uebersteigen. In der Beispielzeichnung, wurde diese Spanne zwischen 0.0 und 1.0 fuer die Richtungen [u] und [v] definiert, aber sue koennte jede beliebige begrenzte Domaene annehmen. Ein Punkt mit den Koordinaten [1.5, 0.6] wuerde irgendwo ausserhalb der Flaeche liegen und ist deshalb ungueltig.
 
 Since the surface which defines this particular parameter space resides in regular 3D world space, we can always translate a parametric coordinate into a 3D world coordinate. The point [0.2, 0.5] on the surface for example is the same as point [1.8, 2.0, 4.1] in world coordinates. Once we transform or deform the surface, the 3D coordinates which correspond with [0.2, 0.5] will change.
 
 ![Points](images/1-3-1/1-3-1_002-points.png)
 
-If this is a hard concept to grasp, it might help to think of yourself and your position in space. We tend to use local coordinate systems to describe our whereabouts; “I’m sitting in the third seat on the seventh row in the movie theatre”, “I’m in the back seat”. If the car you’re in is on the road, your position in global coordinates is changing all the time, even though you remain in the same back seat ‘coordinate’.
+Wenn es schwer ist, dieses Konzept zu verstehen, kannst Du Dir eventuell damit behelfen, Dir Deine eigene Position im Raum vorzustellen. Wir neigen dazy unsere lokalen Koordinatensysteme zu benutzen um zu beschreiben, wo wir uns befinden; "Ich sitze im dritten Sitz in der siebten Reihe des Kinos", "Ich bin auf dem Ruecksitz". Wenn das Auto in dem Du Dich befindest auf der Strasse unterwegs ist, veraendern sich Deine globalen Koordinaten staendig, auch wenn Du Dich immer noch auf der selben Ruecksitz-"Koordinate" befindest.
 
-####1.3.1.2. VECTORS
-A vector is a geometric quantity describing Direction and Magnitude.
-Vectors are abstract; ie. they represent a quantity, not a geometrical element.
+####1.3.1.2. VEKTOREN
+Ein Vektor ist eine geometrische Groesse, die Richtung und Staerke beschreibt. Vektoren sind abstrakt; das heisst, dass sie eine Groesse beschreiben und nicht ein geometrisches Element.
 
-Vectors are indistinguishable from points. That is, they are both lists of three numbers so there’s absolutely no way of telling whether a certain list represents a point or a vector. There is a practical difference though; points are absolute, vectors are relative. When we treat a list of three doubles as a point it represents a certain coordinate in space, when we treat it as a vector it represents a certain direction. A vector is an arrow in space which always starts at the world origin (0.0, 0.0, 0.0) and ends at the specified coordinate.
+Vektoren sind von Punkten nicht zu unterscheiden. Das bedeutet, dass die beiden Listen von je drei Zahlen sich so wenig unterscheiden, dass man nicht mit Sicherheit sagen kann, ob sie Punkte oder Vektoren darstellt. Es gibt jedoch einen praktischen Unterschiedd; Punkte sind absolut, Vektoren sind relativ. Wenn wir eine Liste von drei Dezimalzahlen als einen Punkt behandeln, stellt sie eine bestimmte Koordinate dar im Raum dar. Wenn wir sie als Vektor behandeln, stellt sie eine bestimmt Richtung dar. Ein Vektor ist ein Pfeil in einem Raum, der immer vom Weltursprung (0.0, 0.0, 0.0) beginnt und an einer bestimmten Koordinate endet.
 
 ![Vectors](images/1-3-1/1-3-1_003-vectors.png)
 
-####1.3.1.3. PLANES
-Planes are “Flat” and extend infinitely in two directions, defining a local coordinate system. Planes are not genuine objects in Rhino, they are used to define a coordinate system in 3D world space. In fact, it’s best to think of planes as vectors, they are merely mathematical constructs.
+####1.3.1.3. EBENEN
+Ebenen sind "flach"und dehnen sich unendlich in zwei Dimensionen aus, waehrend sie ein lokales Koordinatensystem definieren. Ebenen sind keine expliziten Objekte in Rhino, da sie lediglich dazu verwendet werden um Koordinatensysteme im 3D Weltraum zu bestimmen. Faktisch ist es am Besten sich die Ebenen als Vektoren vorzustellen, da sie lediglich mathematische Konstrukte sind.
 
 ![Planes](images/1-3-1/1-3-1_004-planes.png)
