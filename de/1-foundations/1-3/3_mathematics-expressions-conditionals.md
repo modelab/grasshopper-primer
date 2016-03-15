@@ -38,57 +38,32 @@ Die meiste Zeit wirst Du die mathematische Operatoren in arithmetischen Prozesse
 ![](images/1-3-3/1-3-3_02-operators.png)
 
 ####1.3.3.3. KONDITIONALE OPERATOREN
-Fast jede Programmiersprache hat eine Methode um Konditionale Ausdruecke auszuwerten. In den meisten Faellen wird der Programmierer ein Stueck Cade entwerdfen, welches eine einfache Frage wie "Was waere wenn?" stellt. Was waere wenn die Flaeche einer Stockwerksumgrenzung einen realistischen Betrag ueberschreitet? Diese wichtigen Fragen stellen eine hoehere Ebene der Abstraktion da. Computerprogramme haben die Moeglichkeit auszuwerten "was waere wenn" und entsprechende Aktionen auf die Antwort der Frage folgen zu lassen. Las suns einen Blick auf ein einfaches Konditional werden, das ein Programm interpretieren wuerde: Wenn das Objekt eine Kurve ist, loesche es. Das Stueck Code schaut zuerst auf das Objekt und stellt in einer boolschen Variable fest, ob es sich dabei um eine Kurve handelt. Der boolsche Wert ist "wahr" wenn das Objekt eineKurve ist oder "falsch" wenn das Objekt keine Kurve ist. Der zweite Teil des Ausdruckes fuehrt eine Aktion entsprechend dem Ergebnis des konditionalen Ausdrucks aus; in diesem Fall wird das Objekt geloescht, wenn es keine Kurve sein sollte. Dieser konditionale Ausdruck wird "If Statement"genannt. In diesem Kontext gibt es vier konditionale Operatoren (in der "Math/Operators" Unterkategorie), die Konditionale auswerten und boolsche Werte ausgeben.
+Fast jede Programmiersprache hat eine Methode um Konditionale Ausdruecke auszuwerten. In den meisten Faellen wird der Programmierer ein Stueck Cade entwerdfen, welches eine einfache Frage wie "Was waere wenn?" stellt. Was waere wenn die Flaeche einer Stockwerksumgrenzung einen realistischen Betrag ueberschreitet? Diese wichtigen Fragen stellen eine hoehere Ebene der Abstraktion da. Computerprogramme haben die Moeglichkeit auszuwerten "was waere wenn" und entsprechende Aktionen auf die Antwort der Frage folgen zu lassen. Las suns einen Blick auf ein einfaches Konditional werden, das ein Programm interpretieren wuerde: Wenn dass Objekt eine Kurve ist, loesche es. Das Stueck Code schaut zuerst auf das Objekt und stellt in einer boolschen Variable fest, ob es sich dabei um eine Kurve handelt. Der boolsche Wert ist "wahr" wenn das Objekt eineKurve ist oder "falsch" wenn das Objekt keine Kurve ist. Der zweite Teil des Ausdruckes fuehrt eine Aktion entsprechend dem Ergebnis des konditionalen Ausdrucks aus; in diesem Fall wird das Objekt geloescht, wenn es keine Kurve sein sollte. Dieser konditionale Ausdruck wird "If Statement"genannt. In diesem Kontext gibt es vier konditionale Operatoren (in der "Math/Operators" Unterkategorie), die Konditionale auswerten und boolsche Werte ausgeben.
 
-The Equality component takes two lists and compares the first item of List A and
-compares it to the first item of List B. If the two values are the same, then a True
-boolean value is created; conversely if the two values are not equal, then a False
-boolean value is created. The component cycles through the lists according to
-the set data matching algorithm (default is set to Longest List). There are two
-outputs for this component. The first returns a list of boolean values that shows
-which of the values in the list were equal to one another. The second output
-returns a list that shows which values were not equal to one another - or a list
-that is inverted from the first output.
+Die "Equality" Komponente nimmt zwei Listen und vergleicht die ersten Elemente der Liste A mit dem ersten element der Liste B. Wenn die beiden Werte die selben sind, wird "True" als boolscher Wert ausgegeben; auf der anderen Seite, wenn die beiden Werte ungleich sind, wird "Falsch" ausgegeben. Die Komponente rotiert durch die Liste in Uebereinstimmung mit dem "Data Matching" Algorithmus (als Standard ist die Einstellung "Longest List"). Es gibt zwei Ausgabeparameter fuer diese Komponente. Der erste gibt eine Liste mit boolschen Werten aus, die angibt welcher der Werte in der einen Liste mit einem in der anderen Liste uebereinstimmt. Der zweite Ausgabeparameter gibt eine Liste aus, die zeigt welche Werte nicht gleich den entsprechenden Werten in der zweiten Liste sind - oder eine invertierte Liste im Vergleich zum ersten Ausgabeparameter.
 
 ![](images/1-3-3/1-3-3_03-equality.png)
 
-The Similarity component evaluates two lists of data and tests for similarity
-between two numbers. It is almost identical to the way the Equality component
-compares the two lists, with one exception: it has a percentage input that defines
-the ratio of list A that list B is allowed to deviate before inequality is assumed.
-The Similarity component also has an output that determines the absolute value
-distance between the two input lists.
+Die "Similarity" Komponente wertet die Daten von zwei Listen aus und prueft diese auf Aehnlichlkeit der beiden Zahlen. Sie ist beinahe identisch mit dem Verhalten der "Equality" Komponente, jedoch mit einer Ausnahme: sie hat einen prozentualen Eingabeparameter, der es erlaub ein Verhaeltnis der zulaessigen Abweichung zwischen Werten der Liste A und der Liste B anzugeben, ausserhalb derer Ungleichheit angenommen wird. Die "Similarity" Komponente hat ausserdem einen Ausgabeparameter der in absoluten Werten angibt, welche Distanz zwischen den Werten der beiden Listen liegt.
 
 ![](images/1-3-3/1-3-3_04-similarity.png)
 
-The Larger Than component will take two lists of data and determine if the first
-item of List A is greater than the first item of List B. The two outputs allow you to
-determine if you would like to evaluate the two lists according to a greater than
-(>) or greater than and equal to (>=) condition.
+Die "Larger Than" Komponente wird die Daten aus zwei Listen vergleichen und bestimmen, ob der erste Wert von Liste A groesser sind als der erste Wert von Liste B. Die beiden Ausgabeparameter erlauben es Dir festzulegen ob Du die beiden Listen entsprechend der groesser als (>) oder groesser als oder gleich (>=) Funktion auswerten moechtest.
 
 ![](images/1-3-3/1-3-3_05-larger-than.png)
 
-The Smaller Than component performs the opposite action of the Larger Than
-component. The Smaller Than component determines if list A is less than list B
-and returns a list of boolean values. Similarly, the two outputs let you determine
-if you would like to evaluate each list according to a less than (<) or less than and
-equal to (<=) condition.
+Die "Smaller Than" Komponentw verhaelt sich entgegengesetzt zur "Larger Than" Komponente. Die "Smaller Than"Komponente bestimmt, ob die Werte einer Liste A kleiner sind als die Werte einer Liste V und gibt die entsprecheden boolschen Werte aus. Aehnlich wie zuvor, kannst Du mit den beiden Ausgabeparametern waehlen, ob Du die Listen entsprechend der kleiner als oder kleiner als (<) oder gleich (<=) Funktion auswerten willst.
 
 ![](images/1-3-3/1-3-3_06-smaller-than.png)
 
-####1.3.3.4. TRIGONOMETRY COMPONENTS
+####1.3.3.4. TRIGONOMETRIE KOMPONENTEN
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
->Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+>Beispieldateien fuer diesen Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
->Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.3.3.4_trigonometry components.gh)
+>Beispieldateien fuer diesen Abschnitt: [Download](../../appendix/A-2/gh-files/1.3.3.4_trigonometry components.gh)
 {% endif %}
 
-We have already shown that we can use an Expression (or Evaluate) component
-to evaluate conditional statements as well as compute algebraic equations.
-However, there other ways to calculate simple expressions using a few of the
-built in Trigonometry functions. We can use these functions to define periodic
-phenomena like sinusoidal wave forms such as ocean waves, sound waves, and
-light waves.
+Wir haben bereits gezeigt, dass wir eine "Expression" (oder "Evaluate") Komponente nutzen koennen um konditionale Ausdruecke, sowie algebraische Gleichungen auswerten zu koennen. Jedoch gibt es auch andere Wege um einfache Ausdruecke mit ein paar eingebauten trigonometrischen Funktionen zu berechnen. Wir koennen diese Funktionen nutzen, um periodische Phaenomene zu beschreiben, wie beispielsweise sinusartige Wellenformen, wie Wellen im Ozean, Schallwellen und Lichtwellen.
 
 ![](images/1-3-3/1-3-3_07-line-sine-helix-spiral.png)
 
@@ -104,8 +79,7 @@ light waves.
 ```x(t) = t*cos(t)```<br>
 ```y(t) = t*cos(t)```
 
-In this example, we will use Grasshopper to construct various trigonometric
-curves using trigonometry function components found in the Math tab:
+In diesem Beisiel werden wir Grasshopper benutzen um verschiedene trigonometrische Kurven mit den trigonomischen Funktionskomponenten aus dem "Math"-Reiter zu beschreiben:
 
 <style>
 td:nth-child(1) {color: #008DB2}
@@ -116,110 +90,104 @@ thead {display: none}
 
 ||||
 |--|--|--|
-|01.| Type Ctrl+N (in Grasshopper) to start a n]]]]]]]]]]ew definition||
-|02.| **Params/Geometry/Point** – Drag and drop a **Point** parameter  onto the canvas|[![](images/1-3-3/1-3-3_08-point-72dpi.png)](../../appendix/A-1/0_index-of-components.html#PGPt)|
-|03.| Right click the **Point** parameter and click Set One Point – select a point in the Rhino viewport||
-|04.| **Vector/Vector/Unit X** – Drag and drop the **Unit X** component to the canvas|[![](images/1-3-3/1-3-3_09-vector-72dpi.png)](../../appendix/A-1/0_index-of-components.html#VVX)|
-|05.| **Params/Input/Number Slider** – Drag and drop the **Number Slider** component  onto the canvas|[![](images/1-3-3/1-3-3_10-slider-72dpi.png)](../../appendix/A-1/0_index-of-components.html#PISlider)|
-|06.| Double-click on the **Number Slider** and set the following:<ul>Rounding: Integer<br>Lower Limit: 10<br>Upper Limit: 40<br>Value: 20</ul>||
-|07.|** Transform/Array/Linear Array** – Drag and drop the **Linear Array** component onto the canvas|[![](images/1-3-3/1-3-3_11-linear-array-72dpi.png)](../../appendix/A-1/0_index-of-components.html#TAArrLinear)|
-|08.| Connect the output of the **Point** parameter to the Geometry (G) input of the **Linear Array** component||
-|09.| Connect the Unit Vector (V) output of the **Unit X** component to the Direction (D) input of the **Linear Array** component<br><blockquote>You should see a line of 20 points along the x axis in Rhino. Adjust the slider to change the number of points in the array.</blockquote>||
-|10.| Connect the **Number Slider** output to the Count (N) input of the **Linear Array** Component||
-|11.| **Curve/Spline/Interpolate** – Drag and drop the **Interpolate Curve** component to the canvas|[![](images/1-3-3/1-3-3_12-interpolate-curve-72dpi.png)](../../appendix/A-1/0_index-of-components.html#CSIntCrv)|
-|12.| Connect the Geometry (G) output of the **Linear Array** component to the Vertices (V) input of the **Interpolate Curve** component|||
+|01.| Tippe Strg+N (in Grasshopper) um eine neue Definition zu beginnen||
+|02.| **Params/Geometry/Point** – Ziehe einen **Point** Parameter  auf die Leinwand|[![](images/1-3-3/1-3-3_08-point-72dpi.png)](../../appendix/A-1/0_index-of-components.html#PGPt)|
+|03.| Rechtsklicke den **Point** Parameter und klicke "Set One Point" - waehle einen Punkt aus dem Rhinoansichtsfenster||
+|04.| **Vector/Vector/Unit X** – Ziehe eine **Unit X** Komponente auf die Leinwand|[![](images/1-3-3/1-3-3_09-vector-72dpi.png)](../../appendix/A-1/0_index-of-components.html#VVX)|
+|05.| **Params/Input/Number Slider** – Ziehe eine **Number Slider** Komponente auf die Leinwand|[![](images/1-3-3/1-3-3_10-slider-72dpi.png)](../../appendix/A-1/0_index-of-components.html#PISlider)|
+|06.| Doppelklicke auf den **Number Slider** und setze folgende Werte:<ul>Rounding: Integer<br>Lower Limit: 10<br>Upper Limit: 40<br>Value: 20</ul>||
+|07.|** Transform/Array/Linear Array** – Ziehe eine **Linear Array** Komponente auf die Leinwand|[![](images/1-3-3/1-3-3_11-linear-array-72dpi.png)](../../appendix/A-1/0_index-of-components.html#TAArrLinear)|
+|08.| Verbinde den Ausgabeparameter des **Point** Parameters mit dem Geometrie (G) Eingabeparameter der **Linear Array** Komponente||
+|09.| Verbinde den Einheitsvektor (V) Ausgabeparameter der **Unit X** Komponente mit dem Richtung (D) Eingabeparameter der**Linear Array** Komponente<br><blockquote>Du solltest eine Linie mit 20 Punkten entlang der x-Achse in Rhino sehen. Passe den Schieberegler an, um die Anzahl der Punkte in der Reihe zu veraendern.</blockquote>||
+|10.| Verbinde den **Number Slider** Ausgabeparameter mit dem Anzahl (N) Eingabeparameter der **Linear Array** Komponente||
+|11.| **Curve/Spline/Interpolate** – Ziehe eine **Interpolate Curve** Komponente auf die Leinwand|[![](images/1-3-3/1-3-3_12-interpolate-curve-72dpi.png)](../../appendix/A-1/0_index-of-components.html#CSIntCrv)|
+|12.| Verbinde den Geometrie (G) Ausgabeparameter der **Linear Array** Komponente mit dem Eckpunkte (V) Eingabeparameter der **Interpolate Curve** Komponente|||
 
 ![](images/1-3-3/1-3-3_13-connected-to-interpolate-curve.png)
->We have just created a line by connecting an array of points with a curve. Let’s try using some of Grasshopper’s Trigonometry components to alter this curve:
+>Wir habe gerade eine Linie erzeugt, indem wir eine Reihe von Punkten zu einer Kurve verbunden haben. Lass uns nun versuchen die Trigonometriekomponenten in Grasshopper zu nutzen, um die Kurve zu veraendern:
 
 ||||
 |--|--|--|
-|13.| **Vector/Point/Deconstruct** – Drag and drop a **Deconstruct** component onto the canvas|[![](images/1-3-3/1-3-3_14-deconstruct-point-72dpi.png)](../../appendix/A-1/0_index-of-components.html#VPpDecon)|
-|14.| **Vector/Point/Construct Point** - Drag and drop a **Construct Point** component onto the canvas|[![](images/1-3-3/1-3-3_15-construct-point-72dpi.png)](../../appendix/A-1/0_index-of-components.html#VPPt)|
-|15.| **Maths/Trig/Sine** - Drag and drop a **Sine** component onto the canvas|[![](images/1-3-3/1-3-3_16-sine-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MTSin)|
-|16.| Disconnect the wire from the Vertices (V) input of the **Interpolate Curve** component.<br><blockquote>You can disconnect wires by holding down control and dragging, or by right-clicking the input and selecting Disconnect</blockquote>||
-|17.| Connect the Geometry (G) output of the **Linear Array** component to the Point (P) input of the **Deconstruct** component||
-|18.| Connect the Point X (X) output of the **Deconstruct** component to the X coordinate (X) input of the **Construct Point** Component||
-|19.| Connect a second wire from the Point X (X) output of the **Deconstruct** Component to the Value (x) input of the **Sine** component||
-|20.| Connect the Result (y) output of the **Sine** component to the Y coordinate (Y) input of the **Construct Point** component<br><blockquote>We have now reconstructed our points with the same X values, modifying the Y values with a sine curve.</blockquote>||
-|21.| Connect the Point (Pt) output of the **Construct Point** component to the Vertices (V) input of the **Interpolate** component|||
+|13.| **Vector/Point/Deconstruct** – Ziehe eine **Deconstruct** Komponente auf die Leinwand|[![](images/1-3-3/1-3-3_14-deconstruct-point-72dpi.png)](../../appendix/A-1/0_index-of-components.html#VPpDecon)|
+|14.| **Vector/Point/Construct Point** - Ziehe eine **Construct Point** Komponente auf die Leinwand|[![](images/1-3-3/1-3-3_15-construct-point-72dpi.png)](../../appendix/A-1/0_index-of-components.html#VPPt)|
+|15.| **Maths/Trig/Sine** - Ziehe eine **Sine** Komponente auf die Leinwand|[![](images/1-3-3/1-3-3_16-sine-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MTSin)|
+|16.| Entferne das Kabel vom Eckpunkte (V) Eingabeparameter der **Interpolate Curve** Komponente.<br><blockquote>Du kannst Kabel entfernen, indem Du mit gedrueckter Strg-Taste entlangziehst oder indem Du auf den Eingabeparameter rechtsklickst und "Disconnect" auswaehlst.</blockquote>||
+|17.| Verbinde den Geometrie (G) Ausgabeparameter der **Linear Array** Komponente mit dem Punkt (P) Eingabeparameter der **Deconstruct** Komponente||
+|18.| Verbinde den Punkt X (X) Ausgabeparameter der **Deconstruct** Komponente mit dem X Koorinate (X) 
+Eingabeparameter der**Construct Point** Komponente||
+|19.| Verbinde ein zweites Kabel vom Punkt X (X) Ausgabeparameter der **Deconstruct** Komponente mit dem Wert (x) Eingabeparameter der **Sine** Komponente||
+|20.| Verbinde den Ergebnis (y) Ausgabeparameter der **Sine** Komponente mit dem Y Koordinate (Y) Eingabeparameter der **Construct Point** Komponente<br><blockquote>Wir haben nun unsere Punkte mit den gleichen x-Werten rekonstruiert und dabei die y-Werte mit der Sinuskurve modifiziert.</blockquote>||
+|21.| Verbinde den Punkt (Pt) Ausgabeparameter der **Construct Point** Komponente mit dem Eckpunkte (V) Eingabeparameter der**Interpolate** Komponente|||
 
 ![](images/1-3-3/1-3-3_17-connected-with-sine.png)</li><br>
->You should now see a sine wave curve along the X axis in Rhino
+>Du solltest nun eine Sinuskurve entlang der x-Achse in Rhino sehen
 
 ||||
 |--|--|--|
-|22.| **Maths/Trig/Cosine** – Drag and drop a **Cosine** component to the canvas|[![](images/1-3-3/1-3-3_18a-cosine-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MTCos)|
-|23.| Connect a third wire from the Point X (X) output of the **Deconstruct** Component to the Value (x) input of the **Cosine** component||
-|24.| Connect the Result (y) output of the **Cosine** component to the Z coordinate (Z) input of the **Construct Point** component|||
+|22.| **Maths/Trig/Cosine** – Ziehe eine **Cosine** Komponente auf die Leinwand|[![](images/1-3-3/1-3-3_18a-cosine-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MTCos)|
+|23.| Verbinde ein drittes Kabel mit dem Punkt X (X) Ausgabeparameter der **Deconstruct** Komponente mit dem Wert (x) Eingabeparameter der **Cosine** Komponente||
+|24.| Verbinde den Ergebnis (y) Ausgabeparameter der **Cosine** Komponente mit dem Z Koordinate (Z) Eingabeparameter der**Construct Point** Komponente|||
 
 ![](images/1-3-3/1-3-3_18b-connected-with-sine-and-cosine.png)</li><br>
->We have now created a 3D helix
+>Wir haben nun eine dreidimensionale Helix
 
 ||||
 |--|--|--|
-|25.| **Maths/Operators/Multiplication** – Drag and drop two **Multiplication** components onto the canvas|[![](images/1-3-3/1-3-3_19-multiply-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MOMultiply)|
-|26.| Connect wires from the Point X (X) output of the **Deconstruct** component to the (A) input of each **Multiplication** component||
-|27.| Connect the Result (y) output of the **Sine** component to the (B) input of the first **Multiplication** component||
-|28.| Connect the Result (y) output of the **Cosine** component to the (B) input of the second **Multiplication** component||
-|29.| Disconnect the wire from the Y Coordinate (Y) input of the **Construct Point** component||
-|30.| Connect the Result (R) output of the first **Multiplication** component to the X Coordinate (X) input of the **Construct Point** component||
-|31.| Connect the Result (R) output of the second **Multiplication** component to the Z Coordinate (Z) input of the **Construct Point** component|||
+|25.| **Maths/Operators/Multiplication** – Ziehe zwei **Multiplication** Komponenten auf die Leinwand|[![](images/1-3-3/1-3-3_19-multiply-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MOMultiply)|
+|26.| Verbinde Kabel von den Punkt X (X) Ausgabeparameter der **Deconstruct** Komponente mit den (A) Eingabeparametern jeder**Multiplication** Komponente||
+|27.| Verbinde den Ergebnis (y) Ausgabeparameter der **Sine** Komponente mit dem (B) Eingabeparameter der ersten **Multiplication** Komponente||
+|28.| Verbinde den Ergebnis (y) Ausgabeparameter der **Cosine** Komponente mit dem (B) Eingabeparameter der zweiten**Multiplication** Komponente||
+|29.| Verbinde die Kabel des Y Koordinate (Y) Eingabeparameter mit dem Eingabeparameter der **Construct Point** Komponente||
+|30.| Verbinde den Ergebnis (R) Ausgabeparameter der ersten **Multiplication** Komponente mit dem X Koordinate (X) Eingabeparameter der **Construct Point** Komponente||
+|31.| Verbinde den Ergebnis (R) Ausgabeparameter der zweiten **Multiplication** Komponente mit dem Z Koordinate (Z) Eingabeparameter der **Construct Point** Komponente|||
 
 ![](images/1-3-3/1-3-3_20-connected-with-spiral.png)
->You should now see a spiral curve
+>Du solltest nun eine spiralfoermige Kurve sehen
 
 ![](images/1-3-3/1-3-3_21-spiral.png)
 
 
 ####1.3.3.5. EXPRESSIONS
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
->Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+>Beispieldateien fuer diesen Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
->Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.3.3.5_expressions.gh)
+>Beispieldateien fuer diesen Abschnitt: [Download](../../appendix/A-2/gh-files/1.3.3.5_expressions.gh)
 {% endif %}
 
-The Expression component (and its brother the Evaluate component) are
-very flexible tools; that is to say that they can be used for a variety of different
-applications. We can use an Expression (or Evaluate component) to solve
-mathematical algorithms and return numeric data as the output.
+Die "Expression" Komponente (und ihr Bruder die "Evaluate" Komponente) sind sehr flexible Werkzeuge; dazu ist zu sagen, dass die fuer eine Vielzahl von verschiedenen Anwendungen genutzt werden koennen. Wir koennen die "Expression" (oder die "Evaluate" Komponente) heranziehen um mathematische Algorithmen auszuwerten und nummerische Daten als Ausgabeparameter zurueckzugeben.
 
 ![](images/1-3-3/1-3-3_22-expression-evaluate.png)
 
-In the following example, we will look at mathematical spirals found in nature
-and how we can use a few Functions components to create similar patterns in
-Grasshopper. We will build on our trigonometric curves definition as a starting
-point.
-
+In den folgenden Beispielen werden wir uns mathematische Spiralen ansehen, die in der Natur gefunden werden koennen und wie wir mit wenigen Funktionskomponenten aehnliche Muster in Grasshopper erzeugen koennen. Wir werden in unsere trigonometrische Kurven Definition als Ausgangspunkt waehlen.
 
 ||||
 |--|--|--|
-|01.| Open your Trigonometric curves Grasshopper definition from the previous example||
-|02.| Delete the **Sine**, **Cosine**, **Multiplication**, and **Interpolate** components||
-|03.| **Params/Input/Number Slider** – Drag and drop a Number Slider onto the canvas||
-|04.| Double-click on the **Number Slider** and set the following:<ul>Rounding: Float<br>Lower Limit: 0.000<br>Upper Limit: 1.000<br>Value: 1.000</ul>||
-|05.| Connect the **Number Slider** to the Factor (F) input of the Unit X component.<br><blockquote>This slider allows you to adjust the distance between the points in the array.</blockquote>||
-|06.| **Maths/Script/Expression** – Drag two **Expression** components onto the canvas|[![](images/1-3-3/1-3-3_23-expression-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MSExpression)|
-|07.| Double-click the first **Expression** component to open the Expression Editor and change the expression to: ```x*sin(x)```||
-|08.| Double-click the second **Expression** component to open the Expression Editor and change the expression to: ```x*cos(x)```|||
+|01.| Oeffne die trigonometrische Kurven Definition aus dem vorherigen Beispiel||
+|02.| Loesche die **Sine**, **Cosine**, **Multiplication**, und **Interpolate** Komponenten||
+|03.| **Params/Input/Number Slider** – Ziehe einen Schieberegler auf die Leinwand||
+|04.| Doppelklicke auf den **Number Slider** und setze folgende Werte:<ul>Rounding: Float<br>Lower Limit: 0.000<br>Upper Limit: 1.000<br>Value: 1.000</ul>||
+|05.| Verbinde den **Number Slider** mit dem Faktor (F) Eingabeparameter der "Unit X" Komponente.<br><blockquote>Die Schieberegler erlauben es Dir die Distanz zwischen den Punkten der Reihe zu veraendern.</blockquote>||
+|06.| **Maths/Script/Expression** – Ziehe zwei **Expression** Komponenten auf die Leinwand|[![](images/1-3-3/1-3-3_23-expression-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MSExpression)|
+|07.| Doppelklicke die erste **Expression** Komponente um den "Expression Editor" zu oeffnen und aendere den Ausdruck in: ```x*sin(x)```||
+|08.| Doppelklicke die zweite **Expression** Komponente um den "Expression Editor" zu oeffnen und aendere den Ausdruck in: ```x*cos(x)```|||
 
 ![](images/1-3-3/1-3-3_24-expression-editor.png)
->Double click the Expression component to open the Grasshopper Expression Editor
+>Doppelklicke die "Expression" Komponente um den Grasshopper "Expression Editor" zu oeffnen
 
 ||||
 |--|--|--|
-|09.| Connect two wires from the Point X (X) output of the **Deconstruct** component to the Variable x (x) input of each **Expression** component||
-|10.| Connect the Result (R) output of the first **Expression** component to the X coordinate (X) input of the **Construct Point** component||
-|11.| Connect the Result (R) output of the second **Expression** component to the Y coordinate (Y) input of the **Construct Point** component<br><blockquote>We have replaced the Trigonometry functions and multiplication operators with the expression components for a more efficient definition.</blockquote>||
-|12.| **Mesh/Triangulation/Voronoi** – Drag and drop the **Voronoi** component  onto the canvas|[![](images/1-3-3/1-3-3_25-voronoi-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MTVoronoi)|
-|13.| **Params/Input/Number Slider** – Drag and drop a **Number Slider** onto the canvas||
-|14.| Double-click on the **Number Slider** and set the following:<ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 30<br>Value: 30</ul>||
-|15.| Connect the **Number Slider** to the Radius (R) input of the **Voronoi** component||
-|16.| Connect the Point (Pt) output of the **Construct Point** component to the Points (P) input of the **Voronoi** component|||
+|09.| Verbinde die beiden Kabel des Punkt X (X) Ausgabeparameters der **Deconstruct** Komponente mit dem Variable x (x) Eingabeparameter jeder **Expression** Komponente||
+|10.| Verbinde den Ergebnis (R) Ausgabeparameter mit der ersten **Expression** Komponente mit dem X Koordinate (X) Eingabeparameter der **Construct Point** Komponente||
+|11.| Verbinde den Ergebnis (R) Ausgabeparameter der zweiten **Expression** Komponente mit dem Y Koordinate (Y) Eingabeparameter der **Construct Point** Komponente<br><blockquote>Wir haben die trigonometrischen Funktionen und Multiplikationsoperatoren mit den "Expression" Komponenten ersetzt und dadurch eine effizientere Definition erzeugt.</blockquote>||
+|12.| **Mesh/Triangulation/Voronoi** – Ziehe eine **Voronoi** Komponente auf die Leinwand|[![](images/1-3-3/1-3-3_25-voronoi-72dpi.png)](../../appendix/A-1/0_index-of-components.html#MTVoronoi)|
+|13.| **Params/Input/Number Slider** – Ziehe einen **Number Slider** auf die Leinwand||
+|14.| Doppelklicke auf den **Number Slider** und setze folgende Werte:<ul>Rounding: Integer<br>Lower Limit: 1<br>Upper Limit: 30<br>Value: 30</ul>||
+|15.| Verbinde den **Number Slider** mit dem Radius (R) Eingabeparameter der **Voronoi** Komponente||
+|16.| Verbinde den Punkt (Pt) Ausgabeparameter der **Construct Point** Komponente mit dem Punkte (P) Eingabeparameter der **Voronoi** Komponente|||
 
 ![](images/1-3-3/1-3-3_26-connected-with-voronoi.png)
 
-You can create different Voronoi patterns by manipulating the Factor, Count, and Radius sliders. Below are three examples:
+Du kannst verschiedene Vornoimuster durch die Manipulation der Werte fuer "Factor, "Count" und "Radius" mit den Schiebereglern erzeugen. Unterhalb sind drei Beispiele:
 
 ![](images/1-3-3/1-3-3_27-voronoi-patterns.png)
 >1. Factor = 1.000, Radius = 15

@@ -1,74 +1,75 @@
-<style>
+﻿<style>
 td:nth-child(1) {color: #008DB2}
 td:nth-child(3)	{font-size: 70%;width: 15%;}
 td {background-color: #F9F9F9;}
 thead {display: none}
 </style>
-###1.3.4. Domains & Color
+###1.3.4. Domaenen & Farben
 
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
->Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+>Beispieldateien fuer diesen Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
->Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.3.4_domains and color.gh)
+>>Beispieldateien fuer diesen Abschnitt: [Download](../../appendix/A-2/gh-files/1.3.4_domains and color.gh)
 {% endif %}
 
-#####The color wheel is a model for organizing colors based on their hue. In Grasshopper, colors can be defined by their hue value in a range of 0.0 to 1.0. Domains are used to define a range of all possible values between a set of numbers between a lower limit(A) and an upper limit (B).
+#####Das Farbrad ist ein Modell um Farben basierend auf ihrem Farbton zu organisieren. In Grasshopper werden Farben durch einen Farbton zwischen 0.0 to 1.0 beschrieben. Domaenen werden verwendet um ein Spektrum an moeglichen Werten zwischen einer Untergrenze (A) und einer Obergrenze (B) anzugeben.
+
 
 ![](images/1-3-4/1-3-4_01-color-wheel.png)
->In the color wheel, hue corresponds to the angle. Grasshopper has taken this 0-360 domainand remapped it between zero and one.
+>Auf dem Farbrad entspricht der Farbton dem Winkel. Grasshopper hat diese 0-360 Domaene genommen und auf eine zwischen null und eins uebertragen.
 
-By dividing the Hue domain (0.0 to 1.0) by the number of segments desired, we can assign a hue value to each segment to create a color wheel.
+Indem die Farbtondomaene (0.0 to 1.0) mit der Anzahl an gewuenschten Segmenten unterteilt wird, koemmem wor dem Wert des Farbtons dem entsprechenden Segment zuordnen um ein Farbrad zu erzeugen.
 
 ![](images/1-3-4/1-3-4_02-segmented-color-wheels.png)
 
-In this example, we will use Grasshopper’s domain and color components to create a color wheel with a variable amount of segments.
+In diesem Beispiel werden wir Grasshopper's Domaenen und Farbkomponenten heranziehen um ein Farbrad mit variabler Anzahl von Segmenten zu erzeugen.
 
 ||||
 |--|--|--|
-|01.| Type Ctrl+N (in Grasshopper) to start a new definition||
-|02.| **Curve/Primitive/Polygon** – Drag and drop a **Polygon** component onto the canvas|[![](images/1-3-4/1-3-4_03-polygon.png)](../../appendix/A-1/0_index-of-components.html#CPPolygon)|
-|03.| **Params/Geometry/Point** – Drag and drop a **Point** Parameter onto the canvas|[![](images/1-3-4/1-3-4_04-point.png)](../../appendix/A-1/0_index-of-components.html#PGPt)|
-|04.| Right-Click on the **Point** Component and select set one point||
-|05.| Set a point in the model space.||
-|06.| Connect the **Point** Parameter (Base Point) to the Plane (P) input of the **Polygon** component||
-|07.| **Params/Input/Number Sliders** – Drag and drop two **Number Sliders** onto the canvas||
-|08.| Double-click on the first **Number Sliders** and set the following:<ul>Rounding: Integers<br>Lower Limit: 0<br>Upper Limit: 10<br>Value: 10</ul>||
-|09.| Double-click on the second **Number Sliders** and set the following:<ul>Rounding: Integers<br>Lower Limit: 0<br>Upper Limit: 100<br>Value: 37</ul>||
-|10.| Connect the **Number Slider** (Radius) to the Radius (R) input of the **Polygon** component <blockquote>When you connect a number slider to a component in will automatically change its name to the name of input that it is connecting to.</blockquote>||
-|11.| Connect the **Number Slider** (Segments) to the Segments (S) input of the **Polygon** component|||
+|01.| Tippe Ctrl+N (in Grasshopper) um eine neue Definition zu erzeugen||
+|02.| **Curve/Primitive/Polygon** – Ziehe eine **Polygon** Komponente auf die Leinwand|[![](images/1-3-4/1-3-4_03-polygon.png)](../../appendix/A-1/0_index-of-components.html#CPPolygon)|
+|03.| **Params/Geometry/Point** – Ziehe einen **Point** Parameter auf die Leinwand|[![](images/1-3-4/1-3-4_04-point.png)](../../appendix/A-1/0_index-of-components.html#PGPt)|
+|04.| Rechtsklicke auf die **Point** Komponente und waehle "Set one point"||
+|05.| Waehle einen Punkt aus dem Modellraum.||
+|06.| Verbinde den **Point** Parameter (Basispunkt) mit dem Ebene (P) Eingabeparameter der **Polygon** Komponente||
+|07.| **Params/Input/Number Sliders** – Ziehe zwei **Number Sliders** auf die Leinwand||
+|08.| Doppelklicke den ersten **Number Sliders** und setze folgende Werte:<ul>Rounding: Integers<br>Lower Limit: 0<br>Upper Limit: 10<br>Value: 10</ul>||
+|09.| Doppelklicke den zweiten **Number Sliders** und setze folgende Werte:<ul>Rounding: Integers<br>Lower Limit: 0<br>Upper Limit: 100<br>Value: 37</ul>||
+|10.| Verbinde den **Number Slider** (Radius) mit dem Radius (R) Eingabeparameter der **Polygon** Komponente <blockquote>Wenn Du den Schieberegler mit einer Komponente verbindest, aendert er automatisch seinen Namen in den des Eingabeparameters mit dem er verbunden wird.</blockquote>||
+|11.| Verbinde den **Number Slider** (Segmente) mit dem segmente (S) Eingabeparameter der **Polygon** Komponente|||
 
 ![](images/1-3-4/1-3-4_06-connected-sliders.png)
 
 ||||
 |--|--|--|
-|12.| **Curve/Util/Explode** – Drag and drop an **Explode** component onto the canvas.|[![IMAGE](images/1-3-4/1-3-4_07-explode.png)](../../appendix/A-1/0_index-of-components.html#CUExplode)|
-|13.| Connect the Polygon (P) output of the **Polygon** component to the Curve (C) input of the **Explode** component||
-|14.| **Surface/Freeform/Extrude Point** – Drag and drop the **Extrude Point** component onto the canvas|[![](images/1-3-4/1-3-4_08-extrude.png)](../../appendix/A-1/0_index-of-components.html#SFExtrPt)|
-|15.| Connect the Segments (S) output of the **Explode** component to the Base (B) input of the **Extrude Point**||
-|16.| Connect the **Point** Parameter (Base Point) to the Extrusion Tip (P) of the **Extrude Point** component||
-|17.| **Surface/Analysis/Deconstruct Brep** – Drag and drop the **Deconstruct Brep** component on to the canvas|[![](images/1-3-4/1-3-4_09-deconstruct-brep.png)](../../appendix/A-1/0_index-of-components.html#SADeBrep)|
-|18.| Connect the Extrusion (E) output of the **Extrude Point** component to the **Deconstruct Brep** (B) component|||
+|12.| **Curve/Util/Explode** – Ziehe eine **Explode** Komponente auf die Leinwand.|[![IMAGE](images/1-3-4/1-3-4_07-explode.png)](../../appendix/A-1/0_index-of-components.html#CUExplode)|
+|13.| Verbinde den Polygon (P) Ausgabeparameter der **Polygon** Komponente mit dem Kurve (C) Eingabeparameter der **Explode** Komponente||
+|14.| **Surface/Freeform/Extrude Point** – Ziehe eine **Extrude Point** Komponente auf die Leinwand|[![](images/1-3-4/1-3-4_08-extrude.png)](../../appendix/A-1/0_index-of-components.html#SFExtrPt)|
+|15.| Verbinde den Segmente (S) Ausgabeparameter der **Explode** Komponente mit dem Basis (B) Eingabeparameter von **Extrude Point**||
+|16.| Verbinde den **Point** Parameter (Basispunkt) mit dem Extrusionsspitze (P) Eingabeparameter der **Extrude Point** Komponente||
+|17.| **Surface/Analysis/Deconstruct Brep** – Ziehe eine **Deconstruct Brep** Komponente auf die Leinwand|[![](images/1-3-4/1-3-4_09-deconstruct-brep.png)](../../appendix/A-1/0_index-of-components.html#SADeBrep)|
+|18.| Verbinde den Extrusion (E) Ausgabeparameter der **Extrude Point** Komponente mit der **Deconstruct Brep** (B) Komponente|||
 
 ![IMAGE](images/1-3-4/1-3-4_09b-definition2.png)
 
 ||||
 |--|--|--|
-|19.| **Maths/Domain/Divide Domain** – Drag and drop the **Divide Domain** component<blockquote>The Base Domain (I) is automatically set between 0.0-1.0 which is what we need for this exercise</blockquote>|[![](images/1-3-4/1-3-4_10a-divide-domain.png)](../../appendix/A-1/0_index-of-components.html#MDDivide)|
-|20.| Connect the **Number Slider** (Segments) to the Count (C) input of the **Divide Domain** component||
-|21.| **Math/Domain/Deconstruct Domain** – Drag and drop the **Deconstruct Domain** component|[![IMAGE](images/1-3-4/1-3-4_10b-deconstruct-domain.png)](../../appendix/A-1/0_index-of-components.html#MDDeDomain)|
-|22.| Connect the Segments (S) output of the **Divide Domain** component to the Domain (I) input of the **Deconstruct Domain** component||
-|23.| **Display/Colour/Colour HSL** – Drag and drop the **Colour HSL** component|[![IMAGE](images/1-3-4/1-3-4_11-colour-HSL.png)](../../appendix/A-1/0_index-of-components.html#DCHSL)|
-|24.| Connect the Start (S) output of the **Deconstruct Domain** component to the Hue (H) input of the **Colour HSL** components||
-|25.| **Display/Preview/Custom Preview** – Drag and drop the **Custom Preview** component|[![](images/1-3-4/1-3-4_12-custom-preview.png)](../../appendix/A-1/0_index-of-components.html#DPPreview)|
-|26.| Right click on the Geometry (G) input of the **Custom Preview** component and select Flatten<blockquote>See 1-4 Designing with Data Trees for details about flattening</blockquote>||
-|27.| Connect the Faces (F) output of the **Deconstruct Brep** component to the Geometry (G) input of the **Custom Preview** component||
-|28.| Connect the Colour (C) output of the **Colour HSL** component to the Shade (S) input of the **Custom Preview** component|||
+|19.| **Maths/Domain/Divide Domain** – Ziehe eine **Divide Domain** Komponente auf die Leinwand<blockquote>Die Basisdomaene (I) ist automatisch zwischen 0.0-1.0, was wir fuer diese Uebung benoetigen</blockquote>|[![](images/1-3-4/1-3-4_10a-divide-domain.png)](../../appendix/A-1/0_index-of-components.html#MDDivide)|
+|20.| Verbinde den **Number Slider** (Segmente) mit dem Anzahl (C) Eingabeparameter der **Divide Domain** Komponente||
+|21.| **Math/Domain/Deconstruct Domain** – Ziehe eine **Deconstruct Domain** Komponente auf die Leinwand|[![IMAGE](images/1-3-4/1-3-4_10b-deconstruct-domain.png)](../../appendix/A-1/0_index-of-components.html#MDDeDomain)|
+|22.| Verbinde den Segmente (S) Ausgabeparameter der **Divide Domain** Komponente mit dem Domaene (I) Eingabeparameter der **Deconstruct Domain** Komponente||
+|23.| **Display/Colour/Colour HSL** – Ziehe eine **Colour HSL** Komponente auf die Leinwand|[![IMAGE](images/1-3-4/1-3-4_11-colour-HSL.png)](../../appendix/A-1/0_index-of-components.html#DCHSL)|
+|24.| Verbinde den Start (S) Ausgabeparameter der **Deconstruct Domain** Komponente mit dem Farbton (H) Eingabeparameter der **Colour HSL** Komponente||
+|25.| **Display/Preview/Custom Preview** – Ziehe eine **Custom Preview** Komponente auf die Leinwand|[![](images/1-3-4/1-3-4_12-custom-preview.png)](../../appendix/A-1/0_index-of-components.html#DPPreview)|
+|26.| Rechtsklicke auf den Geometrie (G) Eingabeparameter der **Custom Preview** Komponente und waehle "Flatten"<blockquote>Siehe 1-4 gestalten mit Datenbaeumen fuer Details</blockquote>||
+|27.| Verbinde den Seitenflaechen (F) Ausgabeparameter der **Deconstruct Brep** Komponente mit dem Geometrie(G) Eingabeparameter der **Custom Preview** Komponente||
+|28.| Verbinde den Farb (C) Ausgabeparameter der **Colour HSL** Komponente mit dem Schattierung (S) Eingabeparameter der **Custom Preview** Komponente|||
 
 ![](images/1-3-4/1-3-4_13-connected-definition.png)
 
 ![](images/1-3-4/1-3-4_14-example-result.png)
 
-For different color effects, try connecting the Deconstruct Domain component to the saturation (S) or Luminance (L) inputs of the Colour HSL component.
+Fuer verschiedene Farbeffekte, versuche die "Deconstruct Domain" Komponente mit den Saettigungs (S) oder Leuchtdichte (L) Eingabeparametern der "Colour HSL" Komponente zu verbinden.
 
 ![](images/1-3-4/1-3-4_15-saturation.png)
 
