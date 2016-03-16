@@ -1,92 +1,93 @@
-<style>
+﻿<style>
 td:nth-child(1) {color: #008DB2}
 td:nth-child(3)	{font-size: 70%;width: 15%;}
 td {background-color: #F9F9F9;}
 thead {display: none}
 </style>
-### 1.4.7. WORKING WITH LISTS
+### 1.4.7. MIT LISTEN ARBEITEN
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
->Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+>Beispieldateien zu diesem Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 
 {% else %}
->Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.4.7_working with lists.gh)
+>>Beispieldateien zu diesem Abschnitt: [Download](../../appendix/A-2/gh-files/1.4.7_working with lists.gh)
 
 {% endif %}
 
-Lets take a look at an example using the components from the previous section. In this example, we are creating a tile pattern by mapping geometry to a rectangular grid. The pattern is created by using the List Item component to retrieve the desired tile from a list of geometry.
+Lass uns einen Blick in ein Beispiel werfen, das die Komponenten des vorausgegangenen Abschnitts beinhaltet. In diesem Beispiel, werden wir ein Fliesenmuster erzeugen, das durch die Abbildung von Geometrie auf ein Raster erzeugt wird. Das Muster wird durch die Nutzung der "List Item" Komponente erzeugt um die gewuenschte Fliese aus einer Liste von Geometien zu beziehen.
 
 ![IMAGE](images/1-4-7/1-4-7_001-working-with-lists.png)
->1. Geometry corresponding to index 1
-2. Geometry corresponding to index 0
-3. Rectangular grid
+>1. Geometrie entsprechend Index 1
+2. Geometrie entsprechend Index 0
+3. Rechtwinkliges Raster
 
 ![IMAGE](images/1-4-7/1-4-7_002-mapping.png)
->1. Mapping pattern
-2. Mapped geometry
+>1. Abbildungsmuster
+2. Abgebildete Geometrie
 
 
 
 
 ||||
 |--|--|--|
-|01.| Start a Rhinoceros File. ||
-|02.| Create two equally sized squares.||
-|03.| Create different geometries in each square.<br><blockquote>In the example shown above, we created a simple surface with a tab. The tab is filleted to demonstrate the orientation and the base is filleted to distinguish the two geometries.</blockquote>||
-|04.| Start a new definition, type Ctrl+N (in Grasshopper).||
-|05.| **Params/Geometry/Geometry** – Drag and drop two **Geometry** parameters onto the canvas.| [![IMAGE](images/1-4-7/1-4-7_003-geometry.png)](../../appendix/A-1/0_index-of-components.html#PGGeo)|
-|06.| Right-Click the first **Geometry** Parameter and select set one Geometry. Set the first Geometry that you are referencing. ||
-|07.| Right-Click the second **Geometry** Parameter and select set one Geometry. Set the second Geometry that you are referencing. <br><blockquote>It is possible to reference multiple geometries in a single parameter, but for simplicity were are using two separate parameter components.</blockquote>||
-|08.| **Params/Geometry/Curve** – Drag and drop two **Curve** parameters onto the canvas.|[![IMAGE](images/1-4-7/1-4-7_004-curve.png)](../../appendix/A-1/0_index-of-components.html#PGCrv)|
-|09.| Right-Click the first **Curve** Parameter and select set one Curve. Set the first square that you are referencing.||
-|10.| Right-Click the second **Curve** Parameter and select set one Curve. Set the second square that you are referencing. <br><blockquote>Be sure that the geometry and the square that you are referencing correspond.</blockquote>||
-|11.| **Vector/Grid/Rectangular** – Drag and drop a **Rectangular Grid** component onto the canvas. |[![IMAGE](images/1-4-7/1-4-7_005-rectangular-grid.png)](../../appendix/A-1/0_index-of-components.html#VGRecGrid)|
-|12.| **Params/Input/Slider** - Drag and drop three **Number Sliders** on the canvas. ||
-|13.| Double-click on the first **Number Slider** and set the following:<ul>Rounding: Integers<br>Lower Limit: 0<br>Upper Limit: 10<br>Value: 10 </ul>||
-|14.| Double-click on the second **Number Slider** and set the following:<ul>Rounding: Integers<br>Lower Limit: 0<br>Upper Limit: 10<br>Value: 10 </ul>||
-|15.| Double-click on the third **Number Slider** and set the following:<ul>Name: Extents X & Y<br>Rounding: Integers<br>Lower Limit: 0<br>Upper Limit: 10<br>Value: 10 </ul>||
-|16.| Connect the first **Number Slider** to the Size X (Sx) input of the **Rectangular Grid** component.||
-|17.| Connect the second **Number Slider** to the Size Y (Sy) input of the **Rectangular Grid** component.||
-|18.| Connect the third **Number Slider** to the Extent X (Ex) input and the Extent Y (Ey) input of the **Rectangular Grid** component.|||
+|01.| Beginne eine Rhinoceros Datei. ||
+|02.| Erstelle zwei gleichgrosse Quadrate.||
+|03.| Erstelle verschiedene Geometrien innerhalb der beiden Quadrate.<br><blockquote>Im oben dargestellten Beispiel haben wir eine einfache Flaeche mit einem Knick erstellt. Der Knick ist ausgerundet, um die Ausrichtung darzustellen und die Basis ist ausgerundet um die beiden Geometrien zu unterscheiden.</blockquote>||
+|04.| Beginne eine neue Definition, druecke Strg+N (in Grasshopper).||
+|05.| **Params/Geometry/Geometry** – Ziehe zwei **Geometry** Parameter auf die Leinwand.| [![IMAGE](images/1-4-7/1-4-7_003-geometry.png)](../../appendix/A-1/0_index-of-components.html#PGGeo)|
+|06.| Rechtsklicke den ersten **Geometry** Parameter und waehle "Set one Geometry". Referenziere die erste Geometrie. ||
+|07.| Rechtsklicke auf den zweiten **Geometry** Parameter und waehle "Set one Geometry". Waehle die zweite Geometrie, die Du referenzieren willst. <br><blockquote>Es ist moeglich mehrere Geometrien in einem einzigen Parameter zu referenzieren, aber der Einfachkeit halber werden wir zwei verschiedene Parameterkomponenten benutzen.</blockquote>||
+|08.| **Params/Geometry/Curve** – Ziehe zwei **Curve** Parameter auf die Leinwand.|[![IMAGE](images/1-4-7/1-4-7_004-curve.png)](../../appendix/A-1/0_index-of-components.html#PGCrv)|
+|09.| Rechtsklicke den ersten **Curve** Parameter und waehle "Set one Curve". Waehle die erste Kurve, die Du referenzieren moechtest.||
+|10.| Rechtsklicke den zweiten **Curve** Parameter und waehle "Set one Curve". Waehle die zweite Kurve, die Du referenzieren moechtest. <br><blockquote>Versichere Dich, dass die Geometrie und das Quadrat, die Du auswaehlst miteinander korrespondieren.</blockquote>||
+|11.| **Vector/Grid/Rectangular** – Ziehe eine **Rectangular Grid** Komponente auf die Leinwand. |[![IMAGE](images/1-4-7/1-4-7_005-rectangular-grid.png)](../../appendix/A-1/0_index-of-components.html#VGRecGrid)|
+|12.| **Params/Input/Slider** - Ziehe drei **Number Sliders** auf die Leinwand||
+|13.| Doppelklicke auf den ersten **Number Slider** und setze folgende Werte:<ul>Rounding: Integers<br>Lower Limit: 0<br>Upper Limit: 10<br>Value: 10 </ul>||
+|14.| Doppelklicke auf den zweiten **Number Slider** und setze folgende Werte:<ul>Rounding: Integers<br>Lower Limit: 0<br>Upper Limit: 10<br>Value: 10 </ul>||
+|15.| Doppelklicke den dritten **Number Slider** und setze folgende Werte:<ul>Name: Extents X & Y<br>Rounding: Integers<br>Lower Limit: 0<br>Upper Limit: 10<br>Value: 10 </ul>||
+|16.| Verbinde den ersten **Number Slider** mit dem Groesse X (Sx) Eingabeparameter der **Rectangular Grid** Komponente.||
+|17.| Verbinde den zweiten **Number Slider** mit dem Groesse Y (Sy) Eingabeparameter der **Rectangular Grid** component.||
+|18.| Verbinde den dritten **Number Slider** mit dem Abmessung X (Ex) Eingabeparameter und dem Abmessung Y (Ey) Eingabeparameter der **Rectangular Grid** Komponente.|||
 
 ![IMAGE](images/1-4-7/1-4-7_006-definition-1.png)
 
 ||||
 |--|--|--|
-|19.| **Sets/Tree/Merge** – Drag and drop two **Merge** components onto the canvas.|[![IMAGE](images/1-4-7/1-4-7_007-merge.png)](../../appendix/A-1/0_index-of-components.html#STMerge)|
-|20.| Connect the first **Geometry** parameter to Data Stream 1 (D1) input of the first **Merge** component. ||
-|21.| Connect the second **Geometry** parameter to Data Stream 2 (D2) input of the first **Merge** component. ||
-|22.| Connect the first **Curve** parameter to Data Stream 1 (D1) input of the second **Merge** component. ||
-|23.| Connect the second **Curve** parameter to Data Stream 1 (D2) input of the second **Merge** component. ||
-|24.| Right-click the Cells (C) output of the **Rectangular Grid** component and select Flatten. |||
+|19.| **Sets/Tree/Merge** – Ziehe zwei **Merge** Komponenten auf die Leinwand.|[![IMAGE](images/1-4-7/1-4-7_007-merge.png)](../../appendix/A-1/0_index-of-components.html#STMerge)|
+|20.| Verbinde den ersten **Geometry** Parameter mit dem Datenstrom 1 (D1) Eingabeparameter der ersten **Merge** Komponente. ||
+|21.| Verbinde den zweiten **Geometry** Parameter mit dem Datenstrom 2 (D2) Eingabeparameter der ersten **Merge** Komponente. ||
+|22.| Verbinde den ersten **Curve** Parameter mit dem Datenstrom 1 (D1) Eingabeparameter der zweiten **Merge** Komponente. ||
+|23.| Verbinde den zweiten **Curve** Parameter mit dem Datenstrom 2 (D2) Eingabeparameter der zweiten**Merge** Komponente. ||
+|24.| Rechtsklicke auf den Zellen (C) Ausgabeparameter der **Rectangular Grid** Komponente und waehle "Flatten". |||
 
 ![IMAGE](images/1-4-7/1-4-7_008-definition-2.png)
 
 ||||
 |--|--|--|
-|25.| **Sets/List/List Length** – Drag and drop a **List Length** component onto the canvas.|[![IMAGE](images/1-4-7/1-4-7_009-list-length.png)](../../appendix/A-1/0_index-of-components.html#SLLng)|
-|26.| Connect the Cells (C) output of the **Rectangular Grid** component to the List (L) input of the **List Length** component. ||
-|27.| **Sets/Sequence/Repeat Data** – Drag and drop a **Repeat Data** component onto the canvas.|[![IMAGE](images/1-4-7/1-4-7_010-repeat-data.png)](../../appendix/A-1/0_index-of-components.html#SSRepeat)|
-|28.| Connect the Length (L) output of the **List Length** component to the Length (L) input of the **Repeat Data** component. ||
-|29.| **Params/Input/Panel** – Drag and drop a **Panel** onto the canvas.||
-|30.| Double-click the **Panel**. Deselect multiline data, wrap items, and special codes. Enter the following:<ul>1<br>0<br>0</ul><br><blockquote>This is the pattern in which the geometries are being distributed. 0 is calling out the first referenced Geometry and 1 is calling out the second referenced Geometry. Changing the number sequence will change the pattern, as will changing the extents of the grid.</blockquote>|[![IMAGE](images/1-4-7/1-4-7_011-panel.png)](../../appendix/A-1/0_index-of-components.html#PIPanel)|
-|31.| Connect the **Panel** to the Data (D) input of the **Repeat Data** component.|||
+|25.| **Sets/List/List Length** – Ziehe eine **List Length** Komponente auf die Leinwand.|[![IMAGE](images/1-4-7/1-4-7_009-list-length.png)](../../appendix/A-1/0_index-of-components.html#SLLng)|
+|26.| Verbinde den Zellen (C) Ausgabeparameter der **Rectangular Grid** Komponente mit dem Liste (L) Eingabeparameter der **List Length** Komponente. ||
+|27.| **Sets/Sequence/Repeat Data** – Ziehe eine **Repeat Data** Komponente auf die Leinwand.|[![IMAGE](images/1-4-7/1-4-7_010-repeat-data.png)](../../appendix/A-1/0_index-of-components.html#SSRepeat)|
+|28.| Verbinde den Laenge (L) Ausgabeparameter der **List Length** Komponente mit dem Laenge (L) Eingabeparameter der **Repeat Data** Komponente. ||
+|29.| **Params/Input/Panel** – Ziehe ein **Panel** auf die Leinwand.||
+|30.| Doppelklicke das **Panel**. Deaktiviere "Multiline Data", "Wrap Items" und "Special Codes".
+Gebe folgenden Text ein:<ul>1<br>0<br>0</ul><br><blockquote>Dies ist das Muster in dem die Geometrien verteilt werden. 0 ruft die erste referenzierte Geometrie auf und 1 ruft die zweite referenzierte Geometrie auf. Aenderungen an der Reihenfolge der Zahlen oder an den Abmessungen des Rasters werden das Muster veraendern.</blockquote>|[![IMAGE](images/1-4-7/1-4-7_011-panel.png)](../../appendix/A-1/0_index-of-components.html#PIPanel)|
+|31.| Verbinde das **Panel** mit dem Daten (D) Eingabeparameter der **Repeat Data** Komponente.|||
 
 ![IMAGE](images/1-4-7/1-4-7_012-definition-3.png)
 
 ||||
 |--|--|--|
-|32.| **Sets/List/List Item** – Drag and drop two **List Item** components.|[![IMAGE](images/1-4-7/1-4-7_013-list-item.png)](../../appendix/A-1/0_index-of-components.html#SLItem)|
-|33.| Connect the Result (R) output of the first **Merge** component to the List (L) input of the first **List Item**component.||
-|34.| Connect the Result (R) output of the second **Merge** component to the List (L) input of the second **List Item** component.||
-|35.| Connect the Data (D) output of the **Repeat Data** component to the Index (i) input of the first and second **List Item** components.||
-|36.| **Transform/Affine/Rectangle Mapping** – Drag and Drop the **Rectangle Mapping** component onto the canvas.|[![IMAGE](images/1-4-7/1-4-7_014-rectangle-mapping.png)](../../appendix/A-1/0_index-of-components.html#TARecMap)|
-|37.| Connect the Cells (C) output of the **Rectangular Grid** component to the Target (T) input of the **Rectangular Mapping** component.||
-|38.| Connect the items (I) output of the first **List Item** component to the Geometry (G) input of the **Rectangular Mapping** component.||
-|39.| Connect the items (I) output of the second **List Item** component to the Source (S) input of the **Rectangular Mapping** component.|||
+|32.| **Sets/List/List Item** – Ziehe zwei **List Item** Komponenten auf die Leinwand.|[![IMAGE](images/1-4-7/1-4-7_013-list-item.png)](../../appendix/A-1/0_index-of-components.html#SLItem)|
+|33.| Verbinde den Ergebnis (R) Ausgabeparameter der ersten **Merge** Komponente mit dem Liste (L) Eingabeparameter der ersten **List Item** Komponente.||
+|34.| Verbinde den Ergebnis (R) Ausgabeparameter der zweiten **Merge** Komponente mit dem Liste (L) Eingabeparameter der zweiten **List Item** Komponente.||
+|35.| Verbinde den Daten (D) Ausgabeparameter der **Repeat Data** Komponente mit dem Index (i) Eingabeparameter der ersten und zweiten **List Item** Komponente.||
+|36.| **Transform/Affine/Rectangle Mapping** – Ziehe eine **Rectangle Mapping** Komponente auf die Leinwand.|[![IMAGE](images/1-4-7/1-4-7_014-rectangle-mapping.png)](../../appendix/A-1/0_index-of-components.html#TARecMap)|
+|37.| Verbinde den Zellen (C) Ausgabeparameter der **Rectangular Grid** Komponente mit dem Ziel (T) Eingabeparameter der **Rectangular Mapping** Komponente.||
+|38.| Verbinde den Elemente (I) Ausgabeparameter der ersten **List Item** Komponente mit dem Geometrie (G) Eingabeparameter der **Rectangular Mapping** Komponente.||
+|39.| Verbinde den Elemente (I) Ausgabeparameter der zweiten **List Item** Komponente mit dem Quelle (S) Eingabeparameter der **Rectangular Mapping** Komponente.|||
 
 ![IMAGE](images/1-4-7/1-4-7_015-definition-4.png)
 
-Changing the input geometry and the pattern will change the final tile pattern.
+Veraenderungen an der Eingabegeometrie und am Muster werden das Fliesenmuster veraendern.
 
 ![IMAGE](images/1-4-7/1-4-7_016-example-results.png)
 
