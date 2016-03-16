@@ -1,5 +1,5 @@
-##1.5. DESIGNING WITH DATA TREES
+##1.5. ENTWERFEN MIT DATENBAEUMEN
 
-####As your definitions increase in complexity, the amount of data flowing through also increases. In order to effectively use Grasshopper, it is important to understand how large quantities of data are stored, accessed, and manipulated.
+####Da Deine Definitionen in Komplexitaet zunehmen, wird der Umfang der uebertragenen Daten auch steigen. Um Grasshopper effektiv zu nutzen, ist es wichtig zu verstehen, wie grosse Datenmengen gespeichert, zugaenglich gemacht und veraendert werden koennen.
 
 ![IMAGE](images/1-5/1-5_001-designing-with-data-trees.png)
