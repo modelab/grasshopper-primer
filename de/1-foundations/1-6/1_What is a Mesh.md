@@ -1,6 +1,6 @@
 ﻿### 1.6.1 Was ist ein Polygonnetz?
 
-#####Ein Polygonnetz ist eine Sammlung von Vierecken und Dreiecken, die eine Flaeche oder einen Koerper darstellen. Dieser Anschnitt beschreibt die Struktur von Polygonnetzobjekten, welche aus Eckpunkten, Kanten und Oberflaechen, sowie zusaetzlichen Polygonnetzeigenschaften, wie Farben und Normalen, bestehen.
+#####Ein Polygonnetz ist eine Sammlung von Vierecken und Dreiecken, die eine Flaeche oder einen Koerper darstellen. Dieser Anschnitt beschreibt die Struktur von Polygonnetzobjekten, welche aus Eckpunkten, Kanten und Netzflaechen, sowie zusaetzlichen Polygonnetzeigenschaften, wie Farben und Normalen, bestehen.
 
 ![IMAGE](images/1-6-1/01_mesh-structure.png)
 >1. Mesh Eckpunkte
