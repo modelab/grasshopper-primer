@@ -1,5 +1,5 @@
-## 1.4. Designing with Lists
+## 1.4. Gestaltung mit Listen
 
-####One of the most powerful features of Grasshopper is the ability to quickly build and manipulate lists of data. This chapter will explain how to create, manipulate, and visualize list data.
+####Eine der maechtigsten Eigenschaften von Grasshopper ist die Faehigkeit schnell Listen von Daten zu erstellen und zu bearbeiten. Dieses Kapitel wird erklaeren, wie Datenlisten erstellt, veraendert und visulisiert werden koennen.
 
 ![IMAGE](images/1-4/1-4_001-designing-with-lists.png)

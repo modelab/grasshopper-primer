@@ -1,5 +1,5 @@
-## 1.3. Building Blocks of Algorithms
+## 1.3. BAUSTEINE FUER ALGORITHMEN
 
-####This chapter will introduce you to basic geometric and mathematical concepts and how they are implemented and manipulated in Grasshopper.
+####Dieses Kapitel wird die geometrischen und mathematischen Grundkonzepte einfuehren und darstellen wir diese in Grasshopper impplementiert und manipuliert werden.
 
 ![Building Blocks of Algorithms](images/1-3/1-3_001.png)

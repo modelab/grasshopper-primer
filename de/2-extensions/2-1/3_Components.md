@@ -1,96 +1,94 @@
-###2.1.3. Element* Components
+###2.1.3. Element* Komponenten
 
 ![IMAGE](images/2-1-3/2-1-3_001_Components-Tabs.png)
 
 ####2.1.3.1 Analyse
 
 ![IMAGE](images/2-1-3/2-1-3_002_Analyse-Components.png)
->1. Mesh Closest Point
+>1. Mesh Closest Point 
 2. Mesh Evaluate
 3. Mesh Sample Plus
 
 **Element\* Mesh Closest Point**
 
-Unlike Grasshopper's **Mesh Closest Point** component, this component also calculates the normal and color at the outputed point, eliminating the need for a  **Mesh Eval** component and simplfying the canvas workspace.
+Abweichend von Grasshopper's **Mesh Closest Point** Komponente, berechnet diese Komponente auch den Normalenvektor und die Farbe der ausgegebenen Punkte und ueberkommt die Notwendigkeit der **Mesh Eval** Komponente, was der Graphen auf der Leinwand vereinfacht.
 
 **Element\* Mesh Evaluate**
 
-The built in Grasshopper **Mesh Eval** component requires a mesh parameter as an input, which can be extracted from a **Mesh Closest Point** component, but which can be difficult to construct manually. Element's closest point component allows direct input of the index of a mesh face and the barycentric coordinates. 
+Die Grasshopper eigene **Mesh Eval** Komponente benoetigt einen Polygonnetzparameter als Eingabe, der von der **Mesh Closest Point** Komponente ausgegeben wird, aber recht schwierig haendisch zu erstellen ist. Element's "Closest Point" Komponente ermoeglicht die direkte Eingabe des Index einer Netzflaeche und ihrer baryzentrischen Koordinaten.
 
-Note - barycentric coordinates are defined such that they always add to 1. If the input values of U,V, and W do not add to 1, this component will maintain the ratio of the three values while normalizing them. For example, if you had the input values of 2, 2, and 4 the mesh parameter would be calculated as {0.25;0.25;0.5}
+Merke - baryzentrische Koordinaten sind auf eine Art und weise definiert, dass sie immer zu eins aufaddieren. Wenn die Eingabewerte U, V und W nicht auf eins aufaddieren, wird diese Komponente das Verhaeltnis der drei Werte beibehalten, waehrend sie normalisiert werden. Zum Beispiel, wenn Du die Eingabewerte 2, 2 und 4 eingibst, wird der Polygonnetzparameter mit {0.25;0.25;0.5} berechnet.
 
 **Element\* Mesh Sample Plus**
 
-This component is used to quickly extract color information from a mesh. It returns the Alpha, Red, Green, Blue, Hue, Saturation, and Luminosity values of the inputed points. If the given points are not on the mesh, this component will calculate the closest point. This component uses Parallel Computing for speed.
+Diese Komponente wird benutzt, um schnell Farbinformation aus einem Polygonnetz zu extrahieren. Sie gibt Alpha, Rot, Gruen, Blau, Farbton, Saettigung, und Leuchtkraftwerte der eingegebenen Punkte aus. Wenn ein gegebener Punkt nicht auf dem Polygonnetz liegt, wird diese Komponente den naehesten Punkt auf dem Polygonnetz berechnen. Diese Komponente nutzt parallele Datenverarbeitung um die Geschwindigkeit zu erhoehen.
 
 
-
-####2.1.3.2 Data
+####2.1.3.2 Daten
 
 ![IMAGE](images/2-1-3/2-1-3_003_Data-Components.png)
->1. Data Visualizer
-2. Edge Neighbors
-3. Face Neighbors
-4. Vertex Neighbors
+>1. Datenvisualisierer
+2. Benachbarte Kanten
+3. Benachbarte Netyflaechen
+4. Benachbarte Eckpunkte
 
 
 **Element\* Data Visualizer**
 
-This component is used to help visualize the half-edge data of the faces of an input mesh. 
+Diese Komponente wird verwendet um Halbkantendaten der Netzflaechen eines Eingabepolygonnetzes zu visualieren.
 
 **Element\* Edge Neighbors**
 
-This component provides access to the adjacency data structured according to the edges of the input mesh. The output data is provided as a tree with one branch for each edge in the mesh. It returns the mesh edges, the edge end points, center ponts of the faces adjacent to each edge (dual), the neighboring edges as line objects (arranged in clockwise order) , and neighbouring face centers (center points of faces adjacent to the edge start and end points)
+Diese Komponente bietet die Moeglichkeit Daten zur Nachbarschaft von Kanten eines Eingabepolygonnetzes strukturiert auszugeben. Die Ausgabedaten werden als Baum mit einem Ast fuer jede Kante in dem Polygonnetz ausgegeben. Sie gibt die Meshkanten, deren Entpunkte und die Mittelpunkte der Netzflaechen angrenzend an jeder Kante ("dual graph"), die benachbarten Kanten als Linienobjekte (in Reihe entgegen dem Uhrzeigersinn) und benachbarte Netzflaechenmittelpunkte (in Bezug auf die Kanten Start- und Endpunkte) aus.
 
 ![IMAGE](images/2-1-3/2-1-3_004_Edge-Neighbors.png)
-> **Edge Neighbors** - Edges, End vertices, Adjacent face centers, Neighboring edges, and Neighbouring face centers
+> **Edge Neighbors** - Kanten, Eckpunkte an den Enden, angrenzende Netzflaechenmittelpunkte, benachbarte Kanten und benachbarte Netzflaechenmittelpunkte
 
 **Element\* Face Neighbors**
 
-This component is similar to the others in this section, but the data is organized in a tree according to the faces of the mesh, with one branch per face. The outputs are the face centers, vertices of each face (arranged in counter clockwise order), neighbouring edges (arranged in counter clockwise order), and the centers of neighboring faces (arranged in counter clockwise order).
+Diese Komponente ist aehnlich zu den anderen in diesem Abschnitt, aber die Daten im Baum sind entsprechende der Netzflaechen geordnet, mit einem Ast pro Netzflaeche. Die Ausgabeparameter sind die Netzflaechenmittelpunkte, die Eckpunkte jeder Netzflaeche (angeordnet entgegen dem Uhrzeigersinn), benachbarte Kanten (angeordnet entgegen dem Uhrzeigersinn) und die Mittelpunkte der benachbarten Flaechen (angeordnet entgegen dem Uhrzeigersinn).
 
 ![IMAGE](images/2-1-3/2-1-3_005_Face-Neighbors.png)
-> **Face Neighbors** - Face centers, face vertices, neighbouring edges, neighbouring face centers
+> **Face Neighbors** - Netzflaechenmittelpunkte, Netzflaecheneckpunkte, benachbarte Kanten und benachbarte Netzflaechenmittelpunkte
 
 **Element\* Vertex Neighbors**
 
-This component outputs the mesh vertices, neighboring vertices (arranged in clockwise order), neighbouring edges (arranged in clockwise order), and neighbouring face centers (arranged in clockwise order) structured in a tree according to the vertices of the mesh.
+Diese Komponente gibt die Polygonnetzeckpunkte, benachbarte Eckpunkte (angeordnet entgegen dem Uhrzeigersinn), benachbarte Kanten (angeordnet entgegen dem Uhrzeigersinn) und benachbarte Netzflaechenmittelpunkte (angeordnet entgegen dem Uhrzeigersinn) in einem strukturierten Datenbaum entsprechend den Eckpunkten des Polygonnetzes aus.
 
 ![IMAGE](images/2-1-3/2-1-3_006_Vertex-Neighbors.png)
-> **Vertex Neighbors** - Vertices, neighbouring vertices, neighbouring edges, neighbouring face centers
+> **Vertex Neighbors** - Eckpunkte, benachbarte Eckpunkte, benachbarte Kanten, benachbarte Netzflaechenmittelpunkte
 
-####2.1.3.3 Primitives
+####2.1.3.3 Primitive Polygonnetzkoerper
 
-Element\* provides four additional mesh primitives: the Dodecahedron, Tetrahedron, Octahedron, and Icosahedron. These components take a single number as input for the radius, and produce meshes centered at the origin, and composed of one face per side. With the addition of the Cube, which is already availible through Grasshopper's built-in primitives, these make up the five Platonic solids. 
+Element\* stellt vier zusetzliche primitve Polygonnetzkoerper zur Verfuegung: den Dodekaeder, Tetraeder, Oktaeder und Ikosaeder. Diese Komponente nimmt eine einzelne Zahl als Eingabeparameter fuer den Radius und produziert ein Polygonnetz mit dem Koordinatenursprung als Zentrum, das aus einer Netzflaeche pro Seite besteht. Mit dem zusaetzlichen Einsatz des Wuerfels, der bereits in Grasshopper zur Verfuegung steht, macht das fuenf platonische Koerper. 
 
 ![IMAGE](images/2-1-3/2-1-3_007_Primitives.png)
->1. Dodecahedron
-2. Tetrahedron
-3. Octahedron
-4. Icosahedron
+>1. Dodekaeder
+2. Tetraeder
+3. Oktaeder
+4. Ikosaeder
 
-####2.1.3.4 Smooth
+####2.1.3.4 Glaettung
 
-**Element\* Smooth** provides an optimized smoothing algorithm that is more efficient than Grasshopper's **Smooth Mesh** for large datasets. It makes use of the Lapacian Smoothing algorithm for Half-Edge structured meshes. It does not change the topology or vertex count of welded meshes, but will combine identical vertices if there are any duplicates caused by an unwelded mesh. We can specify the smoothing strength, boundary condition, boundary tolerance as well as the number of iterations.
+**Element\* Smooth** stellt einen optimierten Glaettungsalgorithmus zur Verfuegung, der effizienter arbeitet als Grasshopper's **Smooth Mesh**, wenn er fuer groessere Datensaetze eingesetzt wird. Er nutzt den Laplaceschen Glaettungsalgorithmus fuer halbkantenstrukturierte Polygonnetze. Er veraendert nicht die Topologie oder die Anzahl der Eckpunkte eines verschweissten Polygonnetzes, wird aber identische Eckpunkte zusannebfuehren, die aus einem unverschweissten Polygonnetz resultieren. Wir koennen die Glaettungsstaerke, Grenbedingungen, Grenztoleranzen, sowie die Anzahl der Iterationen angeben.
 
 ![IMAGE](images/2-1-3/2-1-3_008_Smooth.png)
 
-####2.1.3.5 Subdivide
+####2.1.3.5 Unterteilung
 
 **Element\* Catmull Clark Subdivision** 
 
-This is a recursive subdivision defined by the Catmull Clark algorithm. We can specify the number of iterations as well as how to handle naked edge conditions.
-
+Dies ist eine rekursive Unterteilung basierend auf dem Catmull Clark Algorithmus. Wir koennen die Anzahl der Iterationen, sowie die Art des Umgangs mit offenen Kanten bestimmen.
 
 **Element\* Constant Quad**
 
-This subdivison component will create an all quad mesh by adding a face for each edge of the mesh.
+Diese Unterteilungskomponente wird ein Polygonnetz mit ausschliesslich viereckigen Netzflaechen erzeugen indem sie eine weitere Netzflaeche fuer jede Kante des Polygonnetzes hinzufuegt.
 
 ![IMAGE](images/2-1-3/2-1-3_009_Subdivide.png)
->1. Constant Quad subdivision
-2. Catmull Clark subdivision
+>1. Constant Quad Unterteilung
+2. Catmull Clark Unterteilung
 
-####2.1.3.6 Transform
+####2.1.3.6 Transformation
 
 ![IMAGE](images/2-1-3/2-1-3_010_Transform-Components.png)
 >1. Mesh Windown
@@ -99,49 +97,48 @@ This subdivison component will create an all quad mesh by adding a face for each
 4. Mesh Offset
 5. Mesh Poke Face
 
-These components provide a number of different transformations described below. Each component has the additional capability of accepting per-vertex distance data to allow for variations of the transformation magnitudes across the mesh.
+Diese Komponenten stellen eine Anzahl von unterschiedlicher Transformationen zur Verfuegung, die unten beschrieben werden. Jede Komponente hat die zusaetzliche Moeglichkeit Distanzdaten pro Eckpunk anzunehmen um eine Variation der Transformationsstaerke ueber das Polygonnetz zu erreichen.
 
 **Element\* Mesh Window**
 
-Reconstructs a new mesh on the inside of a face based on an offset value. This component accepts either a mesh or a list of closed polylines as input.
+Stellt ein neues Polygonnetz innerhalb der Netzflaechen mit einem Versatzwert her. Diese Komponente akzeptiert entweder ein Polygonnetz oder eine Liste von geschlossenen Polylinien als Eingabe.
 
 **Element\* Mesh Frame**
 
-Outputs a frame around mesh faces. Each resultant face will have a new hole in the center. This component accepts either a mesh or a list of closed polylines as input.
+Die Ausgabe ist ein Rahmen um die Netzflaechen. Jede resultierende Netzflaeche wird ein neues Loch im Zentrum haben. Diese Komponente akzeptiert entweder ein Polygonnetz oder eine Liste von geschlossenen Polylinien als Eingabe.
 
 **Element\* Mesh Thicken**
 
-This component will thicken an input mesh along the vertex normals, and according to provided distance values.
+Diese Komponente wird einem Eingabepolygonnetz Materialstaerke entsprechend der Eckpunktnormalen entsprechend der zur Verfuegung gestellten Eingabewerte zuweisen.
 
 **Element\* Mesh Offset**
 
-This component creats an offset of the input mesh based on the vertex normals.
+Diese Komponente erstellt einen Versatz zum urspruenglichen Polygonnetz entsprechend der Eckpunktnormalen.
 
 **Element\* Mesh Poke Face**
 
-First the mesh face goes through the frame operation then the face inner is split the selected faces and allows the user to specify the push or pull amount from the center of the original polygon.
-For example, a four-sided polygon (quad) is split into 4 three-sided polygons with one shared vertex in the middle. The height input allows you to transform that vertex.
+Zuerst werden die Netzflaechen mit einer "Frame" Operation geteilt und dass die Innenflaeche nochmals mittig unterteilt. Fuer diesen Teil der Netzflaeche kann ein Wert angegeben werden, der die innenliegenden Netzflaechen entlang der Flaechennormalen verschiebt. Zum Beispiel wir ein vierseitiges Polygon ("Quad") in vier dreiseitige Polygone, mit einem gemeinsamen Eckpunkt in deren Mitte, unterteilt. Der Hoeheneingabeparameter erlaubt es den Eckpunkt entsprechend zu transformieren.
 
 ![IMAGE](images/2-1-3/2-1-3_011_Transform.png)
 >1. Mesh Window
 2. Mesh Frame
-3. Icosohedron transformed with mesh frame, then thickend and subdivided
+3. Ikosaeder nach der aufeinanderfolgenden Anwendung der "Mesh Frame", "Mesh Thicken" und Polygonnetzteilung Komponenten.
 
-####2.1.3.7 Utility
+####2.1.3.7 Dienstprogramme
 
 ![IMAGE](images/2-1-3/2-1-3_012_Utility-Component.png)
 >1. Mesh Combine & Clean
 2. Mesh Edges
 3. Mesh Status
 
-The **Element\* Mesh Combine and Clean** 
+**Element\* Mesh Combine and Clean** 
 
-This component combines multiple meshes, has options for either welding a mesh based on input angle or combining identical vertices. We can also flip the orientation of the mesh. This component also detects potential topology issues and returns Remarks and Warnings with detailed explanantions. In the event that combining identical vertices creates bad topology the component will return the input list of meshes instead of a combined merged mesh. The user can also choose to combine the mesh without merging any of its vertices.
+Diese Komponente verbindet verschiedene Polygonnetze mit den zusaetzlichen Optionen das Polygonnetz basierend auf einem Winkel zu verschweissen oder identische Eckpunkte zu verbinden. Diese Komponente stellt ebenso moegliche topologische Probleme fest und gibt diese als Anmerkungen und Warnungen mit detaillierten Beschreibungen aus. Im Fall, dass die Zusammenfuehrung von identischen Eckpunkte eine schlechte Topologie erzeugt, wird die Komponente die unveraenderten Eingabepolygonnetze ausgeben, anstatt sie zusammenzufuehren. Der Nutzer kann auch angeben das Polygonnetz zusammenzufuehren ohne die Eckpunkte zu veraendern.
 
-The **Element\* Mesh Edges** 
+**Element\* Mesh Edges** 
 
-This component returns the mesh naked edges, mesh edges, face polylines and if the mesh is unwelded it will return the unwelded mesh edges.
+Diese Komponente gibt die offenen Kanten, Kante, Netzflaechenpolylinien und fuer unverschweisste Polygonnetze die unverschweissten Polygonnetzkanten aus.
 
-The **Element\* Mesh Status** 
+**Element\* Mesh Status** 
 
-This component returns mesh information based on the topology. There are two modes which we can view the information, the first is Mesh Info which returns Geometry data such as Mesh Validity, Vertex Count, Face Count, and Normal Count. The other returns the Mesh Status, which is the condition of the mesh, whether it has non manifold edges, degenerate face count, naked edge count, and disjoined mesh count. This component does not operate on a mesh it simply returns the information to the user. There is also an option to combine identical vertices, therefore the user can see the effects this would have on the mesh.
+Diese Komponente gibt Polygonnetzinformationen basierend auf der Topologie aus. Es gibt zwei verschiedene Modi in denen wir die Informationen ansehen koennen. Die erste ist die Ausgabe von Daten zur Geometrie, wie Polygonnetzvaliditaet, Anzahl der Exkpunkte, Anzahl der Netzflaechen und Anzahl der normalen. Die andere ist die Ausgabe des Polygonnetzstatus, welcher den Zustand des Polygonnetzes beschreibt, ob es nicht-mannigfaltige Kannten, degenerierte Netzflaechen, die Anzahl der offenen Kanten oder die Anzahl unverbundener Netzflaechen ist. Diese Komponente operiert nicht auf einem Polygonnetz, es gibt lediglich Informationen fuer den Nutzer aus. Es gibt auch eine Option fuer die Kombination identischer Eckpunkte, wodurch der Nutzer den Effekt dieser Option auf die entsprechenden Daten beobachten kann.

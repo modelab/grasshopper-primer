@@ -1,46 +1,43 @@
-### 1.4.6. List Management
+### 1.4.6. Listen Managen
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
->Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+>Beispiele zu diesem Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
->Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.4.6_list management.gh)
+>Beispiele zu diesem Abschnitt: [Download](../../appendix/A-2/gh-files/1.4.6_list management.gh)
 {% endif %}
 
-#####One of the most powerful features of Grasshopper is the ability to quickly build and manipulate various lists of data. We can store many different types of data in a list (numbers, points, vectors, curves, surfaces, breps, etc.) and there are a number of useful tools found under the Sets/List subcategory.
+#####Eine der maechtigsten Eigenschaften von Grasshopper ist die Moeglichkeit schnell Listen zu erstellen und zu bearbeiten. Wir speichern viele verschiedene Datentypen in einer Liste (Nummern, Punkte, Vektoren, Kurven, Flaechen, Breps, usw.) und es gibt eine Menge nuetzlicher Werzeuge hierfuer unter der "Sets/List" Unterkategorie.
 
-####1.4.6.1. LIST LENGTH
-The List Length component (Sets/List/List Length) essentially measures the length of the List. Because our lists always start at zero, the highest possible index in a list equals the length of the list minus one. In this example, we have connected our base List to the List Length-L input, showing that there are 6 values in the list.
+####1.4.6.1. LISTENLAENGE
+Die "List Length" Komponente (Sets/List/List Length) misst grundsaetzlich die Laenge einer Liste. Da unsere Listen immer bei null beginnen, ist der hoechste moegliche Wert unseres Indexes einer Liste gleich der Laenge der Liste minus eins. In diesem Beispiel haben wir unsere Ausgangsliste mit dem L Eingabeparameter der "List Length" Komponente verbunden, um zu zeigen, dass in der Liste 6 Eintraege vorhanden sind.
 
 ![IMAGE](images/1-4-6/1-4-6_001-list-length.png)
 
-####1.4.6.2. LIST ITEM
-Our List is fed into a List Item component (Sets/List/List Item) in order to retrieve a specific data item from within a data set. When accessing individual items in a list, we have to specify the i-input; which corresponds to the index number we would like to retrieve. We can feed a single integer or a list of integers into the i-input depending on how many items we would like to retrieve.The L-input defines the base list which we will be analyzing. In this example, we have set the i-input to 2 so the List Item component returns the data item associated with the 3rd entry number in our list.
+##>#1.4.6.2. LISTENELEMENTE
+Unsere Liste wird mit einer "List Item" Komponente (Sets/List/List Item) verbunden, um einen bestimmten Eintrag aus der Liste zu erhalten. Wenn wir auf ein individuelles Element einer Liste zugreifen wollen, muessen wir den i Eingabeparameter bestimmen; welcher mit dem Index uebereinstimmt, auf den wir zugreifen wollen. Wir koennen einen einzelnen Integerwert oder eine Liste von Integerwerten in den i Eingabeparameter eingeben, abhaengig davon, welche Elemente wir erhalten wollen. Der L Eingabeparameter definiert die Ausgangsliste, die wir analzsieren wollen. In diesem Beispiel haben wir den i Eingabeparameter mit 5.0 angegeben, so dass die "List Item" Komponente uns die Daten, die mit dem fuenften Eintrag der Liste verknuepft sind, ausgibt.
 
 ![IMAGE](images/1-4-6/1-4-6_002-list-item.png)
 
-####1.4.6.3. REVERSE LIST
-We can invert the order of our list by using a Reverse List component (Sets/List/Reverse). If we input an ascending list of numbers from 0.0 to 50.0 into the Reverse List component; the output returns a descending list from 50.0 to 0.0.
+####1.4.6.3. LISTEN UMKEHREN
+Wir koennen eine Liste in ihrer Reihenfolge umkehren, indem wir die "Reverse List" Komponente (Sets/List/Reverse) anwenden. Wenn wir eine aufsteigende Liste mit Zahlen von 0.0 bis 9.0 in die "Reverse List" Komponente eingeben, gibt uns der Ausgabeparameter eine absteigende Liste von 9.0 bis 0.0 zurueck.
 
 ![IMAGE](images/1-4-6/1-4-6_003-reverse-list.png)
 
-####1.4.6.4. SHIFT LIST
-The Shift List component (Sets/Sequence/Shift List) will either move the list up or down a number of increments depending on the value of the shift offset. We have connected the List output into the Shift-L input, while also connecting a number to the Shift-S input. If we set the offset to -1, all values of the list will move down by one entry number. Likewise, if we change the offset to +1, all values of the list will move up by one entry number. If Wrap input equals True, then items that fall off the ends are re-appended to the beginning or end of the list. In this example, we have a shift offset value set to +1, so that our list moves
-up by one entry number. Now, we have a decision to make on how we would like to treat the first value. If we set the Wrap value to False, the first entry will be shifted up and out of the list, essentially removing this value from the data set (so, the list length is one less than it was before). However, if we set the wrap value to True, the first entry will be moved to the bottom of the list
+####1.4.6.4. VERSCHIEBEN VON LISTEN
+Die "Shift List" Komponente (Sets/Sequence/Shift List) wird die Reihenfolge der Liste nach oben oder unten verschieben, je nachdem welchen Wert wir fuer die Verschiebung angeben. Wir habn den Ausgabeparameter der Liste mit dem L Eingabeparameter der "Shift List" Komponente verbunden, waehrend wir eine Zahl mit dem S Eingabeparameter verknuepfen. Wenn wir die Verschiebung mit -1 angeben, werden alle Werte in der Liste um einen Eintrag nach unten verschoben. Ebenso werden alle Werte in der Liste um einen Eintrag nach oben verschoben, wenn wir die Verschiebung mit +1 angeben. In diesem Beispiel haben wir die Verschiebung mit +1 festgelegt, so dass unsere Leiste um einen Eintrag nach oben verschoben wird. Wenn wir den "Wrap" Wert auf "false" stellen, wird der letzte Eintrag nach oben verschoben und aus der Liste fallen, was den Wert grundsaetzlich aus der Liste entfernt (so dass die Laenge der Liste sich um eins reduziert). Jedoch, wenn wir den "Warp" wert auf "true" setzen, wird der letzte Eintrag der Liste wieder unten an der Liste angefuegt.
 
 ![IMAGE](images/1-4-6/1-4-6_004-shift-list.png)
 
-####1.4.6.5. INSERT ITEMS
-The Insert Items component (Sets/Lists/Insert Items) enables you to insert a collection of items into a list. In order for this to work properly, you need to know the items you want to insert and the index position for each new item. In the example below, we will insert the letters A, B, and C into index position three.
-
+####1.4.6.5. ELEMENTE EINFUEGEN
+Die "Insert Items" Komponente (Sets/Lists/Insert Items) ermoeglicht es eine Menge an Werten in eine Liste einzufuegen. Damit dies anstaendig funktioniert, muessen wir fuer jedes Element wissen, welche Elemente wir an welcher Indexposisiton einfuegen wollen. Im unteren Beispiel werden wir die Buchstaben A, B und C an die Indexposition drei einfuegen.
 ![IMAGE](images/1-4-6/1-4-6_005-insert-item.png)
 
-####1.4.6.6. WEAVE
-The Weave component (Sets/Lists/Weave) merges two or more lists together
-based on a specified weave pattern (P input).When the pattern and the streams do not match perfectly, this component can either insert nulls into the output streams or it can ignore streams which have already been depleted.
+####1.4.6.6. WEBEN
+Die "Weave" Komponente (Sets/Lists/Weave) fuehrt zwei Listen basierend auf einem Webemuster (P Eingabeparameter) zusammen. Wenn das Muster und die Datenstroeme nicht perfekt aufeinander abgebildet werden koennen, wird die Komponente entweder "null" Werte in die Eingabestroeme einfuegen, oder sie kann Stroeme ignorieren, die noch nicht erschoepft wurden.
 
 ![IMAGE](images/1-4-6/1-4-6_006-weave.png)
 
-####1.4.6.7. CULL PATTERN
-The Cull component (Sets/Sequence/Cull Pattern) removes elements in a list using a repeating bit mask. The bit mask is defined as a list of Boolean (true or false) values. The bit mask is repeated until all elements in the data list have been evaluated.
+####1.4.6.7. AUSSORTIEREN MIT MUSTER
+Die "Cull" Komponente (Sets/Sequence/Cull Pattern) entfernt Elemente einer Liste mit einer sich wiederholenden Maske. Die Maske ist definiert als eine Liste boolscher Werte (wahr oder falsch). Die Maske wird wiederholt, bis alle Elemente der Datenliste ausgewertet wurden.
 
 ![IMAGE](images/1-4-6/1-4-6_007-cull-pattern.png)
 

@@ -1,42 +1,42 @@
-### 1.2.4. WIRING COMPONENTS
+### 1.2.4. KOMPONENTEN VERKABELN
 
-#####When data is not stored in the permanent record set of a parameter, it must be inherited from elsewhere. Data is passed from one component to another through wires. You can think of them literally as electrical wires that carry pulses of data from one object to the next.
+#####Wenn Daten nicht in einem permanenten Satz eines Parameters gespeichert sind, muessen sie von einer anderen Quellen uebernommen werden. Daten werden von einer Komponente zur anderen durch Kabel uebertragen. Du kannst Dir diese buchstaeblich als elektrische Kabel vorstellen, die Datenimpluse von einem Objekt zum anderen uebertragen.
 
-####1.2.4.1. CONNECTION MANAGEMENT
-To connect components, click and drag near the circle on the output side of an object. A connecting wire will be attached to the mouse. Once the mouse hovers over a potential target input, the wire will connect and become solid. This is not a permanent connection until you release the mouse button. It doesn’t matter if we make the connections in a ‘left to right’ or ‘right to left’ manner.
+####1.2.4.1. VERBINDUNGSMANAGEMENT
+Um Komponenten zu verbinden, klicke und ziehe nahe dem Kreis an der Ausgabeseite eines Objektes. Ein Verbindungskabel wird and Deiner Maus angeheftet. Sobald die Maus ueber einem moeglichen Zieleingabeparameter schwebt, wird sich da Kabel verbinden und verfestigen. Dies ist keineswegs eine permanente Verbindung bis Du die Maustaste loslaesst. Es macht keinen Unterschied, ob weir die Verbindungen von "links nach rechts" oder von "rechts nach links" erstellen.
 
 ![IMAGE](images/1-2-4/1-2-4_001a.png)
->1. The Divide Curve component - divides a curve into equal length segments.
-2. Curve parameter - right click and select Set One Curve to reference Rhino Geometry.
+>1. Die "Divide Curve" Komponente teilt eine Kurve in gleich lange Segmente.
+2. "Curve" Parameter - rechtsklicke und waehle "Set One Curve" um eine Rhinogeometrie zu referenzieren.
 
 ![IMAGE](images/1-2-4/1-2-4_001b.png)
->Left click and drag the wire from the output (1.) of one object to the input (2.) of another.
+>Linksklicke und ziehe ein Kabel vom Ausgabeparameter (1.) eines Objekts zu einem Eingabeparameter (2.) eines anderen.
 
 ![IMAGE](images/1-2-4/1-2-4_001c.png)
->4. If you hold down CONTROL, the cursor will become red, and the targeted source will be removed from the source list.
-5. By default, a new connection will erase existing connections. Hold the SHIFT button while dragging connection wires to difne multiple sources. The cursor will turn green to indicate the addition behavior.
+>4. Wenn Du STRG haeltst, wird der cursor rot werden und die Zielquelle wird aus der Quellenliste entfernt werden.
+5. Als Standard werden neue Verbindungen bestehende Verbindungen loeschen. Halte SHIFT gedrueckt, waehrend Du das Verbindungskabel ziehst um mehrere Quellen zu definieren. Der Kursor wird gruen um das additive Verhalten darzustellen.
 
 ![IMAGE](images/1-2-4/1-2-4_001d.png)
->6. You can also disconnect wires through the context popup menu - right click the grip of the input or output and select disconnect.
-7. If there are multiple connections, select the one you want to disconnect from the list.
-8. When you hover over an item, the wire will be highlighted in red.
+>6. Du kannst Kabel ebenfalls durch das Kontextpopupmenu entfernen - rechtsklicke auf den Griff am Eingabe- oder Ausgabeparameter und waehle "disconnect".
+7. Wenn mehrere Verbindungen bestehen, kannst Du in einer Liste aussuchen, welche Du loesen moechtest.
+8. Wenn Du Deine Maus ueber ein Element bewegst, werden die entsprechenden Verbindungen in rot hervorgehoben.
 
 ####1.2.4.2. FANCY WIRES
-Wires represent the connections as well as the flow of data within the graph in our definition. Grasshopper can also give us visual clues as to what is flowing through the wires. The default setting for these so-called “fancy wires” is off, so you have to enable them before you can view the different types of line types for the connection wires. To do this, simply click on the Display Tab on the Main Menu Bar and select the button labeled “Draw Fancy Wires.” Fancy wires can tell you a lot of information about what type of information is flowing from one component to another.
+Kabel repraesentieren die Verbindungen, sowie den Fluss der Daten in einem Graph einer Definition. Grasshopper kann nun auch visuellen Hinweise darauf geben, was in den Kabel so vor sich geht. Die Standardeinstellung fuer diese sogenannten “fancy wires” ist ausgeschalten, weshakb Du sie einschalten musst, bevor Du die verschiedenen Typen von Linien fuer die Verbindungskabel sehen kannst. Um dies zu tun, klicke einfach auf den "View Tab" in der Hauptmenuleiste und waehle den Knopf genannt “Draw Fancy Wires”. Fancy wires kann Dir viele Informationen darueber welche Typen von Information von einer Komponente zur anderen fliesen geben.
 
 ![IMAGE](images/1-2-4/1-2-4_002-fancy-wires.png)
->1. Empty Item – An orange wire type indicates that no information has been transferred. This parameter has generated a warning message because it contains no data, and thus no information is being sent across the wire.
-2. The Merge component is an alternative to conecting more than one source to a single input.
-3. List – If the information flowing out of a component contains a list of information, the wire type will be shown as a grey double line.
-4. Single Item – The data flowing out of any parameter that contains a single item will be shown with a solid grey line.
-5.  Tree – Information transferred between components which contain a data structure will be shown in a grey double-line-dash wire type.
+>1. Leeres Element - Ein orangener Kabeltyp zeigt an, dass keine Information darin uebertragen wird. Dieser Parameter hat eine Warnung erzeugt weil er keine Daten enthaelt und damit keine Information ueber das Kabel gesendet wird.
+2. Die "Merge" Komponente ist eine alternative um mehrere Quellen mit einem einzelnen Eingabeparameter zu verbinden. 
+3. Liste – Wenn die Information, welche von einer Komponente ausfliest eine Liste von Informationen enthaelt, wird der Kabeltyp als graue Doppellinie dargestellt.
+4. Einzelnes Element – Die Daten aus einem beliebigen Parameter enthalten ein einzelnes Element und das Kabel wird as durchgehende graue Linie dargestellt.
+5.  Baum – Informationen, die zwischen Komponenten uebertragen werden und eine Datenstruktur enthalten, weden als graue, gestrichelte Doppellinie dargestellt.
 
-####1.2.4.3. WIRE DISPLAY
-If you have spent any great deal of time working on a single Grasshopper definition, you may have realized that the canvas can get cluttered with a nest of wires quite quickly. Fortunately, we have the ability to manage the wire displays for each input of a component.
+####1.2.4.3. KABELDARSTELLUNG
+Wenn Du eine lange Zeit damit zugebracht hast an einer einzelnen Grasshopper definition zu arbeiten, hast Du eventuell gemerkt, dass die Leinwand mit relativ schnell mit einer Menge kabel zugekleistert wird. Gluecklicherweise haben wir die Faehigkeit die Darstellung der Kabel fuer jeden einzelnen Eingabeparameter einer Komponente zu bestimmen.
 
-There are three wire displays: Default Display, Faint Display, and Hidden Display. To change the wire display, simply right-click on any input on a component and select one of the views available under the Wire Display pop out menu.
+Dabei gibt es drei Kabeldarstellungen: "Default Display", "Faint Display", and "Hidden Display". Um die Kabeldarstellung zu bearbeiten, rechtsklicke einfach auf den Eingabeparameter einer Komponente und waehle eine der Darstellungen im "Wire Display" Popupmenu aus.
 
 ![IMAGE](images/1-2-4/1-2-4_003-wire-display.png)
->1. Hidden Display – When hidden display is selected, the wire will be completely ‘invisible’. The data is transferred ‘wirelessly’ from the source to the input parameter. If you select the source or target component, a green wire will appear to show you which components are connected to each other. Once you deselect the component, the wire will disappear.
-2. Default Display – The default wire display will draw all connections (if fancy wires is turned on).
-3. Faint Display – The faint wire display will draw the wire connection as a very thin, semi-transparent line. Faint and Hidden wire displays can be very helpful if you have many source wires coming into a single input.
+>1. Versteckte Darstellung – Wenn "hidden display" ausgewaehlt wurde, wird das Kabel komplett unsichtbar. Die Daten werden dann kabellos von der Quelle zum Eingabeparameter uebertragen. Wenn Du die Quelle oder die Zielkomponente auswaehlst, wird ein gruenes Kabel erscheinen und Dir zeigen welche Komponenten untereinander verbunden sind. Sobald Du die Komponente nicht mehr ausgewaehlt hast, wird das Kabel wieder verschwinden.
+2. Standarddarstellung – Die Option "Default Wire Display" wird alle Verbindungen zeigen (wenn "Fancy Wires" eingeschalten wurde).
+3. Matte Darstellung – "Faint Wire Display" zeichnet eine sehr duenne, semitransparente Verbindung. Matte und versteckte Darstllung koennen sehr hilfreich sein, wenn viele Quellkabel an einem einzelnen Eingabeparameter ankommen.

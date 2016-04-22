@@ -1,55 +1,54 @@
-### 1.6.5 Mesh Interactions
+### 1.6.5 Wechselwirkungen zwischen Polygonnetzen
 
-#####This section looks at ways in which Mesh Objects can interact with other objects, such as evaluating nearest points or combining multiple meshes together.
+#####Dieser Abschnitt betrachtet Wege, in denen Polygonnetzobjekte miteinander in Wechselwirkung treten koennen, wie beispielsweise die Auswertung des naehesten Punktes oder die Kombination mehrerer Polygonnetze miteinander.
 
-
-####1.6.5.1 Mesh Geometry and Points
+####1.6.5.1 Polygonnetze und Punkte
 
 
 **Inclusion**
 
 ![IMAGE](images/1-6-5/inclusion.png)
 
-This component tests to determine whether a given point is inside a mesh solid or not. This only works with closed meshes.
+Diese Komponente testet ob ein bestimmter Punkt innerhalb eines Polygonnetzkoerpers liegt oder nicht. Dies funktioniert nur mit geschlossenen Polygonnetzen.
 
 **Mesh Closest Point**
 
 
 ![IMAGE](images/1-6-5/mesh-closest-point.png)
 
-This component will calculate the position on a mesh that is closest to a given point. This component outputs three pieces of data: the coordinates of the calculated point on the mesh, the index of the face which contains that point, and the mesh parameter. This parameter is extremely useful in conjunction with the **Mesh Eval** component discussed below.
+Diese Komponente berechnet die Position auf dem Polygonnetz, welche einem angegebenen Punkt am naehesten liegt. Diese Komponente gibt drei verschiedene Daten aus: die Koordinated des berechneten Punktes auf dem Polygonnetz, die Indizes der Netzflaeche die den Punkt enthaelt und die Polygonnetzparameter. Diese Parameter ist sehr wichtig in Verbindung mit der **Mesh Eval** Komponente, die unterhalb behandelt wird.
 
 ![IMAGE](images/1-6-5/01_mesh-closest-point.png)
->1. Given a point in space, We want to find the closet point on the mesh
-2. The face that contains the closest point is identified
-3. The parameters of the closest point on the face are calculated
+>1. Wir wollen basiered auf einem gegebenen Punkt im Raum den naehesten Punkt auf einem Polygonnetz finden
+2. Die Netzflaeche, wleche den naehesten Punkt enthaelt werden bestimmt
+3. Die Parameter des naehesten Punktes auf der Flaeche werden berechnet
 
-For those users interested in a little more detail about how a mesh is parameterized, we can take a closer look at how a mesh parameter is structured. You can see this structure by attaching a panel to the parameter output of a **Mesh Closest Point** component. The mesh parameter has the form: N[A,B,C,D]. The first number, N, is the index of the face which contains the calculated point. 
+Nutzer, die sich detaillierter mit der Parametrisierung beschaeftigen wollen koennen sich die Struktur der Polygonnetzparameter genauer ansehen. Du kannst sehen, wenn Du ein Paneel an den entsprechenden Ausgabeparameter der **Mesh Closest Point** Komponente anschliessst. Der Polygonnetzparameter hat die folgende Struktur: N[A,B,C,D]. Die erste Zahl, N, ist der Index der Netzflaeche, welche den berechneten Punkt enthaelt. 
 
-The following four numbers define the *barycentric* coordinates of the point within that face. The coordinates of the referenced point can be found by multiplying each vertex of the face by these numbers in order and then add the results together. (Of course, this is already done for us, and is given in the Point output). Also note that barycentric coordinates are only unique for triangular faces, meaning that on a quad face the same point could have multiple different parameterizations. Grasshopper avoids this problem by internally triangulating a quad face when calculating a parameter, the result of which is that of the four numbers in a mesh parameter, at least one of them will always be zero.
+Die folgenden vier Zahlen definieren die *baryzentrischen* Koordinaten des Punktes innerhalb der Netzflaeche. Die Koordinaten des referenzierten Punktes koennen gefunden werden, indem jeder Eckpunkt des Polygonnetzes mit diesen Zahlen multipliziert wird und die Ergebnisse addiert. (Natuerlich wird das schon fuer uns erledigt und wir koennen dn Punktausgabeparameter nutzen.) Merke Dir, dass baryzentrische Koordinaten" bur fuer dreieckige Netzflaechen eindeutig sind, was bedeutet, dass fuer eine viereckige Netzflaeche ein bestimmter Punkt mehrere Parametrisierungen aufweisen kann. Grasshopper vermeidet dieses Problem, indem es viereckige Netzflaechen intern trianguliert, wenn es die Netzparameter berechnet, was dau fuehrt, dass dass von den vier Zahlen des Netzparameters immer mindestens einer 0 ist.
 
 ![IMAGE](images/1-6-5/02_barycentric.png)
->Barycentric Coordinates
+>Baryzentrische Koordinaten
 
 **Mesh Eval**
 
 ![IMAGE](images/1-6-5/mesh-eval.png)
 
-The **Mesh Eval** component uses a mesh parameter as an input and returns the referenced point, as well as the normal and color at that point. The color and normal are calculated as interpolations of the vertex colors and vertex normals, using the same barycentric coordinates as the mesh parameter.
+Die **Mesh Eval** Komponente nutzt einen Netzparameter als Eingabeparameter und gibt den referenzierten Punkt, seine Normale und Farbe aus. Die Farbe und Normale werden als Interpolation der Eckpunktfarben und -normalen berechnet, indem die selben baryzentrischen Koordinaten wie im Netzparameter benutzt werden.
 
-####1.6.5.2 Combining Mesh Geometry 
+####1.6.5.2 Kombination von Polygonnetzgeometrien 
 
 **Mesh Join**
 
 ![IMAGE](images/1-6-5/mesh-join.png)
 
-Unlike joining curves or NURBS surfaces which require adjacency, any meshes can be joined into a single mesh - even meshes that are not touching. Recall that a mesh is simply a list of vertices, and a list of faces. There is no actual requirement for those faces to be connected (Although in most applications, such a mesh would not be very desirable!!).
+Abweichend von der Verbindung von NURBS Kurven und Oberflaechen, die Beruehrungspunkte benoetigt, koennen beliebige Polygonnetze miteinander verbunden werden - auch wenn die Polygonnetze sich nicht beruehren. Es ist keine Voraussetzung, dass die Netzflaechen miteinender verbunden sein muessen (obwohl in den meisten Anwendungen ein solches Polygonnetz nicht erstrebenswert ist !!!)
 
-This component does not weld mesh vertices together, so it is often useful to use this in combination with a **Weld** component.
+Diese Komponente verschweisst nicht die Eckpunkte und oft ist es sinnvoll sie mit der **Weld** Komponente zu kombinieren.
 
 **Mesh Boolean**
 
-Meshes in Grasshopper have a set of boolean operations similar to boolean operations for NURBS solids. Boolean operations are order specific, meaning that  switching the order of the input meshes A and B will result in different outputs.
+Polygonnetze in Grasshopper haben eine Anzahl von boolscher Operationen, aehnlich der boolschen Operationen fuer NURBS Koerper. Boolsche Operationen sind abhaengig von der Eingabereihenfolge, was bedeutet, dass wenn wir die Reihenfolge der Eingabepolygonnetze zwischen A und B umkehren, verschiedene Ergebnisse erzielt werden.
 
 ![IMAGE](images/1-6-5/03_boolean.png)
 >1. Mesh Difference
@@ -58,11 +57,11 @@ Meshes in Grasshopper have a set of boolean operations similar to boolean operat
 4. Mesh Union
 
 
-####1.6.5.3 Intersections and Occlusions 
+####1.6.5.3 Verschneidung und Verschattung 
 
 **Intersect**
 
-Intersections can be calculated between meshes and other objects: rays, planes, curves, and other meshes
+Verschneidungen koennen zwischen Polygonnetzen und anderen Objekten berechnet werden: Strahlen, Ebenen, Kurven und andere Polygonnetze
 
 ![IMAGE](images/1-6-5/04_mesh-intersection.png)
 >1. Mesh | Ray
@@ -74,12 +73,12 @@ Intersections can be calculated between meshes and other objects: rays, planes, 
 
 ![IMAGE](images/1-6-5/occlusion.png)
 
-As we have discussed, one of the (many) uses of mesh geometry is for visualizations and creating shaded rendering based on face normals. When rendering, it also necessary to know when an object is in shadow behind another object. The **Occlusion** component in Grasshopper allows us to enter a set of sample points, along with occluding mesh geometry that will 'cast shadows', and a *view ray*, or vector, to indicate the direction that 'light' is coming from.
+Wie wir schon besprochen haben, ist eine der vielen Anwendungen von Polygonnetzgeometrien die Visualisierung und die Erstellung von Renderings basiered auf Flaechennormalen. Wenn wir rendern ist es auch wichtig zu wissen, ob ein Objekt im Schatten hinter einem anderen Objekt liegt. Die **Occlusion** Komponente in Grasshopper erlaubt es uns einen Satz von Punkten als Stichprobe, das verschattende Polygonnetz  und einen *Sichtstrahl* (einen Vektor, der die Lichtrichtung definiert) einzugeben.
 
-Such a process can be used to create shadows in rendering, or determine whether objects are hidden from a certain camera view.
+Solch ein Prozess kann verwendet werden um Schatten in Renderings zu erzeugen oder um zu bestimmen ob Objekte von einem bestimmten Kamerawinkel aus verdeckt werden.
 
 ![IMAGE](images/1-6-5/05_mesh-occlusion.png)
->1. View Ray to test for occlusion
-2. Occluding mesh geometry
-3. 'Hit' sample points
-4. 'Occluded' sample points
+>1. Sichtsteahl um auf Verschattung zu testen
+2. Verschattendes Polygonnetz
+3. 'Getroffene' Stichprobenpunkte
+4. 'Verschattete' Stichprobenpunkte

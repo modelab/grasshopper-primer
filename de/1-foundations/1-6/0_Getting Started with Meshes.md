@@ -1,5 +1,5 @@
-## 1.6. Getting Started with Meshes
+## 1.6. Mit Meshes arbeiten
 
-####In the field of computational modeling, meshes are one of the most pervasive forms of representing 3D geometry. Mesh geometry can be a light-weight and flexible alternative to working with NURBS, and are used in everything from rendering and visualizations to digital fabrication and 3D printing. This chapter will provide an introduction to how mesh geometry is handled in Grasshopper.
+####Im Feld der computerbasierten Modellierung, sind meshes die haeufigste Form der Darstellung von 3D Geometrien. Meshgeometrien sind eine leichtgewichtige und flexible alternative zur Arbeit mit NURBS und werden ueberall, vom Rendern und Visualisieren bis zur digitalen Fabrikation und 3D Druck verwendet. Dieses Kapitel wird eine Einfuehrung in die Handhabung von Meshgeometrien in Grasshopper geben.
 
 ![IMAGE](images/cover.png)
