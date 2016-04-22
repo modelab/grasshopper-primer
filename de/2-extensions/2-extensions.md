@@ -1,6 +1,6 @@
-# 2. Extensions
+# 2. Erweiterungen
 
-#### Foundations are meant to be built upon. This volume features an array of key plugins for Grasshopper that will extend the application's functionality *and* your ability to take your designs further.
+####Fundamente sind gedacht um darauf zu bauen. Diese Ausgabe nennt eine Reihe von Schluesselplugins fuer Grasshopper, welche die Funktionalitaet der Anwendung erweitert *und* uns die Moeglichkeit gibt unsere Designs weiterzubringen. 
 
 ![IMAGE](Appendix_Plugin_Icons.png)
 

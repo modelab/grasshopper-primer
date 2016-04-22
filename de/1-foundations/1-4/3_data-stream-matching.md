@@ -1,72 +1,70 @@
-### 1.4.3. Data Stream Matching
+﻿### 1.4.3. Abgleichung von Datenstroemen
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
->Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
+>Beispiele zu diesem Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
->Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.4.3_data matching.gh)
+>Beispiele zu diesem Abschnitt: [Download](../../appendix/A-2/gh-files/1.4.3_data matching.gh)
 {% endif %}
 
-#####Data matching is a problem without a clean solution. It occurs when a component has access to differently sized inputs. Changing the data matching algorithm can lead to vastly different results.
+#####Datenabgleich ist ein Problem ohne saubere Loesung. Es taucht auf, wenn eine Komponente Zugriff auf Eingabeparameter mit unterschiedlicher Anzahl von Datenelementen hat. Die Veraenderung des Datenabgleichalgorithmus kann zu sehr verschiedenen Ergegnissen fuehren.
 
-Imagine a component which creates line segments between points. It will have two input parameters which both supply point coordinates (List A and List B):
+Stelle Dir eine Komponente vor, die eine Linie zwischen Punkten zeichnet. Sie wird zwei Eingabeparameter haben, die beide Punktkoordinaten beinhalten (Liste A und Liste B):
 
 ![IMAGE](images/1-4-3/1-4-3_001-blank-connection.png)
 
-As you can see there are different ways in which we can draw lines between these sets of points. New to Grasshopper 0.9 are three components for data matching, found under the Sets/List panel: Shortest List, Longest List, and Cross Reference. These new components allow for greater flexibility within the three basic data matching algorithms. Right clicking each component allows you to select a data matching option from the menu.
+Wie Du hier sehen kannst gibt es verschiedene Arten die Linien von einer Menge von Punkten zur anderen zu zeichnen. Neu in Grasshopper 0.9 sind die drei Komponenten zum Datenabgleich, die im "Sets/List" Reiter gefunden werden: "Shortest List", "Longest List", und "Cross Reference". Diese neuen Komponenten erlauben groessere Flexibilitaet der drei grundlegenden Datenabgleichalgorithmen. Ein Rechtsklick auf die jeweilige Komponente gibt die Moeglichkeit mehrere Datenabgleichoptionen aus einem Menu auszuwaehlen.
 
-The simplest way is to connect the inputs one-on-one until one of the streams runs dry. This is called the **“Shortest List” **algorithm:
+Der einfachste Weg ist es die Elemente des Eingabeparameters eins zu eins zu verbinden bis der Datenstrom abreisst. Dis nennt man **“Shortest List”** Algorithmus:
 
 ![IMAGE](images/1-4-3/1-4-3_002-shortest-list.png)
 
 ![IMAGE](images/1-4-3/1-4-3_003-matching-algorithm.png)
->Select a matching algorithm option from the component menu by right-clicking the component.
+>Waehle eine Option fuer den Datenabgleichalgorithmus aus dem Komponentenmenu, indem Du auf die Komponente rechtsklickst.
 
-The **“Longest List”** algorithm keeps connecting inputs until all streams run dry. This is the default behavior for components:
+Der **“Longest List”** Algorithmus verbindet Elemente des Eingabeparameters bis beide Datenstroeme abreissen. Dis ist das Standardverhalten der Komponente:
 
 ![IMAGE](images/1-4-3/1-4-3_004-longest-list.png)
 
-Finally, the **“Cross Reference”** method makes all possible connections:
+Schliesslich macht die **“Cross Reference”** Methode alle moeglichen Verbindungen:
 
 ![IMAGE](images/1-4-3/1-4-3_005-cross-reference.png)
 
-This is potentially dangerous since the amount of output can be humongous. The problem becomes more intricate as more input parameters are involved and when the volatile data inheritance starts to multiply data, but the logic remains the same.
+Dies ist grundsaetzlich gefaehrlich, da die Anzahl von Elementen im Ausgabeparameter enorm sein kann. Das Problem wird offensichtlicher, wenn mehr Eingabeparameter involviert sind und die volatile Datenvererbung die Daten vervielfacht, aber die Logik der Definition die selbe bleibt.
 
-Let’s look more closely at the Shortest List component:
+Lass uns die "Shortest List" Komponente etwas genauer ansehen:
 
 ![IMAGE](images/1-4-3/1-4-3_006-trim-end.png)
 
-Here we have two input lists {A,B,C,D,E} and {X,Y,Z}. Using the Trim End option, the last two items in the first list are disregarded., so that the lists are of equal length.
+In diesem Fall haben wir zwei Eingabelisten {A,B,C,D,E} und {X,Y,Z}. Benutzen wir die "Trim End" Option, so werden die beiden letzten Elemente der ersten Liste ausser acht gelassen, do dass die beiden Listen die gleiche Laenge haben.
 
 ![IMAGE](images/1-4-3/1-4-3_007-trim-start.png)
 
-Using the Trim Start option, the first two items in the first list are disregarded, so that the lists are of equal length.
+Die "Trim Start" Option laesst die beiden ersten Elemente der ersten Liste asser acht, so dass die beiden Listen die gleiche Laenge haben.
 
 ![IMAGE](images/1-4-3/1-4-3_008-interpolate.png)
 
-The Interpolate option skips the second and fourth items in the first list. Now let’s look at the Cross Reference component:
+Die "Interpolate" Option ueberspringt das zweite und vierte Element der ersten Liste. Nun sehen wir uns die "Cross Reference" Komponente an:
 
 ![IMAGE](images/1-4-3/1-4-3_009-holistic.png)
 
-Here we have two input lists {A,B,C} and {X,Y,Z}. Normally Grasshopper would iterate over these lists and only consider the combinations {A,X}, {B,Y} and {C,Z}. There are however six more combinations that are not typically considered, to wit: {A,Y}, {A,Z}, {B,X}, {B,Z}, {C,X} and {C,Y}. As you can see the output of the Cross Reference component is such that all nine permutations are indeed present.
+Nun haben wir zwei Eingabelisten {A,B,C} und {X,Y,Z}. Normalerweise wuerde Grasshopper ueber beide Listen iterieren und die Kombinationen {A,X}, {B,Y} und {C,Z} bilden. Hier jedoch werden sechs weitere Kombinationen beruecksichtigt: {A,Y}, {A,Z}, {B,X}, {B,Z}, {C,X} und {C,Y}. Wie Du sehen kannst besteht die Ausgabe der "Cross Reference" Komponente momentan aus neun Permutationen.
 
-We can denote the behaviour of data cross referencing using a table. The
-rows represent the first list of items, the columns the second. If we create all possible permutations, the table will have a dot in every single cell, as every cell represents a unique combination of two source list indices.
+Wir koenen das Verhalten der "Cross Reference" Komponente in einer Tabelle darstellen. Die Zeilen repraesentieren die erste Liste und ihre Elemente, die Spalten die zweite. Wenn wir alle moeglichen Permutationen erzeugen, wird die Tabelle in jeder Zelle einen Punkt haben, da jede Zelle eine einzigartige Kombination von zwei Quellelementen darstellt.
 
 ![IMAGE](images/1-4-3/1-4-3_010-cross-reference-table.png)
 
-Sometimes however you don’t want all possible permutations. Sometimes you
-wish to exclude certain areas because they would result in meaningless or invalid computations. A common exclusion principle is to ignore all cells that are on the diagonal of the table. The image above shows a ‘holistic’ matching, whereas the ‘diagonal’ option (available from the Cross Reference]component menu has gaps for {0,0}, {1,1}, {2,2} and {3,3}.
-If we apply this to our {A,B,C}, {X,Y,Z} example, we should expect to not see the combinations for {A,X}, {B,Y} and {C,Z}:
+Manchmal jedoch moechtest Du nicht alle moeglichen Permutationen erhalten. Manchmal willst Du bestimmte Zonen aussparen, weil sie bedeutungslose oder falsche Berechnungen liefern wuerden. Ein haeufiges Ausschlussprinzip ist es alle Zellen auszusparen, die auf der Diagonale der Tabelle liegen (diese Option ist als "diagonal" in der "Cross Reference" Komponente enthalten) und schliesst die Kombinationen {0,0}, {1,1}, {2,2} und {3,3} aus.
+Wenn wir dies auf unsere Listen {A,B,C}, {X,Y,Z} anwenden, wuerden wir erwarten die Kombinationen {A,X}, {B,Y} und {C,Z} vorzufinden:
 
 ![IMAGE](images/1-4-3/1-4-3_011-diagonal.png)
 
-The rule that is applied to ‘diagonal’ matching is: “Skip all permutations where all items have the same list index”. ‘Coincident’ matching is the same as ‘diagonal’ matching in the case of two input lists, but the rule is subtly different: “Skip all permutations where any two items have the same list index”.
+Die Regel fuer den diagonalen Datenabgleich ist: “Ueberspringe alle Permutationen, in denen die Elemente jeweils den selben Listenindex haben”. ‘Coincident’ Datenabgleich ist der selbe Algorithmus wie Datenabgliech, wenn zwei Listen als Eingabe vorhanden sind, aber die Regel ist etwas anders: “Lasse alle Permutationen aus, in denen zwei Elemente die selben Listenindices aufweisen”.
 
-The four remaining matching algorithms are all variations on the same theme. ‘Lower triangle’ matching applies the rule: “Skip all permutations where the index of an item is less than the index of the item in the next list”, resulting in an empty triangle but with items on the diagonal.
+Die vier verbleibenden Datenabgleichalgorithmen sind alle Variationen des selben Themas. ‘Lower triangle’ Datenabgleich wendet folgende Regel an: “Lasse alle Permutationen aus, in denen eder Index eines Elementes niedriger ist als der Index des Elementes in der naechsten Liste”, was zu einem leeren Dreieck fuehrt, das aber Elemente auf der Diagonale beinhaltet.
 
 ![IMAGE](images/1-4-3/1-4-3_012-lower.png)
 
-‘Lower triangle (strict)’ matching goes one step further and also eliminates the items on the diagonal:
+‘Lower triangle (strict)’ Datenabgleich geht einen Schritt weiter, indem er auch die Elemente auf der Diagonale ausspart:
 
 ![IMAGE](images/1-4-3/1-4-3_013-lower-strict.png)
 
-‘Upper Triangle’ and ‘Upper Triangle (strict)’ are mirror images of the previous two algorithms, resulting in empty triangles on the other side of the diagonal line.
+‘Upper Triangle’ und ‘Upper Triangle (strict)’ spiegeln das Verhalten des vorher beschriebenen Algorithms, was zu einem leeren Dreieck auf der anderen Seite der Diagonale fuehrt.

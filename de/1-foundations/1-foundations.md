@@ -1,4 +1,5 @@
-# 1. FUNDAMENTE
+# 1. FUNDAMENT
 
-#### Ein starkes Fundament ist fuer die Ewigkeit gebaut. Dieser Teil des Primers fuehrt Schluesselkonzepte und -eigenschaften des parametrischen Modellierens mit Grasshopper ein.
+#### Ein starkes Fundament ist gebaut um zu bestehen. Diese Ausgabe des Primers fuehrt Schluesselkonzepte ein und erklaert parametrische Modellierung in Grasshopper.
+
 ![IMAGE](images/001-foundations.png)

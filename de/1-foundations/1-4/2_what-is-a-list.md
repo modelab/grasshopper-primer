@@ -1,19 +1,19 @@
-### 1.4.2. What is a List?
+﻿### 1.4.2. Was ist eine Liste?
 
-#####It’s helpful to think of Grasshopper in terms of flow, since the graphical interface is designed to have data flow into and out of specific types of components. However, it is the data that define the information flowing in and out of the components. Understanding how to manipulate list data is critical to understanding the Grasshopper plug-in.
+#####Es ist hilfreich ueber Grasshopper in den Begriffen von Fluessen zu denken, da es eine graphische Benutzeroberflaeche zur Bewegung von Datenfluessen in bestimmte Komponenten ist. Es sind jedoch die Daten die den Informationsfluss in und aus bestimmten Typen von Komponenten bestimmen. Zu verstehen, wie Listen manipuliert werden ist kritisch im Verstaendnis des Grasshopper Plug-Ins.
 
-Grasshopper generally has two types of data: persistent and volatile. Even though the data types have different characteristics, typically Grasshopper stores this data in an array, a list of variables.
+Grundsaetzlich hat Grasshopper zwei Datentypen: persistente und volatile. Auch wenn die Datentypen verschiedene Charakteristika haben, speichert Grasshopper diese Daten typischerweise in einem Array, eine Liste von Variablen.
 
-When storing data in a list, it’s helpful to know the position of each item in that list so that we can begin to access or manipulate certain items. The position of an item in the list is called its index number.
+Wenn Daten in einer Liste gespeichert werden, ist es hilfreich zu wissen an welcher Postition in der Liste jedes Element gespeichert wurde, so dass wir beginnen koennen darauf zuzugreifen oder bestimmte Elemente zu bearbeiten. Die Position eines Elementes in der Liste wir Index genannt.
 
 ![IMAGE](images/1-4-2/1-4-2_001-list-index.png)
->1. List Item
+>1. Listenelement
 2. Index
 
-The only thing that might seem odd at first is that the first index number of a list is always 0; not 1. So, when we talk about the first item of a list, we actually mean the item that corresponds to index number 0.
+Das einzige, was zu beginn etwas ungewoehnlich aussieht ist, dass der erste Index einer Liste immer 0 ist und nicht 1. Deshalb beziehen wir uns immer auf den Index 0, wenn wir ueber das erste Element einer Liste reden.
 
-For example, if we were to count the number of fingers we have on our right hand, chances are that you would have counted from 1 to 5. However, if this list has been stored in an array, then our list would have counted from 0 to 4. Note, that we still have 5 items in the list; it’s just that the array is using a zero-based counting system. The items being stored in the list don’t just have to be numbers. They can be any data type that Grasshopper supports, such as points, curves, surfaces, meshes, etc.
+Zum Beispiel, wenn wir die Finger an unserer rechten Hand zaehlen, stehen die Chancen gut, dass Du von 1 bis 5 gezaehlt hast. Jedoch in Bezug auf Listen, die in Arrays gespeichert sind, wuerde die Liste von 0 bis 4 gezaehlt. Merke, dass wir immer noch 5 Elemente in der Liste haben; es ist lediglich so, dass ein Array ein null-basiertes Zaehlsystem verwendet. Sie koennen jeden Datentyp enthalten, den Grasshopper unterstuetzt, wie Punkte, Kurven, Flaechen, Polygonnetze, etc.
 
-Often times the easiest way to take a look at the type of data stored in a list is to connect a Text Panel (Params/Input/Panel) to the output of a particular component. By default, the Text Panel automatically shows all index numbers to the left side of the panel and displays the data items on the right side of the panel. The index numbers will become a crucial element when we begin working with our lists. You can turn the index numbers on and off by right-clicking on the Text Panel and clicking on the “Draw Indices” item in the sub-menu. For now, let’s leave the entry numbers turned on for all of our text panels.
+Oft ist es die einfachste Art festzustellen, welcher Datentyp in einer Liste gespeichert ist, ein "Text Panel" (Params/Input/Panel) mit dem Ausgabeparameter der zu bestimmenden Komponente zu verbinden. Standardmaessig, wird das Textpaneel alle Indices an der linken Seite des Paneels anzeigen und die entsprechenden Daten auf der rechten Seite des Paneels. Die Indices werden ein entscheidendes Element, wenn wir beginnen mit Listen zu arbeiten. Du kannst die Indices an- und ausschalten, indem Du auf das Textpaneel rechtsklicks und dann auf das “Draw Indices” Element des Untermenus klickst. Momentan lassen wir die Indices erst mal fuer alle Textpaneele eingeschalten.
 
 ![IMAGE](images/1-4-2/1-4-2_002-list-menu.png)

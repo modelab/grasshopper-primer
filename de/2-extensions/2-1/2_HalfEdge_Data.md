@@ -1,16 +1,16 @@
-###2.1.2. Half Edge Data
+###2.1.2. Halbkanten Daten
 
-In the Grasshopper primer, we looked at how Grasshopper defines a mesh using a Face-Vertex data structure. This is a relatively simple data structure and is widely used in applications that use meshes, but can be computationally inefficient for more advanced algorithms. The Element\* add-on restructures the mesh using Half-Edge data, an edge-centered data structure, which allows for efficient queries of adjacent vertices, faces, and edges, which can vastly improve on algorithm speed and performance. This structure is capable of maintaining incidence information of vertices, edges and faces. This method facilitates the creation of new patterns and geometries all based on the topological relationship of the base geometry.
+Im Grasshopper primer, haben wir uns angesehen wie ein Polygonnetz in Grasshopper mit der Netzflaechen-Eckpunkte-Datenstruktur beschrieben werden kann. Diese ist eine relativ einfache Datenstruktur und wird fuer viele Polygonnetzapplikationen genutzt, kann aber bei komplexeren Algorithmen recht ineffizient werden. Die Element\* Erweiterung restrukturiert Polygonnetze mit der Halbkanten Datenstruktur, eine kantenfokusierte Datenstruktur, die effiziente Aufrufe von benachbarten Eckpunkten, Netzflaechen und Kanten ermoeglicht, was die Geschwindigkeit und Performance von Algorithmen stark erhoehen kann. Diese Struktur kann [...] Informationen ueber Eckpunkte, Netzflaechen und Kanten erhalten. Diese Methode ermoeglicht die Generierung von neuen Mustern und Geometrien, komplett basiered auf der topologischen Nachbarschaft der Basisgeometrie.
 
-The half-edge data structure is a representation for a mesh in which each edge is split up into two half-edges with opposite directions. This allows explicit and implicit access to data from one mesh element to adjacent elements.
+Die Halbkantendatenstruktur ist eine Repraesentation eines Polygonnetzes in dem jede Kante in zwei Halbkanten unterteilt ist, die in entgegengesetzte Richtungen zeigen. Dies erlaubt expliziten und impliziten Zugang zu Daten von einem Polygonnetzelement zu benachbarten Elementen.
 
 ![IMAGE](images/2-1-2/2-1-2_001_Half-Edge.png)
 
-####2.1.2.1 Half-Edge Connectivity
-The half-edge highlighted in blue explicitly stores indices to its termination point, adjacent half-edges, and the face it belongs to. The other information (gray) can be accessed implicitly.
+####2.1.2.1 Halbkantenkonnektivitaet
+Die in blau hervorgehobenen Halbkanten speichern Indizes mit Informationen ueber die jeweiligen Endpunkte, benachbarte Halbkanten und den zugehoerigen Netzflaechen. Die anderen Informationen (in grau dargestellt) sind implizit zugaenglich.
 ![IMAGE](images/2-1-2/2-1-2_002_Half-Edge.png)
-####2.1.2.2 Vertex Connectivity
-The vertex highlighted in blue explicitly stores an index to one of its outgoing half-edges. The other information (gray) can be accessed implicitly.
+####2.1.2.2 Eckpunktkonnektivitaet
+Die in blau hervorgehobenen Eckpunkte speichern einen Index zu den jeweiligen ausgehenden Halbkanten. Die anderen Informationen (in grau dargestellt) sind implizit zugaenglich.
 ![IMAGE](images/2-1-2/2-1-2_003_Half-Edge.png)
 
 

@@ -1,67 +1,67 @@
-### 1.2.3. DATA TYPES
+﻿### 1.2.3. DATENTYPEN
 
-#####Most parameters can store two different kinds of data: Volatile and Persistent. Volatile data is inherited from one or more sources and is destroyed (i.e. recollected) whenever a new solution starts. Persistent data is data which has been specifically set by the user.
+#####Die meisten Parameter koennen zwei verschiedene Arten von Daten speichern: Volatile und persistente Daten. Volatile Daten sind von einer oder mehreren Quellen eingespeist und werden zerstoert (oder neuerhoben) wenn die Loesung erneut startet. Persistente Daten sind Daten, welche spezifisch vom Benutzer eingestellt werden.
 
-####1.2.3.1. PERSISTENT DATA
-Persistent data is accessed through the menu, and depending on the kind of parameter has a different manager. A Point parameter for example allows you to set one or more points through its menu. But, let’s back up a few steps and see how a Point Parameter behaves.
+####1.2.3.1. PERSISTENTE DATEN
+Persistente Daten sind durch ein Menu, und abhaengig von der Art des Parameters durch unterschiedliche Manager, zugaenglich. Ein Punktparameter zum Beispiel ermoeglicht es Dir einen oder mehrere Punkte durch sein Menu auszuwaehlen. Aber lass uns noch ein paar Schritte zurueckgehen und sehen, wie sich ein Punktparameter so verhaelt.
 
-When you drag and drop a Point Parameter from the Params/Geometry Panel onto the canvas, the Parameter is orange, indicating it generated a warning. It’s nothing serious, the warning is simply there to inform you that the parameter is empty (it contains no persistent records and it failed to collect volatile data) and thus has no effect on the outcome of the solution. The context menu of the Parameter offers two ways of setting persistent data: single and multiple. Right click on the parameter to set Multiple Points. Once you click on either of these menu items, the Grasshopper window will disappear and you will be asked to pick a point in one of the Rhino viewports.
+Wenn Du einen Punktparameter vom "Params/Geometry Paneel" auf die Leinwand ziehst, ist der Parameter orange, was anzeigt, dass der Parameter eine Warnung enthaelt. Es ist nichts ernstes, da die Warnung Dich einfach darueber informiert, dass der Parameter leer ist (er enthaelt keine persistenten Eintraege und er konnte keine volatilen Daten empfangen) und deshalb keinen Effekt auf das Ergebnis der Loesung hat. Das Kontextmenu des Parameters bietet zwei Wege der Einstellung von persistenten Daten: einzelne oder mehrere. Rechtsklicke auf den Parameter um mehrere Punkte zu setzen. Sobal Du auf eines dieser Menuelemente klickst, wird da Grasshopperfenster verschwinden und Du wirst aufgefordert werden einen Punkt in einem der Rhinoansichtsfenster auszuwaehlen.
 
 ![IMAGE](images/1-2-3/1-2-3_001-set-multiple-points.png)
 
-Once you have defined all the points you can press Enter and they will become part of the Parameters persistent data record. This means the Parameter is now no longer empty and it turns from orange to grey. (Notice that the information balloon in the upper right corner also disappears as there are no more warnings). At this point you can use the points stored in this Parameter for any subsequent input in your definition.
+Sobald Du alle Punkte bestimmt hast, kannst Du Enter druecken und sie werden Bestandteil der persistenten Datensammlung des Parameters werden. Das bedeutet, dass der Parameter nicht mehr leer ist und seine Farbe von orange zu grau aendert. (Merke, dass der Informationsbalon in der rechten oberen Ecke der Komponente ebenfalls verschwunden ist und keine Warnungen mehr vorhanden sind). An diesem Punkt kannst Du die gespeicherten Punkte in diesem Parameter fuer jede weitere folgende Eingabe in Deiner Definition verwenden.
 
 ![IMAGE](images/1-2-3/1-2-3_002-parameter-persistent-data.png)
->1. The parameter is orange, indicating it contains no persistent records (and it failed to collect volatile data) and thus has no effect on the outcome of the solution. Right click on any parameter to set its persistent data.
-2. Once the parameter contains some persistent data, the component will turn from orange to grey.
-3. The tooltip for the point parameter shows the persistent data (a collection of referenced points) that is stored.
+>1. Der Parameter ist orange und zeigt damit an, dass er keine persistenten Dateneintraege enthaelt (und keine volatilen Daten empfangen hat) und somit keinen Effekt auf das Ergebnis der Loesung hat. Rechtsklicke auf einen beliebigen Parameter um persistente Daten auszuwaehlen.
+2. Sobald der Parameter einige persistente Daten enthaelt, wird die Komponente ihre Farbe von orange zu grau aendern.
+3. Der Werkzeugtip fuer einen Punktparameter zeigt die persistenten Daten (eine Sammlung von Referenzpunkten), die gespeichert ist.
 
-####1.2.3.2. VOLATILE DATA
-Volatile data, as the name suggests, is not permanent and will be destroyed each time the solution is expired. However, this will often trigger an event to rebuild the solution and update the scene. Generally speaking, most of the data generated ‘on the fly’ is considered volatile.
+####1.2.3.2. VOLATILE DATEN
+Volatile Daten, wie der Name schon nahelegt, sind nicht permanent und werden jedes Mal wenn die Loesung abgeschlossen ist geloescht. Jedoch kann eine Begebenheit ausloesen, dass die Loesung wiederaufgebaut und die Szene aktualisiert wird. Generell werden die meisten Daten, die waehrend der Erzeugung der Loesung entstehen als volatil bezeichnet.
 
-As previously stated, Grasshopper data is stored in Parameters (either in Volatile or Persistent form) and is used in various Components. When data is not stored in the permanent record set of a Parameter, it must be inherited from elsewhere. Every Parameter (except output parameters) defines where it gets its data from and most Parameters are not very particular. You can plug a number Parameter (which just means that it is a decimal number) into an integer source and it will take care of the conversion.
+Wie bereits genannt, wrerden Grasshopperdaten in Parametern gespeichert (entweder in volatiler oder in persistenter Form) und in verschiedenen Komponenten genutzt. Wenn Daten nicht als permanente Daten in Parametern gespeichert werden, muss sie implizit aus einer anderen Quelle kommen. Jeder Parameter (ausser Ausgabeparameter) definiert woher er seine Daten bezieht und die meisten Parameter sind dabei nicht besonders spezifisch. Du kannst einen "Number"-Parameter (welche nur besagt, dass es sich um eine Dezimalzahl handelt) mit einem Integereingabeparameter verbinden und er wird sich um die Umwandlung kuemmern.
 
-You can change the way data is inherited and stored in the context menu of a parameter or component input. To change store referenced Rhino geometry in the grasshopper definition itself, right click a parameter and select Internalise data from the menu. This is useful if you want your grasshopper definition to be independent from a Rhino file.
+Du kannst den Weg in dem Daten bezogen und gespeichert werden im Kontextmenu eines Parameters oder eines Komponenteneingabeparameters veraendern. Um gespeicherte Referenzgeometrie aus Rhino in der Grasshopperdefinition selbst zu veraendern, rechtsklicke aud den Parameter und waehle "Internalise Data" aus dem Menu. Dies ist hilfreich, wenn Deine Grasshopperdatei unabhaengig von der referenzierten Rhinodatei werden soll.
 
-You can also Internalise data in a component input. Once you select Internalise data in the menu, any wires will disconnect from that input. The data has been changed from volatile to persistent, and will no longer update.
+Du kannst auch Daten in Komponenteneingabeparametern internalisieren. Sobald Du "Internalise Data" im Menu ausgewaehlt hast, werden alle Kable von dem entsprechenden Eingabeparameter entfernt. Die Daten wurden von volatil zu persistent umgewandeelt und werden im weiteren Verlauf nicht mehr aktualisiert.
 
-If you want the data to become volatile again, simply reconnect the wires to the input and the values will automatically be replaced. You can also right click the input and select Extract parameter. Grasshopper will create a parameter connected to the input with a wire that contains the data.
+Wenn Du willst, dass die Daten wieder volatil werden, kannst Du einfach wieder Kabel in den Eingabeparameter einstecken und die Werte werden automatisch ersetzt. Du kannst auch auf den Eingabeparameter rechtsklicken und "Extract parameter" waehlen. Grasshopper wird einen Parameter erzeugen und ihn mit dem Eingabeparameter verbinden, der die Daten enthaelt.
 
 ![IMAGE](images/1-2-3/1-2-3_003-right-click.png)
 
-####1.2.3.3. INPUT PARAMETERS
-Grasshopper has a variety of Parameters that offer you the ability to interface with the data that is begin supplied to Component inputs and thereby control for changing the result of your definition. Because they Parameters that change with our input, they generate Volatile Data.
+####1.2.3.3. EINGABEPARAMETER
+Grasshopper hat eine Bandbreite an Parametern, die Dir die Moeglichkeit eroeffnen die Komponenteneingabeparameter mit den Daten zu verbinden und dadurch Kontrolle ueber die veraenderlichen Ergebnisse in der Definition auszuueben. Diese Parameter veraendern sich mit der entsprechenden Eingabe und erzeugen volatile Daten.
 
-**Number Slider**
-The number slider is the most important and widely used Input Parameter. It allows us to output a value between two given extremes by interacting with its grip with our mouse. Sliders can be used to specify a value and see the change to our deifnition that comes with adjusting the grip, but a slider should also be thought of as the means to identify successful ranges of our definition.
+**Schieberegler**
+Die Schieberegler ("number slider") sind die wichtigsten und am haeufigsten genutzten Eingabeparameter. Sie erlauben es uns Werte zwischen zwei Extremen auszugeben, indem wir mit einem Mausgriff interagieren. Schieberegler koennen benutzt werden um einen bestimmten Wert zu spezifizieren und die Veraenderung der Definition zu beobachten, die durch den Mausgriff erzeugt werden. Ein Schieberegler aollte jedoch auch als Mittel gesehen werden, um erfolgreich Wertegrenzen unserer Definition festzulegen.
 
 ![IMAGE](images/1-2-3/1-2-3_004-number-slider.png)
->1. Drag the slider grip to change the value - each time you do this, Grasshopper will recompute the solution.
-2. Right click the slider component to change the name, type, and values.
-3. Editable text field for the slider name.
-4. Select the type of number for the slider to use.
-5. Edite the range of values.
-6. Double click the name portion of the slider component to open the Slider Editor.
+>1. Ziehe den Schieberegler um seinen Wert zu aendern - jedes Mal, wenn Du dies tust wird Grasshopper die Loesung erneut berechnen.
+2. Rechtsklicke auf eine Schiebereglerkomponente um ihren Namen, Typ und Wert zu aendern.
+3. Editierbares Textfeld fuer den Namen des Schiebereglers.
+4. Waehle den Typ an Zahlen den der Schieberegler verwenden soll.
+5. Veraendere die Wertegrenzen des Schiebereglers.
+6. Doppelklicke auf den Namen der Schiebereglerkomponente um den Schiebereglereditor zu oeffnen.
 
 
 **Graph mapper**
-The Graph Mapper is a two-dimensional interface with which we can modify
-numerical values by plotting the input along the Graph’s X Axis and outputting the corresponding value along the Y Axis at the X value intersection of the Graph. It is extremely useful for modulating a set of values within an institutive, grip-based interface.
+Der "Graph Mapper" ist eine zwei-dimensionale Benutzeroberflaeche mit der wir die nummerischen Werte modifizieren koennen, indem wir die Eingabewerte an der x-Achse des Graphs antragen und die entsprechenden Funktionswerte entlang der y-Achse ausgeben. Er ist sehr nuetzlich um einen Satz Werte innerhalb einer intuitiven, Mausgriff-basierten Benutzeroberflaeche modulieren zu koennen.
+
 
 ![IMAGE](images/1-2-3/1-2-3_005-graph-mapper-a.png)
->1. Move the grips to edit the graph - each time you do this, Grasshopper will recompute the solution.
-2. Right click the graph mapper compenent to select the graph type.
+>1. Bewege die Griffe um den Graph zu bearbeiten - jedes Mal, wenn Du dies tust, wird Grasshopper die Loesung neu berechnen.
+2. Rechtsklicke die "Graph mapper" Kompenente um den Graphtypen zu waehlen.
 
 ![IMAGE](images/1-2-3/1-2-3_006-graph-mapper-b.png)
->1. Double click the graph mapper to open the Graph Editor.
-2. Change thex and y domains.
+>1. Doppelklicke den "Graph mapper"um den Grapheditor zu oeffnen.
+2. Aendere die x und y Domaene.
 
 **Value List**
-The Value List stores a collection of values with corresponding list of Labels associated by way of an equal sign. It is particularly useful when you want to have a few options, labeled with meaning, that can supply specific output values.
+Die Werteliste speichert eine Sammlung von Werten entsprechend einer Liste entlang einer entsprechenden Liste von Labels, zugewiesen, durch ein Gleichheitssymbol. Sie ist im Besonderen hilfreich, wenn Du ein paar Moeglichkeiten zur Auswahl haben willst, die entsprechend bedeutungsvoll benannt wurde um bestimmte Ausgabewerte zur Verfuegung zu haben.
 
 ![IMAGE](images/1-2-3/1-2-3_007-value-list.png)
->1. Right click the Value List component and select an option from the menu.
-2. Double click the Value List component to open the editor and add or change values.
-3. In Dropdown List mode, click the arrow to select one of the values. The solution will recompute each time you change the value.
-4. In Check List mode, click next to each value to check it. The component will output all the values that are checked.
-5. In Value Sequence and Value Cycle modes, click the left and right facing arrows to cycle through the values.
+>1. Rechtsklicke auf die Werteliste Komponente und waehle eine Option aus dem Menu.
+2. Doppelklicke die Werteliste Komponente um den Editor zu oeffnen und Werte hinzuzufuegen oder zu aendern.
+3. Im Dropdownmodus, klicke auf den Pfeil um einen der Werte auszuwaehlen. Die Loesung wird jedes Mal neu berechnet, wenn Du den Wert aenderst.
+4. Im Checklistenmodus, klicke neben die Werte, um sie auszuwaehlen. Die Komponente wird alle ausgewaehlten Werte ausgeben.
+5. Im Wertesequenz- und Wertezyklusmodus, klicke die Pfeile nach links und rechts, um Dich durch die Werte zu bewegen.
