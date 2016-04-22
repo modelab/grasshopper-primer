@@ -1,113 +1,108 @@
-### 1.6.2 Understanding Topology
+﻿### 1.6.2 Topology verstehen
 
-#####While the vertices of a mesh contain position information, it is really the connections between the vertices that give a mesh geometry its unique structure and flexibility. 
-
+#####Waehrend die Eckpunkte eines Polygonnetzes Information ueber Positionen erhaelt sind es wirklich die Verbindungen zwischen den Eckpunkten, die eine Polygonnetzstruktur ihre einzigartige Struktur und Flexibilitaet geben.
 
 ![IMAGE](images/1-6-2/01_meshMorph2.png)
 
-#### 1.6.2.1 What is Topology?
+#### 1.6.2.1 Was ist Topology?
 
-Any introduction to mesh geometry would be incomplete without at least a basic introduction to topology. Because topology is concerned with the inter-relationships and properties of a set of “things” rather than the “things” themselves, it is mobilized for an enormous range of both tangible and intangible applications. In this primer, we are interested in its basic application with respect to parametric workflows that afford us the opportunity to create and control mesh geometry.
+Eine Einfuehrung zur Polygonnetzgeometrie waere unvollstaendig ohne zumindest eine grundlegende Einfuehrung zur Topologie. Weil Topologie aich mit den Verhaeltnissen zwischen eine Menge von "Dingen"und deren Eigenschaften eher als mit den "Dingen"selbst beschaeftigt, mobilisiert es eine riesige Bandbreite von greifbaren und ungreifbaren Anwendungen. In diesem Primer, sind wir an der grundsaetzlichen Anwenfung in einem parametrischen Arbeitsablauf interessiert, der uns die Moeglichkeit zur Erstellung und Kontrolle von Polygonnetzgeometrien gibt.
 
-In Grasshopper, the two basic types of information required to define a mesh are geometry and connectivity; in other words, a set of points in rhino-space (vertices) and set of corresponding point-associations (faces).
+In Grasshopper gibt es zwei grundlegende Typen von Informationen, die ein Polygonnetz definieren und zwar Geometrie und Konnektivitaet; in anderen Worten, eine Menge an Punkten im Rhinoraum (Eckpunkte) und eine Menge von entsprechenden Punktzuordnungen (Oberflaechen).
 
-Without connectivity information, a mesh is unstructured and therefore still undefined. The introduction of a set of faces is the step (or leap) that ultimately actualizes a mesh and establishes its character in terms of continuity, convergence, and connectedness; this structural network is referred to as a *topological space*.
+Ohne Verbindungsinformation, ist ein Polygonnetz unstrukturier und daher immer noch undefiniert. Die Einfuehrung einer Anzahl von Oberflaechen ist der Schritt (oder Sprung) der letztendlich ein Polygonnetz erzeugt und seinen Charakter bezueglich Kontinuitaet, Konvergenz und Verbindungen generiert; dieses strukturelle Netzwerk wird als *topologischer Raum* bezeichnet.
 
 ![IMAGE - points with different connectivity](images/1-6-2/02_meshConnect.png)
->The same set of vertices can have different connectivity information, resulting in different topology.
+>Die selbe Menge an Eckpunkten kannn unterschiedliche Verbindungsinformationen haben und ergibt unterschiedliche Topologien.
 
-**Homeomorphism**
+**Homeoeomorphismus**
 
 ![IMAGE - simple mesh diagram](images/1-6-2/03_meshMorph1.png)
->The points of a mesh can be moved without altering the connectivity information. The new mesh has the same topology as the original.
+>Die Punkte eines Polygonnetzes koennen bewegt werden ohne die Konnektivitaetsinformation zu veraendern. Das neue Polygonnetz hat die selbe Topologie wie das urspruengliche.
 
-It is possible for two distinct mesh shapes to be topologically identical. All this would mean is that they are constructed out of the same number of points and that the points are structured by the same set of faces. Earlier, we established that a mesh face is only concerned with the indices of a set of points and has no interest in their actual location in rhino-space. Therefore, if the only difference between two distinct mesh shapes is the specific 3-dimentional position of the points that are used to define it, then the two meshes are considered to be “homeomorphic” (or topologically equivalent) and therefore share the same topological properties.
+Es ist moeglich fuer zwei bestimmte Polygonnetzformen topologisch identisch zu sein. All dies wuerde bedeuten, dass sie aus der selben Anzahl von Punkten bestehen und dass die Punkte durch den selben Satz Netzflaechen strukturiert sind. Frueher haben wir festgelegt, dass Netzflaechen nur auf Indizes eines Satzes von Punkten beruhen und sich nicht auf die eigentliche Position im Rhinoraum beziehen. Deshalb ergibt sich, wenn der einzige Unterschied zwischen zwei Polygonnetzen eine bestimmte dreidimensionale Position von Punkten ist, die durch den Nutzer definert werden, dann sind die beiden Polygonnetze als "homoeomorphisch"zu betrachten (topologisch equivalent) und teilen deshalb alle topologischen Eigenschaften.
 
 ![IMAGE - homeomorphic alphabet](images/1-6-2/04_Alphabet_homeo.png)
->An example of homeomorphism among letters (note that some of the above homeomorphic groups might be different depending on what font is considered)
+>Ein Beispiel von Homoeomorphismus sind Buchstaben (merke dass einige der homoeomorphen Gruppen oberhalb sich dadurch unterscheiden, welche Schriftart sie nutzen).
 
 ![IMAGE](images/1-6-2/05_Mug_and_Torus_morph.gif)
->A topologically equivalent mug and donut
+>Topologisch equivalente Schale und Donut 
  
- 
-####1.6.2.2 Mesh Characteristics
+####1.6.2.2 Polygonnetzcharakteristika
 
-**Orientable**
+**Orientierbar**
 
-A mesh is considered *orientable* if there are well-defined sides to the mesh. An simple example of a non-orientable mesh occurs when adjacent faces have normals pointing in opposite directions. These 'flipped faces' can cause problems in visualizations and renderings, as well as manufacturing or 3D-printing.
+Ein Polygonnetz wird als *orientiebar* betrachtet, wenn es wohldefinierte Seite aufweist. Ein einfachess Beispiel eine nicht orientierbaren Polygonnetzes ergibt sich, wenn nebeneinander liegende Normales in entgegengesetzte Richtungen zeigen. Diese "umgekehrten Netzflaechen" koennen Probleme in der Visualisierung und beim Rendern darstellen, sowie bei der Fertigung von 3D-Drucken bereiten.
 
 ![IMAGE](images/1-6-2/06_orientable.png)
->1. An orientable surface with face normals pointing in the same direction.
-2. A non-orientable surface has adjacent normals pointing in different directions. 
+>1. Eine orientierbare Flaeche mit Netzflaechennormalen, die in die selbe Richtung deuten
+2. Eine nicht orientierbare Flaeche hat angrenzende Normalen, die in verschiedene Richtungen deuten. 
 
 **Open vs Closed**
 
-It is often necessary to know whether a mesh is a *closed* mesh which represents a volumetric solid, or an *open* mesh that just represents a 2-dimensional surface. The difference can be imperative with respect to manufacturability. You cannot 3D print a single surface which has no thickness, but must instead thicken the mesh so that it is a solid. Solid mesh geometry is also required for Boolean operations (discussed in following section). 
+Es ist oftmals notwendig zu wissen, ob ein Polygonnetz ein *geschlossenes* Polygonnetz ist, das einen Koerper beschreibt, oder ein *offenes* Polygonnetz, das lediglich eine 2D Flaeche darstellt. Der Unterschied kann Imperativ bezueglich der Herstellbarkeit sein. Du kannst keine einzelne Flaeche ohne Dicke 3D drucken, sondern must dem Polygonnetz zusaetzlich eine Dicke geben, so dass es ein Koerper wird. Polygonnetzkoerper sind auch Voraussetzung fuer boolsche Operationen (die im nachfolgenden Abschnitt behandelt werden).
 
-The **Mesh Edges** component can be used to help determine this. If none of the edges of a mesh have a valence of 1 (if the E1 output is *null*), then we know that all the edges are 'Interior Edges' and the mesh does not have an external boundary edge, and is therefore a closed mesh.
+Die **Mesh Edges** Komponente kann genutzt werden um dies zu bestimmen. Wenn keine der Kanten des Polygonnetz eine Valenz von 1 hat (wenn der E1 Ausgabeparameter *null* ausgibt), dann wissen wir dass alle Kanten 'innenliegende Kanten' sind und das Polygonnetz keine auessere Begrenzungskante hat, also ein geschlossenes Polygonnetz ist.
 
-On the other hand, if there exist 'Naked Edges', then those edges must be on a boundary of the mesh, and the mesh is not closed.
+Auf der anderen Seite, wenn es 'offene Kanten' gibt, muss es sich um die Begrenzung des Polygonnetzes handeln und das Polygonnetz ist nicht geschlossen.
 
 ![IMAGE](images/1-6-2/07_open-closed.png)
->1. A closed mesh. All edges are adjacent to exactly two faces.
-2. An open mesh. The white edges are each adjacent to only a single face.
+>1. Ein geschlossenes Polygonnetz. Alle Kanten sind mit genau zwei Netzflaechen benachbart.
+2. Ein offenes Polygonnetz. Die weisse Kanten grenzen nur an eine Netzflaeche an.
 
-**Manifold vs Non-Manifold**
+**Mannigfaltig oder Nicht-Mannigfaltig**
 
-Non-manifold geometry is essentially geometry that cannot exist in the "real world". This does not necessarily make it "bad geometry" but it is something to be aware of due to complications it may present for tools and operations (for example: rendering of refractive effects, fluid simulations, boolean operations, 3d printing, etc). Common conditions that result in a non-manifold mesh include: self intersection, naked edges (from holes or internal faces), disjoint topology, and overlapping/duplicate faces. A mesh can also be considered *Non-Manifold* if it includes any vertices which are shared by faces that do not share edges or any edges with a valence greater than 2, creating a junction of at least 3 faces
+Nicht-mannigfaltige Geometrien sind essentiell Geometrien, die nicht in der "realen Welt" existieren koennen. Das bedeutet nicht notwendigerweise, dass sie "schlechte Geometrie" erzeugen, aber dass man darauf achten muss, da es Schwierigkeiten fuer Werkzeuge und Operationen bedeuten kann (z.B.: das rendern von lichbrechenden Effekten, Fluidsimulationen, boolsche Operationen, 3d Druck). Haeufige Bedingunegen, die in nicht-mannigfaltigen Polygonnetzen resultieren beinhalten: Selbstverschneidung, offene Kanten (von Loechern oder innenliegenden Netzflaechen), unverbundene Topologie und ueberlappende/duplizierte Flaechen. Ein Polygonnetz kann auch als *mannigfaltig* betrachtet werden, wenn es Eckpunkte beinhaltet, die von Netzflaechen geteilt werden, die keine Janten miteinander Teilen oder deren Valenz groesser als 2 ist und somit Verbindung mit mindestens drei Netzflaechen herstellen.
 
 ![IMAGE](images/1-6-2/08_non-manifold.png)
->1. A simple manifold mesh
-2. Three faces meeting on a single edge is non-manifold, also known as a T-Junction
-3. Two faces meeting at only one vertex but not sharing an edge is non-manifold
+>1. Ein einfaches mannigfaltiges Polygonnetz
+2. Drei Netzflaechen treffen sich in einer einzelnen Kante und sind nicht-mannigfaltig, stellen also eine T-Verbindung her
+3. Zwei Netzflaechen treffen sich in einem Punkt aber teilen keine Kante und sind deshalb nicht-mannigfaltig
 
  
-#### 1.6.2.3 Meshes Vs NURBS
+#### 1.6.2.3 Polygonnetze oder NURBS
 
-How is mesh geometry different from NURBS geometry? When might you want to use one instead of the other? 
+In wiefern sind Polygonnetzgeometrien unterschiedlich von NURBS Geometrien? Wann ist es besser die eine oder die andere zu nutzen?
 
-#####Parameterization
-In a previous chapter, we saw that NURBS surfaces are defined by a series of NURBS curves going in two directions. These directions are labeled U and V, and allow a NURBs surface to be parameterized according to a two-dimensional surface domain. The curves themselves are stored as equations in the computer, allowing the resulting surfaces to be calculated to an arbitarily small degree of precision. It can be difficult, however, to combine multiple NURBS surfaces together. Joining two NURBS surfaces will result in a polysurface, where different sections of the geometry will have different UV parameters and curve definitions.
+#####Parametrisierung
+Im einem frueheren Kapitel, haben wir gesehen dass NURBS Flaechen durch eine Serie von NURBS Kurven in beiden Richtungen definiert sind. Diese Richtungen sind mit U und V benannt und ermoeglichen eine NURBS Flaeche entsprechend einer zweidimensionalen Domaene zu parametrisieren. Die Kurven selbst werden als Gleichungen im Computer gespeichert, wodurch die resultierende Flaeche mit beliebiger Praezision berechnet werden kann. Das verbinden zweier NURBS Flaechen wird in einer Polyflaeche resultieren, in der verschiedene Schnitte der Geometrie verschiedene UV Parameter und Kurvendefinitionen haben werden.
 
-Meshes, on the other hand, are comprised of a discrete number of exactly defined vertices and faces. The network of vertices generally cannot be defined by simple UV coordinates, and because the faces are discrete the amount of precision is built into the mesh and can only be changed by refining the mesh and added more faces. The lack of UV coordinates, however, allows meshes the flexibility to handle more complicated geometry with a single mesh, instead of resorting to a polysurface in the case of NURBS.
+Polygonnetze auf der anderen Seite, werden durch eine konkrete Anzahl von genau definierten Eckpunkten und Netzflaechen bestimmt. Das Netzwerk von Eckpunkten wird generell nicht mit einfacjen UV Koordinaten beschrieben werden koennen. Die Darstellungspraezisions kann nun nur durch Verfeinerung des Polygonnetzen oder das hinzufuegen weiterer Netzflaechen verbessert werden, weil die Netzflaechen die Darstellungspraezision durch ihre Darstellung klar definieren. Das Fehlen von UV Koordinaten jedoch ermoeglicht es Polygonnetzte komplizierterer Geometrie flexibel in einem Polygonnetz handzuhaben, statt wie beim Fall der NURBS Darstellung auf eine Polyflaeche zurueckgreifen zu muessen.
 
->Note - While a mesh does not have implicit UV parameterization, it is sometimes useful to assign such a parameterization in order to map a texture or image file onto mesh geometry for rendering. Some modeling software therefore treats the UV coordinates of a mesh vertex as an *attribute* (like vertex color) which can be manipulated and changed. These are usually assigned and not completely defined by the mesh itself.
+>Anmerkung - Waehrend ein Polygonnetz keine implizite UV Parametrisierung hat, ist es manchmal sinnvoll eine soche Parametrisierung anzuwenden, um eine Textur oder ein Bild auf eine Polygonnetzgeomertie anzuwenden um sie zu rendern. Manche Modellierungsprogramme haben deshalb die Moeglichkeit UV Koordinaten fuer Polygonnetze als *Attribute* (aehnlich wie Eckpunktfarben) den Eckpunkten zuzuweisen, die dann bearbeitet und veraendert werden koennen. Diese sind normalerweise zugeweisen und werden nicht durch das Polygonnetz selbst bestimmt.
 
+#####Lokale und Globale Einfluesse
 
-#####Local vs Global Influence
-
-Another important difference is the extent to which a local change in mesh or NURBS geometry affects the entire form. Mesh geometry is completely local. Moving one vertex affects only the faces that are adjacent to that vertex. In NURBS surfaces, the extent of the influence is more complicated and depends on the degree of the surface as well as the weights and knots of the control points. In general, however, moving a single control point in a NURBS surface creates a more global change in geometry.
+Ein wichtiger Unterschied ist der Umfang, in welchem lokale Veraenderungen in einem Polygonnetz oder einer NURBS Geometie die Gesamtform beeinflussen. Polygonnetzgeometien sind komplett lokal. Einen Eckpunkt zu bewegen beeinflusst lediglich angrenzende Netzflaechen. Bei NURBS Flaechen, wird der Umfang des Einflusses einer Veraenderung komlizierter und haeangt vom Graf der Flaeche und den Gewichtungen und Knoten der Kontrollpunkte ab. Generell jedoch wird die Bewegung eines einzelnen Kontrollpunktes einer NURBS Flaeche eine globalere Veraenderung der Geometrie bedeuten.
 
 ![IMAGE](images/1-6-2/09_NURBSvsMESH-02.jpg)
->1. NURBS Surface - moving a control point has global influence
-2. Mesh geometry - moving a vertex has local influence
+>1. NURBS Flaechen - die Veraenderung eines Kontrollpunktes hat globale Wirkung
+2. Polygonnetzgeometrie - die Bewegung eines Eckpunktes hat lokalen Einfluss
 
-One analogy that can be helpful is to compare a vector image (composed of lines and curves) with a raster image (composed of individual pixels). If you zoom into a vector image, the curves remain crisp and clear, while zooming into a raster image results in seeing individual pixels. In this analogy, NURBS surfaces can be compared to a vector image, while a mesh behaves similarly to a raster image.
+Eine Analogie, die hier hilfreich ist, ist der Vergleich einer Vektorgrafik (bestehend aus Linien und Kurven) mit einem Rasterbild (bestehend aus individuellen Punkten). Wenn Du auf ein Vektorbild zoomst, werden die Kurven scharf und klar bleiben, waehrend die Vergroesserung eines Rasterbildes in der Ansicht individueller Pixel enden wird. In dieser Analogie kann eine Vektorgraphik mit einer NURBS Flaeche verglichen werden, waehren sich ein Polygonnetz wie ein Rasterbild verhaelt.
 
 ![IMAGE](images/1-6-2/10_vector raster analogy.png)
->Zooming into a NURBS surface retains a smooth curve, while a mesh element has a fixed resolution
+>Vergroesserung einer NURBS Flaeche erhaelt die geglaettete Kurve, waehrend das Polygonnetzelement eine feste Aufloesung hat
 
-It is interesting to note that while NURBs surfaces are stored as mathematical equations, the actual visualization of these surfaces requires meshes. It is not possible for a computer to display a continuous equation. Instead, it must break that equation down into smaller parts, the result of which is that all rendering or display processing must convert NURBS to meshes. As an analogy, consider that even though we can store the equation of a line on a computer, in order to display that line, the computer must at some point convert the line into a series of discrete pixels on a screen to display. 
+Es ist interessant festzustellen, dass waehrend NURBS Flaechen als mathematische Gleichungen gespeichert werden, die letztendliche Darstellung der Flaechen Polygonnetze benoetigt. Es ist nicht moeglich in einem Computer eine kontinuierliche Gleichung darzustellen. Statt dessen muss er die Gleichungen in kleinere Teile herunterbrechen, was darin resultiert, dass fuer jede Render- und Darstellungsaktioen ein Polygonnetz der entsprechenden NURBS Flaeche berechnet werden muss. In unserer Analogie koennen wir sehen, dass der Computer, auch wenn er die Gleichung einer Kurve speichern kann, diese in eine Serie von diskreten Pixeln auf dem Bildschirm umwandeln muss, um sie darzustellen. 
 
-#### 1.6.2.4 Pros and Cons of Meshes
+#### 1.6.2.4 Vor und Nachteile von Polygonnetzen
 
-When we ask “What are the pros and cons of modeling with meshes?” we are really asking “What are the pros and cons of modeling with shapes that are defined solely by a set of vertices and a corresponding topological framework?” Through this method of framing the question it is easier to see how the “simplistic” nature of a mesh is the critical aspect that would make a mesh either favorable or unfavorable to model with depending on the context of its application.
+Wenn wir uns fragen "Was sind die Vor- und Nachteile der Modellierung mit Polygonnetzen?"muessen wir uns eigentlich Fragen "Was sind die Vor- und Nachteile einer Modellierung mit Formen die nur durch eine Menge von Eckpunkten und dem entsprechenden topologischen Netzwerk bestimmt werden?". Durch diese Methode der Rahmung der Frage ist es einfacher zu sehen wie die "einfache" Natur von Polygonnetzen der ausschlaggebende Aspekt fuer die Bevorzugung einer Modellierung in dieser Technik ist, abhaengig vom Kontext der entsprechenden Anwendung.
 
+Polygonnetzt koennen in einer Situation von Vorteil sein, in der:
 
-Meshes can be favorable in situations where:
+- Das dynamische Rendering einer Formveraenderung ohne Veraenderung der Topologie angestrebt wird
+- Eine diskrete Annaeherung einer gerundeten Geometrie ausreichend ist
+- Eine Geometrie niedrigerer Aufloesung systematisch gegleatter (oder artikuliert) wird, indem computerbasierte Methoden angewendet werden um eine hoehere Aufloesung zu erzielen
+- Wenn das niedrig aufgeloeste Modell gleichzeitig hohe aufloesung von Detail unterstuetzen muss
 
-- There must be a dynamically updated rendering of a form that is changing in shape but not in face connectivity
-- A discretized approximation of a curved geometry would suffice
-- A low-resolution geometry must be systematically smoothed (or articlated) using computational methods to arrive at a higher-resolution model.
-- The low resolution model must be able to be to simultaneously support local, high resolution detail
+Polygonnetze koennen in folgenden Situationen von Nachteil sein:
 
-
-Meshes can be unfavorable in situations where:
-
-- Curvature and smoothness must be represented with a high level of precision
-- True derivatives must be evaluated
-- The geometry must be converted into a manufacturable solid
-- The final form must be able to be easily edited manually
+- Wenn Kruemmung und Glaettung mit einem hohen Level an Praezision dargestellt wrden muessen
+- Wahre Ableitungen berechnet werden muessen
+- Die Geometrie in einen Koerper fuer industrielle Produktion umgewandelt werden muss
+- Die Finale Form einfache Veraenderungen zulassen soll
 
  
 

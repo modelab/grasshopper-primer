@@ -1,135 +1,80 @@
-###1.1.3. TALKING TO RHINO
+﻿###1.1.3. MIT RHINO REDEN
 
-#####Unlike a Rhino document, a Grasshopper definition does not contain any actual objectsor geometry. Instead, a Grasshopper definition represents a set of rules & instructions for how Rhino can automate tasks.
-
+#####Im Unterschied zu einem Rhinodokumnet, enthaelt eine Grasshopperdefinition keine tatsaechlichen Objekte oder Geometrien. Stattdessen repraesentiert eine Grasshopperdefinition eine Reihe von Regeln und Instruktionen, wie Rhino Aufgaben automatisieren kann. 
 ![IMAGE](images/1-1-3/1-1-3_001-talking-to-rhino.png)
->1. Grasshopper preview geometry.
-2. Rhino viewports.
-3. Grasshopper Application window.
+>1. Grasshoppervorschau fuer Geometrien.
+2. Rhino Darstellungsfenster.
+3. Grasshopper Anwendungsfenster.
 
 
 
 
-####1.1.3.1. VIEWPORT FEEDBACK
-All geometry that is generated using the various Grasshopper components will
-show up (by default) in the Rhino viewport. This preview is just an Open GL
-approximation of the actual geometry, and as such you will not be able to select
-the geometry in the Rhino viewport (you must first bake it into the scene). You
-can turn the geometry preview on/off by right-clicking on a component and
-selecting the Preview toggle. The geometry in the viewport is color coded to
-provide visual feedback. The image below outlines the default color scheme.
-
->Note: This is the default color scheme, which can be modified using the Document Preview Settings tool on the canvas toolbar.
+####1.1.3.1. REAKTION DER DARSTELLUNGSFENSTER
+Alle Geometrie, die mit den verschiedenen Grasshopperkomponenten  erzeugt wird, wir d (standartmaessig) im Rhino Darstellungsfenster auftauchen. Diese Vorschau ist nur eine Open GL
+Annaeherung der eigentlichen Geometrie, und als solche kann sie nicht als Geometrie im Rhino Darstellungsfenster ausgewaehlt werden (Du musst sie zuerst in die Szene backen). Du kannst die Geometrievorschau ein- bzw. Ausschalten, indem Du eine Komponente mit einem Rechtsklick anklickst und den Vorschauschlaten auswaehlst. Die Geometrie im Darstellungsfenster ist farbkodiert um visuelles Feedback zu geben. Das unten gezeigt Bild umreisst das Standartfarbschema. 
+>Merke: Dies ist ein Standartfarbschema, welches mit den Dokumentenvorschaueinstellungen in der Canvaswerkzeugleiste angepasst werden kann.
 
 ![IMAGE](images/1-1-3/1-1-3_002-viewport-feedback.png)
->1. Green geometry in the viewport belongs to a component which is currently selected.
-2. Red geometry in the viewport belongs to a component which is currently unselected.
-3. Point geometry is drawn as a cross rather than a rectangle to distinguish it from other Rhino point objects.
-4. Blue feedback means you are currently making a selection in the Rhino Viewport.
-
-####1.1.3.2. LIVE WIRES
-Grasshopper is a dynamic environment. Changes that are made are live and their
-preview display is updated in the Rhino viewport.
-
+>1. Gruene Geometrien im Darstellungsfenster gehoert zur gerade ausgewaehlten Komponente.
+2. Rote Geometrien im Darstellungsfenster gehoeren zu einer Komponente, die gerade nicht ausgewaehlt ist.
+3. Punktgeometien sind as Kreuz dargestellt, um sie von den rechteckig dargestellten Rhino Punktobjekten unterscheiden zu koennen.
+4. Blaue Rueckmeldungen bedeuten, dass Du gerade eine Auswahl im Rhino Darstellungsfenster ausfuehrst. 
+####1.1.3.2. LEBHAFTE KABEL
+Grasshopper ist ein dynamisches Umfeld. Aenderungen, die gemacht werden sind live und ihre Vorschau wird im Rheino Darstellungsfenster stets aktualisiert. 
 ![IMAGE](images/1-1-3/1-1-3_003-live-wires.png)
 
 ####1.1.3.3. GUMBALL WIDGET
-When storing geometry as internalized in a Grasshopper parameter, the gumball
-allows you to interface with that geometry in the Rhino viewport. This update is
-live and updates will occur as you manipulate the gumball. In contrast, geometry
-referenced from Rhino directly will continue to exist in the Rhino document and
-updates from Grasshopper will happen only after any changes occur (as opposed
-to during).
-
+Wenn eine Geometrie in einen Grasshopper Parameter internalisiert gespeichert wird, erlaubt der Gumball Dir mit der Geomerie im Rhino Darstellungsfenster zu interagieren. Diese Interaktion ist live und Aktualisierungen werden durchgefuehrt, waehrend Du mit dem Gumball arbeitest. Im Gegensatz werden direkt von Rhino referenzierte Geometrien weiter im Rhinodokument existieren und Aktualisierungen werden erst nach dem Aufteten von Aenderungen ausgefuehrt (anstatt waehrend dessen).
 ![IMAGE](images/1-1-3/1-1-3_004-gumball.png)
 
-####1.1.3.4. BAKING GEOMETRY
-In order to work with (select, edit, transform, etc.) geometry in Rhino that was
-created in Grasshopper, you must “bake” it. Baking instantiates new geometry
-into the Rhino document based on the current state of the Grasshopper graph. It
-will no longer be responsive to the changes in your definition.
-
+####1.1.3.4. BACKEN VON GEOMETRIEN
+Um mit Geometrien in Rhino zu bearbeiten (auswaehlen, editieren, transformieren, etc.), die in Grasshopper erstellt wurden, musst Du sie “backen”. Backen instanziiert neue Geometrien im Rhinodokument, basierend auf dem momentanen Zustand des Grasshoppergraphen. Sie wird im Weiteren nicht mehr die weitere Aenderungen der Definition ansprechbar sein.
 ![IMAGE](images/1-1-3/1-1-3_005-baking.png)
->1. Bake by right-clicking a component and selecting Bake.
-2. A dialog will appear that allows you to select onto which Rhino layer the geometry will
-bake.
-3. Grouping your baked geometry is a convenient way to manage the instantiated Rhino geometry, particularly if you are creating many objects with Grasshopper.
+>1. Backe durch Rechtsklick auf eine Komponente und Auswahl der Funktion Bake.
+2. Ein Dialog wird auftauchen, der es Dir erlaubt auszuwaehlen, auf welcher Rhinoebene die Geometrie eingefuegt wird.
+3. Gruppieren von gebackener Geometien ist ein komfortabler Weg um instantiierte Geometrien zu verwalten, besonders wenn Du viele Objekte in Grasshopper erzeugst. 
 
-
-####1.1.3.5. UNITS & TOLERANCES
-Grasshopper inherits units and tolerances from Rhino. To change the units,
-type Document Properties in the Rhino command line to access the Document
-Properties menu. Select Units to change the units and tolerances.
+####1.1.3.5. EINHEITEN & TOLERANZEN
+Grasshopper uebernimmt Einheiten und Toleranzen von Rhino. Um die Einheiten zu aendern, gebe _Document Properties in die Rhino Befehlszeile ein, wodurch Du Zugang zum Menu fuer Dokumenteneigenschaften erhaeltst. Waehle Einheiten um Einheiten und Toleranzen zu aendern.
 
 ![IMAGE](images/1-1-3/1-1-3_006-units.png)
->Change the units and tolerances in the Rhino Document Properties menu.
+>Aendere Einheiten und Toleranzen im Rhinomenu fuer Dokumenteneigenschaften.
 
-####1.1.3.6. REMOTE CONTROL PANEL
-Once you get the hang of it, Grasshopper is an incredibly powerful and flexible
-tool which allows you to explore design iterations using a graphic interface.
-However, if you’re working with a single screen then you may have already
-noticed that the Grasshopper editor takes up a lot of screen real-estate. Other
-than constantly zooming in and out and moving windows around your screen,
-there really isn’t an elegant solution to this problem. That is…until the release of the Remote Control Panel!
+####1.1.3.6. FERNBEDIENUNGSPANEEL
+Wenn Du einmal angefangen hast, ist Grasshopper ein unglaublich maechtiges und flexibles Werkzeug, dass er Dir erlaubt verschiedene Iterationen waehrend des Entwurfsprozesses mit der graphischen Oberflaeche zu erkunden.
+Jedoch hast Du vielleicht schon gemerkt, dass wenn Du an einem einzelnen Bildschirm arbeitest der Grasshoppereditor einen grossen Teil der Bildschirmoberflaeche einnimmt. Abgesehen von  konstantem ein- und auszoomen und verschieben der Fenster auf dem Bildschirm, gibt es noch keine elegante Loesung des Problems. Das heist… bis zur Veroeffentlichung des Fernbedienungspaneels!
 
-The Remote Control Panel (RCP) provides a minimal interface to control your
-definition without taking up a substantial portion of your screen. The RCP can
-be instantiated by clicking on the toggle under the View menu of the Main Menu
-bar. By default, the RCP is blank — meaning it doesn’t contain any information
-about your current Grasshopper document. To populate the RCP with UI
-elements like sliders, toggles, and buttons, simply right click on the element
-and click Publish To Remote Panel. This will create a new group and create a
-synchronized UI element in the RCP. Changing the value of the element in the
-RCP will also update the value in the graph, as well as modify any geometry
-in the viewport which might be dependant on this parameter. You can publish
-multiple elements and populate a complete interface which can be used to
-control your file without having the clutter of the visual graph showing up on top
-of the Rhino viewport.
+Das Remote Control Panel (RCP) stellt eine minimale Oberflaeche zur Kontrolle Deiner Definition bereit, ohne unnoetig viel Platz auf dem Bildschirm einzunehmen. Das RCP kann dargestellt werden, indem Du dem Schalter im Ansichtsmenu der Hauptmenuleiste anklickst. Standardmaessig ist das RCP blank - das bedeutet nicht, dass es keine Informationen ueber Dein aktuelle Grasshopperdokument enthaelt. Um das RCP mit Bentzeroberflaechen(UI)-Elementen wie Schiebereglern, Schaltern und Knoepfen zu belegen, rechtsklicke einfach au das Element und waehle Publish to Remote Panel. Dies wird eine neue Gruppe erstellen und ein synchronisiertes UI-Element im RCP erzeugen. Eine Veraenderung der Werte des UI wird auch die werte in Deinem Graphen aktualisieren und die Geometrien in den Ansichtsfenstern modifizieren, die von diesen Parametern abhaengen. Du kannst mehrere Elemente im RCP veroeffentlichen und die gesamte Oberflaeche belegen. Diese Funktion kannst Du nutzen, um Deine Datei zu kontrollieren, ohne dass Du die Verstrickungen Deines visuellen Graphen in der Nutzeroberflaeche oberhalb Deiner Rhinoansichtsfenster zeigen zu muessen.
 
->Note: The RCP will inherit the UI elements name and use it as the label. It is good practice to update your sliders and toggles with comprehensible and meaningful names. This will translate directly to your RCP making it easier to use.
-
+>Merke: Das RCP wird die Namen der UI Elemente uebernehmen und deren Namen als Label nutzen. Es ist gute Praxis die Schieberegler und Schalter mit entsprechend verstaendlichen und bedeutungsvollen namen zu aktualisieren. Dies wird die Nutzbarkeit Deines RCP unwahrscheinlich erleichtern.
 
 ![IMAGE](images/1-1-3/1-1-3_007-remote-control1.png)
-> In order to get a UI element (eg. slider, toggle, button, etc.) to show up in the Remote Control Panel, we have to first publish it.
+> Um ein UI Element (z.B. Schieberegler, Schalter, Knopf) im Remote Control Panel anzuzeigen, muessen wir es erst dort publizieren.
 
-The RCP UI can also be customized – allowing you to control where objects
-appear in the interface, the names and colors of different groups. To modify the
-layout of the RCP you first have to switch from Working Mode (the default RCP
-view) to Edit Mode. You can enter the Editing Mode by clicking on the green
-pencil in the upper right hand corner of the RCP. Once in Editing Mode, you can
-create new UI groups, rearrange elements within groups, add labels, change
-colors and more. To delete a UI element, simply drag the element outside the
-border of the RCP. You cannot change the individual values of the parameters if
-you are in Editing Mode. Instead, you will have to click on the green pencil icon
-to switch back to the standard Working Mode.
+Die RCP UI kann auch personalisiert werden – um Dir zu erlauben, festzulegen an welcher Stelle Objekte in der Oberflaeche erscheinen, sowie die Namen und Farben verschiedener Gruppen einzustellen. Um das Layout des RCP zu modifizieren musst Du zuerst vom "Working Mode" (die Standard RCP-Ansicht) in den "Edit Mode" umschalten. Du kannst diesen Bearbeitungsmodus erreichen, indem Du auf den gruenen Bleistift in der oberen rechten Ecke des RCP klicks. Sobald Du im Bearbeitungsmodus bist, kannst Du neue UI-Gruppen erstellen, Elemente innerhalb der Gruppen neu ausrichten, Label hinzufuegen, Farben aendern und vieles mehr. Um ein UI-Element zu loeschen, ziehe es einfach ueber die Begrenzung des RCP hinaus. Du kannst die individuellen Werte der parameter nicht aendern, solange Du Dich im Bearbeitungsmodus befindest. Statt dessen, wirst Du wieder auf den gruenen Bleistift klicken muessen, um in den urspruenglichen Arbeitsmodus zurueckzukehren.
 
->_The Remote Control Panel has two modes: Edit Mode (left) which allows you to reorganize the look and feel of the RCP, and Working Mode where you can modify the actual values of the UI elements._
+>_Das Remote Control Panel" hat zwei verschiedene Modi: Bearbeitungsmodus (links), der es Dir ermoeglicht das Aussehen und die Handhabung des RCP anzupassen, und den Arbeitsmodus (rechts), in dem Du die eigentlichen Werte des UI bearbeiten kannst._
 ![IMAGE](images/1-1-3/1-1-3_008-remote2.png)
->The Remote Control Panel in Edit Mode has an orange background.
+>Das "Remote Control Panel" im Bearbeitungsmodus hat einen orangenen Hintergrund.
 
 
 
 
-####1.1.3.7. FILE MANAGEMENT
-If your Grasshopper file references geometry from Rhino, you must open that
-same file for the definition to work. Keep your files organized by storing the
-Grasshopper and Rhino files in the same folder, and giving them related names.
+####1.1.3.7. DATEI MANAGEMENT
+Wenn Deine Grasshopperdatei Geometrien aus Rhino referenziert, musst Du die selbe Datei in Rhino oeffnen, damit die Definition funktioniert. Behalte Deine Datein in einer organisierten Struktur, indem Du die Grasshopper- und Rhinodateien im selben Verzeichnis speicherst und Ihnen Namen gibst, die in Beziehung zueinander stehen.
 
 ![IMAGE](images/1-1-3/1-1-3_009-file-management.png)
->1. Project Folder.
-2. Rhino file.
-3. Grasshopper file.
+>1. Projektverzeichnis.
+2. Rhinodatei.
+3. Grasshopperdatei.
 
 ####1.1.3.8. TEMPLATES
-Creating and specifiying a template file in your Grasshopper preferences is
-convenient way to set up every new Grasshopper definition you create. The
-template can include Grasshopper components as well as panels and sketch
-objects for labeling.
+Die Erstellung und Spezifizierungen einer Templatedatei mit Deinen Grasshopperpraeferenzen ist ein angenehmer Weg um neue Grasshopperdefinitionen auf Grundlage Deiner Voreinstellungen zu erzeugen. Das Template kann Grasshopperkomponenten, -paneele und -skizzen enthalten, um Deine Dokumentation zu erleichtern.
 
 
 ![IMAGE](images/1-1-3/1-1-3_010-templates.png)
->Create a template file and save it
+>Erzeuge eine Templatedatei und speichere sie.
 
 ![IMAGE](images/1-1-3/1-1-3_011-templates2.png)
->1. In File/Preferences, load the file you just created under Template File. Your template will now be used each time you create a new file.
+>1. Unter File/Preferences, lade die Datei, die Du gerade als Template erstellt hast. Dein Template wird nun jedes Mal genutzt werden, wenn Du eine neue Datei erstellst.
 

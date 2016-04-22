@@ -1,89 +1,88 @@
-### 1.2.2. GRASSHOPPER COMPONENT PARTS
+﻿### 1.2.2. GRASSHOPPER KOMPONENTEN
 
-#####Components are the objects you place on the canvas and connect together with Wiresto form a visual program. Components can represent Rhino Geometry or operationslike Math Functions. Components have inputs and outputs.
+#####Komponenten sind die Objekte, welche Du auf der Leinwand platzierst und mit Kabeln miteinander verbindest um ein visuelles Programm zu erstellen. Komponenten repraesentieren Rhino Geometrien und verhalten sich wie mathematische Funktionen. Komponenten haben Eingabe- und Ausgabeparameter. 
+
 
 ![IMAGE](images/1-2-2/1-2-2_001-component-parts.png)
->1. The three input parameters of the Circle CNR component.
-2. The Circle CNR component area.
-3. The output parameter of the Circle CNR component.
+>1. Die drei Eingabeparameter einer "Circle CNR" Komponente.
+2. Das "Circle CNR" Komponentenlabel.
+3. Die Ausgabeparameter der "Circle CNR" Komponente.
 
-A component requires data in order to perform its actions, and it usually comes up with a result. That is why most components have a set of nested parameters, referred to as Inputs and Outputs, respectively. Input parameters are positioned along the left side, output parameters along the right side.
+Eine Komponente benoetigt Daten, damit sie ihre Aktionen ausfuehren kann und dann normalerweise ein Ergebnis darstellt. Das ist der Grund warum die meisten Komponenten eine verschachtelte Struktur von Parametern haben, die als Eingabe- und Ausgabeparameter bezeichnet werden. Eingabeparameter sind an der linken Seite angeordnet, Ausgabeparameter an der rechten Seite.
 
-There are a few Grasshopper components that have inputs but no outputs, or vice versa. When a component doesn’t have inputs or outputs, it will have a jagged edge.
+Es gibt einige Grasshopperkomponenten, die nur Eingabe-, aber keine Ausgabeparameter haben, oder andersherum. Wenn eine Komponente keine Eingabe- oder Ausgabeparameter hat, wird es eine gezackte Kante haben.
 
 ![IMAGE](images/1-2-2/1-2-2_002-components-without-outputs.png)
 
-####1.2.2.1. LABEL VS ICON DISPLAY
-Every Grasshopper object has a unique icon. These icons are displayed in
-the center area of the object and correspond to the icons displayed in the component palettes. Objects can also be displayed with text labels. To switch between icon and label display, Select “Draw Icons” from the display menu. You can also select “Draw Full Names” to display the full name of each object as well as its inputs and outputs.
+####1.2.2.1. LABEL ODER SYMBOL DARSTELLUNG
+Jedes Grasshopperobjekt hat ein einzigartiges Symbol. Diese Symbole werden im Zentrum des entsprechenden Objektes dargestellt und korrespondieren mit den Symbolen, die in der Komponentenpalette dargestellt werden. Objekte koennen auch mit Text beschriftet dargestellt werden. Um zwischen Symbol- und Textdarstellung umzuschalten, waehle “Draw Icons” im Ansichtsmenu. Du kannst auch “Draw Full Names” auswaehlen, um den gesamten Namen eines Objekts mitsamt seinen Eingabe- und Ausgabeparmetern darzustellen.
 
 ![IMAGE](images/1-2-2/1-2-2_003-label-icon-screenshot.png)
->1. Switch between Icon and Label display.
-2. Display the full name of the component and its inputs and outputs
+>1. Schalte zwischen Symbol- und Textdarstellung um.
+2. Zeige den gesamten Namen einer Kompomente mitsamt seinen Eingabe- und Ausgabeparametern an.
 
 ![IMAGE](images/1-2-2/1-2-2_004-label-icon-fullnames.png)
->1. The Circle CNR component in Label Display
-2. The Circle CNR component in Icon Display
-3. The Circle CNR component with full names displayed
+>1. Die "Circle CNR" Komponente in Textdarstellung
+2. Die "Circle CNR" Komponente in Symboldarstellung
+3. Die "Circle CNR" Komponente mit gesamtem Namen angezeigt
 
 
-We reccommend using icon display to familiarize yourself with the component icons so you can quickly locate them in the palettes. This will also enable you to understand definitions at a glance. Text labels can be confusing because different components may share the same label.
+Wir empfehlen die Symboldarstellung, um Dich mit den Symbolen in der Komponentenpalette vertraut zu machen. Dies wird Dir auch helfen Definitionen auf einen Blick zu verstehen. Textlabels koennen verwirrend sein, weil verschiedene Komponenten die selbe Bezeichnung teilen koennen.
 
 ![IMAGE](images/1-2-2/1-2-2_005-circle-label-vs-icon.png)
->Circle CNR and Circle 3pt have the same label, but different icons.
+>"Circle CNR" und "Circle 3pt" haben das selbe Textlabel, aber unterschiedliche Symbole.
 
-One feature that can help you familiarize yourself with the location of
-components in the palettes is holding down Ctrl + Alt and clicking on an existing component on the canvas. This will reveal its location in the palette.
+Eine Eigenschaft, die Dir helfen kann, Dich mit der Position von Komponenten in der entsprechenden Palette vertraut zu machen, besteht darin Strg + Alt zu halten, waehrend Du auf eine bestehende Komponente auf der Leinwand klickst. Dies wird die Position der Komponente in der Palette anzeigen.
 
 ![IMAGE](images/1-2-2/1-2-2_006-reveal-location.png)
 
-####1.2.2.2. COMPONENT HELP
-Right clicking an object and selecting “Help” from the drop-down menu will open a Grasshopper help window. The help window contains a more detailled description of the object, a list of inputs and outputs, as well as remarks.
+####1.2.2.2. KOMPONENTEN HILFE
+Rechtsklicke auf ein Objekt und waehle “Help” im drop-down menu um das Grasshopper Hilfefenster zu oeffnen. Das Hilfefenster enthaelt eine detailliertere Beschreibung des Objekts, eine Liste der Eingabe- und Ausgabeparameter und einige Anmerkungen.
 
 ![IMAGE](images/1-2-2/1-2-2_007-component-help.png)
->1. Grasshopper help window for the Point parameter
-2. The remarks in the help window give additional insight about the point parameter.
+>1. Grasshopper Hilfefenster fuer einen Punktparameter
+2. Die Anmerkungen im Hilfefenster geben zusaetzliche Hinweise zum Punktparameter.
 
-####1.2.2.3. TOOL TIPS
-Component inputs are expecting to receive certain types of data, for example a Component might indicate that you should connect a point or plane to its input. When you hover your mouse over the individual parts of a Component object, you’ll see different tooltips that indicate the particular type of the sub-object currently under the mouse. Tooltips are quite informative since they tell you both the type and the data of individual parameters.
+####1.2.2.3. WERKZEUGTIPS
+Eingabeparameter von Komponenten erwarten bestimme Datentypen zu erhalten. Beispielsweise kann eine Komponente anzeigen, dass Du einen Punkt oder eine Ebene als Eingabe mit ihr verbinden sollst. Wenn Du mit Deiner Maus ueber die verschiedenen Teile der der Komponente faehrst, wirst Du verschiende Werkyeugtips sehen, die einen bestimmten Typ anzeigen, den das Unterobjekt, das sich gerade unter der Mausanzeige befindet, erfordert. Werkzeugtips sind relativ informatif, da sie Dir von die erforderlichen Typen und Daten der bestimmten Parameter berichten.
+
 
 ![IMAGE](images/1-2-2/1-2-2_008-tool-tips.png)
->1. Header of the tooltip shows the icon for the input type, the name of the Component, the label for the input, and the input type again in text format.
-2. The flain language description of what the input is for the Component.
-3. Any values defined for the input - either locally or from its connected wire.
-4. The header of the output tooltip provides the same detail os for inputs, but for the corresponding output.
-5. The result of the component's action.
+>1. Die Ueberschrift des Werkzeugtips zeigt Dir das Symbol fuer den Eingabetypen, den Namen der Komponente, das Label fuer die Eignabe und die Eingabetype nochmals im Textformat an.
+2. Die sprachliche Beschreibung des Eingabeparameters fuer die Komponente.
+3. Alle Werte, die fuer den Eingabeparameter definiert wurden - entweder lokal oder von einem verbundenen Kabel.
+4. Die Ueberschrift des Ausgabewerkzeugtips stellt die selben Details bereit, wie auf der Eingabeseite, jedoch fuer den entsprechenden Ausgabeparameter.
+5. Das Ergebnis der Aktion der Komponente.
 
-####1.2.2.4. CONTEXT POPUP MENUS
-All objects on the Canvas have their own context menus that expose their
-settings and details. You can access this context menu by right-clicking on the center area of each component. Inputs and outputs each have their own context menus which can be accessed by right-clicking them.
+####1.2.2.4. KONTEXT POPUPMENUS
+Alle Objekete auf der Leinwand haben ihre eigenen Kontextmenues, die ihre Einstellungen und Details beinhalten. Du kannst diese Kontextmenus oeffnen, indem Du im Zentrum der Komponente rechtsklicks. Eingabe- und Ausgabe haben jeweils ihre eigenen Kontextmenus, welche mit einem entsprechenden Rechts-Klick zugaenglich sind.
 
 ![IMAGE](images/1-2-2/1-2-2_009-context-menus-a.png)
->1. Component context menu.
-2. Editable text field that lists the name of the object.
-3. Preview flag - indicates whether or not the geometry produced by this object will be visible in the Rhino viewports. Switching off preview will speed up both the Rhino viewport frame-rate and the time taken for a solution.
-4. Runting warnings - lists warnings that are hindering the functioning of the component.
+>1. Komponenten Kontextmenu.
+2. Bearbeitbares Textfeld, das den Namen des Objektes listet.
+3. Vorschauanzeige - zeigt an, ob die von diesem Objekt erzeugte Geometrie in den Rhinoansichtsfenstern sichtbar ist. Die Vorschau auszuschalten wird die Aktualisierungsrate der Ansichtsfenster in Rhino, sowie die Zeit zur Berechnung der Loesungen beschleunigen.
+4. Laufzeitwarnungen - hier werden Warnungen gelistet, welche die Komponente bei der Ausfuehrung ihrer Funktion behindern.
 
 ![IMAGE](images/1-2-2/1-2-2_010-context-menus-b.png)
->1. C input context menu.
-2. Set one or multiple points - allows you to select reference geometry in the Rhino viewport.
-3. Manage Point collection - opens a dialog that allows you to add or remove points from the point collection and view information about each point.
-4. Add item to collection.
-5. Delete selection.
+>1. C Eingabe Kontextmenu.
+2. Waehle einen oder mehrere Punkte - ermoeglicht es Dir Referenzgeometiren im Rhinoansichtsfenster auszuwaehlen.
+3. Verwalte Punktsammlungen - oeffnet ein Dialogfenster, das es Dir erlaubt Punkte zu einer Punktsammlung hinzuzufuegen oder Punkte davon zu entfernen und Informationen zu jedem Punkt einzusehen.
+4. Fuege ein Element zur Sammlung hinzu.
+5. Loesche die Auswahl.
 
-####1.2.2.5. ZOOMABLE USER INTERFACE
-Some components can be modified to increase the number of inputs or outputs through the Zoomable User Interface (ZUI). By zooming in on the component on the canvas, an additional set of options will appear which allows you add or remove Inputs or Outputs to that component. The Addition component allows you to add inputs, representing additional items for the addition operation.
+####1.2.2.5. VERGROESSERBARE BENUTZEROBERFLAECHE
+Einige Komponenten koennen durch vergroesserbare Benutzeroberflaechen bearbeitet werden, um die Anzahl von Eingabe- und Ausgabeparametern zu veraenden. Indem Du auf die entsprechende Komponente auf der Leinwand zoomst, kannst Du weitere Optionen einsehen, welche es Dir ermoeglichen Eingabe- und Ausgabeparameter von der Komponente zu entfernen oder u ihr hinzuzufuegen. Die "Addition" Komponente ermoegliche es Dir Eingabeparameter hinzuzufuegen und so weitere Elemente fuer die Additionsoperation darzustellen.
 
 ![IMAGE](images/1-2-2/1-2-2_011-zoomable-ui.png)
->1. Click the + sign to add an Input.
-2. Click the - sign to remove an Input.
+>1. Klicke auf das + Zeichen um einen Eingabeparameter hinzuzufuegen.
+2. Klicke auf das - Zeichen um einen Eingabeparameter zu entfernen.
 
-The panel component also has a zoomable user interface. A Panel is like a Post-It™ sticker. It allows you to add little remarks or explanations to a Document. You can change the text through the menu or by double-clicking the panel surface. Panels can also receive and display data from elsewhere. If you plug an output into a Panel, you can see the contents of that parameter in real-time. All data in Grasshopper can be viewed in this way. When you zoom in on a panel, a menu appears allowing you to change the background, font, and other attributes. These options are also available when you right-click the panel
+Die Paneelkomponente besitzt ebenso eine vergroesserbare Benutzeroberflaeche. Ein Paneel ist wie ein Post-It™ Sticker. Es erlaubt Dir kleine Anmerkungen und Erklaerungen zu Deinem Dokument hinzuzufuegen. Du kannst den Text des Paneels durch das Menu oder mit einem Doppelklick auf die Oberflaeche veraendert werden. Paneele koennen auch Daten aus anderen Quellen empfangen und anzeigen. Wenn Du einen Ausgabeparameter an ein Paneel anschliesst, kannst Du die Inhalte des entsprechenden Parameters in Echtzeit sehen. Alle Daten in Grasshopper koennen auf diese Weise angezeigt werden. Wenn Du auf ein Paneel zoomst, erscheint ein Menu, welches es Dir erlaubt den Hintergrund, die Schriftart und andere Eigenschaften anzuzeigen. Diese Optionen sind auch ueber einen Rechtsklick auf das Paneel zugaenglich.
 
 ![IMAGE](images/1-2-2/1-2-2_012-zoomable-panel.png)
->1. Drag grips to adjust panel margins.
-2. Increase or reduce the font size of the panel content.
-3. Change the alignment of panel content.
-4. Select a font for ponel conent.
-5. Select a color for the panel background. You can set a new default color for your panels by right clicking the panel and selecting "Set Defaut Color".
+>1. Ziehe an den Raendern, um die Paneelabmessungen zu veraendern.
+2. Erhoehe oder reduziere die Schriftgroesse des Paneelinhaltes.
+3. Veraendere die Ausrichtung des Paneelinhaltes.
+4. Waehle die Schriftart fuer den Paneelinhalt.
+5. Waehle die Farbe des Paneelhintergrundes. Du kannst einen neuen Standardfarbton fuer Paneele waehlen, indem Du nach einem Rechtsklick auf das Paneel "Set Defaut Color" ausfuehrst.
 

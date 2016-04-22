@@ -1,5 +1,6 @@
 ### 1.2.1. GRASSHOPPER OBJEKTTYPEN
 
+
 #####Grasshopper besteht aus zwei primaeren Typen von Benutzerobjekten: Parameter und Komponenten. Parameter speichern Daten, wobei Komponenten Aktionen ausfuehren, welche wiederum Daten erzeugen. Der einfachste Weg, um Grasshopper zu verstehen ist, sich daran zu erinnern, dass wir Daten nutzen werden, um die Eingabe von Aktionen zu definieren (was neue Daten erzeugt, die wir im weiteren Verlauf nutzen koennen). 
 ####1.2.1.1. PARAMETER
 Parameter speichern die Daten – Zahlen, Farben, Geometrien , u.a. – die wir durch den Graph unserer Definition senden. Parameter sind Containerobjekte, welche gewoehnlich als kleine rechteckige Kaestchen mit einer einzelnen Eingabe und Ausgabe angezeigt werden. Wir koennen Parameter auch an der Form des Symbols erkennen, da alle Parameterobjekte eine sechseckige Einfassung haben.

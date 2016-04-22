@@ -1,27 +1,27 @@
-### 1.6.4 Mesh Operations
+### 1.6.4 Polygonnetzoperationen
 
-#####In the last section, we looked at the basic structure of a mesh. In this section, we will look at ways to manipulate mesh geometry.
+#####Im letzten Abschnitt haben iwr die grundlegende Struktur von Polygonnetzes angeschaut. In diesem Abschnitt werden wir Wege ansehen um Polygonnetzgeometrien zu manipulieren.
 
-####1.6.4.1 Smooth
+####1.6.4.1 Glaettung
 
 ![IMAGE](images/1-6-4/smooth.png)
 
-Smoother meshes can sometimes be achieved by simply increasing the number of faces in a process called *subdivision*. This can often lead to extremely large datasets which take a long time to calculate, and requires additional add-ons to Grasshopper that are not built-in. In these situations, the **Smooth** component can be used as an alternative to make meshes less jagged or faceted, without increasing vertex and face count or changing the topology.  The *strength*, *number of iterations*, and displacement *limit* can all be used to adjust how much smoothing occurs.
+Glaettere Polzgonnetze koennen erreicht werden, indem die Anzahl der Netzflaechen erhoeht wird. Dieser Prozess wird *Unterteilung* genannt. Dies kann oft zu sehr grossen Datensaetzen fuehren, welche viel Rechenzeit und zusaetzliche Erweiterungen fuer Grasshopper benoetigen. In dieser Situation kann die **Smooth** Komponente als Alternative genutzt werden, um weniger gacettierte Meshes zu erzeugen ohne die Anzahl der Eckpunkte und Netzflaechen zu erhoehen oder die Topologie zu veraendern. Die *Staerke*, *Anzahl der Iterationen* und *Versatzbegrenzung* koennen genutzt werden um die Art zu beeinflussen, in der die Glaettung passiert.
 
-Attaching a boolean value to the input N provides option to skip naked vertices. A vertex is naked if it is connected to a naked edge, meaning the vertex is on the boundary of an open mesh. By toggling this option, you maintain the exterior boundary of a mesh while smoothing the interior edges.
+Verbindung eines boolschen Wertes mit einem Eingabeparameter N gibt uns die Option freie Eckpunkte zu ueberspringen. Exkpunkte sind frei, wenn sie mit einer offenen Kante verbunden sind, mit der Bedeutung dass er sich in der aeusseren Begrenzung des Polygonnetzes befindet. Indem Du diese Option einschaltet, kannst Du die aeusseren Begrenzungen eines Polygonnetzes erhalten, waehrend Du die inneren  Kanten des Polygonnetzes glaettest.
 
 ![IMAGE](images/1-6-4/03_smooth.png)
->1. Initial box mesh with 3 faces removed
-2. Smoothing after 2 iterations
-3. 6 iterations
-4. 25 iterations
-5. 50 iterations
+>1. Urspruengliches Polygnnetz einer Kiste mit drei Netzflaechen entfernt
+2. Glaettung nach 2 Iterationen
+3. 6 Iterationen
+4. 25 Iterationen
+5. 50 Iterationen
 
-####1.6.4.2 Blur
+####1.6.4.2 Unschaerfe
 
 ![IMAGE](images/1-6-4/blur.png)
 
-The **Blur** component acts in a similar way as smooth, except it only affect the vertex colors. It can also be used to reduce the jagged appearance of colored meshes, although to a lesser extent since it does not change any geometry.
+Die **Blur** Komponente verhaelt sich aehnlich wie die "Smooth" Komponente, abgesehen von den Eckpunktfarben. Es kann auch benutzt werden um die gazackte Erscheinung von Farbpolygonnetzen, auch wenn der Effekt geringer ist, da die Geometrie nicht veraendert wird.
 
 ![IMAGE](images/1-6-4/04_blur.png)
 >1. Initial mesh
@@ -30,35 +30,33 @@ The **Blur** component acts in a similar way as smooth, except it only affect th
 4. 12 iterations
 5. 20 iterations
 
-####1.6.4.3 Triangulate
+####1.6.4.3 Triangulierung
 
 ![IMAGE](images/1-6-4/triangulate.png)
 
-In order to ensure each face is planar, or to export a mesh to a different software that might not allow quad faces, it is sometimes necessary to triangulate a mesh. Using the **Triangulate** component, each quad face is replaced with two triangle faces. Grasshopper always uses the shortest diagonal of the face to create a new edge.
+Um die Planaritaet einer jeden Netzfleache zu sichern oder um das Polygonnetz zu anderen Programmen zu exportieren, die keine viereckigen Netzflaechen erlauben, ist es manchmal noetig ein Polygonnetz zu triangulieren. Mit der Nutzung der **Triangulate** Komponente, wird jede viereckige Netzflaeche durch zwei dreieckige ersetzt. Grasshopper nimmt immer die kuerzeste Diagonale der Netzflaeche um eine Netzflaeche mit einer neuen Kante zu unterteilen.
 
 ![IMAGE](images/1-6-4/05_triangulate.png)
->1. Original quad mesh
-2. Added edges according to shortest distance across quads
-3. Triangulated resultant mesh
+>1. Urspruengliches Polygonnetz mit viereckigen Netzflaechen
+2. Hinzugefuegte Kanten in Uebereinstimmung mit der kurzesten Distanz zwischen viereckigen Netzflaechen
+3. Trianguliertes Polygonnetz als Ergebnis
 
-####1.6.4.4 Weld
+####1.6.4.4 Schweissen
 
 ![IMAGE](images/1-6-4/weld.png)
 
-In the last section, we noticed that a single vertex can be shared by adjacent faces and the normal for that vertex is calculated as the average of the adjacent faces, allowing a smoother visualization. However, it is sometimes desireable to have a sharp crease or seam where one face does not smoothly transition to the next by way of the vertex normals. For this situation it is necessary for each face to have its own vertex with its own normal. The list of vertices would contain at least two points that have the same coordinates, but different indices.
+Im letzten Abschnitt, haben wir festgestellt, dass ein einzelner Eckpunkt von benachbarten Netzflaechen geteilt werden kann und dass die Normale fuer diesen Eckpunkt wird aus dem Durchnitt der Normalen der angrenzenden Netzflaechen berechnet, was eine glattere Darstellung gibt. Manchmal ist es jedoch gewuenscht, dass eine Scharfe Kante oder ein Saum erzeugt werden, an welchen ein glatter Uebergang zwischen einer Netzflaeche und der benachbarten nicht stattfinden soll. In dieser Situation ist es notwendig fuer jede Netzflaeche an einem Schnittpunkt eine eigene Exkpunktnormale zu definieren. Die Liste von Eckpunkten wuerde mindestens zwei Punkte enthalten die eine Koordinate teilen aber verschiedene Indizes besitzen.
 
 ![IMAGE](images/1-6-4/06_simple-weld.png)
->1. Welded Faces - Both faces share vertices 1 and 2. The vertex normals at these vertices are the average of the face vertices.
-2. Unwelded Faces - Duplicate vertices are added to the list. The faces do not share any vertex indices. Vertices 1 and 6, and vertices 2 and 5 have identical coordinates, but are separate vertices. They each have their own vertex normal
+>1. Verschweisste Netzflaeche - Beide Netzflaechen teilen die Vertices 1 und 2. Die Eckpunktnormalen an diesen Eckpunkten entsprechen dem Durchschnitt der Netzflaechennormalen der angrenzenden Netzflaechen.
+2. Unverschweisste Netzflaeche - Duplizierete Exkpunkte wurden der Liste hinzugefuegt. Eckpunkte 1 und 6 und Eckpunkte 2 und 5 haben identische Koordinaten, aber unterschiedliche Eckpunkte. Sie haben jeweils ihre eigenen Eckpunktnormalen. Der Prozess zwei Eckpunkte in der selben Position zu nehmen und sie zu einem gemeinsamen Eckpunkt zusammenzufuehren nennen wit *schweissen*, wobei *entschweissen* einen einzelnen Eckpunkt und ihn in mehrere Eckpunkte zu teilen.
 
-The process of taking two vertices that are in the same position and combining them into a single vertex is called *welding*, while *unwelding* takes a single vertex and splits it into multiple vertices.
-
-The **Weld** component uses a threshold angle as input. Any two adjacent faces with an angle less than the threshold angle will be welded together, resulting in common vertices with a normal that is the average of the adjacent faces. **Unweld** works in the opposite manner, where adjancent faces with an angle greater than the given threshold will be unwelded, and their shared vertices will be duplicated.
+Die **Weld** Komponente nutzt einen Grenzwinkel als Eingabeparameter. Alle benachbarten Netzflaechen mit einem eingeschlossenen Winkel kleiner dem Grenzwinkel werden miteinander verschweisst, wodurch gemeinsame Eckpunkte mit geteilten Eckpunktnormalen entstehen, die die Werte der angrenzenden Flaechennormalen mitteln. **Unweld** funktioniert auf die entgegengesetzte Art und Weise, in der angrenzende Netzflaechen mit einem Winkel groesser dem Grenzwinkel entschweisst werden und die bisher geteilten Eckpunkte dupliziert werden.
 
 ![IMAGE](images/1-6-4/07_box-weld.png)
->1. The default Box Mesh has 726 vertices. The mesh is creased at the corners of the box, where vertices are doubled up.
-2. If the mesh is welded with an angle greater than 90 degrees, the resulting mesh faces are welded together, and the number of vertices has decreased to 602 while the number of faces has remained the same.
-3. Looking at the previewed geometry, you can also notice that the rendered welded mesh has smoothed corners. 
-4. Unlike the Smooth component which changes the mesh geometry, this mesh only appears smoother due to the vertex normal's role in rendering and shading. The actual positions of the vertices remain unchanged.
+>1. Die Standardpolygonnetzkiste hat 726 Eckpunkte. Das Polygonnetz ist an den Ecken der Kiste gekantet und die Eckpunkte an diesen Eckpunkten sind dupliziert.
+2. Wenn das Polygonnetz mit einem Winkel groesser als 90 Grad verschweisst wird, werden die Netzflaechen alle verschweisst und die Anzahl der Endpunkte wurde auf 602 reduziert, waehrend die Anzahl der Netzflaechen die selbe bleibt.
+3. Wenn wir uns die Vorschaugeometrie ansehen, koennen wir auch feststellen, dass das gerenderte verschweisste Polygonnetz geglaettete Ecken hat.
+4. Entgegen der "Smooth" Komponente, welche die Polygonnetzgeometrie veraendern, wirkt dieses Polygonnetz nur geglaettet, weil die Eckpunktnormalen eine Rolle in Rendering und Schattierung spielen. die eigentliche Position der Eckpunkte bleibt unveraendert.
 
-In the above image, we used the angle 91 degrees because we know that the sides of a square will be at 90 degree angles. To completely weld an entire mesh you should use an angle of 180 degrees.
+Im oben gezeigten Bild haben wir einen Winkel von 91 Grad angenommen, weil wir wissen, dass die Seiten eines Quadrats 90 Grad Winkel enthaelt. Um ein Polygonnetz vollstaendig zu verschweissen solltest Du einen Winkel von 180 Grad angeben.
