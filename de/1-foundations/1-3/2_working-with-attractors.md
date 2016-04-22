@@ -1,9 +1,3 @@
-﻿<style>
-td:nth-child(1) {color: #008DB2}
-td:nth-child(3)	{font-size: 70%;width: 15%;}
-td {background-color: #F9F9F9;}
-thead {display: none}
-</style>
 ### 1.3.2. Arbeiten mit Attraktoren
 
 #####Attraktoren sind Punkte, die wie virtuelle Magneten wirken - jeder zieht andere Objekte an oder stoesst diese ab. In Grasshopper, kann jede Geometrie von Rhino referenzierte oder in Grasshopper erstellte Geometrie as Attraktor verwendet werden. Attraktoren koennen eine Anzahl von Parametern der sie umgebenden Objekte beinflussen, inkl. Skalierunng, Rotation, Farbe und  Position. Diese Parameter werden im Verhaeltnis zur Attraktorgeometrie veraendert.

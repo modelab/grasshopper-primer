@@ -1,9 +1,5 @@
-﻿###1.3.5. Boolsche & Logische Operatoren
-{% if gitbook.generator == "pdf" or "mobi" or "epub" %}
+###1.3.5. Boolsche & Logische Operatoren
 >Beispieldateien zu diesem Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
-{% else %}
->Beispieldateien zu diesem Abschnitt: [Download](../../appendix/A-2/gh-files/1.3.5_booleans and logical operators.gh)
-{% endif %}
 
 ####1.3.5.1. BOOLSCHE OPERATOREN
 Nummerische variablen koennen eine ganze Bandbreite verschiedener Zahlen speichern. Boolsche Variablen koennen lediglich zwei Werte speichern auf die wir uns mit die Ja und Nein, Wahr und Falsch oder 1 und 0 beziehen. Offensichtlich werden wir niemals boolsche Werte heranziehen um Kalkulationen durchzufuehren, da ihre Werte so begrenztsind. Wir nutzen boolsche Werte um Konditionale auszuwerten.

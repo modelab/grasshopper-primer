@@ -1,11 +1,5 @@
-
-
 ### 1.3.3. Mathematik, Funktionen & Konditionale
-{% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 >Beispiedateien zu diesem Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
-{% else %}
->Beispiedateien zu diesem Abschnitt: [Download](../../appendix/A-2/gh-files/1.3.3_operators and conditionals.gh)
-{% endif %}
 
 #####Zu wissen wie man mit nummerischen Informationen umgeht, ist eine grundlegende Fertigkeit, die Du lernen musst um Grasshopper zu nutzen. Grasshopper enthaelt viele Komponenten um mathematische Operationen auszufuehren, Konditionale auszuwerten und Mengen von Zahlen zu manipulieren.
 

@@ -1,16 +1,6 @@
-﻿<style>
-td:nth-child(1) {color: #008DB2}
-td:nth-child(3)	{font-size: 70%;width: 15%;}
-td {background-color: #F9F9F9;}
-thead {display: none}
-</style>
 ###1.3.4. Domaenen & Farben
 
-{% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 >Beispieldateien fuer diesen Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
-{% else %}
->>Beispieldateien fuer diesen Abschnitt: [Download](../../appendix/A-2/gh-files/1.3.4_domains and color.gh)
-{% endif %}
 
 #####Das Farbrad ist ein Modell um Farben basierend auf ihrem Farbton zu organisieren. In Grasshopper werden Farben durch einen Farbton zwischen 0.0 to 1.0 beschrieben. Domaenen werden verwendet um ein Spektrum an moeglichen Werten zwischen einer Untergrenze (A) und einer Obergrenze (B) anzugeben.
 
