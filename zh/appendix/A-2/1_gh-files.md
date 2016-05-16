@@ -1,6 +1,6 @@
-##2.2. Grasshopper Example Files
+##2.2. 实例文件
 
-#####These example files accompany the Grasshopper Primer, and are organized according to section.
+#####以下实例文件配合本教程，并按章节排序。
 
 
 
