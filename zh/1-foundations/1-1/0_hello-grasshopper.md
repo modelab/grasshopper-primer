@@ -1,5 +1,5 @@
-## 1.1. HELLO GRASSHOPPER
+## 1.1. 你好GRASSHOPPER
 
-#### Grasshopper is a graphical algorithm editor that is integrated with Rhino3D’s modeling tools. You use Grasshopper to design algorithms that then automate tasks in Rhino3D.
+#### Grasshopper是一个图形化算法编辑器，它与Rhino3D的建模工具相结合。你使用Grasshopper来创建算法，它将在Rhino3D中自动完成任务。
 
 ![IMAGE](images/1-1/001_hello-grasshopper.png)
