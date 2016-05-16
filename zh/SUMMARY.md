@@ -1,10 +1,10 @@
-# Summary
+# 目录
 
-* [About](README.md)
-   * [Grasshopper - an Overview](0-about/1-grasshopper-an-overview.md)
+* [关于](README.md)
+   * [Grasshopper概述](0-about/1-grasshopper-an-overview.md)
    * [Grasshopper in Action](0-about/2-grasshopper-in-action.md)
-* [Foundations](1-foundations/1-foundations.md)
-   * [Hello Grasshopper!](1-foundations/1-1/0_hello-grasshopper.md)
+* [基础篇](1-foundations/1-foundations.md)
+   * [你好Grasshopper](1-foundations/1-1/0_hello-grasshopper.md)
        * [Installing and Launching Grasshopper](1-foundations/1-1/1_installing-and-launching-grasshopper.md)
        * [The Grasshopper UI](1-foundations/1-1/2_the-grasshopper-ui.md)
        * [Talking to Rhino](1-foundations/1-1/3_talking-to-rhino.md)
@@ -41,16 +41,16 @@
        * [Mesh Interactions](1-foundations/1-6/5_Mesh Interactions.md)
        * [Working with Mesh Geometry](1-foundations/1-6/6_Working with Mesh Geometry.md)
 #BOOK 2 - Extensions
-* [Extensions](2-extensions/2-extensions.md)
+* [拓展篇](2-extensions/2-extensions.md)
     * [Element*](2-extensions/2-1/0_Element.md)
         * [Introduction](2-extensions/2-1/1_Element_Intro.md)
         * [Half Edge Data](2-extensions/2-1/2_HalfEdge_Data.md)
         * [Components](2-extensions/2-1/3_Components.md)
         * [Exercise](2-extensions/2-1/4_Exercise.md)
         * [Architectural Case Study](2-extensions/2-1/5_Architectural Case Study.md)  
-* [Appendix](appendix/a-appendix.md)
-   * [Index](appendix/A-1/0_index-of-components.md)
-   * [Example Files](appendix/A-2/1_gh-files.md)
-   * [Resources](appendix/A-2/0_resources.md)
-   * [About This Primer](appendix/A-3/0_about-this-primer.md)
+* [附录](appendix/a-appendix.md)
+   * [索引](appendix/A-1/0_index-of-components.md)
+   * [实例文件](appendix/A-2/1_gh-files.md)
+   * [资源](appendix/A-2/0_resources.md)
+   * [关于本教程](appendix/A-3/0_about-this-primer.md)
 
