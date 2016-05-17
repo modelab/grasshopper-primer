@@ -1,5 +1,5 @@
-## 1.6. Getting Started with Meshes
+## 1.6. 网格初步
 
-####In the field of computational modeling, meshes are one of the most pervasive forms of representing 3D geometry. Mesh geometry can be a light-weight and flexible alternative to working with NURBS, and are used in everything from rendering and visualizations to digital fabrication and 3D printing. This chapter will provide an introduction to how mesh geometry is handled in Grasshopper.
+####在计算机建模领域，网格是表示3D几何的最普遍的形式之一。网格几何可以作为NURBS模型的一种轻量而灵活的替代品，它被应用在方方面面，从渲染和可视化到数字化建造和3D打印等等。这一章节将介绍如何在Grasshopper中处理网格几何。
 
 ![IMAGE](images/cover.png)
