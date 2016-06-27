@@ -1,4 +1,4 @@
-<style>
+﻿<style>
 h4{color: #008DB2}
 td {background-color:white; vertical-align:top}
 td img{
@@ -19,294 +19,294 @@ thead {display: none}
 
 ## 2.1. Index
 
-#####This index provides additional information on all the components used in this primer, as well as other components you might find useful. This is just an introduction to over 500 components in the Grasshopper plugin.
+#####Dieser Index stellt zusätzliche Informationen über alle Komponenten, die in diesem Primer verwendet werden, zur Verfügung und ergänzt diese mit weiteren Komponenten, die Du nützlich finden könntest. Hier findest Du eine Einführung in die Welt der über 500 Komponenten im Grasshopper Plugin.
 
-Parameters
 --
 
-####Geometry
+####Geometrie
 ||||
 |--|--|--|
-|<a name="PGCrv"></a>P.G.Crv|Curve Parameter<br>Represents a collection of Curve geometry. Curve geometry is the common denominator of all curve types in Grasshopper.|![IMAGE](images/PGCrv.png)|
-|<a name="PGCircle"></a>P.G.Circle|Circle Parameter<br>Represents a collection of Circle primitives.|![IMAGE](images/PGCircle.png)|
-|<a name="PGGeo"></a>P.G.Geo|Geometry Parameter<br>Represents a collection of 3D Geometry.|![IMAGE](images/PGGeo.png)|
-|<a name="PGPipeline"></a>P.G.Pipeline|Geometry Pipeline<br>Defines a geometry pipeline from Rhino to Grasshopper.|![IMAGE](images/PGPipeline.png)|
-|<a name="PGPt"></a>P.G.Pt|Point Parameter<br>Point parameters are capable of storing persistent data. You can set the persistent records through the parameter menu.|![IMAGE](images/PGPt.png)|
-|<a name="PGSrf"></a>P.G.Srf|Surface Parameter<br>Represents a collection of Surface geometry. Surface geometry is the common denominator of all surface types in Grasshopper.|![IMAGE](images/PGSrf.png)|
+|<a name="PGCrv"></a>P.G.Crv|Curve Parameter<br>Stellt eine Sammlung von Kurvengeometrien dar. Kurvengeometrien sind der gemeinsame Nenner aller Kurvenarten in Grasshopper.|![IMAGE](images/PGCrv.png)|
+|<a name="PGCircle"></a>P.G.Circle|Circle Parameter<br>Repräsentiert eine Sammlung von Kreisgeometrien.|![IMAGE](images/PGCircle.png)|
+|<a name="PGGeo"></a>P.G.Geo|Geometry Parameter<br>Stellt eine Sammlung von Geometrien dar.|![IMAGE](images/PGGeo.png)|
+|<a name="PGPipeline"></a>P.G.Pipeline|Geometry Pipeline<br>Definiert eine Pipeline für Geometrien von Rhino zu Grasshopper.|![IMAGE](images/PGPipeline.png)|
+|<a name="PGPt"></a>P.G.Pt|Point Parameter<br>Punktparameter können persistente Daten speichern. Du kannst einen persistenten Eintrag durch das Parametermenü herstellen.|![IMAGE](images/PGPt.png)|
+|<a name="PGSrf"></a>P.G.Srf|Surface Parameter<br>Stellt eine Kollektion von Flächengeometrien dar. Flächengeometrien sind der gemeinsame Nenner aller Flächenarten in Grasshopper.|![IMAGE](images/PGSrf.png)|
 
-####Primitive
+####Grundparameter
 ||||
 |--|--|--|
-|<a name="PPBool"></a>P.P.Bool|Boolean Parameter<br>Represents a collection of Boolean (True/False) values.|![IMAGE](images/PPBool.png)|
-|<a name="PPD"></a>P.P.D|Domain Parameter<br>Represents a collection of one-dimensional Domains. Domains are typically used to represent curve fragments and continuous numeric ranges. A domain consists of two numbers that indicate the limits of the domain, everything in between these numbers is part of the domain.|![IMAGE](images/PPD.png)|
-|<a name="PPD2"></a>P.P.D2|Domain<sup>2</sup> Parameter<br>Contains a collection of two-dimensional domains. 2D Domains are typically used to represent surface fragments. A two-dimensional domain consists of two one-dimensional domains.|![IMAGE](images/PPD2.png)|
-|<a name="PPID"></a>P.P.ID|Guid Parameter<br>Represents a collection of Globally Unique Identifiers. Guid parameters are capable of storing persistent data. You can set the persistent records through the parameter menu.|![IMAGE](images/PPID.png)|
-|<a name="PPInt"></a>P.P.Int|Integer Parameter<br>Represents a collection of Integer numeric values. Integer parameters are capable of storing persistent data. You can set the persistent records through the parameter menu.|![IMAGE](images/PPInt.png)|
-|<a name="PPNum"></a>P.P.Num|Number Parameter<br>Represents a collection of floating point values. Number parameters are capable of storing persistent data. You can set the persistent records through the parameter menu.|![IMAGE](images/PPNum.png)|
-|<a name="PPPath"></a>P.P.Path|File Path<br>Contains a collection of file paths.|![IMAGE](images/PPPath.png)|
+|<a name="PPBool"></a>P.P.Bool|Boolean Parameter<br>Stellt eine Sammlung von boolschen Werten (Wahr/Falsch) dar.|![IMAGE](images/PPBool.png)|
+|<a name="PPD"></a>P.P.D|Domain Parameter<br>Repräsentiert eine Kollektion von eindimensionalen Intervallen. Intervalle werden typischerweise genutzt, um Kurvenfragmente und kontinuierliche numerische Bereiche darzustellen. Ein Intervall besteht aus zwei Zahlen, welche die jeweiligen Grenzen des Intervalls definieren. Der gesamte Bereich zwischen diesen Grenzen ist Teil des Intervalls.|![IMAGE](images/PPD.png)|
+|<a name="PPD2"></a>P.P.D2|Domain<sup>2</sup> Parameter<br>Enthält eine Sammlung von zweidimensionalen Intervallen. 2D Intervalle werden typischerweise benutzt, um Flächenfragmente zu beschreiben. Ein zweidimensionales Intervall wird durch zwei eindimensionale Intervalle bestimmt|![IMAGE](images/PPD2.png)|
+|<a name="PPID"></a>P.P.ID|Guid Parameter<br>Repräsentiert eine Sammlung von Globalen Einzigartigen Identifikatoren (Guid). Guid Parameter haben die Fähigkeit, persistente Daten zu speichern. Du kannst einen persistenten Eintrag durch das Parametermenü hinzufügen.|![IMAGE](images/PPID.png)|
+|<a name="PPInt"></a>P.P.Int|Integer Parameter<br>Stellt eine Sammlung numerischer Integerwerte dar. Integerparameter können persistente Daten speichern. Du kannst einen persistenten Eintrag durch das Parametermenü hinzufügen.|![IMAGE](images/PPInt.png)|
+|<a name="PPNum"></a>P.P.Num|Number Parameter<br>Stellt eine Kollektion von Fließkommawerten dar. Numerische Parameter können persistente Daten speichern. Du kannst einen persistenten Eintrag durch das Parametermenü hinzufügen.|![IMAGE](images/PPNum.png)|
+|<a name="PPPath"></a>P.P.Path|File Path<br>Enthält eine Sammlung von Dateipfaden.|![IMAGE](images/PPPath.png)|
 
-####Input
+####Eingabeparameter
 ||||
 |--|--|--|
-|<a name="PIToggle"></a>P.I.Toggle|Boolean Toggle<br>Boolean (true/false) toggle.|![IMAGE](images/PIToggle.png)|
-|<a name="PIButton"></a>P.I.Button|Button<br>Button object with two values. When pressed, the button object returns a true value and then resets to false.|![IMAGE](images/PIButton.png)|
-|<a name="PISwatch"></a>P.I.Swatch|Color Swatch<br>A swatch is a special interface object that allows for quick setting of individual color values. You can change the color of a swatch through the context menu.|![IMAGE](images/PISwatch.png)|
-|<a name="PIGrad"></a>P.I.Grad|Gradient Control<br>Gradient controls allow you to define a color gradient within a numeric domain. By default the unit domain (0.0 ~ 1.0) is used, but this can be adjusted via the L0 and L1 input parameters. You can add color grips to the gradient object by dragging from the color wheel at the upper left and set color grips by right clicking them.|![IMAGE](images/PIGrad.png)|
-|<a name="PIGraph"></a>P.I.Graph|Graph Mapper<br>Graph mapper objects allow you to remap a set of numbers. By default the {x} and {y} domains of a graph function are unit domains (0.0 ~ 1.0), but these can be adjusted via the Graph Editor. Graph mappers can contain a single mapping function, which can be picked through the context menu. Graphs typically have grips (little circles), which can be used to modify the variables that define the graph equation. By default, a graph mapper objects contains no graph and performs a 1:1 mapping of values.|![IMAGE](images/PIGraph.png)|
-|<a name="PISlider"></a>P.I.Slider|Number Slider<br>A slider is a special interface object that allows for quick setting of individual numeric values. You can change the values and properties through the menu, or by double-clicking a slider object. Sliders can be made longer or shorter by dragging the rightmost edge left or right. Note that sliders only have an output (ie. no input).|![IMAGE](images/PISlider.png)|
-|<a name="PIPanel"></a>P.I.Panel|Panel<br>A panel for custom notes and text values. It is typically an inactive object that allows you to add remarks or explanations to a Document. Panels can also receive their information from elsewhere. If you plug an output parameter into a Panel, you can see the contents of that parameter in real-time. All data in Grasshopper can be viewed in this way. Panels can also stream their content to a text file.|![IMAGE](images/PIPanel.png)|
-|<a name="PIList"></a>P.I.List|Value List<br>Provides a list of preset values from which to choose.|![IMAGE](images/PIList.png)|
+|<a name="PIToggle"></a>P.I.Toggle|Boolean Toggle<br>Boolscher Schalter (Wahr/Falsch).|![IMAGE](images/PIToggle.png)|
+|<a name="PIButton"></a>P.I.Button|Button<br>Druckknopfobjekt mit zwei Werten. Wenn das Druckknopfobjekt gedrückt wird, sendet es einen Wahrwert, bevor es sich wieder auf Falsch zurücksetzt.|![IMAGE](images/PIButton.png)|
+|<a name="PISwatch"></a>P.I.Swatch|Color Swatch<br>Das Muster ist eine spezielle Schnittstelle, die es ermöglicht, individuelle Farbwerte einfach einzustellen. Du kannst die Farben der Musterkomponente durch das Kontextmenü anpassen.|![IMAGE](images/PISwatch.png)|
+|<a name="PIGrad"></a>P.I.Grad|Gradient Control<br>Gradienten ermöglichen es Dir, einen Farbverlauf in einem numerischen Intervall zu bestimmen. Als Standard wird das Einheitsintervall (0.0 ~ 1.0) verwendet, aber dieses kann durch die Eingabeparameter L0 und L1 angepasst werden. Du kannst einen weiteren Griff zur Anpassung der Farbe im Gradientenobjekt hinzufügen, indem Du sie von dem Farbrad an der linken oberen Ecke herunterziehst und den Wert des Griffes anpassen, indem Du ihn rechtsklickst.|![IMAGE](images/PIGrad.png)|
+|<a name="PIGraph"></a>P.I.Graph|Graph Mapper<br>Graphmapperobjekte ermöglichen es Dir, einer Reihe von Zahlen neue Werte zuzuweisen. Als Standard werden die {x} und {y} Intervalle der Graphfunktion auf die Einheitsintervalle (0.0 ~ 1.0) bezogen, aber diese können innerhalb des Grapheditors angepasst werden. Graphmapper können eine einzelne Zuweisungsfunktion enthalten, welche durch ein Kontextmenü ausgewählt werden können. Graphen haben typischerweise zwei Griffe (kleine Kreise), welche zur Modifikation der Variablen herangezogen werden können, um die Graphfunktion graphisch zu bestimmen. Ein Graphmapperobjekt enthält zu Beginn keinen Graphen und gibt eine 1:1 Zuweisung für die eingegebenen Werte aus.|![IMAGE](images/PIGraph.png)|
+|<a name="PISlider"></a>P.I.Slider|Number Slider<br>Ein Schieberegler ist ein spezielles Schnittstellenobjekt, das es ermöglicht individuelle numerische Werte schnell einzustellen. Du kannst die Werte und Eigenschaften durch ein Menü ändern, indem Du auf den Schieberegler doppelklickst. Schieberegler können länger oder kürzer dargestellt werden, indem Du die rechte Kante des Objektes nach rechts oder links ziehst. Merke, dass Schieberegler nur einen Ausgabeparameter (also keinen Eingabeparameter) haben.|![IMAGE](images/PISlider.png)|
+|<a name="PIPanel"></a>P.I.Panel|Panel<br>Die Paneelkomponente wird für benutzerdefinierte Notizen und Textwerte genutzt. Sie ist typischerweise ein passives Element, das es erlaubt, Anmerkungen und Erklärungen in das Dokument einzufügen. Panelle können ihre Informationen auch aus anderen Quellen beziehen. Wenn Du einen Ausgabeparameter in ein Paneel einsteckst, kannst Du den Inhalt dieses Parameters in Echtzeit beobachten. Alle Daten in Grasshopper können auf diese Weise gesehen werden. Paneele können ihren Inhalt auch in eine Textdatei streamen.|![IMAGE](images/PIPanel.png)|
+|<a name="PIList"></a>P.I.List|Value List<br>Stellt eine Liste von voreingestellten Werten zur Verfügung, aus welchen gewählt werden kann.|![IMAGE](images/PIList.png)|
 
-####Utilities
+####Nützliches
 ||||
 |--|--|--|
-|<a name="P.U.Cin"></a>P.U.Cin|Cluster Input<br>Represents a cluster input parameter.|![IMAGE](images/PUCin.png)|
-|<a name="P.U.COut"></a>P.U.COut|Cluster Output<br>Represents a cluster input parameter.|![IMAGE](images/PUCOut.png)|
-|<a name="P.U.Dam"></a>P.U.Dam|Data Dam<br>Delay data on its way through the document.|![IMAGE](images/PUDam.png)|
-|<a name="P.U.Jump"></a>P.U.Jump|Jump<br>Jump between different locations.|![IMAGE](images/PUJump.png)|
-|<a name="P.U.Viewer"></a>P.U.Viewer|Param Viewer<br>A viewer for data structures.|![IMAGE](images/PUViewer.png)|
-|<a name="P.U.Scribble"></a>P.U.Scribble|Scribble<br>A quick note.|![IMAGE](images/PUScribble.png)|
+|<a name="P.U.Cin"></a>P.U.Cin|Cluster Input<br>Stellt einen Cluster Eingabeparameter dar.|![IMAGE](images/PUCin.png)|
+|<a name="P.U.COut"></a>P.U.COut|Cluster Output<br>Stellt einen Cluster Ausgabeparameter dar.|![IMAGE](images/PUCOut.png)|
+|<a name="P.U.Dam"></a>P.U.Dam|Data Dam<br>Verzoegert Daten auf ihrem Weg durch das Dokument.|![IMAGE](images/PUDam.png)|
+|<a name="P.U.Jump"></a>P.U.Jump|Jump<br>Springt zwischen bestimmen Orten im Dokument.|![IMAGE](images/PUJump.png)|
+|<a name="P.U.Viewer"></a>P.U.Viewer|Param Viewer<br>Eine Anzeige fuer Datenstrukturen.|![IMAGE](images/PUViewer.png)|
+|<a name="P.U.Scribble"></a>P.U.Scribble|Scribble<br>Fuer schnelle Notizen.|![IMAGE](images/PUScribble.png)|
 
-Maths
+Mathematik
 --
 
-####Domain
+####Intervalle
 ||||
 |--|--|--|
-|<a name="M.D.Bnd"></a>M.D.Bnd|Bounds<br>Create a numeric domain which encompasses a list of numbers.|![IMAGE](images/MDBnd.png)|
-|<a name="M.D.Consec"></a>M.D.Consec|Consecutive Domains<br>Create consecutive domains from a list of numbers.|![IMAGE](images/MDConsec.png)|
-|<a name="MDDom"></a>M.D.Dom|Construct Domain<br>Create a numeric domain from two numeric extremes.|![IMAGE](images/MDDom.png)|
-|<a name="MDDom2Num"></a>M.D.Dom2Num|Construct Domain²<br>Create a two-dimensional domain from four numbers.|![IMAGE](images/MDDom2Num.png)|
-|<a name="MDDeDomain"></a>M.D.DeDomain|Deconstruct Domain<br>Deconstruct a numeric domain into its component parts.|![IMAGE](images/MDDeDomain.png)|
-|<a name="MDDeDom2Num"></a>M.D.DeDom2Num|Deconstruct Domain²<br>Deconstruct a two-dimensional domain into four numbers.|![IMAGE](images/MDDeDom2Num.png)|
-|<a name="MDDivide"></a>M.D.Divide|Divide Domain²<br>Divides a two-dimensional domain into equal segments.|![IMAGE](images/MDDivide.png)|
-|<a name="MDInc"></a>M.D.Inc|Includes<br>Test a numeric value to see if it is included in the domain.|![IMAGE](images/MDInc.png)|
-|<a name="MDReMap"></a>M.D.ReMap|Remap Numbers<br>Remap numbers into a new numeric domain.|![IMAGE](images/MDReMap.png)|
+|<a name="M.D.Bnd"></a>M.D.Bnd|Bounds<br>Erstellt ein numerisches Intervall, welches eine Liste von numerischen Werten umfasst.|![IMAGE](images/MDBnd.png)|
+|<a name="M.D.Consec"></a>M.D.Consec|Consecutive Domains<br>Erstellt ein fortlaufendes Intervall aus einer Liste von Zahlen.|![IMAGE](images/MDConsec.png)|
+|<a name="MDDom"></a>M.D.Dom|Construct Domain<br>Erstellt ein numerisches Intervall aus zwei Grenzwerten.|![IMAGE](images/MDDom.png)|
+|<a name="MDDom2Num"></a>M.D.Dom2Num|Construct Domain²<br>Erstellt ein zweidimensionales Intervall aus vier Zahlen.|![IMAGE](images/MDDom2Num.png)|
+|<a name="MDDeDomain"></a>M.D.DeDomain|Deconstruct Domain<br>Zerlegt ein numerisches Intervall in seine Bestandteile.|![IMAGE](images/MDDeDomain.png)|
+|<a name="MDDeDom2Num"></a>M.D.DeDom2Num|Deconstruct Domain²<br>Zerlegt ein zweidimensionales Intervall in vier Zahlen.|![IMAGE](images/MDDeDom2Num.png)|
+|<a name="MDDivide"></a>M.D.Divide|Divide Domain²<br>Teilt ein zweidimensionales Intervall in gleichgroße Teile.|![IMAGE](images/MDDivide.png)|
+|<a name="MDInc"></a>M.D.Inc|Includes<br>Testet einen numerischen Wert auf seine Zugehörigkeit zu einem Intervall.|![IMAGE](images/MDInc.png)|
+|<a name="MDReMap"></a>M.D.ReMap|Remap Numbers<br>Zuweisung von Zahlen in ein neues numerisches Intervall.|![IMAGE](images/MDReMap.png)|
 
 
-####Operators
+####Operatoren
 ||||
 |--|--|--|
-|<a name="MOAdd"></a>M.O.Add|Addition<br>Mathematical addition.|![IMAGE](images/MOAdd.png)|
-|<a name="MODiv"></a>M.O.Div|Division<br>Mathematical division.|![IMAGE](images/MODiv.png)|
-|<a name="MOEquals"></a>M.O.Equals|Equality<br>Test for (in)equality of two numbers.|![IMAGE](images/MOEquals.png)|
-|<a name="MOAnd"></a>M.O.And|Gate And<br>Perform boolean conjunction (AND gate). Both inputs need to be True for the result to be True.|![IMAGE](images/MOAnd.png)|
-|<a name="MONot"></a>M.O.Not|Gate Not<br>Perform boolean negation (NOT gate).|![IMAGE](images/MONot.png)|
-|<a name="MOOr"></a>M.O.Or|Gate Or<br>Perform boolean disjunction (OR gate). Only a single input has to be True for the result to be True.|![IMAGE](images/MOOr.png)|
-|<a name="MOLarger"></a>M.O.Larger|Larger Than<br>Larger than (or equal to).|![IMAGE](images/MOLarger.png)|
-|<a name="MOMultiply"></a>M.O.Multiply|Multiplication<br>Mathematical multiplication.|![IMAGE](images/MOMultiply.png)|
-|<a name="MOSmaller"></a>M.O.Smaller|Smaller Than<br>Larger than (or equal to).|![IMAGE](images/MOSmaller.png)|
-|<a name="MOSimilar"></a>M.O.Similar|Similarity<br>Test for similarity of two numbers.|![IMAGE](images/MOSimilar.png)|
-|<a name="MOSub"></a>M.O.Sub|Subtraction<br>Mathematical subtraction.|![IMAGE](images/MOSub.png)|
+|<a name="MOAdd"></a>M.O.Add|Addition<br>Mathematische Addition.|![IMAGE](images/MOAdd.png)|
+|<a name="MODiv"></a>M.O.Div|Division<br>Mathematische Division.|![IMAGE](images/MODiv.png)|
+|<a name="MOEquals"></a>M.O.Equals|Equality<br>Testet die (Un)gleichheit zweier Zahlen.|![IMAGE](images/MOEquals.png)|
+|<a name="MOAnd"></a>M.O.And|Gate And<br>Führt eine boolsche Konjunktion (AND Gatter) aus. Beide Eingabeparameter müssen Wahr sein, um Wahr als Ergebnis der Operation zu erhalten.|![IMAGE](images/MOAnd.png)|
+|<a name="MONot"></a>M.O.Not|Gate Not<br>Führt eine boolsche Negation (NOT Gatter) aus.|![IMAGE](images/MONot.png)|
+|<a name="MOOr"></a>M.O.Or|Gate Or<br>Führt eine boolsche Disjunktion (OR Gatter) aus. Nur ein einzelner Eingabeparameter muss den Wert Wahr enthalten, um Wahr als Ergebnis der Operation zu erhalten.|![IMAGE](images/MOOr.png)|
+|<a name="MOLarger"></a>M.O.Larger|Larger Than<br>Größer (oder gleich).|![IMAGE](images/MOLarger.png)|
+|<a name="MOMultiply"></a>M.O.Multiply|Multiplication<br>Mathematische Multiplikation.|![IMAGE](images/MOMultiply.png)|
+|<a name="MOSmaller"></a>M.O.Smaller|Smaller Than<br>Kleiner oder gleich).|![IMAGE](images/MOSmaller.png)|
+|<a name="MOSimilar"></a>M.O.Similar|Similarity<br>Testet die Ähnlichkeit zweier Zahlen.|![IMAGE](images/MOSimilar.png)|
+|<a name="MOSub"></a>M.O.Sub|Subtraction<br>Mathematische Subtraktion.|![IMAGE](images/MOSub.png)|
 
-####Script
+####Skripten
 ||||
 |--|--|--|
-|<a name="MSEval"></a>M.S.Eval|Evaluate<br>Evaluate an expression with a flexible number of variables.|![IMAGE](images/MSEval.png)|
-|<a name="MSExpression"></a>M.S.Expression|Expression<br>Evaluate an expression.|![IMAGE](images/MSExpression.png)|
+|<a name="MSEval"></a>M.S.Eval|Evaluate<br>Wertet eine Funktion mit einer flexiblen Zahl als Variable aus.|![IMAGE](images/MSEval.png)|
+|<a name="MSExpression"></a>M.S.Expression|Expression<br>Wertet einen mathematischen Ausdruck aus.|![IMAGE](images/MSExpression.png)|
 
-####Trig
+####Trigonometrie
 ||||
 |--|--|--|
-|<a name="MTCos"></a>M.T.Cos|Cosine<br>Compute the cosine of a value.|![IMAGE](images/MTCos.png)|
-|<a name="MTDeg"></a>M.T.Deg|Degrees<br>Convert an angle specified in radians to degrees.|![IMAGE](images/MTDeg.png)|
-|<a name="MTRad"></a>M.T.Rad|Radians<br>Convert an angle specified in degrees to radians.|![IMAGE](images/MTRad.png)|
-|<a name="MTSin"></a>M.T.Sin|Sine<br>Compute the sine of a value.|![IMAGE](images/MTSin.png)|
+|<a name="MTCos"></a>M.T.Cos|Cosine<br>Berechnet den Kosinuswert.|![IMAGE](images/MTCos.png)|
+|<a name="MTDeg"></a>M.T.Deg|Degrees<br>Rechnet einen Winkel von Bogenmaß zu Grad um.|![IMAGE](images/MTDeg.png)|
+|<a name="MTRad"></a>M.T.Rad|Radians<br>Rechnet einen Winkel von Grad zu Bogenmaß um.|![IMAGE](images/MTRad.png)|
+|<a name="MTSin"></a>M.T.Sin|Sine<br>Berechnet den Sinuswert.|![IMAGE](images/MTSin.png)|
 
-####Utilities
+####Nützliches
 ||||
 |--|--|--|
-|<a name="MUAvr"></a>M.U.Avr|Average<br>Solve the arithmetic average for a set of items.|![IMAGE](images/MUAvr.png)|
-|<a name="MUPhi"></a>M.U.Phi|Golden Ratio<br>Returns a multiple of the golden ratio (Phi).|![IMAGE](images/MUPhi.png)|
-|<a name="MUPi"></a>M.U.Pi|Pi<br>Returns a multiple of Pi.|![IMAGE](images/MUPi.png)|
+|<a name="MUAvr"></a>M.U.Avr|Average<br>Berechnet den arithmetrischen Durchschnitt für einen Satz von Objekten.|![IMAGE](images/MUAvr.png)|
+|<a name="MUPhi"></a>M.U.Phi|Golden Ratio<br>Gibt ein vielfaches des Goldenen Schnittes (Phi) aus.|![IMAGE](images/MUPhi.png)|
+|<a name="MUPi"></a>M.U.Pi|Pi<br>Gibt ein Vielfaches von Pi aus.|![IMAGE](images/MUPi.png)|
 
 Sets
 --
 
-####List
+####Listen
 ||||
 |--|--|--|
-|<a name="SLCombine"></a>S.L.Combine|Combine Data<br>Combine non-null items out of several inputs.|![IMAGE](images/SLCombine.png)|
-|<a name="SLCrossRef"></a>S.L.CrossRef|Cross Reference<br>Cross Reference data from multiple lists.|![IMAGE](images/SLCrossRef.png)|
-|<a name="SLDispatch"></a>S.L.Dispatch|Dispatch<br>Dispatch the items in a list into two target lists. List dispatching is very similar to the [Cull Pattern] component, with the exception that both lists are provided as outputs.|![IMAGE](images/SLDispatch.png)|
-|<a name="SLIns"></a>S.L.Ins|Insert Items<br>Insert a collection of items into a list.|![IMAGE](images/SLIns.png)|
-|<a name="SLItem"></a>S.L.Item|List Item<br>Retrieve a specific item from a list.|![IMAGE](images/SLItem.png)|
-|<a name="SLLng"></a>S.L.Lng|List Length<br>Measure the length of a list. Elements in a list are identified by their index. The first element is stored at index zero, the second element is stored at index one and so on and so forth. The highest possible index in a list equals the length of the list minus one.|![IMAGE](images/SLLng.png)|
-|<a name="SLLong"></a>S.L.Long|Longest List<br>Grow a collection of lists to the longest length amongst them.|![IMAGE](images/SLLong.png)|
-|<a name="SLSplit"></a>S.L.Split|Split List<br>Split a list into separate parts.|![IMAGE](images/SLSplit.png)|
-|<a name="SLReplace"></a>S.L.Replace|Replace Items<br>Replace certain items in a list.|![IMAGE](images/SLReplace.png)|
-|<a name="SLRev"></a>S.L.Rev|Reverse List<br>Reverse the order of a list. The new index of each element will be N-i where N is the highest index in the list and i is the old index of the element.|![IMAGE](images/SLRev.png)|
-|<a name="SLShift"></a>S.L.Shift|Shift List<br>Offset all items in a list. Items in the list are offset (moved) towards the end of the list if the shift offset is positive. If Wrap equals True, then items that fall off the ends are re-appended.|![IMAGE](images/SLShift.png)|
-|<a name="SLShort"></a>S.L.Short|Shortest List<br>Shrink a collection of lists to the shortest length amongst them.|![IMAGE](images/SLShort.png)|
-|<a name="SLSift"></a>S.L.Sift|Sift Pattern<br>Sift elements in a list using a repeating index pattern.|![IMAGE](images/SLSift.png)|
-|<a name="SLSort"></a>S.L.Sort|Sort List<br>Sort a list of numeric keys. In order for something to be sorted, it must first be comparable. Most types of data are not comparable, Numbers and Strings being basically the sole exceptions. If you want to sort other types of data, such as curves, you’ll need to create a list of keys first.|![IMAGE](images/SLSort.png)|
-|<a name="SLWeave"></a>S.L.Weave|Weave<br>Weave a set of input data using a custom pattern. The pattern is specified as a list of index values (integers) that define the order in which input data is collected.|![IMAGE](images/SLWeave.png)|
+|<a name="SLCombine"></a>S.L.Combine|Combine Data<br>Kombiniere nicht-null Elemente verschiedener Eingabeparameter.|![IMAGE](images/SLCombine.png)|
+|<a name="SLCrossRef"></a>S.L.CrossRef|Cross Reference<br>Datenquerverweise von verschiedenen Listen.|![IMAGE](images/SLCrossRef.png)|
+|<a name="SLDispatch"></a>S.L.Dispatch|Dispatch<br>Verteile die Elemente einer Liste in zwei Ziellisten. Diese Komponente funktioniert sehr ähnlich wie die [Cull Pattern] Komponente, mit der Ausnahme, dass beide Listen als Ausgabe zur Verfügung stehen.|![IMAGE](images/SLDispatch.png)|
+|<a name="SLIns"></a>S.L.Ins|Insert Items<br>Füge eine Sammlung von Elementen in eine Liste ein.|![IMAGE](images/SLIns.png)|
+|<a name="SLItem"></a>S.L.Item|List Item<br>Beziehe ein bestimmtes Element aus einer Liste.|![IMAGE](images/SLItem.png)|
+|<a name="SLLng"></a>S.L.Lng|List Length<br>Messe die Länge einer Liste. Elemente in einer Liste werden durch ihren Index eindeutig bezeichnet. Das erste Element wird unter dem Index 0 gespeichert, das zweite Element unter dem Index 1 und so weiter. Der höchst mögliche Index in einer Liste entspricht der Listenlänge minus eins.|![IMAGE](images/SLLng.png)|
+|<a name="SLLong"></a>S.L.Long|Longest List<br>Erweitere eine Sammlung von Listen zur längsten Länge der Listen.|![IMAGE](images/SLLong.png)|
+|<a name="SLSplit"></a>S.L.Split|Split List<br>Teile eine Liste in Teillisten.|![IMAGE](images/SLSplit.png)|
+|<a name="SLReplace"></a>S.L.Replace|Replace Items<br>Ersetze bestimmte Elemente einer Liste.|![IMAGE](images/SLReplace.png)|
+|<a name="SLRev"></a>S.L.Rev|Reverse List<br>Kehre die Reihenfolge einer Liste um. Der neue Index eines jeden Elementes wird N-i sein, wobei N der höchste Index in der Liste und i der ursprüngliche Index der Elemente ist.|![IMAGE](images/SLRev.png)|
+|<a name="SLShift"></a>S.L.Shift|Shift List<br>Versetze alle Elemente einer Liste. Elemente in der Liste werden auf das Ende der Liste zu versetzt, wenn der angegebene Wert für den Versatz positiv ist. Wenn der Wert für Wrap auf Wahr steht, dann werden Elemente, die an den Enden der Liste entfallen, am anderen Ende wieder angehängt.|![IMAGE](images/SLShift.png)|
+|<a name="SLShort"></a>S.L.Short|Shortest List<br>Verkürze eine Sammlung von Listen auf die Länge der kürzesten unter ihnen.|![IMAGE](images/SLShort.png)|
+|<a name="SLSift"></a>S.L.Sift|Sift Pattern<br>Siebe Elemente einer Liste durch die Verwendung eines wiederholenden Muster auf Basis der Indices.|![IMAGE](images/SLSift.png)|
+|<a name="SLSort"></a>S.L.Sort|Sort List<br>Sortiere eine Liste numerischer Werte. Damit etwas sortiert werden kann, muss es zuerst vergleichbar sein. Die meisten Arten von Daten sind nicht vergleichbar; Zahlen und Buchstabenfolgen sind grundsätzlicherweise die einzigen Ausnahmen. Falls Du andere Datentypen, wie z.B. Kurven, sortieren willst, musst Du zuerst eine Liste von Werten erzeugen, auf deren Basis die Sortierung erfolgen kann.|![IMAGE](images/SLSort.png)|
+|<a name="SLWeave"></a>S.L.Weave|Weave<br>Webe mehrere Eingabedatensätze auf Basis eines benutzerdefinierten Musters. Das Muster wird bestimmt durch eine Liste von Indexwerten, die bestimmen in welcher Reihenfolge die Eingabedaten gewählt werden.|![IMAGE](images/SLWeave.png)|
 
-####Sets
+####Datensätze
 ||||
 |--|--|--|
-|<a name="SSCulli"></a>S.S.Culli|Cull Index<br>Cull (remove) indexed elements from a list.|![IMAGE](images/SSCulli.png)|
-|<a name="SSCull"></a>S.S.Cull|Cull Pattern<br>Cull (remove) elements in a list using a repeating bit mask. The bit mask is defined as a list of Boolean values. The bit mask is repeated until all elements in the data list have been evaluated.|![IMAGE](images/SSCull.png)|
-|<a name="SSDup"></a>S.S.Dup|Duplicate Data<br>Duplicate data a predefined number of times. Data can be duplicated in two ways, either copies of the list are appended at the end until the number of copies has been reached, or each item is duplicated a number of times before moving on to the next item.|![IMAGE](images/SSDup.png)|
-|<a name="SSJitter"></a>S.S.Jitter|Jitter<br>Randomly shuffles a list of values. The input list is reordered based on random noise. Jittering is a good way to get a random set with a good distribution. The jitter parameter sets radius of the random noise. If jitter equals 0.5, then each item is allowed to reposition itself randomly to within half the span of the entire set.|![IMAGE](images/SSJitter.png)|
-|<a name="SSRandom"></a>S.S.Random|Random<br>Generate a list of pseudo random numbers. The number sequence is unique but stable for each seed value. If you do not like a random distribution, try different seed values.|![IMAGE](images/SSRandom.png)|
-|<a name="SSRange"></a>S.S.Range|Range<br>Create a range of numbers. The numbers are spaced equally inside a numeric domain. Use this component if you need to create numbers between extremes. If you need control over the interval between successive numbers, you should be using the [Series] component.|![IMAGE](images/SSRange.png)|
-|<a name="SSRepeat"></a>S.S.Repeat|Repeat Data<br>Repeat a pattern until it reaches a certain length.|![IMAGE](images/SSRepeat.png)|
-|<a name="SSSeries"></a>S.S.Series|Series<br>Create a series of numbers. The numbers are spaced according to the {Step} value. If you need to distribute numbers inside a fixed numeric range, consider using the [Range] component instead.|![IMAGE](images/SSSeries.png)|
+|<a name="SSCulli"></a>S.S.Culli|Cull Index<br>Entferne Indexelemente von einer Liste.|![IMAGE](images/SSCulli.png)|
+|<a name="SSCull"></a>S.S.Cull|Cull Pattern<br>Entferne Elemente von einer Liste auf Grundlage einer Bitmaske. Die Bitmaske wird durch eine Liste boolscher Werte definiert. Sie wird wiederholt, bis alle Elemente des Datensatzes ausgewertet wurden.|![IMAGE](images/SSCull.png)|
+|<a name="SSDup"></a>S.S.Dup|Duplicate Data<br>Dupliziere Daten auf Grundlage einer definierten Zahl. Die Daten können auf zwei Arten dupliziert werden. Entweder sie werden als Kopien der Eingabeliste an das Ende der Liste angehängt, bis die bestimmte Anzahl von Kopien erreicht wurden, oder jedes Element wird entsprechend of an der Stelle dupliziert, bis zum nächsten Element weitergegeangen wird.|![IMAGE](images/SSDup.png)|
+|<a name="SSJitter"></a>S.S.Jitter|Jitter<br>Mischt die Werte einer Liste auf zufällige Weise. Die Eingabeliste wird auf Grundlage von Weißen Rauschen neu geordnet. Mischen ist ein guter Weg, um eine zufällige Verteilung der Werte zu erreichen. Der Jitter Parameter legt den Radius des Weißen Rauschens fest. Wenn der Jitterwert 0.5 entspricht, dann wird jedes Element zufällig innerhalb der halben Spanne des gesamten Datensatzes neu angeordnet.|![IMAGE](images/SSJitter.png)|
+|<a name="SSRandom"></a>S.S.Random|Random<br>Generiert eine Liste pseudozufälliger Zahlen, die Sequenz der Zahlen ist einzigartig aber stabil für jeden Seedwert. Wenn Du eine bestimmte zufällige Verteilung nicht magst, probiere verschiedene Werte als Seed.|![IMAGE](images/SSRandom.png)|
+|<a name="SSRange"></a>S.S.Range|Range<br>Erstelle eine Reihe von Zahlen. Die Zahlen werden gleichförmig innerhalb des numerischen Intervalls verteilt. Nutze diese Komponente, wenn Du Zahlen zwischen zwei Extremen erzeugen möchtest. Wenn Du Kontrolle über den Abstand zwischen den Werten möchtest, bist Du mit der [Series] Komponente besser beraten.|![IMAGE](images/SSRange.png)|
+|<a name="SSRepeat"></a>S.S.Repeat|Repeat Data<br>Wiederhole ein Datenmuster, bis er eine bestimmte Länge erreicht.|![IMAGE](images/SSRepeat.png)|
+|<a name="SSSeries"></a>S.S.Series|Series<br>Erstelle eine Serie von Werten. Die Werte sind gleichmäßig auf Grundlage des {Step} Wertes verteilt. Wenn Du Zahlen innerhalb eines bestimmten numerischen Intervalls verteilen willst, wähle stattdessen die [Range] Komponente.|![IMAGE](images/SSSeries.png)|
 
-####Tree
+####Datenbäume
 ||||
 |--|--|--|
-|<a name="STExplode"></a>S.T.Explode|Explode Tree<br>Extract all the branches from a tree.|![IMAGE](images/STExplode.png)|
-|<a name="STFlatten"></a>S.T.Flatten|Flatten Tree<br>Flatten a data tree by removing all branching information.|![IMAGE](images/STFlatten.png)|
-|<a name="STFlip"></a>S.T.Flip|Flip Matrix<br>Flip a matrix–like data tree by swapping rows and columns.|![IMAGE](images/STFlip.png)|
-|<a name="STGraft"></a>S.T.Graft|Graft Tree<br>Typically, data items are stored in branches at specific index values (0 for the first item, 1 for the second item, and so on and so forth) and branches are stored in trees at specific branch paths, for example: {0;1}, which indicates the second sub-branch of the first main branch. Grafting creates a new branch for every single data item.|![IMAGE](images/STGraft.png)|
-|<a name="STMerge"></a>S.T.Merge|Merge<br>Merge a bunch of data streams.|![IMAGE](images/STMerge.png)|
-|<a name="STPath"></a>S.T.Path|Path Mapper<br>Perform lexical operations on data trees. Lexical operations are logical mappings between data paths and indices which are defined by textual (lexical) masks and patterns.|![IMAGE](images/STPath.png)|
-|<a name="STPrune"></a>S.T.Prune|Prune Tree<br>Removes all branches from a Tree that carry a special number of Data items. You can supply both a lower and an upper limit for branch pruning.|![IMAGE](images/STPrune.png)|
-|<a name="STSimplify"></a>S.T.Simplify|Simplify Tree<br>Simplify a tree by removing the overlap shared amongst all branches.|![IMAGE](images/STSimplify.png)|
-|<a name="STTStat"></a>S.T.TStat|Tree Statistics<br>Get some statistics regarding a data tree.|![IMAGE](images/STTStat.png)|
-|<a name="STUnflatten"></a>S.T.Unflatten|Unflatten Tree<br>Unflatten a data tree by moving items back into branches.|![IMAGE](images/STUnflatten.png)|
+|<a name="STExplode"></a>S.T.Explode|Explode Tree<br>Extrahiert alle Äste aus einem Datenbaum.|![IMAGE](images/STExplode.png)|
+|<a name="STFlatten"></a>S.T.Flatten|Flatten Tree<br>Ebnet einen Datenbaum ein, indem alle Verzweigungsinformationen entfernt werden.|![IMAGE](images/STFlatten.png)|
+|<a name="STFlip"></a>S.T.Flip|Flip Matrix<br>Drehe einen matrixähnlichen Datenbaum, indem Zeilen und Spalten vertauscht werden.|![IMAGE](images/STFlip.png)|
+|<a name="STGraft"></a>S.T.Graft|Graft Tree<br>Typischerweise werden Datenobjekte in Ästen mit einem spezifischen Wert gespeichert (0 für das erste Element, 1 für das zweite Element, usw.) und Äste werden in Datenbäumen an bestimmten Astpfaden gespeichert, z.B.: {0;1}, welches den zweiten Unterast im ersten Hauptast bezeichnet. Aufpfropfen erstellt einen neuen Ast für jedes Datenobjekt.|![IMAGE](images/STGraft.png)|
+|<a name="STMerge"></a>S.T.Merge|Merge<br>Verschmelze verschiedene Datenströme.|![IMAGE](images/STMerge.png)|
+|<a name="STPath"></a>S.T.Path|Path Mapper<br>Führe lexikale Operationen für die Datenbäume aus. Lexikale Operationen sind logische Zuordnungen zwischen Datenpfaden und -indizes, welche durch textbasierte (lexikale) Masken oder Muster definiert werden.|![IMAGE](images/STPath.png)|
+|<a name="STPrune"></a>S.T.Prune|Prune Tree<br>Entferne alle Äste aus einem Datenbaum, die eine bestimmte Anzahl von Datenelementen beinhalten. Du kannst eine untere und eine obere Grenze für das Beschneiden des Datenbaumes bestimmen.|![IMAGE](images/STPrune.png)|
+|<a name="STSimplify"></a>S.T.Simplify|Simplify Tree<br>Vereinfache einen Datenbaum, indem die Überlappungen zwischen den verschiedenen Ästen entfernt werden.|![IMAGE](images/STSimplify.png)|
+|<a name="STTStat"></a>S.T.TStat|Tree Statistics<br>Beziehe einige Statistiken bezüglich des Datenbaums.|![IMAGE](images/STTStat.png)|
+|<a name="STUnflatten"></a>S.T.Unflatten|Unflatten Tree<br>Revidiere die Einebnung eines Datenbaumes, indem die verschiedenen Elemente zurück in die Äste verschoben werden.|![IMAGE](images/STUnflatten.png)|
 
 Vector
 --
 
-####Grid
+####Raster
 ||||
 |--|--|--|
-|<a name="VGHexGrid"></a>V.G.HexGrid|Hexagonal<br>2D grid with hexagonal cells.|![IMAGE](images/VGHexGrid.png)|
-|<a name="VGRecGrid"></a>V.G.RecGrid|Rectangular<br>2D grid with rectangular cells.|![IMAGE](images/VGRecGrid.png)|
-|<a name="VGSqGrid"></a>V.G.SqGrid|Square<br>2D grid with square cells|![IMAGE](images/VGSqGrid.png)|
+|<a name="VGHexGrid"></a>V.G.HexGrid|Hexagonal<br>2D Raster mit hexagonalen Zellen.|![IMAGE](images/VGHexGrid.png)|
+|<a name="VGRecGrid"></a>V.G.RecGrid|Rectangular<br>2D Raster mit rechteckigen Zellen.|![IMAGE](images/VGRecGrid.png)|
+|<a name="VGSqGrid"></a>V.G.SqGrid|Square<br>2D Raster mit quadratischen Zellen|![IMAGE](images/VGSqGrid.png)|
 
-####Point
+####Punkt
 ||||
 |--|--|--|
-|<a name="VPPt"></a>V.P.Pt|Construct Point<br>Construct a point from {xyz} coordinates.|![IMAGE](images/VPPt.png)|
-|<a name="VPpDecon"></a>V.P.pDecon|Deconstruct<br>Deconstruct a point into its component parts.|![IMAGE](images/VPpDecon.png)|
-|<a name="VPDist"></a>V.P.Dist|Distance<br>Compute Euclidean distance between two point coordinates.|![IMAGE](images/VPDist.png)|
+|<a name="VPPt"></a>V.P.Pt|Construct Point<br>Konstruiere einen Punkt aus {xyz} Koordinaten.|![IMAGE](images/VPPt.png)|
+|<a name="VPpDecon"></a>V.P.pDecon|Deconstruct<br>Zerlege einen Punkt in seine Bestandteile.|![IMAGE](images/VPpDecon.png)|
+|<a name="VPDist"></a>V.P.Dist|Distance<br>Berechne den euklidischen Abstand zwischen zwei Punktkoordinaten.|![IMAGE](images/VPDist.png)|
 
-####Vector
+####Vektor
 ||||
 |--|--|--|
-|<a name="VVX"></a>V.V.X|Unit X<br>Unit vector parallel to the world {x} axis.|![IMAGE](images/VVX.png)|
-|<a name="VVY"></a>V.V.Y|Unit Y<br>Unit vector parallel to the world {y} axis.|![IMAGE](images/VVY.png)|
-|<a name="VVVec2Pt"></a>V.V.Vec2Pt|Vector 2Pt<br>Create a vector between two points.|![IMAGE](images/VVVec2Pt.png)|
+|<a name="VVX"></a>V.V.X|Unit X<br>Einheitsvektor parallel der Welt {x} Achse.|![IMAGE](images/VVX.png)|
+|<a name="VVY"></a>V.V.Y|Unit Y<br>Einheitsvektor parallel der Welt {Y} Achse.|![IMAGE](images/VVY.png)|
+|<a name="VVVec2Pt"></a>V.V.Vec2Pt|Vector 2Pt<br>Erstelle einen Vektor zwischen zwei Punkten.|![IMAGE](images/VVVec2Pt.png)|
 
-Curve
+Kurve
 --
 
-####Analysis
+####Analyse
 ||||
 |--|--|--|
-|<a name="CACP"></a>C.A.CP|Control Points<br>Extract the nurbs control points and knots of a curve.|![IMAGE](images/CACP.png)|
+|<a name="CACP"></a>C.A.CP|Control Points<br>Extrahiere die NURBS Kontroll- und Knotenpunkte aus einer Kurve.|![IMAGE](images/CACP.png)|
 
 ####Division
 ||||
 |--|--|--|
-|<a name="CDDivide"></a>C.D.Divide|Divide Curve<br>Divide a curve into equal length segments.|![IMAGE](images/CDDivide.png)|
+|<a name="CDDivide"></a>C.D.Divide|Divide Curve<br>Teile eine Kurve in gleichlange Segmente.|![IMAGE](images/CDDivide.png)|
 
-####Primitive
+####Grundparameter
 ||||
 |--|--|--|
-|<a name="CPCir"></a>C.P.Cir|Circle<br>Create a circle defined by base plane and radius.|![IMAGE](images/CPCir.png)|
-|<a name="CPCir3Pt"></a>C.P.Cir3Pt|Circle 3Pt<br>Create a circle defined by three points.|![IMAGE](images/CPCir3Pt.png)|
-|<a name="CPCirCNR"></a>C.P.CirCNR|Circle CNR<br>Create a circle defined by center, normal and radius.|![IMAGE](images/CPCirCNR.png)|
-|<a name="CPLine"></a>C.P.Line|Line SDL<br>Create a line segment defined by start point, tangent and length.|![IMAGE](images/CPLine.png)|
-|<a name="CPPolygon"></a>C.P.Polygon|Polygon<br>Create a polygon with optional round edges.|![IMAGE](images/CPPolygon.png)|
+|<a name="CPCir"></a>C.P.Cir|Circle<br>Erstelle einen Kreis definiert durch eine Grundebene und einen Radius.|![IMAGE](images/CPCir.png)|
+|<a name="CPCir3Pt"></a>C.P.Cir3Pt|Circle 3Pt<br>Erstelle einen Kreis definiert durch drei Punkte.|![IMAGE](images/CPCir3Pt.png)|
+|<a name="CPCirCNR"></a>C.P.CirCNR|Circle CNR<br>Erstelle einen Kreis definiert durch Zentrum, Normale und Radius.|![IMAGE](images/CPCirCNR.png)|
+|<a name="CPLine"></a>C.P.Line|Line SDL<br>Erstelle ein Liniensegment definiert durch Startpunkt, Richtung und Länge.|![IMAGE](images/CPLine.png)|
+|<a name="CPPolygon"></a>C.P.Polygon|Polygon<br>Erstelle ein Polygon mit optional gerundeten Kanten.|![IMAGE](images/CPPolygon.png)|
 
 ####Spline
 ||||
 |--|--|--|
-|<a name="CSIntCrv"></a>C.S.IntCrv|Interpolate<br>Create an interpolated curve through a set of points.|![IMAGE](images/CSIntCrv.png)|
-|<a name="CSKinkCrv"></a>C.S.KinkCrv|Kinky Curve<br>Construct an interpolated curve through a set of points with a kink angle threshold.|![IMAGE](images/CSKinkCrv.png)|
-|<a name="CSNurbs"></a>C.S.Nurbs|Nurbs Curve<br>Construct a nurbs curve from control points.|![IMAGE](images/CSNurbs.png)|
-|<a name="CSPLine"></a>C.S.PLine|PolyLine<br>Create a polyline connecting a number of points.|![IMAGE](images/CSPLine.png)|
+|<a name="CSIntCrv"></a>C.S.IntCrv|Interpolate<br>Erstelle eine interpolierte Kurve durch einen Satz von Punkten.|![IMAGE](images/CSIntCrv.png)|
+|<a name="CSKinkCrv"></a>C.S.KinkCrv|Kinky Curve<br>Konstruiere eine interpolierte Kurve durch einen Satz von Punkten mit einem Schwellenwert für den Knickwinkel.|![IMAGE](images/CSKinkCrv.png)|
+|<a name="CSNurbs"></a>C.S.Nurbs|Nurbs Curve<br>Konstruiere eine NURBS Kurve aus Kontrollpunkten.|![IMAGE](images/CSNurbs.png)|
+|<a name="CSPLine"></a>C.S.PLine|PolyLine<br>Erstelle eine Polylinie, indem Du eine Anzahl von Punkten miteinander verbindest.|![IMAGE](images/CSPLine.png)|
 
-####Util
+####Nützliches
 ||||
 |--|--|--|
-|<a name="CUExplode"></a>C.U.Explode|Explode<br>Explode a curve into smaller segments.|![IMAGE](images/CUExplode.png)|
-|<a name="CUJoin"></a><C.U.Join|Join Curves<br>Join as many curves as possible.|![IMAGE](images/CUJoin.png)|
-|<a name="CUOffset"></a>C.U.Offset|Offset<br>Offset a curve with a specified distance.|![IMAGE](images/CUOffset.png)|
+|<a name="CUExplode"></a>C.U.Explode|Explode<br>Zerteile eine Kurve in kleinere Segmente.|![IMAGE](images/CUExplode.png)|
+|<a name="CUJoin"></a><C.U.Join|Join Curves<br>Verbinde so viele Kurven wie möglich.|![IMAGE](images/CUJoin.png)|
+|<a name="CUOffset"></a>C.U.Offset|Offset<br>Versetze eine Kurve basierend auf einer definierten Distanz.|![IMAGE](images/CUOffset.png)|
 
-Surface
+Flächen
 --
 
-####Analysis
+####Analyse
 ||||
 |--|--|--|
-|<a name="SADeBrep"></a>S.A.DeBrep|Deconstruct Brep<br>Deconstruct a brep into its constituent parts.|![IMAGE](images/SADeBrep.png)|
+|<a name="SADeBrep"></a>S.A.DeBrep|Deconstruct Brep<br>Zerlege Polygonflächen in ihre Bestandteile.|![IMAGE](images/SADeBrep.png)|
 
-####Freeform
+
+####Freiform
 ||||
 |--|--|--|
-|<a name="SFBoundary"></a>S.F.Boundary|Boundary Surfaces<br>Create planar surfaces from a collection of boundary edge curves.|![IMAGE](images/SFBoundary.png)|
-|<a name="SFExtr"></a>S.F.Extr|Extrude<br>Extrude curves and surfaces along a vector.|![IMAGE](images/SFExtr.png)|
-|<a name="SFExtrPt"></a>S.F.ExtrPt|Extrude Point<br>Extrude curves and surfaces to a point.|![IMAGE](images/SFExtrPt.png)|
-|<a name="SFLoft"></a>S.F.Loft|Loft<br>Create a lofted surface through a set of section curves.|![IMAGE](images/SFLoft.png)|
-|<a name="SFRevSrf"></a>S.F.RevSrf|Revolution<br>Create a surface of revolution.|![IMAGE](images/SFRevSrf.png)|
-|<a name="SFSwp2"></a>S.F.Swp2|Sweep2<br>Create a sweep surface with two rail curves.|![IMAGE](images/SFSwp2.png)|
+|<a name="SFBoundary"></a>S.F.Boundary|Boundary Surfaces<br>Erstelle eine planare Fläche aus einer Sammlung von Begrenzungskurven.|![IMAGE](images/SFBoundary.png)|
+|<a name="SFExtr"></a>S.F.Extr|Extrude<br>Extrudiere Kurven und Flächen entlang eines Vektors.|![IMAGE](images/SFExtr.png)|
+|<a name="SFExtrPt"></a>S.F.ExtrPt|Extrude Point<br>Extrudiere Kurven und Flächen auf einen Punkt zu.|![IMAGE](images/SFExtrPt.png)|
+|<a name="SFLoft"></a>S.F.Loft|Loft<br>Erstelle eine Loftfläche aus einer Reihe von Schnittkurven.|![IMAGE](images/SFLoft.png)|
+|<a name="SFRevSrf"></a>S.F.RevSrf|Revolution<br>Erstelle eine Rotationsfläche.|![IMAGE](images/SFRevSrf.png)|
+|<a name="SFSwp2"></a>S.F.Swp2|Sweep2<br>Erstelle eine Sweepfläche entlang zweier Leitkurven.|![IMAGE](images/SFSwp2.png)|
 
-####Primitive
+####Grundkörper
 ||||
 |--|--|--|
-|<a name="SPBBox"></a>S.P.BBox|Bounding Box<br>Solve oriented geometry bounding boxes.|![IMAGE](images/SPBBox.png)|
+|<a name="SPBBox"></a>S.P.BBox|Bounding Box<br>Erstelle eine Begrenzungskiste entlang einer orientierten Geometrie.|![IMAGE](images/SPBBox.png)|
 
-####Util
+####Nützliches
 ||||
 |--|--|--|
-|<a name="SUSDivide"></a>S.U.SDivide|Divide Surface<br>Generate a grid of {uv} points on a surface.|![IMAGE](images/SUSDivide.png)|
-|<a name="SUSubSrf"></a>S.U.SubSrf|Isotrim<br>Extract an isoparametric subset of a surface.|![IMAGE](images/SUSubSrf.png)|
+|<a name="SUSDivide"></a>S.U.SDivide|Divide Surface<br>Generiere ein Raster von {uv} Punkten auf einer Fläche.|![IMAGE](images/SUSDivide.png)|
+|<a name="SUSubSrf"></a>S.U.SubSrf|Isotrim<br>Extrahiere eine isoparametrische Untermenge einer Fläche.|![IMAGE](images/SUSubSrf.png)|
 
-Mesh
+Polygonnetz
 --
 
 ####Triangulation
 ||||
 |--|--|--|
-|<a name="MTVoronoi"></a>M.T.Voronoi|Voronoi<br>Planar voronoi diagram for a collection of points.|![IMAGE](images/MTVoronoi.png)|
+|<a name="MTVoronoi"></a>M.T.Voronoi|Voronoi<br>Planares Voronoidiagramm aus einer Sammlung von Punkten.|![IMAGE](images/MTVoronoi.png)|
 
-Transform
+Transformation
 --
 
 ####Affine
 ||||
 |--|--|--|
-|<a name="TARecMap"></a>T.A.RecMap|Rectangle Mapping<br>Transform geometry from one rectangle into another.|![IMAGE](images/TARecMap.png)|
+|<a name="TARecMap"></a>T.A.RecMap|Rectangle Mapping<br>Transformiere eine Geometrie von einem Rechteck zu einem anderen.|![IMAGE](images/TARecMap.png)|
 
-####Array
+####Anordnung
 ||||
 |--|--|--|
-|<a name="TAArrLinear"></a>T.A.ArrLinear|Linear Array<br>Create a linear array of geometry.|![IMAGE](images/TAArrLinear.png)|
+|<a name="TAArrLinear"></a>T.A.ArrLinear|Linear Array<br>Erstelle eine lineare Anordnung von Geometrien.|![IMAGE](images/TAArrLinear.png)|
 
 ####Morph
 ||||
 |--|--|--|
-|<a name="TMMorph"></a>T.M.Morph|Box Morph<br>Morph an object into a twisted box.|![IMAGE](images/TMMorph.png)|
-|<a name="TMSBox"></a>T.M.SBox|Surface Box<br>Create a twisted box on a surface patch.|![IMAGE](images/TMSBox.png)|
+|<a name="TMMorph"></a>T.M.Morph|Box Morph<br>Morphe ein Objekt in eine verzerrte Kiste.|![IMAGE](images/TMMorph.png)|
+|<a name="TMSBox"></a>T.M.SBox|Surface Box<br>Erstelle eine verzerrte Kiste auf einem Flächenabschnitt.|![IMAGE](images/TMSBox.png)|
 
-Display
+Anzeige
 --
 
-####Color
+####Farbe
 ||||
 |--|--|--|
-|<a name="DCHSL"></a>D.C.HSL|Colour HSL<br>Create a colour from floating point {HSL} channels.|![IMAGE](images/DCHSL.png)|
+|<a name="DCHSL"></a>D.C.HSL|Colour HSL<br>Erstelle eine Farbe aus Fließkomma {HSL} Kanälen.|![IMAGE](images/DCHSL.png)|
 
-####Dimensions
+####Dimensionen
 ||||
 |--|--|--|
-|<a name="DDTag"></a>D.D.Tag|Text tags<br>A text tag component allows you to draw little Strings in the viewport as feedback items. Text and location are specified as input parameters. When text tags are baked they turn into Text Dots.|![IMAGE](images/DDTag.png)|
-|<a name="DDTag3D"></a>D.D.Tag3D|Text Tag 3D<br>Represents a list of 3D text tags in a Rhino viewport|![IMAGE](images/DDTag3D.png)|
+|<a name="DDTag"></a>D.D.Tag|Text tags<br>Eine Textschildkomponente ermöglicht es Dir einen kurzen String als Anzeigeelement im Ansichtsfenster darzustellen. Text und Position werden durch die Eingabeparameter bestimmt. Wenn Textschilder gebacken werden, werden sie zu Textpunkten.|![IMAGE](images/DDTag.png)|
+|<a name="DDTag3D"></a>D.D.Tag3D|Text Tag 3D<br>Stellt eine Liste von 3D Textschildern im Rhinoansichtsfenster dar|![IMAGE](images/DDTag3D.png)|
 
-####Preview
+####Vorschau
 ||||
 |--|--|--|
-|<a name="DPPreview"></a>D.P.Preview|Custom Preview<br>Allows for customized geometry previews.|![IMAGE](images/DPPreview.png)|
+|<a name="DPPreview"></a>D.P.Preview|Custom Preview<br>Erlaubt eine benutzerdefinierte Vorschau für Geometrien.|![IMAGE](images/DPPreview.png)|
 
-####Vector
+####Vektor
 ||||
 |--|--|--|
-|<a name="DVPoints"></a>D.V.Points|Point List<br>Displays details about lists of points.|![IMAGE](images/DVPoints.png)|
+|<a name="DVPoints"></a>D.V.Points|Point List<br>Zeigt Details zu Punktlisten an.|![IMAGE](images/DVPoints.png)|
 
 

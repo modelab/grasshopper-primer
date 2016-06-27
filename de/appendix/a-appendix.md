@@ -1,5 +1,5 @@
 # Appendix
 
-#### The following section contains useful references including an index of all the components used in this primer, as well as additional resources to learn more about Grasshopper.
+#### Der folgende Abschnitt enthält nützliche Referenzen und einen Index aller Komponenten, die in diesem Primer benutzt wurden, sowie zusätzliche Resourcen, um mehr über Grasshopper zu lernen.
 
 ![IMAGE](images/001-about-image.png)

@@ -13,7 +13,7 @@ thead {display: none}
 
 {% endif %}
 
-Lass uns einen Blick in ein Beispiel werfen, das die Komponenten des vorausgegangenen Abschnitts beinhaltet. In diesem Beispiel, werden wir ein Fliesenmuster erzeugen, das durch die Abbildung von Geometrie auf ein Raster erzeugt wird. Das Muster wird durch die Nutzung der "List Item" Komponente erzeugt um die gewuenschte Fliese aus einer Liste von Geometien zu beziehen.
+Lass uns einen Blick auf ein Beispiel werfen, das die Komponenten des vorausgegangenen Abschnitts beinhaltet. In diesem Beispiel werden wir ein Fliesenmuster erzeugen, das durch die Abbildung von Geometrie auf ein Raster erzeugt wird. Das Muster wird durch die Nutzung der "List Item" Komponente erzeugt um die gewünschte Fliese aus einer Liste von Geometien zu beziehen.
 
 ![IMAGE](images/1-4-7/1-4-7_001-working-with-lists.png)
 >1. Geometrie entsprechend Index 1
@@ -30,22 +30,22 @@ Lass uns einen Blick in ein Beispiel werfen, das die Komponenten des vorausgegan
 ||||
 |--|--|--|
 |01.| Beginne eine Rhinoceros Datei. ||
-|02.| Erstelle zwei gleichgrosse Quadrate.||
-|03.| Erstelle verschiedene Geometrien innerhalb der beiden Quadrate.<br><blockquote>Im oben dargestellten Beispiel haben wir eine einfache Flaeche mit einem Knick erstellt. Der Knick ist ausgerundet, um die Ausrichtung darzustellen und die Basis ist ausgerundet um die beiden Geometrien zu unterscheiden.</blockquote>||
-|04.| Beginne eine neue Definition, druecke Strg+N (in Grasshopper).||
+|02.| Erstelle zwei gleichgroße Quadrate.||
+|03.| Erstelle verschiedene Geometrien innerhalb der beiden Quadrate.<br><blockquote>Im oben dargestellten Beispiel haben wir eine einfache Fläche mit einem Knick erstellt. Der Knick ist ausgerundet, um die Ausrichtung darzustellen und die Basis ist ausgerundet um die beiden Geometrien zu unterscheiden.</blockquote>||
+|04.| Beginne eine neue Definition, drücke Strg+N (in Grasshopper).||
 |05.| **Params/Geometry/Geometry** – Ziehe zwei **Geometry** Parameter auf die Leinwand.| [![IMAGE](images/1-4-7/1-4-7_003-geometry.png)](../../appendix/A-1/0_index-of-components.html#PGGeo)|
-|06.| Rechtsklicke den ersten **Geometry** Parameter und waehle "Set one Geometry". Referenziere die erste Geometrie. ||
-|07.| Rechtsklicke auf den zweiten **Geometry** Parameter und waehle "Set one Geometry". Waehle die zweite Geometrie, die Du referenzieren willst. <br><blockquote>Es ist moeglich mehrere Geometrien in einem einzigen Parameter zu referenzieren, aber der Einfachkeit halber werden wir zwei verschiedene Parameterkomponenten benutzen.</blockquote>||
+|06.| Rechtsklicke den ersten **Geometry** Parameter und wähle "Set one Geometry". Referenziere die erste Geometrie. ||
+|07.| Rechtsklicke auf den zweiten **Geometry** Parameter und wähle "Set one Geometry". Wähle die zweite Geometrie, die Du referenzieren willst. <br><blockquote>Es ist möglich mehrere Geometrien in einem einzigen Parameter zu referenzieren, aber der Einfachkeit halber werden wir zwei verschiedene Parameterkomponenten benutzen.</blockquote>||
 |08.| **Params/Geometry/Curve** – Ziehe zwei **Curve** Parameter auf die Leinwand.|[![IMAGE](images/1-4-7/1-4-7_004-curve.png)](../../appendix/A-1/0_index-of-components.html#PGCrv)|
-|09.| Rechtsklicke den ersten **Curve** Parameter und waehle "Set one Curve". Waehle die erste Kurve, die Du referenzieren moechtest.||
-|10.| Rechtsklicke den zweiten **Curve** Parameter und waehle "Set one Curve". Waehle die zweite Kurve, die Du referenzieren moechtest. <br><blockquote>Versichere Dich, dass die Geometrie und das Quadrat, die Du auswaehlst miteinander korrespondieren.</blockquote>||
+|09.| Rechtsklicke den ersten **Curve** Parameter und wähle "Set one Curve". Wähle die erste Kurve, die Du referenzieren möchtest.||
+|10.| Rechtsklicke den zweiten **Curve** Parameter und wähle "Set one Curve". Wähle die zweite Kurve, die Du referenzieren möchtest. <br><blockquote>Versichere Dich, dass die Geometrie und das Quadrat, welche Du auswählst, miteinander korrespondieren.</blockquote>||
 |11.| **Vector/Grid/Rectangular** – Ziehe eine **Rectangular Grid** Komponente auf die Leinwand. |[![IMAGE](images/1-4-7/1-4-7_005-rectangular-grid.png)](../../appendix/A-1/0_index-of-components.html#VGRecGrid)|
 |12.| **Params/Input/Slider** - Ziehe drei **Number Sliders** auf die Leinwand||
 |13.| Doppelklicke auf den ersten **Number Slider** und setze folgende Werte:<ul>Rounding: Integers<br>Lower Limit: 0<br>Upper Limit: 10<br>Value: 10 </ul>||
 |14.| Doppelklicke auf den zweiten **Number Slider** und setze folgende Werte:<ul>Rounding: Integers<br>Lower Limit: 0<br>Upper Limit: 10<br>Value: 10 </ul>||
 |15.| Doppelklicke den dritten **Number Slider** und setze folgende Werte:<ul>Name: Extents X & Y<br>Rounding: Integers<br>Lower Limit: 0<br>Upper Limit: 10<br>Value: 10 </ul>||
-|16.| Verbinde den ersten **Number Slider** mit dem Groesse X (Sx) Eingabeparameter der **Rectangular Grid** Komponente.||
-|17.| Verbinde den zweiten **Number Slider** mit dem Groesse Y (Sy) Eingabeparameter der **Rectangular Grid** component.||
+|16.| Verbinde den ersten **Number Slider** mit dem Größe X (Sx) Eingabeparameter der **Rectangular Grid** Komponente.||
+|17.| Verbinde den zweiten **Number Slider** mit dem Größe Y (Sy) Eingabeparameter der **Rectangular Grid** component.||
 |18.| Verbinde den dritten **Number Slider** mit dem Abmessung X (Ex) Eingabeparameter und dem Abmessung Y (Ey) Eingabeparameter der **Rectangular Grid** Komponente.|||
 
 ![IMAGE](images/1-4-7/1-4-7_006-definition-1.png)
@@ -57,7 +57,7 @@ Lass uns einen Blick in ein Beispiel werfen, das die Komponenten des vorausgegan
 |21.| Verbinde den zweiten **Geometry** Parameter mit dem Datenstrom 2 (D2) Eingabeparameter der ersten **Merge** Komponente. ||
 |22.| Verbinde den ersten **Curve** Parameter mit dem Datenstrom 1 (D1) Eingabeparameter der zweiten **Merge** Komponente. ||
 |23.| Verbinde den zweiten **Curve** Parameter mit dem Datenstrom 2 (D2) Eingabeparameter der zweiten**Merge** Komponente. ||
-|24.| Rechtsklicke auf den Zellen (C) Ausgabeparameter der **Rectangular Grid** Komponente und waehle "Flatten". |||
+|24.| Rechtsklicke auf den Zellen (C) Ausgabeparameter der **Rectangular Grid** Komponente und wähle "Flatten". |||
 
 ![IMAGE](images/1-4-7/1-4-7_008-definition-2.png)
 
@@ -69,7 +69,7 @@ Lass uns einen Blick in ein Beispiel werfen, das die Komponenten des vorausgegan
 |28.| Verbinde den Laenge (L) Ausgabeparameter der **List Length** Komponente mit dem Laenge (L) Eingabeparameter der **Repeat Data** Komponente. ||
 |29.| **Params/Input/Panel** – Ziehe ein **Panel** auf die Leinwand.||
 |30.| Doppelklicke das **Panel**. Deaktiviere "Multiline Data", "Wrap Items" und "Special Codes".
-Gebe folgenden Text ein:<ul>1<br>0<br>0</ul><br><blockquote>Dies ist das Muster in dem die Geometrien verteilt werden. 0 ruft die erste referenzierte Geometrie auf und 1 ruft die zweite referenzierte Geometrie auf. Aenderungen an der Reihenfolge der Zahlen oder an den Abmessungen des Rasters werden das Muster veraendern.</blockquote>|[![IMAGE](images/1-4-7/1-4-7_011-panel.png)](../../appendix/A-1/0_index-of-components.html#PIPanel)|
+Gib folgenden Text ein:<ul>1<br>0<br>0</ul><br><blockquote>Dies ist das Muster in dem die Geometrien verteilt werden. 0 ruft die erste referenzierte Geometrie auf und 1 ruft die zweite referenzierte Geometrie auf. Änderungen an der Reihenfolge der Zahlen oder an den Abmessungen des Rasters werden das Muster verändern.</blockquote>|[![IMAGE](images/1-4-7/1-4-7_011-panel.png)](../../appendix/A-1/0_index-of-components.html#PIPanel)|
 |31.| Verbinde das **Panel** mit dem Daten (D) Eingabeparameter der **Repeat Data** Komponente.|||
 
 ![IMAGE](images/1-4-7/1-4-7_012-definition-3.png)
@@ -87,7 +87,7 @@ Gebe folgenden Text ein:<ul>1<br>0<br>0</ul><br><blockquote>Dies ist das Muster 
 
 ![IMAGE](images/1-4-7/1-4-7_015-definition-4.png)
 
-Veraenderungen an der Eingabegeometrie und am Muster werden das Fliesenmuster veraendern.
+Veränderungen an der Eingabegeometrie und am Muster werden das Fliesenmuster verändern.
 
 ![IMAGE](images/1-4-7/1-4-7_016-example-results.png)
 

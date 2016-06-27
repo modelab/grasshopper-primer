@@ -1,4 +1,4 @@
-<style>
+﻿<style>
 h5 {color:#008DB2}
 .page-inner img {
 clear: both;
@@ -16,24 +16,24 @@ padding: 15px;
 
 ![IMAGE](images/akos.png)
 #####Gil Akos, Mode Lab
-Gil Akos is a founding partner and Director of Technology at Mode Lab, a
-multidisciplinary design consultancy specializing in technology-driven process
-innovation. He brings diverse professional experience, technical expertise in
-digital platforms, and a passion for generative design to the service model of the
-studio. His personal interests surround the relationship between simulation and
-materialization and ways by which this connection can be made tangible.<br>
+Gil Akos ist Gründungspartner und Direktor für Technologie bei Mode Lab, einer
+multidisziplinären Designberatung spezialisiert auf technologierorientierter Prozessinnovation. 
+Er bringt verschiedene professionelle Erfahrungen, technische Expertise in verschiedenen
+digitalen Plattformen und eine Leidenschaft für generatives Entwerfen zum Servicemodell des Studios mit.
+Seine persönlichen Interessen umgeben die Zusammenhänge zwischen Simulation und Materialisierung,
+und Wege durch welche diese Verbindungen greifbar gemacht werden können.<br>
 http://modelab.is<br>
 http://modelab.is/education
 
 
 ![IMAGE](images/parsons.png)
 #####Ronnie Parsons, Mode Lab
-Ronnie Parsons is a founding partner and Director of Education at Mode Lab, a
-multidisciplinary design consultancy specializing in technology-driven process
-innovation. At Mode Lab, Ronnie identifies new ways to connect and configure
-client workflows by strategically aligning product vision with UX-centered
-technology platforms. Ronnie’s expertise resides in the areas of advanced
-computational modeling, instructional design, and research and development.<br>
+Ronnie Parsons ist Gründungspartner und Direktor für Ausbildung bei Mode Lab, einer
+multidisziplinären Designberatung spezialisiert auf technologierorientierter Prozessinnovation. 
+Bei Mode Lab identifiziert Ronnie neue Wege zur Verbindung und Konfiguration von
+Arbeitsabläufen für Kunden durch die strategische Ausrichtung von Produktvision
+mit UX-zentrierten Technologieplattformen. Ronnies Expertise befindet sich in den Feldern
+fortgeschrittener Computermodelle, Konstruktionsanweisungen, Forschung und Entwicklung.<br>
 http://modelab.is<br>
 http://modelab.is/education
 
@@ -49,63 +49,58 @@ Kimberly Parsons<br>
 Roberto Godinez<br>
 Christopher Morse</ul>
 
-###Contributors
+###Beitragende
 
 
 ![IMAGE](images/payne.png)
 #####Andrew Payne, Principal, Lift Architects
-Andrew Payne is a registered architect who founded LIFT architects in 2007. Andrew’s work explores embedded computation, intelligent buildings,
-and generative design and he has published papers and taught workshops
-throughout North America and Europe. In 2010, Andrew and Jason K. Johnson
-published Firefly - a comprehensive software plug-in dedicated to bridging the
-gap between Grasshopper, the Arduino microcontroller, the internet, audio/
-visual tools, and more.<br>
+Andrew Payne ist ein registrierter Architekt, der LIFT architects 2007 gegründet hat. Andrews Arbeit erkundet eingebettete Informatik, intelligente Gebäude und generatives Entwerfen. Er hat wissenschaftliche Schriften publiziert und Workshops in Nordamerika, sowie in Europa gelehrt. Andrew und Jason K. Johnson haben 2010 Firefly veröffentlicht - ein umfassendes Plugin, welches die Grenzen zwischen Grasshopper, Arduino, dem Internet, audio/visuellen Werkzeugen und anderen Plattformen überwindet.<br>
 http://www.liftarchitects.com/
 
 ---
 
-This primer provides a comprehensive guide to the most current Grasshopper build, version 0.90076, highlighting what we feel are some of the most exciting feature updates. It is our goal that this primer will serve as a field guide to new and existing users looking to navigate the ins and outs of using Grasshopper in their creative practice.
+Dieser Primer stellt einen umfassenden Leitfaden für die letzte Grasshopper build, version 0.90076, dar und beleuchtet, was wir als die spannendsten Erneuerungen empfinden. Es ist unser Ziel, dass dieser Primer als Führer für neue und bestehende Nutzer dient, welche ihre kreative Praxis in Verbindung mit Grasshopper erkunden.
 
 ![IMAGE](images/modelab_logo.png)
-Mode Lab is a multidisciplinary design consultancy specializing in technology-driven process innovation.
-From its inception, Mode Lab has been a space for experimenting with the methods and technology used to design and make the world around us. We are compelled to understand and improve upon the process of materializing ideas – this is a journey we undertake in collaboration with our clients.
+Mode Lab ist eine multidisziplinären Designberatung spezialisiert auf technologierorientierter Prozessinnovation.
+Seit seiner Gründung war Mode Lab ein Ort zum Experimentieren mit Methoden und Technologien, welche zum Entwerfen und Gestalten der Welt um uns herum genutzt werden. Wir sind verpflichtet, Prozesse zur Materialisierung von Ideen zu verstehen und zu verbessern - auf diese Reise begeben wir uns in Zusammenarbeit mit unseren Kunden.
 http://modelab.is
 
 ![IMAGE](images/modelab_education.png)
-Our Mode Lab Education brand provides blended learning solutions for consumers and businesses looking to get ahead. We design and develop targeted learning experiences that keep the learner at the center of every technique and design method we share with our community.
+Unser Education brand stellt Blended-Learning-Lösungen für Konsumenten und Unternehmen zur Verfügung, die vorwärts kommen möchten. Wir entwerfen und entwickeln gezielte Lernerfahrungen, die den Lernenden ins Zentrum jeder Technik und Gestaltungsmethode stellen, die wir mit unserer Gemeinschaft teilen.
 http://modelab.is/education
 
 ![IMAGE](images/rhino.png)
-McNeel is a software development company with worldwide sales, support, and training. Founded in 1980, McNeel is a privately-held, employee-owned company with sales and support offices and affiliates in Seattle, Boston, Miami, Buenos Aires, Barcelona, Rome, Tokyo, Taipei, Seoul, Kuala Lumpur, and Shanghai with more than 700 resellers, distributors, OEMs, and training centers around the world.
+McNeel ist ein Unternehmen für Softwarentwicklung mit weltweitem Verkauf, Kundenservice und Training. Gegründet 1980, ist McNeel ein privat geführtes, sich im Mitarbeiterbesitz befindliches Unternehmen mit Verkaufs- und Kundenservicebüros, sowie Tochtergesellschaften in Seattle, Boston, Miami, Buenos Aires, Barcelona, Rome, Tokio, Taipei, Seoul, Kuala Lumpur und Shanghai mit mehr als 700 Weiterverkäufern, Verteilern, OEMs, and Trainingszentren rund um die Welt.
 http://www.en.na.mcneel.com/
 
 ![IMAGE](images/grasshopper.png)
-For designers who are exploring new shapes using generative algorithms, Grasshopper is a graphical algorithm editor tightly integrated with Rhino’s 3D modeling tools. Unlike RhinoScript, Grasshopper requires no knowledge of programming or scripting, but still allows designers to build form generators from the simple to the awe-inspiring.
+Für Entwerfer, die neue Formen mit generativen Algorithmen erkunden, gibt es Grasshopper als graphischen Algorithmeneditor integriert in  Rhino’s 3D Modellierwerkzeug. Im Unterschied zu RhinoScript benötigt Grasshopper kein Wissen über Programmierung oder Skripten, aber ermöglicht es dem Gestalter einfache sowie beeindruckende Generatoren zu erstellen.
 http://www.grasshopper3d.com/
 
 
 
-###LICENSING INFORMATION
-The Grasshopper Primer is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported license. The full text of this license is available here: http://creativecommons.org/licenses/by-nc-sa/3.0/us/legalcode
+###LIZENZINFORMATION
+Der Grasshopper Primer ist unter Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported lizensiert. Der gesamte Text der Lizenz ist hier verfügbar: http://creativecommons.org/licenses/by-nc-sa/3.0/us/legalcode
 
-Under this license, you are free:
+Unter dieser Lizenz kannst Du:
 
-**TO SHARE** - to copy, distribute and transmit the work
+**TO SHARE** - das Werk kopieren, verteilen und übertragen
 
-**TO REMIX** - to adapt the work
+**TO REMIX** - das Werk anpassen
 
-Under the following conditions:
+Unter den folgenden Bedingungen:
 
-**ATTRIBUTION** - You must attribute the work in the manner specified as “Mode Lab’s Attribution” below. You cannot attribute the work in any manner that suggests that Mode Lab endorses you or your use of the work.
+**ATTRIBUTION** - Du musst das Werk wie unterhalb in “Mode Lab’s Attribution” spezifiziert benennen. Du kannst das Werk nicht auf eine Art und Weise zuordnen, die nahelegt, dass Mode Lab Dich oder Dein Werk befürwortet.
 
-**NONCOMMERCIAL** - You may not use this work for commercial purposes
+**NONCOMMERCIAL** - Du kannst dieses Werk nicht für kommerzielle Gründe verwenden.
 
-**SHARE ALIKE** - If you alter, transform, or build upon this work, you may distribute the resulting work only under the same Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported license.
+**SHARE ALIKE** - Wenn Du das Werk anpasst, veränderst oder darauf aufbaust, kannst Du das resultierende Werk nur unter derselben Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported license verbreiten.
 
-Please see the full text of this license (http://creativecommons.org/licenses/by-nc-sa/3.0/us/legalcode) to view all rights and restrictions associated with it.
+Bitte schaue Dir den Volltext der Lizenz an (http://creativecommons.org/licenses/by-nc-sa/3.0/us/legalcode), um alle Rechte und Einschränkungen, die damit einhergehen, zu sehen.
 
 **MODE LAB’S ATTRIBUTION:**
 ©2015 Studio Mode, LLC. All rights reserved. http://modelab.is
 
 **TRANSLATIONS:**
-If you create translated versions of this Primer (in compliance with this license), please notify Mode Lab at hello@modelab.is. Mode Lab may choose to distribute and/or link to such translated versions (either as-is, or as further modified by Mode Lab)
+Wenn Du übersetzte Versionen dieses Primers (in Übereinstimmung mit dieser Lizenz) erstellst, informiere bitte Mode Lab unter hello@modelab.is. Mode Lab kann wählen, solche übersetzte Versionen ebenfalls zu verteilen und/oder darauf zu verweisen (entweder in bestehendem Zustand, oder weiterentwickelt durch Mode Lab)
