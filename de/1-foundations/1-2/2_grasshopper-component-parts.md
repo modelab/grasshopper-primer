@@ -1,6 +1,6 @@
-﻿### 1.2.2. GRASSHOPPER KOMPONENTEN
+### 1.2.2. GRASSHOPPER KOMPONENTEN
 
-#####Komponenten sind die Objekte, welche Du auf der Leinwand platzierst und mit Kabeln miteinander verbindest um ein visuelles Programm zu erstellen. Komponenten repräsentieren Rhino Geometrien und verhalten sich wie mathematische Funktionen. Komponenten haben Eingabe- und Ausgabeparameter. 
+##### Komponenten sind die Objekte, welche Du auf der Leinwand platzierst und mit Kabeln miteinander verbindest um ein visuelles Programm zu erstellen. Komponenten repräsentieren Rhino Geometrien und verhalten sich wie mathematische Funktionen. Komponenten haben Eingabe- und Ausgabeparameter. 
 
 
 ![IMAGE](images/1-2-2/1-2-2_001-component-parts.png)
@@ -14,7 +14,7 @@ Es gibt einige Grasshopperkomponenten, die nur Eingabe-, aber keine Ausgabeparam
 
 ![IMAGE](images/1-2-2/1-2-2_002-components-without-outputs.png)
 
-####1.2.2.1. LABEL ODER SYMBOL DARSTELLUNG
+#### 1.2.2.1. LABEL ODER SYMBOL DARSTELLUNG
 Jedes Grasshopperobjekt hat ein einzigartiges Symbol. Diese Symbole werden im Zentrum des entsprechenden Objektes dargestellt und korrespondieren mit den Symbolen, die in der Komponentenpalette dargestellt werden. Objekte können auch mit Text beschriftet dargestellt werden. Um zwischen Symbol- und Textdarstellung umzuschalten, wähle “Draw Icons” im Ansichtsmenu. Du kannst auch “Draw Full Names” auswählen, um den gesamten Namen eines Objekts mitsamt seinen Eingabe- und Ausgabeparametern darzustellen.
 
 ![IMAGE](images/1-2-2/1-2-2_003-label-icon-screenshot.png)
@@ -36,14 +36,14 @@ Eine Eigenschaft, die Dir helfen kann, Dich mit der Position von Komponenten in 
 
 ![IMAGE](images/1-2-2/1-2-2_006-reveal-location.png)
 
-####1.2.2.2. KOMPONENTEN HILFE
+#### 1.2.2.2. KOMPONENTEN HILFE
 Rechtsklicke auf ein Objekt und wähle “Help” im Drop-down menu um das Grasshopper Hilfefenster zu öffnen. Das Hilfefenster enthält eine detailliertere Beschreibung des Objekts, eine Liste der Eingabe- und Ausgabeparameter und einige Anmerkungen.
 
 ![IMAGE](images/1-2-2/1-2-2_007-component-help.png)
 >1. Grasshopper Hilfefenster für einen Punktparameter
 2. Die Anmerkungen im Hilfefenster geben zusätzliche Hinweise zum Punktparameter.
 
-####1.2.2.3. WERKZEUGTIPPS
+#### 1.2.2.3. WERKZEUGTIPPS
 Eingabeparameter von Komponenten erwarten, bestimmte Datentypen zu erhalten. Beispielsweise kann eine Komponente anzeigen, dass Du einen Punkt oder eine Ebene als Eingabe mit ihr verbinden sollst. Wenn Du mit Deiner Maus über die verschiedenen Teile der Komponente fährst, wirst Du verschiedene Werkzeugtipps sehen, die einen bestimmten Typ anzeigen, den das Unterobjekt, das sich gerade unter der Mausanzeige befindet, erfordert. Werkzeugtipps sind relativ informativ, da sie Dir von den erforderlichen Typen und Daten der bestimmten Parameter berichten.
 
 
@@ -54,7 +54,7 @@ Eingabeparameter von Komponenten erwarten, bestimmte Datentypen zu erhalten. Bei
 4. Die Überschrift des Ausgabewerkzeugtipps stellt dieselben Details bereit, wie auf der Eingabeseite, jedoch für den entsprechenden Ausgabeparameter.
 5. Das Ergebnis der Aktion der Komponente.
 
-####1.2.2.4. KONTEXT POPUPMENUS
+#### 1.2.2.4. KONTEXT POPUPMENUS
 Alle Objekte auf der Leinwand haben ihre eigenen Kontextmenüs, die ihre Einstellungen und Details beinhalten. Du kannst diese Kontextmenüs öffnen, indem Du im Zentrum der Komponente rechtsklickst. Eingabe- und Ausgabe haben jeweils ihre eigenen Kontextmenüs, welche mit einem entsprechenden Rechtsklick zugänglich sind.
 
 ![IMAGE](images/1-2-2/1-2-2_009-context-menus-a.png)
@@ -70,7 +70,7 @@ Alle Objekte auf der Leinwand haben ihre eigenen Kontextmenüs, die ihre Einstel
 4. Füge ein Element zur Sammlung hinzu.
 5. Lösche die Auswahl.
 
-####1.2.2.5. VERGRÖSSERBARE BENUTZEROBERFLÄCHE
+#### 1.2.2.5. VERGRÖSSERBARE BENUTZEROBERFLÄCHE
 Einige Komponenten können durch vergrößerbare Benutzeroberflächen bearbeitet werden, um die Anzahl von Eingabe- und Ausgabeparametern zu verändern. Indem Du auf die entsprechende Komponente auf der Leinwand zoomst, kannst Du weitere Optionen einsehen, welche es Dir ermöglichen Eingabe- und Ausgabeparameter von der Komponente zu entfernen oder zu ihr hinzuzufügen. Die "Addition" Komponente ermöglicht es Dir Eingabeparameter hinzuzufügen und so weitere Elemente für die Additionsoperation darzustellen.
 
 ![IMAGE](images/1-2-2/1-2-2_011-zoomable-ui.png)

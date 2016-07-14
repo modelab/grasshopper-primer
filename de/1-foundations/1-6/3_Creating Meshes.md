@@ -1,13 +1,13 @@
-﻿### 1.6.3 Polygonnetze erstellen
+### 1.6.3 Polygonnetze erstellen
 
-#####Im letzten Abschnitt haben wir uns die grundlegende Struktur von Polygonnetzen angesehen. In diesem Abschnitt werden wir eine kurze Einführung in die verschiedenen Wege geben eine Polygonnetzgeometrie zu erzeugen.
+##### Im letzten Abschnitt haben wir uns die grundlegende Struktur von Polygonnetzen angesehen. In diesem Abschnitt werden wir eine kurze Einführung in die verschiedenen Wege geben eine Polygonnetzgeometrie zu erzeugen.
 
 Es gibt drei fundamentale Wege, um ein Polygonnetz in Grasshopper zu erzeugen:
 1. Mit einem primitven Polygonnetzkörper beginnen
 2. Händisch ein Polygonnetz von Netzflächen und Eckpunkten erzeugen
 3. Umwandeln von NURBS Geometrien in Polygonnetze
 
-####1.6.3.1 Primitive Körper
+#### 1.6.3.1 Primitive Körper
 
 Grasshopper kommt mit ein paar einfachen primitiven Polygonnetzkomponenten:
 
@@ -17,13 +17,13 @@ Grasshopper kommt mit ein paar einfachen primitiven Polygonnetzkomponenten:
 3. **Mesh Sphere** - Dieser primitive Körper benötigt eine Basisebene, um das Zentrum und die Orientierung der Kugel zu definieren, den Radius für die Größe und U/V Werte, um die Anzahl der Netzflächen festzulegen.
 4. **Mesh Sphere Ex** - Auch als "Quadball" bekannt, erzeugt dieser primitive Körper eine Kugel, die aus sechs Abschnitten besteht, die entsprechend dem C Eingabeparameter unterteilt werden. Ein Quadball ist topologisch gleich einem Würfel, auch wenn er geometrisch eine Kugel ist.
 
-####1.6.3.2 Polygonnetze konstruieren
+#### 1.6.3.2 Polygonnetze konstruieren
 
 ![IMAGE](images/1-6-3/construct-mesh.png)
 
 Wir haben im vorangegangenen Abschnitt gesehen, dass die **Construct Mesh** Komponente genutzt werden kann, um ein Polygonnetz aus einer Liste von Eckpunkten und einer Liste von Netzflächen (und einer optinonalen Liste von Farben) zu erzeugen. Ein Polygonnetz händisch zu konstruieren kann sehr mühselig sein, weshalb diese Komponente öfter genutzt wird, um eine bestehende Liste von Netzflächen und Eckpunkten zu bearbeiten, die mit der **Deconstruct Mesh** Komponente aus einem bestehenden Polygonnetz extrahiert wurde.
 
-####1.6.3.3 NURBS zu Polygonnetz
+#### 1.6.3.3 NURBS zu Polygonnetz
 
 Vielleicht die am häufigsten genutzte Methode zur Erstellung eines komplexen Polygonnetzes ist die Erzeugung von einer NURBS Geometrie. Individuelle NURBS Flächen können mit der **Mesh Surface** Komponente in Polygonnetze umgewandelt werden, die einfach Flächen entlang ihrer UV Koordinaten unterteilt und viereckige Netzflächen erzeugt. Diese Komponente ermöglicht es, eine Zahl für die Unterteilung in U und V Richtung für das resultierende Polygonnetz einzugeben.
 
@@ -35,7 +35,7 @@ Komplexere Polyflächen können nicht mit der **Mesh Brep** Komponente in ein ei
 
 MERKE: Es ist generell viel leichter eine NURBS Geometrie in ein Polygonnetz umzuwandeln, als anders herum. Während die UV Koordinaten einer NURBS Fläche eine einfache Umwandlung in viereckige Netzflächen erlaubt, ist die entgegengesetzte Abbildung nicht immer eindeutig möglich, da ein Polygonnetz aus dreieckigen und viereckigen Netzflächen bestehen kann, die nicht die einfache Extraktion von UV Koordinaten erlauben.
 
-####1.6.3.4 Übung
+#### 1.6.3.4 Übung
 
 In dieser Übung werden wir einfache primitive Polygonnetzkörper nutzen, um eine Transformation der Eckpunkte durchzuführen und dann eine farbbasierte Annäherung der Normalenvektoren in einem Renderingprozess darzustellen.
 

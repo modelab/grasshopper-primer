@@ -1,4 +1,4 @@
-﻿### 1.5.3. Erstellen von Datenbäumen
+### 1.5.3. Erstellen von Datenbäumen
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 >Beispieldateien zu diesem Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
@@ -6,29 +6,29 @@
 {% endif %}
 
 
-#####Grasshopper enthält Werkzeuge um die Struktur von Datenbäumen zu verändern. Diese Werkzeuge helfen auf spezifische Daten innerhalb des Baumes zuzugreifen und die Art in der sie gespeichert, geordnet oder identifiziert sind zu verändern.
+##### Grasshopper enthält Werkzeuge um die Struktur von Datenbäumen zu verändern. Diese Werkzeuge helfen auf spezifische Daten innerhalb des Baumes zuzugreifen und die Art in der sie gespeichert, geordnet oder identifiziert sind zu verändern.
 
 Lass uns einige Möglichkeiten zur Manipulation und Visualisierung von Datenbäumen und ihre Wirkungsweise ansehen.
 
-####1.5.3.1. EINEBNEN VON DATENBÄUMEN
+#### 1.5.3.1. EINEBNEN VON DATENBÄUMEN
 Einebnen von Datenbäumen entfernt alle Ebenen eines Datenbaumes und ergibt eine einfache Liste. Wende die "Flatten" Komponente (Sets/Tree/Flatten) auf den P Ausgabeparameter der "Divide Curve" Komponente an und visualisiere die neue Datenstruktur mit dem "Param Viewer".
 
 ![IMAGE](images/1-5-3/1-5-3_001-flatten.png)
 >Im "Param Viewer" können wir sehen, dass wir nun nur noch einen Ast haben, der aus einer Liste mit 48 Punkten besteht.
 
-####1.5.3.2. AUFPFROPFEN VON DATENBÄUMEN
+#### 1.5.3.2. AUFPFROPFEN VON DATENBÄUMEN
 Aufpfropfen erzeugt einen neuen Ast für jedes Datenelement. Wenn wir die Daten durch die "Graft Tree" Komponente (Sets/Tree/Graft Tree) senden, wird jeder Teilungspunkt einen individuellen Ast bilden, anstatt einen Ast mit den anderen Teilungspunkten auf derselben Kurve zu bilden.
 
 ![IMAGE](images/1-5-3/1-5-3_002-graft.png)
 >Im "Param Viewer" können wir nun sehen, dass wir anstatt einer Datenstruktur mit 8 Ästen zu je 6 Elementen nun 8 Äste mit je sechs Unterästen haben, die jeweils ein Element enthalten.
 
-####1.5.3.3. VEREINFACHEN VON DATENBÄUMEN
+#### 1.5.3.3. VEREINFACHEN VON DATENBÄUMEN
 Das vereinfachen von Datenbäumen entfernt überlappende Äste eines Datenbaumes. Wenn wir die Daten zur "Simplify Tree" Komponente (Sets/Tree/Simplify Tree) senden, wird der erste Ast, der keine Daten enthält, entfernt werden.
 
 ![IMAGE](images/1-5-3/1-5-3_003-simplify.png)
 >Im "Param Viewer" sehen wir immer noch 8 Äste zu je 6 Elementen, aber der erste Ast wurde entfernt.
 
-####1.5.3.4. DREHEN DER MATRIX
+#### 1.5.3.4. DREHEN DER MATRIX
 Die "Flip Matrix" Komponente (Sets/Tree/Flip Matrix) vertauscht die Zeilen und Spalten eines Datenbaumes mit zwei Pfadebenen.
 
 ![IMAGE](images/1-5-3/1-5-3_004-flip-matrix.png)
@@ -41,7 +41,7 @@ Das Einebnen, Aufpfropfen und Vereinfachen sind Operationen, die auch direkt auf
 2. Aufpfropfen des Ausgabeparameters P
 3. Vereinfachen des Ausgabeparameters P
 
-####1.5.3.5. DER PATH MAPPER
+#### 1.5.3.5. DER PATH MAPPER
 Die "Path Mapper" Komponente (Sets/Tree/Path Mapper) erlaubt es lexikale Operationen auf Datenbäume anzuwenden. Lexikale Operationen sind logische Abbildungsverfahren zwischen Dateipfaden und Indizes, die mit text-basierten (lexikalen) Masken und Mustern definiert werden.
 
 ![IMAGE](images/1-5-3/1-5-3_006-path-mapper-a.png)
@@ -51,7 +51,7 @@ Die "Path Mapper" Komponente (Sets/Tree/Path Mapper) erlaubt es lexikale Operati
 3. Der Abbildungseditor
 4. Du kannst den Datenbaum verändern, indem Du die Pfadindizes und gewünschten Äste neu zuweist
 
-####1.5.3.6. WEBEN DEFINITION
+#### 1.5.3.6. WEBEN DEFINITION
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 >Beispieldateien zu diesem Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}

@@ -1,8 +1,8 @@
-﻿### 1.2.4. KOMPONENTEN VERKABELN
+### 1.2.4. KOMPONENTEN VERKABELN
 
-#####Wenn Daten nicht in einem permanenten Satz eines Parameters gespeichert sind, müssen sie von einer anderen Quelle übernommen werden. Daten werden von einer Komponente zur anderen durch Kabel übertragen. Du kannst Dir diese buchstäblich als elektrische Kabel vorstellen, die Datenimpluse von einem Objekt zum anderen übertragen.
+##### Wenn Daten nicht in einem permanenten Satz eines Parameters gespeichert sind, müssen sie von einer anderen Quelle übernommen werden. Daten werden von einer Komponente zur anderen durch Kabel übertragen. Du kannst Dir diese buchstäblich als elektrische Kabel vorstellen, die Datenimpluse von einem Objekt zum anderen übertragen.
 
-####1.2.4.1. VERBINDUNGSMANAGEMENT
+#### 1.2.4.1. VERBINDUNGSMANAGEMENT
 Um Komponenten zu verbinden, klicke und ziehe nahe dem Kreis an der Ausgabeseite eines Objektes. Ein Verbindungskabel wird an Deiner Maus angeheftet. Sobald die Maus über einem möglichen Zieleingabeparameter schwebt, wird sich das Kabel verbinden und verfestigen. Dies ist keineswegs eine permanente Verbindung, bis Du die Maustaste loslässt. Es macht keinen Unterschied, ob wir die Verbindungen von "links nach rechts" oder von "rechts nach links" erstellen.
 
 ![IMAGE](images/1-2-4/1-2-4_001a.png)
@@ -21,7 +21,7 @@ Um Komponenten zu verbinden, klicke und ziehe nahe dem Kreis an der Ausgabeseite
 7. Wenn mehrere Verbindungen bestehen, kannst Du in einer Liste aussuchen, welche Du lösen möchtest.
 8. Wenn Du Deine Maus über ein Element bewegst, werden die entsprechenden Verbindungen in rot hervorgehoben.
 
-####1.2.4.2. FANCY WIRES
+#### 1.2.4.2. FANCY WIRES
 Kabel repräsentieren die Verbindungen, sowie den Fluss der Daten in einem Graph einer Definition. Grasshopper kann nun auch visuellen Hinweise darauf geben, was in den Kabel so vor sich geht. Die Standardeinstellung für diese sogenannten “fancy wires” ist ausgeschalten, weshalb Du sie einschalten musst, bevor Du die verschiedenen Typen von Linien für die Verbindungskabel sehen kannst. Um dies zu tun, klicke einfach auf den "View Tab" in der Hauptmenüleiste und wähle den Knopf genannt “Draw Fancy Wires”. Fancy wires kann Dir viele Informationen darüber geben, welche Typen von Information von einer Komponente zur anderen fließen.
 
 ![IMAGE](images/1-2-4/1-2-4_002-fancy-wires.png)
@@ -31,7 +31,7 @@ Kabel repräsentieren die Verbindungen, sowie den Fluss der Daten in einem Graph
 4. Einzelnes Element – Die Daten aus einem beliebigen Parameter enthalten ein einzelnes Element und das Kabel wird als durchgehende graue Linie dargestellt.
 5. Baum – Informationen, die zwischen Komponenten übertragen werden und eine Datenstruktur enthalten, werden als graue, gestrichelte Doppellinie dargestellt.
 
-####1.2.4.3. KABELDARSTELLUNG
+#### 1.2.4.3. KABELDARSTELLUNG
 Wenn Du eine lange Zeit damit zugebracht hast, an einer einzelnen Grasshopper Definition zu arbeiten, hast Du eventuell gemerkt, dass die Leinwand relativ schnell mit einer Menge Kabel zugekleistert wird. Glücklicherweise haben wir die Fähigkeit die Darstellung der Kabel für jeden einzelnen Eingabeparameter einer Komponente zu bestimmen.
 
 Dabei gibt es drei Kabeldarstellungen: "Default Display", "Faint Display", and "Hidden Display". Um die Kabeldarstellung zu bearbeiten, rechtsklicke einfach auf den Eingabeparameter einer Komponente und wähle eine der Darstellungen im "Wire Display" Popupmenü aus.

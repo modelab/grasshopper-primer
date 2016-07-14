@@ -1,7 +1,8 @@
-﻿### 1.2.1. GRASSHOPPER OBJEKTTYPEN
+### 1.2.1. GRASSHOPPER OBJEKTTYPEN
 
-#####Grasshopper besteht aus zwei primären Typen von Benutzerobjekten: Parameter und Komponenten. Parameter speichern Daten, wobei Komponenten Aktionen ausführen, welche wiederum Daten erzeugen. Der einfachste Weg, um Grasshopper zu verstehen ist, sich daran zu erinnern, dass wir Daten nutzen werden, um die Eingabe von Aktionen zu definieren (was neue Daten erzeugt, die wir im weiteren Verlauf nutzen können). 
-####1.2.1.1. PARAMETER
+##### Grasshopper besteht aus zwei primären Typen von Benutzerobjekten: Parameter und Komponenten. Parameter speichern Daten, wobei Komponenten Aktionen ausführen, welche wiederum Daten erzeugen. Der einfachste Weg, um Grasshopper zu verstehen ist, sich daran zu erinnern, dass wir Daten nutzen werden, um die Eingabe von Aktionen zu definieren (was neue Daten erzeugt, die wir im weiteren Verlauf nutzen können). 
+
+#### 1.2.1.1. PARAMETER
 Parameter speichern die Daten – Zahlen, Farben, Geometrien , u.a. – die wir durch den Graph unserer Definition senden. Parameter sind Containerobjekte, welche gewöhnlich als kleine rechteckige Kästchen mit einer einzelnen Eingabe und Ausgabe angezeigt werden. Wir können Parameter auch an der Form des Symbols erkennen, da alle Parameterobjekte eine sechseckige Einfassung haben.
 
 Geometrieparameter können Geometrien aus Rhino referenzieren oder Geometrien von anderen Komponenten aufnehmen. Punkt- und Kurvenobjekte sind beide Geometrieparameter.
@@ -11,17 +12,16 @@ Geometrieparameter können Geometrien aus Rhino referenzieren oder Geometrien vo
 Eingabeparameter sind dynamische Schnittstellenobjekte, die es ermöglichen direkt mit der Definition zu interagieren. Die Schieberegler und der Graphmapper sind jeweils Eingabeparameter. 
 ![IMAGE](images/1-2-1/1-2-1_002-input-parameters.png)
 
-####1.2.1.2. KOMPONENTEN
+#### 1.2.1.2. KOMPONENTEN
 Komponenten führen Aktionen auf Basis der Eingaben aus, welche sie erhalten. Es gibt viele verschiedene Typen von Komponenten für verschiedene Aufgaben. 
 ![IMAGE](images/1-2-1/1-2-1_003-components.png)
 
 >1. Die Multiplikations-Komponente ist ein Operator, der das Produkt zweier Zahlen berechnet.
 2. Die Divide Curve-Komponente arbeitet mit Geometrien. Sie teilt eine Kurve in gleich lange Segmente. 
-
 3. Die Circle CNR-Komponente konstruiert eine Kreisgeometrie von den Eingaben, dem Mittelpunkt, Normalenvektor und Radius.
 4. Die Loft-Komponente konstruiert eine Loftfläche von zwei Kurven.
 
-####1.2.1.3. OBJEKTFARBEN
+#### 1.2.1.3. OBJEKTFARBEN
 Wir können einige Informationen über die Objekte erhalten, wenn wir ihre Farben betrachten. Schauen wir uns die grundsätzliche Farbcodierung von Grasshopper gemeinsam an. 
 Ein Parameter, der keine Warnungen oder Fehlermeldungen enthält, wird in hellgrau angezeigt. Diese Objektfarbe zeigt an, dass dieser Parameter einwandfrei arbeitet. 
 Ein Parameter, der Warnungen enthält, wird als orangenes Kästchen angezeigt. Objekte, die keine Daten als Eingabe erhalten, sind verdächtig, weil sie nicht zur Grasshopperdefinition beitragen. Deshalb werden alle Parameter, wenn sie frisch hinzugefügt werden, erst einmal orange dargestellt, um anzuzeigen, dass sie keine Daten enthalten und keinen Einfluss auf das Ergebnis der Definition haben. Standardmässig erhalten orange angezeigte Parameter und Komponenten einen kleinen Ballon an der rechten, oberen Ecke des Objekts. Sobald du mit der Maus über den Ballon fährst, wird er Informationen darüber anzeigen, warum die Warnung aufgetreten ist. Sobald ein Parameter Daten enthält oder definiert, wird er in grau angezeigt und der Ballon verschwindet.

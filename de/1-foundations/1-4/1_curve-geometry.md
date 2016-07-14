@@ -1,6 +1,6 @@
-﻿### 1.4.1. KURVENGEOMETRIEN
+### 1.4.1. KURVENGEOMETRIEN
 
-#####NURBS (non-uniform rational B-splines) sind mathematische Repräsentationen, die akurat jede Form, von einer 2D Linie, einem Kreis, Boden oder einer Kiste, bis hin zur komplexesten, organischen 3D Freiformfläche darstellen können. Sie können in jedem Prozess von Illustration und Animation bis zur Herstellung verwendet werden, da NURBS Modelle flexibel und akurat sind.
+##### NURBS (non-uniform rational B-splines) sind mathematische Repräsentationen, die akurat jede Form, von einer 2D Linie, einem Kreis, Boden oder einer Kiste, bis hin zur komplexesten, organischen 3D Freiformfläche darstellen können. Sie können in jedem Prozess von Illustration und Animation bis zur Herstellung verwendet werden, da NURBS Modelle flexibel und akurat sind.
 
 Da Kurven geometrische Objekte sind, besitzen sie eine Anzahl von Eigenschaften und Charakteristika, die genutzt werden können um sie zu beschreiben oder zu analysieren. Zum Beispiel hat jede Kurve eine Startkoordinate und eine Endkoordinate. Wenn die Distanz zwischen den beiden Koordinaten null ergibt, ist die Kurve geschlossen. Ebenso hat jede Kurve eine Anzahl an Kontrollpunkten. Wenn all diese Punkte in derselben Ebene angeordnet sind, ist die gesamte Kurve planar. Einige Eigenschaften beziehen sich auf die Kurve als Ganzes, während andere sich nur auf bestimmte Punkte auf der Kurve beziehen. Beispielsweise ist die Ebenheit eine globale Eigenschaft, während Tangentenvektoren eine lokale Eigenschaft sind. Einige Eigenschaften sind auch nur auf bestimmte Kurventypen anzuwenden. So weit haben wir einige von Grasshopper's primitiven Kurvenkomponenten besprochen: Linien, Kreise, Ellipsen und Bögen.
 
@@ -18,7 +18,7 @@ Da Kurven geometrische Objekte sind, besitzen sie eine Anzahl von Eigenschaften 
 2. Bearbeitungspunkt
 3. Kontrollpunkt
 
-####1.4.1.1. NURBS KURVEN
+#### 1.4.1.1. NURBS KURVEN
 **Degree:** Der Grad ist eine positive ganze Zahl. Diese Zahl ist üblicherweise 1, 2, 3 oder 5, kann aber jede positive ganze Zahl annehmen. Der Grad einer Kurve legt die Reichweite des Einflusses der Kontrollpunkte auf die Kurve fest; wobei je höher der Grad, desto grösser der Einflussbereich. NURBS Linien und Polylinien haben den Grad 2, und die meisten Freiformkurven haben den Grad 3 oder 5.
 
 **Control Points:** Die Kontrollpunkte sind eine Liste von mindestens Grad+1 Punkten. Einer der einfachsten Wege die Form einer NURBS Kurve zu verändern ist es, die Kontrollpunkte zu bewegen.
@@ -40,7 +40,7 @@ NURBS Kurvenknoten sind das Resultat von sich ändernden Graden:
 ![IMAGE](images/1-4-1/1-4-1_005-degree-three.png)
 >D<sup>3</sup> ist die häufigste NURBS Kurve und ist der Standard in Rhino. Du bist wahrscheinlich mit der visuellen Progression eines Splines vertraut, auch wenn die Knoten in seltsamen Orten zu liegen scheinen.
 
-####1.4.1.2. GRASSHOPPER SPLINE KOMPONENTEN
+#### 1.4.1.2. GRASSHOPPER SPLINE KOMPONENTEN
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 >Beispieldateien zu diesem Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}

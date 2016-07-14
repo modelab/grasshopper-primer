@@ -1,11 +1,11 @@
-﻿### 1.4.3. Abgleichung von Datenströmen
+### 1.4.3. Abgleichung von Datenströmen
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 >Beispiele zu diesem Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
 >Beispiele zu diesem Abschnitt: [Download](../../appendix/A-2/gh-files/1.4.3_data matching.gh)
 {% endif %}
 
-#####Datenabgleich ist ein Problem ohne saubere Lösung. Es taucht auf, wenn eine Komponente Zugriff auf Eingabeparameter mit unterschiedlicher Anzahl von Datenelementen hat. Die Veränderung des Datenabgleichalgorithmus kann zu sehr verschiedenen Ergebnissen führen.
+##### Datenabgleich ist ein Problem ohne saubere Lösung. Es taucht auf, wenn eine Komponente Zugriff auf Eingabeparameter mit unterschiedlicher Anzahl von Datenelementen hat. Die Veränderung des Datenabgleichalgorithmus kann zu sehr verschiedenen Ergebnissen führen.
 
 Stelle Dir eine Komponente vor, die eine Linie zwischen Punkten zeichnet. Sie wird zwei Eingabeparameter haben, die beide Punktkoordinaten beinhalten (Liste A und Liste B):
 

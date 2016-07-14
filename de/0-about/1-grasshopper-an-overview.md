@@ -1,6 +1,6 @@
-﻿## Grasshopper - Eine Übersicht
+## Grasshopper - Eine Übersicht
 
-#####Grasshopper ist ein visueller Programmeditor, der von David Rutten und Robert McNeel & Associates entwickelt wurde. Als Plug-In für Rhino3D ist Grasshopper integriert in eine robuste und vielseitige Modellierungsumgebung. Diese wird von kreativen Profis in verschiedenen Bereichen, wie z.B. Architektur, Ingenieurwissenschaften und Produktdesign genutzt. Zusammen mit Rhino bietet Grasshopper uns die Möglichkeit präzise parametrische Beziehungen in Modellen zu definieren, die Fähigkeit generative Entwurfsabläufe zu erkunden und eine Plattform, um übergeordnete Programmierlogik zu entwickeln – und all das in einer intuitiven, graphischen Oberfläche.
+##### Grasshopper ist ein visueller Programmeditor, der von David Rutten und Robert McNeel & Associates entwickelt wurde. Als Plug-In für Rhino3D ist Grasshopper integriert in eine robuste und vielseitige Modellierungsumgebung. Diese wird von kreativen Profis in verschiedenen Bereichen, wie z.B. Architektur, Ingenieurwissenschaften und Produktdesign genutzt. Zusammen mit Rhino bietet Grasshopper uns die Möglichkeit präzise parametrische Beziehungen in Modellen zu definieren, die Fähigkeit generative Entwurfsabläufe zu erkunden und eine Plattform, um übergeordnete Programmierlogik zu entwickeln – und all das in einer intuitiven, graphischen Oberfläche.
 
 Die Ursprünge von Grasshopper können bis zur Funktionalität des "Record History" Knopfes in Rhino3d Version 4 zurückverfolgt werden. Dieses spezifische Merkmal erlaubte es Anwendern, Modellierungsverfahren während des Ablaufes implizit im Hintergrund zu speichern. Falls Du aus vier Kurven mit der eingeschalteten Aufzeichnungsfunktion eine Loftfläche erstellt hattest, konntest Du die Kontrollpunkte der Kurven bearbeiten und die Geometrie der Fläche wurde automatisch aktualisiert. Im Jahr 2008 hat David folgende Frage gestellt: “Was würde geschehen, wenn man mehr explizite Kontrolle über die Aufzeichnungsfunktion hätte?”. Dies war der Geburtsmoment für den Vorläufer von Grasshopper - Explicit History. Diese Funktion erlaubte es, die gespeicherten Arbeitsabläufe im Detail zu bearbeiten und befähigte den Anwender logische Sequenzen zu entwickeln, welche über die bestehenden Fähigkeiten von Rhino3Ds eingebaute Funktionalität hinausreichen. Sechs Jahre später ist Grasshopper nun ein robuster, visueller Programmiereditor, der mit verschiedenen extern entwickelten Plug-Ins erweitert werden kann. Außerdem wurden dadurch Arbeitsabläufe von Profis in verschiedenen Industrien grundsätzlich verändert und eine aktive, globale Gemeinschaft der Anwender begünstigt.
 
@@ -21,7 +21,7 @@ Sobald wir begonnen haben eine Grasshopperdefinition zu entwickeln und Schiebere
 ![IMAGE](images/flow.png)
 >Programmfluss von links nach rechts.
 
-####MERKPUNKTE
+#### MERKPUNKTE
 * Grasshopper ist ein grafischer Algorithmeneditor, der in das Rhino3D Modellierwerkzeug integriert ist.
 * Algorithmen sind schrittweise Prozeduren, die entworfen wurden, um eine bestimmte Operation durchzuführen.
 * Du benutzt Grasshopper, um Algorithmen zu entwerfen, die dann Aufgaben in Rhino3D automatisieren.

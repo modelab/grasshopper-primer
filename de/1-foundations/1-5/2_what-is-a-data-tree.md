@@ -1,6 +1,6 @@
-﻿### 1.5.2. Was ist ein Datenbaum?
+### 1.5.2. Was ist ein Datenbaum?
 
-#####Ein Datenbaum ist eine hierarchische Struktur zur Speicherung von Daten in einer verschachtelten Liste. Datenbäume werden erstellt, wenn Grasshopperkomponenten so strukturiert sind, dass sie einen Datensatz als Eingabe annehmen und mehrere Datensätze ausgeben. Grasshopper behandelt diese neuen Daten, indem es sie in Form von Unterlisten verschachtelt. Diese verschachtelten Unterlisten verhalten sich in derselben Weise wie Ordnerstrukturen auf Deinem Computer, indem sie den Zugriff auf indizierte Elemente durch eine Pfadnavigation ermöglichen. Diese wird bestimmt durch die Erzeugung von Elternlisten und den entsprechenden Unterindizes.
+##### Ein Datenbaum ist eine hierarchische Struktur zur Speicherung von Daten in einer verschachtelten Liste. Datenbäume werden erstellt, wenn Grasshopperkomponenten so strukturiert sind, dass sie einen Datensatz als Eingabe annehmen und mehrere Datensätze ausgeben. Grasshopper behandelt diese neuen Daten, indem es sie in Form von Unterlisten verschachtelt. Diese verschachtelten Unterlisten verhalten sich in derselben Weise wie Ordnerstrukturen auf Deinem Computer, indem sie den Zugriff auf indizierte Elemente durch eine Pfadnavigation ermöglichen. Diese wird bestimmt durch die Erzeugung von Elternlisten und den entsprechenden Unterindizes.
 
 Es ist möglich mehrere Datenlisten in einem einzelnen Parameter zu speichern. Da mehrere Listen verfügbar werden, benötigen wir eine Möglichkeit die individuellen Listen zu identifizieren. Ein Datenbaum ist essentiell für die Navigation von Listen von Listen oder manchmal auch Listen von Listen von Listen (usw.).
 
@@ -12,7 +12,7 @@ Das Bild unterhalb illustriert den Unterschied zwischen Liste und Datenbaum. Auf
 
 ![IMAGE](images/1-5-2/1-5-2_002-list-data-tree.png)
 
-####1.5.2.1. VISUALISIERUNG VON DATENBÄUMEN
+#### 1.5.2.1. VISUALISIERUNG VON DATENBÄUMEN
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 >Beispieldateien für diesen Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}

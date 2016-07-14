@@ -1,11 +1,11 @@
-﻿###1.3.5. Boolsche & Logische Operatoren
+### 1.3.5. Boolsche & Logische Operatoren
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 >Beispieldateien zu diesem Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
 >Beispieldateien zu diesem Abschnitt: [Download](../../appendix/A-2/gh-files/1.3.5_booleans and logical operators.gh)
 {% endif %}
 
-####1.3.5.1. BOOLSCHE OPERATOREN
+#### 1.3.5.1. BOOLSCHE OPERATOREN
 Numerische Variablen können eine ganze Bandbreite verschiedener Zahlen speichern. Boolsche Variablen können lediglich zwei Werte speichern, auf die wir uns mit Ja und Nein, Wahr und Falsch oder 1 und 0 beziehen. Offensichtlich werden wir niemals boolsche Werte heranziehen um Kalkulationen durchzuführen, da ihre Werte so begrenzt sind. Wir nutzen boolsche Werte um Konditionale auszuwerten.
 
 ![](images/1-3-5/1-3-5_001-boolean-parameter.png)
@@ -21,7 +21,7 @@ Grasshopper hat auch Objekte mit denen Konditionale getestet werden können und 
 ![](images/1-3-5/1-3-5_003-includes.png)
 >Die "Includes" Komponente testet ob die Zahl 6.8 in einer Domäne von 0 bis 10 enthalten ist. Sie gibt einen boolschen Wert für wahr zurück.
 
-####1.3.5.2. LOGISCHE OPERATOREN
+#### 1.3.5.2. LOGISCHE OPERATOREN
 Logische Operatoren arbeiten meistens mit boolschen Werten und sie sind wirklich ziemlich logisch. Wie Du Dich erinnern kannst, können boolsche Werte zur zwei verschiedene Werte annehmen. Die boolsche Mathematic wurde von George Boole (1815-1864) entwickelt und ist heute Kernbestandteil der gesamten digitalen Industrie. Boolsche Algebra liefert uns die Werkzeuge mit welchen wir Datensätze analysieren, vergleichen und beschreiben können. Obwohl Boole ursprünglich sechs boolsche Operatoren beschrieb, werden wir nur drei davon genauer unter die Lupe nehmen:
 
 1. Not

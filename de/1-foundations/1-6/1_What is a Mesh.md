@@ -1,13 +1,13 @@
-﻿### 1.6.1 Was ist ein Polygonnetz?
+### 1.6.1 Was ist ein Polygonnetz?
 
-#####Ein Polygonnetz ist eine Sammlung von Vierecken und Dreiecken, die eine Fläche oder einen Körper darstellen. Dieser Anschnitt beschreibt die Struktur von Polygonnetzobjekten, welche aus Eckpunkten, Kanten und Netzflächen, sowie zusätzlichen Polygonnetzeigenschaften, wie Farben und Normalen, bestehen.
+##### Ein Polygonnetz ist eine Sammlung von Vierecken und Dreiecken, die eine Fläche oder einen Körper darstellen. Dieser Anschnitt beschreibt die Struktur von Polygonnetzobjekten, welche aus Eckpunkten, Kanten und Netzflächen, sowie zusätzlichen Polygonnetzeigenschaften, wie Farben und Normalen, bestehen.
 
 ![IMAGE](images/1-6-1/01_mesh-structure.png)
 >1. Polygonnetzeckpunkte (Eckpunkte)
 2. Polygonnetzkanten (Kanten)
 3. Polygonnetzflächen (Netzflächen)
 
-####1.6.1.1 Grundsätzliche Anatomie von Polygonnetzen
+#### 1.6.1.1 Grundsätzliche Anatomie von Polygonnetzen
 
 Grasshopper definiert Polygonnetze mit einer Netzflächen-Eckpunkte Datenstruktur. Auf der einfachsten Ebene ist diese Struktur eine Ansammlung von Punkten, die in Polygonen gruppiert sind. Die Punkte des Polygonnetzes nennen wir *Eckpunkte (Vertices)*, während die Polygone *Netzflächen (faces)* genannt werden. Um ein Polygonnetz zu erstellen, benötigen wir eine Liste von Eckpunkten und ein System, um diese in "Netzflächen" zu gruppieren.
 
@@ -61,7 +61,7 @@ Es ist extrem wichtig, der Ordnung der Indices Aufmerksamkeit zu schenken, wenn 
 >1. Eine viereckige Netzfläche mit den Indices 0,1,2,3
 2. Eine viereckige Netzfläche mit den Indices 0,3,1,2
 
-####1.6.1.2 Implizite Polygonnetz Daten
+#### 1.6.1.2 Implizite Polygonnetz Daten
 
 Zusätzlich zu Netzflächen und Eckpunkten gibt es andere Informationen über Polygonnetze, die wir benutzen werden. In Netzfläche-Eckpunkt-basierten Polygonnetzen werden Daten wie *edges* und *normals* basierend auf Netzflächen und Eckpunkten implizit kalkuliert. Dieser Abschnitt beschreibt, wie wir diese Informationen erheben.
 
@@ -108,7 +108,7 @@ Während die Eckpunktnormalen weniger intuitiv berechnet werden, sind sie doch w
 >1. Normalen entsprechend der Netzflächennormalen ergeben eine diskrete, polygonale Schattierung
 2. Angrenzende Netzflächennormale werden gegeneinander ausgemittelt, um Eckpunktnormalen zu erzeugen, was zu einer geglätteten Schattierung entlang der Oberflächen führt.
 
-####1.6.1.3 Polygonnetzeigenschaften
+#### 1.6.1.3 Polygonnetzeigenschaften
 
 Polygonnetze können andere Eigenschaften mit den Eckpunkten oder Netzflächen verknüpft haben. Die einfachste dieser Eigenschaften ist die Eckpunktfarbe, welche unterhalb beschrieben wird, aber auch andere Eigenschaften existieren, wie UV Koordinaten von Texturen (Manche Programme erlauben auch Eckpunktnormalen als Eigenschaften, anstatt wie in unserem Fall abgeleitet von Oberflächen oder Eckpunkten, welche dann noch größere Flexibilität in der Erscheinung der gerenderten Fläche erlauben).
 
@@ -125,7 +125,7 @@ Während die oben aufgeführten Beispiele das gesamte Polygonnetz einfärbten, w
 >1. Rot, grün und blau werden an den drei Eckpunkten des Polygonnetzes zugewiesen
 2. Das resultierende Polygonnetz interpoliert die Farben der Eckpunkte
 
-####1.6.1.4 Übung
+#### 1.6.1.4 Übung
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
 >Beispieldateien zu diesem Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}

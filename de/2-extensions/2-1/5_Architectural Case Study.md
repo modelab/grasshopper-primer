@@ -1,11 +1,11 @@
-###2.1.5. Architektonisches Fallbeispiel 
+### 2.1.5. Architektonisches Fallbeispiel 
 
-#####In diesem Abschnitt werden wir uns durch eine einfache ‹bungsdatei arbeiten, die als Einf¸hrung f¸r die Arbeit mit dem Elementwerkzeug gedacht ist. Wir werden einige Muster und Fassadengestaltungen im Feld der Architektur erkunden, welche die Halbdatenstrukturen zusammen mit einfachen Elemtkomponenten ohne die Nutzung von polygonnetzeckpunktbezogenen Funktionen einarbeiten.
+##### In diesem Abschnitt werden wir uns durch eine einfache √úbungsdatei arbeiten, die als Einf√ºhrung f√ºr die Arbeit mit dem Elementwerkzeug gedacht ist. Wir werden einige Muster und Fassadengestaltungen im Feld der Architektur erkunden, welche die Halbdatenstrukturen zusammen mit einfachen Elemtkomponenten ohne die Nutzung von polygonnetzeckpunktbezogenen Funktionen einarbeiten.
 
 ![IMAGE](images/2-1-5/2-1-5_001_Main-Render.jpg)
 
 
-####2.1.5.1 Beispiel 1
+#### 2.1.5.1 Beispiel 1
 
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
 >Beispieldateien zu diesem Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
@@ -28,15 +28,15 @@ thead {display: none}
 
 ||||
 |--|--|--|
-|00.| Erstelle eine Polygonnetzebene in Rhino mit **XFaces = 2 & YFaces = 2** und beginne eine neue Definition, dr¸cke Strg-N (in Grasshopper)||
+|00.| Erstelle eine Polygonnetzebene in Rhino mit **XFaces = 2 & YFaces = 2** und beginne eine neue Definition, dr√ºcke Strg-N (in Grasshopper)||
 |01.| **Params/Geometry/Mesh** - Ziehe einen **Mesh** Container auf die Leinwand|![IMAGE](images/2-1-5/2-1-5_004_Mesh.png)|
-|01b.| Referenziere das Polygonnetz aus Rhino indem Du auf die **Mesh** Komponente rechtsklickst und "Set one Mesh" ausw‰hlst. <br><blockquote>Wir werden eine einfache Polygonnetzebene verwenden, um Dich durch die Definition zu f¸hren, f¸hle Dich frei, das Polygonnetz durch ein beliebiges eigenes Polygonnetz zu ersetzen</blockquote>||
+|01b.| Referenziere das Polygonnetz aus Rhino indem Du auf die **Mesh** Komponente rechtsklickst und "Set one Mesh" ausw√§hlst. <br><blockquote>Wir werden eine einfache Polygonnetzebene verwenden, um Dich durch die Definition zu f√ºhren, f√ºhle Dich frei, das Polygonnetz durch ein beliebiges eigenes Polygonnetz zu ersetzen</blockquote>||
 |02.| **Element\*/Utility/Mesh Combine and Clean** - Ziehe eine **Element* Mesh Combine and Clean** Komponente auf die Leinwand|![IMAGE](images/2-1-5/2-1-5_005_Combine-and-Clean.png)|
 |03.| **Element\*/Data/Vertex Neighbors** - Ziehe eine **Element* Vertex Neighbors** Komponente auf die Leinwand| ![IMAGE](images/2-1-5/2-1-5_006_Vertex-Neighbors.png)|
 |04.| **Params/Input/Number Slider** - Ziehe eine **Number Slider** Komponente auf die Leinwand und setze folgende Werte: <ul>Lower Limit: 0.0000<br>Upper Limit: 1.0000</ul>||
 |05.| **Curve/Analysis/Evaluate Curve** - Ziehe eine **Evaluate Curve** Komponente auf die Leinwand|![IMAGE](images/2-1-5/2-1-5_007_Evaluate-Curve.png)|
 |05b.| Verbinde den Benachbarte Kanten (NE) Ausgabeparameter der **Element* Vertex Neighbors** Komponente mit dem Kurve (C) Eingabeparameter der **Evaluate Curve** Komponente||
-|05c.| Verbinde den **Number Slider** mit dem Flieﬂkomma (t) Eingabeparameter der **Evaluate Curve** Komponente und setze den Wert auf 0.5000||
+|05c.| Verbinde den **Number Slider** mit dem Flie√ükomma (t) Eingabeparameter der **Evaluate Curve** Komponente und setze den Wert auf 0.5000||
 |05d.| Rechtsklicke auf den Kurve (C) Eingabeparameter der **Evaluate Curve** Komponente und aktiviere **Reparameterize** |||
 
 ![IMAGE](images/2-1-5/2-1-5_008_Definition.png)
@@ -51,7 +51,7 @@ thead {display: none}
 |08.| **Vector/Vector/Amplitude** - Ziehe eine **Amplitude** Komponente auf die Leinwand|![IMAGE](images/2-1-5/2-1-5_010_Vec-Amplitude.png)|
 |09.| **Transform/Euclidean/Move** - Ziehe eine **Move** Komponente auf die Leinwand|![IMAGE](images/2-1-5/2-1-5_011_Transform-Move.png)|
 |10.| **Params/Geometry/Point** - Ziehe einen **Point** Container auf die Leinwand|![IMAGE](images/2-1-5/2-1-5_012_Point.png)|
-|10b.| Verbinde den Netzfl‰chenmittelpunkt Ausgabeparameter (FC) der **Element* Vertex Neighbors** Komponente mit dem **Point** Container||
+|10b.| Verbinde den Netzfl√§chenmittelpunkt Ausgabeparameter (FC) der **Element* Vertex Neighbors** Komponente mit dem **Point** Container||
 |11.| **Sets/List/Weave** - Ziehe eine **Weave** Komponente auf die Leinwand|![IMAGE](images/2-1-5/2-1-5_013_Weave.png)||
 
 
@@ -64,7 +64,7 @@ thead {display: none}
 |12.| **Curve/Primitive/Polyline** - Ziehe eine **Polyline** Komponente auf die Leinwand|![IMAGE](images/2-1-5/2-1-5_016_Polyline.png)|
 |12b.| Verbinde den Gewebe Ausgabeparameter (W) der **Weave** Komponente mit dem Eckpunkte (V) Eingabeparameter der **Polyline** Komponente||
 |12c.| Rechtsklicke auf den Geschlossene Kurve (C) Eingabeparameter der **Polyline** Komponente, klicke "Set Boolean" und setze den Wert auf Wahr <br><blockquote>Nun wurde eine geschlossene Polylinie erzeugt.</blockquote>||
-|13.| **Params/Input/Number Slider** - Ziehe eine **Number Silder** Komponente auf die Leinwand. Wir werden das Standardintervall von 0 bis 1 f¸r diesen Schieberegler beibehalten||
+|13.| **Params/Input/Number Slider** - Ziehe eine **Number Silder** Komponente auf die Leinwand. Wir werden das Standardintervall von 0 bis 1 f√ºr diesen Schieberegler beibehalten||
 |14.| **Element\*/Transform/Mesh Frame** - Ziehe eine **Element* Mesh Frame** Komponente auf die Leinwand.|![IMAGE](images/2-1-5/2-1-5_017_Mesh-Frame.png)|
 |14b.| Verbinde den Polylinie (Pl) Ausgabeparameter der **Polyline** Komponente mit dem Geometrie (G) Eingabeparameter der **Mesh Frame** Komponente <br><blockquote>Merke, dass die **Mesh Frame** Komponente entweder Polygonnetze oder eine Liste von geschlossenen Polylinien als Eingabe annehmen kann</blockquote>||
 |14c.| Verbinde die **Number Slider** Komponente mit dem Faktor (F) Eingabeparameter der **Mesh Frame** Komponente|||
@@ -75,10 +75,10 @@ thead {display: none}
 ||||
 |--|--|--|
 |15.| **Element\*/Utility/Mesh Combine and Clean** - Ziehe eine **Element* Mesh Combine and Clean** Komponente auf die Leinwand|![IMAGE](images/2-1-5/2-1-5_019_Combine-and-Clean.png) |
-|15b.| Rechtsklicke auf den Verbinde Typ (CT) Eingabeparameter der **Element* Mesh Combine and Clean** Komponente, klicke "Set Integer" und setze den Wert auf 1. <br><blockquote>Der Verbinde Typ Eingabeparameter hat zwei Optionen (0, kombiniert und s‰ubert die Polygonnetze) und (1, verbindet die Polygonnetze in der Liste ohne die Eckpunkte zu verschmelzen). In diesem Beispiel wollen wir die Polygonnetze verbinden  </blockquote>||
-|16.| Rechtsklicke den Polygonnetz (M) Eingabeparameter der **Element* Mesh Combine and Clean** Komponente, klicke "Flatten". <br><blockquote>Dies wird die Liste auf eine Ebene reduzieren, damit wir die Liste von Polygonnetzen miteinander Verbinden kˆnnen.</blockquote>||
+|15b.| Rechtsklicke auf den Verbinde Typ (CT) Eingabeparameter der **Element* Mesh Combine and Clean** Komponente, klicke "Set Integer" und setze den Wert auf 1. <br><blockquote>Der Verbinde Typ Eingabeparameter hat zwei Optionen (0, kombiniert und s√§ubert die Polygonnetze) und (1, verbindet die Polygonnetze in der Liste ohne die Eckpunkte zu verschmelzen). In diesem Beispiel wollen wir die Polygonnetze verbinden  </blockquote>||
+|16.| Rechtsklicke den Polygonnetz (M) Eingabeparameter der **Element* Mesh Combine and Clean** Komponente, klicke "Flatten". <br><blockquote>Dies wird die Liste auf eine Ebene reduzieren, damit wir die Liste von Polygonnetzen miteinander Verbinden k√∂nnen.</blockquote>||
 |17.| **Element\*/Utility/Mesh Status** - Ziehe eine **Element* Mesh Status** Komponente auf die Leinwand|![IMAGE](images/2-1-5/2-1-5_020_Mesh-Status.png) |
-|17b| Verbinde Informations (I) und Status (S) Ausgabeparameter der **Element* Mesh Status** mit der **Params/Input/Panel** Komponente <br><blockquote>Der Polygonnetz **Info** Ausgabeparameter enth‰lt Polygonnetzvalidit‰tsinformationen, ob der Typ des Polygonnetzes offen oder geschlossen ist und die Anzahl der verschiedenen Polygonnetzbestandteile (Eckpunkte, Netzfl‰chen, Normalen). Der Polygonnetz **Status** informiert den Nutzer ob das Polygonnetz in "gutem" Zustand ist und liefert Daten ¸ber die Anzahl mannigfaltiger Kanten, ungenutzter Eckpunkte, degenerierter Netzfl‰chen, freier Kanten und unverbundener Polygonnetze. </blockquote>||
+|17b| Verbinde Informations (I) und Status (S) Ausgabeparameter der **Element* Mesh Status** mit der **Params/Input/Panel** Komponente <br><blockquote>Der Polygonnetz **Info** Ausgabeparameter enth√§lt Polygonnetzvalidit√§tsinformationen, ob der Typ des Polygonnetzes offen oder geschlossen ist und die Anzahl der verschiedenen Polygonnetzbestandteile (Eckpunkte, Netzfl√§chen, Normalen). Der Polygonnetz **Status** informiert den Nutzer ob das Polygonnetz in "gutem" Zustand ist und liefert Daten √ºber die Anzahl mannigfaltiger Kanten, ungenutzter Eckpunkte, degenerierter Netzfl√§chen, freier Kanten und unverbundener Polygonnetze. </blockquote>||
 |18.| **Params/Input/Colour Swatch** - Ziehe eine **Colour Swatch** Komponente auf die Leinwand||
 |19.| **Display/Preview/Custom Preview** - Ziehe eine **Custom Preview** Komponente auf die Leinwand|||
 
@@ -87,7 +87,7 @@ thead {display: none}
 ![IMAGE](images/2-1-5/2-1-5_022_Definition.png)
 ---
 
-####2.1.5.2 Beispiel 2
+#### 2.1.5.2 Beispiel 2
 
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
 >Beispieldateien zu diesem Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
@@ -107,9 +107,9 @@ thead {display: none}
 ---
 ||||
 |--|--|--|
-|00.| Erstelle eine Polygonnetzebene in Rhino mit **XFaces = 2 & YFaces = 2** und beginne eine neue Definition, dr¸cke Ctrl-N (in Grasshopper)||
+|00.| Erstelle eine Polygonnetzebene in Rhino mit **XFaces = 2 & YFaces = 2** und beginne eine neue Definition, dr√ºcke Ctrl-N (in Grasshopper)||
 |01.| **Params/Geometry/Mesh** - Ziehe einen **Mesh** Container auf die Leinwand|![IMAGE](images/2-1-5/2-1-5_024_Mesh.png)|
-|01b.| Referenziere ein Polygonnetz in Rhino indem Du auf den **Mesh** Container rechtsklickst und "Set one Mesh" w‰hlst. <br><blockquote> Wir werden eine einfache Polygonnetzebene nutzen, um durch die Definition zu gehen. Du kannst gerne auch die Polygonnetzebene durch ein eigenes Polygonnetz ersetzen.</blockquote>||
+|01b.| Referenziere ein Polygonnetz in Rhino indem Du auf den **Mesh** Container rechtsklickst und "Set one Mesh" w√§hlst. <br><blockquote> Wir werden eine einfache Polygonnetzebene nutzen, um durch die Definition zu gehen. Du kannst gerne auch die Polygonnetzebene durch ein eigenes Polygonnetz ersetzen.</blockquote>||
 |02.| **Element\*/Utility/Mesh Combine and Clean** - Ziehe eine **Element* Mesh Combine and Clean** Komponente auf die Leinwand|![IMAGE](images/2-1-5/2-1-5_025_Combine-and-Clean.png)|
 |03.| **Element\*/Data/Vertex Neighbors** - Ziehe eine **Element* Vertex Neighbors** Komponente auf die Leinwand| ![IMAGE](images/2-1-5/2-1-5_026_Vertex-Neighbors.png)|
 |04.| **Vector/Vector/Vector2Pt** - Ziehe eine **Vector2Pt** Komponente auf die Leinwand|![IMAGE](images/2-1-5/2-1-5_027_Vector-2pt.png)|
@@ -127,12 +127,12 @@ thead {display: none}
 |11,12.| **Element\*/Transform/Mesh Frame** - Ziehe eine **Element* Mesh Frame** Komponente auf die Leinwand.|![IMAGE](images/2-1-5/2-1-5_033_Mesh-Frame.png)|
 |11b,12b.| Verbinde den Polylinie (Pl) Ausgabeparameter der **Polyline** Komponente mit dem Geometrie (G) Eingabeparameter der **Mesh Frame** Komponente <br><blockquote>Merke, dass die **Mesh Frame** Komponente entweder Polygonnetze oder eine Liste aus geschlossenen Polygonlinien als Eingabe annehmen kann</blockquote>||
 |11c,12c.| Verbinde den **Number Slider (10)** mit dem Faktor (F) Eingabeparameter der **Mesh Frame** Komponente||
-|13,14.| **Element\*/Subdivide/Catmull Clark Subdivision** - Ziehe eine **Catmull Clark Subdivision** Komponente auf die Leinwand <br><blockquote> Wir werden den Wert des Iteration Eingabeparameter (I) auf 1 setzen und den **Kantenbedingung** Eingabeparameter (E) auf den Wert 1. Der Kantenbedingung Eingabeparameter hat die Optionen 0 = fixiert, 1 == gegl‰ttet, 2 == Eckpunkte fixiert.  </blockquote>|![IMAGE](images/2-1-5/2-1-5_034_Catmull-Clark.png)|
+|13,14.| **Element\*/Subdivide/Catmull Clark Subdivision** - Ziehe eine **Catmull Clark Subdivision** Komponente auf die Leinwand <br><blockquote> Wir werden den Wert des Iteration Eingabeparameter (I) auf 1 setzen und den **Kantenbedingung** Eingabeparameter (E) auf den Wert 1. Der Kantenbedingung Eingabeparameter hat die Optionen 0 = fixiert, 1 == gegl√§ttet, 2 == Eckpunkte fixiert.  </blockquote>|![IMAGE](images/2-1-5/2-1-5_034_Catmull-Clark.png)|
 |15.| **Sets/Tree/Merge** - Ziehe zwei **Merge** Komponenten auf die Leinwand|![IMAGE](images/2-1-5/2-1-5_035_Merge.png)|
 |15b.| Rechtsklicke den Ergebnis (R) Ausgabeparameter der **Merge** Komponente und klicke "Flatten". ||
 |16.| **Element\*/Utility/Mesh Combine and Clean** - Ziehe eine **Element* Mesh Combine and Clean** Komponente auf die Leinwand|![IMAGE](images/2-1-5/2-1-5_036_Combine-and-Clean.png)||
 
->Komponenten haben detaillierte Anmerkungen und Warnungen, um den Nutzer ¸ber gegenw‰rtige oder potentielle Probleme zu informieren, die aus der Interaktion mit anderen Komponenten entstehen kˆnnen. In manchen Momenten kannst Du die Element* Combine and Clean Komponente heranziehen, um Polygonnetze zu verbinden und identische Eckpunkte in einem Polygonnetz verschmelzen, was dann zu nichtmanningfaltigen Kanten f¸hren kann, wenn das Polygonnetz sp‰ter mit einer Wandst‰rke versehen wird. Die Element* Combine and Clean Komponente wird Dich dann ¸ber diese Angelegenheit informieren und eine entsprechende Liste an Dich zur¸ckgeben. Du hast die Option den Wert f¸r die Art der Kombination (Combine Type) auf 1 zu setzen, wodurch die Polygonnetze in der Liste kombiniert werden, identische Eckpunkte aber nicht verschmolzen werden.
+>Komponenten haben detaillierte Anmerkungen und Warnungen, um den Nutzer √ºber gegenw√§rtige oder potentielle Probleme zu informieren, die aus der Interaktion mit anderen Komponenten entstehen k√∂nnen. In manchen Momenten kannst Du die Element* Combine and Clean Komponente heranziehen, um Polygonnetze zu verbinden und identische Eckpunkte in einem Polygonnetz verschmelzen, was dann zu nichtmanningfaltigen Kanten f√ºhren kann, wenn das Polygonnetz sp√§ter mit einer Wandst√§rke versehen wird. Die Element* Combine and Clean Komponente wird Dich dann √ºber diese Angelegenheit informieren und eine entsprechende Liste an Dich zur√ºckgeben. Du hast die Option den Wert f√ºr die Art der Kombination (Combine Type) auf 1 zu setzen, wodurch die Polygonnetze in der Liste kombiniert werden, identische Eckpunkte aber nicht verschmolzen werden.
 
 ![IMAGE](images/2-1-5/2-1-5_037_Definition.png)
 ---
@@ -144,15 +144,15 @@ thead {display: none}
 |17b| Verbinde den Polygonnetz (M) Ausgabeparameter der **Element* Mesh Combine and Clean** Komponente (16) mit dem Polygonnetz Eingabeparameter (M) der **Element* Mesh Edges** Komponente ||
 |18.| **Params/Input/Number Slider** - Ziehe eine **Number Slider** Komponente auf die Leinwand und setze folgende Werte: <ul>Rounding: Float<br>Lower Limit:0<br>Upper Limit: 1.000</ul>||
 |19.| **Element\*/Transform/Mesh Frame** - Ziehe eine **Element* Mesh Frame** Komponente auf die Leinwand.|![IMAGE](images/2-1-5/2-1-5_040_Mesh-Frame.png)|
-|19b| Verbinde den Netzfl‰chenpolylinien (FP) Ausgabeparameter der **Element* Mesh Edges** Komponente mit dem Polygonnetz Eingabeparameter (M) der **Element* Mesh Frame** Komponente ||
-|19c| Verbinde den **Number Slider** mit dem Flieﬂkomma (f) Eingabeparameter der **Element* Mesh Frame** Komponente ||
+|19b| Verbinde den Netzfl√§chenpolylinien (FP) Ausgabeparameter der **Element* Mesh Edges** Komponente mit dem Polygonnetz Eingabeparameter (M) der **Element* Mesh Frame** Komponente ||
+|19c| Verbinde den **Number Slider** mit dem Flie√ükomma (f) Eingabeparameter der **Element* Mesh Frame** Komponente ||
 |20.| **Element\*/Utility/Mesh Combine and Clean** - Ziehe eine **Element* Mesh Combine and Clean** Komponente auf die Leinwand|![IMAGE](images/2-1-5/2-1-5_041_Combine-and-Clean.png)|
 |21.| Rechtsklicke den Polygonnetz (M) Eingabeparameter der **Element* Mesh Combine and Clean** Komponente und klicke "Flatten". ||
-|22.| Rechtsklicke auf den Art der Kombination (CT) Eingabeparameter der **Element* Mesh Combine and Clean** Komponente, klicke "Set Integer" und setze den Wert auf 1. <br><blockquote>Der Art der Kombination Eingabeparameter hat zwei Optionen (0, wodurch die Polygonnetze verbunden und ges‰ubert werden) und (1, wodurch die Polygonnetze in der Liste verbunden, die Eckpunkte jedoch nicht verschmolzen werden). In diesem Beispiel wollen wir die Polygonnetze verbinden</blockquote>||
+|22.| Rechtsklicke auf den Art der Kombination (CT) Eingabeparameter der **Element* Mesh Combine and Clean** Komponente, klicke "Set Integer" und setze den Wert auf 1. <br><blockquote>Der Art der Kombination Eingabeparameter hat zwei Optionen (0, wodurch die Polygonnetze verbunden und ges√§ubert werden) und (1, wodurch die Polygonnetze in der Liste verbunden, die Eckpunkte jedoch nicht verschmolzen werden). In diesem Beispiel wollen wir die Polygonnetze verbinden</blockquote>||
 |23.| **Params/Input/Colour Swatch** - Ziehe eine **Colour Swatch** Komponente auf die Leinwand||
 |24.| **Display/Preview/Custom Preview** - Ziehe eine **Custom Preview** Komponente auf die Leinwand||
 |25.| **Element\*/Utility/Mesh Status** - Ziehe eine **Element* Mesh Status** Komponente auf die Leinwand|![IMAGE](images/2-1-5/2-1-5_042_Mesh-Status.png) |
-|25b| Verbinde die Information (I) und Status (S) Ausgabeparameter der **Element* Mesh Status** Komponente mit einer **Params/Input/Panel** Komponente <br><blockquote>Der Polygonnetz **Information** Ausgabeparameter enth‰lt Daten ¸ber die korrekte Definition des Polygonnetzes, ob es geschlossen oder offen ist und die Anzahl der verschiedenen Polygonnetzkomponenten (Eckpunkte, Netzfl‰chen, Normalen). Der Polygonnetz **Status** informiert den Nutzer, ob das Polygonnetz in "gutem" Zustand ist und liefert Daten ¸ber die nicht mannigfaltigen Kanten, Anzahl der ungenutzten Eckpunkte, Anzahl der degenerierten Netzfl‰chen, Anzahl der freien Kanten und Anzahl unverbundener Polygonnetze. </blockquote>|||
+|25b| Verbinde die Information (I) und Status (S) Ausgabeparameter der **Element* Mesh Status** Komponente mit einer **Params/Input/Panel** Komponente <br><blockquote>Der Polygonnetz **Information** Ausgabeparameter enth√§lt Daten √ºber die korrekte Definition des Polygonnetzes, ob es geschlossen oder offen ist und die Anzahl der verschiedenen Polygonnetzkomponenten (Eckpunkte, Netzfl√§chen, Normalen). Der Polygonnetz **Status** informiert den Nutzer, ob das Polygonnetz in "gutem" Zustand ist und liefert Daten √ºber die nicht mannigfaltigen Kanten, Anzahl der ungenutzten Eckpunkte, Anzahl der degenerierten Netzfl√§chen, Anzahl der freien Kanten und Anzahl unverbundener Polygonnetze. </blockquote>|||
 
 
 ![IMAGE](images/2-1-5/2-1-5_043_Diagram.png)

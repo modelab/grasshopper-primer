@@ -1,8 +1,8 @@
-﻿##2.3. Ressourcen
+## 2.3. Ressourcen
 
-#####Es sind viele Ressourcen verfügbar, um mehr über Grasshopper und parametrische Entwurfskonzepte zu lernen. Außerdem gibt es mehrere hundert Plugins und Addons, um die Funktionalität von Grasshopper zu erweitern. Unterhalb sind einige unserer Favoriten.
+##### Es sind viele Ressourcen verfügbar, um mehr über Grasshopper und parametrische Entwurfskonzepte zu lernen. Außerdem gibt es mehrere hundert Plugins und Addons, um die Funktionalität von Grasshopper zu erweitern. Unterhalb sind einige unserer Favoriten.
 
-###Plug-in Gemeinschaften
+### Plug-in Gemeinschaften
 <style>
 .page-inner h3{clear:both}
 .page-inner p{clear:both}
@@ -18,7 +18,7 @@ http://www.food4rhino.com/
 Grasshopper Addon Seite
 http://www.grasshopper3d.com/page/addons-forgrasshopper
 <br>
-###Addons, die wir lieben
+### Addons, die wir lieben
 
 ![IMAGE](images/diva.png)
 DIVA-für-Rhino ermöglicht es Nutzern, eine Anzahl verschiedener umweltbezogener Leistungsbewertungen für individuelle Gebäude und urbane Landschaften durchzuführen.
@@ -99,11 +99,11 @@ http://www.morphogenesism.com/media.html
 Dieser Primer beabsichtigt das Lehren von Programmierung für absolute Anfänger und eine schnelle Einführung in die Methoden in Rhino für Leute irgendwo zwischen Gelegenheitsprogrammierer und Entwicklungsexperten. Geschrieben von Skylar Tibbits.
 http://www.rhino3d.com/download/IronPython/5.0/RhinoPython101
 
-###General References
+### General References
 **Wolfram MathWorld** ist eine webbasierte Mathematikressource, zusammengestellt von Eric W. Weisstein mit der Unterstützung tausender Mitwirkender. Seit der Inhalt 1995 zum ersten Mal im Internet erschien, etablierte sich MathWorld als Netzknoten für mathematische Informationen in mathematischen und bildungsbasierten Gemeinschaften. Seine Einträge sind weitgehend in Journalen und Büchern über alle Bildungsebenen referenziert. 
 http://mathworld.wolfram.com/
 
-###Weitere Lektüre
+### Weitere Lektüre
 Burry, Jane, and Mark Burry. *The New Mathematics of Architecture.* London: Thames & Hudson, 2010.
 
 Burry, Mark. *Scripting Cultures: Architectural Design and Programming.* Chichester, UK: Wiley, 2011.

@@ -1,6 +1,6 @@
-﻿### 1.6.2 Topologie verstehen
+### 1.6.2 Topologie verstehen
 
-#####Während die Eckpunkte eines Polygonnetzes Information über Positionen erhält, sind es wirklich die Verbindungen zwischen den Eckpunkten, die einer Polygonnetzstruktur ihre einzigartige Struktur und Flexibilität geben.
+##### Während die Eckpunkte eines Polygonnetzes Information über Positionen erhält, sind es wirklich die Verbindungen zwischen den Eckpunkten, die einer Polygonnetzstruktur ihre einzigartige Struktur und Flexibilität geben.
 
 ![IMAGE](images/1-6-2/01_meshMorph2.png)
 
@@ -28,7 +28,7 @@ Es ist möglich für zwei bestimmte Polygonnetzformen topologisch identisch zu s
 ![IMAGE](images/1-6-2/05_Mug_and_Torus_morph.gif)
 >Topologisch equivalente Schale und Donut 
  
-####1.6.2.2 Polygonnetzcharakteristika
+#### 1.6.2.2 Polygonnetzcharakteristika
 
 **Orientierbar**
 
@@ -71,7 +71,7 @@ Polygonnetze auf der anderen Seite werden durch eine konkrete Anzahl von genau d
 
 >Anmerkung - Während ein Polygonnetz keine implizite UV Parametrisierung hat, ist es manchmal sinnvoll eine solche Parametrisierung anzuwenden, um eine Textur oder ein Bild auf eine Polygonnetzgeometie anzuwenden, um sie zu rendern. Manche Modellierungsprogramme haben deshalb die Möglichkeit UV Koordinaten für Polygonnetze als *Attribute* (ähnlich wie Eckpunktfarben) den Eckpunkten zuzuweisen, die dann bearbeitet und verändert werden können. Diese sind normalerweise zugewiesen und werden nicht durch das Polygonnetz selbst bestimmt.
 
-#####Lokale und globale Einflüsse
+##### Lokale und globale Einflüsse
 
 Ein wichtiger Unterschied ist der Umfang, in welchem lokale Veränderungen in einem Polygonnetz oder einer NURBS Geometie die Gesamtform beeinflussen. Polygonnetzgeometien sind komplett lokal. Einen Eckpunkt zu bewegen beeinflusst lediglich angrenzende Netzflächen. Bei NURBS Flächen wird der Umfang des Einflusses einer Veränderung komplizierter und hängt vom Grad der Fläche und den Gewichtungen und Knoten der Kontrollpunkte ab. Generell jedoch wird die Bewegung eines einzelnen Kontrollpunktes einer NURBS Fläche eine globalere Veränderung der Geometrie bedeuten.
 

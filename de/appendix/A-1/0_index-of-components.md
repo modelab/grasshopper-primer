@@ -1,4 +1,4 @@
-﻿<style>
+<style>
 h4{color: #008DB2}
 td {background-color:white; vertical-align:top}
 td img{
@@ -19,11 +19,11 @@ thead {display: none}
 
 ## 2.1. Index
 
-#####Dieser Index stellt zusätzliche Informationen über alle Komponenten, die in diesem Primer verwendet werden, zur Verfügung und ergänzt diese mit weiteren Komponenten, die Du nützlich finden könntest. Hier findest Du eine Einführung in die Welt der über 500 Komponenten im Grasshopper Plugin.
+##### Dieser Index stellt zusätzliche Informationen über alle Komponenten, die in diesem Primer verwendet werden, zur Verfügung und ergänzt diese mit weiteren Komponenten, die Du nützlich finden könntest. Hier findest Du eine Einführung in die Welt der über 500 Komponenten im Grasshopper Plugin.
 
 --
 
-####Geometrie
+#### Geometrie
 ||||
 |--|--|--|
 |<a name="PGCrv"></a>P.G.Crv|Curve Parameter<br>Stellt eine Sammlung von Kurvengeometrien dar. Kurvengeometrien sind der gemeinsame Nenner aller Kurvenarten in Grasshopper.|![IMAGE](images/PGCrv.png)|
@@ -33,7 +33,7 @@ thead {display: none}
 |<a name="PGPt"></a>P.G.Pt|Point Parameter<br>Punktparameter können persistente Daten speichern. Du kannst einen persistenten Eintrag durch das Parametermenü herstellen.|![IMAGE](images/PGPt.png)|
 |<a name="PGSrf"></a>P.G.Srf|Surface Parameter<br>Stellt eine Kollektion von Flächengeometrien dar. Flächengeometrien sind der gemeinsame Nenner aller Flächenarten in Grasshopper.|![IMAGE](images/PGSrf.png)|
 
-####Grundparameter
+#### Grundparameter
 ||||
 |--|--|--|
 |<a name="PPBool"></a>P.P.Bool|Boolean Parameter<br>Stellt eine Sammlung von boolschen Werten (Wahr/Falsch) dar.|![IMAGE](images/PPBool.png)|
@@ -44,7 +44,7 @@ thead {display: none}
 |<a name="PPNum"></a>P.P.Num|Number Parameter<br>Stellt eine Kollektion von Fließkommawerten dar. Numerische Parameter können persistente Daten speichern. Du kannst einen persistenten Eintrag durch das Parametermenü hinzufügen.|![IMAGE](images/PPNum.png)|
 |<a name="PPPath"></a>P.P.Path|File Path<br>Enthält eine Sammlung von Dateipfaden.|![IMAGE](images/PPPath.png)|
 
-####Eingabeparameter
+#### Eingabeparameter
 ||||
 |--|--|--|
 |<a name="PIToggle"></a>P.I.Toggle|Boolean Toggle<br>Boolscher Schalter (Wahr/Falsch).|![IMAGE](images/PIToggle.png)|
@@ -56,7 +56,7 @@ thead {display: none}
 |<a name="PIPanel"></a>P.I.Panel|Panel<br>Die Paneelkomponente wird für benutzerdefinierte Notizen und Textwerte genutzt. Sie ist typischerweise ein passives Element, das es erlaubt, Anmerkungen und Erklärungen in das Dokument einzufügen. Panelle können ihre Informationen auch aus anderen Quellen beziehen. Wenn Du einen Ausgabeparameter in ein Paneel einsteckst, kannst Du den Inhalt dieses Parameters in Echtzeit beobachten. Alle Daten in Grasshopper können auf diese Weise gesehen werden. Paneele können ihren Inhalt auch in eine Textdatei streamen.|![IMAGE](images/PIPanel.png)|
 |<a name="PIList"></a>P.I.List|Value List<br>Stellt eine Liste von voreingestellten Werten zur Verfügung, aus welchen gewählt werden kann.|![IMAGE](images/PIList.png)|
 
-####Nützliches
+#### Nützliches
 ||||
 |--|--|--|
 |<a name="P.U.Cin"></a>P.U.Cin|Cluster Input<br>Stellt einen Cluster Eingabeparameter dar.|![IMAGE](images/PUCin.png)|
@@ -69,7 +69,7 @@ thead {display: none}
 Mathematik
 --
 
-####Intervalle
+#### Intervalle
 ||||
 |--|--|--|
 |<a name="M.D.Bnd"></a>M.D.Bnd|Bounds<br>Erstellt ein numerisches Intervall, welches eine Liste von numerischen Werten umfasst.|![IMAGE](images/MDBnd.png)|
@@ -83,7 +83,7 @@ Mathematik
 |<a name="MDReMap"></a>M.D.ReMap|Remap Numbers<br>Zuweisung von Zahlen in ein neues numerisches Intervall.|![IMAGE](images/MDReMap.png)|
 
 
-####Operatoren
+#### Operatoren
 ||||
 |--|--|--|
 |<a name="MOAdd"></a>M.O.Add|Addition<br>Mathematische Addition.|![IMAGE](images/MOAdd.png)|
@@ -98,13 +98,13 @@ Mathematik
 |<a name="MOSimilar"></a>M.O.Similar|Similarity<br>Testet die Ähnlichkeit zweier Zahlen.|![IMAGE](images/MOSimilar.png)|
 |<a name="MOSub"></a>M.O.Sub|Subtraction<br>Mathematische Subtraktion.|![IMAGE](images/MOSub.png)|
 
-####Skripten
+#### Skripten
 ||||
 |--|--|--|
 |<a name="MSEval"></a>M.S.Eval|Evaluate<br>Wertet eine Funktion mit einer flexiblen Zahl als Variable aus.|![IMAGE](images/MSEval.png)|
 |<a name="MSExpression"></a>M.S.Expression|Expression<br>Wertet einen mathematischen Ausdruck aus.|![IMAGE](images/MSExpression.png)|
 
-####Trigonometrie
+#### Trigonometrie
 ||||
 |--|--|--|
 |<a name="MTCos"></a>M.T.Cos|Cosine<br>Berechnet den Kosinuswert.|![IMAGE](images/MTCos.png)|
@@ -112,7 +112,7 @@ Mathematik
 |<a name="MTRad"></a>M.T.Rad|Radians<br>Rechnet einen Winkel von Grad zu Bogenmaß um.|![IMAGE](images/MTRad.png)|
 |<a name="MTSin"></a>M.T.Sin|Sine<br>Berechnet den Sinuswert.|![IMAGE](images/MTSin.png)|
 
-####Nützliches
+#### Nützliches
 ||||
 |--|--|--|
 |<a name="MUAvr"></a>M.U.Avr|Average<br>Berechnet den arithmetrischen Durchschnitt für einen Satz von Objekten.|![IMAGE](images/MUAvr.png)|
@@ -122,7 +122,7 @@ Mathematik
 Sets
 --
 
-####Listen
+#### Listen
 ||||
 |--|--|--|
 |<a name="SLCombine"></a>S.L.Combine|Combine Data<br>Kombiniere nicht-null Elemente verschiedener Eingabeparameter.|![IMAGE](images/SLCombine.png)|
@@ -141,7 +141,7 @@ Sets
 |<a name="SLSort"></a>S.L.Sort|Sort List<br>Sortiere eine Liste numerischer Werte. Damit etwas sortiert werden kann, muss es zuerst vergleichbar sein. Die meisten Arten von Daten sind nicht vergleichbar; Zahlen und Buchstabenfolgen sind grundsätzlicherweise die einzigen Ausnahmen. Falls Du andere Datentypen, wie z.B. Kurven, sortieren willst, musst Du zuerst eine Liste von Werten erzeugen, auf deren Basis die Sortierung erfolgen kann.|![IMAGE](images/SLSort.png)|
 |<a name="SLWeave"></a>S.L.Weave|Weave<br>Webe mehrere Eingabedatensätze auf Basis eines benutzerdefinierten Musters. Das Muster wird bestimmt durch eine Liste von Indexwerten, die bestimmen in welcher Reihenfolge die Eingabedaten gewählt werden.|![IMAGE](images/SLWeave.png)|
 
-####Datensätze
+#### Datensätze
 ||||
 |--|--|--|
 |<a name="SSCulli"></a>S.S.Culli|Cull Index<br>Entferne Indexelemente von einer Liste.|![IMAGE](images/SSCulli.png)|
@@ -153,7 +153,7 @@ Sets
 |<a name="SSRepeat"></a>S.S.Repeat|Repeat Data<br>Wiederhole ein Datenmuster, bis er eine bestimmte Länge erreicht.|![IMAGE](images/SSRepeat.png)|
 |<a name="SSSeries"></a>S.S.Series|Series<br>Erstelle eine Serie von Werten. Die Werte sind gleichmäßig auf Grundlage des {Step} Wertes verteilt. Wenn Du Zahlen innerhalb eines bestimmten numerischen Intervalls verteilen willst, wähle stattdessen die [Range] Komponente.|![IMAGE](images/SSSeries.png)|
 
-####Datenbäume
+#### Datenbäume
 ||||
 |--|--|--|
 |<a name="STExplode"></a>S.T.Explode|Explode Tree<br>Extrahiert alle Äste aus einem Datenbaum.|![IMAGE](images/STExplode.png)|
@@ -170,21 +170,21 @@ Sets
 Vector
 --
 
-####Raster
+#### Raster
 ||||
 |--|--|--|
 |<a name="VGHexGrid"></a>V.G.HexGrid|Hexagonal<br>2D Raster mit hexagonalen Zellen.|![IMAGE](images/VGHexGrid.png)|
 |<a name="VGRecGrid"></a>V.G.RecGrid|Rectangular<br>2D Raster mit rechteckigen Zellen.|![IMAGE](images/VGRecGrid.png)|
 |<a name="VGSqGrid"></a>V.G.SqGrid|Square<br>2D Raster mit quadratischen Zellen|![IMAGE](images/VGSqGrid.png)|
 
-####Punkt
+#### Punkt
 ||||
 |--|--|--|
 |<a name="VPPt"></a>V.P.Pt|Construct Point<br>Konstruiere einen Punkt aus {xyz} Koordinaten.|![IMAGE](images/VPPt.png)|
 |<a name="VPpDecon"></a>V.P.pDecon|Deconstruct<br>Zerlege einen Punkt in seine Bestandteile.|![IMAGE](images/VPpDecon.png)|
 |<a name="VPDist"></a>V.P.Dist|Distance<br>Berechne den euklidischen Abstand zwischen zwei Punktkoordinaten.|![IMAGE](images/VPDist.png)|
 
-####Vektor
+#### Vektor
 ||||
 |--|--|--|
 |<a name="VVX"></a>V.V.X|Unit X<br>Einheitsvektor parallel der Welt {x} Achse.|![IMAGE](images/VVX.png)|
@@ -194,17 +194,17 @@ Vector
 Kurve
 --
 
-####Analyse
+#### Analyse
 ||||
 |--|--|--|
 |<a name="CACP"></a>C.A.CP|Control Points<br>Extrahiere die NURBS Kontroll- und Knotenpunkte aus einer Kurve.|![IMAGE](images/CACP.png)|
 
-####Division
+#### Division
 ||||
 |--|--|--|
 |<a name="CDDivide"></a>C.D.Divide|Divide Curve<br>Teile eine Kurve in gleichlange Segmente.|![IMAGE](images/CDDivide.png)|
 
-####Grundparameter
+#### Grundparameter
 ||||
 |--|--|--|
 |<a name="CPCir"></a>C.P.Cir|Circle<br>Erstelle einen Kreis definiert durch eine Grundebene und einen Radius.|![IMAGE](images/CPCir.png)|
@@ -213,7 +213,7 @@ Kurve
 |<a name="CPLine"></a>C.P.Line|Line SDL<br>Erstelle ein Liniensegment definiert durch Startpunkt, Richtung und Länge.|![IMAGE](images/CPLine.png)|
 |<a name="CPPolygon"></a>C.P.Polygon|Polygon<br>Erstelle ein Polygon mit optional gerundeten Kanten.|![IMAGE](images/CPPolygon.png)|
 
-####Spline
+#### Spline
 ||||
 |--|--|--|
 |<a name="CSIntCrv"></a>C.S.IntCrv|Interpolate<br>Erstelle eine interpolierte Kurve durch einen Satz von Punkten.|![IMAGE](images/CSIntCrv.png)|
@@ -221,7 +221,7 @@ Kurve
 |<a name="CSNurbs"></a>C.S.Nurbs|Nurbs Curve<br>Konstruiere eine NURBS Kurve aus Kontrollpunkten.|![IMAGE](images/CSNurbs.png)|
 |<a name="CSPLine"></a>C.S.PLine|PolyLine<br>Erstelle eine Polylinie, indem Du eine Anzahl von Punkten miteinander verbindest.|![IMAGE](images/CSPLine.png)|
 
-####Nützliches
+#### Nützliches
 ||||
 |--|--|--|
 |<a name="CUExplode"></a>C.U.Explode|Explode<br>Zerteile eine Kurve in kleinere Segmente.|![IMAGE](images/CUExplode.png)|
@@ -231,13 +231,13 @@ Kurve
 Flächen
 --
 
-####Analyse
+#### Analyse
 ||||
 |--|--|--|
 |<a name="SADeBrep"></a>S.A.DeBrep|Deconstruct Brep<br>Zerlege Polygonflächen in ihre Bestandteile.|![IMAGE](images/SADeBrep.png)|
 
 
-####Freiform
+#### Freiform
 ||||
 |--|--|--|
 |<a name="SFBoundary"></a>S.F.Boundary|Boundary Surfaces<br>Erstelle eine planare Fläche aus einer Sammlung von Begrenzungskurven.|![IMAGE](images/SFBoundary.png)|
@@ -247,12 +247,12 @@ Flächen
 |<a name="SFRevSrf"></a>S.F.RevSrf|Revolution<br>Erstelle eine Rotationsfläche.|![IMAGE](images/SFRevSrf.png)|
 |<a name="SFSwp2"></a>S.F.Swp2|Sweep2<br>Erstelle eine Sweepfläche entlang zweier Leitkurven.|![IMAGE](images/SFSwp2.png)|
 
-####Grundkörper
+#### Grundkörper
 ||||
 |--|--|--|
 |<a name="SPBBox"></a>S.P.BBox|Bounding Box<br>Erstelle eine Begrenzungskiste entlang einer orientierten Geometrie.|![IMAGE](images/SPBBox.png)|
 
-####Nützliches
+#### Nützliches
 ||||
 |--|--|--|
 |<a name="SUSDivide"></a>S.U.SDivide|Divide Surface<br>Generiere ein Raster von {uv} Punkten auf einer Fläche.|![IMAGE](images/SUSDivide.png)|
@@ -261,7 +261,7 @@ Flächen
 Polygonnetz
 --
 
-####Triangulation
+#### Triangulation
 ||||
 |--|--|--|
 |<a name="MTVoronoi"></a>M.T.Voronoi|Voronoi<br>Planares Voronoidiagramm aus einer Sammlung von Punkten.|![IMAGE](images/MTVoronoi.png)|
@@ -269,17 +269,17 @@ Polygonnetz
 Transformation
 --
 
-####Affine
+#### Affine
 ||||
 |--|--|--|
 |<a name="TARecMap"></a>T.A.RecMap|Rectangle Mapping<br>Transformiere eine Geometrie von einem Rechteck zu einem anderen.|![IMAGE](images/TARecMap.png)|
 
-####Anordnung
+#### Anordnung
 ||||
 |--|--|--|
 |<a name="TAArrLinear"></a>T.A.ArrLinear|Linear Array<br>Erstelle eine lineare Anordnung von Geometrien.|![IMAGE](images/TAArrLinear.png)|
 
-####Morph
+#### Morph
 ||||
 |--|--|--|
 |<a name="TMMorph"></a>T.M.Morph|Box Morph<br>Morphe ein Objekt in eine verzerrte Kiste.|![IMAGE](images/TMMorph.png)|
@@ -288,23 +288,23 @@ Transformation
 Anzeige
 --
 
-####Farbe
+#### Farbe
 ||||
 |--|--|--|
 |<a name="DCHSL"></a>D.C.HSL|Colour HSL<br>Erstelle eine Farbe aus Fließkomma {HSL} Kanälen.|![IMAGE](images/DCHSL.png)|
 
-####Dimensionen
+#### Dimensionen
 ||||
 |--|--|--|
 |<a name="DDTag"></a>D.D.Tag|Text tags<br>Eine Textschildkomponente ermöglicht es Dir einen kurzen String als Anzeigeelement im Ansichtsfenster darzustellen. Text und Position werden durch die Eingabeparameter bestimmt. Wenn Textschilder gebacken werden, werden sie zu Textpunkten.|![IMAGE](images/DDTag.png)|
 |<a name="DDTag3D"></a>D.D.Tag3D|Text Tag 3D<br>Stellt eine Liste von 3D Textschildern im Rhinoansichtsfenster dar|![IMAGE](images/DDTag3D.png)|
 
-####Vorschau
+#### Vorschau
 ||||
 |--|--|--|
 |<a name="DPPreview"></a>D.P.Preview|Custom Preview<br>Erlaubt eine benutzerdefinierte Vorschau für Geometrien.|![IMAGE](images/DPPreview.png)|
 
-####Vektor
+#### Vektor
 ||||
 |--|--|--|
 |<a name="DVPoints"></a>D.V.Points|Point List<br>Zeigt Details zu Punktlisten an.|![IMAGE](images/DVPoints.png)|

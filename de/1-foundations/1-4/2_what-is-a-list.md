@@ -1,6 +1,6 @@
-﻿### 1.4.2. Was ist eine Liste?
+### 1.4.2. Was ist eine Liste?
 
-#####Es ist hilfreich über Grasshopper in den Begriffen von Flüssen zu denken, da es eine graphische Benutzeroberfläche zur Bewegung von Datenflüssen in bestimmte Komponenten ist. Es sind jedoch die Daten, die den Informationsfluss in und aus bestimmten Typen von Komponenten bestimmen. Zu verstehen, wie Listen manipuliert werden, ist kritisch im Verständnis des Grasshopper Plug-Ins.
+##### Es ist hilfreich über Grasshopper in den Begriffen von Flüssen zu denken, da es eine graphische Benutzeroberfläche zur Bewegung von Datenflüssen in bestimmte Komponenten ist. Es sind jedoch die Daten, die den Informationsfluss in und aus bestimmten Typen von Komponenten bestimmen. Zu verstehen, wie Listen manipuliert werden, ist kritisch im Verständnis des Grasshopper Plug-Ins.
 
 Grundsätzlich hat Grasshopper zwei Datentypen: persistente und volatile. Auch wenn die Datentypen verschiedene Charakteristika haben, speichert Grasshopper diese Daten typischerweise in einem Array, eine Liste von Variablen.
 

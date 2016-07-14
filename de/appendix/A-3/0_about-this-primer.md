@@ -1,4 +1,4 @@
-﻿<style>
+<style>
 h5 {color:#008DB2}
 .page-inner img {
 clear: both;
@@ -9,13 +9,13 @@ padding: 15px;
 .test img{float:none}
 
 </style>
-##About This Primer
+## About This Primer
 
-###Authors
+### Authors
 
 
 ![IMAGE](images/akos.png)
-#####Gil Akos, Mode Lab
+##### Gil Akos, Mode Lab
 Gil Akos ist Gründungspartner und Direktor für Technologie bei Mode Lab, einer
 multidisziplinären Designberatung spezialisiert auf technologierorientierter Prozessinnovation. 
 Er bringt verschiedene professionelle Erfahrungen, technische Expertise in verschiedenen
@@ -27,7 +27,7 @@ http://modelab.is/education
 
 
 ![IMAGE](images/parsons.png)
-#####Ronnie Parsons, Mode Lab
+##### Ronnie Parsons, Mode Lab
 Ronnie Parsons ist Gründungspartner und Direktor für Ausbildung bei Mode Lab, einer
 multidisziplinären Designberatung spezialisiert auf technologierorientierter Prozessinnovation. 
 Bei Mode Lab identifiziert Ronnie neue Wege zur Verbindung und Konfiguration von
@@ -39,7 +39,7 @@ http://modelab.is/education
 
 
 ![IMAGE](images/modelab.png)
-#####Mode Lab Team:
+##### Mode Lab Team:
 <ul>Sharon Jamison<br>
 Andrew Reitz<br>
 Armon Jahanshahi<br>
@@ -49,11 +49,11 @@ Kimberly Parsons<br>
 Roberto Godinez<br>
 Christopher Morse</ul>
 
-###Beitragende
+### Beitragende
 
 
 ![IMAGE](images/payne.png)
-#####Andrew Payne, Principal, Lift Architects
+##### Andrew Payne, Principal, Lift Architects
 Andrew Payne ist ein registrierter Architekt, der LIFT architects 2007 gegründet hat. Andrews Arbeit erkundet eingebettete Informatik, intelligente Gebäude und generatives Entwerfen. Er hat wissenschaftliche Schriften publiziert und Workshops in Nordamerika, sowie in Europa gelehrt. Andrew und Jason K. Johnson haben 2010 Firefly veröffentlicht - ein umfassendes Plugin, welches die Grenzen zwischen Grasshopper, Arduino, dem Internet, audio/visuellen Werkzeugen und anderen Plattformen überwindet.<br>
 http://www.liftarchitects.com/
 
@@ -80,7 +80,7 @@ http://www.grasshopper3d.com/
 
 
 
-###LIZENZINFORMATION
+### LIZENZINFORMATION
 Der Grasshopper Primer ist unter Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported lizensiert. Der gesamte Text der Lizenz ist hier verfügbar: http://creativecommons.org/licenses/by-nc-sa/3.0/us/legalcode
 
 Unter dieser Lizenz kannst Du:

@@ -1,8 +1,8 @@
-﻿### 1.2.3. DATENTYPEN
+### 1.2.3. DATENTYPEN
 
-#####Die meisten Parameter können zwei verschiedene Arten von Daten speichern: Volatile und persistente Daten. Volatile Daten sind von einer oder mehreren Quellen eingespeist und werden zerstört (oder neuerhoben) wenn die Lösung erneut startet. Persistente Daten sind Daten, welche spezifisch vom Benutzer eingestellt werden.
+##### Die meisten Parameter können zwei verschiedene Arten von Daten speichern: Volatile und persistente Daten. Volatile Daten sind von einer oder mehreren Quellen eingespeist und werden zerstört (oder neuerhoben) wenn die Lösung erneut startet. Persistente Daten sind Daten, welche spezifisch vom Benutzer eingestellt werden.
 
-####1.2.3.1. PERSISTENTE DATEN
+#### 1.2.3.1. PERSISTENTE DATEN
 Persistente Daten sind durch ein Menü, und abhängig von der Art des Parameters durch unterschiedliche Manager, zugänglich. Ein Punktparameter zum Beispiel ermöglicht es Dir einen oder mehrere Punkte durch sein Menü auszuwählen. Aber lass uns noch ein paar Schritte zurückgehen und sehen, wie sich ein Punktparameter so verhält.
 
 Wenn Du einen Punktparameter vom "Params/Geometry Paneel" auf die Leinwand ziehst, ist der Parameter orange, was anzeigt, dass der Parameter eine Warnung enthält. Es ist nichts Ernstes, da die Warnung Dich einfach darüber informiert, dass der Parameter leer ist (er enthält keine persistenten Einträge und er konnte keine volatilen Daten empfangen) und deshalb keinen Effekt auf das Ergebnis der Lösung hat. Das Kontextmenu des Parameters bietet zwei Wege der Einstellung von persistenten Daten: einzelne oder mehrere. Rechtsklicke auf den Parameter um mehrere Punkte zu setzen. Sobald Du auf eines dieser Menuelemente klickst, wird das Grasshopperfenster verschwinden und Du wirst aufgefordert werden einen Punkt in einem der Rhinoansichtsfenster auszuwählen.
@@ -16,7 +16,7 @@ Sobald Du alle Punkte bestimmt hast, kannst Du Enter drücken und sie werden Bes
 2. Sobald der Parameter einige persistente Daten enthält, wird die Komponente ihre Farbe von orange zu grau ändern.
 3. Der Werkzeugtipp für einen Punktparameter zeigt die persistenten Daten (eine Sammlung von Referenzpunkten), die gespeichert sind.
 
-####1.2.3.2. VOLATILE DATEN
+#### 1.2.3.2. VOLATILE DATEN
 Volatile Daten, wie der Name schon nahelegt, sind nicht permanent und werden jedes Mal wenn die Lösung abgeschlossen ist gelöscht. Jedoch kann eine Begebenheit auslösen, dass die Lösung wieder aufgebaut und die Szene aktualisiert wird. Generell werden die meisten Daten, die während der Erzeugung der Lösung entstehen als volatil bezeichnet.
 
 Wie bereits genannt, werden Grasshopperdaten in Parametern gespeichert (entweder in volatiler oder in persistenter Form) und in verschiedenen Komponenten genutzt. Wenn Daten nicht als permanente Daten in Parametern gespeichert werden, muss sie implizit aus einer anderen Quelle kommen. Jeder Parameter (ausser Ausgabeparameter) definiert woher er seine Daten bezieht und die meisten Parameter sind dabei nicht besonders spezifisch. Du kannst einen "Number"-Parameter (welche nur besagt, dass es sich um eine Dezimalzahl handelt) mit einem Integereingabeparameter verbinden und er wird sich um die Umwandlung kümmern.
@@ -29,7 +29,7 @@ Wenn Du willst, dass die Daten wieder volatil werden, kannst Du einfach wieder K
 
 ![IMAGE](images/1-2-3/1-2-3_003-right-click.png)
 
-####1.2.3.3. EINGABEPARAMETER
+#### 1.2.3.3. EINGABEPARAMETER
 Grasshopper hat eine Bandbreite an Parametern, die Dir die Möglichkeit eröffnen, die Komponenteneingabeparameter mit den Daten zu verbinden und dadurch Kontrolle über die veränderlichen Ergebnisse in der Definition auszuüben. Diese Parameter verändern sich mit der entsprechenden Eingabe und erzeugen volatile Daten.
 
 **Schieberegler**

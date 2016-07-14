@@ -1,5 +1,5 @@
 ## 1.4. GESTALTUNG MIT LISTEN
 
-####Eine der mächtigsten Eigenschaften von Grasshopper ist die Fähigkeit schnell Listen von Daten zu erstellen und zu bearbeiten. Dieses Kapitel wird erklären, wie Datenlisten erstellt, verändert und visulisiert werden können.
+#### Eine der mÃ¤chtigsten Eigenschaften von Grasshopper ist die FÃ¤higkeit schnell Listen von Daten zu erstellen und zu bearbeiten. Dieses Kapitel wird erklÃ¤ren, wie Datenlisten erstellt, verÃ¤ndert und visulisiert werden kÃ¶nnen.
 
 ![IMAGE](images/1-4/1-4_001-designing-with-lists.png)

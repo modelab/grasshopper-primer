@@ -1,5 +1,3 @@
-﻿
-
 ### 1.3.3. Mathematik, Funktionen & Konditionale
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 >Beispiedateien zu diesem Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
@@ -7,7 +5,7 @@
 >Beispiedateien zu diesem Abschnitt: [Download](../../appendix/A-2/gh-files/1.3.3_operators and conditionals.gh)
 {% endif %}
 
-#####Zu wissen, wie man mit numerischen Informationen umgeht, ist eine grundlegende Fertigkeit, die Du lernen musst, um Grasshopper zu nutzen. Grasshopper enthält viele Komponenten, um mathematische Operationen auszuführen, Konditionale auszuwerten und Mengen von Zahlen zu manipulieren.
+##### Zu wissen, wie man mit numerischen Informationen umgeht, ist eine grundlegende Fertigkeit, die Du lernen musst, um Grasshopper zu nutzen. Grasshopper enthält viele Komponenten, um mathematische Operationen auszuführen, Konditionale auszuwerten und Mengen von Zahlen zu manipulieren.
 
 In der Mathematik werden Zahlen in Mengen organisiert und es gibt zwei mit denen Du wahrscheinlich bekannt bist:
 
@@ -16,7 +14,7 @@ Reelle Zahlen: [8, …, -4.8, -3.6, -2.4, -1.2, 0.0, 1.234, e, 3.0, 4.0, …, 8]
 
 Neben anderen Zahlenmengen, die es gibt, interessieren uns diese beiden am meisten, da Grasshopper diese bevorzugt verwendet. Obwohl es Grenzen in der Darstellung dieser Mengen gibt und diese in einer digitalen Umgebung genau definiert sind, können wir sie mit einem hohen Grad an Präzision annähern. Zusätzlich sollten wir die Unterscheidung zwischen integralen Zahlenarten (integers) and Gleitkommazahlen (real numbers) als Unterschied zwischen einer diskreten und einer kontinuierichen Domäne verstehen. In diesem Kapitel werden wir verschiedene Methoden für die Arbeit mit und die Auswertung von verschiedenen Zahlenmengen erkunden. 
 
-####1.3.3.1. DER MATH REITER
+#### 1.3.3.1. DER MATH REITER
 Die meisten Komponenten, die mit mathematischen Operationen und Funktionen zu tun haben, können unter den folgenden Unterkategorien des "Math" Reiters gefunden werden:
 
 ![](images/1-3-3/1-3-3_01-the-math-tab.png)
@@ -30,14 +28,14 @@ Die meisten Komponenten, die mit mathematischen Operationen und Funktionen zu tu
 7. Die "Time" Unterkategorie hat eine Anzahl von Komponenten, die es Dir erlauben Instanzen von Datum und Zeit zu erstellen.
 8. Die Unterkategorie "Utility" ist ein Sack von Komponenten, die in einer Bandbreite von mathematischen Gleichungen angewendet werden können. Suche hier, wenn Du versuchst Minima oder Maxima über zwei Listen von Zahlen zu finden oder den Durchschnitt einer Menge von Zahlen zu berechnen.
 
-####1.3.3.2. OPERATOREN
+#### 1.3.3.2. OPERATOREN
 Wie bereits genannt, sind Operatoren eine Menge an Komponenten, die algebraische Funktionen mit zwei numerischen Eingabevariablen nutzen, welche in der Ausgabe eines einzelnen Wertes resultieren.
 
 Die meiste Zeit wirst Du die mathematischen Operatoren in arithmetischen Prozessen im Bezug auf eine Zahlenmenge finden. Jedoch können diese Operatoren auch auf verschiedene Datentypen, inkl. Punkte und Vektoren angewendet werden.
 
 ![](images/1-3-3/1-3-3_02-operators.png)
 
-####1.3.3.3. KONDITIONALE OPERATOREN
+#### 1.3.3.3. KONDITIONALE OPERATOREN
 Fast jede Programmiersprache hat eine Methode, um konditionale Ausdrücke auszuwerten. In den meisten Fällen wird der Programmierer ein Stück Code entwerfen, welches eine einfache Frage wie "Was wäre wenn?" stellt. Was wäre wenn die Fläche einer Stockwerksumgrenzung einen realistischen Betrag überschreitet? Diese wichtigen Fragen stellen eine höhere Ebene der Abstraktion da. Computerprogramme haben die Möglichkeit auszuwerten "was wäre wenn" und entsprechende Aktionen auf die Antwort der Frage folgen zu lassen. Lass uns einen Blick auf ein einfaches Konditional werfen, das ein Programm interpretieren würde: Wenn das Objekt eine Kurve ist, lösche es. Das Stück Code schaut zuerst auf das Objekt und stellt in einer boolschen Variable fest, ob es sich dabei um eine Kurve handelt. Der boolsche Wert ist "wahr", wenn das Objekt eine Kurve ist oder "falsch", wenn das Objekt keine Kurve ist. Der zweite Teil des Ausdrucks führt eine Aktion entsprechend dem Ergebnis des konditionalen Ausdrucks aus; in diesem Fall wird das Objekt gelöscht, wenn es keine Kurve sein sollte. Dieser konditionale Ausdruck wird "If Statement"genannt. In diesem Kontext gibt es vier konditionale Operatoren (in der "Math/Operators" Unterkategorie), die Konditionale auswerten und boolsche Werte ausgeben.
 
 Die "Equality" Komponente nimmt zwei Listen und vergleicht die ersten Elemente der Liste A mit dem ersten Element der Liste B. Wenn die beiden Werte dieselben sind, wird "Wahr" als boolscher Wert ausgegeben; auf der anderen Seite, wenn die beiden Werte ungleich sind, wird "Falsch" ausgegeben. Die Komponente rotiert durch die Liste in Übereinstimmung mit dem "Data Matching" Algorithmus (als Standard ist die Einstellung "Longest List"). Es gibt zwei Ausgabeparameter für diese Komponente. Der erste gibt eine Liste mit boolschen Werten aus, die angibt, welcher der Werte in der einen Liste mit einem in der anderen Liste übereinstimmt. Der zweite Ausgabeparameter gibt eine Liste aus, die zeigt welche Werte nicht gleich den entsprechenden Werten in der zweiten Liste sind - oder eine invertierte Liste im Vergleich zum ersten Ausgabeparameter.
@@ -56,7 +54,7 @@ Die "Smaller Than" Komponente verhält sich entgegengesetzt zur "Larger Than" Ko
 
 ![](images/1-3-3/1-3-3_06-smaller-than.png)
 
-####1.3.3.4. TRIGONOMETRIE KOMPONENTEN
+#### 1.3.3.4. TRIGONOMETRIE KOMPONENTEN
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 >Beispieldateien für diesen Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
@@ -147,7 +145,7 @@ Eingabeparameter der**Construct Point** Komponente||
 ![](images/1-3-3/1-3-3_21-spiral.png)
 
 
-####1.3.3.5. EXPRESSIONS
+#### 1.3.3.5. EXPRESSIONS
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 >Beispieldateien für diesen Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}

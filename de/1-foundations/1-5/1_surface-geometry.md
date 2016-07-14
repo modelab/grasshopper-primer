@@ -1,6 +1,6 @@
-﻿###1.5.1. Flächen Geometrien
+### 1.5.1. Flächen Geometrien
 
-#####NURBS (non-uniform rational B-splines) sind mathematische Repräsentationen, die ein Modell einer beliebigen Form akkurat aus einer einfachen 2D Linie, einem Kreis, Boden oder einer Kiste die komplexeste, organische 3D Freiformfläche oder -körper entwickeln können. Auf Grund ihrer Flexibilität und Präzision können NURBS Modelle in jedem beliebigen Prozess, von der Illustration und Animation bis zur Herstellung, genutzt werden.
+##### NURBS (non-uniform rational B-splines) sind mathematische Repräsentationen, die ein Modell einer beliebigen Form akkurat aus einer einfachen 2D Linie, einem Kreis, Boden oder einer Kiste die komplexeste, organische 3D Freiformfläche oder -körper entwickeln können. Auf Grund ihrer Flexibilität und Präzision können NURBS Modelle in jedem beliebigen Prozess, von der Illustration und Animation bis zur Herstellung, genutzt werden.
 
 Abgesehen von ein paar primitiven Flächentypen, wie Kugeln, Kegel, Flächen und Zylinder, unterstützt Rhino drei verschiedene Arten von Freiform Flächentypen, wobei der nützlichste die NURBS Fläche ist. Ähnlich wir bei den Kurven, kann mit der NURBS Fläche jede mögliche Form als Fläche dargestellt werden, was die Rückfallebene in Rhino darstellt. Sie ist außerdem die bei weitem nützlichste Flächendefinition und die, auf die wir uns konzentrieren werden.
 
@@ -10,7 +10,7 @@ Abgesehen von ein paar primitiven Flächentypen, wie Kugeln, Kegel, Flächen und
 3. Fläche Primitivkörper [plane, width, height]
 4. Kegel Primitivkörper [plane, radius, height]
 
-####1.5.1.1. NURBS FLÄCHEN
+#### 1.5.1.1. NURBS FLÄCHEN
 NURBS Flächen sind sehr ähnlich zu NURBS Kurven. Die selben Algorithmen werden verwendet, um die Form, Normalen, Tangenten, Krümmungen und anderen Eigenschaften zu berechnen, aber es gibt auch klare Unterschiede. Zum Beispiel haben Kurven Tangentenvektoren und Normalenebenen, während Flächen Normalenvektoren und Tangentialebenen besitzen. Das bedeutet, dass Kurven an definierten Positionen keine Orientierung haben, während Flächen keine definierte Richtung besitzen. Im Fall von NURBS Flächen gibt es genau zwei Richtungen, die in der Geometrie einbeschrieben sind, weil NURBS Flächen aus rechtwinkligen Rastern aus {u} und {v} Kurven aufgebaut sind. Auch wenn diese Richtungen oft beliebig sind, werden wir sie sowieso nutzen, weil sie uns das Leben so viel einfacher machen.
 
 ![IMAGE](images/1-5-1/1-5-1_002-nurbs-surface.png)
@@ -36,7 +36,7 @@ Die Tangentialebene einer Fläche an einem bestimmten Punkt ist die Ebene, welch
 
 Grasshopper behandelt NURBS Flächen ähnlich wie Rhino, weil es diese auf demselben Kern von Operationen aufbaut, die notwendig sind, um die Fläche zu erzeugen. Da Grasshopper jedoch die Fläche oberhalb des Rhinoansichtsfenster darstellt (aus diesem Grund kann man die Geometrien, welche in Grasshopper erzeugt werden, nicht auswählen, weil sie in die Szene gebacken werden) sind manche der Mesheinstellungen etwas niedriger, um die Geschwindigkeit von Grasshopper relativ hoch zu halten. Du hast vielleicht festgestellt, dass manche Polygonnetze (Meshes) facettiert sind, aber das ist zu erwarten und ist ein Ergebnis der Grasshopper Darstellungsoptionen. Jede gebackene Geometrie wird die höheren Mesheinstellungen von Rhino verwenden.
 
-####1.5.1.2. FLÄCHEN PROJIZIEREN
+#### 1.5.1.2. FLÄCHEN PROJIZIEREN
 Im vorherigen Abschnitt, haben wir erklärt, dass NURBS Flächen ihren eigenen Koordinatenraum besitzen und dass dieser durch u und v Domänen beschrieben wird. Dies bedeutet, dass zweidimensionale Geometrien, welche durch x und y Koordinaten beschrieben werden auf den uv Raum der Fläche abgebildet werden können. Die Geometrie wird sich verändern und verzerren, um sich an die Krümmung der Fläche anzupassen. Dies ist unterschiedlich zu einer einfachen Projektion auf eine Fläche, bei der Vektoren von der  2D Geometrie in eine bestimmte Richtung gezeichet werden, bis sie mit einer Fläche verschneiden.
 
 ![IMAGE](images/1-5-1/1-5-1_005-surface-mapping.png)
@@ -50,7 +50,7 @@ So wie 2D Geometrie auf den uv Raum einer Fläche abgebildet werden kann, ist es
 
 Um eine Reihe verzerrter Kisten auf einer Fläche anzuordnen, muss die Flächendomäne unterteilt werden, um ein Raster von Flächenabschnitten zu erzeugen. Die verzerrten Kisten werden erzeugt, indem Normalenvektoren an den Ecken eines jeden Flächenabschnitts bis zur gewünschten Höhe angetragen werden und eine Kiste erzeugen, deren Eckpunkte durch die Endpunkte dieser Vektoren bestimmt werden.
 
-####1.5.1.3. MORPH DEFINITION
+#### 1.5.1.3. MORPH DEFINITION
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 >Beispieldateien zu diesem Abschnitt: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}

@@ -1,6 +1,6 @@
-﻿### 1.1.2. DIE GRASSHOPPER BENUTZEROBERFLÄCHE
+### 1.1.2. DIE GRASSHOPPER BENUTZEROBERFLÄCHE
 
-#####Der visuelle “plug-and-play” Stil von Grasshopper gibt Designern die Fähigkeit kreative Problemlösung mit neuen regelbasierten Systemen in einer fluiden, graphischen Benutzeroberfläche zu kombinieren.
+##### Der visuelle “plug-and-play” Stil von Grasshopper gibt Designern die Fähigkeit kreative Problemlösung mit neuen regelbasierten Systemen in einer fluiden, graphischen Benutzeroberfläche zu kombinieren.
 
 Lass uns damit beginnen die Benutzeroberfläche von Grasshopper zu erkunden. Grasshopper ist eine visuelle Programmierungsanwendung, die es erlaubt Programme, Definitionen genannt, zu erstellen, indem Komponenten in das zentrale Editorfenster (Canvas genannt) gezogen werden. Die Ausgaben dieser Komponenten werden mit den Eingaben folgender Komponenten verbunden und erzeugen so einen Informationsfluss, der von links nach rechts gelesen wird. Lasst uns mit den Grundlagen anfangen.
 
@@ -18,11 +18,11 @@ Editor. Die Grasshopper Oberfläche beinhaltet eine Anzahl an Elementen, die ein
 8. Die Statusleiste nennt die von Dir genutzte Version von Grasshopper, welche gerade auf Deiner Maschine installiert ist. Falls eine neue Version verfügbar ist, wird ein Pop-Up-Fenster erscheinen und Dir die Anweisungen zum Download der neuesten Version zur Verfügung stellen.
 
 
-####1.1.2.1. DIE FENSTERTITELLEISTE
+#### 1.1.2.1. DIE FENSTERTITELLEISTE
 Die Fenstertitelleiste des Editors verhält sich unterschiedlich von den meisten anderen Dialogen in Microsoft Windows. Falls das Fenster nicht minimiert oder maximiert ist, wird der Dialog auf Doppelklick in diese Leiste zu einer Leiste auf Deinem Bildschirm minimiert. Dies ist eine ausgezeichnete Möglichkeit zwischen dem Plugin und Rhino zu wechseln, weil der Editor minimiert wird ohne dass er sich zur Unterseite des Bildschirms bewegt oder hinter einem anderen Fenster verschwindet. Merke, dass, falls Du den Editor schließt, die Grasshopper Geometrievorschau im Rhino Ansichtsfenster verschwindet, die Datei jedoch nicht geschlossen wird. Das nächste Mal, wenn Du den “Grasshopper” Befehl in die Rhino Befehlszeile eingibst, wird das Fenster im selben Zustand, mit denselben Dateien geöffnet, wieder erscheinen. Das passiert, weil Deine Grasshopper Session aktiv bleibt, bis Rhino geschlossen wird, sobald Du sie einmal von der Rhino Eingabe aus geöffnet hast.
 
 
-####1.1.2.2. MENÜLEISTE
+#### 1.1.2.2. MENÜLEISTE
 Die Titelleiste ist ähnlich wie Windowsmenüleisten, außer der Dateibrowsersteuerung an der rechten Seite (siehe nächster Abschnitt). Das Dateimenü stellt, zusätzlich zu einigen nützlichen Werkzeugen, welche Dich Bilder von Deinem aktuellen Grasshopper Dokument exportieren lassen (siehe Export von schnellen Bildern und Export von Hi-Res Bildern), die typischen Funktionen zur Verfügung (z.B. Neue Datei, Öffnen, Speichern, etc.). Du kannst die verschiedenen Aspekte der Benutzeroberfläche steuern, indem Du die Menüs „View“ und „Display“ verwendest, während das Menü „Solution“ Dich die verschiedenen Eigenschaften der Berechnung der graphischen Lösung durch den Solver verwalten lässt.
 
 Es ist es wert anzumerken, dass viele Einstellungen der Anwendung durch den „Preferences“ Dialog gesteuert werden können, der im „File“ Menü zu finden ist. Der „Author“ Bereich erlaubt es Dir Deine persönlichen Metadaten einzutragen, welche in jedem Grasshopper Dokument gespeichert werden, während der „Display“ Abschnitt Dir die Möglichkeit gibt, die Feinabstimmung von Aussehen und Handhabung vorzunehmen. Der „Files“ Bereich erlaubt es Dir, Dinge zu spezifizieren, wie beispielsweise die Häufigkeit und der Speicherort für Autosavedateien (im Falle des unbeabsichtigten Schließens oder eines Absturzes der Anwendung). Schließlich, im „Solver“ Bereich, kannst Du die Kern- und Drittanbieter-Plugins verwalten, welche die Funktionalität erweitern.
@@ -32,7 +32,7 @@ Es ist es wert anzumerken, dass viele Einstellungen der Anwendung durch den „P
 ![IMAGE](images/1-1-2/1-1-2_002-settings.png)
 >Der „Preferences“ Dialog erlaubt es Dir viele Einstellungen der Grasshopper Anwendung zu steuern.
 
-####1.1.2.3. DATEIBROWSERSTEUERUNG
+#### 1.1.2.3. DATEIBROWSERSTEUERUNG
 Der Dateibrowser erlaubt es Dir schnell zwischen verschiedenen geladenen Dateien umzuschalten, indem diese in der Drop-Down Liste ausgewählt werden. Der Zugang zu geöffneten Dateien durch die Drop-Down Liste des Dateibrowser ermöglicht es Teile von geöffneten Definitionen schnell zu kopieren und einzufügen. Klicke einfach auf den aktiven Dateinamen in der Dateibrowsersteuerung und eine fallende Liste aller geöffneten Dateien wird angezeigt werden (zusammen mit kleinen Vorschaubildern jeder geöffneten Definition). Du kannst ebenfalls Alt+Tab drücken, um schnell zwischen offenen Grasshopper Dokumenten umzuschalten.
 
 Natürlich kannst Du auch durch den Standarddialog „Open file“ gehen, um Grasshopper Definitionen zu laden, auch wenn Du einfach eine Grasshopper Datei auf den Canvas ziehen kannst um eine bestimmte Definition zu öffnen.
@@ -59,7 +59,7 @@ Grasshopper hat auch eine Autosave Funktion, die regelmäßig auf Grundlage der 
 ![IMAGE](images/1-1-2/1-1-2_003-autosave.png)
 >Ziehe Dateien auf den Canvas.
 
-####1.1.2.4. KOMPONENTEN PALETTEN
+#### 1.1.2.4. KOMPONENTEN PALETTEN
 Dieser Bereich organisiert Komponenten in Kategorien und Unterkategorien, Kategorien werden als Reiter dargestellt und Unterkategorien in Drop-Down Paneelen. Alle Komponenten gehören bestimmten Kategorien an. Diese Kategorien wurden benannt, um Dir zu helfen bestimmte Komponenten zu finden, wenn Du danach suchst (z.B. “Params” für alle einfachen Datentypen oder “Curves” für alle kurvenbezogenen Werkzeuge). Um Komponenten zum Canvas hinzuzufügen kannst Du entweder die Objekte im Drop-Down Menü anklicken oder sie direkt vom Menü auf den Canvas ziehen.
 
 ![IMAGE](images/1-1-2/1-1-2_004-component-palette.png)
@@ -76,10 +76,10 @@ Da es mehr Komponenten in jeder Unterkategorie geben kann, als in die Palette pa
 4. Drop-down Menü.
 
 
-####1.1.2.5. DER CANVAS
+#### 1.1.2.5. DER CANVAS
 Der Canvas ist die primäre Arbeitsoberfläche, um Grasshopperdefinitionen zu erstellen. Hier kannst Du mit den verschiedenen Elementen Deines visuellen Programms interagieren. Du kannst damit beginnen auf dem Canvas zu arbeiten, indem Du Komponenten platzierst und diese mit Kabeln verbindest.
 
-####1.1.2.6. GRUPPIEREN
+#### 1.1.2.6. GRUPPIEREN
 Komponenten auf dem Canvas miteinander zu gruppieren kann insbesondere nützlich sein um die Lesbakeit und die Verständlichkeit von Definitionen zu verbessern. Gruppieren gibt Dir die Möglichkeit mehrere Komponenten schnell auszuwählen und auf dem Canvas zu bewegen. Du kannst eine Gruppe erstellen, indem Du Ctrl+G eingibst, während Du die gewünschten Komponenten ausgewählt hast. Eine alternative Methode kannst Du unter dem “Group Selection” Knopf des „Edit“ Menüs in der Menüleiste finden. Benutzerdefinierte Parameter für Gruppenfarben, -transparenz, -namen und -konturliniendarstellung können mit einem Rechtsklick auf ein Gruppenobjekt eingestellt werden.
 
 ![IMAGE](images/1-1-2/1-1-2_006-grouping1.png)
@@ -93,7 +93,7 @@ Komponenten auf dem Canvas miteinander zu gruppieren kann insbesondere nützlich
 ![IMAGE](images/1-1-2/1-1-2_008-grouping3.png)
 >Zwei Gruppen sind hier ineinander verschachtelt, die Farbe (hellblau) wurde bei der äußeren Gruppe verändert um die Lesbarkeit der einzelnen Gruppen zu verbessern. Gruppen werden „hinter“ die Komponenten gezeichnet, die sie beinhalten und, wie in diesem Fall, mit verschiedenen Tiefen. Um dies zu verändern gehe zu Edit > Arrange in der Menüleiste.
 
-####1.1.1.7. WIDGETS
+#### 1.1.1.7. WIDGETS
 In Grasshopper sind einige Widgets verfügbar, die Dir helfen können nützliche Aktionen auszuführen. Du kannst sie im Display Menü der Menüleiste an- bzw. ausschalten. Nachfolgend werden wir uns einige der am häufigsten benutzten Widgets ansehen.
 
 **Das Align Widget**
@@ -115,7 +115,7 @@ Dieses Widget nutzt Markovketten um, basierend auf Deinem vergangenen Verhalten,
 
 
 
-####1.1.2.8. NUTZUNG DER SUCHFUNKTION
+#### 1.1.2.8. NUTZUNG DER SUCHFUNKTION
 Obwohl einige Gedanken in die Platzierung der einzelnen Komponenten in den Komponentenpaneelen gegangen sind, um es für den Nutzer intuitiv zugänglich zu machen, ist es manchmal schwierig bestimmte Komponenten, welche tief in den Kategoriepaneelen verborgen sind auszumachen. Glücklicherweise kannst Du auch jede Komponente unter ihrem Namen finden, wenn Du auf einen leeren Bereich im Canvas doppelklickst. Dies wird eine Pop-Up Suchleiste öffnen. Gib einfach den Namen der Komponente ein, nach der Du suchst und Du wirst eine Liste von Parametern und Komponenten erhalten, die Deiner Anfrage entsprechen.
 
 ![IMAGE](images/1-1-2/1-1-2_011-search.png)
@@ -128,7 +128,7 @@ Obwohl einige Gedanken in die Platzierung der einzelnen Komponenten in den Kompo
 3. Divide Domain2 Komponente.
 
 
-####1.1.2.9. DIE FIND FUNKTION
+#### 1.1.2.9. DIE FIND FUNKTION
 Es gibt buchstäblich hunderte (wenn nicht tausende) von Grasshopper Komponenten, welche Dir zur Verfügung stehen und es kann für einen Einsteiger ziemlich entmutigend sein zu wissen, wo bestimmte Komponenten in den Komponentenpaletten zu finden sind. Die schnellste Lösung ist es irgendwo auf den Canvas doppelzuklicken und eine Suchanfrage für die Komponente einzugeben. Was jedoch tun, wenn Du eine bestimmte Komponente suchst, die bereits auf dem Canvas platziert wurde? Kein Grund zur Sorge. Mit einem Rechtsklick irgendwo auf den Canvas oder mit einem Druck auf die F3 Taste kannst Du die „Find“ Funktion aufrufen. Beginne einfach, indem Du den Namen der gesuchten Komponente eingibst.
 
 Die „Find“ Funktion verwendet sehr ausgefeilte Algorithmen, welche nicht nur nach einer Instanz eines bestimmten Komponentennamen in einer Definition suchen (ein Komponentenname ist der Titel der Komponenten unter der er im Kompontenpaneel gefunden werden kann und kann vom Nutzer nicht geändert werden), sondern auch nach einzigartigen Signaturen, welchen wir bestimmten Komponenten zugeordnet haben können (auch Kosenamen genannt).
@@ -146,13 +146,13 @@ Die „Find“ Funktion kann auch für die Suche nach Komponententypen auf dem C
 
 
 
-####1.1.2.10. NUTZUNG DES RADIALMENÜS
+#### 1.1.2.10. NUTZUNG DES RADIALMENÜS
 Sobald Du kompetenter im Umgang mit der Grasshopper Oberfläche bist, wirst Du einen bestimmten Arbeitsablauf beschleunigen. Tastaturkürzel sind ein Weg, um dies zu erreichen; jedoch gibt es auch eine andere Funktion, die Dir helfen kann schnellen Zugang zu einer Reihe von nützlichen Werkzeugen zu erlangen – Das Radialmenü der Benutzeroberfläche. Du kannst Das Radialmenü öffnen, indem Du die Leertaste drückst (während sich Deine Maus über dem Canvas oder einer Komponente befindet) oder indem Du die mittlere Maustaste drückst. Das Radialmenü wird verschiedene Werkzeuge bereitstellen, abhängig davon, ob Du das Menü direkt oberhalb einer Komponente oder irgendwo über dem Canvas aufrufst. In dem Bild unterhalb kannst du sehen, dass das Radialmenü im Vergleich zum Aufruf oberhalb des leeren Canvas mehr Funktionen hat, wenn Du es oberhalb einer ausgewählten Komponente aufrufst. Dieses Menü kann die Geschwindigkeit in der Du Grasshopper Dokumente erstellst dramatisch erhöhen.
 
 ![IMAGE](images/1-1-2/1-1-2_016-radial-menu.png)
 >Das Radialmenü der Benutzeroberfläche ermöglicht es Dir häufig genutzte Menüelemente schnell zu erreichen.
 
-####1.1.2.11. DIE CANVASWERKZEUGLEISTE
+#### 1.1.2.11. DIE CANVASWERKZEUGLEISTE
 Die Canvaswerkzeugleiste ermöglicht schnellen Zugriff auf eine Anzahl häufig genutzter Grasshopper Funktionen. Alle Werkzeuge sind auch durch die Menüleiste zugänglich und Du kannst die Werkzeugleiste verstecken, wenn Du willst. Die Werkzeugleiste kann im „View“ Reiter der Menüleiste wieder eingeschaltet werden.
 
 ![IMAGE](images/1-1-2/1-1-2_017-toolbar1.png)

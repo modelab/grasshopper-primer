@@ -1,31 +1,31 @@
 ### 1.6.5 Wechselwirkungen zwischen Polygonnetzen
 
-#####Dieser Abschnitt betrachtet Wege, wie Polygonnetzobjekte miteinander in Wechselwirkung treten können, wie beispielsweise die Auswertung des nahegelegensten Punktes oder die Kombination mehrerer Polygonnetze miteinander.
+##### Dieser Abschnitt betrachtet Wege, wie Polygonnetzobjekte miteinander in Wechselwirkung treten kÃ¶nnen, wie beispielsweise die Auswertung des nahegelegensten Punktes oder die Kombination mehrerer Polygonnetze miteinander.
 
-####1.6.5.1 Polygonnetze und Punkte
+#### 1.6.5.1 Polygonnetze und Punkte
 
 
 **Inclusion**
 
 ![IMAGE](images/1-6-5/inclusion.png)
 
-Diese Komponente testet ob ein bestimmter Punkt innerhalb eines Polygonnetzkörpers liegt oder nicht. Dies funktioniert nur mit geschlossenen Polygonnetzen.
+Diese Komponente testet ob ein bestimmter Punkt innerhalb eines PolygonnetzkÃ¶rpers liegt oder nicht. Dies funktioniert nur mit geschlossenen Polygonnetzen.
 
 **Mesh Closest Point**
 
 
 ![IMAGE](images/1-6-5/mesh-closest-point.png)
 
-Diese Komponente berechnet die Position auf dem Polygonnetz, welche einem angegebenen Punkt am nächsten liegt. Diese Komponente gibt drei verschiedene Daten aus: die Koordinaten des berechneten Punktes auf dem Polygonnetz, die Indizes der Netzfläche, die den Punkt enthält und die Polygonnetzparameter. Diese Parameter sind sehr wichtig in Verbindung mit der **Mesh Eval** Komponente, die unterhalb behandelt wird.
+Diese Komponente berechnet die Position auf dem Polygonnetz, welche einem angegebenen Punkt am nÃ¤chsten liegt. Diese Komponente gibt drei verschiedene Daten aus: die Koordinaten des berechneten Punktes auf dem Polygonnetz, die Indizes der NetzflÃ¤che, die den Punkt enthÃ¤lt und die Polygonnetzparameter. Diese Parameter sind sehr wichtig in Verbindung mit der **Mesh Eval** Komponente, die unterhalb behandelt wird.
 
 ![IMAGE](images/1-6-5/01_mesh-closest-point.png)
 >1. Wir wollen, basiered auf einem gegebenen Punkt im Raum, den nahegelegensten Punkt auf einem Polygonnetz finden
-2. Die Netzfläche, welche den nahegelegensten Punkt enthält, wird bestimmt
-3. Die Parameter des nahegelegensten Punktes auf der Fläche werden berechnet
+2. Die NetzflÃ¤che, welche den nahegelegensten Punkt enthÃ¤lt, wird bestimmt
+3. Die Parameter des nahegelegensten Punktes auf der FlÃ¤che werden berechnet
 
-Nutzer, die sich detaillierter mit der Parametrisierung beschäftigen wollen, können sich die Struktur der Polygonnetzparameter genauer ansehen. Du kannst sehen, wenn Du ein Paneel an den entsprechenden Ausgabeparameter der **Mesh Closest Point** Komponente anschliesst. Der Polygonnetzparameter hat die folgende Struktur: N[A,B,C,D]. Die erste Zahl, N, ist der Index der Netzfläche, welche den berechneten Punkt enthält. 
+Nutzer, die sich detaillierter mit der Parametrisierung beschÃ¤ftigen wollen, kÃ¶nnen sich die Struktur der Polygonnetzparameter genauer ansehen. Du kannst sehen, wenn Du ein Paneel an den entsprechenden Ausgabeparameter der **Mesh Closest Point** Komponente anschliesst. Der Polygonnetzparameter hat die folgende Struktur: N[A,B,C,D]. Die erste Zahl, N, ist der Index der NetzflÃ¤che, welche den berechneten Punkt enthÃ¤lt. 
 
-Die folgenden vier Zahlen definieren die *baryzentrischen* Koordinaten des Punktes innerhalb der Netzfläche. Die Koordinaten des referenzierten Punktes können gefunden werden, indem jeder Eckpunkt des Polygonnetzes mit diesen Zahlen multipliziert wird und die Ergebnisse addiert (Natürlich wird das schon für uns erledigt und wir können den Punktausgabeparameter nutzen). Merke Dir, dass baryzentrische Koordinaten" nur für dreieckige Netzflächen eindeutig sind, was bedeutet, dass für eine viereckige Netzfläche ein bestimmter Punkt mehrere Parametrisierungen aufweisen kann. Grasshopper vermeidet dieses Problem, indem es viereckige Netzflächen intern trianguliert, wenn es die Netzparameter berechnet, was dazu führt, dass von den vier Zahlen des Netzparameters immer mindestens einer 0 ist.
+Die folgenden vier Zahlen definieren die *baryzentrischen* Koordinaten des Punktes innerhalb der NetzflÃ¤che. Die Koordinaten des referenzierten Punktes kÃ¶nnen gefunden werden, indem jeder Eckpunkt des Polygonnetzes mit diesen Zahlen multipliziert wird und die Ergebnisse addiert (NatÃ¼rlich wird das schon fÃ¼r uns erledigt und wir kÃ¶nnen den Punktausgabeparameter nutzen). Merke Dir, dass baryzentrische Koordinaten" nur fÃ¼r dreieckige NetzflÃ¤chen eindeutig sind, was bedeutet, dass fÃ¼r eine viereckige NetzflÃ¤che ein bestimmter Punkt mehrere Parametrisierungen aufweisen kann. Grasshopper vermeidet dieses Problem, indem es viereckige NetzflÃ¤chen intern trianguliert, wenn es die Netzparameter berechnet, was dazu fÃ¼hrt, dass von den vier Zahlen des Netzparameters immer mindestens einer 0 ist.
 
 ![IMAGE](images/1-6-5/02_barycentric.png)
 >Baryzentrische Koordinaten
@@ -36,19 +36,19 @@ Die folgenden vier Zahlen definieren die *baryzentrischen* Koordinaten des Punkt
 
 Die **Mesh Eval** Komponente nutzt einen Netzparameter als Eingabeparameter und gibt den referenzierten Punkt, seine Normale und Farbe aus. Die Farbe und Normale werden als Interpolation der Eckpunktfarben und -normalen berechnet, indem dieselben baryzentrischen Koordinaten wie im Netzparameter benutzt werden.
 
-####1.6.5.2 Kombination von Polygonnetzgeometrien 
+#### 1.6.5.2 Kombination von Polygonnetzgeometrien 
 
 **Mesh Join**
 
 ![IMAGE](images/1-6-5/mesh-join.png)
 
-Abweichend von der Verbindung von NURBS Kurven und Oberflächen, die Berührungspunkte benötigen, können beliebige Polygonnetze miteinander verbunden werden - auch wenn die Polygonnetze sich nicht berühren. Es ist keine Voraussetzung, dass die Netzflächen miteinander verbunden sind (obwohl in den meisten Anwendungen ein solches Polygonnetz nicht erstrebenswert ist !!!)
+Abweichend von der Verbindung von NURBS Kurven und OberflÃ¤chen, die BerÃ¼hrungspunkte benÃ¶tigen, kÃ¶nnen beliebige Polygonnetze miteinander verbunden werden - auch wenn die Polygonnetze sich nicht berÃ¼hren. Es ist keine Voraussetzung, dass die NetzflÃ¤chen miteinander verbunden sind (obwohl in den meisten Anwendungen ein solches Polygonnetz nicht erstrebenswert ist !!!)
 
-Diese Komponente verschweißt nicht die Eckpunkte und oft ist es sinnvoll sie mit der **Weld** Komponente zu kombinieren.
+Diese Komponente verschweiÃŸt nicht die Eckpunkte und oft ist es sinnvoll sie mit der **Weld** Komponente zu kombinieren.
 
 **Mesh Boolean**
 
-Polygonnetze in Grasshopper haben eine Anzahl von boolschen Operationen, ähnlich der boolschen Operationen für NURBS Körper. Boolsche Operationen sind abhängig von der Eingabereihenfolge, was bedeutet, dass, wenn wir die Reihenfolge der Eingabepolygonnetze zwischen A und B umkehren, verschiedene Ergebnisse erzielt werden.
+Polygonnetze in Grasshopper haben eine Anzahl von boolschen Operationen, Ã¤hnlich der boolschen Operationen fÃ¼r NURBS KÃ¶rper. Boolsche Operationen sind abhÃ¤ngig von der Eingabereihenfolge, was bedeutet, dass, wenn wir die Reihenfolge der Eingabepolygonnetze zwischen A und B umkehren, verschiedene Ergebnisse erzielt werden.
 
 ![IMAGE](images/1-6-5/03_boolean.png)
 >1. Mesh Difference
@@ -57,11 +57,11 @@ Polygonnetze in Grasshopper haben eine Anzahl von boolschen Operationen, ähnlich
 4. Mesh Union
 
 
-####1.6.5.3 Verschneidung und Verschattung 
+#### 1.6.5.3 Verschneidung und Verschattung 
 
 **Intersect**
 
-Verschneidungen können zwischen Polygonnetzen und anderen Objekten berechnet werden: Strahlen, Ebenen, Kurven und andere Polygonnetze
+Verschneidungen kÃ¶nnen zwischen Polygonnetzen und anderen Objekten berechnet werden: Strahlen, Ebenen, Kurven und andere Polygonnetze
 
 ![IMAGE](images/1-6-5/04_mesh-intersection.png)
 >1. Mesh | Ray
@@ -73,7 +73,7 @@ Verschneidungen können zwischen Polygonnetzen und anderen Objekten berechnet wer
 
 ![IMAGE](images/1-6-5/occlusion.png)
 
-Wie wir schon besprochen haben, ist eine der vielen Anwendungen von Polygonnetzgeometrien die Visualisierung und die Erstellung von Renderings basiered auf Flächennormalen. Wenn wir rendern ist es auch wichtig zu wissen, ob ein Objekt im Schatten hinter einem anderen Objekt liegt. Die **Occlusion** Komponente in Grasshopper erlaubt es uns, einen Satz von Punkten als Stichprobe, das verschattende Polygonnetz und einen *Sichtstrahl* (einen Vektor, der die Lichtrichtung definiert) einzugeben.
+Wie wir schon besprochen haben, ist eine der vielen Anwendungen von Polygonnetzgeometrien die Visualisierung und die Erstellung von Renderings basiered auf FlÃ¤chennormalen. Wenn wir rendern ist es auch wichtig zu wissen, ob ein Objekt im Schatten hinter einem anderen Objekt liegt. Die **Occlusion** Komponente in Grasshopper erlaubt es uns, einen Satz von Punkten als Stichprobe, das verschattende Polygonnetz und einen *Sichtstrahl* (einen Vektor, der die Lichtrichtung definiert) einzugeben.
 
 Solch ein Prozess kann verwendet werden, um Schatten in Renderings zu erzeugen oder um zu bestimmen ob Objekte von einem bestimmten Kamerawinkel aus verdeckt werden.
 

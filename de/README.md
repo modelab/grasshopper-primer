@@ -1,12 +1,12 @@
-﻿#Der Grasshopper Primer (DE)
-##Third Edition V3.3
+# Der Grasshopper Primer (DE)
+## Third Edition V3.3
 
 
 ![Primer Release Cover](0-about/images/GHP3_5Pages.png)
 
 > Grasshopper ist ein graphischer Algorithmeneditor, der eng mit Rhino's 3-D-Modellierungswerkzeug verknüpft ist und es Designern erlaubt, eine Bandbreite von Formgeneratoren zu bauen, die von ganz einfachen bis zu atemberaubenden reicht.
 
-###WILLKOMMEN
+### WILLKOMMEN
 Du hast gerade erst die dritte Ausgabe des Grasshopper Primers geöffnet. Dieser Primer wurde ursprünglich durch Andrew O. Payne von Lift Architects für Rhino4 und Grasshopper Version 0.6.0007 geschrieben, welche zum Zeitpunkt der Veröffentlichung eine gigantische Verbesserung zur bereits robusten Grasshopperplattform darstellte. Wir befinden uns nun in einer weiteren kritischen Veränderung der Grasshopperumgebung, sodass eine Aktualisierung des bestehenden Primers dringend notwendig wurde. Wir sind begeistert diesen aktualisierten, *und nun webbasierten*, Primer zu den vielen erstaunlichen Beiträgen, die durch die Mitglieder der Grasshoppergemeinschaft vorwärts getrieben wurden, hinzuzufügen.
 
 Mit einer bereits exzellenten Grundlage, von welcher wir aufbauen konnten, hat unser Team bei [Mode Lab](http://modelab.is) begonnen, an der Darstellung und der Handhabung der dritten Edition zu arbeiten. Diese Revision stellt eine einfach verständliche Anleitung für die letzte Grasshopper build, Version 0.90076 zur Verfügung und stellt dabei den unserem Gefühl nach spannendsten Aspekt der Aktualisierung in den Vordergrund. Der überarbeitete Text, neue Graphiken und Anwendungsbeispiele zielen darauf, visuelle Programmierung für absolute Neueinsteiger zu lehren und gleichzeitig eine schnelle Einführung in generative Arbeitsweisen für digital Entwürfe für bewährte Veteranen zu bieten. Es ist unser Ziel, dass der Primer als Leitfaden für neue und bestehende Nutzer dient, die nach einer Navigationshilfe für die Nutzung von Grasshopper in ihrer kreativen Praxis suchen.
@@ -50,7 +50,7 @@ Für Entwerfer, die neue Formen durch den Einsatz von generativen Algorithmen er
 
 http://www.grasshopper3d.com/page/download-1
 
-###FOREN
+### FOREN
 Das Grasshopper Forum ist sehr aktiv und bietet eine wundervolle Ressource für Fragen oder Antworten, und um Hilfe zu so ziemlich allen Zusammenhängen zu finden. Das Forum hat Kategorien für generelle Diskussionen, Fehler und Bugs, Muster und Beispiele, und FAQ.
 
 http://www.grasshopper3d.com/forum
@@ -63,5 +63,5 @@ Für generellere Fragen zu Rhino3D nutze das McNeel Forum, das durch Discourse u
 
 http://discourse.mcneel.com/
 
-###LIZENZ INFORMATIONEN
+### LIZENZ INFORMATIONEN
 Der Grasshopper Primer ist lizenziert unter der Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported license. Der volle Text dieser Lizenz ist hier verfügbar: http://creativecommons.org/licenses/by-nc-sa/3.0/us/legalcode
