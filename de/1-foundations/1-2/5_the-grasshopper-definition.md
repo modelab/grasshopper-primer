@@ -5,25 +5,25 @@
 >Beispieldateien zu diesem Abschnitt: [Download](../../appendix/A-2/gh-files/1.2.5_the grasshopper definition.gh)
 {% endif %}
 
-#####Grasshopperdefinitionen haben einen Programmfluss, der darstellt, an welcher Stelle das Programm die Ausfuehrung beginnt, was in der Mitte passiert und wie man sehen kann, dass die Ausfuehrung abgeschlossen ist.
+#####Grasshopper Definitionen haben einen Programmfluss, der darstellt, an welcher Stelle das Programm die Ausführung beginnt, was in der Mitte passiert und wie man sehen kann, dass die Ausführung abgeschlossen ist.
 
 ####1.2.5.1. PROGRAMMFLUSS
-Visuelle Grasshopperprogramme werden von links nach rechts ausgefuehrt. Das Lesen des Graphen in Abhaengigkeit von den verkabelten Verbindungen von stromaufwaerts nach stromabwaerts ermoeglicht das Verstaendnis des Programmflusses.
+Visuelle Grasshopperprogramme werden von links nach rechts ausgeführt. Das Lesen des Graphen in Abhängigkeit von den verkabelten Verbindungen von stromaufwärts nach stromabwärts ermöglicht das Verständnis des Programmflusses.
 
 ![IMAGE](images/1-2-5/1-2-5_001-program-flow.png)
 >Richtung des Datenflusses von links nach rechts.
 
 ####1.2.5.2. DER LOGISCHE PFAD
-Alle Objekte und Kabel, welche Objekte verbinden stellen den logischen Graphen unseres Programmes dar. Dieser Graph offenbart den Datenfluss, die Abhaengigkeiten eines jeden Eingabeparameters von dem mit ihm verbundenen Ausgabeparameter. Zu jeder Zeit, an der sich unser Graph veraendert, sozusagen "verunreinigt" wird, wird jede Komponente flussabwaerts und jede Verbindung in dieser Richtung aktualisiert.
+Alle Objekte und Kabel, welche Objekte verbinden, stellen den logischen Graphen unseres Programmes dar. Dieser Graph offenbart den Datenfluss, die Abhängigkeiten eines jeden Eingabeparameters von dem mit ihm verbundenen Ausgabeparameter. Zu jeder Zeit, an der sich unser Graph verändert, sozusagen "verunreinigt" wird, wird jede Komponente flussabwärts und jede Verbindung in dieser Richtung aktualisiert.
 
 ![IMAGE](images/1-2-5/1-2-5_002-logical-graph.png)
->1. Reparametrisiere die Domaene einer Kurve auf die Werte von 0.0 bis 1.0.
+>1. Reparametrisiere die Domäne einer Kurve auf die Werte von 0.0 bis 1.0.
 2. Referenziere eine Kurve von Rhino.
 3. Teile eine Kurve in 13 gleiche Teile.
 4. Sende die Parameterwerte eines jeden Teilpunktes der Kurventeilung durch den Graphmapper.
 5. Multipliziere jeden Wert mit 27. 
-6. Zeichne einen Kreis and jedem Teilpunkt entlang der Kurve normal zum Tangentialvektor an jedem Punkt, mit dem Radius definiert durch den Parameterwert (t), der durch den Graphmapper und die Multiplikation mit 27 modifiziert wurde.
-7. Lofte eine Flaeche zwischen den Kreisen.
+6. Zeichne einen Kreis an jedem Teilpunkt entlang der Kurve normal zum Tangentialvektor an jedem Punkt, mit dem Radius definiert durch den Parameterwert (t), der durch den Graphmapper und die Multiplikation mit 27 modifiziert wurde.
+7. Lofte eine Fläche zwischen den Kreisen.
 
 ![IMAGE](images/1-2-5/1-2-5_003-lofted-variable-circles.png)
 >1. Variabler Kreisradius.

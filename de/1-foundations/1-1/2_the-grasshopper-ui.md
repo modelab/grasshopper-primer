@@ -1,4 +1,4 @@
-### 1.1.2. DIE GRASSHOPPER BENUTZEROBERFLÄCHE
+﻿### 1.1.2. DIE GRASSHOPPER BENUTZEROBERFLÄCHE
 
 #####Der visuelle “plug-and-play” Stil von Grasshopper gibt Designern die Fähigkeit kreative Problemlösung mit neuen regelbasierten Systemen in einer fluiden, graphischen Benutzeroberfläche zu kombinieren.
 
@@ -14,7 +14,7 @@ Editor. Die Grasshopper Oberfläche beinhaltet eine Anzahl an Elementen, die ein
 4. Komponentenpalette.
 5. Canvas Werkzeugleiste.
 6. Canvas.
-7. Dieser Bereich, der durch ein Raster von rechteckigen Feldern gekennzeichnet ist, stellt eine Oberfläche bereit mit der die zuletzt geöffneten Dateien geöffnet werden können. Das 3x3 Menü zeigt die zuletzt genutzten Dateien in chronologischer Reihenfolge und wird rote Felder anzeigen, sobald die entsprechende Datei nicht gefunden werden kann (was vorkommt, wenn Du Dateien in einen neuen Ordner verschiebst oder löschst).
+7. Dieser Bereich, der durch ein Raster von rechteckigen Feldern gekennzeichnet ist, stellt eine Oberfläche bereit, mit der die zuletzt geöffneten Dateien geöffnet werden können. Das 3x3 Menü zeigt die zuletzt genutzten Dateien in chronologischer Reihenfolge und wird rote Felder anzeigen, sobald die entsprechende Datei nicht gefunden werden kann (was vorkommt, wenn Du Dateien in einen neuen Ordner verschiebst oder löschst).
 8. Die Statusleiste nennt die von Dir genutzte Version von Grasshopper, welche gerade auf Deiner Maschine installiert ist. Falls eine neue Version verfügbar ist, wird ein Pop-Up-Fenster erscheinen und Dir die Anweisungen zum Download der neuesten Version zur Verfügung stellen.
 
 
@@ -25,9 +25,9 @@ Die Fenstertitelleiste des Editors verhält sich unterschiedlich von den meisten
 ####1.1.2.2. MENÜLEISTE
 Die Titelleiste ist ähnlich wie Windowsmenüleisten, außer der Dateibrowsersteuerung an der rechten Seite (siehe nächster Abschnitt). Das Dateimenü stellt, zusätzlich zu einigen nützlichen Werkzeugen, welche Dich Bilder von Deinem aktuellen Grasshopper Dokument exportieren lassen (siehe Export von schnellen Bildern und Export von Hi-Res Bildern), die typischen Funktionen zur Verfügung (z.B. Neue Datei, Öffnen, Speichern, etc.). Du kannst die verschiedenen Aspekte der Benutzeroberfläche steuern, indem Du die Menüs „View“ und „Display“ verwendest, während das Menü „Solution“ Dich die verschiedenen Eigenschaften der Berechnung der graphischen Lösung durch den Solver verwalten lässt.
 
-Es ist es wert anzumerken, dass viele Einstellungen der Anwendung durch den „Preferences“ Dialog gesteuert werden können, der im „File“ Menü zu finden ist. Der „Author“ Bereich erlaubt es Dir Deine persönlichen Metadaten einzutragen, welche in jedem Grasshopper Dokument gespeichert werden, während der „Display“ Abschnitt Dir die Möglichkeit gibt, die Feinabstimmung von Aussehen und Handhabung vorzunehmen. Der „Files“ Bereich erlaubt er Dir, Dinge zu spezifizieren, wie beispielsweise die Häufigkeit und der Speicherort für Autosavedateien (im Falle des unbeabsichtigten Schließens oder eines Absturzes der Anwendung). Schließlich, im „Solver“ Bereich, kannst Du die Kern- und Drittanbieter-Plugins verwalten, welche die Funktionalität erweitern.
+Es ist es wert anzumerken, dass viele Einstellungen der Anwendung durch den „Preferences“ Dialog gesteuert werden können, der im „File“ Menü zu finden ist. Der „Author“ Bereich erlaubt es Dir Deine persönlichen Metadaten einzutragen, welche in jedem Grasshopper Dokument gespeichert werden, während der „Display“ Abschnitt Dir die Möglichkeit gibt, die Feinabstimmung von Aussehen und Handhabung vorzunehmen. Der „Files“ Bereich erlaubt es Dir, Dinge zu spezifizieren, wie beispielsweise die Häufigkeit und der Speicherort für Autosavedateien (im Falle des unbeabsichtigten Schließens oder eines Absturzes der Anwendung). Schließlich, im „Solver“ Bereich, kannst Du die Kern- und Drittanbieter-Plugins verwalten, welche die Funktionalität erweitern.
 
-> Merke: Sei vorsichtig, wenn Du Tastaturkürzel verwendest, da diese im aktiven Fenster angewendet werden, welches entweder das von Grasshopper oder von Rhino sein kann. Es ist schnell passsiert ein Tastaturkürzel anzuwenden, ohne zu merken, dass es im falschen Fenster angewendet wurde und einen ungewollten Befehl ausgelöst hat.
+> Merke: Sei vorsichtig, wenn Du Tastaturkürzel verwendest, da diese im aktiven Fenster angewendet werden, welches entweder das von Grasshopper oder von Rhino sein kann. Es ist schnell passiert ein Tastaturkürzel anzuwenden, ohne zu merken, dass es im falschen Fenster angewendet wurde und einen ungewollten Befehl ausgelöst hat.
 
 ![IMAGE](images/1-1-2/1-1-2_002-settings.png)
 >Der „Preferences“ Dialog erlaubt es Dir viele Einstellungen der Grasshopper Anwendung zu steuern.
@@ -38,7 +38,7 @@ Der Dateibrowser erlaubt es Dir schnell zwischen verschiedenen geladenen Dateien
 Natürlich kannst Du auch durch den Standarddialog „Open file“ gehen, um Grasshopper Definitionen zu laden, auch wenn Du einfach eine Grasshopper Datei auf den Canvas ziehen kannst um eine bestimmte Definition zu öffnen.
 
 > Grasshopper ist ein Plugin, das „über“ Rhino arbeitet und deshalb eigene Dateitypen bereitstellt
-Der Standarddateityp ist eine binäre Datendatei, die mit der Erweiterung .gh gespeichert wird. Der andere Dateityp ist als Grasshopper XML Datei bekannt und verwendet die Erweiterung .ghx. Der XML (Extensible Markup Language) Dateityp nutzt Tags um Objekte und Objektattribute zu definieren (ähnlich einem.HTML Dokument), jedoch programmspezifische Tags, um die Daten innerhalb eines Objektes zu beschreiben. Weil XML Dateien als Textdokumente formatiert sind, kannst Du die Grasshopper XML Dateien in einem Texteditor wie NotePad öffnen, um hinter die Kulissen der Kodierung zu sehen.
+Der Standarddateityp ist eine binäre Datendatei, die mit der Erweiterung .gh gespeichert wird. Der andere Dateityp ist als Grasshopper XML Datei bekannt und verwendet die Erweiterung .ghx. Der XML (Extensible Markup Language) Dateityp nutzt Tags um Objekte und Objektattribute zu definieren (ähnlich einem HTML Dokument), jedoch programmspezifische Tags, um die Daten innerhalb eines Objektes zu beschreiben. Weil XML Dateien als Textdokumente formatiert sind, kannst Du die Grasshopper XML Dateien in einem Texteditor wie NotePad öffnen, um hinter die Kulissen der Kodierung zu sehen.
 
 Grasshopper hat verschiedene Methoden mit welchen es Dateien öffnen kann, und Du wirst angeben müssen, welche der Optionen Du anwenden möchtest, wenn Du eine bestimmte Methode nutzt.
 
@@ -77,7 +77,7 @@ Da es mehr Komponenten in jeder Unterkategorie geben kann, als in die Palette pa
 
 
 ####1.1.2.5. DER CANVAS
-Der Canvas ist die primäre Arbeitsoberfläche um Grasshopperdefinitionen zu erstellen. Hier kannst Du mit den verschiedenen Elementen Deines visuellen Programms interagieren. Du kannst damit beginnen auf dem Canvas zu arbeiten, indem Du Komponenten platzierst und diese mit Kabeln verbindest.
+Der Canvas ist die primäre Arbeitsoberfläche, um Grasshopperdefinitionen zu erstellen. Hier kannst Du mit den verschiedenen Elementen Deines visuellen Programms interagieren. Du kannst damit beginnen auf dem Canvas zu arbeiten, indem Du Komponenten platzierst und diese mit Kabeln verbindest.
 
 ####1.1.2.6. GRUPPIEREN
 Komponenten auf dem Canvas miteinander zu gruppieren kann insbesondere nützlich sein um die Lesbakeit und die Verständlichkeit von Definitionen zu verbessern. Gruppieren gibt Dir die Möglichkeit mehrere Komponenten schnell auszuwählen und auf dem Canvas zu bewegen. Du kannst eine Gruppe erstellen, indem Du Ctrl+G eingibst, während Du die gewünschten Komponenten ausgewählt hast. Eine alternative Methode kannst Du unter dem “Group Selection” Knopf des „Edit“ Menüs in der Menüleiste finden. Benutzerdefinierte Parameter für Gruppenfarben, -transparenz, -namen und -konturliniendarstellung können mit einem Rechtsklick auf ein Gruppenobjekt eingestellt werden.
@@ -116,7 +116,7 @@ Dieses Widget nutzt Markovketten um, basierend auf Deinem vergangenen Verhalten,
 
 
 ####1.1.2.8. NUTZUNG DER SUCHFUNKTION
-Obwohl einige Gedanken in die Platzierung der einzelnen Komponenten in den Komponentenpaneelen gegangen sind um es für den Nutzer intuitiv zugänglich zu machen, ist es manchmal schwierig bestimmte Komponenten, welche tief in den Kategoriepaneelen verborgen sind auszumachen. Glücklicherweise kannst Du auch jede Komponente unter ihrem Namen finden, wenn Du auf einen leeren Bereich im Canvas doppelklickst. Dies wird eine Pop-Up Suchleiste öffnen. Gib einfach den Namen der Komponente ein, nach der Du suchst und Du wirst eine Liste von Parametern und Komponenten erhalten, die Deiner Anfrage entsprechen.
+Obwohl einige Gedanken in die Platzierung der einzelnen Komponenten in den Komponentenpaneelen gegangen sind, um es für den Nutzer intuitiv zugänglich zu machen, ist es manchmal schwierig bestimmte Komponenten, welche tief in den Kategoriepaneelen verborgen sind auszumachen. Glücklicherweise kannst Du auch jede Komponente unter ihrem Namen finden, wenn Du auf einen leeren Bereich im Canvas doppelklickst. Dies wird eine Pop-Up Suchleiste öffnen. Gib einfach den Namen der Komponente ein, nach der Du suchst und Du wirst eine Liste von Parametern und Komponenten erhalten, die Deiner Anfrage entsprechen.
 
 ![IMAGE](images/1-1-2/1-1-2_011-search.png)
 >Doppelklicke irgendwo auf den Canvas um die Schlüsselwortsuche für eine bestimmte Komponente aus den Komponentenpaneelen zu aktivieren.
@@ -129,7 +129,7 @@ Obwohl einige Gedanken in die Platzierung der einzelnen Komponenten in den Kompo
 
 
 ####1.1.2.9. DIE FIND FUNKTION
-Es gibt buchstäblich hunderte (wenn nicht tausende) von Grasshopper Komponenten, welche Dir zur Verfügung stehen und es kann für einen Einsteiger ziemlich entmutigend sein zu wissen wo bestimmte Komponenten in den Komponentenpaletten zu finden sind. Die schnellste Lösung ist es irgendwo auf den Canvas doppelzuklicken und eine Suchanfrage für die Komponente einzugeben. Was jedoch tun, wenn Du eine bestimmte Komponente suchst, die bereits auf dem Canvas platziert wurde? Kein Grund zur Sorge. Mit einem Rechtsklick irgendwo auf den Canvas oder mit einem Druck auf die F3 Taste kannst Du die „Find“ Funktion aufrufen. Beginne einfach, indem Du den Namen der gesuchten Komponente eingibst.
+Es gibt buchstäblich hunderte (wenn nicht tausende) von Grasshopper Komponenten, welche Dir zur Verfügung stehen und es kann für einen Einsteiger ziemlich entmutigend sein zu wissen, wo bestimmte Komponenten in den Komponentenpaletten zu finden sind. Die schnellste Lösung ist es irgendwo auf den Canvas doppelzuklicken und eine Suchanfrage für die Komponente einzugeben. Was jedoch tun, wenn Du eine bestimmte Komponente suchst, die bereits auf dem Canvas platziert wurde? Kein Grund zur Sorge. Mit einem Rechtsklick irgendwo auf den Canvas oder mit einem Druck auf die F3 Taste kannst Du die „Find“ Funktion aufrufen. Beginne einfach, indem Du den Namen der gesuchten Komponente eingibst.
 
 Die „Find“ Funktion verwendet sehr ausgefeilte Algorithmen, welche nicht nur nach einer Instanz eines bestimmten Komponentennamen in einer Definition suchen (ein Komponentenname ist der Titel der Komponenten unter der er im Kompontenpaneel gefunden werden kann und kann vom Nutzer nicht geändert werden), sondern auch nach einzigartigen Signaturen, welchen wir bestimmten Komponenten zugeordnet haben können (auch Kosenamen genannt).
 Die „Find“ Funktion kann auch für die Suche nach Komponententypen auf dem Canvas verwendet werden oder nach Inhalten von Paneelen, Skizzen und Gruppeninhalten suchen. Sobald die „Find“ Funktion einen Treffer gefunden hat, wird es automatisch den Rest der Definition ausgrauen und eine Strichlinie um die hervorgehobene Komponente zeichnen. Wenn mehrere Treffer vorliegen, wird eine Liste der zutreffenden Komponenten für die Suchanfrage in der „Find“ Dialogbox angezeigt und sobald Du mit der Maus über einen Eintrag fährst, wird die entsprechende Komponente im Canvas grün dargestellt.
@@ -173,7 +173,7 @@ Die Canvaswerkzeugleiste ermöglicht schnellen Zugriff auf eine Anzahl häufig g
 7. **Vorschau Mesh Qualität:** Aus Optimierungsgründen kann die Qualität der Mesh- und Flächendarstellung kontrolliert werden mit der die Geometrien in Rhino dargestellt werden. Höhere Qualitätswerte werden zu höheren Laufzeiten für die Berechnung führen, während niedrigere Einstellungen zu einer weniger akuraten Darstellung führen werden. Es soll angemerkt werden, dass die Geometrie trotz der Einstellung eine hohe Auflösung der Darstellung in Rhino aufweisen wird, sobald sie in das Rhinodokument gebacken wird – die Einstellungen selbst haben nur einen geringen Einfluss auf die Darstellungsleistung und -qualität.
 
 ![IMAGE](images/1-1-2/1-1-2_018-sketch.png)
->Das Skizzenwerkzeug erlaubt es die Strichstärke, Strichtype und Farbe zu ändern. Mit einem Rechtsklick auf ein ausgewähltes Skizzenobjekt kannst Du wählen ob Du Deine Linien vereinfachen willst um eine glattere Darstellung zu erreichen. Rechtsklicke auf Dein Skizzenobjekt und wähle “Load from Rhino” um eine beliebige 2d Form in die Rhinoszene zu laden. Sobald Du eine Form als Referenz ausgewählt hast und die Eingabetaste drückst, wird Deine Skizzenlinie in die referenzierte Form rekonfiguriert.
+>Das Skizzenwerkzeug erlaubt es die Strichstärke, Strichtype und Farbe zu ändern. Mit einem Rechtsklick auf ein ausgewähltes Skizzenobjekt kannst Du wählen, ob Du Deine Linien vereinfachen willst, um eine glattere Darstellung zu erreichen. Rechtsklicke auf Dein Skizzenobjekt und wähle “Load from Rhino” um eine beliebige 2d Form in die Rhinoszene zu laden. Sobald Du eine Form als Referenz ausgewählt hast und die Eingabetaste drückst, wird Deine Skizzenlinie in die referenzierte Form rekonfiguriert.
 
 >Merke: Dein Skizzenobjekt kann sich von seiner ursprünglichen Position bewegt haben, sobald Du eine Form von Rhino geladen hast. Grasshopper platziert Dein Skizzenobjekt relativ zum Ursprung des Canvas (Ecke links oben) und dem Ursprung der Welt-XY-Achse in Rhino.
 
