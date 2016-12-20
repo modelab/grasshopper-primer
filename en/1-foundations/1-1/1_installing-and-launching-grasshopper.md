@@ -32,5 +32,5 @@ To Launch Grasshopper, type Grasshopper into the Rhino Command line. When you la
 ![IMAGE](images/1-1-1/1-1-1_005-launching-c.png)
 >Split the screen so that Grasshopper does not obstruct the Rhino Viewports.
 You can do this by dragging each window to opposite sides of the screen, or by
-holding the Wondows key and pressing the left or right arrows.
+holding the Windows key and pressing the left or right arrows.
 
