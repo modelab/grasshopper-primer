@@ -51,7 +51,7 @@ meshes, but this is to be expected and is only a result of Grasshopper’s drawi
 settings. Any baked geometry will still use the higher mesh settings.
 
 ####1.5.1.2. PROJECTING SURFACES
-In the previous section, we explained that NURBS surfaces contain their own coordinate space desfined by u and v domains. This means that two dimensional geometry that is defined by x and y coordinates can be mapped onto the uv space of a surface. The geometry will stretch and change in response to the curvature of the surface. This is different from simply projecting 2d geometry onto a surface, where vectors are drawn from the 2d geometry in a specified direction until they intersect with the surface.
+In the previous section, we explained that NURBS surfaces contain their own coordinate space defined by u and v domains. This means that two dimensional geometry that is defined by x and y coordinates can be mapped onto the uv space of a surface. The geometry will stretch and change in response to the curvature of the surface. This is different from simply projecting 2d geometry onto a surface, where vectors are drawn from the 2d geometry in a specified direction until they intersect with the surface.
 
 ![IMAGE](images/1-5-1/1-5-1_005-surface-mapping.png)
 >You can think of projecting as geometry casting a shadow onto a surface, and mapping as geometry being stretched over a surface.

@@ -32,7 +32,7 @@ Most of the components that deal with mathematical operations and functions can 
 5. The script subcategory contains single and multi-variable expressions as well as the VB.NET and C# scripting components.
 6. These components allow you to solve trigonometric functions such as Sine,Cosine, Tangent, etc.
 7. The time subcategory has a number of components which allow you to construct instances of dates and times.
-8. The utility subcategory is a ‘grab bag’ of useful components that canbe used in various mathematical equations. Check here if you’re trying find the maximum or minimum values between two lists of numbers; or average a group of numbers.
+8. The utility subcategory is a ‘grab bag’ of useful components that can be used in various mathematical equations. Check here if you’re trying find the maximum or minimum values between two lists of numbers; or average a group of numbers.
 
 ####1.3.3.2. OPERATORS
 As was previously mentioned, Operators are a set of components that use
@@ -196,7 +196,7 @@ thead {display: none}
 
 
 ####1.3.3.5. EXPRESSIONS
-{% if gitbook.generator == "pdf" or "mobi" or "epub" %}
+{% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
 >Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.3.3.5_expressions.gh)

@@ -14,7 +14,7 @@ To connect components, click and drag near the circle on the output side of an o
 
 ![IMAGE](images/1-2-4/1-2-4_001c.png)
 >4. If you hold down CONTROL, the cursor will become red, and the targeted source will be removed from the source list.
-5. By default, a new connection will erase existing connections. Hold the SHIFT button while dragging connection wires to difne multiple sources. The cursor will turn green to indicate the addition behavior.
+5. By default, a new connection will erase existing connections. Hold the SHIFT button while dragging connection wires to define multiple sources. The cursor will turn green to indicate the addition behavior.
 
 ![IMAGE](images/1-2-4/1-2-4_001d.png)
 >6. You can also disconnect wires through the context popup menu - right click the grip of the input or output and select disconnect.

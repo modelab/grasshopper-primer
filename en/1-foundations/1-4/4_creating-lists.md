@@ -9,7 +9,7 @@
 
 ####1.4.4.1. MANUAL LIST CREATION
 Perhaps the easiest way to create a list (and one of the most over-looked
-methods) is to manually type in a list of values into a parameter. Using this method puts added responsibility on the user because this method relies on direct user input (ie. persistent data) for the list creation. In order to change the list values, the user has to manually type in each individual valuewhich can be difficult if the list has many entries. There are several ways to manually create a list. One way is to use a Number paramter. Right click the Number parameter and select “Manage Number Collection.”
+methods) is to manually type in a list of values into a parameter. Using this method puts added responsibility on the user because this method relies on direct user input (ie. persistent data) for the list creation. In order to change the list values, the user has to manually type in each individual value which can be difficult if the list has many entries. There are several ways to manually create a list. One way is to use a Number parameter. Right click the Number parameter and select “Manage Number Collection.”
 
 ![IMAGE](images/1-4-4/1-4-4_001-manual-list-creation.png)
 >1. Right click the number component to open the Number collection Manager.

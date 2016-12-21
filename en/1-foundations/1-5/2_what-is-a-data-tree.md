@@ -23,7 +23,7 @@ The image below illustrates the difference between a list and a data tree. On th
 Due to their complexity, Data Trees can be difficult to understand. Grasshopper has several tools to help visualize and understand the data stored in a tree.
 
 **The Param Viewer**
-The Param Viewer (Params/Util/Param Viewer) allows you to visualize data in text form and as a tree. Connect any output containing data to the input of the Param Viewer. To show the tree, right-click the Param Viewer and select “draw tree.” In this example, the Param Viewer is connected to the Points (P) output of a Divide Curve component that divided 10 curves into 10 segements each. The ten branches correspond to the ten curves, each containing a list of 11 points which are the division points of the curve.
+The Param Viewer (Params/Util/Param Viewer) allows you to visualize data in text form and as a tree. Connect any output containing data to the input of the Param Viewer. To show the tree, right-click the Param Viewer and select “draw tree.” In this example, the Param Viewer is connected to the Points (P) output of a Divide Curve component that divided 10 curves into 10 segments each. The ten branches correspond to the ten curves, each containing a list of 11 points which are the division points of the curve.
 
 ![IMAGE](images/1-5-2/1-5-2_003-param-viewer.png)
 >1. Path of each list

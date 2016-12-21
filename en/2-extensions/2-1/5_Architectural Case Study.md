@@ -132,7 +132,7 @@ thead {display: none}
 |15b.| Right click the Result (R) output of the **Merge** component and click "Flatten". ||
 |16.| **Element\*/Utility/Mesh Combine and Clean** - Drag and drop a **Element* Mesh Combine and Clean** component on the canvas|![IMAGE](images/2-1-5/2-1-5_036_Combine-and-Clean.png)||
 
->Components have detailed remarks and warnings to inform the user of the current or potential issues that might come about from interaction with other components. In some instances you might use the Element* Combine and Clean component to join and combine identical vertices on a mesh which could lead to non manifold edges if that mesh is thickend later on. The Element* Combine and Clean component will inform you of this issue that will return the list back to you. You have the option of setting the Combine Type to a value of 1 which will combine the meshes in the list but not combine identical vertices.
+>Components have detailed remarks and warnings to inform the user of the current or potential issues that might come about from interaction with other components. In some instances you might use the Element* Combine and Clean component to join and combine identical vertices on a mesh which could lead to non manifold edges if that mesh is thickened later on. The Element* Combine and Clean component will inform you of this issue that will return the list back to you. You have the option of setting the Combine Type to a value of 1 which will combine the meshes in the list but not combine identical vertices.
 
 ![IMAGE](images/2-1-5/2-1-5_037_Definition.png)
 ---

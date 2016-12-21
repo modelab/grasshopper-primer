@@ -21,7 +21,7 @@ Volatile data, as the name suggests, is not permanent and will be destroyed each
 
 As previously stated, Grasshopper data is stored in Parameters (either in Volatile or Persistent form) and is used in various Components. When data is not stored in the permanent record set of a Parameter, it must be inherited from elsewhere. Every Parameter (except output parameters) defines where it gets its data from and most Parameters are not very particular. You can plug a number Parameter (which just means that it is a decimal number) into an integer source and it will take care of the conversion.
 
-You can change the way data is inherited and stored in the context menu of a parameter or component input. To change store referenced Rhino geometry in the grasshopper definition itself, right click a parameter and select Internalise data from the menu. This is useful if you want your grasshopper definition to be independent from a Rhino file.
+You can change the way data is inherited and stored in the context menu of a parameter or component input. To change or store referenced Rhino geometry in the grasshopper definition itself, right click a parameter and select Internalise data from the menu. This is useful if you want your grasshopper definition to be independent from a Rhino file.
 
 You can also Internalise data in a component input. Once you select Internalise data in the menu, any wires will disconnect from that input. The data has been changed from volatile to persistent, and will no longer update.
 
@@ -50,11 +50,11 @@ numerical values by plotting the input along the Graph’s X Axis and outputting
 
 ![IMAGE](images/1-2-3/1-2-3_005-graph-mapper-a.png)
 >1. Move the grips to edit the graph - each time you do this, Grasshopper will recompute the solution.
-2. Right click the graph mapper compenent to select the graph type.
+2. Right click the graph mapper component to select the graph type.
 
 ![IMAGE](images/1-2-3/1-2-3_006-graph-mapper-b.png)
 >1. Double click the graph mapper to open the Graph Editor.
-2. Change thex and y domains.
+2. Change the x and y domains.
 
 **Value List**
 The Value List stores a collection of values with corresponding list of Labels associated by way of an equal sign. It is particularly useful when you want to have a few options, labeled with meaning, that can supply specific output values.

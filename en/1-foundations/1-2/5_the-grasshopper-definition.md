@@ -14,7 +14,7 @@ Grasshopper visual programs are executed from left to right. Reading the graph r
 >Directionality of data is left to right.
 
 ####1.2.5.2. THE LOGICAL PATH
-All of the objects and the wires connecting the objects represent the logical graph of our program. This graph reveals the flow of data, dependencies of any input to its wiired output. Any time our graph changes, sometimes referrred to as being “dirtied,” every downstream connection and object will be updated.
+All of the objects and the wires connecting the objects represent the logical graph of our program. This graph reveals the flow of data, dependencies of any input to its wired output. Any time our graph changes, sometimes referred to as being “dirtied,” every downstream connection and object will be updated.
 
 ![IMAGE](images/1-2-5/1-2-5_002-logical-graph.png)
 >1. Reparameterize the curve domain between 0.0 and 1.0.
@@ -22,7 +22,7 @@ All of the objects and the wires connecting the objects represent the logical gr
 3. Divide the curve into 13 equal segments.
 4. Run the parameter values at each curve division point through the graph.
 5. Multiply each value by 27.
-6. Draw a circle at each division point along th ecurve, normal to the tangent vector at each pont, with a radius defined by the parameter values (t) modified by the graph mapper and multiplied by 27.
+6. Draw a circle at each division point along the curve, normal to the tangent vector at each pont, with a radius defined by the parameter values (t) modified by the graph mapper and multiplied by 27.
 7. Loft a surface between the circles
 
 ![IMAGE](images/1-2-5/1-2-5_003-lofted-variable-circles.png)

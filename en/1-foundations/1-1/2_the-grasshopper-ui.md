@@ -76,7 +76,7 @@ Grasshopper document, although you can also drag and drop any Grasshopper
 file onto the canvas to load a particular definition.
 
 > Grasshopper is a plug-in that works “on-top” of Rhino and as such has its own file types.
-The default file type is a binary data file, saved with an extension of .gh. The other file type is known as a Grasshopper XML file, which uses the extension .ghx. The XML (Extensible Markup Language) file type uses tags to define objects and object attributes (much like an .HTML document) but uses custom tags to define objects and the data within each object. Because XML files are formatted as textdocuments, you could open up any Grasshopper XML file in a text editor like NotePad to see the coding that is going on behind the scenes.
+The default file type is a binary data file, saved with an extension of .gh. The other file type is known as a Grasshopper XML file, which uses the extension .ghx. The XML (Extensible Markup Language) file type uses tags to define objects and object attributes (much like an .HTML document) but uses custom tags to define objects and the data within each object. Because XML files are formatted as text documents, you could open up any Grasshopper XML file in a text editor like NotePad to see the coding that is going on behind the scenes.
 
 Grasshopper has several different methods by which it can open a file, and you
 will need to specify which option you would like to use when using this method.
