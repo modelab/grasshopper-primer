@@ -15,7 +15,7 @@ thead {display: none}
 #####The color wheel is a model for organizing colors based on their hue. In Grasshopper, colors can be defined by their hue value in a range of 0.0 to 1.0. Domains are used to define a range of all possible values between a set of numbers between a lower limit(A) and an upper limit (B).
 
 ![](images/1-3-4/1-3-4_01-color-wheel.png)
->In the color wheel, hue corresponds to the angle. Grasshopper has taken this 0-360 domainand remapped it between zero and one.
+>In the color wheel, hue corresponds to the angle. Grasshopper has taken this 0-360 domain and remapped it between zero and one.
 
 By dividing the Hue domain (0.0 to 1.0) by the number of segments desired, we can assign a hue value to each segment to create a color wheel.
 

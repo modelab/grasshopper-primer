@@ -6,13 +6,13 @@ thead {display: none}
 </style>
 
 ### 1.5.4. Working with Data Trees
-{% if gitbook.generator == "pdf" or "mobi" or "epub" %}
+{% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
 >Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.5.4_rail intersect definition.gh)
 {% endif %}
 
-In this example, we will use some of Grasshopper’s tools for manipulating data trees to retreive, reorganize, and interpolate the desired points contained in a data tree and create a lattice of intersecting fins.
+In this example, we will use some of Grasshopper’s tools for manipulating data trees to retrieve, reorganize, and interpolate the desired points contained in a data tree and create a lattice of intersecting fins.
 
 ![IMAGE](images/1-5-3/1-5-3_033-rail-intersect.png)
 >1. Sweep with two rails to create a NURBS surface.
@@ -131,6 +131,6 @@ In this example, we will use some of Grasshopper’s tools for manipulating data
 |69.| Connect the Unit Vector (V) output of the **Unit Y** component to the Direction (D) input of the **Extrude** component|||
 
 ![IMAGE](images/1-5-3/1-5-3_058-final-definition.png)
->You should now see a diagonal grid of strips or fins in the Rhino Viewport. Adjust the Factor slider to chnage the depth of the fins
+>You should now see a diagonal grid of strips or fins in the Rhino Viewport. Adjust the Factor slider to change the depth of the fins
 
 ![IMAGE](images/1-5-3/1-5-3_059-final-example.png)

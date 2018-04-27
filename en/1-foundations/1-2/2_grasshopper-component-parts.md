@@ -1,6 +1,6 @@
 ### 1.2.2. GRASSHOPPER COMPONENT PARTS
 
-#####Components are the objects you place on the canvas and connect together with Wiresto form a visual program. Components can represent Rhino Geometry or operationslike Math Functions. Components have inputs and outputs.
+#####Components are the objects you place on the canvas and connect together with Wires to form a visual program. Components can represent Rhino Geometry or operations like Math Functions. Components have inputs and outputs.
 
 ![IMAGE](images/1-2-2/1-2-2_001-component-parts.png)
 >1. The three input parameters of the Circle CNR component.
@@ -27,7 +27,7 @@ the center area of the object and correspond to the icons displayed in the compo
 3. The Circle CNR component with full names displayed
 
 
-We reccommend using icon display to familiarize yourself with the component icons so you can quickly locate them in the palettes. This will also enable you to understand definitions at a glance. Text labels can be confusing because different components may share the same label.
+We recommend using icon display to familiarize yourself with the component icons so you can quickly locate them in the palettes. This will also enable you to understand definitions at a glance. Text labels can be confusing because different components may share the same label.
 
 ![IMAGE](images/1-2-2/1-2-2_005-circle-label-vs-icon.png)
 >Circle CNR and Circle 3pt have the same label, but different icons.
@@ -38,7 +38,7 @@ components in the palettes is holding down Ctrl + Alt and clicking on an existin
 ![IMAGE](images/1-2-2/1-2-2_006-reveal-location.png)
 
 ####1.2.2.2. COMPONENT HELP
-Right clicking an object and selecting “Help” from the drop-down menu will open a Grasshopper help window. The help window contains a more detailled description of the object, a list of inputs and outputs, as well as remarks.
+Right clicking an object and selecting “Help” from the drop-down menu will open a Grasshopper help window. The help window contains a more detailed description of the object, a list of inputs and outputs, as well as remarks.
 
 ![IMAGE](images/1-2-2/1-2-2_007-component-help.png)
 >1. Grasshopper help window for the Point parameter
@@ -49,9 +49,9 @@ Component inputs are expecting to receive certain types of data, for example a C
 
 ![IMAGE](images/1-2-2/1-2-2_008-tool-tips.png)
 >1. Header of the tooltip shows the icon for the input type, the name of the Component, the label for the input, and the input type again in text format.
-2. The flain language description of what the input is for the Component.
+2. The plain language description of what the input is for the Component.
 3. Any values defined for the input - either locally or from its connected wire.
-4. The header of the output tooltip provides the same detail os for inputs, but for the corresponding output.
+4. The header of the output tooltip provides the same detail is for inputs, but for the corresponding output.
 5. The result of the component's action.
 
 ####1.2.2.4. CONTEXT POPUP MENUS
@@ -62,7 +62,7 @@ settings and details. You can access this context menu by right-clicking on the 
 >1. Component context menu.
 2. Editable text field that lists the name of the object.
 3. Preview flag - indicates whether or not the geometry produced by this object will be visible in the Rhino viewports. Switching off preview will speed up both the Rhino viewport frame-rate and the time taken for a solution.
-4. Runting warnings - lists warnings that are hindering the functioning of the component.
+4. Runtime warnings - lists warnings that are hindering the functioning of the component.
 
 ![IMAGE](images/1-2-2/1-2-2_010-context-menus-b.png)
 >1. C input context menu.

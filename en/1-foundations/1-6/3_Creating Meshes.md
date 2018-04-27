@@ -61,7 +61,7 @@ thead {display: none}
 |04.| Connect the **Number Slider** to the U Count (U) and V Count (V) inputs of the **Mesh Sphere** Component|||
 
 ![IMAGE](images/1-6-3/exercise-01.png)
->Adjust the slider and notice how the resoultion of the sphere changes in the Rhino viewport. Higher numbers result in a smoother sphere, but also produce larger datasets which can require more processing time.
+>Adjust the slider and notice how the resolution of the sphere changes in the Rhino viewport. Higher numbers result in a smoother sphere, but also produce larger datasets which can require more processing time.
 
 ||||
 |--|--|--|

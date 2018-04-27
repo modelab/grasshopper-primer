@@ -34,7 +34,7 @@ Let’s look more closely at the Shortest List component:
 
 ![IMAGE](images/1-4-3/1-4-3_006-trim-end.png)
 
-Here we have two input lists {A,B,C,D,E} and {X,Y,Z}. Using the Trim End option, the last two items in the first list are disregarded., so that the lists are of equal length.
+Here we have two input lists {A,B,C,D,E} and {X,Y,Z}. Using the Trim End option, the last two items in the first list are disregarded so that the lists are of equal length.
 
 ![IMAGE](images/1-4-3/1-4-3_007-trim-start.png)
 
