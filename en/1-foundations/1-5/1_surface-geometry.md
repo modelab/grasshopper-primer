@@ -1,6 +1,6 @@
-###1.5.1. Surface Geometry
+### 1.5.1. Surface Geometry
 
-#####NURBS (non-uniform rational B-splines) are mathematical representations that can accurately model any shape from a simple 2D line, circle, arc, or box to the most complex 3D free-form organic surface or solid. Because of their flexibility and accuracy, NURBS models can be used in any process from illustration and animation to manufacturing.
+##### NURBS (non-uniform rational B-splines) are mathematical representations that can accurately model any shape from a simple 2D line, circle, arc, or box to the most complex 3D free-form organic surface or solid. Because of their flexibility and accuracy, NURBS models can be used in any process from illustration and animation to manufacturing.
 
 Apart from a few primitive surface types such as spheres, cones, planes and cylinders, Rhino supports three kinds of freeform surface types, the most useful of which is the NURBS surface. Similar to curves, all possible surface shapes can be represented by a NURBS surface, and this is the default fall-back in Rhino. It is also by far the most useful surface definition and the one we will be focusing on.
 
@@ -10,7 +10,7 @@ Apart from a few primitive surface types such as spheres, cones, planes and cyli
 3. Plane Primitive [plane, width, height]
 4. Cone Primitive [plane, radius, height]
 
-####1.5.1.1. NURBS SURFACES
+#### 1.5.1.1. NURBS SURFACES
 NURBS surfaces are very similar to NURBS curves. The same algorithms are
 used to calculate shape, normals, tangents, curvatures and other properties, but there are some distinct differences. For example, curves have tangent vectors and normal planes, whereas surfaces have normal vectors and tangent planes.This means that curves lack orientation while surfaces lack direction. In  the case of NURBS surfaces, there are in fact two directions implied by the geometry, because NURBS surfaces are rectangular grids of {u} and {v} curves. And even though these directions are often arbitrary, we end up using them anyway because they make life so much easier for us.
 
@@ -50,7 +50,7 @@ some of the mesh settings are slightly lower in order to keep the speed of the G
 meshes, but this is to be expected and is only a result of Grasshopper’s drawing
 settings. Any baked geometry will still use the higher mesh settings.
 
-####1.5.1.2. PROJECTING SURFACES
+#### 1.5.1.2. PROJECTING SURFACES
 In the previous section, we explained that NURBS surfaces contain their own coordinate space desfined by u and v domains. This means that two dimensional geometry that is defined by x and y coordinates can be mapped onto the uv space of a surface. The geometry will stretch and change in response to the curvature of the surface. This is different from simply projecting 2d geometry onto a surface, where vectors are drawn from the 2d geometry in a specified direction until they intersect with the surface.
 
 ![IMAGE](images/1-5-1/1-5-1_005-surface-mapping.png)
@@ -71,7 +71,7 @@ normal vectors at the corners of each patch to the desired height and creating
 a box defined by the end points of those vectors and the corner points of the
 patch.
 
-####1.5.1.3. MORPHING DEFINITION
+#### 1.5.1.3. MORPHING DEFINITION
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
 >Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}

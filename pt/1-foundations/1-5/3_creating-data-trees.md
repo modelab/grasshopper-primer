@@ -6,29 +6,29 @@
 {% endif %}
 
 
-#####Grasshopper contains tools for changing the structure of a data tree. Theese tools can help you access specific data within a tree, and change the way it is stored, ordered, and identified.
+##### Grasshopper contains tools for changing the structure of a data tree. Theese tools can help you access specific data within a tree, and change the way it is stored, ordered, and identified.
 
 Let’s look at some data tree manipulations and visualize how they affect the tree.
 
-####1.5.3.1. FLATTEN
+#### 1.5.3.1. FLATTEN
 Flattening removes all levels of a Data Tree, resulting in a single List. Using the Flatten component (Sets/Tree/Flatten) on the P output of our Divide Curve component, we can use the Param Viewer to visualize the new data structure.
 
 ![IMAGE](images/1-5-3/1-5-3_001-flatten.png)
 >In the Param Viewer, we can see that we now only have 1 branch containing a list of 48 points.
 
-####1.5.3.2. GRAFT TREE
+#### 1.5.3.2. GRAFT TREE
 Grafting creates a new Branch for every Data Item. If we run the data through the Graft Tree component (Sets/Tree/Graft Tree), each division point now has its own individual branch, rather than sharing a branch with the other division points on the same curve.
 
 ![IMAGE](images/1-5-3/1-5-3_002-graft.png)
 >In the Param Viewer, we can see that what was data with 8 branches of 6 items each, we now have 8 branches with 6 sub-branches containing 1 item each.
 
-####1.5.3.3. SIMPLIFY TREE
+#### 1.5.3.3. SIMPLIFY TREE
 Simplify removes overlapping Branches in a Data Tree. If we run the data through the Simplify Tree component (Sets/Tree/Simplify Tree), the first branch, containing no data, has been removed.
 
 ![IMAGE](images/1-5-3/1-5-3_003-simplify.png)
 >In the Param Viewer, we still have 8 branches of 6 items each, but the first branch has been removed.
 
-####1.5.3.4. FLIP MATRIX
+#### 1.5.3.4. FLIP MATRIX
 The Flip Matrix component (Sets/Tree/Flip Matrix) Swaps the “Rows” and “Columns” of a Data Tree with two Path Indices.
 
 ![IMAGE](images/1-5-3/1-5-3_004-flip-matrix.png)
@@ -42,7 +42,7 @@ operation is performed. If you flatten a component output, the data will be flat
 2. Grafted output P
 3. Simplified output P
 
-####1.5.3.5. THE PATH MAPPER
+#### 1.5.3.5. THE PATH MAPPER
 The Path Mapper component (Sets/Tree/Path Mapper) allows you to perform lexical operations on data trees. Lexical operations are logical mappings between data paths and indices which are defined by textual (lexical) masks and patterns.
 
 ![IMAGE](images/1-5-3/1-5-3_006-path-mapper-a.png)
@@ -52,7 +52,7 @@ The Path Mapper component (Sets/Tree/Path Mapper) allows you to perform lexical 
 3. The Mapping Editor
 4. You can modify a data tree by re-mapping the path index and the desired branch
 
-####1.5.3.6. WEAVING DEFINITION
+#### 1.5.3.6. WEAVING DEFINITION
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
 >Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}

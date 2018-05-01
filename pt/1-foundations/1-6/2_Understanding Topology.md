@@ -1,6 +1,6 @@
 ### 1.6.2 Understanding Topology
 
-#####While the vertices of a mesh contain position information, it is really the connections between the vertices that give a mesh geometry its unique structure and flexibility. 
+##### While the vertices of a mesh contain position information, it is really the connections between the vertices that give a mesh geometry its unique structure and flexibility. 
 
 
 ![IMAGE](images/1-6-2/01_meshMorph2.png)
@@ -30,7 +30,7 @@ It is possible for two distinct mesh shapes to be topologically identical. All t
 >A topologically equivalent mug and donut
  
  
-####1.6.2.2 Mesh Characteristics
+#### 1.6.2.2 Mesh Characteristics
 
 **Orientable**
 
@@ -66,7 +66,7 @@ Non-manifold geometry is essentially geometry that cannot exist in the "real wor
 
 How is mesh geometry different from NURBS geometry? When might you want to use one instead of the other? 
 
-#####Parameterization
+##### Parameterization
 In a previous chapter, we saw that NURBS surfaces are defined by a series of NURBS curves going in two directions. These directions are labeled U and V, and allow a NURBs surface to be parameterized according to a two-dimensional surface domain. The curves themselves are stored as equations in the computer, allowing the resulting surfaces to be calculated to an arbitarily small degree of precision. It can be difficult, however, to combine multiple NURBS surfaces together. Joining two NURBS surfaces will result in a polysurface, where different sections of the geometry will have different UV parameters and curve definitions.
 
 Meshes, on the other hand, are comprised of a discrete number of exactly defined vertices and faces. The network of vertices generally cannot be defined by simple UV coordinates, and because the faces are discrete the amount of precision is built into the mesh and can only be changed by refining the mesh and added more faces. The lack of UV coordinates, however, allows meshes the flexibility to handle more complicated geometry with a single mesh, instead of resorting to a polysurface in the case of NURBS.
@@ -74,7 +74,7 @@ Meshes, on the other hand, are comprised of a discrete number of exactly defined
 >Note - While a mesh does not have implicit UV parameterization, it is sometimes useful to assign such a parameterization in order to map a texture or image file onto mesh geometry for rendering. Some modeling software therefore treats the UV coordinates of a mesh vertex as an *attribute* (like vertex color) which can be manipulated and changed. These are usually assigned and not completely defined by the mesh itself.
 
 
-#####Local vs Global Influence
+##### Local vs Global Influence
 
 Another important difference is the extent to which a local change in mesh or NURBS geometry affects the entire form. Mesh geometry is completely local. Moving one vertex affects only the faces that are adjacent to that vertex. In NURBS surfaces, the extent of the influence is more complicated and depends on the degree of the surface as well as the weights and knots of the control points. In general, however, moving a single control point in a NURBS surface creates a more global change in geometry.
 

@@ -9,13 +9,13 @@ padding: 15px;
 .test img{float:none}
 
 </style>
-##About This Primer
+## About This Primer
 
-###Authors
+### Authors
 
 
 ![IMAGE](images/akos.png)
-#####Gil Akos, Mode Lab
+##### Gil Akos, Mode Lab
 Gil Akos is a founding partner and Director of Technology at Mode Lab, a
 multidisciplinary design consultancy specializing in technology-driven process
 innovation. He brings diverse professional experience, technical expertise in
@@ -27,7 +27,7 @@ http://modelab.is/education
 
 
 ![IMAGE](images/parsons.png)
-#####Ronnie Parsons, Mode Lab
+##### Ronnie Parsons, Mode Lab
 Ronnie Parsons is a founding partner and Director of Education at Mode Lab, a
 multidisciplinary design consultancy specializing in technology-driven process
 innovation. At Mode Lab, Ronnie identifies new ways to connect and configure
@@ -39,7 +39,7 @@ http://modelab.is/education
 
 
 ![IMAGE](images/modelab.png)
-#####Mode Lab Team:
+##### Mode Lab Team:
 <ul>Sharon Jamison<br>
 Andrew Reitz<br>
 Armon Jahanshahi<br>
@@ -49,11 +49,11 @@ Kimberly Parsons<br>
 Roberto Godinez<br>
 Christopher Morse</ul>
 
-###Contributors
+### Contributors
 
 
 ![IMAGE](images/payne.png)
-#####Andrew Payne, Principal, Lift Architects
+##### Andrew Payne, Principal, Lift Architects
 Andrew Payne is a registered architect who founded LIFT architects in 2007. Andrew’s work explores embedded computation, intelligent buildings,
 and generative design and he has published papers and taught workshops
 throughout North America and Europe. In 2010, Andrew and Jason K. Johnson
@@ -85,7 +85,7 @@ http://www.grasshopper3d.com/
 
 
 
-###LICENSING INFORMATION
+### LICENSING INFORMATION
 The Grasshopper Primer is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported license. The full text of this license is available here: http://creativecommons.org/licenses/by-nc-sa/3.0/us/legalcode
 
 Under this license, you are free:

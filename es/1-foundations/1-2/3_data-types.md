@@ -1,8 +1,8 @@
 ### 1.2.3. DATA TYPES
 
-#####Most parameters can store two different kinds of data: Volatile and Persistent. Volatile data is inherited from one or more sources and is destroyed (i.e. recollected) whenever a new solution starts. Persistent data is data which has been specifically set by the user.
+##### Most parameters can store two different kinds of data: Volatile and Persistent. Volatile data is inherited from one or more sources and is destroyed (i.e. recollected) whenever a new solution starts. Persistent data is data which has been specifically set by the user.
 
-####1.2.3.1. PERSISTENT DATA
+#### 1.2.3.1. PERSISTENT DATA
 Persistent data is accessed through the menu, and depending on the kind of parameter has a different manager. A Point parameter for example allows you to set one or more points through its menu. But, let’s back up a few steps and see how a Point Parameter behaves.
 
 When you drag and drop a Point Parameter from the Params/Geometry Panel onto the canvas, the Parameter is orange, indicating it generated a warning. It’s nothing serious, the warning is simply there to inform you that the parameter is empty (it contains no persistent records and it failed to collect volatile data) and thus has no effect on the outcome of the solution. The context menu of the Parameter offers two ways of setting persistent data: single and multiple. Right click on the parameter to set Multiple Points. Once you click on either of these menu items, the Grasshopper window will disappear and you will be asked to pick a point in one of the Rhino viewports.
@@ -16,7 +16,7 @@ Once you have defined all the points you can press Enter and they will become pa
 2. Once the parameter contains some persistent data, the component will turn from orange to grey.
 3. The tooltip for the point parameter shows the persistent data (a collection of referenced points) that is stored.
 
-####1.2.3.2. VOLATILE DATA
+#### 1.2.3.2. VOLATILE DATA
 Volatile data, as the name suggests, is not permanent and will be destroyed each time the solution is expired. However, this will often trigger an event to rebuild the solution and update the scene. Generally speaking, most of the data generated ‘on the fly’ is considered volatile.
 
 As previously stated, Grasshopper data is stored in Parameters (either in Volatile or Persistent form) and is used in various Components. When data is not stored in the permanent record set of a Parameter, it must be inherited from elsewhere. Every Parameter (except output parameters) defines where it gets its data from and most Parameters are not very particular. You can plug a number Parameter (which just means that it is a decimal number) into an integer source and it will take care of the conversion.
@@ -29,7 +29,7 @@ If you want the data to become volatile again, simply reconnect the wires to the
 
 ![IMAGE](images/1-2-3/1-2-3_003-right-click.png)
 
-####1.2.3.3. INPUT PARAMETERS
+#### 1.2.3.3. INPUT PARAMETERS
 Grasshopper has a variety of Parameters that offer you the ability to interface with the data that is begin supplied to Component inputs and thereby control for changing the result of your definition. Because they Parameters that change with our input, they generate Volatile Data.
 
 **Number Slider**

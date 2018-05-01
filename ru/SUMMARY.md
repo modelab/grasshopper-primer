@@ -40,7 +40,7 @@
        * [Операции с Mesh](1-foundations/1-6/4_Mesh Operations.md)
        * [Взаимодействие Mesh](1-foundations/1-6/5_Mesh Interactions.md)
        * [Работа с геометрией Mesh](1-foundations/1-6/6_Working with Mesh Geometry.md)
-#КНИГА 2 - Расширения
+# КНИГА 2 - Расширения
 * [Расширения](2-extensions/2-extensions.md)
     * [Element*](2-extensions/2-1/0_Element.md)
         * [Введение](2-extensions/2-1/1_Element_Intro.md)

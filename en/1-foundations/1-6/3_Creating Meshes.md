@@ -1,13 +1,13 @@
 ### 1.6.3 Creating  Meshes
 
-#####In the last section, we looked at the basic structure of meshes. In this section, we give a brief introduction to different ways of generating mesh geometry.
+##### In the last section, we looked at the basic structure of meshes. In this section, we give a brief introduction to different ways of generating mesh geometry.
 
 There are three fundamental ways of creating mesh geometry in Grasshopper:
 1. Starting with a mesh primitive
 2. Manually constructing a mesh from faces and vertices
 3. Converting NURBS geometry into a mesh
 
-####1.6.3.1 Primitive
+#### 1.6.3.1 Primitive
 
 Grasshopper comes with a few simple mesh primitive components:
 
@@ -17,13 +17,13 @@ Grasshopper comes with a few simple mesh primitive components:
 3. **Mesh Sphere** - This primitive requires a base plane to determine the center and orientation of the sphere, a radius for the size, and U and V values to determine the number of faces.
 4. **Mesh Sphere Ex** - Also known as a Quadball, this primitive creates a sphere composed of six patches, which are subdivided according to the C input. A quadball is topologically equivalent to a cube, even though it is geometrically spherical.
 
-####1.6.3.2 Construct Mesh
+#### 1.6.3.2 Construct Mesh
 
 ![IMAGE](images/1-6-3/construct-mesh.png)
 
 As we saw in the previous section, the **Construct Mesh** component can be used to directly create a mesh from a list of vertices and a list of faces (and an optional list of vertex colors). Constructing an entire mesh manually can be extremely tedious, so this component is more often used with an existing list of faces and vertices which have been extracted using a **Deconstruct Mesh** component on an existing mesh.
 
-####1.6.3.3 NURBS to Mesh
+#### 1.6.3.3 NURBS to Mesh
 
 Perhaps the most common method of creating a complex mesh is to generate one based off of NURBS geometry. Individual NURBS surfaces can be converted to a mesh using the **Mesh Surface** component, which simply subdivides the surface along its UV coordinates and creates quad faces. This component allows you to enter the number of U and V divisions for the resultant mesh.
 
@@ -35,7 +35,7 @@ More complex polysurfaces can be converted to a single mesh with the **Mesh Brep
 
 NOTE: it is generally much easier to convert from a NURBS geometry to a mesh object rather than the other way around. While the UV coordinates of a NURBS surface are straightforward to convert to quad faces of a mesh, the opposite is not necessarily true, since a mesh might contain a combination of triangles and quads in a way that is not simple to extract a UV coordinate system out of. 
 
-####1.6.3.4 Exercise
+#### 1.6.3.4 Exercise
 
 In this exercise, we use a basic Mesh primitive, perform a transformation on the vertices, and then assign a color based on the normal vectors to approximate the rendering process.
 

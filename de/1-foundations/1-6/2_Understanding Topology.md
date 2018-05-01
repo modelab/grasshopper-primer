@@ -64,7 +64,7 @@ Nicht-mannigfaltige Geometrien sind essentielle Geometrien, die nicht in der "re
 
 Inwiefern sind Polygonnetzgeometrien unterschiedlich von NURBS Geometrien? Wann ist es besser die eine oder die andere zu nutzen?
 
-#####Parametrisierung
+##### Parametrisierung
 In einem früheren Kapitel haben wir gesehen, dass NURBS Flächen durch eine Serie von NURBS Kurven in beiden Richtungen definiert sind. Diese Richtungen sind mit U und V benannt und ermöglichen eine NURBS Fläche entsprechend einer zweidimensionalen Domäne zu parametrisieren. Die Kurven selbst werden als Gleichungen im Computer gespeichert, wodurch die resultierende Fläche mit beliebiger Präzision berechnet werden kann. Das Verbinden zweier NURBS Flächen wird in einer Polyfläche resultieren, in der verschiedene Schnitte der Geometrie verschiedene UV Parameter und Kurvendefinitionen haben werden.
 
 Polygonnetze auf der anderen Seite werden durch eine konkrete Anzahl von genau definierten Eckpunkten und Netzflächen bestimmt. Das Netzwerk von Eckpunkten wird generell nicht mit einfachen UV Koordinaten beschrieben werden können. Die Darstellungspräzision kann nun nur durch Verfeinerung des Polygonnetzes oder das Hinzufügen weiterer Netzflächen verbessert werden, weil die Netzflächen die Darstellungspräzision durch ihre Darstellung klar definieren. Das Fehlen von UV Koordinaten jedoch ermöglicht es, Polygonnetze komplizierterer Geometrie flexibel in einem Polygonnetz handzuhaben, statt wie beim Fall der NURBS Darstellung auf eine Polyfläche zurückgreifen zu müssen.

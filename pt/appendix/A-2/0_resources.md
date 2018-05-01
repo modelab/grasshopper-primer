@@ -1,8 +1,8 @@
-##2.3. Resources
+## 2.3. Resources
 
-#####There are many resources available to learn more about Grasshopper and parametric design concepts. There are also over a hundred plugins and add-ons that extend Grasshopper’s functionality. Below are some of our favorites.
+##### There are many resources available to learn more about Grasshopper and parametric design concepts. There are also over a hundred plugins and add-ons that extend Grasshopper’s functionality. Below are some of our favorites.
 
-###Plug-in Communities
+### Plug-in Communities
 <style>
 .page-inner h3{clear:both}
 .page-inner p{clear:both}
@@ -18,7 +18,7 @@ http://www.food4rhino.com/
 Grasshopper add-ons page
 http://www.grasshopper3d.com/page/addons-forgrasshopper
 <br>
-###Add-ons We Love
+### Add-ons We Love
 
 ![IMAGE](images/diva.png)
 DIVA-for-Rhino allows users to carry out a series of environmental performance evaluations of individual buildings and urban landscapes.
@@ -82,7 +82,7 @@ http://www.giuliopiacentino.com/weaverbird/
 
 
 
-###Additional Primers
+### Additional Primers
 **The Firefly Primer**
 This book is intended to teach the basics of electronics (using an Arduino) as well as various digital/physical prototyping techniques to people new to the field. It is not a comprehensive book on electronics (as there are already a number of great resources already dedicated to this topic). Instead, this book focuses on expediting the prototyping process. Written by Andrew Payne.
 http://fireflyexperiments.com/resources/
@@ -99,12 +99,12 @@ http://www.morphogenesism.com/media.html
 This primer is intended to teach programming to absolute beginners, people who have tinkered with programming a bit or expert programmers looking for a quick introduction to the methods in Rhino. Written by Skylar Tibbits.
 http://www.rhino3d.com/download/IronPython/5.0/RhinoPython101
 
-###General References
+### General References
 **Wolfram MathWorld** is an online mathematics resource., assembled by Eric W. Weisstein
 with assistance from thousands of contributors. Since its contents first appeared online in 1995, MathWorld has emerged as a nexus of mathematical information in both the mathematics and educational communities. Its entries are extensively referenced in journals and books spanning all educational levels.
 http://mathworld.wolfram.com/
 
-###Further Reading
+### Further Reading
 Burry, Jane, and Mark Burry. *The New Mathematics of Architecture.* London: Thames & Hudson, 2010.
 
 Burry, Mark. *Scripting Cultures: Architectural Design and Programming.* Chichester, UK: Wiley, 2011.

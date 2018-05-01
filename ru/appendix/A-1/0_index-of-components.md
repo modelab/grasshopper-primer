@@ -19,12 +19,12 @@ thead {display: none}
 
 ## 2.1. Индекс
 
-#####Этот индекс содержит дополнительную информацию по всем компонентам, использованным в этом пособии, а также другие компоненты, которые могут оказаться вам полезными. Это небольшое введение в более чем 500 компонентов в плагине Grasshopper.
+##### Этот индекс содержит дополнительную информацию по всем компонентам, использованным в этом пособии, а также другие компоненты, которые могут оказаться вам полезными. Это небольшое введение в более чем 500 компонентов в плагине Grasshopper.
 
 Параметры
 --
 
-####Geometry
+#### Geometry
 ||||
 |--|--|--|
 |<a name="PGCrv"></a>P.G.Crv|Curve Parameter<br>Представляет набор геометрии Curve (кривая). Геометрия Curve - это общий знаменатель всех типов кривых в Grasshopper.|![IMAGE](images/PGCrv.png)|
@@ -34,7 +34,7 @@ thead {display: none}
 |<a name="PGPt"></a>P.G.Pt|Point Parameter<br>Параметр Point (точка) способен хранить постоянные данные. Вы можете настроить запись постоянных данных через меню Parameter.|![IMAGE](images/PGPt.png)|
 |<a name="PGSrf"></a>P.G.Srf|Surface Parameter<br>Представляет набор геометрии Surface (поверхность). Surface геометрия - это общий знаменатель всех типов поверхности в Grasshopper.|![IMAGE](images/PGSrf.png)|
 
-####Primitive
+#### Primitive
 ||||
 |--|--|--|
 |<a name="PPBool"></a>P.P.Bool|Boolean Parameter<br>Представляет набор Булевых значений (Правда/Ложь).|![IMAGE](images/PPBool.png)|
@@ -45,7 +45,7 @@ thead {display: none}
 |<a name="PPNum"></a>P.P.Num|Number Parameter<br>Представляет набор численных значений с плавающей точкой. Параметры Number способны хранить постоянные данные. Вы можете настроить запись постоянных данных через меню Parameter.|![IMAGE](images/PPNum.png)|
 |<a name="PPPath"></a>P.P.Path|File Path<br>Содержит набор путей файла.|![IMAGE](images/PPPath.png)|
 
-####Input
+#### Input
 ||||
 |--|--|--|
 |<a name="PIToggle"></a>P.I.Toggle|Boolean Toggle<br>Переключатель булевых значений (правда/ложь).|![IMAGE](images/PIToggle.png)|
@@ -57,7 +57,7 @@ thead {display: none}
 |<a name="PIPanel"></a>P.I.Panel|Panel<br>Panel (панель) для разных заметок и текстовых значений. Обычно, это неактивный объект, который позволяет вам добавлять комментарии или объяснения к Документу. Панели могут получать информацию откуда угодно. Если вы подключите параметр выхода в панель, вы увидите содержание этого параметра в реальном времени. Все данные в Grasshopper можно просматривать таким образом. Панели также могут передавать их содержание в текстовый файл.|![IMAGE](images/PIPanel.png)|
 |<a name="PIList"></a>P.I.List|Value List<br>Предоставляет список преднастроенных значений из которых можно выбрать.|![IMAGE](images/PIList.png)|
 
-####Utilities
+#### Utilities
 ||||
 |--|--|--|
 |<a name="P.U.Cin"></a>P.U.Cin|Cluster Input<br>Представляет параметр Cluster Input.|![IMAGE](images/PUCin.png)|
@@ -70,7 +70,7 @@ thead {display: none}
 Maths
 --
 
-####Domain
+#### Domain
 ||||
 |--|--|--|
 |<a name="M.D.Bnd"></a>M.D.Bnd|Bounds<br>Создает числовой диапазон, который содержит список чисел.|![IMAGE](images/MDBnd.png)|
@@ -84,7 +84,7 @@ Maths
 |<a name="MDReMap"></a>M.D.ReMap|Remap Numbers<br>Переносит числа в новый числовой диапазон.|![IMAGE](images/MDReMap.png)|
 
 
-####Operators
+#### Operators
 ||||
 |--|--|--|
 |<a name="MOAdd"></a>M.O.Add|Addition<br>Математическое добавление.|![IMAGE](images/MOAdd.png)|
@@ -99,13 +99,13 @@ Maths
 |<a name="MOSimilar"></a>M.O.Similar|Similarity<br>Проверяет на сходство двух чисел.|![IMAGE](images/MOSimilar.png)|
 |<a name="MOSub"></a>M.O.Sub|Subtraction<br>Математическое извлечение.|![IMAGE](images/MOSub.png)|
 
-####Script
+#### Script
 ||||
 |--|--|--|
 |<a name="MSEval"></a>M.S.Eval|Evaluate<br>Определяет выражение с гибкими числами переменных.|![IMAGE](images/MSEval.png)|
 |<a name="MSExpression"></a>M.S.Expression|Expression<br>Определяет выражение.|![IMAGE](images/MSExpression.png)|
 
-####Trig
+#### Trig
 ||||
 |--|--|--|
 |<a name="MTCos"></a>M.T.Cos|Cosine<br>Вычисляет косинус значения.|![IMAGE](images/MTCos.png)|
@@ -113,7 +113,7 @@ Maths
 |<a name="MTRad"></a>M.T.Rad|Radians<br>Конвертирует угол, указанный в градусах, в радианы.|![IMAGE](images/MTRad.png)|
 |<a name="MTSin"></a>M.T.Sin|Sine<br>Вычисляет синус значения.|![IMAGE](images/MTSin.png)|
 
-####Utilities
+#### Utilities
 ||||
 |--|--|--|
 |<a name="MUAvr"></a>M.U.Avr|Average<br>Проверяет среднее арифметическое для набора элементов.|![IMAGE](images/MUAvr.png)|
@@ -123,7 +123,7 @@ Maths
 Sets
 --
 
-####List
+#### List
 ||||
 |--|--|--|
 |<a name="SLCombine"></a>S.L.Combine|Combine Data<br>Сочетает не-неизвестные значения из нескольких входов.|![IMAGE](images/SLCombine.png)|
@@ -142,7 +142,7 @@ Sets
 |<a name="SLSort"></a>S.L.Sort|Sort List<br>Сортирует список числовых ключей. Чтобы что-то отсортировать, это должно быть сначала сопоставлено. Большинство типов данных не может быть сопоставлена, Numbers и Strings - единственное исключение. Если вы хотите отсортировать другие типы данных, такие как кривые, сначала вам потребуется создать список ключей.|![IMAGE](images/SLSort.png)|
 |<a name="SLWeave"></a>S.L.Weave|Weave<br>Соединяет набор вводных данных используя определенный шаблон. Шаблон определяется как список индекс значений (целых), которые определяют порядок, в котором вводные данные собираются.|![IMAGE](images/SLWeave.png)|
 
-####Sets
+#### Sets
 ||||
 |--|--|--|
 |<a name="SSCulli"></a>S.S.Culli|Cull Index<br>Cull (удаляет) проиндексированные элементы в списке.|![IMAGE](images/SSCulli.png)|
@@ -154,7 +154,7 @@ Sets
 |<a name="SSRepeat"></a>S.S.Repeat|Repeat Data<br>Повторяет паттерн до тех пор, пока не достигнет определенной длины.|![IMAGE](images/SSRepeat.png)|
 |<a name="SSSeries"></a>S.S.Series|Series<br>Создает последовательность чисел. Числа распределены в соответствии со значением {Step}. Если вам необходимо распределить числа внутри фиксированного числового порядка, то используйте компонент [Range].|![IMAGE](images/SSSeries.png)|
 
-####Tree
+#### Tree
 ||||
 |--|--|--|
 |<a name="STExplode"></a>S.T.Explode|Explode Tree<br>Извлекает все ветки из дерева.|![IMAGE](images/STExplode.png)|
@@ -171,21 +171,21 @@ Sets
 Vector
 --
 
-####Grid
+#### Grid
 ||||
 |--|--|--|
 |<a name="VGHexGrid"></a>V.G.HexGrid|Hexagonal<br>2D сетка с шестиугольными ячейками.|![IMAGE](images/VGHexGrid.png)|
 |<a name="VGRecGrid"></a>V.G.RecGrid|Rectangular<br>2D сетка с прямоугольными ячейками.|![IMAGE](images/VGRecGrid.png)|
 |<a name="VGSqGrid"></a>V.G.SqGrid|Square<br>2D сетка с квадратными ячейками|![IMAGE](images/VGSqGrid.png)|
 
-####Point
+#### Point
 ||||
 |--|--|--|
 |<a name="VPPt"></a>V.P.Pt|Construct Point<br>Построение точки из координат {xyz}.|![IMAGE](images/VPPt.png)|
 |<a name="VPpDecon"></a>V.P.pDecon|Deconstruct<br>Разбирает точку на ее компоненты.|![IMAGE](images/VPpDecon.png)|
 |<a name="VPDist"></a>V.P.Dist|Distance<br>Вычисляет Евклидовое расстояние между координатами двух точек.|![IMAGE](images/VPDist.png)|
 
-####Vector
+#### Vector
 ||||
 |--|--|--|
 |<a name="VVX"></a>V.V.X|Unit X<br>Unit вектор параллелен мировой оси {x}.|![IMAGE](images/VVX.png)|
@@ -195,17 +195,17 @@ Vector
 Curve
 --
 
-####Analysis
+#### Analysis
 ||||
 |--|--|--|
 |<a name="CACP"></a>C.A.CP|Control Points<br>Извлекает контрольные точки nurbs и узлы кривой.|![IMAGE](images/CACP.png)|
 
-####Division
+#### Division
 ||||
 |--|--|--|
 |<a name="CDDivide"></a>C.D.Divide|Divide Curve<br>Разделяет кривую на равные по длине сегменты.|![IMAGE](images/CDDivide.png)|
 
-####Primitive
+#### Primitive
 ||||
 |--|--|--|
 |<a name="CPCir"></a>C.P.Cir|Circle<br>Создает круг, определяемый основной плоскостью и радиусом.|![IMAGE](images/CPCir.png)|
@@ -214,7 +214,7 @@ Curve
 |<a name="CPLine"></a>C.P.Line|Line SDL<br>Создает линейный сегмент, определяемый начальной точкой, тангенсом и длиной.|![IMAGE](images/CPLine.png)|
 |<a name="CPPolygon"></a>C.P.Polygon|Polygon<br>Создает полигон с дополнительными круглыми ребрами.|![IMAGE](images/CPPolygon.png)|
 
-####Spline
+#### Spline
 ||||
 |--|--|--|
 |<a name="CSIntCrv"></a>C.S.IntCrv|Interpolate<br>Создает интерполируемую кривую через набор точек.|![IMAGE](images/CSIntCrv.png)|
@@ -222,7 +222,7 @@ Curve
 |<a name="CSNurbs"></a>C.S.Nurbs|Nurbs Curve<br>Строит кривую nurbs из контрольных точек.|![IMAGE](images/CSNurbs.png)|
 |<a name="CSPLine"></a>C.S.PLine|PolyLine<br>Создает полилинию, соединяющую некоторое число точек.|![IMAGE](images/CSPLine.png)|
 
-####Util
+#### Util
 ||||
 |--|--|--|
 |<a name="CUExplode"></a>C.U.Explode|Explode<br>Разбивает кривую на маленькие сегменты.|![IMAGE](images/CUExplode.png)|
@@ -232,12 +232,12 @@ Curve
 Surface
 --
 
-####Analysis
+#### Analysis
 ||||
 |--|--|--|
 |<a name="SADeBrep"></a>S.A.DeBrep|Deconstruct Brep<br>Разбирает brep на ее составляющие.|![IMAGE](images/SADeBrep.png)|
 
-####Freeform
+#### Freeform
 ||||
 |--|--|--|
 |<a name="SFBoundary"></a>S.F.Boundary|Boundary Surfaces<br>Создает плоскую поверхность из коллекции граничных ребер кривых.|![IMAGE](images/SFBoundary.png)|
@@ -247,12 +247,12 @@ Surface
 |<a name="SFRevSrf"></a>S.F.RevSrf|Revolution<br>Создает поверхность вращения.|![IMAGE](images/SFRevSrf.png)|
 |<a name="SFSwp2"></a>S.F.Swp2|Sweep2<br>Создает загнутую поверхность с двумя rail кривыми.|![IMAGE](images/SFSwp2.png)|
 
-####Primitive
+#### Primitive
 ||||
 |--|--|--|
 |<a name="SPBBox"></a>S.P.BBox|Bounding Box<br>Solve ориентированная геометрия граничных прямоугольников.|![IMAGE](images/SPBBox.png)|
 
-####Util
+#### Util
 ||||
 |--|--|--|
 |<a name="SUSDivide"></a>S.U.SDivide|Divide Surface<br>Генерирует сетку точек {uv} на поверхности.|![IMAGE](images/SUSDivide.png)|
@@ -261,7 +261,7 @@ Surface
 Mesh
 --
 
-####Triangulation
+#### Triangulation
 ||||
 |--|--|--|
 |<a name="MTVoronoi"></a>M.T.Voronoi|Voronoi<br>Плоскостная диаграмма Вороного для коллекции точек.|![IMAGE](images/MTVoronoi.png)|
@@ -269,17 +269,17 @@ Mesh
 Transform
 --
 
-####Affine
+#### Affine
 ||||
 |--|--|--|
 |<a name="TARecMap"></a>T.A.RecMap|Rectangle Mapping<br>Трансформирует геометрию из одного прямоугольника в другой.|![IMAGE](images/TARecMap.png)|
 
-####Array
+#### Array
 ||||
 |--|--|--|
 |<a name="TAArrLinear"></a>T.A.ArrLinear|Linear Array<br>Создает линейный массив геометрии.|![IMAGE](images/TAArrLinear.png)|
 
-####Morph
+#### Morph
 ||||
 |--|--|--|
 |<a name="TMMorph"></a>T.M.Morph|Box Morph<br>Превращение объекта в скрученную коробку.|![IMAGE](images/TMMorph.png)|
@@ -288,23 +288,23 @@ Transform
 Display
 --
 
-####Color
+#### Color
 ||||
 |--|--|--|
 |<a name="DCHSL"></a>D.C.HSL|Colour HSL<br>Создает цвет из плавающих точек {HSL} каналов.|![IMAGE](images/DCHSL.png)|
 
-####Dimensions
+#### Dimensions
 ||||
 |--|--|--|
 |<a name="DDTag"></a>D.D.Tag|Text tags<br>Компонент текстовый тэг позволяет рисовать небольшие Strings в видовом окне как элементы обратной связи. Текст и расположение определяются как параметры ввода. Когда текстовые тэги запекаются, они превращаются в Text Dots (текстовые точки).|![IMAGE](images/DDTag.png)|
 |<a name="DDTag3D"></a>D.D.Tag3D|Text Tag 3D<br>Представляет список 3D текстовых тэгов в видовом окне Rhino|![IMAGE](images/DDTag3D.png)|
 
-####Preview
+#### Preview
 ||||
 |--|--|--|
 |<a name="DPPreview"></a>D.P.Preview|Custom Preview<br>Позволяет настраивать предпросмотр геометрии.|![IMAGE](images/DPPreview.png)|
 
-####Vector
+#### Vector
 ||||
 |--|--|--|
 |<a name="DVPoints"></a>D.V.Points|Point List<br>Отображает подробные данные о списках точек.|![IMAGE](images/DVPoints.png)|
