@@ -1,11 +1,11 @@
-###1.3.5. Booleans & Logical Operators
+### 1.3.5. Booleans & Logical Operators
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 >Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.3.5_booleans and logical operators.gh)
 {% endif %}
 
-####1.3.5.1. BOOLEANS
+#### 1.3.5.1. BOOLEANS
 Numeric variables can store a whole range of different numbers. Boolean
 variables can only store two values referred to as Yes or No, True or False, 1 or 0. Obviously we never use booleans to perform calculations because of their limited range. We use booleans to evaluate conditions.
 
@@ -22,7 +22,7 @@ Grasshopper also has objects that test conditions and output boolean values. For
 ![](images/1-3-5/1-3-5_003-includes.png)
 >The Includes component is testing whether the number 6.8 is included in the domain from 0 to 10. It returns a boolean value of True.
 
-####1.3.5.2. LOGICAL OPERATORS
+#### 1.3.5.2. LOGICAL OPERATORS
 Logical operators mostly work on booleans and they are indeed very logical. As you will remember, booleans can only have two values. Boolean mathematics
 were developed by George Boole (1815-1864) and today they are at the very
 core of the entire digital industry. Boolean algebra provides us with tools to analyze, compare and describe sets of data. Although Boole originally defined six boolean operators we will only discuss three of them:

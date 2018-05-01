@@ -5,7 +5,7 @@
 >Example files that accompany this section: [Download](../../appendix/A-2/gh-files/1.4.3_data matching.gh)
 {% endif %}
 
-#####Data matching is a problem without a clean solution. It occurs when a component has access to differently sized inputs. Changing the data matching algorithm can lead to vastly different results.
+##### Data matching is a problem without a clean solution. It occurs when a component has access to differently sized inputs. Changing the data matching algorithm can lead to vastly different results.
 
 Imagine a component which creates line segments between points. It will have two input parameters which both supply point coordinates (List A and List B):
 

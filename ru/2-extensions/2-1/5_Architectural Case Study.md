@@ -1,11 +1,11 @@
-###2.1.5. Element* Изучение применения в архитектуре
+### 2.1.5. Element* Изучение применения в архитектуре
 
-#####В этом разделе мы проработает простой пример, в качестве введения в работу с инструментами Element. Мы изучим некоторые паттерны и обработку фасадов в области архитектуры, где мы подключим структуру данных Half Edge вместе с базовыми компонентами Element без использования характеристик per vertex.
+##### В этом разделе мы проработает простой пример, в качестве введения в работу с инструментами Element. Мы изучим некоторые паттерны и обработку фасадов в области архитектуры, где мы подключим структуру данных Half Edge вместе с базовыми компонентами Element без использования характеристик per vertex.
 
 ![IMAGE](images/2-1-5/2-1-5_001_Main-Render.jpg)
 
 
-####2.1.5.1 Пример 1
+#### 2.1.5.1 Пример 1
 
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
 >Файлы упражнения, которые сопровождают этот раздел: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
@@ -87,7 +87,7 @@ thead {display: none}
 ![IMAGE](images/2-1-5/2-1-5_022_Definition.png)
 ---
 
-####2.1.5.2 Пример 2
+#### 2.1.5.2 Пример 2
 
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
 >Файлы упражнения, которые сопровождают этот раздел: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)

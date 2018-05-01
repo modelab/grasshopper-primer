@@ -1,6 +1,6 @@
 ### 1.4.1. CURVE GEOMETRY
 
-#####NURBS (non-uniform rational B-splines) are mathematical representations that can accurately model any shape from a simple 2D line, circle, arc, or box to the most complex 3D free-form organic surface or solid. Because of their flexibility and accuracy, NURBS models can be used in any process from illustration and animation to manufacturing.
+##### NURBS (non-uniform rational B-splines) are mathematical representations that can accurately model any shape from a simple 2D line, circle, arc, or box to the most complex 3D free-form organic surface or solid. Because of their flexibility and accuracy, NURBS models can be used in any process from illustration and animation to manufacturing.
 
 Since curves are geometric objects, they possess a number of properties or characteristics which can be used to describe or analyze them. For example, every curve has a starting coordinate and every curve has an ending coordinate. When the distance between these two coordinates is zero, the curve is closed. Also, every curve has a number of control-points, if all these points are located in the same plane, the curve as a whole is planar. Some properties apply to the curve as a whole, while others only apply to specific points on the curve. For
 example, planarity is a global property while tangent vectors are a local property. Also, some properties only apply to some curve types. So far we’ve discussed some of Grasshopper’s Primitive Curve Components such as: lines, circles, ellipses, and arcs.
@@ -19,7 +19,7 @@ example, planarity is a global property while tangent vectors are a local proper
 2. Edit Point
 3. Control Point
 
-####1.4.1.1. NURBS CURVES
+#### 1.4.1.1. NURBS CURVES
 **Degree:** The degree is a positive whole number. This number is usually 1, 2, 3 or 5, but can be any positive whole number. The degree of the curve determines the range of influence the control points have on a curve; where the higher the degree, the larger the range. NURBS lines and polylines are usually degree 1, NURBS circles are degree 2, and most free-form curves are degree 3 or 5.
 
 **Control Points:** The control points are a list of at least degree+1 points. One of the easiest ways to change the shape of a NURBS curve is to move its control points.
@@ -41,7 +41,7 @@ NURBS curve knots as a result of varying degree:
 ![IMAGE](images/1-4-1/1-4-1_005-degree-three.png)
 >D<sup>3</sup> is the most common type of NURBS curve and is the default in Rhino. You are probably very familiar with the visual progression of the spline, even though the knots appear to be in odd locations.
 
-####1.4.1.2. GRASSHOPPER SPLINE COMPONENTS
+#### 1.4.1.2. GRASSHOPPER SPLINE COMPONENTS
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
 >Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}

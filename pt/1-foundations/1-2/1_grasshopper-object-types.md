@@ -1,8 +1,8 @@
 ### 1.2.1. GRASSHOPPER OBJECT TYPES
 
-#####Grasshopper consists of two primary types of user objects: parameters andcomponents. Parameters store data, whereas components perform actions that resultin data. The most basic way to understand Grasshopper is to remember that we willuse data to define the inputs of actions (which will result in new data that we cancontinue to use).
+##### Grasshopper consists of two primary types of user objects: parameters andcomponents. Parameters store data, whereas components perform actions that resultin data. The most basic way to understand Grasshopper is to remember that we willuse data to define the inputs of actions (which will result in new data that we cancontinue to use).
 
-####1.2.1.1. PARAMETERS
+#### 1.2.1.1. PARAMETERS
 Parameters store the data - numbers, colors, geometry, and more - that we send through the graph in our definition. Parameters are container objects which are usually shown as small rectangular boxes with a single input and single output. We also know that these are parameters because of the shape of their icon. All parameter objects have a hexagonal border around their icon.
 
 Geometry parameters can reference geometry from Rhino, or inherit geometry from other components. The point and curve objects are both geometry parameters.
@@ -13,7 +13,7 @@ Input parameters are dynamic interface objects that allow you to interact with y
 
 ![IMAGE](images/1-2-1/1-2-1_002-input-parameters.png)
 
-####1.2.1.2. COMPONENTS
+#### 1.2.1.2. COMPONENTS
 Components perform actions based on the inputs they receive. There are manytypes of components for different tasks.
 
 ![IMAGE](images/1-2-1/1-2-1_003-components.png)
@@ -24,7 +24,7 @@ segments.
 3. The Circle CNR component constructs a circle geometry from input data; a center point, normal vector, and radius.
 4. The Loft component constructs a surface by lofting curves.
 
-####1.2.1.3. OBJECT COLORS
+#### 1.2.1.3. OBJECT COLORS
 We can glean some information about the state of each object based on their color. Let’s take a look at Grasshopper’s default color coding system.
 
 A parameter which contains neither warnings nor errors is shown in light

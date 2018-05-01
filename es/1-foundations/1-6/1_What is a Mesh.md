@@ -1,13 +1,13 @@
 ### 1.6.1 What is a Mesh?
 
-#####A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. This section discusses the structure of a mesh object, which includes vertices, edges, and faces, as well as additional mesh properties such as colors and normals.
+##### A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. This section discusses the structure of a mesh object, which includes vertices, edges, and faces, as well as additional mesh properties such as colors and normals.
 
 ![IMAGE](images/1-6-1/01_mesh-structure.png)
 >1. Mesh vertices
 2. Mesh edges
 3. Mesh faces
 
-####1.6.1.1 Basic Anatomy of a Mesh
+#### 1.6.1.1 Basic Anatomy of a Mesh
 
 Grasshopper defines meshes using a Face-Vertex data structure. At its most basic, this structure is simply a collection of points which are grouped into polygons. The points of a mesh are called *vertices*, while the polygons are called *faces*. To create a mesh we need a list of vertices and a system of grouping those vertices into faces.
 
@@ -61,7 +61,7 @@ It is extremely important to pay attention to the order of the indices when cons
 >1. A quad face with indices 0,1,2,3
 2. A quad with indicies 0,3,1,2
 
-####1.6.1.2 Implicit Mesh Data
+#### 1.6.1.2 Implicit Mesh Data
 
 In addition to faces and vertices, there is other information about a mesh that we will want to use. In a Face-Vertex based mesh, data such as *edges* and *normals* are calculated implicitly based on the given faces and vertices. This section describes ways to query this information.
 
@@ -108,7 +108,7 @@ While less intuitive than face normals, vertex normals are important for smooth 
 >1. Normals set according to the face normal results in discrete polygonal shading
 2. Adjancent face normals are averaged together to create vertex normals, resulting in smooth shading across faces
 
-####1.6.1.3 Mesh Attributes
+#### 1.6.1.3 Mesh Attributes
 
 Meshes can also be assigned additional attributes to either vertices or faces. The simplest of these is vertex color, which is described below, but other attributes exist such as texture UV coordinates. (Some programs even allow vertex normals to be assigned as attributes instead of being derived from the faces and vertices, which can provide even more flexibility in rendered surface appearance.)
 
@@ -125,7 +125,7 @@ While the above examples colored the entire mesh, color data are actually assign
 >1. Red, green, and blue are assigned to the three vertices of a mesh
 2. The resulting mesh interpolates the colors of the vertices
 
-####1.6.1.4 Exercise
+#### 1.6.1.4 Exercise
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
 >Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
 {% else %}

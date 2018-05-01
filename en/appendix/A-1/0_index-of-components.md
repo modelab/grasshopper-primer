@@ -19,12 +19,12 @@ thead {display: none}
 
 ## 2.1. Index
 
-#####This index provides additional information on all the components used in this primer, as well as other components you might find useful. This is just an introduction to over 500 components in the Grasshopper plugin.
+##### This index provides additional information on all the components used in this primer, as well as other components you might find useful. This is just an introduction to over 500 components in the Grasshopper plugin.
 
 Parameters
 --
 
-####Geometry
+#### Geometry
 ||||
 |--|--|--|
 |<a name="PGCrv"></a>P.G.Crv|Curve Parameter<br>Represents a collection of Curve geometry. Curve geometry is the common denominator of all curve types in Grasshopper.|![IMAGE](images/PGCrv.png)|
@@ -34,7 +34,7 @@ Parameters
 |<a name="PGPt"></a>P.G.Pt|Point Parameter<br>Point parameters are capable of storing persistent data. You can set the persistent records through the parameter menu.|![IMAGE](images/PGPt.png)|
 |<a name="PGSrf"></a>P.G.Srf|Surface Parameter<br>Represents a collection of Surface geometry. Surface geometry is the common denominator of all surface types in Grasshopper.|![IMAGE](images/PGSrf.png)|
 
-####Primitive
+#### Primitive
 ||||
 |--|--|--|
 |<a name="PPBool"></a>P.P.Bool|Boolean Parameter<br>Represents a collection of Boolean (True/False) values.|![IMAGE](images/PPBool.png)|
@@ -45,7 +45,7 @@ Parameters
 |<a name="PPNum"></a>P.P.Num|Number Parameter<br>Represents a collection of floating point values. Number parameters are capable of storing persistent data. You can set the persistent records through the parameter menu.|![IMAGE](images/PPNum.png)|
 |<a name="PPPath"></a>P.P.Path|File Path<br>Contains a collection of file paths.|![IMAGE](images/PPPath.png)|
 
-####Input
+#### Input
 ||||
 |--|--|--|
 |<a name="PIToggle"></a>P.I.Toggle|Boolean Toggle<br>Boolean (true/false) toggle.|![IMAGE](images/PIToggle.png)|
@@ -57,7 +57,7 @@ Parameters
 |<a name="PIPanel"></a>P.I.Panel|Panel<br>A panel for custom notes and text values. It is typically an inactive object that allows you to add remarks or explanations to a Document. Panels can also receive their information from elsewhere. If you plug an output parameter into a Panel, you can see the contents of that parameter in real-time. All data in Grasshopper can be viewed in this way. Panels can also stream their content to a text file.|![IMAGE](images/PIPanel.png)|
 |<a name="PIList"></a>P.I.List|Value List<br>Provides a list of preset values from which to choose.|![IMAGE](images/PIList.png)|
 
-####Utilities
+#### Utilities
 ||||
 |--|--|--|
 |<a name="P.U.Cin"></a>P.U.Cin|Cluster Input<br>Represents a cluster input parameter.|![IMAGE](images/PUCin.png)|
@@ -70,7 +70,7 @@ Parameters
 Maths
 --
 
-####Domain
+#### Domain
 ||||
 |--|--|--|
 |<a name="M.D.Bnd"></a>M.D.Bnd|Bounds<br>Create a numeric domain which encompasses a list of numbers.|![IMAGE](images/MDBnd.png)|
@@ -84,7 +84,7 @@ Maths
 |<a name="MDReMap"></a>M.D.ReMap|Remap Numbers<br>Remap numbers into a new numeric domain.|![IMAGE](images/MDReMap.png)|
 
 
-####Operators
+#### Operators
 ||||
 |--|--|--|
 |<a name="MOAdd"></a>M.O.Add|Addition<br>Mathematical addition.|![IMAGE](images/MOAdd.png)|
@@ -99,13 +99,13 @@ Maths
 |<a name="MOSimilar"></a>M.O.Similar|Similarity<br>Test for similarity of two numbers.|![IMAGE](images/MOSimilar.png)|
 |<a name="MOSub"></a>M.O.Sub|Subtraction<br>Mathematical subtraction.|![IMAGE](images/MOSub.png)|
 
-####Script
+#### Script
 ||||
 |--|--|--|
 |<a name="MSEval"></a>M.S.Eval|Evaluate<br>Evaluate an expression with a flexible number of variables.|![IMAGE](images/MSEval.png)|
 |<a name="MSExpression"></a>M.S.Expression|Expression<br>Evaluate an expression.|![IMAGE](images/MSExpression.png)|
 
-####Trig
+#### Trig
 ||||
 |--|--|--|
 |<a name="MTCos"></a>M.T.Cos|Cosine<br>Compute the cosine of a value.|![IMAGE](images/MTCos.png)|
@@ -113,7 +113,7 @@ Maths
 |<a name="MTRad"></a>M.T.Rad|Radians<br>Convert an angle specified in degrees to radians.|![IMAGE](images/MTRad.png)|
 |<a name="MTSin"></a>M.T.Sin|Sine<br>Compute the sine of a value.|![IMAGE](images/MTSin.png)|
 
-####Utilities
+#### Utilities
 ||||
 |--|--|--|
 |<a name="MUAvr"></a>M.U.Avr|Average<br>Solve the arithmetic average for a set of items.|![IMAGE](images/MUAvr.png)|
@@ -123,7 +123,7 @@ Maths
 Sets
 --
 
-####List
+#### List
 ||||
 |--|--|--|
 |<a name="SLCombine"></a>S.L.Combine|Combine Data<br>Combine non-null items out of several inputs.|![IMAGE](images/SLCombine.png)|
@@ -142,7 +142,7 @@ Sets
 |<a name="SLSort"></a>S.L.Sort|Sort List<br>Sort a list of numeric keys. In order for something to be sorted, it must first be comparable. Most types of data are not comparable, Numbers and Strings being basically the sole exceptions. If you want to sort other types of data, such as curves, you’ll need to create a list of keys first.|![IMAGE](images/SLSort.png)|
 |<a name="SLWeave"></a>S.L.Weave|Weave<br>Weave a set of input data using a custom pattern. The pattern is specified as a list of index values (integers) that define the order in which input data is collected.|![IMAGE](images/SLWeave.png)|
 
-####Sets
+#### Sets
 ||||
 |--|--|--|
 |<a name="SSCulli"></a>S.S.Culli|Cull Index<br>Cull (remove) indexed elements from a list.|![IMAGE](images/SSCulli.png)|
@@ -154,7 +154,7 @@ Sets
 |<a name="SSRepeat"></a>S.S.Repeat|Repeat Data<br>Repeat a pattern until it reaches a certain length.|![IMAGE](images/SSRepeat.png)|
 |<a name="SSSeries"></a>S.S.Series|Series<br>Create a series of numbers. The numbers are spaced according to the {Step} value. If you need to distribute numbers inside a fixed numeric range, consider using the [Range] component instead.|![IMAGE](images/SSSeries.png)|
 
-####Tree
+#### Tree
 ||||
 |--|--|--|
 |<a name="STExplode"></a>S.T.Explode|Explode Tree<br>Extract all the branches from a tree.|![IMAGE](images/STExplode.png)|
@@ -171,21 +171,21 @@ Sets
 Vector
 --
 
-####Grid
+#### Grid
 ||||
 |--|--|--|
 |<a name="VGHexGrid"></a>V.G.HexGrid|Hexagonal<br>2D grid with hexagonal cells.|![IMAGE](images/VGHexGrid.png)|
 |<a name="VGRecGrid"></a>V.G.RecGrid|Rectangular<br>2D grid with rectangular cells.|![IMAGE](images/VGRecGrid.png)|
 |<a name="VGSqGrid"></a>V.G.SqGrid|Square<br>2D grid with square cells|![IMAGE](images/VGSqGrid.png)|
 
-####Point
+#### Point
 ||||
 |--|--|--|
 |<a name="VPPt"></a>V.P.Pt|Construct Point<br>Construct a point from {xyz} coordinates.|![IMAGE](images/VPPt.png)|
 |<a name="VPpDecon"></a>V.P.pDecon|Deconstruct<br>Deconstruct a point into its component parts.|![IMAGE](images/VPpDecon.png)|
 |<a name="VPDist"></a>V.P.Dist|Distance<br>Compute Euclidean distance between two point coordinates.|![IMAGE](images/VPDist.png)|
 
-####Vector
+#### Vector
 ||||
 |--|--|--|
 |<a name="VVX"></a>V.V.X|Unit X<br>Unit vector parallel to the world {x} axis.|![IMAGE](images/VVX.png)|
@@ -195,17 +195,17 @@ Vector
 Curve
 --
 
-####Analysis
+#### Analysis
 ||||
 |--|--|--|
 |<a name="CACP"></a>C.A.CP|Control Points<br>Extract the nurbs control points and knots of a curve.|![IMAGE](images/CACP.png)|
 
-####Division
+#### Division
 ||||
 |--|--|--|
 |<a name="CDDivide"></a>C.D.Divide|Divide Curve<br>Divide a curve into equal length segments.|![IMAGE](images/CDDivide.png)|
 
-####Primitive
+#### Primitive
 ||||
 |--|--|--|
 |<a name="CPCir"></a>C.P.Cir|Circle<br>Create a circle defined by base plane and radius.|![IMAGE](images/CPCir.png)|
@@ -214,7 +214,7 @@ Curve
 |<a name="CPLine"></a>C.P.Line|Line SDL<br>Create a line segment defined by start point, tangent and length.|![IMAGE](images/CPLine.png)|
 |<a name="CPPolygon"></a>C.P.Polygon|Polygon<br>Create a polygon with optional round edges.|![IMAGE](images/CPPolygon.png)|
 
-####Spline
+#### Spline
 ||||
 |--|--|--|
 |<a name="CSIntCrv"></a>C.S.IntCrv|Interpolate<br>Create an interpolated curve through a set of points.|![IMAGE](images/CSIntCrv.png)|
@@ -222,7 +222,7 @@ Curve
 |<a name="CSNurbs"></a>C.S.Nurbs|Nurbs Curve<br>Construct a nurbs curve from control points.|![IMAGE](images/CSNurbs.png)|
 |<a name="CSPLine"></a>C.S.PLine|PolyLine<br>Create a polyline connecting a number of points.|![IMAGE](images/CSPLine.png)|
 
-####Util
+#### Util
 ||||
 |--|--|--|
 |<a name="CUExplode"></a>C.U.Explode|Explode<br>Explode a curve into smaller segments.|![IMAGE](images/CUExplode.png)|
@@ -232,12 +232,12 @@ Curve
 Surface
 --
 
-####Analysis
+#### Analysis
 ||||
 |--|--|--|
 |<a name="SADeBrep"></a>S.A.DeBrep|Deconstruct Brep<br>Deconstruct a brep into its constituent parts.|![IMAGE](images/SADeBrep.png)|
 
-####Freeform
+#### Freeform
 ||||
 |--|--|--|
 |<a name="SFBoundary"></a>S.F.Boundary|Boundary Surfaces<br>Create planar surfaces from a collection of boundary edge curves.|![IMAGE](images/SFBoundary.png)|
@@ -247,12 +247,12 @@ Surface
 |<a name="SFRevSrf"></a>S.F.RevSrf|Revolution<br>Create a surface of revolution.|![IMAGE](images/SFRevSrf.png)|
 |<a name="SFSwp2"></a>S.F.Swp2|Sweep2<br>Create a sweep surface with two rail curves.|![IMAGE](images/SFSwp2.png)|
 
-####Primitive
+#### Primitive
 ||||
 |--|--|--|
 |<a name="SPBBox"></a>S.P.BBox|Bounding Box<br>Solve oriented geometry bounding boxes.|![IMAGE](images/SPBBox.png)|
 
-####Util
+#### Util
 ||||
 |--|--|--|
 |<a name="SUSDivide"></a>S.U.SDivide|Divide Surface<br>Generate a grid of {uv} points on a surface.|![IMAGE](images/SUSDivide.png)|
@@ -261,7 +261,7 @@ Surface
 Mesh
 --
 
-####Triangulation
+#### Triangulation
 ||||
 |--|--|--|
 |<a name="MTVoronoi"></a>M.T.Voronoi|Voronoi<br>Planar voronoi diagram for a collection of points.|![IMAGE](images/MTVoronoi.png)|
@@ -269,17 +269,17 @@ Mesh
 Transform
 --
 
-####Affine
+#### Affine
 ||||
 |--|--|--|
 |<a name="TARecMap"></a>T.A.RecMap|Rectangle Mapping<br>Transform geometry from one rectangle into another.|![IMAGE](images/TARecMap.png)|
 
-####Array
+#### Array
 ||||
 |--|--|--|
 |<a name="TAArrLinear"></a>T.A.ArrLinear|Linear Array<br>Create a linear array of geometry.|![IMAGE](images/TAArrLinear.png)|
 
-####Morph
+#### Morph
 ||||
 |--|--|--|
 |<a name="TMMorph"></a>T.M.Morph|Box Morph<br>Morph an object into a twisted box.|![IMAGE](images/TMMorph.png)|
@@ -288,23 +288,23 @@ Transform
 Display
 --
 
-####Color
+#### Color
 ||||
 |--|--|--|
 |<a name="DCHSL"></a>D.C.HSL|Colour HSL<br>Create a colour from floating point {HSL} channels.|![IMAGE](images/DCHSL.png)|
 
-####Dimensions
+#### Dimensions
 ||||
 |--|--|--|
 |<a name="DDTag"></a>D.D.Tag|Text tags<br>A text tag component allows you to draw little Strings in the viewport as feedback items. Text and location are specified as input parameters. When text tags are baked they turn into Text Dots.|![IMAGE](images/DDTag.png)|
 |<a name="DDTag3D"></a>D.D.Tag3D|Text Tag 3D<br>Represents a list of 3D text tags in a Rhino viewport|![IMAGE](images/DDTag3D.png)|
 
-####Preview
+#### Preview
 ||||
 |--|--|--|
 |<a name="DPPreview"></a>D.P.Preview|Custom Preview<br>Allows for customized geometry previews.|![IMAGE](images/DPPreview.png)|
 
-####Vector
+#### Vector
 ||||
 |--|--|--|
 |<a name="DVPoints"></a>D.V.Points|Point List<br>Displays details about lists of points.|![IMAGE](images/DVPoints.png)|

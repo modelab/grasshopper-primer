@@ -1,9 +1,9 @@
 ### 1.6.5 Mesh Interactions
 
-#####This section looks at ways in which Mesh Objects can interact with other objects, such as evaluating nearest points or combining multiple meshes together.
+##### This section looks at ways in which Mesh Objects can interact with other objects, such as evaluating nearest points or combining multiple meshes together.
 
 
-####1.6.5.1 Mesh Geometry and Points
+#### 1.6.5.1 Mesh Geometry and Points
 
 
 **Inclusion**
@@ -37,7 +37,7 @@ The following four numbers define the *barycentric* coordinates of the point wit
 
 The **Mesh Eval** component uses a mesh parameter as an input and returns the referenced point, as well as the normal and color at that point. The color and normal are calculated as interpolations of the vertex colors and vertex normals, using the same barycentric coordinates as the mesh parameter.
 
-####1.6.5.2 Combining Mesh Geometry 
+#### 1.6.5.2 Combining Mesh Geometry 
 
 **Mesh Join**
 
@@ -58,7 +58,7 @@ Meshes in Grasshopper have a set of boolean operations similar to boolean operat
 4. Mesh Union
 
 
-####1.6.5.3 Intersections and Occlusions 
+#### 1.6.5.3 Intersections and Occlusions 
 
 **Intersect**
 

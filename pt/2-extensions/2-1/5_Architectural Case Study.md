@@ -1,11 +1,11 @@
-###2.1.5. Element* Architectural Case Study 
+### 2.1.5. Element* Architectural Case Study 
 
-#####In this section, we will work through a simple exercise file that is meant as an introduction to working with Element tools. We will explore some patterning and facade treatments in the field of Architecture which will incorporate Half Edge data structures along with basic Element components without the use of per vertex features.
+##### In this section, we will work through a simple exercise file that is meant as an introduction to working with Element tools. We will explore some patterning and facade treatments in the field of Architecture which will incorporate Half Edge data structures along with basic Element components without the use of per vertex features.
 
 ![IMAGE](images/2-1-5/2-1-5_001_Main-Render.jpg)
 
 
-####2.1.5.1 Example 1
+#### 2.1.5.1 Example 1
 
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
 >Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)
@@ -87,7 +87,7 @@ thead {display: none}
 ![IMAGE](images/2-1-5/2-1-5_022_Definition.png)
 ---
 
-####2.1.5.2 Example 2
+#### 2.1.5.2 Example 2
 
 {% if gitbook.generator == "pdf" or gitbook.generator == "mobi" or gitbook.generator == "epub" %}
 >Example files that accompany this section: [http://grasshopperprimer.com/appendix/A-2/1_gh-files.html](http://grasshopperprimer.com/appendix/A-2/1_gh-files.html)

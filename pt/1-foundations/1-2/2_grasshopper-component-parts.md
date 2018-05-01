@@ -1,6 +1,6 @@
 ### 1.2.2. GRASSHOPPER COMPONENT PARTS
 
-#####Components are the objects you place on the canvas and connect together with Wiresto form a visual program. Components can represent Rhino Geometry or operationslike Math Functions. Components have inputs and outputs.
+##### Components are the objects you place on the canvas and connect together with Wiresto form a visual program. Components can represent Rhino Geometry or operationslike Math Functions. Components have inputs and outputs.
 
 ![IMAGE](images/1-2-2/1-2-2_001-component-parts.png)
 >1. The three input parameters of the Circle CNR component.
@@ -13,7 +13,7 @@ There are a few Grasshopper components that have inputs but no outputs, or vice 
 
 ![IMAGE](images/1-2-2/1-2-2_002-components-without-outputs.png)
 
-####1.2.2.1. LABEL VS ICON DISPLAY
+#### 1.2.2.1. LABEL VS ICON DISPLAY
 Every Grasshopper object has a unique icon. These icons are displayed in
 the center area of the object and correspond to the icons displayed in the component palettes. Objects can also be displayed with text labels. To switch between icon and label display, Select “Draw Icons” from the display menu. You can also select “Draw Full Names” to display the full name of each object as well as its inputs and outputs.
 
@@ -37,14 +37,14 @@ components in the palettes is holding down Ctrl + Alt and clicking on an existin
 
 ![IMAGE](images/1-2-2/1-2-2_006-reveal-location.png)
 
-####1.2.2.2. COMPONENT HELP
+#### 1.2.2.2. COMPONENT HELP
 Right clicking an object and selecting “Help” from the drop-down menu will open a Grasshopper help window. The help window contains a more detailled description of the object, a list of inputs and outputs, as well as remarks.
 
 ![IMAGE](images/1-2-2/1-2-2_007-component-help.png)
 >1. Grasshopper help window for the Point parameter
 2. The remarks in the help window give additional insight about the point parameter.
 
-####1.2.2.3. TOOL TIPS
+#### 1.2.2.3. TOOL TIPS
 Component inputs are expecting to receive certain types of data, for example a Component might indicate that you should connect a point or plane to its input. When you hover your mouse over the individual parts of a Component object, you’ll see different tooltips that indicate the particular type of the sub-object currently under the mouse. Tooltips are quite informative since they tell you both the type and the data of individual parameters.
 
 ![IMAGE](images/1-2-2/1-2-2_008-tool-tips.png)
@@ -54,7 +54,7 @@ Component inputs are expecting to receive certain types of data, for example a C
 4. The header of the output tooltip provides the same detail os for inputs, but for the corresponding output.
 5. The result of the component's action.
 
-####1.2.2.4. CONTEXT POPUP MENUS
+#### 1.2.2.4. CONTEXT POPUP MENUS
 All objects on the Canvas have their own context menus that expose their
 settings and details. You can access this context menu by right-clicking on the center area of each component. Inputs and outputs each have their own context menus which can be accessed by right-clicking them.
 
@@ -71,7 +71,7 @@ settings and details. You can access this context menu by right-clicking on the 
 4. Add item to collection.
 5. Delete selection.
 
-####1.2.2.5. ZOOMABLE USER INTERFACE
+#### 1.2.2.5. ZOOMABLE USER INTERFACE
 Some components can be modified to increase the number of inputs or outputs through the Zoomable User Interface (ZUI). By zooming in on the component on the canvas, an additional set of options will appear which allows you add or remove Inputs or Outputs to that component. The Addition component allows you to add inputs, representing additional items for the addition operation.
 
 ![IMAGE](images/1-2-2/1-2-2_011-zoomable-ui.png)

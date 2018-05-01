@@ -1,8 +1,8 @@
 ### 1.6.4 Mesh Operations
 
-#####In the last section, we looked at the basic structure of a mesh. In this section, we will look at ways to manipulate mesh geometry.
+##### In the last section, we looked at the basic structure of a mesh. In this section, we will look at ways to manipulate mesh geometry.
 
-####1.6.4.1 Smooth
+#### 1.6.4.1 Smooth
 
 ![IMAGE](images/1-6-4/smooth.png)
 
@@ -17,7 +17,7 @@ Attaching a boolean value to the input N provides option to skip naked vertices.
 4. 25 iterations
 5. 50 iterations
 
-####1.6.4.2 Blur
+#### 1.6.4.2 Blur
 
 ![IMAGE](images/1-6-4/blur.png)
 
@@ -30,7 +30,7 @@ The **Blur** component acts in a similar way as smooth, except it only affect th
 4. 12 iterations
 5. 20 iterations
 
-####1.6.4.3 Triangulate
+#### 1.6.4.3 Triangulate
 
 ![IMAGE](images/1-6-4/triangulate.png)
 
@@ -41,7 +41,7 @@ In order to ensure each face is planar, or to export a mesh to a different softw
 2. Added edges according to shortest distance across quads
 3. Triangulated resultant mesh
 
-####1.6.4.4 Weld
+#### 1.6.4.4 Weld
 
 ![IMAGE](images/1-6-4/weld.png)
 

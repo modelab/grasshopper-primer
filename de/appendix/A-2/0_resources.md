@@ -82,7 +82,7 @@ http://www.giuliopiacentino.com/weaverbird/
 
 
 
-###Additional Primers
+### Additional Primers
 **The Firefly Primer**
 Dieses Buch möchte die Grundlagen der Elektronik (durch Arduino) lehren und verschiedene digitale/physische Techniken für Prototypen vorstellen. Es ist kein umfangreiches Buch über Elektronik (da es bereits eine Anzahl großartiger Ressourcen zu diesem Thema gibt). Stattdessen fokusiert sich das Buch auf die Erkundung der Produktentwicklung. Geschrieben von Andrew Payne.
 http://fireflyexperiments.com/resources/
